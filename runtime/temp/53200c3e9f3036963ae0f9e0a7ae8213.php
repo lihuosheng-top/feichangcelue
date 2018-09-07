@@ -1,40 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\guild.html";i:1534146746;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1532575172;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1536205144;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html";i:1536287823;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1536287823;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1536287823;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>尚牛在线</title>
-    <style>
-        .pic{
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .guide-section{
-            width: 1024px;
-            margin: 0 auto;
-            padding:50px;
-            box-sizing: border-box;
-        }
-        .content dt,.content dd{
-            margin-bottom: 15px;
-        }
-        .content dl{
-            margin-bottom: 50px;
-        }
-        .content dd{
-            padding-left: 50px;
-        }
-        .content dd table{
-            border-left: 1px solid #ccc;
-            border-top: 1px solid #ccc;
-        }
-        .content dd table td{
-            border-right: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-        }
-    </style>
 </head>
-<body class="guild_body helpcenter logged-in">
+<body class="index_body">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -137,89 +107,199 @@
 
 
 </script>
+<link href="./public/static/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/guide.css"/>
+<!--banner-->
+<div class="banner_login br-w100">
+    <div class="bBanner br-w100">
+        <!--<div class="w1024">
+                <div class="login_main" <?php if($_SESSION['member'] != ''): ?> style="display: none;" <?php endif; ?>>
+                <p>用户登录</p>
+                <from>
+                    <input type="text" name="" id="username" placeholder="用户名"/>
+                    <div id="err1" class="err">请输入正确用户名</div>
+                    <input type="password" name="" id="password" placeholder="密码"/>
+                    <div id="err2" class="err">请输入正确密码</div>
+                    <div class="login_box">
+                        <a href="./index.html" class="btn_login">登录</a>
+                        <a href="./reg.html" class="btn_reg">注册</a>
+                    </div>
+                </from>
+            </div>
+        </div>-->
+        <!--轮播图-->
+        <div class="home_banner">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <div class="carImg"></div>
+                    </div>
+                    <div class="item">
+                        <div class="carImg2"></div>
+                    </div>
+                    <div class="item">
+                        <div class="carImg3"></div>
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）按钮导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next">&rsaquo;</a>
+            </div>
+        </div>
 
-<!--帮助区-新手教学-->
-<div class="br-content">
-<section class="guide-section">
-<div class="content">
-    <div class="pic"><img src="public/static/home/img/one.jpg" ></div>
-    <dl>
-        <dt>什么是股票配资？</dt>
-        <dd>股票配资是一种创新的股票投资工具，通过股票配资，能有效的提高投资收益，堪称炒股利器。
-            在系统性或确定性机会出现时，投资者运用配资工具，可以在尚牛在线获得自有资金1-10倍的实盘资金，
-            能够将收益放大到10倍。投资者需要注意，配资工具在放大收益也会放大风险，
-            投资者应在投资机会比较确定并管理好风险的前提下使用，选择相对稳健的品种。
-        </dd>
-    </dl>
-    <dl>
-        <dt>配资后如何进行股票交易？</dt>
-        <dd>配资成功后，尚牛在线平台会为客户在合作券商处分配股票交易实盘账户，
-            用户可在我的账户 >> 操盘管理 >> 按天/按月配资的目录下查看证券账号和交易密码。
-            （首次配资用户必须点击下载“交易软件”才可以开始交易）。
-        </dd>
-    </dl>
-    <dl>
-        <dt>尚牛在线如何进行股票配资的风险管理？</dt>
-        <dd>股票配资完成后，您获得一个证券公司的股票交易账号和密码，然后就可以开始交易了。
-            为了保护配资资金安全，同时帮您养成良好的投资习惯，交易账户会设置警戒线和平仓线。
-            亏损警告线：当总操盘资金低于警戒线（亏损至本金*60%）以下时，只能平仓不能建仓。
-            亏损平仓线：当总操盘资金低于平仓线（亏损至本金*80%）以下时，系统将把您的股票进行平仓。
-            为避免平仓发生，请时刻关注本金是否充足。由于客户持有当天新建仓股票，
-            达到强平线时导致强平不成功，超过强平线后系统会短信通知用户及时进行补亏，
-            倘若用户不补亏导致本金亏损至100%时，券商将有权强制收回交易账号进行结算（相当于券商回收），
-            穿仓部分客户无需赔偿。
-        </dd>
-    </dl>
-    <dl>
-        <dt>股票配资限制购买的股票有哪些？</dt>
-        <dd>1、不得购买权证类可以T+0交易的证券；</dd>
-        <dd>2、用户不得买入当天禁买股，禁买股包括但不仅限于：ST、*ST、SST、*SST、分级基金等被证券交易所特别处理的股票；</dd>
-        <dd>3、不得购买首日上市新股（或复牌首日股票）等当日不设涨跌停板限制的股票；</dd>
-        <dd>4、已发布停牌、退市公告或有潜在退市风险的股票； </dd>
-        <dd>5、有可能导致结算日无法正常卖出或亏损超过保证金的股票； </dd>
-        <dd>6、上市20日以内的新股； </dd>
-        <dd>7、不得进行坐庄、对敲、接盘、大宗交易、内幕信息等违反股票交易法律法规及证券公司规定的交易。</dd>
-    </dl>
-    <dl>
-        <dt>股票配资的注意事项有哪些？</dt>
-        <dd>操盘前必读</dd>
-        <dd>股票停牌处理 </dd>
-        <dd>如果您买的股票遇到停牌，可选择以下方法：</dd>
-        <dd>(1)按停牌股票市值追加20%作为停牌准备金，股票复牌后，如股票上涨，退还全部停牌保证金，下跌在停牌保证金里扣除下跌部分金额（剩余退还）</dd>
-        <dd>(2)选择以停牌前一交易日收盘价作为结算价格对停牌股票进行清算。</dd>
-        <dd>交易手续费</dd>
-        <dd>手续费包含印花税、过户费和交易佣金，印花税和过户费按财政部和交易所规定收取，交易佣金0.02%（万二）由券商收取。</dd>
-        <dd>其他注意事项</dd>
-        <dd>1、交易盈利部分可在平仓结算后随时提现，申请结算（工作时间内）及时到达您账户，如您申请提款到银行卡，工作时间及时到账（节假日无休）；</dd>
-        <dd>2、按天配资支付管理费，如1月10日15:00前配资，系统当天扣除第1天管理费，1月11日自动（08:30分）扣除第二天管理费，以此类推；</dd>
-        <dd>3、按月配资支付利息，如1月10日配资，当天扣除第1个月利息，2月11日支付第2个月利息，以此类推；</dd>
-        <dd>4、配资到期前一个交易日，应将股票账号平仓，进行结算。如到期未结算，系统将自动延期收取对应费用。</dd>
-    </dl>
-    <dl>
-        <dt>配资与融资融券业务的区别是什么？</dt>
-        <dd>股票配资业务与融资融券业务从本质上讲都是增加投资者的操盘资金，但两者又有着很大的差别。
-             股票配资是股民在一定本金的情况下，提供放大资金比例操盘，然后支付一定的利息；
-            融资融券则是投资者向具有上海证券交易所或深圳证券交易所会员资格的证券公司提供担保物，
-            借入资金买入本所上市证券或借入本所上市证券并卖出的行为。但是在融资融券实际操作中存在着诸多的限制，
-            以下对两项业务做个对比：</dd>
-        <dd>
-            <table>
-                <tr><td>融资融券</td><td>股票配资</td></tr>
-                <tr><td>开户必须满6个月</td><td>无限制</td></tr>
-                <tr><td>资金要求最低10万</td><td>100元起</td></tr>
-                <tr><td>标地股少（可交易的股票少）</td><td>可交易的股票多</td></tr>
-                <tr><td>融资额度低（一般50%）</td><td>配资额度高（1-10倍杠杆）</td></tr>
-                <tr><td>交易佣金高（通常在千分之1以上）</td><td>交易佣金低（万分之2）</td></tr>
-                <tr><td>融资最长期限6个月</td><td>配资期限无限制</td></tr>
-                <tr><td>需要足额的担保物</td><td>不需要</td></tr>
-            </table>
-        </dd>
-    </dl>
+    </div>
 </div>
-</section>
+<!--点买A股-->
+<div class="AS_box br-w100">
+    <!--3个盒子-->
+    <div class="three_box w1024 br-clearfix">
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (3).png"/></a>
+            <p class="tit">一分钟了解尚牛在线</p>
+            <p class="tib">全新的投资人策略匹配平台</p>
+        </div>
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (2).png"/></a>
+            <p class="tit">用心服务</p>
+            <p class="tib">一对一专业客服（电话 微信 QQ）</br>全程指导</p>
+        </div>
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png"/></a>
+            <p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 256; ?></span>条</p>
+            <p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 5758000, 2 ); ?></span>元</p>
+        </div>
+    </div>
+    <div class="AS_box_cont w1024 br-text-center">
+        <h1 class="br-ml-title">POINT TO BUY A SHARES</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">点买A股</p>
+        <div class="AS_contImg br-clearfix">
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/01.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (1).png"/></span>
+                    <p class="ASbot_r br-fl">点买人只需冻结最低1250元履<br>约保证金支付45元交易综合费</p>
+                </div>
+            </div>
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/02.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (2).png"/></span>
+                    <p class="ASbot_r br-fl">即刻提交谋略系统智能匹<br>配投资人，投资人实施买入</p>
+                </div>
+            </div>
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/03.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (3).png"/></span>
+                    <p class="ASbot_r br-fl">谋略到期后单笔1万元交<br>易本金获得90%交易盈利</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+<!--获得更高收益-->
+<div class="highYields br-w100">
+    <div class="w1024 br-clearfix">
+        <div class="high_l br-fl ">
+            <h1>获得更高收益</h1>
+            <p>提供投资谋略金和投资人分享高额回报</p>
+            <!--<a href="javascript:void(0);" class="">进入点买A股</a>-->
+        </div>
+        <div class="high_r br-fr ">
+            <!--<table>
+                <?php if(is_array($buyList) || $buyList instanceof \think\Collection || $buyList instanceof \think\Paginator): $i = 0; $__LIST__ = $buyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="nickname"><?php echo $vo['mobile']; ?></td>
+                    <td class="time"><?php echo $vo['time']; ?></td>
+                    <td class="celue">尚牛</td>
+                    <td class="stockNumber"><?php echo $vo['stockName']; ?>[<?php echo $vo['stockCode']; ?>]</td>
+                </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </table>-->
+            <img src="./public/static/home/img/ewm1.jpg" width="180" height="180" style="margin-top:5px;">
+        </div>
+    </div>
+</div>
+<!--5重保障-->
+<div class="guarantee br-w100">
+    <div class="w1024 br-text-center">
+        <h1 class="br-ml-title">WE WILL ENSURE YOUR BEST INTEREST</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">5重保障最大力度保障您的利益</p>
+        <div class="guarantee_botBox br-clearfix">
+            <div class="guarantee_item bg1">网站安全</div>
+            <div class="guarantee_item bg1">风控<br>保险体质</div>
+            <div class="guarantee_item bg1">第三方<br>资金托管</div>
+            <div class="guarantee_item bg1">资金<br>安全保障</div>
+            <div class="guarantee_item bg1">和投资人<br>收益共享<br>风险共担</div>
+
+        </div>
+    </div>
+</div>
+<!--点买人盈利亏损-->
+<div class="PAL br-w100 br-text-center">
+    <div class="w1024 br-clearfix">
+        <div class="PAL_item br-fl">
+            <div class="item_img"></div>
+            <p>点买人获得90%的交易盈利，系统自动<br>划入点买人的尚牛在线账户</p>
+        </div>
+        <div class="PAL_item br-fr">
+            <div class="item_img"></div>
+            <p>点买人承担冻结履约保证金以内的亏损<br>超出部分由投资人承担</p>
+        </div>
+    </div>
+</div>
+<!--service-->
+<div class="service br-text-center br-w100">
+    <div class="w1024">
+        <h1 class="br-ml-title">OUR SERVICE</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">我们的服务</p>
+        <div class="service_box br-clearfix">
+            <h1>A股点买去<span>尚牛在线</span></h1>
+            <p class="sp1">“股票点买最安全平台”</p>
+            <p class="sp2">急速撮合<br>仅需填写简单资料<br>提交谋略<br>就能马上提交投资人赚钱</p>
+            <!--<a href="javascript:void(0);">立即注册</a>-->
+        </div>
+    </div>
+</div>
+<!--微信交易-->
+<div class="weChatDeal br-w100">
+    <div class="w1024">
+        <div class="weChatDeal_box">
+            <h1>微信端交易更加方便</span></h1>
+            <p class="sp1">“下单 持仓 结算 一目了然”</p>
+            <p class="sp2">更多优惠活动等着您</p>
+        </div>
+    </div>
+</div>
+<!--合作伙伴-->
+<div class="companion br-w100 br-text-center">
+    <div class="w1024">
+        <h1 class="br-ml-title">PARTNERS</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">合作伙伴</p>
+        <div class="companion_box br-clearfix">
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+        </div>
+    </div>
+</div>
+
 <!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
@@ -477,6 +557,86 @@
 <script src="./public/static/home/js/moblie/mui.min.js"></script>
 <script src="./public/static/home/js/moblie/reg.js"></script>
 
-<script src="./public/static/home/js/help.js"></script>
+
+<!--认证银行卡-提示绑定-->
+<div class="popup" id="popup-id-verify">
+    <div class="popup-header group">
+        <h2>认证银行卡</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <!--<div class="field-row group" style="text-align:center">
+            <ol class="popup-note">
+                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
+                <li style="text-align:left;">请务必认真填写真实资料</li>
+                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
+            </ol>
+            <p>为了保障您的账户安全，请先绑定银行卡</p>
+        </div>-->
+        <div class="btn-row group">
+            <a class="btn btn-pri" href="./ucenter/bankCards.html">去绑定</a>
+            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
+        </div>
+    </div>
+</div>
+<!--实名认证-->
+<div class="popup" id="popup-realname-auth">
+    <div class="popup-header group">
+        <h2>实名认证</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <!--<div class="field-row group" style="text-align:center">
+            <ol class="popup-note">
+                <li style="text-align:left;">一个身份证对应一个账号</li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
+            </ol>
+            <p>为了保障您的账户安全，请先进行实名认证</p>
+        </div>-->
+        <div class="field-row group">
+            <label>真实姓名：</label>
+            <div class="field-val"><input id="姓名i" type="text" class="text"></div>
+        </div>
+        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
+        <div class="field-row group">
+            <label>身份证号：</label>
+            <div class="field-val">
+                <div class="field-val">
+                    <input id="身份证i" type="text" class="text">
+                </div>
+            </div>
+        </div>
+        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
+        <div class="btn-row group">
+            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
+            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+<script src="./public/static/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="./public/static/home/js/index.js"></script>
+<script>
+    (function(){
+        $.ajax({
+            type:"post",
+            url:"<?php echo url('index/index/pc_broadcast'); ?>",
+            dataType:'json',
+            success:function(data){
+//                console.log(data);
+                var img_car =data.data[0].src;
+                $('.carImg').css('background','url('+'"'+img_car+'"'+')');
+                var img_car2 =data.data[1].src;
+                $('.carImg2').css('background','url('+'"'+img_car2+'"'+')');
+                var img_car3 =data.data[2].src;
+                $('.carImg3').css('background','url('+'"'+img_car3+'"'+')');
+            },
+            error:function (data) {
+                console.log("错误");
+            }
+        });
+    })();
+</script>
+
 </body>
 </html>

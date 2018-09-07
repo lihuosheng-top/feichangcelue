@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1534822796;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1536289951;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -12,6 +12,17 @@
 	<link href="./public/stock/css/style.css" rel="stylesheet" type="text/css">
 	<script src="./public/stock/js/sizes.js" type="text/javascript"></script>
 	<title>首页</title>
+	<style type="text/css">
+		.floating-window{
+			width: 5rem;
+    height: 5rem;
+    background: #000;
+    opacity: 0.1;
+    position: fixed;
+    top: 10rem;
+    right: 0;
+		}
+	</style>
 </head>
 <body>
 
@@ -77,6 +88,9 @@
 			<!--<dd>(经典实战,牛散的操作)</dd>-->
 		<!--</dl>-->
 	</div>
+    <div class="floating-window">
+    	
+    </div>
 </div>
 
 <div id="footer">

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536206425;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:85:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536291741;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -46,6 +46,16 @@
 			height:35px;
 			line-height: 35px;
 		}
+		
+		.floating-window{
+			width: 5rem;
+		    height: 5rem;
+		    background: #000;
+		    opacity: 0.1;
+		    position: fixed;
+		    top: 10rem;
+		    right: 0;
+		}
 	</style>
 </head>
 <body>
@@ -92,8 +102,8 @@
     			<p class="con_ps">准备资金=风险保证金+日管理费*天数</p>
     		</div>
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
+    		 <div class="floating-window"></div>
     	</div>
-
 
     	<div class="con_two">
     		<div class="con_list">
@@ -128,6 +138,7 @@
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
 
 		</div>
+		 <div class="floating-window"></div>
 
     </div>
 <div>
@@ -160,6 +171,7 @@
 	
 	$(function(){
 		$(".con_one .con_p li").click(function(){
+//				console("1112");
 			$(this).addClass('con_li').siblings().removeClass('con_li');
 			var a=parseInt($(".con_one .con_list p input").val());
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
@@ -250,6 +262,7 @@
 			var index=$(this).index();
 			$(this).addClass('t_btn').siblings().removeClass('t_btn');
 			$(".content>div").eq(index).addClass('dis').siblings().removeClass('dis');
+			
 		
 		})
 	});
@@ -473,6 +486,13 @@
             })
         });
 
+    });
+    //点击任意地方客服消失
+    $(".content").click(function(){
+    	$(".floating-window").hide()
+    });
+    $(".tab").click(function(){
+    	$(".floating-window").show()
     });
 
 //    $(function () {
