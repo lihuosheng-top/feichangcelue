@@ -1,0 +1,311 @@
+---------------------------------------------------------------
+[ 2018-09-07T16:02:23+08:00 ] ::1 ::1 GET /buy.html
+[ info ] localhost:88/buy.html [运行时间：1.278298s][吞吐率：0.78req/s] [内存消耗：3,689.38kb] [文件加载：72]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.201579s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.292230s ]
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'code',
+  3 => 'info_arr',
+  4 => 'time_img',
+  5 => 'day_img',
+  6 => 'dealPoundage',
+  7 => 'delayFee',
+  8 => 'dealFee',
+  9 => 'delayLineRate',
+  10 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043389s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.023411s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.030934s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.021935s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.025068s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.027175s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.031958s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.047095s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.031367s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.036699s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.051944s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.019233s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.018530s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.021360s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.018887s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.024468s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.032487s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.028577s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.026586s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.024446s ]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:190]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:194]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:332]
+---------------------------------------------------------------
+[ 2018-09-07T16:02:25+08:00 ] ::1 ::1 GET /sell.html
+[ info ] localhost:88/sell.html [运行时间：0.077020s][吞吐率：12.98req/s] [内存消耗：2,471.94kb] [文件加载：55]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'sell',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000990s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.009930s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-07T16:02:25+08:00 ] ::1 ::1 GET /login.html
+[ info ] localhost:88/login.html [运行时间：0.106333s][吞吐率：9.40req/s] [内存消耗：2,576.30kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000581s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.011203s ]
+[ info ] [ RUN ] app\index\controller\Index->login[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\login.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-07T16:02:27+08:00 ] ::1 ::1 GET /buy.html
+[ info ] localhost:88/buy.html [运行时间：0.376945s][吞吐率：2.65req/s] [内存消耗：3,249.82kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000580s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005341s ]
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'code',
+  3 => 'info_arr',
+  4 => 'time_img',
+  5 => 'day_img',
+  6 => 'dealPoundage',
+  7 => 'delayFee',
+  8 => 'dealFee',
+  9 => 'delayLineRate',
+  10 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:190]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:194]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:332]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036551s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020339s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.016041s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.018255s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.044363s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.019278s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.018784s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.032004s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.019677s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.046368s ]
+---------------------------------------------------------------
+[ 2018-09-07T16:02:37+08:00 ] ::1 ::1 GET /protocol_3.html
+[ info ] localhost:88/protocol_3.html [运行时间：0.241684s][吞吐率：4.14req/s] [内存消耗：2,532.94kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'protocol_3',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000742s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.008408s ]
+[ info ] [ RUN ] app\index\controller\Index->protocol_3[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\protocol_3.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-07T16:02:40+08:00 ] ::1 ::1 GET /buy.html
+[ info ] localhost:88/buy.html [运行时间：0.288582s][吞吐率：3.47req/s] [内存消耗：3,249.82kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X) AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost:88/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost%3A88/index.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000522s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005521s ]
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'code',
+  3 => 'info_arr',
+  4 => 'time_img',
+  5 => 'day_img',
+  6 => 'dealPoundage',
+  7 => 'delayFee',
+  8 => 'dealFee',
+  9 => 'delayLineRate',
+  10 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:190]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:194]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\457e238d5a5df08cdd08cd15c02e4ba0.php:332]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023157s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.013181s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.020578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.024538s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.012324s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.011560s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.016768s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.013724s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.013254s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010202s ]
