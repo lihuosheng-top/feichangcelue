@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536303081;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536304019;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -50,15 +50,15 @@
 			line-height: 35px;
 		}
 		
-		.floating-window{
-			width: 5rem;
-		    height: 5rem;
-		    background: #000;
-		    opacity: 0.1;
-		    position: fixed;
-		    top: 10rem;
-		    right: 0;
-		}
+		/*.floating-window{*/
+			/*width: 5rem;*/
+		    /*height: 5rem;*/
+		    /*background: #000;*/
+		    /*opacity: 0.1;*/
+		    /*position: fixed;*/
+		    /*top: 10rem;*/
+		    /*right: 0;*/
+		/*}*/
 	</style>
 </head>
 <body>
@@ -105,11 +105,11 @@
     			<p class="con_ps">准备资金=风险保证金+日管理费*天数</p>
     		</div>
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
-    		 <div class="floating-window">
-				 <a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">
-					 <img src="./public/static/home/img/chat.jpg" alt="">
-				 </a>
-			 </div>
+    		 <!--<div class="floating-window">-->
+				 <!--<a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">-->
+					 <!--<img src="./public/static/home/img/chat.jpg" alt="">-->
+				 <!--</a>-->
+			 <!--</div>-->
     	</div>
 
     	<div class="con_two">
@@ -145,7 +145,7 @@
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
 
 		</div>
-		 <div class="floating-window"></div>
+		 <!--<div class="floating-window"></div>-->
 
     </div>
 <div>
@@ -511,12 +511,18 @@
 
     });
     //点击任意地方客服消失
+//    $(".content").click(function(){
+//    	$(".floating-window").hide()
+//    });
+//    $(".tab").click(function(){
+//    	$(".floating-window").show()
+//    });
     $(".content").click(function(){
-    	$(".floating-window").hide()
-    });
-    $(".tab").click(function(){
-    	$(".floating-window").show()
-    });
+        	$("#lim_mob_chat").hide()
+        });
+//        $(".tab").click(function(){
+//        	$(".floating-window").show()
+//        });
 
 //    $(function () {
 //        $(".con_btn input").click(function () {
@@ -551,5 +557,7 @@
 			<div><a href="<?php echo url('/buy'); ?>">确认</a></div>
 		</div>
 	</div>
+	<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
 </body>
+
 </html>

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1536303081;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1536303732;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -90,11 +90,11 @@
 			<!--<dd>(经典实战,牛散的操作)</dd>-->
 		<!--</dl>-->
 	</div>
-    <div class="floating-window">
-		<a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">
-			<img src="./public/static/home/img/chat.jpg" alt="">
-		</a>
-    </div>
+    <!--<div class="floating-window">-->
+		<!--<a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">-->
+			<!--<img src="./public/static/home/img/chat.jpg" alt="">-->
+		<!--</a>-->
+    <!--</div>-->
 </div>
 
 <!--<div id="footer">-->
@@ -201,5 +201,6 @@
         });
     })();
 </script>
+<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
 </body>
 </html>
