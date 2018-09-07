@@ -1,0 +1,944 @@
+<?php
+
+namespace app\index\controller;
+
+use think\Model;
+use think\Db;
+use app\index\controller\Alistock;
+use think\Request;
+use app\common\controller\Common;
+use app\index\controller\Ucenter;
+use think\Session;
+
+class Index extends Home
+{
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * @return \think\response\View
+     * 手机端首页
+     **************************************
+     */
+    public function index(Request $request)
+    {
+
+
+
+        $sql = "select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 ";
+        $buyList = Db::query($sql);
+//        dump($buyList);exit();
+        foreach ($buyList as $k => $v) {
+            $tmStr = "一年以前";
+            $tm = time() - strtotime($v['createTime']);//秒数
+            if ($tm < 60) {
+                $tmStr = "{$tm}秒前";
+            } else if ($tm < 3600) {
+                $tmStr = ((int)($tm / 60)) . "分钟前";
+            } else if ($tm < 3600 * 24) {
+                $tmStr = ((int)($tm / 3600)) . "小时前";
+            } else {
+                $tmStr = ((int)($tm / (3600 * 24))) . "天前";
+            }
+            $buyList[$k]['time'] = $tmStr;
+            //用户名加**
+            $mobile = $v['mobile'];
+            $mobile = substr($mobile, 0, 3) . "****" . substr($mobile, strlen($mobile) - 4, 4);
+            $buyList[$k]['mobile'] = $mobile;
+        }
+        $member = $_SESSION['member'];
+        $id = $member['id'];
+
+        $_SESSION['member_id'] = $id;
+
+        if (!empty($id)) {
+            //累计
+            $count = Db::table("xh_stock_order")->where("isFreetrial=0")->count();
+            //累计盈利
+//            $earnSum = Db::table("xh_stock_order")->where("isFreetrial=0 and status=2 and sellPrice - dealPrice > 0")
+//                ->sum("(sellPrice - dealPrice) * dealQuantity * 100");
+            //总盈亏
+//                 $earnSum =$_SESSION['profitSum'];
+//               $earnSum = number_format($earnSum, 2, '.', '');
+            //证券市值（所有已买履约保证金总和）
+            $guaranteeFee = Db::name('stock_order')->field("sum(guaranteeFee)")->where('memberId', $id)->where('status', 1)->select();
+            $guaranteeFee = $guaranteeFee[0]['sum(guaranteeFee)'];
+            $guaranteeFee = number_format($guaranteeFee, 2, '.', '');
+            /*******动态资产，可用余额，冻结资金***********************/
+            //TODO：持仓盈利(开始)
+            $this->real_buy(0);
+            //TODO：持仓盈利(结束)
+            /*******实盘可买，证卷市值，持仓盈亏***********************/
+            //TODO:实盘可买(开始)
+            $real_disk = Db::name('stock_order')->field("sum(dealAmount)")->where('memberId',$id)->where('status',1)->select();
+            $_SESSION['real_disk'] =$real_disk;
+            if(!empty($real_disk)){
+                $real_disk =$real_disk[0]['sum(dealAmount)'];
+                $real_disk = $real_disk *10000;
+                $real_disk = number_format($real_disk,2,'.','');
+                $profitSu =$_SESSION['profiSu']; //持仓盈利
+                $real_disk_sum =number_format($real_disk + $profitSu,2,'.',''); //实盘可买
+            }
+
+            //TODO:实盘可买(结束)
+            //TODO:余额
+            $balance = Db::table("xh_member")->field('usableSum')->where('id', $id)->find();
+//        证卷市值(以第一个市值为主，没有买的话就为0)
+            $market_value_code = Db::table("xh_stock_order")->field('stockCode')->where('memberId', $id)->where('status', 1)->select();
+            //可用资金
+            $peizi_price = $_SESSION["ajax_html"];
+            if (!empty($peizi_price)) {
+                $peizi = $peizi_price;
+            }
+            if (empty($peizi_price)) {
+                $peizi = 0;
+            }
+            $this->assign('peizi', $peizi);
+            $ablePrice = (float)$balance['usableSum'] + (float)$guaranteeFee; //可用金额
+            if (!trim($market_value_code)) {
+                $market_value_co = $market_value_code[0]['stockCode'];
+                $res = $this->getMarketValueBycode($market_value_co);
+                $this->assign('res', $res);
+            }
+            if (trim($market_value_code)) {
+                $res = $this->getMarketValueBycode(600036);
+                $this->assign('res', $res);
+            }
+
+        }
+//        分配数据
+
+        if (is_mobile_request()) {
+            //获取 上证指数 深证成指 创业板指
+            $res_str = (new Alistock())->stockIndex();
+            $res = json_decode($res_str);
+            if ($res->showapi_res_code == '0' && $res->showapi_res_body->ret_code == '0') {
+                $indexList = $res->showapi_res_body->indexList;
+                $this->assign("dp", $indexList);
+            }
+            $this->assign('balance', $balance);//动态金额 =余额
+            $this->assign('ablePrice', $ablePrice);  //可用资金 =动态自己 - A
+            //冻结资金 =已付款的且为买入股票所触发（履约保证金总和）
+            $this->assign('real_disk_sum',$real_disk_sum); //实盘可买 =配资资金+持仓盈亏
+            $this->assign('guaranteeFee', $guaranteeFee); //证券市值（所购买股票的所有履约金之和）
+//            $this->assign('earnSum', $earnSum);//总盈亏
+            $this->assign("buyList", $buyList);
+            return view('index/mobile/index');
+        }
+
+        return view('index');
+    }
+    //实盘可买
+
+    /**
+     **************李火生*******************
+     * @param $isFreetrial
+     * 手机首页持仓总盈亏和实盘可买
+     **************************************
+     */
+    public function real_buy($isFreetrial)
+    {
+        $member = $_SESSION['member'];
+        $memberId = (int)$member['id'];//强制类型转换
+        $all_code = Db::table("xh_stock_order")->field('stockCode')->where('memberId', $memberId)->where('status', 1)->where('isFreetrial', $isFreetrial)->order("createTime desc")->select();
+        foreach ($all_code as $k => $v) {
+            $code = $v['stockCode'];
+            $re[] = (new Common())->getMarketValueBycode($code);
+//            $result =$res['info_arr'][3];
+        }
+        $lis = Db::field('xh_stock_order.*, xh_shares.name as stockName, xh_shares.market')->table('xh_stock_order, xh_shares')
+            ->where(" xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=$memberId and isFreetrial=$isFreetrial and status = 1")
+            ->order("createTime desc")->select();
+        $profitSu = 0;
+        $list3 = array();
+        foreach ($lis as $i => $v) {
+            $nowPric = (float)$re[$i]['info_arr'][3];//获取当钱的价格
+            $dealPric = (float)$v['dealPrice'];
+            $rate = ($nowPric - $dealPric) / $dealPric;//现在的价钱减去处理的价钱除处理价钱输出12.115
+            $rate = round($rate, 4); //盈利或亏损的比率（四舍五进,保留四位小数）
+            $profitAmoun = ($nowPric - $dealPric) * ((int)$v['dealQuantity']) * 100; //收益额（数量乘一百）//输出4346
+            $profitAmoun = round($profitAmoun, 2);
+            $profitSu += $profitAmoun; //收益金额累加
+            $delayDays = (new Ucenter())->getDaysCount($v['createTime']) - 2;//递延天数
+            if ($delayDays < 0) {
+                $delayDays = 0;
+            }
+            $list3[$i]['nowPrice'] = $nowPric;
+            $list3[$i]['rate'] = $rate;
+            $list3[$i]['profitAmoun'] = $profitAmoun;
+            $a = $list3[$i]['profitAmoun'];
+            $list3[$i]['delayDays'] = $delayDays;
+        }
+        $profitSu = number_format($profitSu, 2, '.', '');
+        $_SESSION['profiSu'] =$profitSu;
+        $this->assign("profitSum", $profitSu);
+    }
+
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * @return \think\response\View
+     * A股点买
+     **************************************
+     */
+    public function buy(Request $request)
+    {
+        if (!$_SESSION['member']) {
+            redirect('./login');
+        }
+        if ($request->param()) {
+            $member = $_SESSION['member'];
+            if (isset($member)) {
+                $curDate = date("Y-m-d");
+                $count = Db::table("xh_stock_order")->where("memberId={$member['id']} and isFreetrial=0 and left(createTime,10)='$curDate'")->count();
+                $this->assign('left', 10 - (int)$count);
+            }
+            //TODO:腾讯接口数据
+            //string(484) "大秦铁路~601006~8.17~8.22~8.25~158767~67621~91142~8.17~470~8.16~560~8.15~63~8.14~84~8.13~39~8.18~712~8.19~1036~8.20~705~8.21~802~8.22~978~11:29:53/8.17/213/S/174031/3753|11:29:50/8.18/151/B/123368/3751|11:29:44/8.18/76/B/62168/3748|11:29:41/8.18/520/B/425360/3747|11:29:35/8.17/1/S/817/3744|11:29:32/8.17/235/S/192080/3743~20180706113451~-0.05~-0.61~8.32~8.08~8.18/157428/128963037~158767~13006~0.11~8.50~~8.32~8.08~2.92~1214.62~1214.62~1.17~9.04~7.40~0.88~-3017~8.19~7.41~9.10"; "
+            //http://qt.gtimg.cn/q=sz000858
+            $code_info = input('code'); //由于是int类型，需要转化为string类型
+            $code_info = (string)$code_info;
+            $cod = strval($code_info);
+            $res = $this->getMarketValueBycode($cod);
+            $info_arr = $res['info_arr'];
+            $all_url_info = $res['time_url_info'];
+            $day_url_info = $res['day_url_info'];
+            //分配数据
+            $this->assign('code', $cod);
+            $this->assign('info_arr', $info_arr);
+            $this->assign('time_img', $all_url_info);
+            $this->assign('day_img', $day_url_info);
+            //TODO:腾讯接口数据
+            $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
+            $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
+            $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+            $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
+            $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+        }
+        if (!empty($_POST['code'])) {
+            $this->ajax_success(
+                array(
+                    // "code"=>$code,
+                    "info_arr" => $info_arr,
+                    "time_img" => $all_url_info,
+                    "day_img" => $day_url_info
+                )
+            );
+        }
+        //$this->buy_ajax(0);
+        //默认一开始界面是这样显示
+        $cod = '000001';
+        $res = (new Common())->getMarketValueBycode($cod);
+        $info_arr = $res['info_arr'];
+        $all_url_info = $res['time_url_info'];
+        $day_url_info = $res['day_url_info'];
+
+        $this->assign('code', $cod);
+        $this->assign('info_arr', $info_arr);
+        $this->assign('time_img', $all_url_info);
+        $this->assign('day_img', $day_url_info);
+        return view('index/mobile/buy');
+    }
+
+    /**
+     **************李火生*******************
+     * @param $isFreetrial 0为A股买入，1为免费体验
+     * ajax买入a股
+     **************************************
+     */
+//    public function buy_ajax($isFreetrial)
+//    {
+//        if (!empty($_POST['nowPrice'])) {
+//            $member = $_SESSION['member'];
+//            $memberId = $member['id'];
+//            $data = [
+//                'memberId' => $memberId,
+//                'stockCode' => $_POST['stockCode'],
+//                'dealPrice' => $_POST['nowPrice'],
+//                'dealAmount' => $_POST['dealAmount'],
+//                'dealQuantity' => $_POST['dealQuantity'],
+//                'surplus' => $_POST['surplus'],
+//                'loss' => $_POST['loss'],
+//                'publicFee' => $_POST['publicFee'],
+//                'guaranteeFee' => $_POST['guaranteeFee'],
+//                'delayLine' => $_POST['delayLine'],
+//                'delayFee' => $_POST['delayFee'],
+//                'createTime' => $_POST['createTime'],
+//                'status' => $_POST['status'],
+//                'isFreetrial' => $isFreetrial
+//            ];
+//
+//            Db::name('stock_order')->data($data)->insert();
+//            $this->ajax_success("发送成功", array("member" => $member, "memberId" => $memberId, "data" => $data));
+//        }
+//    }
+
+
+
+
+    //买入委托
+    public function buy_entrust()
+    {
+        return view('index/mobile/buy_entrust');
+    }
+
+    //模拟
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * @param $code
+     * @return \think\response\View
+     * 免费体验
+     **************************************
+     */
+    public function freetrial(Request $request)
+    {
+        if ($request->param()) {
+            $member = $_SESSION['member'];
+            if (isset($member)) {
+                $curDate = date("Y-m-d");
+                $count = Db::table("xh_stock_order")->where("memberId={$member['id']} and isFreetrial=1 and left(createTime,10)='$curDate'")->count();
+                $this->assign('left', 10 - (int)$count);
+            }
+            //TODO:腾讯接口数据
+            //string(484) "大秦铁路~601006~8.17~8.22~8.25~158767~67621~91142~8.17~470~8.16~560~8.15~63~8.14~84~8.13~39~8.18~712~8.19~1036~8.20~705~8.21~802~8.22~978~11:29:53/8.17/213/S/174031/3753|11:29:50/8.18/151/B/123368/3751|11:29:44/8.18/76/B/62168/3748|11:29:41/8.18/520/B/425360/3747|11:29:35/8.17/1/S/817/3744|11:29:32/8.17/235/S/192080/3743~20180706113451~-0.05~-0.61~8.32~8.08~8.18/157428/128963037~158767~13006~0.11~8.50~~8.32~8.08~2.92~1214.62~1214.62~1.17~9.04~7.40~0.88~-3017~8.19~7.41~9.10"; "
+            //http://qt.gtimg.cn/q=sz000858
+            $code_info = input('code'); //由于是int类型，需要转化为string类型
+            $code_info = (string)$code_info;
+            $cod = strval($code_info);
+            $res = $this->getMarketValueBycode($cod);
+            $info_arr = $res['info_arr'];
+            $all_url_info = $res['time_url_info'];
+            $day_url_info = $res['day_url_info'];
+            //分配数据
+            $this->assign('code', $cod);
+            $this->assign('info_arr', $info_arr);
+            $this->assign('time_img', $all_url_info);
+            $this->assign('day_img', $day_url_info);
+            $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
+            $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
+            $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+            $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
+            $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+        }
+        if (!empty($_POST['code'])) {
+            $this->ajax_success(
+                array(
+                    // "code"=>$code,
+                    "info_arr" => $info_arr,
+                    "time_img" => $all_url_info,
+                    "day_img" => $day_url_info
+                )
+            );
+        }
+//        $this->buy_ajax(1);
+        //默认一开始界面是这样显示
+        $freebleSum = Db::name("member")->field('freebleSum')->where('id',$member['id'])->find();
+        $freebleSum =$freebleSum['freebleSum'];
+        $cod = '000001';
+        $res = (new Common())->getMarketValueBycode($cod);
+        $info_arr = $res['info_arr'];
+        $all_url_info = $res['time_url_info'];
+        $day_url_info = $res['day_url_info'];
+        $this->assign('code', $cod);
+        $this->assign('info_arr', $info_arr);
+        $this->assign('time_img', $all_url_info);
+        $this->assign('day_img', $day_url_info);
+        $this->assign('freebleSum',$freebleSum);
+
+        return view('index/mobile/freetrial');
+    }
+
+    //协议-1
+    public function protocol_1()
+    {
+        return view('protocol_1');
+    }
+
+    //协议2
+    public function protocol_2()
+    {
+        return view('protocol_2');
+    }
+
+    //协议-3
+    public function protocol_3()
+    {
+        return view('protocol_3');
+    }
+
+
+    public function freetrial1()
+    {
+        return view('freetrial1');
+    }
+
+    //手机版
+    public function safeensure()
+    {
+        return view('safeensure');
+    }
+
+    //帮助中心-常见问题
+    public function help()
+    {
+        return view('help');
+    }
+
+    //帮助中心-新手教学
+    public function guild()
+    {
+        if (is_mobile_request()) {
+            return view('index/mobile/guild_moile');
+        }
+        return view('guild');
+    }
+
+    //感恩回馈
+    public function gift()
+    {
+//        $article = Db::table("xh_article")->where("id = 12")->find();
+//        $this->assign("d", $article);
+
+        return view('index/mobile/gift');
+    }
+
+    //下载
+    public function download()
+    {
+        return view('index/mobile/download');
+    }
+
+    /**
+     **************李火生*******************
+     * @param $uid
+     * @return \think\response\View
+     **************************************
+     */
+    //注册
+    public function reg(Request $request,$uid)
+    {
+        if (is_mobile_request()) {
+
+                   $uid =Request::instance()->param('uid');
+//           dump($uid);
+            $this->assign('uid',$uid);
+
+
+            return view('index/mobile/reg');
+        }
+        return view('reg');
+    }
+
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * 邀请码
+     **************************************
+     */
+    public function invite(){
+        $member_data = $_SESSION['member'];
+        //先判断是否登录，未登录则进不了邀请码页面
+        if(empty($member_data)){
+            return view('index/mobile/login');
+        }
+        $domain_name = 'http://sm00009.sm00009.com';//域名
+        $project_name = ''; //项目名字
+        $member_id = $member_data['id'];   //所登录的id
+        $reg = 'reg';  //注册地址
+       // $share_url = $domain_name."/".$project_name."/".$reg."/".$member_id;
+		$share_url = $domain_name."/".$reg."/".$member_id;
+//        dump($share_url);exit();
+        $this->assign('share_url',$share_url);
+        return view('index/mobile/invite');
+    }
+	
+	/*
+	qq添加
+	*/
+	 public function qq_add(){
+        return view('index/mobile/qqsay');
+    }
+
+    //登录
+    public function login(Request $request)
+    {
+        if (is_mobile_request()) {
+            return view('index/mobile/login');
+        }
+        return view('login');
+    }
+
+    /**
+     **************李火生*******************
+     * logout把重定向改为success方法跳转
+     **************************************
+     */
+    public function logout()
+    {
+        unset($_SESSION['member']);
+//		$this->redirect("index");
+        $this->success("退出成功", url("/"));
+    }
+
+    public function doLogin()
+    {
+        $nick_name = trim($_POST['nick_name']);
+        $login_pwd = trim($_POST['login_pwd']);
+        /*if(!isset($nick_name) || $nick_name == '' || !isset($login_pwd) || $login_pwd == ''){
+            error("参数填写不正确");
+        }*/
+        $login_pwd = md5($login_pwd);
+        $member = Db::table("xh_member")->where("username='$nick_name' or mobile = '$nick_name'")->find();
+        if (!$member || $member['password'] != $login_pwd) {
+            $this->error("用户名或密码不正确", url("index/index/login"));
+        }
+        $_SESSION['member'] = $member;
+
+        $redirect_url = $_SESSION['redirect_url'];
+        if (!isset($redirect_url) || $redirect_url == '') {
+            $redirect_url = "/";
+        }
+        $data = array();
+        $data['redirect_url'] = $redirect_url;
+        $data['usableSum'] = $member['usableSum'];
+        $data['freebleSum'] =$member['freebleSum'];
+        $data['username'] = $member['username'];
+
+        unset($member['password']);
+        unset($member['usableSum']);
+        unset($member['freebleSum']);
+        $this->success("登录成功", url("/"));
+
+
+    }
+
+    public function doReg()
+    {
+        $nick_name = trim($_POST['nick_name']);
+        $login_pwd = trim($_POST['login_pwd']);
+        $mobile = trim($_POST['mobile']);
+        $code = trim($_POST['code']);
+        $inviterId =trim($_POST['inviterId']);
+        //$recommendCode = trim($_POST['recommendCode']);
+        /*if( !isset($nick_name) || !isset($login_pwd) || !isset($mobile) || !isset($code) || !isset($recommendCode) ) {
+            error("参数填写不正确");
+        }*/
+        if (strlen($nick_name) < 6) {
+            $this->error("用户名应不少于6个字符");
+        }
+        if ($mobile != $_SESSION['mobile'] || $code != $_SESSION['mobileCode']) {
+            $this->error("验证码不正确");
+        }
+        if (Db::table("xh_member")->where("username", $nick_name)->find()) {
+            $this->error("用户名已存在");
+        }
+        if (Db::table("xh_member")->where("mobile", $mobile)->find()) {
+            $this->error("手机号已存在");
+        }
+        $data = array();
+        $data['username'] = $nick_name;
+        $data['mobile'] = $mobile;
+        $data['password'] = md5($login_pwd);
+        $data['createTime'] = date("Y-m-d H:i:s");
+        $data['freebleSum'] = 10000;  //体验金（不能提现）
+
+        if(!empty($inviterId)){
+            $data['inviterId'] =$inviterId;
+        }
+        if(empty($inviterId)){
+            $data['inviterId'] =null;
+        }
+
+
+
+        $id = Db::table("xh_member")->insertGetId($data);
+        if ($id > 0) {
+            $this->success("注册成功", url("/"));
+        } else {
+            $this->error("注册失败", url("/"));
+        }
+
+
+    }
+
+    //判断是否已登录
+    public function isLogin()
+    {
+        $ret = 0;
+        if (isset($_SESSION['member'])) {
+            $ret = 1;
+        }
+        echo $ret;
+    }
+
+
+    //服务协议
+    public function reg_agree()
+    {
+        return view('reg_agree');
+    }
+
+    //关于我们
+    public function company()
+    {
+        return view('company');
+    }
+
+    //联系我们
+    public function contact()
+    {
+        return view('contact');
+    }
+
+    //忘记密码-01账户名
+    public function forgot_pass()
+    {
+        if (is_mobile_request()) {
+            return view('index/mobile/forgot_pass');
+        }
+        return view('forgot_pass');
+    }
+
+    //忘记密码-02密码重置
+    public function mobile_val()
+    {
+        return view('mobile_val');
+    }
+
+    //忘记密码-03密码找回
+    public function pass_reset()
+    {
+        if ($_SESSION['verifyForgotPass'] != 1) {
+            die("请先验证手机号");
+        }
+        return view('pass_reset');
+    }
+
+    //忘记密码- 更新密码
+    public function updateNewPwd(Request $request)
+    {
+        if ($request->isPost()) {
+            /*$data = input('post.');
+            var_dump($data);
+            exit();*/
+            $mobile = $_POST['mobile'];
+            $login_newPwd = input('login_pwd');
+
+            $yzm = $request->input('yzm');
+            if ($login_newPwd == '') {
+                $this->error("密码不能为空");
+            }
+            if ($yzm == '') {
+                $this->error("验证码不能为空");
+            }
+            if ($yzm == $_SESSION['mobileCode']) {
+                $this->error('验证码不正确');
+            }
+            if (strlen($mobile) != 11) {
+                $this->error("手机号码不正确，请重新验证");
+            }
+
+            $login_newPwd = md5($login_newPwd);
+            Db::table("xh_member")->where("mobile='{$mobile}'")->update(array('password' => $login_newPwd));
+
+            unset($_SESSION['mobileForForgot']);
+            unset($_SESSION['verifyForgotPass']);
+
+            $this->success("更新成功");
+        }
+    }
+
+    //忘记密码-04完成
+    public function reset_result()
+    {
+        return view('reset_result');
+    }
+
+    //检查图片验证码是否正确
+    /*	public function checkImageCode($code){
+
+            $data = array('captcha' => $code); new \think\captcha\Captcha();
+            $res = $this->validate($data,[
+                'captcha|验证码'=>'require|captcha'
+            ]);
+            //返回true，或者错误信息
+
+            return $res;
+        }*/
+
+
+    public function sendMobileCode(Request $request)
+    {
+        //接受验证码的手机号码
+        if ($request->isPost()) {
+            $mobile = $request->param("mobile");
+            $mobileCode = rand(100000, 999999);
+            $arr = json_decode($mobile, true);
+            /*var_dump($arr);
+            exit();*/
+            $mobiles = strlen($arr);
+            if (isset($mobiles) != 11) {
+                $this->error("手机号码不正确");
+            }
+
+            //存入session中
+            if (strlen($mobileCode) > 0) {
+                $_SESSION['mobileCode'] = $mobileCode;
+                $_SESSION['mobile'] = $mobile;
+            }
+            $content = "尊敬的用户，您本次验证码为{$mobileCode}，十分钟内有效";
+            //$content = urlencode($content);
+
+            $url = "http://120.26.38.54:8000/interface/smssend.aspx";
+            $post_data = array("account" => "peizi", "password" => "123qwe", "mobile" => "$mobile", "content" => $content);
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+            $output = curl_exec($ch);
+            curl_close($ch);
+            if ($output) {
+                $this->ajax_success("发送成功", $output);
+            } else {
+                $this->ajax_success("发送失败");
+            }
+            //json格式转换
+
+        }
+    }
+
+    //忘记密码 输入手机号和验证码之后  验证
+    //更改手机号码 验证手机验证码是否正确
+    public function checkForgotMobileCode()
+    {
+        $mobile = trim(input('mobile'));
+        $code = trim(input('code'));
+
+        if (strlen($mobile) != 11 || substr($mobile, 0, 1) != '1' || $code == '') {
+            error("参数不正确");
+        }
+
+        if ($_SESSION['mobileCode'] != $code || $_SESSION['mobile'] != $mobile) {
+            error("验证码不正确");
+        }
+
+        if (!Db::table("xh_member")->where("mobile='{$mobile}'")->find()) {
+            error("手机号码不存在");
+        }
+
+        unset($_SESSION['mobile']);
+        unset($_SESSION['mobileCode']);
+
+        //标记原手机号验证成功
+        $_SESSION['verifyForgotPass'] = 1;
+        $_SESSION['mobileForForgot'] = $mobile;
+
+        success("验证成功");
+
+    }
+
+    //上传图片
+    public function doImgUpload()
+    {
+        $serverPath = "/public/uploads/" . date("Y/m/d") . "/";
+        halt($serverPath);
+        $filepath = dirname(__FILE__) . '/../../..' . $serverPath;
+        if (!is_dir($filepath)) {
+            if (!mkdir($filepath, 0777, true)) {
+                error("目录创建失败");
+            }
+        }
+        foreach ($_FILES as $key => $val) {
+            $imgname = $val['name'];
+            $imgname = preg_replace('/([\x80-\xff]*)/i', '', $imgname); //去掉中文
+            $tmp = $val['tmp_name'];
+            $filename = get_total_millisecond() . rand(1000, 9999) . $imgname;
+            if (move_uploaded_file($tmp, $filepath . $filename)) {
+                $serverImgPath = $serverPath . $filename;
+                success($serverImgPath);
+            } else {
+                error("上传失败");
+            }
+        }
+        error("未选择要上传的图片");
+    }
+
+    //我要配资
+    public function stock()
+    {
+        return view("index/mobile/pz");
+    }
+
+    /**
+     * @param Request $request
+     */
+
+//    public function ajax_html(Request $request)
+//    {
+//        if ($request->isPost("post.")) {
+//            $ajax_html = $request->param('ajax_html');
+//            $Con_Lists = $request->param('Con_Lists');
+//            $beishu = $request->param('beishu');
+//            $performance_bond = $request->param('performance_bond');
+//            $data = round(($ajax_html / 10000), 2);
+//            $DataCon = round(($Con_Lists / 10000), 2);
+//            if ($ajax_html != 0) {
+//                $_SESSION["ajax_html"] = $data;
+//            }
+//            if ($Con_Lists != 0) {
+//                $_SESSION["Con_Lists"] = $DataCon;
+//            }
+//            if ($beishu != 0) {
+//                $_SESSION["beishu"]  = $beishu;
+//            }
+//            if($performance_bond !=0)
+//            {
+//                $_SESSION["performance"] =$performance_bond;
+//            }
+//            $this->ajax_success("获取成功", array("data" => $_SESSION["ajax_html"], "DataCon" => $Con_Lists,"beishu"=>$beishu,"performance_bond"=>$performance_bond));
+//        }
+//
+//    }
+    public function ajax_html(Request $request)
+    {
+        if ($request->isPost("post.")) {
+
+            if($_SESSION['yuebeishu']){
+                unset($_SESSION['yuebeishu']);
+            }
+            if($_SESSION['ajax_html']){
+                unset($_SESSION['ajax_html']);
+            }
+            $Con_Lists = $request->param('Con_Lists');
+            $beishu = $request->param('beishu');
+            $DataCon = round(($Con_Lists / 10000), 2);
+            if ($Con_Lists != 0) {
+//                session(array('Con_Lists'=>$DataCon,'expire'=>600));
+                $_SESSION["Con_Lists"] = $DataCon;
+            }
+            if ($beishu != 0) {
+                $_SESSION["beishu"]  = $beishu;
+            }
+            $this->ajax_success("获取成功", array("data" => $_SESSION["Con_Lists"], "DataCon" => $Con_Lists,"beishu"=>$beishu));
+        }
+
+    }
+    public function ajax_yue(Request $request)
+    {
+
+        if($_SESSION['beishu']){
+            unset($_SESSION['beishu']);
+        }
+        if($_SESSION['Con_Lists']){
+            unset($_SESSION['Con_Lists']);
+        }
+        if ($request->isPost("post.")) {
+            $ajax_html = $request->param('ajax_html');
+            $yuebeishu =$request->param('yuebeishu');
+            $data = round(($ajax_html / 10000), 2);
+            if ($ajax_html != 0) {
+                $_SESSION["ajax_html"] = $data;
+            }
+            if($yuebeishu !=0)
+            {
+                $_SESSION["yuebeishu"] =$yuebeishu;
+            }
+            $this->ajax_success("获取成功", array("data" => $_SESSION["ajax_html"],"yuebeishu"=>$yuebeishu));
+        }
+
+
+
+    }
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * 财经资讯
+     **************************************
+     */
+    public function news(){
+        $res =Db::name('article')->order('createTime','desc')->paginate(5,true);
+        if(!empty($res)){
+//           $this->ajax_success('成功',$res);
+            $this->assign('res',$res);
+        }
+        return view('index/mobile/news');
+    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 获取点击过来的article_id
+     **************************************
+     */
+    public function new_id(Request $request){
+        if($request->isPost()){
+            $article_id =$_POST['article_id'];
+            if(!empty($article_id)){
+                session('article_id',$article_id);
+                $this->ajax_success('获取成功',$article_id);
+            }
+
+        }
+    }
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 财经资讯详情
+     * @return \think\response\View
+     **************************************
+     */
+    public function news_t(Request $request){
+        if($request->isPost()){
+            $article_id = Session::get('article_id');
+            if(!empty($article_id)){
+                $res = Db::name('article')->where('id',$article_id)->find();
+                if($res){
+                    session('article_id',null);
+                    $this->ajax_success('获取成功',$res);
+                }
+            }
+        }
+        return view('index/mobile/news_t');
+    }
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 手机端的轮播图
+     **************************************
+     */
+    public function app_broadcast(Request $request){
+        if($request->isPost()){
+            $res =Db::name('images')->field('src')->order('id','desc')->where('type',2)->limit(0,3)->select();
+            if(!empty($res)){
+                $this->ajax_success('成功',$res);
+            }
+        }
+    }
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * pc端轮播图
+     **************************************
+     */
+    public function pc_broadcast(Request $request){
+        if($request->isPost()){
+            $res = Db::name('images')->field('src')->order('id','desc')->where('type',1)->limit(0,3)->select();
+            if(!empty($res)){
+               $this->ajax_success('成功',$res);
+            }
+        }
+    }
+
+
+
+
+
+}

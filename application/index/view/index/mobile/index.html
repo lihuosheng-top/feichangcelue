@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection"content="telephone=no, email=no" />
+	<link href="./public/stock/css/reset.css" rel="stylesheet" type="text/css">
+	<link href="./public/stock/css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css">
+	<link href="./public/stock/css/style.css" rel="stylesheet" type="text/css">
+	<script src="./public/stock/js/sizes.js" type="text/javascript"></script>
+	<title>首页</title>
+</head>
+<body>
+
+<div class="wapper">
+	<div class="swiper-container">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide" id="banner1"><img src="" alt=""></div>
+			<div class="swiper-slide" id="banner2"><img src="" alt=""></div>
+			<div class="swiper-slide" id="banner3"><img src="" alt=""></div>
+		</div>
+		<!--<div class="swiper-wrapper">-->
+			<!--<div class="swiper-slide" id="banner1"><img src="/feichangcelue/public/uploads/images/20180713/3d416b03da1b9123bdb83623842d879d.png" alt=""></div>-->
+			<!--<div class="swiper-slide" id="banner2"><img src="/feichangcelue/public/uploads/images/20180713/3d416b03da1b9123bdb83623842d879d.png" alt=""></div>-->
+			<!--<div class="swiper-slide" id="banner3"><img src="/feichangcelue/public/uploads/images/20180713/3d416b03da1b9123bdb83623842d879d.png" alt=""></div>-->
+		<!--</div>-->
+		<!-- 如果需要分页器 -->
+		<div class="swiper-pagination"></div>
+	</div>
+	<div class="pz">
+		<ul>
+			<li><a href="{:url('index/index/stock')}"><img src="./public/stock/img/ri.png" alt="">按天配资</a></li>
+			<li><a href="{:url('index/index/stock')}"><img src="./public/stock/img/yue.png" alt="">按月配资</a></li>
+			<li><a href="./freetrial.html"><img src="./public/stock/img/mian.png" alt="">免费体验</a></li>
+		</ul>
+	</div>
+	<div class="list">
+		<!--动态资金就是余额进行-->
+		<ul>{if !empty($_SESSION['member_id'])}
+			<li>动态资产<span id ="active_Assets">{$ablePrice}</span></li>
+			<li>可用金额<span >{$balance['usableSum']}</span></li>
+			<li>冻结资金<span id="frozen_Assets">{$guaranteeFee}</span></li>
+			<!--<li>实盘可买<span {if condition ="!empty($_SESSION['ajax_html'] ?$_SESSION['ajax_html']:0"} selected ="selected" {/if} >{$peizi}</span></li>-->
+			<li>实盘可买<span {if condition ="!empty($_SESSION['real_disk'] ?$_SESSION['real_disk']:0"} selected ="selected" {/if} >{$real_disk_sum}</span></li>
+			<li>证券市值<span>{$guaranteeFee}</span></li>
+			<!--<li>持仓盈亏<span {if condition ="!empty($earnSum) ?  $earnSum:0"} selected ="selected" {/if}>-->
+				<!--{$earnSum}</span>-->
+			</li><li>持仓盈亏<span {if condition ="!empty($profitSum) ?  $profitSum:0"} selected ="selected" {/if}>
+				{$profitSum}</span></li>
+			{else}
+			<li>动态资产<span id ="active_Assets">0.00</span></li>
+			<li>可用金额<span >0.00</span></li>
+			<li>冻结资金<span id="frozen_Assets">0.00</span></li>
+			<li>实盘可买<span id="real_buy">0.00</span></li>
+			<li>证券市值<span id="market">0.00</span></li>
+			<li>持仓盈亏<span id="Profit_loss">0.00</span></li>
+			{/if}
+
+
+
+		</ul>
+	</div>
+	<div class="news">
+		 <a href="{:url('index/index/news')}">
+		<dl>
+			<dt><img src="./public/stock/img/cai.png"></dt>
+			<dd>财经资讯</dd>
+			<dd >(最新鲜最全面的财经资讯)</dd>
+		</dl>
+		 </a>
+		<!--<dl>-->
+			<!--<dt><img src="./public/stock/img/liu.png"></dt>-->
+			<!--<dd>牛散实操</dd>-->
+			<!--<dd>(经典实战,牛散的操作)</dd>-->
+		<!--</dl>-->
+	</div>
+</div>
+
+<div id="footer">
+	<ul class="clear">
+		<li class="active"><a href="./index.html"><i></i><span>首页</span></a></li>
+		<li><a href="{:url('/stock')}"><i></i>我要配资</a></li>
+		<li><a href="{:url('/buy')}"><i></i>我要交易</a></li>
+		<li><a href="./ucenter/home.html"><i></i>账户中心</a></li>
+	</ul>
+</div>
+<script src="./public/stock/js/jquery-1.11.1.min.js" type="text/javascript"></script>
+<script src="./public/stock/js/swiper.jquery.min.js" type="text/javascript"></script>
+<script>
+//	var active_Assets =$("#active_Assets").val();
+//
+//	console.log(active_Assets);
+//	if(active_Assets == null){
+//        $("#active_Assets").html(0.00);
+//	}else {
+//        $("#active_Assets").html({$balance.usableSum});
+//	}
+
+
+
+    var mySwiper = new Swiper('.swiper-container', {
+        autoplay : 4000,//可选选项，自动滑动
+        loop : true,
+        // 如果需要分页器
+        pagination : '.swiper-pagination'
+    });
+</script>
+<script>
+    $(function(){
+        $("#footer li").click(function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+
+    });
+</script>
+<!--<script>-->
+	<!--$(function(){-->
+        <!--$.ajax({-->
+            <!--type:"post",-->
+            <!--url:"{:url('index/index/index')}",-->
+            <!--data:{},-->
+            <!--dataType:'json',-->
+            <!--success:function(data){-->
+<!--//                window.location.href= './sell';-->
+                <!--console.log('成功');-->
+            <!--},-->
+            <!--error:function (data) {-->
+                <!--console.log("错误");-->
+            <!--}-->
+        <!--})-->
+	<!--});-->
+<!--</script>-->
+
+<!--首页轮播图-->
+<script>
+    (function(){
+        $.ajax({
+            type:"post",
+            url:"{:url('index/index/app_broadcast')}",
+            data:{},
+            dataType:'json',
+            success:function(data){
+//                console.log(data);
+                var banner1 =data.data[0].src;
+                $('#banner1 img')[0].src=banner1;
+                $('#banner1 img')[1].src=banner1;
+                var banner2 =data.data[1].src;
+                $('#banner2 img')[0].src=banner2;
+                var banner3 =data.data[2].src;
+                $('#banner3 img')[1].src=banner3;
+            },
+            error:function (data) {
+                console.log("错误");
+            }
+        });
+    })();
+</script>
+</body>
+</html>
