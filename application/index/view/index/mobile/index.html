@@ -17,11 +17,18 @@
 		.floating-window{
 			width: 5rem;
     height: 5rem;
-    /*background: #000;*/
-    /*opacity: 0.1;*/
+    
     position: fixed;
     top: 10rem;
     right: 0;
+		}
+		.lim_m_rm #lim_mchat_wrapper a{
+			width: 30px !important;
+			    padding: 7px !important;
+		}
+		.lim_m_rm{
+			    right: 1px !important;
+			    top: 41% !important;
 		}
 	</style>
 </head>
@@ -89,6 +96,7 @@
 			<!--<dd>(经典实战,牛散的操作)</dd>-->
 		<!--</dl>-->
 	</div>
+
     <!--<div class="floating-window">-->
 		<!--<a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">-->
 			<!--<img src="./public/static/home/img/chat.jpg" alt="">-->
@@ -155,6 +163,9 @@
         $("#footer li").click(function(){
             $(this).addClass('active').siblings().removeClass('active');
         });
+        $(".list").on("click",function(){
+			  $("#lim_mobile_chat").hide();
+		});
 
     });
 </script>

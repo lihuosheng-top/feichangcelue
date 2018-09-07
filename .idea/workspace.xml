@@ -2,29 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5a7fffd-e819-484a-a20e-a7a99902fc44" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/04/1d7ca2dc0627393dcf199835890150.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/18/cff4c7c7800c638b39022094368c0b.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/48/e345b986ae9584f9686dac64ea2c6a.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4f/266bee3b6aa9e814c2a89ad703ef82.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/52/3f31ad2d7030f6f5f393a9b52f6810.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/5d/033c656ae605ce3fc9313aa2e44b7d.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/62/43ba32331a724b428a8aa259d4e109.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/63/dc9087c660611bdf3fcb1a1257247a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/6d/8b3d5ffa284cb460a156ea5cce116c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/de/93f3a8160e3562579071d56251d6bb.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/07.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/1e4a05d695a2198342b4b327acbab4e0.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/22756b07ae5be0c9e0a6568342e756dd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/24d5ec5380bee8b19256d0f24a3c7af8.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/334529c0b8335f6d227d0b122802a841.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/7ac9d647afb5ff4fc0a7f6e6718e66da.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/92ab0b2d433299508c9c6b711f69d093.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/9f8fee6cf85de4861b3488555d2d2a04.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/c0bbac2faf785b35d2221217d8464956.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/c6ee1c9a45723e8ade0dae23b08a07f8.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/protocol_3.html" afterPath="$PROJECT_DIR$/application/index/view/index/protocol_3.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,7 +37,13 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="299">
               <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-              <folding />
+              <folding>
+                <marker date="1536307653671" expanded="true" signature="895:935" ph="{...}" />
+                <marker date="1536307653671" expanded="true" signature="6259:6269" ph="{...}" />
+                <marker date="1536307653671" expanded="true" signature="6259:6280" ph="..." />
+                <marker date="1536307653671" expanded="true" signature="6259:7717" ph="..." />
+                <marker date="1536307653671" expanded="true" signature="6832:7542" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -295,12 +286,12 @@
       <workItem from="1536201953776" duration="24205000" />
       <workItem from="1536300334203" duration="75000" />
       <workItem from="1536300458969" duration="663000" />
-      <workItem from="1536301253138" duration="5822000" />
+      <workItem from="1536301253138" duration="5906000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65029000" />
+    <option name="totallyTimeSpent" value="65113000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
@@ -653,7 +644,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding />
+          <folding>
+            <marker date="1536307653671" expanded="true" signature="895:935" ph="{...}" />
+            <marker date="1536307653671" expanded="true" signature="6259:6269" ph="{...}" />
+            <marker date="1536307653671" expanded="true" signature="6259:6280" ph="..." />
+            <marker date="1536307653671" expanded="true" signature="6259:7717" ph="..." />
+            <marker date="1536307653671" expanded="true" signature="6832:7542" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
