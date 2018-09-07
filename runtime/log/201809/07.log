@@ -3062,3 +3062,92 @@
 [ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001102s ]
 [ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.015938s ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-07T12:03:28+08:00 ] ::1 ::1 GET /
+[ info ] localhost:88/ [运行时间：0.119319s][吞吐率：8.38req/s] [内存消耗：2,690.24kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000488s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006344s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038633s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.012060s ]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:51]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:22]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:27]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:34]
+[ error ] [8]未定义变量: usableSum[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:39]
+[ error ] [8]未定义数组索引: member[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:117]
+[ error ] [8]未定义变量: count[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:175]
+[ error ] [8]未定义变量: earnSum[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:176]
+[ error ] [8]未定义变量: buyList[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:218]
+[ error ] [8]未定义变量: buyList[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:218]
+[ error ] [8]未定义变量: buyList[D:\phpstudy\PHPTutorial\WWW\feichangcelue\runtime\temp\53200c3e9f3036963ae0f9e0a7ae8213.php:218]
+---------------------------------------------------------------
+[ 2018-09-07T12:03:29+08:00 ] ::1 ::1 POST /pc_broadcast.html
+[ info ] localhost:88/pc_broadcast.html [运行时间：0.203463s][吞吐率：4.91req/s] [内存消耗：2,986.11kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpstudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost:88',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost:88',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36',
+  'referer' => 'http://localhost:88/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'Webstorm-adcf30a=94a7c9dd-3109-4dc9-a95f-7b1ed6c144ee; thinkphp_show_page_trace=0|0; PHPSESSID=j9qj2ou4me614pqj3aeug3fbj1; firstEnterUrlInSession=http%3A//localhost%3A88/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000843s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.010953s ]
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpstudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035967s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.016976s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.013463s ]
