@@ -2,6 +2,7 @@
 
 namespace app\index\controller;
 
+use app\cms\admin\Page;
 use think\Model;
 use think\Db;
 use app\index\controller\Alistock;
@@ -864,12 +865,9 @@ class Index extends Home
      **************************************
      */
     public function news(){
-        $res =Db::name('article')->order('createTime','desc')->paginate(5,true);
-        if(!empty($res)){
-//           $this->ajax_success('成功',$res);
-            $this->assign('res',$res);
-        }
-        return view('index/mobile/news');
+        $res =Db::name('article')->order('createTime','desc')->paginate(5);
+        $page = $res->render();
+        return view('index/mobile/news',['res'=>$res,'page'=>$page]);
     }
 
     /**

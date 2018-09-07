@@ -9,6 +9,9 @@
     <link href="./public/stock/css/reset.css" rel="stylesheet" type="text/css">
     <link href="./public/stock/css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css">
     <link href="./public/stock/css/style.css" rel="stylesheet" type="text/css">
+	<link href="./public/static/home/css/mui.min.css" rel="stylesheet" />
+	<link href="./public/static/home/css/moblie/tradeCommon.css" rel="stylesheet" />
+
     <script src="./public/stock/js/sizes.js" type="text/javascript"></script>
 	<title>尚牛在线</title>
 	<style>
@@ -46,15 +49,15 @@
 			line-height: 35px;
 		}
 		
-		.floating-window{
-			width: 5rem;
-		    height: 5rem;
-		    background: #000;
-		    opacity: 0.1;
-		    position: fixed;
-		    top: 10rem;
-		    right: 0;
-		}
+		/*.floating-window{*/
+			/*width: 5rem;*/
+		    /*height: 5rem;*/
+		    /*background: #000;*/
+		    /*opacity: 0.1;*/
+		    /*position: fixed;*/
+		    /*top: 10rem;*/
+		    /*right: 0;*/
+		/*}*/
 	</style>
 </head>
 <body>
@@ -101,7 +104,11 @@
     			<p class="con_ps">准备资金=风险保证金+日管理费*天数</p>
     		</div>
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
-    		 <div class="floating-window"></div>
+    		 <!--<div class="floating-window">-->
+				 <!--<a href="http://chat.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=1037386&configID=75734&jid=5421328761" target="_blank">-->
+					 <!--<img src="./public/static/home/img/chat.jpg" alt="">-->
+				 <!--</a>-->
+			 <!--</div>-->
     	</div>
 
     	<div class="con_two">
@@ -137,19 +144,35 @@
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
 
 		</div>
-		 <div class="floating-window"></div>
+		 <!--<div class="floating-window"></div>-->
 
     </div>
 <div>
 </div>
 
 	<div id="footer">
-		<ul class="clear">
-			<li class="active"><a href="{:url('/index')}"><i></i><span>首页</span></a></li>
-			<li><a href="{:url('/stock')}"><i></i>我要配资</a></li>
-			<li><a href="{:url('/buy')}"><i></i>我要交易</a></li>
-			<li><a href="{:url('/ucenter/home')}"><i></i>账户中心</a></li>
-		</ul>
+		<nav class="ml_tab mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="{:url('/index')}">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="{:url('/stock')}">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要配资</span>
+			</a>
+			<a class="mui-tab-item" href="{:url('/invite')}">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要推广</span>
+			</a>
+			<a class="mui-tab-item" href="{:url('/buy')}">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要交易</span>
+			</a>
+			<a class="mui-tab-item " href="{:url('/ucenter/home')}">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label" id="abc">账户中心</span>
+			</a>
+		</nav>
 	</div>
 <script src="./public/stock/js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="./public/stock/js/swiper.jquery.min.js" type="text/javascript"></script>
@@ -487,12 +510,18 @@
 
     });
     //点击任意地方客服消失
+//    $(".content").click(function(){
+//    	$(".floating-window").hide()
+//    });
+//    $(".tab").click(function(){
+//    	$(".floating-window").show()
+//    });
     $(".content").click(function(){
-    	$(".floating-window").hide()
-    });
-    $(".tab").click(function(){
-    	$(".floating-window").show()
-    });
+        	$("#lim_mob_chat").hide()
+        });
+//        $(".tab").click(function(){
+//        	$(".floating-window").show()
+//        });
 
 //    $(function () {
 //        $(".con_btn input").click(function () {
@@ -527,5 +556,7 @@
 			<div><a href="{:url('/buy')}">确认</a></div>
 		</div>
 	</div>
+	<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
 </body>
+
 </html>
