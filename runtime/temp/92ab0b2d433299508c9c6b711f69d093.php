@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1536303081;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -44,39 +45,39 @@
 	</div>
 	<div class="pz">
 		<ul>
-			<li><a href="{:url('index/index/stock')}"><img src="./public/stock/img/ri.png" alt="">按天配资</a></li>
-			<li><a href="{:url('index/index/stock')}"><img src="./public/stock/img/yue.png" alt="">按月配资</a></li>
+			<li><a href="<?php echo url('index/index/stock'); ?>"><img src="./public/stock/img/ri.png" alt="">按天配资</a></li>
+			<li><a href="<?php echo url('index/index/stock'); ?>"><img src="./public/stock/img/yue.png" alt="">按月配资</a></li>
 			<li><a href="./freetrial.html"><img src="./public/stock/img/mian.png" alt="">免费体验</a></li>
 		</ul>
 	</div>
 	<div class="list">
 		<!--动态资金就是余额进行-->
-		<ul>{if !empty($_SESSION['member_id'])}
-			<li>动态资产<span id ="active_Assets">{$ablePrice}</span></li>
-			<li>可用金额<span >{$balance['usableSum']}</span></li>
-			<li>冻结资金<span id="frozen_Assets">{$guaranteeFee}</span></li>
-			<!--<li>实盘可买<span {if condition ="!empty($_SESSION['ajax_html'] ?$_SESSION['ajax_html']:0"} selected ="selected" {/if} >{$peizi}</span></li>-->
-			<li>实盘可买<span {if condition ="!empty($_SESSION['real_disk'] ?$_SESSION['real_disk']:0"} selected ="selected" {/if} >{$real_disk_sum}</span></li>
-			<li>证券市值<span>{$guaranteeFee}</span></li>
-			<!--<li>持仓盈亏<span {if condition ="!empty($earnSum) ?  $earnSum:0"} selected ="selected" {/if}>-->
-				<!--{$earnSum}</span>-->
-			</li><li>持仓盈亏<span {if condition ="!empty($profitSum) ?  $profitSum:0"} selected ="selected" {/if}>
-				{$profitSum}</span></li>
-			{else}
+		<ul><?php if(!empty($_SESSION['member_id'])): ?>
+			<li>动态资产<span id ="active_Assets"><?php echo $ablePrice; ?></span></li>
+			<li>可用金额<span ><?php echo $balance['usableSum']; ?></span></li>
+			<li>冻结资金<span id="frozen_Assets"><?php echo $guaranteeFee; ?></span></li>
+			<!--<li>实盘可买<span <?php if(0): ?> selected ="selected" <?php endif; ?> ><?php echo $peizi; ?></span></li>-->
+			<li>实盘可买<span <?php if(0): ?> selected ="selected" <?php endif; ?> ><?php echo $real_disk_sum; ?></span></li>
+			<li>证券市值<span><?php echo $guaranteeFee; ?></span></li>
+			<!--<li>持仓盈亏<span <?php if(0): ?> selected ="selected" <?php endif; ?>>-->
+				<!--<?php echo $earnSum; ?></span>-->
+			</li><li>持仓盈亏<span <?php if(0): ?> selected ="selected" <?php endif; ?>>
+				<?php echo $profitSum; ?></span></li>
+			<?php else: ?>
 			<li>动态资产<span id ="active_Assets">0.00</span></li>
 			<li>可用金额<span >0.00</span></li>
 			<li>冻结资金<span id="frozen_Assets">0.00</span></li>
 			<li>实盘可买<span id="real_buy">0.00</span></li>
 			<li>证券市值<span id="market">0.00</span></li>
 			<li>持仓盈亏<span id="Profit_loss">0.00</span></li>
-			{/if}
+			<?php endif; ?>
 
 
 
 		</ul>
 	</div>
 	<div class="news">
-		 <a href="{:url('index/index/news')}">
+		 <a href="<?php echo url('index/index/news'); ?>">
 		<dl>
 			<dt><img src="./public/stock/img/cai.png"></dt>
 			<dd>财经资讯</dd>
@@ -99,30 +100,30 @@
 <!--<div id="footer">-->
 	<!--<ul class="clear">-->
 		<!--<li class="active"><a href="./index.html"><i></i><span>首页</span></a></li>-->
-		<!--<li><a href="{:url('/stock')}"><i></i>我要配资</a></li>-->
-		<!--<li><a href="{:url('/buy')}"><i></i>我要交易</a></li>-->
+		<!--<li><a href="<?php echo url('/stock'); ?>"><i></i>我要配资</a></li>-->
+		<!--<li><a href="<?php echo url('/buy'); ?>"><i></i>我要交易</a></li>-->
 		<!--<li><a href="./ucenter/home.html"><i></i>账户中心</a></li>-->
 	<!--</ul>-->
 <!--</div>-->
 <div id="footer">
 	<nav class="ml_tab mui-bar mui-bar-tab">
-		<a class="mui-tab-item mui-active" href="{:url('/index')}">
+		<a class="mui-tab-item mui-active" href="<?php echo url('/index'); ?>">
 			<span class="mui-icon mui-icon-home"></span>
 			<span class="mui-tab-label">首页</span>
 		</a>
-		<a class="mui-tab-item " href="{:url('/stock')}">
+		<a class="mui-tab-item " href="<?php echo url('/stock'); ?>">
 			<span class="mui-icon mui-icon-phone"></span>
 			<span class="mui-tab-label">我要配资</span>
 		</a>
-		<a class="mui-tab-item" href="{:url('/invite')}">
+		<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
 			<span class="mui-icon mui-icon-phone"></span>
 			<span class="mui-tab-label">我要推广</span>
 		</a>
-		<a class="mui-tab-item" href="{:url('/buy')}">
+		<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
 			<span class="mui-icon mui-icon-phone"></span>
 			<span class="mui-tab-label">我要交易</span>
 		</a>
-		<a class="mui-tab-item " href="{:url('/ucenter/home')}">
+		<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">
 			<span class="mui-icon mui-icon-email"></span>
 			<span class="mui-tab-label" id="abc">账户中心</span>
 		</a>
@@ -138,7 +139,7 @@
 //	if(active_Assets == null){
 //        $("#active_Assets").html(0.00);
 //	}else {
-//        $("#active_Assets").html({$balance.usableSum});
+//        $("#active_Assets").html(<?php echo $balance['usableSum']; ?>);
 //	}
 
 
@@ -162,7 +163,7 @@
 	<!--$(function(){-->
         <!--$.ajax({-->
             <!--type:"post",-->
-            <!--url:"{:url('index/index/index')}",-->
+            <!--url:"<?php echo url('index/index/index'); ?>",-->
             <!--data:{},-->
             <!--dataType:'json',-->
             <!--success:function(data){-->
@@ -181,7 +182,7 @@
     (function(){
         $.ajax({
             type:"post",
-            url:"{:url('index/index/app_broadcast')}",
+            url:"<?php echo url('index/index/app_broadcast'); ?>",
             data:{},
             dataType:'json',
             success:function(data){

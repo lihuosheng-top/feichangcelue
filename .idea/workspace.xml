@@ -2,73 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5a7fffd-e819-484a-a20e-a7a99902fc44" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/04/1d7ca2dc0627393dcf199835890150.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/18/cff4c7c7800c638b39022094368c0b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/31/b540b817959249fbf15e04c0d2e08c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/48/e345b986ae9584f9686dac64ea2c6a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4f/266bee3b6aa9e814c2a89ad703ef82.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/52/3f31ad2d7030f6f5f393a9b52f6810.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/5d/033c656ae605ce3fc9313aa2e44b7d.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/62/43ba32331a724b428a8aa259d4e109.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/63/dc9087c660611bdf3fcb1a1257247a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/64/5abd612ede867c35048e36050fb36f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/6d/8b3d5ffa284cb460a156ea5cce116c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/82/6dd71117341d67f9dc4c30b50e490c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/ae/60297e0bbf81f84c9c89b5b73c5bda.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/b0/6c9c036e873822b0707daae8ffbf45.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/b1/ea670d0f5a8248c39b0425747c8be7.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/b7/d251090ac28fcfebd2d7b209a6fd07.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/ba/283f933959ec3136a8755e075ea8e2.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/c1/6e0f3f8e32a2e8a38c6699caa7308a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/f1/44a8a13852e940815509121211a449.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/f3/ec87b84d0048a15c45f983d288fd8c.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/06.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/07.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/05f8753d535b3c8c9401d39f7a19cc1b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/1e4a05d695a2198342b4b327acbab4e0.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/22756b07ae5be0c9e0a6568342e756dd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/23147b840e11512df98ef323593ce66a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/24d5ec5380bee8b19256d0f24a3c7af8.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/27cc574582db83540f7611fe587aa9a9.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/334529c0b8335f6d227d0b122802a841.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/3349180b1c90827c730b03ebcdb5dac1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/339a357fb8dae26f888a3a63d8fc2ae5.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/348687b84928db975c88201a38f434df.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4ecf93cc205cc9195625bff11193b476.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4edff0c1747b2f0dba52b1569e455ffb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4fc7d31c6b23c7efd5bc31bd1cbc8c0b.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/56cfbe80866190566ceac7a7e1fa3131.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/60b8ee3f061fb6c77a0a91e4a2b602bd.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/7ac9d647afb5ff4fc0a7f6e6718e66da.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/7d565156751972b437177f7f045e2db6.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/8c8854d8535ce28fb45b435dbc56f4cb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/92ab0b2d433299508c9c6b711f69d093.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/92b88eb7831ea1564311af615cfdaba1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/92f03c1703ca5dbd3d866668004c60f8.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/9f8fee6cf85de4861b3488555d2d2a04.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/aa7f3eaeff6e69fcd3d33a635c9b336f.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b07e8e724d51b3be06459b964b331936.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b1734e025f4cd1869b0c2ee5b2500a51.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b179ca8d3931c15303d458e8cae2ff5a.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/c0bbac2faf785b35d2221217d8464956.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/c6ee1c9a45723e8ade0dae23b08a07f8.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/d2985ad3934f28d3813b06f62dfc7acb.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/d918285fbdbed444c0ff2f82cd458a02.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/daaa74f65244cb0011dc43c9f1ddd1ef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=core_js,libs_js_a355589f910f7eb37abbebaf2d4173ca" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=core_js,libs_js_a355589f910f7eb37abbebaf2d4173ca.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=datepicker_css_09a33c7f6b38a523984ff3648c74b686" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=datepicker_css_09a33c7f6b38a523984ff3648c74b686.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=datepicker_js_85e9a08de2f25a974e6eb0f967671cac" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=datepicker_js_85e9a08de2f25a974e6eb0f967671cac.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=libs_css,core_css_3885e98d1db1aadea26cd5a20e6725b2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=libs_css,core_css_3885e98d1db1aadea26cd5a20e6725b2.gz" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/static/home/img/chat.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/pz.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/pz.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/thinkphp/library/think/debug/Html.php" afterPath="$PROJECT_DIR$/thinkphp/library/think/debug/Html.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +16,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="news.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="news.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/news.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1279">
@@ -87,6 +24,56 @@
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="94" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pz.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/pz.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="244">
+              <caret line="109" column="21" lean-forward="false" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="161">
+              <caret line="7" column="94" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="94" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="top.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/public/top.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/public/footer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="129">
+              <caret line="152" column="19" lean-forward="false" selection-start-line="152" selection-start-column="19" selection-end-line="155" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,6 +120,8 @@
       <find>cp_item</find>
       <find>box_con</find>
       <find>news</find>
+      <find>在线客服</find>
+      <find>floating-window</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -156,15 +145,15 @@
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/gift.html" />
         <option value="$PROJECT_DIR$/public/static/home/css/index.css" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/withdraw.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/mobile/pz.html" />
         <option value="$PROJECT_DIR$/application/index/view/public/PublicNav.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/history.html" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/sell.html" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/freetrialSell.html" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/freetrialHistory.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/news.html" />
+        <option value="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
+        <option value="$PROJECT_DIR$/application/index/view/index/mobile/pz.html" />
       </list>
     </option>
   </component>
@@ -203,6 +192,46 @@
             <path>
               <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
               <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mobile" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -251,17 +280,18 @@
       <workItem from="1536201953776" duration="24205000" />
       <workItem from="1536300334203" duration="75000" />
       <workItem from="1536300458969" duration="663000" />
-      <workItem from="1536301253138" duration="831000" />
+      <workItem from="1536301253138" duration="1866000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60038000" />
+    <option name="totallyTimeSpent" value="61073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21406959" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.04311649" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -291,13 +321,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/reset_result.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-31">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/reg_agree.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-31">
@@ -500,20 +523,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="189" column="31" lean-forward="false" selection-start-line="189" selection-start-column="24" selection-end-line="189" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/public/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4117">
-          <caret line="179" column="0" lean-forward="false" selection-start-line="178" selection-start-column="0" selection-end-line="179" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -532,20 +541,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2691">
           <caret line="279" column="70" lean-forward="false" selection-start-line="279" selection-start-column="60" selection-end-line="279" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/pz.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="160" column="10" lean-forward="false" selection-start-line="137" selection-start-column="4" selection-end-line="160" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="12" column="84" lean-forward="false" selection-start-line="12" selection-start-column="84" selection-end-line="12" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -618,6 +613,46 @@
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/public/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="152" column="19" lean-forward="false" selection-start-line="152" selection-start-column="19" selection-end-line="155" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="7" column="94" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/public/top.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="92" column="8" lean-forward="false" selection-start-line="92" selection-start-column="8" selection-end-line="94" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/pz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="109" column="21" lean-forward="false" selection-start-line="109" selection-start-column="21" selection-end-line="109" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

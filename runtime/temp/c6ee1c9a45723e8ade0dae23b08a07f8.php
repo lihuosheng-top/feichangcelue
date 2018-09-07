@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536303081;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -152,23 +153,23 @@
 
 	<div id="footer">
 		<nav class="ml_tab mui-bar mui-bar-tab">
-			<a class="mui-tab-item" href="{:url('/index')}">
+			<a class="mui-tab-item" href="<?php echo url('/index'); ?>">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="{:url('/stock')}">
+			<a class="mui-tab-item mui-active" href="<?php echo url('/stock'); ?>">
 				<span class="mui-icon mui-icon-phone"></span>
 				<span class="mui-tab-label">我要配资</span>
 			</a>
-			<a class="mui-tab-item" href="{:url('/invite')}">
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
 				<span class="mui-icon mui-icon-phone"></span>
 				<span class="mui-tab-label">我要推广</span>
 			</a>
-			<a class="mui-tab-item" href="{:url('/buy')}">
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
 				<span class="mui-icon mui-icon-phone"></span>
 				<span class="mui-tab-label">我要交易</span>
 			</a>
-			<a class="mui-tab-item " href="{:url('/ucenter/home')}">
+			<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">
 				<span class="mui-icon mui-icon-email"></span>
 				<span class="mui-tab-label" id="abc">账户中心</span>
 			</a>
@@ -446,7 +447,7 @@
 //            $(".box").css("display","block");
 //            $.ajax({
 //                type: 'POST',
-//                url: "{:url('index/index/ajax_html')}",
+//                url: "<?php echo url('index/index/ajax_html'); ?>",
 //                data: {'ajax_html':ajax_html,'Con_Lists':Con_Lists,'beishu':beishu,'performance_bond':performance_bond},
 //                dataType: 'json',
 //                success: function (data) {
@@ -474,7 +475,7 @@
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
-                url: "{:url('index/index/ajax_html')}",
+                url: "<?php echo url('index/index/ajax_html'); ?>",
                 data: {'Con_Lists':Con_Lists,'beishu':beishu},
                 dataType: 'json',
                 success: function (data) {
@@ -495,7 +496,7 @@
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
-                url: "{:url('index/index/ajax_yue')}",
+                url: "<?php echo url('index/index/ajax_yue'); ?>",
                 data: {'ajax_html':ajax_html,'yuebeishu':yuebeishu},
                 dataType: 'json',
                 success: function (data) {
@@ -525,7 +526,7 @@
 //            $(".box").css("display","block");
 //            $.ajax({
 //                type: 'POST',
-//                url: "{:url('index/index/ajax_html')}",
+//                url: "<?php echo url('index/index/ajax_html'); ?>",
 //                data: {'ajax_html':ajax_html,'Con_Lists':Con_Lists},
 //                dataType: 'json',
 //                success: function (data) {
@@ -547,7 +548,7 @@
 			<p>提示</p>
 			<p>资配交易</p>
 			<p class="con_spa"><span>交易资金:</span><span class="con_all">0</span></p>
-			<div><a href="{:url('/buy')}">确认</a></div>
+			<div><a href="<?php echo url('/buy'); ?>">确认</a></div>
 		</div>
 	</div>
 </body>
