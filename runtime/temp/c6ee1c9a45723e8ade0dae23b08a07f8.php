@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536206425;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536292042;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -10,6 +10,9 @@
     <link href="./public/stock/css/reset.css" rel="stylesheet" type="text/css">
     <link href="./public/stock/css/swiper-3.3.1.min.css" rel="stylesheet" type="text/css">
     <link href="./public/stock/css/style.css" rel="stylesheet" type="text/css">
+	<link href="./public/static/home/css/mui.min.css" rel="stylesheet" />
+	<link href="./public/static/home/css/moblie/tradeCommon.css" rel="stylesheet" />
+
     <script src="./public/stock/js/sizes.js" type="text/javascript"></script>
 	<title>尚牛在线</title>
 	<style>
@@ -134,12 +137,28 @@
 </div>
 
 	<div id="footer">
-		<ul class="clear">
-			<li class="active"><a href="<?php echo url('/index'); ?>"><i></i><span>首页</span></a></li>
-			<li><a href="<?php echo url('/stock'); ?>"><i></i>我要配资</a></li>
-			<li><a href="<?php echo url('/buy'); ?>"><i></i>我要交易</a></li>
-			<li><a href="<?php echo url('/ucenter/home'); ?>"><i></i>账户中心</a></li>
-		</ul>
+		<nav class="ml_tab mui-bar mui-bar-tab">
+			<a class="mui-tab-item" href="<?php echo url('/index'); ?>">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="<?php echo url('/stock'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要配资</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要推广</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要交易</span>
+			</a>
+			<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label" id="abc">账户中心</span>
+			</a>
+		</nav>
 	</div>
 <script src="./public/stock/js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="./public/stock/js/swiper.jquery.min.js" type="text/javascript"></script>

@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:75:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\news.html";i:1536301638;}*/ ?>
 <!doctype html>
 <html>
 <head>
@@ -98,26 +99,26 @@
 </header>
 <!--主体-->
 <div class="mui-content" style="margin: 10px 20px 0;">
-{if !empty($res)}
+<?php if(!empty($res)): ?>
     <ul>
-        {volist name="res" id ="vo" }
+        <?php if(is_array($res) || $res instanceof \think\Collection || $res instanceof \think\Paginator): $i = 0; $__LIST__ = $res;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
         <li>
             <div class="item clearfix">
-                <a class="get_onclik" id="get_onclik_{$vo.id}">
+                <a class="get_onclik" id="get_onclik_<?php echo $vo['id']; ?>">
                     <div class="img_box">
                         <img src="/public/static/admin/img/avatar.jpg" alt="">
                     </div>
                     <div class="right_cont">
-                        <div class="cont_title">{$vo.title}</div>
-                        <div class="time_box">{$vo.createTime}</div>
+                        <div class="cont_title"><?php echo $vo['title']; ?></div>
+                        <div class="time_box"><?php echo $vo['createTime']; ?></div>
                     </div>
                 </a>
             </div>
         </li>
-        {/volist}
+        <?php endforeach; endif; else: echo "" ;endif; ?>
     </ul>
-    {/if}
-    {$page}
+    <?php endif; ?>
+    <?php echo $page; ?>
 </div>
 
 <script src="./public/static/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
@@ -129,14 +130,14 @@
        
         $.ajax({
             type:'POST',
-            url:'{:url("index/index/new_id")}',
+            url:'<?php echo url("index/index/new_id"); ?>',
             dataType: 'json',
             data:{
                 "article_id":article_id
             },
             success: function(data){
                 console.log(data);
-                window.location.href="{:url('index/index/news_t')}";
+                window.location.href="<?php echo url('index/index/news_t'); ?>";
             },
             error:function(data) {
                 console.log("获取失败");
