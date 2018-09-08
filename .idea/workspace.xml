@@ -2,8 +2,57 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5a7fffd-e819-484a-a20e-a7a99902fc44" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/static/home/img/moblie/share2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/04/1d7ca2dc0627393dcf199835890150.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/0c/09f7fe27bf3d848e87f3052e1560b4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/18/cff4c7c7800c638b39022094368c0b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/31/b540b817959249fbf15e04c0d2e08c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4d/6283a02e236594f196f645f3d69d8c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4f/266bee3b6aa9e814c2a89ad703ef82.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/52/3f31ad2d7030f6f5f393a9b52f6810.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/57/0378c3c4600c5ca33c4b74e81fa9ab.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/5d/033c656ae605ce3fc9313aa2e44b7d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/5e/91efa330b8ce118878e63729e498b1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/64/5abd612ede867c35048e36050fb36f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/6b/341f57ce7c0a77299710fc873320c4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/6d/8b3d5ffa284cb460a156ea5cce116c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/8f/cf12daf5e97ab123380dc6dca8705c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/91/99c88292db9e2c5982a2062bb59a3a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/ad/83053400f2f2b1517e1ddd1477dbc3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/ae/60297e0bbf81f84c9c89b5b73c5bda.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/b6/fa5fb061f365c7199038e08c5547ff.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/b7/d251090ac28fcfebd2d7b209a6fd07.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/ba/283f933959ec3136a8755e075ea8e2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/bc/25e614420e142af62dbe0df702f86b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/c1/6e0f3f8e32a2e8a38c6699caa7308a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/d5/3354879a474d553af14cbf2f5cb337.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/f1/44a8a13852e940815509121211a449.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/f8/94f635a7c4567adc8fa4c9f453a82a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/07.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/27cc574582db83540f7611fe587aa9a9.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/334529c0b8335f6d227d0b122802a841.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/3349180b1c90827c730b03ebcdb5dac1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/339a357fb8dae26f888a3a63d8fc2ae5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/4ecf93cc205cc9195625bff11193b476.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/8c8854d8535ce28fb45b435dbc56f4cb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/aa7f3eaeff6e69fcd3d33a635c9b336f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b1734e025f4cd1869b0c2ee5b2500a51.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/b179ca8d3931c15303d458e8cae2ff5a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/daaa74f65244cb0011dc43c9f1ddd1ef.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=webuploader_css_daec9cf6e53e1529c58478e19920b764" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=webuploader_css_daec9cf6e53e1529c58478e19920b764.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=webuploader_js_9c78269ed59c7fdbe275dea561f513c0" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=webuploader_js_9c78269ed59c7fdbe275dea561f513c0.gz" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/home/css/moblie/tradeCommon.css" afterPath="$PROJECT_DIR$/public/static/home/css/moblie/tradeCommon.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" afterPath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/log/201809/08.log" afterPath="$PROJECT_DIR$/runtime/log/201809/08.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/22756b07ae5be0c9e0a6568342e756dd.php" afterPath="$PROJECT_DIR$/runtime/temp/22756b07ae5be0c9e0a6568342e756dd.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/92ab0b2d433299508c9c6b711f69d093.php" afterPath="$PROJECT_DIR$/runtime/temp/92ab0b2d433299508c9c6b711f69d093.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/b07e8e724d51b3be06459b964b331936.php" afterPath="$PROJECT_DIR$/runtime/temp/b07e8e724d51b3be06459b964b331936.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/c6ee1c9a45723e8ade0dae23b08a07f8.php" afterPath="$PROJECT_DIR$/runtime/temp/c6ee1c9a45723e8ade0dae23b08a07f8.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime/temp/d918285fbdbed444c0ff2f82cd458a02.php" afterPath="$PROJECT_DIR$/runtime/temp/d918285fbdbed444c0ff2f82cd458a02.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,13 +63,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+            <state relative-caret-position="299">
+              <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
               <folding>
-                <marker date="1536307653671" expanded="true" signature="895:935" ph="{...}" />
+                <marker date="1536403242066" expanded="true" signature="972:1012" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -29,7 +78,7 @@
       <file leaf-file-name="Index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="889">
+            <state relative-caret-position="1648">
               <caret line="508" column="50" lean-forward="false" selection-start-line="508" selection-start-column="50" selection-end-line="508" selection-end-column="50" />
               <folding>
                 <element signature="e#40#63#0#PHP" expanded="true" />
@@ -39,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ucenter.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Ucenter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Ucenter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-277">
-              <caret line="954" column="32" lean-forward="true" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
+            <state relative-caret-position="68">
+              <caret line="954" column="32" lean-forward="false" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
               <folding>
                 <marker date="1536389712390" expanded="true" signature="35136:35292" ph="update xh_st... " />
                 <marker date="1536389712390" expanded="true" signature="35409:35473" ph="update xh_me... " />
@@ -51,6 +100,36 @@
                 <marker date="1536389712390" expanded="true" signature="37317:37473" ph="update xh_st... " />
                 <marker date="1536389712390" expanded="true" signature="37610:37676" ph="update xh_me... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="184">
+              <caret line="8" column="78" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="tradeCommon.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/static/home/css/moblie/tradeCommon.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="911">
+              <caret line="128" column="4" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -91,6 +170,8 @@
       <find>con_two</find>
       <find>按月</find>
       <find>isTradingTime</find>
+      <find>phone</find>
+      <find>.mui-active</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -119,13 +200,14 @@
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/freetrialSell.html" />
         <option value="$PROJECT_DIR$/application/index/view/ucenter/mobile/freetrialHistory.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/news.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/pz.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/protocol_3.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/index/controller/Ucenter.php" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/buy.html" />
         <option value="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" />
+        <option value="$PROJECT_DIR$/public/static/home/css/moblie/tradeCommon.css" />
+        <option value="$PROJECT_DIR$/application/index/view/index/mobile/index.html" />
       </list>
     </option>
   </component>
@@ -136,7 +218,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="24" />
     <option name="y" value="65" />
     <option name="width" value="1364" />
@@ -182,13 +264,6 @@
               <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controller" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
-              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -211,6 +286,23 @@
             <path>
               <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
               <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ucenter" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ucenter" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mobile" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -226,6 +318,23 @@
               <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="static" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="home" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="img" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="moblie" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -240,6 +349,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\phpStudy\WWW\feichangcelue\public\static\home\img\moblie" />
       <recent name="D:\phpStudy\WWW\feichangcelue\public\static\home\img" />
     </key>
   </component>
@@ -273,18 +383,18 @@
       <workItem from="1536300334203" duration="75000" />
       <workItem from="1536300458969" duration="663000" />
       <workItem from="1536301253138" duration="10079000" />
-      <workItem from="1536377348723" duration="5107000" />
+      <workItem from="1536377348723" duration="6505000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74393000" />
+    <option name="totallyTimeSpent" value="75791000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27760968" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -314,42 +424,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/news_t.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1127">
-          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
-    <entry file="file://$PROJECT_DIR$/extend/phpmailer/Email.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extend/phpmailer/SMTP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4724">
-          <caret line="50" column="36" lean-forward="false" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extend/phpmailer/PHPMailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/extra/email.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -474,13 +548,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="63" column="32" lean-forward="true" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/indexs.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -576,27 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
-          <folding>
-            <marker date="1536307653671" expanded="true" signature="895:935" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="889">
-          <caret line="508" column="50" lean-forward="false" selection-start-line="508" selection-start-column="50" selection-end-line="508" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#63#0#PHP" expanded="true" />
-            <marker date="1536378150701" expanded="true" signature="515:753" ph="select a.sto... xh_stock_order" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -618,7 +664,7 @@
         <state relative-caret-position="83">
           <caret line="843" column="29" lean-forward="false" selection-start-line="843" selection-start-column="29" selection-end-line="843" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
             <marker date="1536390787691" expanded="true" signature="9654:9685" ph="..." />
             <marker date="1536390787691" expanded="true" signature="36369:36409" ph="..." />
             <marker date="1536390787691" expanded="true" signature="36502:36542" ph="..." />
@@ -651,16 +697,81 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/img/moblie/postion2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/img/moblie/stock2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/img/moblie/share2.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/img/moblie/share1.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/home/css/moblie/tradeCommon.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="911">
+          <caret line="128" column="4" lean-forward="false" selection-start-line="128" selection-start-column="4" selection-end-line="128" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1648">
+          <caret line="508" column="50" lean-forward="false" selection-start-line="508" selection-start-column="50" selection-end-line="508" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#63#0#PHP" expanded="true" />
+            <marker date="1536378150701" expanded="true" signature="515:753" ph="select a.sto... xh_stock_order" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/Ucenter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-277">
-          <caret line="954" column="32" lean-forward="true" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
+        <state relative-caret-position="68">
+          <caret line="954" column="32" lean-forward="false" selection-start-line="954" selection-start-column="32" selection-end-line="954" selection-end-column="32" />
           <folding>
             <marker date="1536389712390" expanded="true" signature="35136:35292" ph="update xh_st... " />
             <marker date="1536389712390" expanded="true" signature="35409:35473" ph="update xh_me... " />
             <marker date="1536389712390" expanded="true" signature="35681:35886" ph="insert into xh_member_fundrecord... " />
             <marker date="1536389712390" expanded="true" signature="37317:37473" ph="update xh_st... " />
             <marker date="1536389712390" expanded="true" signature="37610:37676" ph="update xh_me... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="8" column="78" lean-forward="true" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/ucenter/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
+          <folding>
+            <marker date="1536403242066" expanded="true" signature="972:1012" ph="{...}" />
           </folding>
         </state>
       </provider>

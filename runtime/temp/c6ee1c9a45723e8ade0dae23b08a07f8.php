@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536304019;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1536401700;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -162,11 +162,11 @@
 				<span class="mui-tab-label">我要配资</span>
 			</a>
 			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
-				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-icon mui-icon-postion"></span>
 				<span class="mui-tab-label">我要推广</span>
 			</a>
 			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
-				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-icon mui-icon-stock"></span>
 				<span class="mui-tab-label">我要交易</span>
 			</a>
 			<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">

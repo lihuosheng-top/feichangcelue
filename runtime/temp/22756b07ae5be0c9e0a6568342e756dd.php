@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\home.html";i:1532916178;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1532595573;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\home.html";i:1536401700;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1536401700;}*/ ?>
 <!doctype html>
 <html >
 
@@ -8,6 +8,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="__STATIC__/home/css/mui.min.css" rel="stylesheet" />
 		<link href="__STATIC__/home/css/moblie/person.css" rel="stylesheet" />
+	    <link href="__STATIC__/home/css/moblie/tradeCommon.css" rel="stylesheet" />
 	</head>
 <!--个人中心-->
 	<body style="height: 100%;display: inline-block;width: 100%;">
@@ -62,28 +63,52 @@
 		    </ul>
 			</div>
 		</div>
+		<!--<nav class="ml_tab mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="<?php echo url('/index'); ?>">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item " href="<?php echo url('/stock'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要配资</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
+				<span class="mui-icon mui-icon-postion"></span>
+				<span class="mui-tab-label">我要推广</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
+				<span class="mui-icon mui-icon-stock"></span>
+				<span class="mui-tab-label">我要交易</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="<?php echo url('/ucenter/home'); ?>">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label" id="abc">账户中心</span>
+			</a>
+		</nav>-->
+		<div id="footer">
 		<nav class="ml_tab mui-bar mui-bar-tab">
-    <a class="mui-tab-item" href="<?php echo url('/index'); ?>">
-        <span class="mui-icon mui-icon-home"></span>
-        <span class="mui-tab-label">首页</span>
-    </a>
-    <a class="mui-tab-item" href="<?php echo url('/stock'); ?>">
-        <span class="mui-icon mui-icon-phone"></span>
-        <span class="mui-tab-label">我要配资</span>
-    </a>
-    <a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
-        <span class="mui-icon mui-icon-phone"></span>
-        <span class="mui-tab-label">我要推广</span>
-    </a>
-    <a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
-        <span class="mui-icon mui-icon-phone"></span>
-        <span class="mui-tab-label">我要交易</span>
-    </a>
-    <a class="mui-tab-item mui-active" href="<?php echo url('/ucenter/home'); ?>">
-        <span class="mui-icon mui-icon-email"></span>
-        <span class="mui-tab-label" id="abc">账户中心</span>
-    </a>
-</nav>
+			<a class="mui-tab-item" href="<?php echo url('/index'); ?>">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item " href="<?php echo url('/stock'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要配资</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
+				<span class="mui-icon mui-icon-postion"></span>
+				<span class="mui-tab-label">我要推广</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
+				<span class="mui-icon mui-icon-stock"></span>
+				<span class="mui-tab-label">我要交易</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="<?php echo url('/ucenter/home'); ?>">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label" id="abc">账户中心</span>
+			</a>
+		</nav>
+	</div>
 		   	<!--<a href="/index/index/logout.html" type="button" class="login_out mui-btn mui-btn-block">退出登录</a>-->
 
 		<!---js---->
