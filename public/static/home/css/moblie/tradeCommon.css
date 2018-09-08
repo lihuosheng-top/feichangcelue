@@ -195,7 +195,7 @@ nav.ml_tab .mui-icon-stock:before{
 nav.ml_tab .mui-icon-email:before{
 	background-image: url(../../img/moblie/mine1.png);
 }
-nav.ml_tab .mui-tab-item .mui-active {
+nav.ml_tab .mui-tab-item.mui-active {
 	color: #e60012 !important;
 }
 nav.ml_tab .mui-active .mui-icon-home:before{
@@ -203,6 +203,13 @@ nav.ml_tab .mui-active .mui-icon-home:before{
 }
 nav.ml_tab .mui-active .mui-icon-phone:before{
 	background-image: url(../../img/moblie/share2.png);
+	
+}
+nav.ml_tab  .mui-active .mui-icon-postion:before{
+	background-image: url(../../img/moblie/postion2.png);
+}
+nav.ml_tab .mui-active .mui-icon-stock:before{
+	background-image: url(../../img/moblie/stock2.png);
 }
 nav.ml_tab .mui-active .mui-icon-postion:before{
 	background-image: url(../../img/moblie/stock2.png);
