@@ -178,13 +178,19 @@ nav.ml_tab .mui-icon:before{
 	display: inline-block;
 	width: 20px;
 	height: 20px;
-    background-size: 100% 100%;
+	background-size: 100% 100%;
 }
 nav.ml_tab .mui-icon-home:before{
 	background-image: url(../../img/moblie/home1.png);
 }
 nav.ml_tab .mui-icon-phone:before{
 	background-image: url(../../img/moblie/share1.png);
+}
+nav.ml_tab .mui-icon-postion:before{
+	background-image: url(../../img/moblie/postion1.png);
+}
+nav.ml_tab .mui-icon-stock:before{
+	background-image: url(../../img/moblie/stock1.png);
 }
 nav.ml_tab .mui-icon-email:before{
 	background-image: url(../../img/moblie/mine1.png);
