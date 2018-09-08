@@ -711,7 +711,7 @@ class Ucenter extends Home
      */
    public function stockBuy()
     {
-//                    $this->isTradingTime();
+                    $this->isTradingTime();
             Db::transaction(function () {
                 $member = $_SESSION['member'];
                 $memberId = (int)$member['id'];
@@ -952,7 +952,7 @@ class Ucenter extends Home
     //卖出股票的操作
     function stockSell()
     {
-//         $this->isTradingTime();
+         $this->isTradingTime();
         Db::transaction(function () {
             $member = $_SESSION['member'];
             $memberId = (int)$member['id'];
