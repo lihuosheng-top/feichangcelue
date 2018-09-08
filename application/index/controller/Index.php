@@ -500,7 +500,6 @@ class Index extends Home
             $this->error("用户名或密码不正确", url("index/index/login"));
         }
         $_SESSION['member'] = $member;
-
         $redirect_url = $_SESSION['redirect_url'];
         if (!isset($redirect_url) || $redirect_url == '') {
             $redirect_url = "/";
