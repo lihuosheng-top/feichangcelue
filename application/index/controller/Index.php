@@ -934,6 +934,34 @@ class Index extends Home
         }
     }
 
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资1
+     **************************************
+     */
+    public  function  index_information(){
+        return view('index_information');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资2
+     **************************************
+     */
+    public  function  index_information_first(){
+        return view('index_information');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资3
+     **************************************
+     */
+    public  function  index_information_second(){
+        return view('index_information');
+    }
+
 
 
 
