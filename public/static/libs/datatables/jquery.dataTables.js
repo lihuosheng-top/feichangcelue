@@ -14358,7 +14358,7 @@
 		/* Filtering */
 		"sFilterInput": "",
 	
-		/* Page length */
+		/* Pages length */
 		"sLengthSelect": "",
 	
 		/* Scrolling */
@@ -15133,7 +15133,7 @@
 	 */
 
 	/**
-	 * Page change event, fired when the paging of the table is altered.
+	 * Pages change event, fired when the paging of the table is altered.
 	 *  @name DataTable#page.dt
 	 *  @event
 	 *  @param {event} e jQuery event object
@@ -15247,7 +15247,7 @@
 	 */
 
 	/**
-	 * Page length change event, fired when number of records to show on each
+	 * Pages length change event, fired when number of records to show on each
 	 * page (the length) is changed.
 	 *  @name DataTable#length.dt
 	 *  @event

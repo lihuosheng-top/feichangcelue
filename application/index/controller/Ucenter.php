@@ -229,8 +229,7 @@ class Ucenter extends Home
         Db::transaction(function () {
             $bankId = trim(input("bankId"));
             $amount = trim(input("amount")); //提现金额
-//            dump($bankId);
-//            dump($amount);exit();
+
             if (!is_numeric($amount) || $amount <= 0) {
                 error("提现金额不正确");
             }
@@ -243,6 +242,11 @@ class Ucenter extends Home
             $memberId = $member['id'];
             $usableSum = $member['usableSum'];
             $realName = $member['realName'];
+            /*先判断是否在平台上面购买过股票，是则可以进行提现，不是则提示未在尚牛平台上面配资不能进行提现*/
+            $is_buy_stock =Db::table('xh_stock_order')->where('memberId',$memberId)->where('isFreetrial',0)->select();
+            if(empty($is_buy_stock)){
+                error("提现最低要求进行在尚牛平台上面进行配资一次");
+            }
 
             if ($usableSum >= $minWithdraw && $amount < $minWithdraw) {
                 error("最小提现金额为{$minWithdraw}元");
