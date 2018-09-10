@@ -35,6 +35,11 @@ return [
     'news_t'=>'index/index/news_t',                     //新闻内容
     'app_broadcast'=>'index/index/app_broadcast',   //手机端轮播图
     'pc_broadcast'=>'index/index/pc_broadcast',     //pc端轮播图
+    'index_information'=>'index/index/index_information', //pc端首页配资
+    'index_information_first'=>'index/index/index_information_first', //pc端首页配资
+    'index_information_second'=>'index/index/index_information_second', //pc端首页配资
+
+
 	'qq_add'=>'index/index/qq_add',                 //qq客服
     'invite'=> 'index/index/invite',       			//邀请码
     'login'=> 'index/index/login',       		    //登录

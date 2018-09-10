@@ -50,7 +50,7 @@ class Page extends Admin
             ->addRightButtons(['edit', 'delete' => ['data-tips' => '删除后无法恢复。']]) // 批量添加右侧按钮
             ->addOrder('id,title,create_time,update_time')
             ->setRowList($data_list) // 设置表格数据
-            ->addValidate('Page', 'title')
+            ->addValidate('Pages', 'title')
             ->fetch(); // 渲染模板
     }
 
@@ -67,7 +67,7 @@ class Page extends Admin
             $data = $this->request->post();
 
             // 验证
-            $result = $this->validate($data, 'Page');
+            $result = $this->validate($data, 'Pages');
             if(true !== $result) $this->error($result);
 
             if ($page = PageModel::create($data)) {
@@ -110,7 +110,7 @@ class Page extends Admin
             $data = $this->request->post();
 
             // 验证
-            $result = $this->validate($data, 'Page');
+            $result = $this->validate($data, 'Pages');
             if(true !== $result) $this->error($result);
 
             if (PageModel::update($data)) {

@@ -10,6 +10,7 @@ use think\Request;
 use app\common\controller\Common;
 use app\index\controller\Ucenter;
 use think\Session;
+use think\Config;
 
 class Index extends Home
 {
@@ -23,14 +24,11 @@ class Index extends Home
     public function index(Request $request)
     {
 
-
-
         $sql = "select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
 			from xh_stock_order as a, xh_member as b, xh_shares as c
 			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
 			order by a.id desc limit 7 ";
         $buyList = Db::query($sql);
-//        dump($buyList);exit();
         foreach ($buyList as $k => $v) {
             $tmStr = "一年以前";
             $tm = time() - strtotime($v['createTime']);//秒数
@@ -51,9 +49,7 @@ class Index extends Home
         }
         $member = $_SESSION['member'];
         $id = $member['id'];
-
         $_SESSION['member_id'] = $id;
-
         if (!empty($id)) {
             //累计
             $count = Db::table("xh_stock_order")->where("isFreetrial=0")->count();
@@ -64,16 +60,17 @@ class Index extends Home
 //                 $earnSum =$_SESSION['profitSum'];
 //               $earnSum = number_format($earnSum, 2, '.', '');
             //证券市值（所有已买履约保证金总和）
-            $guaranteeFee = Db::name('stock_order')->field("sum(guaranteeFee)")->where('memberId', $id)->where('status', 1)->select();
+            $guaranteeFee = Db::name('stock_order')->field("sum(guaranteeFee)")->where('memberId', $id)->where('status', 1)->where('isFreetrial',0)->select();
             $guaranteeFee = $guaranteeFee[0]['sum(guaranteeFee)'];
             $guaranteeFee = number_format($guaranteeFee, 2, '.', '');
+
             /*******动态资产，可用余额，冻结资金***********************/
             //TODO：持仓盈利(开始)
             $this->real_buy(0);
             //TODO：持仓盈利(结束)
             /*******实盘可买，证卷市值，持仓盈亏***********************/
             //TODO:实盘可买(开始)
-            $real_disk = Db::name('stock_order')->field("sum(dealAmount)")->where('memberId',$id)->where('status',1)->select();
+            $real_disk = Db::name('stock_order')->field("sum(dealAmount)")->where('memberId',$id)->where('status',1)->where('isFreetrial',0)->select();
             $_SESSION['real_disk'] =$real_disk;
             if(!empty($real_disk)){
                 $real_disk =$real_disk[0]['sum(dealAmount)'];
@@ -110,7 +107,6 @@ class Index extends Home
 
         }
 //        分配数据
-
         if (is_mobile_request()) {
             //获取 上证指数 深证成指 创业板指
             $res_str = (new Alistock())->stockIndex();
@@ -418,20 +414,17 @@ class Index extends Home
      **************李火生*******************
      * @param $uid
      * @return \think\response\View
+     * pc注册和手机注册
      **************************************
      */
-    //注册
     public function reg(Request $request,$uid)
     {
         if (is_mobile_request()) {
-
-                   $uid =Request::instance()->param('uid');
-//           dump($uid);
+            $uid =Request::instance()->param('uid');
             $this->assign('uid',$uid);
-
-
             return view('index/mobile/reg');
         }
+
         return view('reg');
     }
 
@@ -449,6 +442,7 @@ class Index extends Home
             return view('index/mobile/login');
         }
         $domain_name = 'http://sm00009.sm00009.com';//域名
+//        $domain_name = 'localhost/feichangcelue';//域名
         $project_name = ''; //项目名字
         $member_id = $member_data['id'];   //所登录的id
         $reg = 'reg';  //注册地址
@@ -555,10 +549,44 @@ class Index extends Home
             $data['inviterId'] =null;
         }
 
-
-
         $id = Db::table("xh_member")->insertGetId($data);
         if ($id > 0) {
+
+            /*要求成功之后得对应的奖励10元进入账户（注册成功,被邀请人和邀请人都奖励10元）*/
+            if(!empty($inviterId)){
+                $create_time = date("Y-m-d H:i:s");
+
+                /*邀请人*/
+                $active_inviter_data =[
+                    'memberId'=>$inviterId,
+                    'flow'=>1, //收入
+                    'amount'=>10, //10元钱
+                    'remarks'=>'成功邀请一人注册账户奖励10元',
+                    'createTime'=>$create_time
+                ];
+                $reward_one =Db::table('xh_member_fundrecord')->insertGetId($active_inviter_data);
+                $active_inviter_data =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
+               if(!empty($active_inviter_data)){
+                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
+                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
+               }
+                /*被邀请人（新注册）*/
+                $invited_data =[
+                    'memberId'=>$id,
+                    'flow'=>1, //收入
+                    'amount'=>10,
+                    'remarks'=>'成功被邀请加入获得奖励10元',
+                    'createTime'=>$create_time
+                ];
+                $reward_tow =Db::table('xh_member_fundrecord')->data($invited_data)->insert();
+               //对余额进行修改(先查在改)
+                $invite_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$id)->find();
+                if(!empty($invite_data_usableSum)){
+                    Db::table('xh_member')->where('id',$id)->update(['usableSum'=>$invite_data_usableSum['usableSum']+10]);
+                    Db::table('xh_member_fundrecord')->where('id',$reward_tow)->update(['usableSum'=>$invite_data_usableSum['usableSum']+10]);
+                }
+            }
+
             $this->success("注册成功", url("/"));
         } else {
             $this->error("注册失败", url("/"));
@@ -660,8 +688,15 @@ class Index extends Home
         return view('reset_result');
     }
 
+    /**
+     **************李火生*******************
+     * @param $code
+     * @return array|string|true
+     * TODO:验证码验证
+     **************************************
+     */
     //检查图片验证码是否正确
-    /*	public function checkImageCode($code){
+    	public function checkImageCode($code){
 
             $data = array('captcha' => $code); new \think\captcha\Captcha();
             $res = $this->validate($data,[
@@ -670,7 +705,7 @@ class Index extends Home
             //返回true，或者错误信息
 
             return $res;
-        }*/
+        }
 
 
     public function sendMobileCode(Request $request)
@@ -864,10 +899,18 @@ class Index extends Home
      **************************************
      */
     public function news(){
-        $res =Db::name('article')->order('createTime','desc')->paginate(5);
+        $res =Db::name('article')->order('createTime','desc')->paginate(5,false,[
+            'type'      =>'Index',
+            'var_page'  => 'page',
+            'list_rows' => 3,
+        ]);
         $page = $res->render();
+       $pas = Config::get('list_rows');
         return view('index/mobile/news',['res'=>$res,'page'=>$page]);
+
     }
+
+
 
     /**
      **************李火生*******************
@@ -932,6 +975,34 @@ class Index extends Home
                $this->ajax_success('成功',$res);
             }
         }
+    }
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资1
+     **************************************
+     */
+    public  function  index_information(){
+        return view('index_information');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资2
+     **************************************
+     */
+    public  function  index_information_first(){
+        return view('index_information');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * Pc端配资3
+     **************************************
+     */
+    public  function  index_information_second(){
+        return view('index_information');
     }
 
 
