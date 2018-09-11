@@ -69,8 +69,7 @@ class Ucenter extends Home
             ->where("memberId = $memberId and $condition ")
             ->order("id desc")
             ->paginate(10, false, ['query' => request()->param()]);
-        $this->assign("fundrecord", $fundrecord);
-
+            $this->assign("fundrecord", $fundrecord);
         if (is_mobile_request()) {
             return view('ucenter/mobile/index');//手机的资金页面
         }

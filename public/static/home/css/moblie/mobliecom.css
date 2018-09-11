@@ -60,6 +60,7 @@ b {
 	color: #8f8f94;
 }
 .color_black{
+	/*display: none;*/
 	color: #000;
 }
 /*字体大小*/
@@ -491,11 +492,11 @@ a.mui-control-item{
 	font-size: 24px;
 }
 img.ewm{
+	/*display: none;*/
 	width: 30%;
-    margin: 0 auto;
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 5px;
+	margin: 0 auto;
+	margin-top: 10px;
+	margin-bottom: 5px;
 }
 .copyBox {
 	 width: 90%;
@@ -529,6 +530,7 @@ img.ewm{
 	margin-right: 15px;
 }
 .step_box{
+	display: none;
 	width: 80%;
 	margin: 0 auto;
 }
