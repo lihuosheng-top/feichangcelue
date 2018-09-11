@@ -551,11 +551,9 @@ class Index extends Home
 
         $id = Db::table("xh_member")->insertGetId($data);
         if ($id > 0) {
-
             /*要求成功之后得对应的奖励10元进入账户（注册成功,被邀请人和邀请人都奖励10元）*/
             if(!empty($inviterId)){
                 $create_time = date("Y-m-d H:i:s");
-
                 /*邀请人*/
                 $active_inviter_data =[
                     'memberId'=>$inviterId,
@@ -565,10 +563,10 @@ class Index extends Home
                     'createTime'=>$create_time
                 ];
                 $reward_one =Db::table('xh_member_fundrecord')->insertGetId($active_inviter_data);
-                $active_inviter_data =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
-               if(!empty($active_inviter_data)){
-                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
-                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
+                $active_inviter_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
+               if(!empty($active_inviter_data_usableSum)){
+                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
+                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
                }
                 /*被邀请人（新注册）*/
                 $invited_data =[
@@ -578,7 +576,7 @@ class Index extends Home
                     'remarks'=>'成功被邀请加入获得奖励10元',
                     'createTime'=>$create_time
                 ];
-                $reward_tow =Db::table('xh_member_fundrecord')->data($invited_data)->insert();
+                $reward_tow =Db::table('xh_member_fundrecord')->insertGetId($invited_data);
                //对余额进行修改(先查在改)
                 $invite_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$id)->find();
                 if(!empty($invite_data_usableSum)){
