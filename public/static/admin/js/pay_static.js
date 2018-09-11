@@ -1,16 +1,17 @@
-(function () {
-  var vals = $("tbody").children('tr').find('td').eq(2).html();
-   var leg =$("tbody").children('tr').length;
-    var a =1;
-    var b =2;
-   for(var  i= 0;i<leg;i++){
+$(function () {
+	
+	var b=new Array;
+  	var a=$("tbody").children("tr").children("td:nth-child(3)");
+	for(var i = 0; i < a.length; i++){
+		b.push(a[i].innerText);
+	}
+for(var j=0;j<b.length;j++){
+	if(b[j]==1){
+		a[j].innerText="支出";
+	}
+	else{
+		a[j].innerText="收入";
+	}
+}
 
-    if(vals==1){
-        console.log(a);
-    }
-       if(vals==2){
-        console.log(b);
-       }
-   }
-
-})();
+});
