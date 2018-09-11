@@ -8,9 +8,11 @@
 <link href="./public/static/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="./public/static/home/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css"/>
 <!--banner-->
 <div class="banner_login br-w100">
     <div class="bBanner br-w100">
+
         <!--<div class="w1024">-->
                 <!--<div class="login_main" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if}>-->
                 <!--<p>用户登录</p>-->
@@ -26,6 +28,7 @@
                 <!--</from>-->
             <!--</div>-->
         <!--</div>-->
+
         <!--轮播图-->
         <div class="home_banner">
             <div id="myCarousel" class="carousel slide">
@@ -65,7 +68,7 @@
             <p class="tit">一分钟了解尚牛在线</p>
             <p class="tib">全新的投资人策略匹配平台</p>
         </div>
-        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (2).png"/></a>
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block; height: 192.02px;"><img src="./public/static/home/img/p (2).png"/></a>
             <p class="tit">用心服务</p>
             <p class="tib">一对一专业客服（电话 微信 QQ）</br>全程指导</p>
         </div>
@@ -73,6 +76,15 @@
             <p class="P_block" style="float: left;">累计匹配策略 </br><span>{$count + 256}</span>条</p>
             <p class="P_block" style="float: right;">累计盈利</br><span>{:round($earnSum + 5758000, 2 ) }</span>元</p>
         </div>
+    </div>
+    <div class="w pz-type-swith" style="display: none;">
+    	<ul  class="userMenu">
+        <li  data-id="index_informatiom_one"><a class="on dianji current">免息配资</a></li>
+        <li data-id="index_informatiom_two"><a class=" dianji" >按月配资</a></li>
+        <li data-id="index_informatiom_three"><a class=" dianji" >按天配资</a></li>
+    </ul>
+    <div class="pz-day-content-all" id="content">
+    </div>
     </div>
     <div class="AS_box_cont w1024 br-text-center">
         <h1 class="br-ml-title">POINT TO BUY A SHARES</h1>
@@ -278,6 +290,34 @@
             }
         });
     })();
+</script>
+<!--局部刷新-->
+<script type="text/javascript">
+ $(".userMenu").on("click", "li", function(){
+// 	console.log($(this).children("a"));
+        $(this).children("a").addClass("on")
+        $(this).siblings().children("a").removeClass("on");
+        var sId = $(this).data("id");  //获取data-id的值
+        window.location.hash = sId;  //设置锚点
+        loadInner(sId);
+    });
+    function loadInner(sId){
+        var sId = window.location.hash;
+        var pathn, i;
+        switch(sId){
+            case "#index_informatiom_one": pathn = "index_information.html"; i = 0; break;
+　　　　　　　case "#index_informatiom_two": pathn = "index_information_first.html"; i = 1; break;
+            case "#index_informatiom_three": pathn = "index_information_second.html"; i = 2; break;
+　　　　　　  default: pathn = "index_information.html"; i = 0; break;
+        }
+        $("#content").load(pathn); //加载相对应的内容
+        $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
+    }
+    var sId = window.location.hash;
+    loadInner(sId);
+    
+    
+
 </script>
 
 </body>
