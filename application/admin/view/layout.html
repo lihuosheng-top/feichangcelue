@@ -33,7 +33,7 @@
     <!-- END Icons -->
 
     <!-- Stylesheets -->
-    <!-- Page JS Plugins CSS -->
+    <!-- Pages JS Plugins CSS -->
     {notempty name="_css_files"}
         {eq name="Think.config.minify_status" value="1"}
             <link rel="stylesheet" href="{:minify('group', $_css_files)}">
@@ -113,7 +113,7 @@
     </script>
 </head>
 <body>
-<!-- Page Container -->
+<!-- Pages Container -->
 <div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed {$_COOKIE['sidebarMini'] == 'true' ?= 'sidebar-mini'}">
     <!-- Side Overlay-->
     {empty name="_pop"}
@@ -322,7 +322,7 @@
 
     <!-- Main Container -->
     <main id="main-container">
-        <!-- Page Header -->
+        <!-- Pages Header -->
         {block name="page-header"}
         {empty name="_pop"}
         <div class="bg-gray-lighter">
@@ -337,16 +337,16 @@
         </div>
         {/empty}
         {/block}
-        <!-- END Page Header -->
+        <!-- END Pages Header -->
 
-        <!-- Page Content -->
+        <!-- Pages Content -->
         <div class="content">
             {// 页面提示钩子}
             {:hook('page_tips')}
             {// 主体内容}
             {block name="content"}{/block}
         </div>
-        <!-- END Page Content -->
+        <!-- END Pages Content -->
     </main>
     <!-- END Main Container -->
 
@@ -358,7 +358,7 @@
     {/empty}
     <!-- END Footer -->
 </div>
-<!-- END Page Container -->
+<!-- END Pages Container -->
 
 <!-- Apps Modal -->
 <!-- Opens from the button in the header -->
@@ -429,7 +429,7 @@
 <script src="__LIBS__/sweetalert/sweetalert.min.js"></script>
 {/eq}
 
-<!-- Page JS Plugins -->
+<!-- Pages JS Plugins -->
 <script src="__LIBS__/layer/layer.js"></script>
 {notempty name="_js_files"}
     {eq name="Think.config.minify_status" value="1"}

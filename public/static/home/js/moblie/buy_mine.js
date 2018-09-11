@@ -837,7 +837,6 @@ var buy_moblie={
      * 判断当前时间是否在9:30-11:30, 13:00-15:00（交易时间）
      */
     isTradingTime:function (){
-
         var date = new Date();
         // alert(date);
         //判断是不是周末

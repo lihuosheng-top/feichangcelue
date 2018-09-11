@@ -33,7 +33,7 @@
                 datetime         : "Datetime",
                 emoji            : "Emoji",
                 "html-entities"  : "HTML Entities",
-                pagebreak        : "Page break",
+                pagebreak        : "Pages break",
                 watch            : "Unwatch",
                 unwatch          : "Watch",
                 preview          : "HTML Preview (Press Shift + ESC exit)",

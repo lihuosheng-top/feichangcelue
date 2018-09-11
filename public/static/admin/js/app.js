@@ -627,7 +627,7 @@ var App = function() {
      */
 
     /*
-     * Print Page functionality
+     * Print Pages functionality
      *
      * App.initHelper('print-page');
      *
