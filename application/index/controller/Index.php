@@ -950,7 +950,7 @@ class Index extends Home
      **************************************
      */
     public  function  index_information_first(){
-        return view('index_information');
+        return view('index_information_first');
     }
     /**
      **************李火生*******************
@@ -959,7 +959,7 @@ class Index extends Home
      **************************************
      */
     public  function  index_information_second(){
-        return view('index_information');
+        return view('index_information_second');
     }
 
 
