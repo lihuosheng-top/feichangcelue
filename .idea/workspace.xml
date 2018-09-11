@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad5e19fd-cd56-4619-b45d-8c4b57f4cd9b" name="Default" comment="" />
+    <list default="true" id="ad5e19fd-cd56-4619-b45d-8c4b57f4cd9b" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/48/e345b986ae9584f9686dac64ea2c6a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/62/43ba32331a724b428a8aa259d4e109.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/63/dc9087c660611bdf3fcb1a1257247a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/11.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/1e4a05d695a2198342b4b327acbab4e0.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/daaa74f65244cb0011dc43c9f1ddd1ef.php" afterPath="" />
+    </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -258,7 +267,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247000" />
+    <option name="totallyTimeSpent" value="281000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
