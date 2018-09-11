@@ -446,9 +446,23 @@ class Index extends Home
         $project_name = ''; //项目名字
         $member_id = $member_data['id'];   //所登录的id
         $reg = 'reg';  //注册地址
-       // $share_url = $domain_name."/".$project_name."/".$reg."/".$member_id;
 		$share_url = $domain_name."/".$reg."/".$member_id;
-//        dump($share_url);exit();
+		/*二维码*/
+		$share_code ='http://b.bshare.cn/barCode?site=weixin&url='.$share_url;
+        /*推广详情*/
+        //推广人数，注册人数
+        $selete_invite_num =Db::table('xh_member')->where('inviterId',$member_id)->count();
+        if(!empty($selete_invite_num)){
+            /*统计*/
+            $data_statistics =[
+                'selete_invite_num'=>$selete_invite_num,
+                'make_money'=>$selete_invite_num *10,
+            ];
+        }
+        $select_all_data =Db::table('xh_member')->field('username,mobile,createTime')->where('inviterId',$member_id)->select();
+        $this->assign('data_statistics',$data_statistics);
+        $this->assign('select_all_data',$select_all_data);
+        $this->assign('share_code',$share_code);
         $this->assign('share_url',$share_url);
         return view('index/mobile/invite');
     }
