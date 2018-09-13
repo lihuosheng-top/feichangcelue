@@ -128,11 +128,12 @@ class Alistock extends Home{
     // 查询股票实时数据(阿里云) ，需传入参数code(股票代码)
     public function getStockInfo(){
         $code = trim(input("code"));
+
         if(!$code || $code == ""){
             error("参数(code)不能为空");
         }
-
         $stockInfo = $this->getStockInfoFromDb($code);
+
         if($stockInfo){
             success($stockInfo);
         }
@@ -140,15 +141,15 @@ class Alistock extends Home{
         //如果数据库里没有查询到，则调用接口获取
 //        $res_str = $this->getStockInfoData($code);
 //        $res_str =$this->getMarketValueBycode($code);
-        $res_str =(new Common())->getMarketValueBycode($code);
-        dump($res_str);
-        $res = json_decode($res_str);
-
-        if(!$res || $res == '' || $res->showapi_res_code != '0' || $res->showapi_res_body->ret_code != '0'){
+        $res_str =(new Common())->getMarketValueBycode_second($code);
+//        $res = json_decode($res_str);
+        $res =$res_str;
+//        if(!$res || $res == '' || $res->showapi_res_code != '0' || $res->showapi_res_body->ret_code != '0'){
+        if(!$res || $res == ''){
             error("获取服务数据失败.");
         }
 
-        success( $res->showapi_res_body->stockMarket );
+        success($res);
 
     }
 

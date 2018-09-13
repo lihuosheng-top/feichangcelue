@@ -1,0 +1,1408 @@
+---------------------------------------------------------------
+[ 2018-09-13T17:28:05+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/menu
+[ info ] localhost/feichangcelue/admin.php/admin/menu [运行时间：1.799280s][吞吐率：0.56req/s] [内存消耗：4,146.17kb] [文件加载：73]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/menu/edit/id/243.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.329551s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.183538s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Menu.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\menu\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'menus',
+  9 => 'tab_nav',
+  10 => 'page_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.089515s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.035067s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.027944s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.026120s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.025804s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.019288s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.018843s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.019889s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.022834s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.018440s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.015676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.019038s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `xh_admin_menu` WHERE  `online_hide` = 0  AND `status` = 1  AND `pid` = 0 ORDER BY sort,id LIMIT 10 [ RunTime:0.028611s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `xh_admin_menu` WHERE  `online_hide` = 0  AND `status` = 1  AND `pid` = 0 ORDER BY sort,id [ RunTime:0.017773s ]
+[ sql ] [ SQL ] SELECT `id` FROM `xh_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/menu/index' LIMIT 1 [ RunTime:0.026064s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `xh_admin_menu` [ RunTime:0.034785s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `xh_admin_menu` WHERE  `status` = 1  AND `module` = 'admin'  AND `online_hide` = 0 ORDER BY sort,id [ RunTime:0.023087s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.030302s ]
+[ sql ] [ SQL ] SELECT `module`,`title` FROM `xh_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY id,sort [ RunTime:0.019273s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`icon`,`url_type`,`url_value`,`url_target`,`online_hide`,`create_time`,`update_time`,`sort`,`system_menu`,`status` FROM `xh_admin_menu` WHERE  `module` = 'admin' ORDER BY sort,id [ RunTime:0.028465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.028283s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.022696s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.026388s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.039811s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.046014s ]
+---------------------------------------------------------------
+[ 2018-09-13T17:28:06+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/home.html
+[ info ] localhost/feichangcelue/ucenter/home.html [运行时间：0.895597s][吞吐率：1.12req/s] [内存消耗：3,411.02kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'home',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/withdraw.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.003976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.049953s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->home[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\home.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.080929s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.023858s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.077228s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.018932s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:27:54+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/menu
+[ info ] localhost/feichangcelue/admin.php/admin/menu [运行时间：0.876878s][吞吐率：1.14req/s] [内存消耗：3,511.23kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/menu/edit/id/243.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.005726s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019500s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Menu.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\menu\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'menus',
+  9 => 'tab_nav',
+  10 => 'page_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.123825s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.025084s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.029334s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.027468s ]
+[ sql ] [ SQL ] SELECT `module`,`title` FROM `xh_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY id,sort [ RunTime:0.040110s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`icon`,`url_type`,`url_value`,`url_target`,`online_hide`,`create_time`,`update_time`,`sort`,`system_menu`,`status` FROM `xh_admin_menu` WHERE  `module` = 'admin' ORDER BY sort,id [ RunTime:0.072888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.041273s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.044874s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.032538s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.035957s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.037571s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:27:58+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：1.671830s][吞吐率：0.60req/s] [内存消耗：3,731.20kb] [文件加载：68]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001827s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019401s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.111381s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.087962s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.051800s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.078122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.099011s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.027524s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.079674s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.103738s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.081441s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603536' LIMIT 1 [ RunTime:0.059080s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1310 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.036384s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.073445s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.025031s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.024675s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1310 LIMIT 1 [ RunTime:0.032364s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1 [ RunTime:0.144685s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '601228' LIMIT 1 [ RunTime:0.025197s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:89]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:98]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:103]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:179]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:180]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:231]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:231]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:231]
+---------------------------------------------------------------
+[ 2018-09-13T18:28:02+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：0.716869s][吞吐率：1.39req/s] [内存消耗：3,265.16kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002631s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.043683s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.265595s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.068642s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.032161s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:28:02+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：1.382378s][吞吐率：0.72req/s] [内存消耗：3,038.01kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002009s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.081210s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.164703s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.107921s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.109640s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.089350s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.091406s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:28:05+08:00 ] ::1 ::1 GET /feichangcelue/admin.php
+[ info ] localhost/feichangcelue/admin.php [运行时间：0.103944s][吞吐率：9.62req/s] [内存消耗：1,336.67kb] [文件加载：37]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:28:07+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin
+[ info ] localhost/feichangcelue/admin.php/admin [运行时间：1.741985s][吞吐率：0.57req/s] [内存消耗：3,519.20kb] [文件加载：70]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001530s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.013962s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.097336s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.093292s ]
+[ sql ] [ SQL ] SELECT `id` FROM `xh_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/index' LIMIT 1 [ RunTime:0.058060s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `xh_admin_menu` [ RunTime:0.366789s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`url_value`,`url_type`,`url_target`,`icon` FROM `xh_admin_menu` WHERE  `status` = 1  AND `module` = 'admin'  AND `online_hide` = 0 ORDER BY sort,id [ RunTime:0.062998s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.069398s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.041261s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.019495s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.025566s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.081753s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.050857s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.067660s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.023917s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:28:26+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/menu
+[ info ] localhost/feichangcelue/admin.php/admin/menu [运行时间：1.358430s][吞吐率：0.74req/s] [内存消耗：3,510.69kb] [文件加载：66]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002796s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.018228s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Menu.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\menu\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'menus',
+  9 => 'tab_nav',
+  10 => 'page_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.135440s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.147926s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.117179s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.097912s ]
+[ sql ] [ SQL ] SELECT `module`,`title` FROM `xh_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY id,sort [ RunTime:0.069662s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`icon`,`url_type`,`url_value`,`url_target`,`online_hide`,`create_time`,`update_time`,`sort`,`system_menu`,`status` FROM `xh_admin_menu` WHERE  `module` = 'admin' ORDER BY sort,id [ RunTime:0.075933s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.090667s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.123921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.052735s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.040924s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.042708s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:35:12+08:00 ] ::1 ::1 GET /feichangcelue/logout.html
+[ info ] localhost/feichangcelue/logout.html [运行时间：0.377549s][吞吐率：2.65req/s] [内存消耗：3,314.36kb] [文件加载：64]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'logout',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/home.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001594s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022552s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->logout[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin/view/dispatch_jump.tpl [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'code',
+  4 => 'msg',
+  5 => 'data',
+  6 => 'url',
+  7 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043456s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020481s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.019743s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:35:15+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.594096s][吞吐率：1.68req/s] [内存消耗：2,977.99kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/logout.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.006725s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025104s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043028s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.026197s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-13T18:35:17+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.784824s][吞吐率：1.27req/s] [内存消耗：1,924.49kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.008492s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.125729s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:35:17+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：1.059559s][吞吐率：0.94req/s] [内存消耗：3,028.32kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002237s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.126690s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.063141s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015808s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.021622s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:35:17+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/home.html
+[ info ] localhost/feichangcelue/ucenter/home.html [运行时间：0.373153s][吞吐率：2.68req/s] [内存消耗：2,500.79kb] [文件加载：55]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'home',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.003263s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.036460s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:35:17+08:00 ] ::1 ::1 GET /feichangcelue/login.html
+[ info ] localhost/feichangcelue/login.html [运行时间：0.214918s][吞吐率：4.65req/s] [内存消耗：2,618.70kb] [文件加载：58]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021815s ]
+[ info ] [ RUN ] app\index\controller\Index->login[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\login.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:35:19+08:00 ] ::1 ::1 GET /feichangcelue/reg
+[ info ] localhost/feichangcelue/reg [运行时间：0.224145s][吞吐率：4.46req/s] [内存消耗：2,669.22kb] [文件加载：61]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'reg',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'uid' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001746s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026573s ]
+[ info ] [ RUN ] app\index\controller\Index->reg[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\reg.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'uid',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: uid[D:\phpStudy\WWW\feichangcelue\runtime\temp\5852ce84d84db155bf5e5fd7511bff87.php:39]
+---------------------------------------------------------------
+[ 2018-09-13T18:35:23+08:00 ] ::1 ::1 GET /feichangcelue/login.html
+[ info ] localhost/feichangcelue/login.html [运行时间：0.281126s][吞吐率：3.56req/s] [内存消耗：2,477.10kb] [文件加载：56]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'login',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002323s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.027703s ]
+[ info ] [ RUN ] app\index\controller\Index->login[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\login.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:37:12+08:00 ] ::1 ::1 POST /feichangcelue/doLogin.html
+[ info ] localhost/feichangcelue/doLogin.html [运行时间：0.415334s][吞吐率：2.41req/s] [内存消耗：3,178.70kb] [文件加载：62]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'doLogin',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '38',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'content-type' => 'application/x-www-form-urlencoded',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/login.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'nick_name' => '13013462819',
+  'login_pwd' => '123456',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001677s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.029094s ]
+[ info ] [ RUN ] app\index\controller\Index->doLogin[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin/view/dispatch_jump.tpl [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'code',
+  3 => 'msg',
+  4 => 'data',
+  5 => 'url',
+  6 => 'wait',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047978s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.022776s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='13013462819' or mobile = '13013462819' ) LIMIT 1 [ RunTime:0.020396s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:15+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：1.029398s][吞吐率：0.97req/s] [内存消耗：3,639.84kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/doLogin.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001604s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.027083s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'balance',
+  8 => 'ablePrice',
+  9 => 'real_disk_sum',
+  10 => 'guaranteeFee',
+  11 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036115s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020647s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.017463s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.022963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.018699s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.031103s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.034408s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.054550s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018797s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603536' LIMIT 1 [ RunTime:0.020884s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1310 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.024627s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.018870s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.014637s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016411s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1310 LIMIT 1 [ RunTime:0.018561s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1310  AND `status` = 1 [ RunTime:0.015074s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '601228' LIMIT 1 [ RunTime:0.018457s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.015962s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:89]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:98]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:103]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\92ab0b2d433299508c9c6b711f69d093.php:71]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:16+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.482590s][吞吐率：2.07req/s] [内存消耗：1,924.49kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'cache-control' => 'no-cache',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001970s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.061268s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:37:17+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.913049s][吞吐率：1.10req/s] [内存消耗：3,038.05kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002337s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.124453s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.046378s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018967s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.019643s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.017685s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.015784s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:18+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.712223s][吞吐率：1.40req/s] [内存消耗：3,478.04kb] [文件加载：67]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001293s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.017071s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'delayLineRate',
+  12 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.045497s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.035579s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.028000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.017962s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1310 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.030469s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.024059s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.055705s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.021856s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.018098s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.018082s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.018233s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.012971s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.017217s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015992s ]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:332]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:25+08:00 ] ::1 ::1 GET /feichangcelue/index/Alistock/getSharesByKeyWords?keywords=1
+[ info ] localhost/feichangcelue/index/Alistock/getSharesByKeyWords?keywords=1 [运行时间：0.344274s][吞吐率：2.90req/s] [内存消耗：3,859.92kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getSharesByKeyWords',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'keywords' => '1',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001151s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.014756s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Alistock->getSharesByKeyWords[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033854s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018408s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.019959s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017184s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`code`,`pinyin` FROM `xh_shares` WHERE  (   `name` like '%1%' or `pinyin` like '%1%' or `code` like '%1%'  ) [ RunTime:0.062563s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:25+08:00 ] ::1 ::1 GET /feichangcelue/index/Alistock/getSharesByKeyWords?keywords=11
+[ info ] localhost/feichangcelue/index/Alistock/getSharesByKeyWords?keywords=11 [运行时间：0.445237s][吞吐率：2.25req/s] [内存消耗：3,054.70kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getSharesByKeyWords',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'keywords' => '11',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.005491s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.050416s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Alistock->getSharesByKeyWords[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041694s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024398s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.022157s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020122s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`code`,`pinyin` FROM `xh_shares` WHERE  (   `name` like '%11%' or `pinyin` like '%11%' or `code` like '%11%'  ) [ RunTime:0.047207s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:26+08:00 ] ::1 ::1 GET /feichangcelue/index/Alistock/getSharesByKeyWords?keywords=111
+[ info ] localhost/feichangcelue/index/Alistock/getSharesByKeyWords?keywords=111 [运行时间：0.500477s][吞吐率：2.00req/s] [内存消耗：2,985.63kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getSharesByKeyWords',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'keywords' => '111',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001613s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021271s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Alistock->getSharesByKeyWords[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043574s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.025880s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.023395s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.032463s ]
+[ sql ] [ SQL ] SELECT `id`,`name`,`code`,`pinyin` FROM `xh_shares` WHERE  (   `name` like '%111%' or `pinyin` like '%111%' or `code` like '%111%'  ) [ RunTime:0.027671s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:37:26+08:00 ] ::1 ::1 POST /feichangcelue/index/Index/buy
+[ info ] localhost/feichangcelue/index/Index/buy [运行时间：0.535974s][吞吐率：1.87req/s] [内存消耗：3,079.13kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Index',
+    2 => 'buy',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'origin' => 'http://localhost',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'code' => '601117',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001182s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.012890s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042874s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018218s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.025966s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.018587s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1310 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.036298s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016619s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '601117' LIMIT 1 [ RunTime:0.021844s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015436s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.020822s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.023777s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.022252s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.022347s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.018375s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:41:29+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.701686s][吞吐率：1.43req/s] [内存消耗：3,296.88kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001566s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024070s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'delayLineRate',
+  12 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.051839s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018773s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.023446s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.017754s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1310 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.028752s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.023906s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.021190s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.017539s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.015164s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.021790s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.019571s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.021729s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.017458s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016736s ]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:332]
+---------------------------------------------------------------
+[ 2018-09-13T18:41:40+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.736522s][吞吐率：1.36req/s] [内存消耗：3,296.88kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'Webstorm-2b4316d0=ed6ed4d1-a69a-4e3f-977f-9193c50edf03; Phpstorm-312c68d3=2dc0a4d6-0d85-4486-9436-ea8fb2e470df; Huiskin=red; PHPSESSID=4hqjjgv7p49kq2ij92hmcht6p1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002119s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025797s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'delayLineRate',
+  12 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052705s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024049s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1310 ) LIMIT 1 [ RunTime:0.023012s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.020174s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1310 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.023249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.033797s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.022720s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.024881s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.021390s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.020403s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.017498s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.023931s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.021809s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.026519s ]
+[ error ] [8]未定义数组索引: Con_Lists[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:213]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:236]
+[ error ] [8]未定义数组索引: yuebeishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:313]
+[ error ] [8]未定义数组索引: performance[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:318]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:323]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\c0bbac2faf785b35d2221217d8464956.php:332]

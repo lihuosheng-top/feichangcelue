@@ -344,7 +344,7 @@ em, i, b {
     right: 6px;
 }
 #qqicon{
-		    display: inline-block;
+    display: inline-block;
     width: 16px;
     height: 16px;
     background: url(/public/static/home/img/qq.png);
