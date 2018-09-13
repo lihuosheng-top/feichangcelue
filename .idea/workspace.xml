@@ -2,20 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ad5e19fd-cd56-4619-b45d-8c4b57f4cd9b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Admin.php" afterPath="$PROJECT_DIR$/application/admin/controller/Admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Index.php" afterPath="$PROJECT_DIR$/application/admin/controller/Index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Jobs.php" afterPath="$PROJECT_DIR$/application/admin/controller/Jobs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Notemsg.php" afterPath="$PROJECT_DIR$/application/admin/controller/Notemsg.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Order.php" afterPath="$PROJECT_DIR$/application/admin/controller/Order.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/common/controller/Common.php" afterPath="$PROJECT_DIR$/application/common/controller/Common.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/controller/Alistock.php" afterPath="$PROJECT_DIR$/application/index/controller/Alistock.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/controller/Home.php" afterPath="$PROJECT_DIR$/application/index/controller/Home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/controller/Ucenter.php" afterPath="$PROJECT_DIR$/application/index/controller/Ucenter.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/buy.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/buy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jobs.sh" afterPath="$PROJECT_DIR$/jobs.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/home/css/common.css" afterPath="$PROJECT_DIR$/public/static/home/css/common.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" afterPath="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/06/ea14e282df3d09151ab26c2ec57c7e.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/18/cff4c7c7800c638b39022094368c0b.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/48/e345b986ae9584f9686dac64ea2c6a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/4e/819c837d54a6ed09abc77a8560a66f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/5d/033c656ae605ce3fc9313aa2e44b7d.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/62/43ba32331a724b428a8aa259d4e109.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/63/dc9087c660611bdf3fcb1a1257247a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/64/5abd612ede867c35048e36050fb36f.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/c1/6e0f3f8e32a2e8a38c6699caa7308a.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/c9/e215eb367d12d00774857e384f5326.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/cache/d8/cf2e708344bf1fdb7c88d9ee05d55c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/log/201809/13.log" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/22756b07ae5be0c9e0a6568342e756dd.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/24d5ec5380bee8b19256d0f24a3c7af8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/27cc574582db83540f7611fe587aa9a9.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/5852ce84d84db155bf5e5fd7511bff87.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/6a50a6c2ff3906b3eebb31c201980900.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/7d565156751972b437177f7f045e2db6.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/92ab0b2d433299508c9c6b711f69d093.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/99b5d6ba991ba7182a1f540e28a89d1c.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/c0bbac2faf785b35d2221217d8464956.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/d2985ad3934f28d3813b06f62dfc7acb.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=core_js,libs_js_a355589f910f7eb37abbebaf2d4173ca" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=core_js,libs_js_a355589f910f7eb37abbebaf2d4173ca.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=libs_css,core_css_3885e98d1db1aadea26cd5a20e6725b2" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/runtime/temp/minify_g=libs_css,core_css_3885e98d1db1aadea26cd5a20e6725b2.gz" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -237,7 +249,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-24" />
     <option name="y" value="74" />
     <option name="width" value="1364" />
@@ -300,15 +312,15 @@
       <option name="presentableId" value="Default" />
       <updated>1536716903726</updated>
       <workItem from="1536716929422" duration="29030000" />
-      <workItem from="1536803159976" duration="21341000" />
+      <workItem from="1536803159976" duration="21427000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51248000" />
+    <option name="totallyTimeSpent" value="51334000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09228442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
