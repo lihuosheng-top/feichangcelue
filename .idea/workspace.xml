@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ad5e19fd-cd56-4619-b45d-8c4b57f4cd9b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/admin/controller/Jobs.php" afterPath="$PROJECT_DIR$/application/admin/controller/Jobs.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/controller/Index.php" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/gift.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/gift.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/reg.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/reg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/route.php" afterPath="$PROJECT_DIR$/application/route.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" afterPath="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html" afterPath="$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,6 +23,16 @@
                 <element signature="e#76#89#0#PHP" expanded="true" />
                 <marker date="1536837034767" expanded="true" signature="9964:10050" ph="update xh_st... " />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="reg_agreement.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -52,16 +57,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="buy_mine.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="buy_mine.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="218" column="13" lean-forward="true" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
+            <state relative-caret-position="-1416">
+              <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
               <folding>
-                <marker date="1536895406119" expanded="true" signature="9652:9683" ph="..." />
-                <marker date="1536895406119" expanded="true" signature="39288:39328" ph="..." />
-                <marker date="1536895406119" expanded="true" signature="39421:39461" ph="..." />
-                <marker date="1536895406119" expanded="true" signature="39540:39580" ph="..." />
+                <marker date="1536896402779" expanded="true" signature="9652:9683" ph="..." />
+                <marker date="1536896402779" expanded="true" signature="39288:39328" ph="..." />
+                <marker date="1536896402779" expanded="true" signature="39421:39461" ph="..." />
+                <marker date="1536896402779" expanded="true" signature="39540:39580" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,7 +76,7 @@
         <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/buy.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-365">
-              <caret line="477" column="17" lean-forward="true" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
+              <caret line="477" column="17" lean-forward="false" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -210,8 +215,8 @@
         <option value="$PROJECT_DIR$/application/index/controller/Index.php" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/reg.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/mobile/gift.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html" />
         <option value="$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js" />
+        <option value="$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html" />
       </list>
     </option>
   </component>
@@ -252,6 +257,41 @@
               <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
               <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="feichangcelue" type="b2602c69:ProjectViewProjectNode" />
+              <item name="feichangcelue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="application" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="view" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="index" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="mobile" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -287,12 +327,12 @@
       <updated>1536716903726</updated>
       <workItem from="1536716929422" duration="29030000" />
       <workItem from="1536803159976" duration="22037000" />
-      <workItem from="1536888611589" duration="6803000" />
+      <workItem from="1536888611589" duration="9297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58747000" />
+    <option name="totallyTimeSpent" value="61241000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1358" y="-8" width="1936" height="1056" extended-state="6" />
@@ -637,17 +677,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/admin/controller/Jobs.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="184" column="10" lean-forward="false" selection-start-line="184" selection-start-column="10" selection-end-line="186" selection-end-column="11" />
-          <folding>
-            <element signature="e#76#89#0#PHP" expanded="true" />
-            <marker date="1536837034767" expanded="true" signature="9964:10050" ph="update xh_st... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/function.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -682,14 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="823">
-          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/gift.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -709,21 +730,40 @@
     <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/buy.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-365">
-          <caret line="477" column="17" lean-forward="true" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
+          <caret line="477" column="17" lean-forward="false" selection-start-line="477" selection-start-column="17" selection-end-line="477" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/static/home/js/moblie/buy_mine.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="218" column="13" lean-forward="true" selection-start-line="218" selection-start-column="13" selection-end-line="218" selection-end-column="13" />
+        <state relative-caret-position="-1416">
+          <caret line="210" column="0" lean-forward="false" selection-start-line="210" selection-start-column="0" selection-end-line="210" selection-end-column="0" />
           <folding>
-            <marker date="1536895406119" expanded="true" signature="9652:9683" ph="..." />
-            <marker date="1536895406119" expanded="true" signature="39288:39328" ph="..." />
-            <marker date="1536895406119" expanded="true" signature="39421:39461" ph="..." />
-            <marker date="1536895406119" expanded="true" signature="39540:39580" ph="..." />
+            <marker date="1536896402779" expanded="true" signature="9652:9683" ph="..." />
+            <marker date="1536896402779" expanded="true" signature="39288:39328" ph="..." />
+            <marker date="1536896402779" expanded="true" signature="39421:39461" ph="..." />
+            <marker date="1536896402779" expanded="true" signature="39540:39580" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/admin/controller/Jobs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="184" column="10" lean-forward="false" selection-start-line="184" selection-start-column="10" selection-end-line="186" selection-end-column="11" />
+          <folding>
+            <element signature="e#76#89#0#PHP" expanded="true" />
+            <marker date="1536837034767" expanded="true" signature="9964:10050" ph="update xh_st... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/mobile/reg_agreement.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
