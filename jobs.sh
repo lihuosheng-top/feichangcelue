@@ -2,7 +2,7 @@
 
 while true
 do
-logfile=/data/feichangmoulue/jobs.log
+logfile=/data/feichangcelue/jobs.log
 
 ls_date=`date +%H:%M:%S`
 
@@ -30,12 +30,10 @@ echo "sm00009.siring.com.cn/admin.php/admin/jobs/pingCang   " >> $logfile
 curl  sm00009.siring.com.cn/admin.php/admin/jobs/pingCang
 
 fi
-
 echo "sm00009.siring.com.cn/admin.php/admin/jobs/getStockDataToDb   " >> $logfile
 curl  sm00009.siring.com.cn/admin.php/admin/jobs/getStockDataToDb
 
 sleep 1
-
 done
 
 
