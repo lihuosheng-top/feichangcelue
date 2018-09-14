@@ -428,6 +428,10 @@ class Index extends Home
         return view('reg');
     }
 
+    public function  reg_agreement(){
+       return view('index/mobile/reg_agreement');
+    }
+
 
     /**
      **************李火生*******************
