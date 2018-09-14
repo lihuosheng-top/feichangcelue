@@ -69,8 +69,7 @@ class Ucenter extends Home
             ->where("memberId = $memberId and $condition ")
             ->order("id desc")
             ->paginate(10, false, ['query' => request()->param()]);
-        $this->assign("fundrecord", $fundrecord);
-
+            $this->assign("fundrecord", $fundrecord);
         if (is_mobile_request()) {
             return view('ucenter/mobile/index');//手机的资金页面
         }
@@ -724,6 +723,7 @@ class Ucenter extends Home
                 $dealAmount = (float)trim($_POST['dealAmount']);      //买入金额(万元)
                 $surplus = (int)trim($_POST['surplus']);            //触 发 止 盈
                 $loss = (int)trim($_POST['loss']);                  //触 发 止 损
+                $stockname =trim($_POST['name']);
 
                 $publicFee = (int)trim($_POST['publicFee']);        //交易综合费
                 $guaranteeFee = (int)trim($_POST['guaranteeFee']);  //履约保证金
@@ -735,16 +735,13 @@ class Ucenter extends Home
                 $delayLineRate = (float)getSysParamsByKey("delayLineRate"); //递延条件是保证金的0.75倍
                 $stopLossRate = (float)getSysParamsByKey("stopLossRate"); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
                 $maxDiffRate = (float)getSysParamsByKey("maxDiffRate"); //当某股票当天涨跌幅大于8%时不能购买
-
 //                 $priceData = [1, 2, 3, 5, 10, 20, 30, 50];
-            if($$dealAmount>50){
+            if($dealAmount>50){
                 error("买入金额超出范围，最高交易50万");
             }
-//            if($$dealAmount<0.1){
-//                error('买入的金额太低，最低交易600');
-//            }
-
-
+            if($dealAmount<0.06){
+                error('买入的金额太低，最低交易600');
+            }
 
             if($surplus != $dealAmount * 5000){
                 error("触发止盈数据错误");
@@ -774,7 +771,14 @@ class Ucenter extends Home
                 $res_str = $this->getMarketValueBycode($stockCode);
                 $nowPrice = $res_str['info_arr'][3];
                 $data = $res_str['info_arr'];
-
+                /*股票名字先判断数据库中的是否名字已经存在，就是说遇到股票名字变换的时候，直接修改库中的内容*/
+                $select_stock_name = Db::table('xh_shares')->field('name')->where('code', $stockCode)->find();
+                if($data[1] !==$select_stock_name){
+                    Db::table('xh_shares')->where('code',$stockCode)->update(['name'=>$data[1]]);
+                }
+                if(!empty(stristr($data[1],'S'))){
+                    error('不能购买S、ST、*ST、S*ST、SST、以及被交易所特别处理的股票');
+                }
                 if ($data) {
                     $nowPrice = $data[3];
                     $diff_rate = $data[32];
@@ -791,7 +795,7 @@ class Ucenter extends Home
                     error("股票价格异常");
                 }
                 if($diff_rate >= $maxDiffRate || $diff_rate <= -$maxDiffRate ){
-                    $this->error("涨跌幅大于{$maxDiffRate}%的股票不能购买");
+                    error("涨跌幅大于{$maxDiffRate}%的股票不能购买");
                 }
                 //in in_member_id int, in in_stockCode varchar(100), in in_dealPrice int , in in_dealAmount int , in in_dealQuantity int , in in_surplus int,
                 // in in_loss int, in in_publicFee int, in in_guaranteeFee int, in in_delayLine int, in in_delayFee int
@@ -946,10 +950,11 @@ class Ucenter extends Home
         if ($isHoliday) {
             error("节假日不能交易");
         }
-        $curTime = date("H:i:s");
-        if (!($curTime >= '09:30:00' && $curTime <= '11:30:00' || $curTime >= '13:00:00' && $curTime <= '14:58:00')) {
-            error("非交易时间,<br/>可交易时间（09:30:00-11:30:00）（13:00:00-14:58:00）");
-        }
+        //TODO:限制购买时间
+//        $curTime = date("H:i:s");
+//        if (!($curTime >= '09:30:00' && $curTime <= '11:30:00' || $curTime >= '13:00:00' && $curTime <= '14:58:00')) {
+//            error("非交易时间,<br/>可交易时间（09:30:00-11:30:00）（13:00:00-14:58:00）");
+//        }
 
     }
 

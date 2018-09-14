@@ -101,6 +101,10 @@ class Home extends Common
         }
 
     }
+   public function getSysParamsByKey($key){
+        $data = Db::table('xh_sys_params')->field('value')->where("`key` = '$key'")->find();
+        return $data['value'];
+    }
 
 
 

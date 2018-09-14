@@ -1,5 +1,5 @@
 //选中的股票代码
-// var selectedCode = "600036";
+ var selectedCode = "000001";
 var stopShare=true;
 
 function updateMoneyRate(){
@@ -221,12 +221,11 @@ var buy_moblie={
             if(freshTimes > 10){
                 freshTimeInterval = 60 * 1000;
             }
-
             //获取股票实时数据
-            // buy_moblie.getStockInfo();
+            buy_moblie.getStockInfo();
             // buy_moblie.searchCue();
 
-        }, 2000 );
+        }, 1000 );
 
         //定时器 获取分时数据
         setInterval(function(){
@@ -436,14 +435,14 @@ var buy_moblie={
      * 初始化页面 获取股票实时数据、分时数据、K线图
      */
 
-    // stockInit:function (){
-    //     //获取股票实时数据
-    //     buy_moblie.getStockInfo();
-    //
-    //     //获取分时数据
-    //     buy_moblie.getTimeLine();
-    //
-    // },
+    stockInit:function (){
+        //获取股票实时数据
+        buy_moblie.getStockInfo();
+
+        //获取分时数据
+        // buy_moblie.getTimeLine();
+
+    },
 
     /**
      * 获取股票实时数据
@@ -452,76 +451,78 @@ var buy_moblie={
 
 
 
-//     getStockInfo:function (){
-//         $('#buy_step1').html('买入').attr('tapEvent',true).css({'background':'var(--color_red)'});
+    getStockInfo:function (){
+
+        $('#buy_step1').html('买入').attr('tapEvent',true).css({'background':'var(--color_red)'});
+
+        $.post("./index/Alistock/getStockInfo", {code:selectedCode}, function(data){
+                console.log(data);
+            if(data.code != '0'){
+                return;
+            }
+            var map = data.data;
+            console.log(map);
+            $('.title_l').find('#stockName').html(map.name);//招商银行
+            $('.title_l').find('#stockNum').html(selectedCode);
+            //渲染页面价格
+            map.nowPrice=(map.nowPrice-0).toFixed(2);
+            $("#nowPrice").html(map.nowPrice);
+            $("#num1").html(map.diff_money);
+            $("#num2").html(map.diff_rate + "%");
+
+            // 如果不在交易时间，不能点买
+            if(!buy_moblie.isTradingTime() ){
+                $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+            }
+            //改变价格颜色
+            if(map.diff_money > 0){
+                $(".color").removeClass('color_red').removeClass('color_green').addClass("color_red");
+            }else if(map.diff_money < 0){
+                $(".color").removeClass('color_red').removeClass('color_green').addClass("color_green");
+            }
+
+
+            //卖⑤...卖①...买①...买⑤
+            var bs = ["sell5_m", "sell5_n", "sell4_m", "sell4_n", "sell3_m", "sell3_n", "sell2_m", "sell2_n", "sell1_m", "sell1_n",
+                "buy1_m", "buy1_n", "buy2_m", "buy2_n", "buy3_m", "buy3_n", "buy4_m", "buy4_n", "buy5_m", "buy5_n"];
+            $("#stock-price li > b, .stock-price li > i").each(function(i, o){
+                var t = map[bs[i]];
+                if(i % 2 == 1){
+                    t = parseInt(map[bs[i]] / 100);
+                }else{
+                    t = Number(t).toFixed(2);
+                }
+                $(o).html(t);
+            });
+
+//	        //今开 最高 ...... 成交额
+//	        bs = ['openPrice', 'turnover', 'todayMax', 'todayMin', 'highLimit', 'downLimit', 'tradeNum', 'tradeAmount' ];
+//	        $("#stock-info li > span.r ").each(function(i, o){
+//	            if(bs[i] == 'tradeNum'){
+//	                $(o).html(map[bs[i]] / 100 + "手");
+//	            }else if(bs[i] == 'tradeAmount'){
+//	                $(o).html(map[bs[i]] / 10000 + "万");
+//	            }else{
+//	                $(o).html(map[bs[i]]);
+//	            }
+//	        });
+
+            buy_moblie.updateStockNumber();
+
+            //停牌判断
+            stopShare=true;
+            if(Number(map.openPrice).toFixed(2)=='0'||Number(map.openPrice).toFixed(2)=='0.00'){
+                $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
+                stopShare=false;
+                updateMoneyRate();
+                return;
+            }
 //
-//         $.post("./index/Alistock/getStockInfo", {code:selectedCode}, function(data){
-//             if(data.code != '0'){
-//                 return;
-//             }
-//             var map = data.data;
-//             console.log(map);
-//             $('.title_l').find('#stockName').html(map.name);//招商银行
-//             $('.title_l').find('#stockNum').html(selectedCode);
-//             //渲染页面价格
-//             map.nowPrice=(map.nowPrice-0).toFixed(2);
-//             $("#nowPrice").html(map.nowPrice);
-//             $("#num1").html(map.diff_money);
-//             $("#num2").html(map.diff_rate + "%");
-//
-//             // 如果不在交易时间，不能点买
-//             if(!buy_moblie.isTradingTime() ){
-//                 $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-//             }
-//             //改变价格颜色
-//             if(map.diff_money > 0){
-//                 $(".color").removeClass('color_red').removeClass('color_green').addClass("color_red");
-//             }else if(map.diff_money < 0){
-//                 $(".color").removeClass('color_red').removeClass('color_green').addClass("color_green");
-//             }
-//
-//
-//             //卖⑤...卖①...买①...买⑤
-//             var bs = ["sell5_m", "sell5_n", "sell4_m", "sell4_n", "sell3_m", "sell3_n", "sell2_m", "sell2_n", "sell1_m", "sell1_n",
-//                 "buy1_m", "buy1_n", "buy2_m", "buy2_n", "buy3_m", "buy3_n", "buy4_m", "buy4_n", "buy5_m", "buy5_n"];
-//             $("#stock-price li > b, .stock-price li > i").each(function(i, o){
-//                 var t = map[bs[i]];
-//                 if(i % 2 == 1){
-//                     t = parseInt(map[bs[i]] / 100);
-//                 }else{
-//                     t = Number(t).toFixed(2);
-//                 }
-//                 $(o).html(t);
-//             });
-//
-// //	        //今开 最高 ...... 成交额
-// //	        bs = ['openPrice', 'turnover', 'todayMax', 'todayMin', 'highLimit', 'downLimit', 'tradeNum', 'tradeAmount' ];
-// //	        $("#stock-info li > span.r ").each(function(i, o){
-// //	            if(bs[i] == 'tradeNum'){
-// //	                $(o).html(map[bs[i]] / 100 + "手");
-// //	            }else if(bs[i] == 'tradeAmount'){
-// //	                $(o).html(map[bs[i]] / 10000 + "万");
-// //	            }else{
-// //	                $(o).html(map[bs[i]]);
-// //	            }
-// //	        });
-//
-//             buy_moblie.updateStockNumber();
-//
-//             //停牌判断
-//             stopShare=true;
-//             if(Number(map.openPrice).toFixed(2)=='0'||Number(map.openPrice).toFixed(2)=='0.00'){
-//                 $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
-//                 stopShare=false;
-//                 updateMoneyRate();
-//                 return;
-//             }
-// //
-//             //更新资金利用率数据
-//             updateMoneyRate();
-//
-//         }, 'json')
-//     },
+            //更新资金利用率数据
+            updateMoneyRate();
+
+        }, 'json')
+    },
     /**
      * 获取分时数据
      */

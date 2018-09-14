@@ -166,7 +166,7 @@ class Index extends Admin
             ->where($map)
             ->where("a.memberId = b.id and (a.status=1 || a.status=3) ")
             ->order("id desc")
-            ->paginate();
+            ->paginate(10);
 
         // 分页数据
         $page = $data_list->render();

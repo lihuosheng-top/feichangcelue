@@ -1,15 +1,12 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wo
- * Date: 2017/7/17
- * Time: 14:26
- */
+
 
 namespace app\admin\controller;
+//use app\common\controller\Common;
 use think\Db;
 use app\index\controller\Alistock;
 use app\index\controller\Home;
+use app\common\controller\Common;
 
 set_time_limit(0);
 
@@ -19,7 +16,7 @@ class Jobs
     public function getStockDataToDb(){
         $t1 = time();
         $tm = time() - 10;
-        $stockList = Db::table("xh_stock_visit_record")->field("distinct(code)")->where("createTimeStamp > $tm")->select();
+        $stockList = Db::table("xh_stock_visit_record")->field("distinct(code)")->where("createTimeStamp < $tm")->select();
         $stocks = "";
         foreach($stockList as $k => $v){
             if($stocks != ''){
@@ -27,19 +24,29 @@ class Jobs
             }
             $stocks .= $v['code'];
         }
+//        dump($stocks);
 
-        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
+//        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
+        $stockMap =(new Common())->getMarketVlueByCodes($stocks);
+
         //print_r($stockMap);
         foreach($stockMap as $k => $v){
-            //print_r($v);
-            $data = $this->object2array($v);
-            $data['createTime'] = date("Y-m-d H:i:s");
-            $data['createTimeStamp'] = time();
-
-            $ret = Db::table("xh_online_stock_detail")->insertGetId($data);
-            echo ($ret."<br/>");
+            foreach ($v as $keys=>$values){
+                $data['detail']=implode(',',$values);
+                $data['createTime'] = date("Y-m-d H:i:s");
+                $data['createTimeStamp'] = time();
+                $data['code']= $values[2];
+                $ret = Db::table("xh_online_stock_detail")->insertGetId($data);
+                echo ($ret."<br/>");
+            }
+//            $data['detail'] = $this->object2array($v);
+//            $data['detail'] = implode(',',$v);
+//            $data['createTime'] = date("Y-m-d H:i:s");
+//            $data['createTimeStamp'] = time();
+//            $data['code']= $v['info_arr'][2];
+//            $ret = Db::table("xh_online_stock_detail")->insertGetId($data);
+//            echo ($ret."<br/>");
         }
-
         $t2 = time();
         echo "t2-t1=".($t2 - $t1);
         //print_r($this->object2array($stockMap));
@@ -69,7 +76,6 @@ class Jobs
     //获取股票实时价格，自动平仓 (每秒运行一次)
     public function pingCang(){
         $t1 = time();
-
         $res = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->field("distinct(stockCode)")
@@ -81,24 +87,31 @@ class Jobs
             }
             $stocks .= $v['stockCode'];
         }
-        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
+//        dump($stocks);exit();
+
+//        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
+//        $stockMap = (new Common())->getMarketVlueByCodes($stocks);
+//        dump($stockMap);
 
         $orderList = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->select();
-        foreach($orderList as $k=>$v){
+
+        foreach($orderList as $k=>$v){;
             global $orderId, $liquidation;
             $orderId = $v['id'];
             $surplus = $v['surplus']; //止盈线
             $loss = $v['loss'];//止损线
-            $stockDetail = $stockMap[$v['stockCode']];
-
-            $diff_rate = $stockDetail->diff_rate ;//涨跌幅
+//            $stockDetail = $stockMap[$v['stockCode']];
+            /*从实时数据过来*/
+            $stockDetail =(new Common())->getMarketValueBycode_second($v['stockCode']);
+//            dump($stockDetail);
+            $diff_rate = $stockDetail['info_arr']['31'] ;//涨跌幅
             if($diff_rate <= -9.95){//股票跌停则不允许卖出
                 echo $v['stockCode']."跌停<br/>";
                 continue;
             }
-            $nowPrice = $stockDetail->nowPrice ;   //实时价格
+            $nowPrice = $stockDetail['info_arr'][3] ;   //实时价格
             if($nowPrice <= 0){
                 continue;
             }
@@ -112,30 +125,66 @@ class Jobs
                 $liquidation = 2;
             }
             echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
-
             //访问后台函数的权限
             define('UID', 1);
             session('user_auth.uid', 1);
             if($liquidation == 2 || $liquidation == 3){
                 Db::transaction(function(){
                     global $orderId, $liquidation;
-                    //echo "orderId=$orderId, liquidation=$liquidation";
+                    echo "orderId=$orderId, liquidation=$liquidation";
                     (new Order())->stock_sell_do($orderId, $liquidation);
                     Db::commit();
                 });
                 //(new Order())->stock_sell_do($orderId, $liquidation);
             }
+            $t2 = time();
+            echo "t2-t1=".($t2 - $t1)."<br/>";
         }
 
-        $t2 = time();
-        echo "t2-t1=".($t2 - $t1)."<br/>";
+
+//            $diff_rate = $stockDetail->diff_rate ;//涨跌幅
+//            if($diff_rate <= -9.95){//股票跌停则不允许卖出
+//                echo $v['stockCode']."跌停<br/>";
+//                continue;
+//            }
+//            $nowPrice = $stockDetail->nowPrice ;   //实时价格
+//            if($nowPrice <= 0){
+//                continue;
+//            }
+//            $profit = ((float)$nowPrice - (float)$v['dealPrice']) * $v['dealQuantity'] * 100; //交易盈亏
+//            $profit = round($profit, 2);
+//            //如果盈亏大于止盈线或小于止损线，则即时强制平仓
+//            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过止盈线自动平仓
+//            if($profit > $surplus){
+//                $liquidation = 3;
+//            }else if($profit < $loss){
+//                $liquidation = 2;
+//            }
+//            echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
+//
+//            //访问后台函数的权限
+//            define('UID', 1);
+//            session('user_auth.uid', 1);
+//            if($liquidation == 2 || $liquidation == 3){
+//                Db::transaction(function(){
+//                    global $orderId, $liquidation;
+//                    //echo "orderId=$orderId, liquidation=$liquidation";
+//                    (new Order())->stock_sell_do($orderId, $liquidation);
+//                    Db::commit();
+//                });
+//                //(new Order())->stock_sell_do($orderId, $liquidation);
+//            }
+//
+//
+//        $t2 = time();
+//        echo "t2-t1=".($t2 - $t1)."<br/>";
     }
 
     //获取股票实时价格，判断亏损额大于递延条件则不允许递延（每天结束交易时运行一次）
     public function noDelay(){
-        if(date("H:i:s") <= "15:00:00"){
-            die("交易时间不能调用此接口");
-        }
+//        if(date("H:i:s") <= "15:00:00"){
+//            die("交易时间不能调用此接口");
+//        }
         $res = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->field("distinct(stockCode)")
@@ -147,7 +196,7 @@ class Jobs
             }
             $stocks .= $v['stockCode'];
         }
-        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
+//        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
 
         $orderList = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
@@ -157,14 +206,17 @@ class Jobs
             global $orderId ;
             $orderId = $v['id'];
             $delayLine = $v['delayLine'];//止损线
-            $stockDetail = $stockMap[$v['stockCode']];
-
-            $diff_rate = $stockDetail->diff_rate ;//涨跌幅
+            $stockDetail =(new Common())->getMarketValueBycode_second($v['stockCode']);
+            $diff_rate = $stockDetail['info_arr']['31'] ;//涨跌幅
+//            dump($diff_rate);
+            //            $stockDetail = $stockMap[$v['stockCode']];
+//            $diff_rate = $stockDetail->diff_rate ;//涨跌幅
             if($diff_rate <= -9.95){//股票跌停则不允许卖出
                 echo $v['stockCode']."跌停<br/>";
                 continue;
             }
-            $nowPrice = $stockDetail->nowPrice;
+//            $nowPrice = $stockDetail->nowPrice;
+            $nowPrice = $stockDetail['info_arr'][3] ;   //实时价格
             if($nowPrice <= 0){
                 continue;
             }
@@ -196,8 +248,9 @@ class Jobs
             $orderList = Db::table("xh_stock_order")
                 ->where("status=1 and isFreetrial=0 and TO_DAYS(now()) - TO_DAYS(createTime)  > 0 ")
                 ->select();
-            $hList = Db::table("xh_holiday")->field("day")->select();
 
+//          TODO：
+            $hList = Db::table("xh_holiday")->field("day")->select();
             foreach($orderList as $k=>$v){
                 $orderId = $v['id'];
                 $memberId = $v['memberId'];

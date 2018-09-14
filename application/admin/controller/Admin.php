@@ -403,7 +403,6 @@ class Admin extends Common
         if ($this->request->isPost()) {
             $data = $this->request->post();
             $data = json_encode($data);
-
             if (false !== ModuleModel::where('name', $module)->update(['config' => $data])) {
                 cache('module_config_'.$module, null);
                 return $this->success('更新成功');

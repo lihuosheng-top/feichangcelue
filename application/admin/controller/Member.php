@@ -60,7 +60,7 @@ class Member extends Admin
             ->setPageTitle('用户列表') // 设置页面标题
             ->addTimeFilter('createTime')//时间
             ->setTableName('admin_user') // 设置数据表名
-           	->setSearch([ 'username' => '用户', 'mobile' => '手机','recommendCode'=>'机构推荐码']) // 设置搜索参数
+           	->setSearch([ 'username' => '用户名', 'mobile' => '手机','recommendCode'=>'机构推荐码']) // 设置搜索参数
             ->addColumns([ // 批量添加列
                 ['username', '用户名'],
                 ['mobile', '手机号'],
@@ -364,24 +364,26 @@ class Member extends Admin
         $uid = (int)trim(input("uid"));
         if(!empty($uid)){
             // 数据列表
+            $map = $this->getMap();
             $data_list = Db::table(["xh_member_fundrecord"=>'a', "xh_member"=>'b'])
                 ->field("a.*,  b.username, b.mobile")
                 ->where("a.memberId = b.id and a.memberId=$uid ")
+                ->where($map)
                 ->order("id desc")
                 ->paginate();
 
             // 分页数据
             $page = $data_list->render();
-
             // 使用ZBuilder快速创建数据表格
             return ZBuilder::make('table')
                 ->hideCheckbox()
                 ->js('pay_static')
                 ->setPageTitle('用户列表') // 设置页面标题
                 ->setTableName('admin_user') // 设置数据表名
-                ->setSearch(['id' => 'ID', 'username' => '用户名', 'email' => '邮箱']) // 设置搜索参数
+                ->setSearch(['memberId' => 'ID', 'username' => '户名', 'mobile' => '手机号']) // 设置搜索参数// 设置搜索参数
                 ->addColumns([ // 批量添加列
-                    ['username', '用户名'],
+                    ['memberId','用户ID'],
+                    ['username','用户名'],
                     ['mobile', '手机号'],
                     ['flow', '资金流向'],
                     ['amount', '操作金额'],
@@ -392,36 +394,38 @@ class Member extends Admin
                 ->setRowList($data_list) // 设置表格数据
                 ->setPages($page) // 设置分页数据
                 ->fetch(); // 渲染页面
-        }else{
-            // 数据列表
-            $data_list = Db::table(["xh_member_fundrecord"=>'a', "xh_member"=>'b'])
-                ->field("a.*,  b.username, b.mobile")
-                ->where("a.memberId = b.id")
-                ->order("id desc")
-                ->paginate();
-
-            // 分页数据
-            $page = $data_list->render();
-
-            // 使用ZBuilder快速创建数据表格
-            return ZBuilder::make('table')
-                ->hideCheckbox()
-                ->js('pay_static')
-                ->setPageTitle('用户列表') // 设置页面标题
-                ->setTableName('admin_user') // 设置数据表名
-                ->setSearch(['id' => 'ID', 'username' => '用户名', 'email' => '邮箱']) // 设置搜索参数
-                ->addColumns([ // 批量添加列
-                    ['username', '用户名'],
-                    ['mobile', '手机号'],
-                    ['flow', '资金流向'],
-                    ['amount', '操作金额'],
-                    ['usableSum', '余额' ],
-                    ['createTime', '时间' ],
-                    ['remarks', '说明' ]
-                ])
-                ->setRowList($data_list) // 设置表格数据
-                ->setPages($page) // 设置分页数据
-                ->fetch(); // 渲染页面
+        }
+       if(empty($uid)){
+                $map = $this->getMap();
+                // 数据列表
+                $data_list = Db::table(["xh_member_fundrecord"=>'a', "xh_member"=>'b'])
+                    ->field("a.*,  b.username, b.mobile")
+                    ->where("a.memberId = b.id")
+                    ->where($map)
+                    ->order("id desc")
+                    ->paginate();
+                // 分页数据
+                $page = $data_list->render();
+                // 使用ZBuilder快速创建数据表格
+                return ZBuilder::make('table')
+                    ->hideCheckbox()
+                    ->js('pay_static')
+                    ->setPageTitle('用户列表') // 设置页面标题
+                    ->setTableName('admin_user') // 设置数据表名
+                    ->setSearch(['memberId' => 'ID', 'username' => '户名', 'mobile' => '手机号']) // 设置搜索参数
+                    ->addColumns([ // 批量添加列
+                        ['memberId','用户ID'],
+                        ['username', '用户名'],
+                        ['mobile', '手机号'],
+                        ['flow', '资金流向'],
+                        ['amount', '操作金额'],
+                        ['usableSum', '余额' ],
+                        ['createTime', '时间' ],
+                        ['remarks', '说明' ]
+                    ])
+                    ->setRowList($data_list) // 设置表格数据
+                    ->setPages($page) // 设置分页数据
+                    ->fetch(); // 渲染页面
         }
 
     }

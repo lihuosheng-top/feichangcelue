@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: wo
- * Date: 2017/7/12
- * Time: 15:20
- */
 
 namespace app\admin\controller;
 
@@ -28,7 +22,7 @@ class Notemsg extends Admin
 
 		$map = $this->getMap();
         // 数据列表
-        $data_list = Db::table("xh_note_msg")->where($map)->where("status=0")->order("id desc")->paginate();
+        $data_list = Db::table("xh_note_msg")->where($map)->where("status=0")->order("id desc")->paginate(10);
 
         // 分页数据
         $page = $data_list->render();
@@ -62,7 +56,7 @@ class Notemsg extends Admin
 		// 获取筛选
         $map = $this->getMap();
         // 数据列表
-        $data_list = Db::table("xh_note_msg")->where($map)->where("status=1")->order("id desc")->paginate();
+        $data_list = Db::table("xh_note_msg")->where($map)->where("status=1")->order("id desc")->paginate(10);
 
         // 分页数据
         $page = $data_list->render();

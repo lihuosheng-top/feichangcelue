@@ -446,9 +446,23 @@ class Index extends Home
         $project_name = ''; //项目名字
         $member_id = $member_data['id'];   //所登录的id
         $reg = 'reg';  //注册地址
-       // $share_url = $domain_name."/".$project_name."/".$reg."/".$member_id;
 		$share_url = $domain_name."/".$reg."/".$member_id;
-//        dump($share_url);exit();
+		/*二维码*/
+		$share_code ='http://b.bshare.cn/barCode?site=weixin&url='.$share_url;
+        /*推广详情*/
+        //推广人数，注册人数
+        $selete_invite_num =Db::table('xh_member')->where('inviterId',$member_id)->count();
+        if(!empty($selete_invite_num)){
+            /*统计*/
+            $data_statistics =[
+                'selete_invite_num'=>$selete_invite_num,
+                'make_money'=>$selete_invite_num *10,
+            ];
+        }
+        $select_all_data =Db::table('xh_member')->field('username,mobile,createTime')->where('inviterId',$member_id)->select();
+        $this->assign('data_statistics',$data_statistics);
+        $this->assign('select_all_data',$select_all_data);
+        $this->assign('share_code',$share_code);
         $this->assign('share_url',$share_url);
         return view('index/mobile/invite');
     }
@@ -551,11 +565,9 @@ class Index extends Home
 
         $id = Db::table("xh_member")->insertGetId($data);
         if ($id > 0) {
-
             /*要求成功之后得对应的奖励10元进入账户（注册成功,被邀请人和邀请人都奖励10元）*/
             if(!empty($inviterId)){
                 $create_time = date("Y-m-d H:i:s");
-
                 /*邀请人*/
                 $active_inviter_data =[
                     'memberId'=>$inviterId,
@@ -565,10 +577,10 @@ class Index extends Home
                     'createTime'=>$create_time
                 ];
                 $reward_one =Db::table('xh_member_fundrecord')->insertGetId($active_inviter_data);
-                $active_inviter_data =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
-               if(!empty($active_inviter_data)){
-                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
-                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data['usableSum']+10]);
+                $active_inviter_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
+               if(!empty($active_inviter_data_usableSum)){
+                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
+                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
                }
                 /*被邀请人（新注册）*/
                 $invited_data =[
@@ -578,7 +590,7 @@ class Index extends Home
                     'remarks'=>'成功被邀请加入获得奖励10元',
                     'createTime'=>$create_time
                 ];
-                $reward_tow =Db::table('xh_member_fundrecord')->data($invited_data)->insert();
+                $reward_tow =Db::table('xh_member_fundrecord')->insertGetId($invited_data);
                //对余额进行修改(先查在改)
                 $invite_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$id)->find();
                 if(!empty($invite_data_usableSum)){
