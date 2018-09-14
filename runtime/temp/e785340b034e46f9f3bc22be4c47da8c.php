@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\buy.html";i:1536389770;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\buy.html";i:1536899763;}*/ ?>
 <!doctype html>
 <html>
 
@@ -334,9 +334,9 @@
 <script>
 
     // 如果不在交易时间，不能点买
-                 if(!buy_moblie.isTradingTime() ){
-                     $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-                 }
+//                 if(!buy_moblie.isTradingTime() ){
+//                     $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+//                 }
     $(".Buy_Step").click(function () {
 
         //名字
@@ -516,6 +516,7 @@
             type:"post",
             url:"<?php echo url('index/Ucenter/stockBuy'); ?>",
             data:{
+                name:name,//股票的名字
                 stockCode:stockCode, //股票代号
                 nowPrice:nowPrice, //成交价格
                 dealAmount:dealAmount, //交易总操盘

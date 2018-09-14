@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:87:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\gift.html";i:1536899763;}*/ ?>
 <!doctype html>
 <html>
 	<head>

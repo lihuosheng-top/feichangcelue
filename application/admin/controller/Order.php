@@ -9,7 +9,7 @@
 namespace app\admin\controller;
 
 use app\admin\controller\Admin;
-use app\cms\home\Common;
+//use app\cms\home\Common;
 use app\user\model\Role as RoleModel;
 use app\common\builder\ZBuilder;
 use app\admin\model\Module as ModuleModel;
@@ -20,6 +20,7 @@ use think\Cache;
 use think\Db;
 use app\user\validate\User;
 use util\Tree;
+use app\common\controller\common;
 
 use app\index\controller\Alistock;
 use app\index\controller\Home;
@@ -44,7 +45,7 @@ class Order extends Admin
             ->field("a.*, b.username, b.mobile")
             ->where($map)
             ->where("a.memberId = b.id and a.isFreetrial = 0 and status = 1 $condition")
-            ->order("a.id desc")->paginate();
+            ->order("a.id desc")->paginate(10);
         $list = array();
         //数据处理(递延天数减2)
         foreach($data_list as $i=>$v){
@@ -85,9 +86,8 @@ class Order extends Admin
                 ['delayLine', '递延线(元)'],
                 ['delayDays', '递延天数'],
                 ['delayFeeSum', '递延费(元)'],
-
                 ['createTime', '买入时间' ],
-//                ['right_button', '操作', 'btn']
+                ['right_button', '操作', 'btn']
             ])
             ->addRightButton('custom', $btn ) // 批量添加右侧按钮
             ->setRowList($list) // 设置表格数据
@@ -109,7 +109,7 @@ class Order extends Admin
             ->field("a.*, b.username, b.mobile")
             ->where($map)
             ->where("a.memberId = b.id and a.isFreetrial = 0 and status = 2 $condition ")
-            ->order("a.sellTime desc, a.id desc")->paginate();
+            ->order("a.sellTime desc, a.id desc")->paginate(10);
 
         // 分页数据
         $page = $data_list->render();
@@ -186,8 +186,6 @@ class Order extends Admin
         $memberId = $order['memberId'];
         $code = $order['stockCode'];
         $stock = Db::table("xh_shares")->where("code='$code'")->find();
-
-//dump($stock['']);exit();
         if(!$stock){
             error("股票不存在");
         }
@@ -196,12 +194,11 @@ class Order extends Admin
         }
 //        $arr = (new Alistock())->batch_real_stockinfo($stock['market'].$stock['code']);
         $arr =(new Common())->getMarketValueBycode($stock['code']);
-
-//        dump($arr);exit();
+        dump($arr);
         if(!$arr || !is_array($arr)){
             error("获取股票数据失败");
         }
-        $nowPrice = $arr[$code];
+        $nowPrice = $arr['info_arr'][3];
         if($nowPrice <= 0 || !is_numeric($nowPrice)){
             error("股票数据异常");
         }
@@ -210,7 +207,9 @@ class Order extends Admin
         $profit = round( ($nowPrice - $order['dealPrice']) * $order['dealQuantity'] * 100 ,2 );
         //计算盈利分配
         $profitSelf = $profit;
-        $profitFee = (float)(\app\index\controller\getSysParamsByKey("profitFee"));
+        //手续费
+        $profitFee = (float)(\app\index\controller\Home::getSysParamsByKey("profitFee"));
+        //减去分成之后实际得的钱
         if($profit > 0){
             $profitSelf = $profit * ( 1- $profitFee);
         }

@@ -55,6 +55,7 @@ return [
     'logout'=>'index/index/logout',             //退出
  //   "index"=>"index/index/index",               //首页
     'doReg'=>'index/index/doReg',               //注册
+    'reg_agreement'=>'index/index/reg_agreement', //注册协议
     'sendMobileCode'=>'index/index/sendMobileCode',         //短信验证
     "stock"=>"index/index/stock",
     //"authllpay_wap"=>"index/lianlianauthpay/authllpay_wap",         //银行卡充值

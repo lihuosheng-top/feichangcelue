@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\reg.html";i:1532595573;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\reg.html";i:1536899763;}*/ ?>
 <!doctype html>
 <html>
 	<head>
@@ -40,7 +40,7 @@
 				</div>
 				<!--隐藏域帮助进行识别获取到的邀请人的memberID-->
 
-
+				<div style="text-align: center;"><a href="<?php echo url('index/index/reg_agreement'); ?>">注册协议</a></div>
 					<button type="submit" id="reg_btn" class="ml_btn mui-btn mui-btn-block">注&nbsp;册</button>
 			</form>
 		</div>

@@ -121,7 +121,7 @@ class Common extends Controller
      */
     final protected function  getMarketValueBycode($code){
         $url = 'http://qt.gtimg.cn/q=';
-        $market = Db::table("xh_shares")->field("market",false)->where('code',$code)->find();
+        $market = Db::table("xh_shares")->field("market")->where('code',$code)->find();
         $sh = $market['market'];
         $code_url = $url . $sh . $code;
         $apistr = file_get_contents($code_url);
@@ -141,6 +141,104 @@ class Common extends Controller
         );
         return $res;
     }
+
+
+    /**
+     **************李火生*******************
+     * @param $codes
+     * @return array
+     * 通过数组获取集体的所有数据
+     **************************************
+     */
+    public  function  getMarketVlueByCodes($codes){
+        /*以逗号切割*/
+        $arrays =explode(",",$codes);
+        foreach($arrays as $key=>$code){
+            $url = 'http://qt.gtimg.cn/q=';
+            $market = Db::table("xh_shares")->field("market")->where('code',$code)->find();
+            $sh = $market['market'];
+            $code_url = $url . $sh . $code;
+            $apistr = file_get_contents($code_url);
+            $str = iconv("gb2312", "utf-8", $apistr);
+            $long_str = strlen($str);
+            $infomation = substr($str, 12, $long_str);//截取后的数据，字符串
+            $info_arr = explode("~", $infomation);//对字符串进行切割成数组
+            $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
+            $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+            $time_img = '.gif';
+//            $all_url_info = $time_url . $code . $time_img;//时K
+//            $day_url_info = $day_url . $code . $time_img; //日k
+            $res[] =array(
+                'info_arr'=>$info_arr,
+//                'time_url_info'=>$all_url_info,
+//                'day_url_info'=>$day_url_info
+            );
+
+        }
+        return $res;
+    }
+
+    /**
+     **************李火生*******************
+     * @param $code
+     * @return array
+     * 多个数组的code
+     **************************************
+     */
+    final protected function  getMarketValueBycodess($code){
+        $url = 'http://qt.gtimg.cn/q=';
+        $market = Db::table("xh_shares")->field("market")->where('code',$code)->find();
+        $sh = $market['market'];
+        $code_url = $url . $sh . $code;
+        $apistr = file_get_contents($code_url);
+        $str = iconv("gb2312", "utf-8", $apistr);
+        $long_str = strlen($str);
+        $infomation = substr($str, 12, $long_str);//截取后的数据，字符串
+        $info_arr = explode("~", $infomation);//对字符串进行切割成数组
+        $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
+        $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+        $time_img = '.gif';
+        $all_url_info = $time_url . $code . $time_img;//时K
+        $day_url_info = $day_url . $code . $time_img; //日k
+        $res =array(
+            'info_arr'=>$info_arr,
+//            'time_url_info'=>$all_url_info,
+//            'day_url_info'=>$day_url_info
+        );
+        return $res;
+    }
+
+
+    /**
+     **************李火生*******************
+     * @param $code
+     * @return array
+     * 后台使用
+     **************************************
+     */
+    public function  getMarketValueBycode_second($code){
+        $url = 'http://qt.gtimg.cn/q=';
+        $market = Db::table("xh_shares")->field("market")->where('code',$code)->find();
+        $sh = $market['market'];
+        $code_url = $url . $sh . $code;
+        $apistr = file_get_contents($code_url);
+        $str = iconv("gb2312", "utf-8", $apistr);
+        $long_str = strlen($str);
+        $infomation = substr($str, 12, $long_str);//截取后的数据，字符串
+        $info_arr = explode("~", $infomation);//对字符串进行切割成数组
+        $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
+        $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+        $time_img = '.gif';
+        $all_url_info = $time_url . $code . $time_img;//时K
+        $day_url_info = $day_url . $code . $time_img; //日k
+        $res =array(
+            'info_arr'=>$info_arr,
+            'time_url_info'=>$all_url_info,
+            'day_url_info'=>$day_url_info
+        );
+        return $res;
+    }
+
 
     public function ajax_success($msg = '提交成功', $data = array())
     {

@@ -60,7 +60,11 @@ b {
 	color: #8f8f94;
 }
 .color_black{
+<<<<<<< HEAD
+	/* display: none; */
+=======
 	/*display: none;*/
+>>>>>>> d6f0ec84bd78205fa6bfe1fa34782cf218cad61b
 	color: #000;
 }
 /*字体大小*/
