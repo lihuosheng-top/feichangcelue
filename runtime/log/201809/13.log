@@ -1,0 +1,2615 @@
+---------------------------------------------------------------
+[ 2018-09-13T03:57:39+08:00 ] 182.255.62.32 220.181.125.17 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T03:57:49+08:00 ] 182.255.62.32 220.181.125.17 GET /ucenter/payment.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T03:58:01+08:00 ] 182.255.62.32 220.181.125.17 GET /login.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-09-13T08:32:55+08:00 ] 182.255.62.32 121.54.44.183 GET /qq_add
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:33:09+08:00 ] 182.255.62.32 121.54.44.183 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T08:33:47+08:00 ] 182.255.62.32 121.54.44.183 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [1]Maximum execution time of 30 seconds exceeded
+---------------------------------------------------------------
+[ 2018-09-13T08:34:41+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_role` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT `name` FROM `xh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:34:42+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:34:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:48+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:34:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:34:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:13+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T08:35:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:13+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536798919040
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:35:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:20+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/rechargelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id` FROM `xh_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/index/rechargelist' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `xh_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_recharge` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_member_recharge` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and (a.status=1 || a.status=3)  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`username`,`b`.`mobile` FROM `xh_member_recharge` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and (a.status=1 || a.status=3)  ) ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:35:23+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:24+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:35:24+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:38+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/order/finished.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `id` FROM `xh_admin_menu` WHERE  `pid` <> 0  AND `url_value` = 'admin/order/finished' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`title`,`url_value` FROM `xh_admin_menu` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 2   ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`username`,`b`.`mobile` FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 2   ) ORDER BY a.sellTime desc, a.id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.015600s ]
+[ error ] [8]未定义变量: condition
+---------------------------------------------------------------
+[ 2018-09-13T08:35:39+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:39+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:40+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/order/buylist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 1  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`username`,`b`.`mobile` FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 1  ) ORDER BY a.id desc LIMIT 0,20 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: condition
+---------------------------------------------------------------
+[ 2018-09-13T08:35:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:42+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:35:42+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:25+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/order/buylist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 1  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `a`.*,`b`.`username`,`b`.`mobile` FROM `xh_stock_order` `a`,`xh_member` `b` WHERE  (  a.memberId = b.id and a.isFreetrial = 0 and status = 1  ) ORDER BY a.id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: condition
+---------------------------------------------------------------
+[ 2018-09-13T08:48:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:25+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:39+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:39+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T08:48:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:48:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:59:53+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T08:59:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:59:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:59:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:59:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T08:59:55+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:00:00+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:00:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:00:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:00:01+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536800406866
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:00:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:00:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:00:02+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:01:36+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '4863960bd3f1325ed1ff5d1b31604657' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:03:54+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:03:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:54+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536800640113
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:03:54+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:55+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:55+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:55+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:03:55+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:56+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:56+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:56+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:56+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:57+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:03:58+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:03:59+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:02+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.015600s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:04:03+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:03+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:03+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536800648799
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:04:03+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:03+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:04+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:05+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:04:06+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:06+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:06+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:04:06+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536800652944
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:07+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:08+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:08+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:10+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.015601s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:04:10+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:11+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:11+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:12+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:12+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:13+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:04:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:17+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:04:17+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:17+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:17+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536800663069
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:04:18+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:18+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:04:18+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:05:03+08:00 ] 182.255.62.32 121.54.44.181 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015600s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T09:05:04+08:00 ] 182.255.62.32 121.54.44.181 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:05:04+08:00 ] 182.255.62.32 121.54.44.181 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:08:06+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = 'da8324fae12320de0daf6de3b6354157' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:08:06+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.062401s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = 'da8324fae12320de0daf6de3b6354157' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:08:08+08:00 ] 182.255.62.32 121.54.44.181 GET /public/uploads/images/20180908/5e38e8a268e87d9a1d8411ed0c7a9f5f.jpg
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:08:28+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = 'da8324fae12320de0daf6de3b6354157' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:09:04+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '4863960bd3f1325ed1ff5d1b31604657' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:09:30+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] INSERT INTO `xh_article` (`title` , `content` , `createTime`) VALUES ('配资平台认为，这些时候不能加仓' , '<p><span class=\"source\">作者：尚牛在线</span></p><p>　　</p><p><a style=\"color: rgb(0, 0, 0); text-decoration: underline; background-color: rgb(255, 255, 255);\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0); background-color: rgb(255, 255, 255);\">股票配资平台</span></a><span style=\"background-color: rgb(0, 0, 0);\"></span>了解到，有些人在股票操作的过程中，不能很好的控制自己的仓位，并且什么时候加仓什么时候建仓都不知道，特别是加仓，因为<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">股票配资</span></a>平台的股票交易规则是t+1的规则，当天加进去的仓万一跟后面出现下跌，我们也是没有办法的，所以就更要求大家需要谨慎一点。下面股票<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">配资</span></a><span style=\"color: rgb(0, 0, 0);\"></span>平台就来给大家分析下，什么时候是不能加仓的。</p><p>　　</p><p>正在下跌通道的股票。有些股<span style=\"background-color: rgb(255, 255, 255);\"></span>票一直处在下跌的通道，不管是<span style=\"color: rgb(0, 0, 0);\"></span>出于什么原因，下跌已经成为现实，这个时候很多激进的人就开始行动了，认为抄底的时机到了，其实不是这样的，这个时候你要是抄底加仓的话，很有可能还会被套住，所以，在没有明显回转的行情之下，下跌过多的股票千万不要去加仓，加越多亏损越大。</p><p>　　&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img title=\"01.jpg\" src=\"/public/uploads/images/20180912/fa638f0c5684a6c9cd981b5d46b3d166.jpg\"/></p><p>利空消息发布的股票。有些股票是遇到某些原因，会出现一些不好的消息，只要这些利空消息发布，那么股票就会得到很好的提现，并且下跌的幅度也是很大的，在这个时候大家一定要判断走势，要是临时性的利空消息，那么倒问题不大，你补仓也是可以的，那万一时那种长期性的，就像前段时间的长生生物一样，已经连续的二十多个跌停板了，在中途的时候你要是加仓了，那后果不堪设想。</p><p>　　</p><p>处在高位的股票。有些股票的上涨已经达到了一个阶段，然后会出现回调的现象，可是有些激进的人会觉得还有上涨的空间，就大举的加仓，其实不是这样的，上涨过多的股票回调，我们要根据成交量等因素去判断，看看后期的上涨空间还有多大，要是没什么空间的话，你还加仓，那后面很有可能会出现高位被套的情况。</p><p>　　</p><p>以上是尚牛在线股票配资平台给大家介绍的一些情况，大家以后在操作过程中，遇到这些情况是千万不能加仓的，相反尚牛在线股票配资平台认为，你还应该减仓，来达到控制风险的目的。</p><p></p>' , '2018-09-13 09:09:30') [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'admin'  AND `name` = 'article_edit' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: name
+---------------------------------------------------------------
+[ 2018-09-13T09:09:32+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:09:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:09:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:09:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:09:34+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:09:34+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:13:32+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062401s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:13:32+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:13:32+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536801218289
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:13:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:13:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:13:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:13:33+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:14:02+08:00 ] 182.255.62.32 121.54.44.181 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T09:14:03+08:00 ] 182.255.62.32 121.54.44.181 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:14:03+08:00 ] 182.255.62.32 121.54.44.181 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:15:22+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '84c1550b607087a1954a1d5bce27965d' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:28:38+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:28:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:40+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536802125785
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:28:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:40+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:41+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:42+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:28:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:44+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:48+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:28:49+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:49+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536802134694
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:28:49+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:49+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:49+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:28:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:29:55+08:00 ] 182.255.62.32 121.54.44.181 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T09:29:55+08:00 ] 182.255.62.32 121.54.44.181 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:29:55+08:00 ] 182.255.62.32 121.54.44.181 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:30:48+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '6ea583848a37a3514c2a19503d5c985f' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:30:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/uploads/images/20180908/6b6bc94960e1e0487223ff009d6ad29f.jpg
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:31:00+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '364b170837bcbb73972377a30438eed9' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:31:31+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '11c753ddc60424ed44400dc6ab0ecc0b' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:31:39+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] INSERT INTO `xh_article` (`title` , `content` , `createTime`) VALUES ('股票配资公司解决你的投资难题' , '<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 对于很多投资者来说，股票投资最难解决的就是资金问题，如果说他们手中有充裕的资金的话，那他们就可以有更多的投资选择，也就更容易创造收益，现在市场当中出现了<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">股票配资</span></a>公司，他们存在的价值就是为了提供给你想要得到的资金，可以放在市场上进行长期的投资，但这类公司我们一定要谨慎挑选，不能让这些公司成为我们成功路上的绊脚石，如果从综合实力和水平进行考察的话，可以考虑一下佳信程网络有限公司，因为它是一家行业内好评度比较高，并且在大家心目当中的口碑也很好的公司。</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; <img title=\"尚牛在线logo.jpg\" src=\"/public/uploads/images/20180904/49a269957404c1855ea6b028e6160b70.jpg\"/></p><p><span style=\"font-size: 16px;\">&nbsp; &nbsp; \r\n他们会按照一定的杠杆比例提供给你资金，一般来说，最高的额度可以达到五倍的杠杆比例，当你手中的资金增加之后，同样比例的收益额度你就会获得更多的收益，这一点大家心里都非常清楚，就像是收获百分之一的上涨点，那么现在就可以比原来的基础之上扩大五倍，同样你可能会发现，风险性也会增加，如果说你选择的是一家比较可靠的公司的话，他们会在风险应对方面给出一些建议，让你尽快的适应，在现在市场的投资节奏，同时也可以获得更为稳定的收益。</span></p><p><span style=\"font-size: 16px;\">&nbsp; &nbsp; \r\n不管之前你是否在投资方面有足够的经验，在他们的帮助之下都可以顺利的去适应现在这样的投资方式，其实<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0); font-size: 16px;\">股票配资</span></a>在国外的发展时间已经比较长久了，所以说它的模式是很成熟的，我们不用担心背后的公司有什么其他的操作，因为他们都是正规的已经注册的公司。同时他们的各种信息也可以直接从它的官方网站了解到，这些都帮助我们在了解公司基础之上再和他们达成合作关系。你还可以利用他们的官方网站去了解很多的行业的信息，让你有一个关于板块的更好的判断。</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img title=\"我配资你炒股.jpg\" src=\"/public/uploads/images/20180911/ca6cf80a8e911ebbd521f1a40f871ed1.jpg\"/></p>' , '2018-09-13 09:31:39') [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'admin'  AND `name` = 'article_edit' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: name
+---------------------------------------------------------------
+[ 2018-09-13T09:31:41+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:31:42+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:31:42+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:31:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:31:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:31:43+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:35:49+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:35:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:35:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:35:50+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536802555933
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:35:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:35:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:35:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:36:21+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=catchimage&
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:37:29+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = 'da8324fae12320de0daf6de3b6354157' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:37:47+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = 'da8324fae12320de0daf6de3b6354157' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:37:48+08:00 ] 182.255.62.32 121.54.44.181 GET /public/uploads/images/20180908/5e38e8a268e87d9a1d8411ed0c7a9f5f.jpg
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:04+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=uploadimage&encode=utf-8
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_attachment` WHERE  `md5` = '84c1550b607087a1954a1d5bce27965d' LIMIT 1 [ RunTime:0.015600s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:38:11+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] INSERT INTO `xh_article` (`title` , `content` , `createTime`) VALUES ('转机来了？美国主动邀请中方进行新一轮贸易谈判' , '<p class=\"titdd-Article\">[<strong>摘要</strong>]消息人士表示，向中国发出谈判邀请说明，“特朗普政府中一些人还是希望在对华征收关税前尽一切努力，争取中国能满足美方需求”。中方已多次强调，在中美经贸问题的立场坚定、明确，没有改变。美方的施压和讹诈不会起作用。</p><p class=\"text\" style=\"text-indent: 2em;\">美国人“求谈”。</p><p class=\"text\" style=\"text-indent: 2em;\">美国《华尔街日报》刚刚援引消息人士说法称，美国财政部长姆努钦已向中方团队发出邀请，希望中方派出部级代表团在美国政府对华加征新一轮关税前与美方进行贸易谈判，地点将在北京或者华盛顿，时间是“未来几周”。</p><p class=\"text\" style=\"text-indent: 2em;\">&nbsp;</p><p><img src=\"https://inews.gtimg.com/newsapp_bt/0/5270246389/641\"/></p><p class=\"text image_desc\">《华尔街日报》报道截图</p><p>&nbsp;</p><p class=\"text\" style=\"text-indent: 2em;\">报道说，消息人士表示，向中国发出谈判邀请说明，“特朗普政府中一些人还是希望在对华征收关税前尽一切努力，争取中国能满足美方需求”。</p><p class=\"text\" style=\"text-indent: 2em;\">报道说，美方此次“求谈”正值美方尚未开始对价值2000亿美元中国输美商品征收关税之际。</p><p class=\"text\" style=\"text-indent: 2em;\">中方已多次强调，在中美经贸问题的立场坚定、明确，没有改变。美方的施压和讹诈不会起作用。</p><p class=\"text\" style=\"text-indent: 2em;\">6日的例行发布会上，中国商务部回应美拟对中国2000亿美元输美商品加征关税：中方有信心、有能力、有办法维护中国经济平稳健康发展。如果美方不顾反对，一意孤行，对华采取任何新的加征关税措施，中方将不得不做出必要的反制措施。</p><p class=\"text\" style=\"text-indent: 2em;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <img title=\"股票投资001.jpg\" src=\"/public/uploads/images/20180909/d0ccc7c3bbe8c85ec508d68446b9462a.jpg\"/></p><p></p>' , '2018-09-13 09:38:11') [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'admin'  AND `name` = 'article_edit' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: name
+---------------------------------------------------------------
+[ 2018-09-13T09:38:13+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:38:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:15+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:15+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:15+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:38:59+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html?page=2
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 20,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:39:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:01+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:02+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:08+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html?page=3
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 40,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:39:09+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:10+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:10+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:11+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:12+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html?page=1
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:39:12+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:13+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:14+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:15+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:16+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:39:16+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:40:17+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义变量: info
+---------------------------------------------------------------
+[ 2018-09-13T09:40:17+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:40:17+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:40:17+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/attachment/upload/dir/images/from/ueditor/module/admin.html?action=config&&noCache=1536802823387
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T09:40:18+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:40:18+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:40:19+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:44:56+08:00 ] 182.255.62.32 121.54.44.181 POST /admin.php/admin/article/article_edit.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] INSERT INTO `xh_article` (`title` , `content` , `createTime`) VALUES ('成都低息配资平台适合大额交易用户' , '<p><span class=\"source\"></span></p><p>&nbsp;<span class=\"source\">作者：尚牛在线</span></p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 现在的成都低息<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">配资</span></a>平台还是很受大众所欢迎的，因为现如今大家都知道，如果从平台或者是相关的融资机构那里借款的话，可以缓解自己的资金压力，可以可以能拿出来更多的成本去做股票投资，但是在了解了规则以后，相信大家都清楚，那就是在发生了借款行为之后，我们就需要支付利息，这样才是合理的交易，至于利息的高低也就成为大家关注的重点。</p><p>　　</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 倘若是对于比较谨慎的投资者，他们每次的借款数额比较低，对于自己的收益并没有制定过高的目标，那么他们可以不必在乎利息的多少，因为不至于差的太多，但是如果是大额交易的用户，那么他们更倾向于选择成都低息<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">配资平台</span></a><span style=\"color: rgb(0, 0, 0);\"></span>。这是因为借款的总数额是比较大的，而利息的计算恰恰又跟总借款的金额相关，而且是成正比的，所以选择利息比较低的，就能够帮助自己减少很大的开支。</p><p>　　</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 如果我们想要成功的获得成都低息配资平台的话，那么首先要做的就是通过网络平台去寻找可靠的机构，可以说现如今尚牛在线<a style=\"color: rgb(0, 0, 0); text-decoration: underline;\" href=\"http://sm00009.sm00009.com/\" target=\"_self\"><span style=\"color: rgb(0, 0, 0);\">配资平台</span></a>做的非常成功，就是因为收取的利息比较低，所以也是很多股民可以去借鉴。再加上平台本身的实力就比较雄厚，也不用担心会发生什么不可靠的意外，比如说资金安全受到威胁等等，因此对于投资者而言是相当不错的选择，可以放心的在这些平台上进行交易。</p><p>　　</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 当然还有一部分的平台，为了能够吸引到更多的客户，也会时不时的推出成都低息配资平台，这个时候还是需要大家及时的把握机会。毕竟现在进行融资的投资者已经变得越来越多，或许在以后利息还会有所提升，对于那些平时购买股票数额比较大，或者是总资金需求量较高的用户而言，他们就格外的需要选择利息较低的平台来进行操作，毕竟有的时候花销的减少，也就意味着自己盈利的增加。</p><p></p>' , '2018-09-13 09:44:56') [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'admin'  AND `name` = 'article_edit' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: name
+---------------------------------------------------------------
+[ 2018-09-13T09:44:58+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T09:44:59+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:44:59+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:44:59+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:45:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T09:45:00+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:07:30+08:00 ] 182.255.62.32 110.80.135.12 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T12:07:51+08:00 ] 182.255.62.32 117.25.139.90 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T12:15:46+08:00 ] 182.255.62.32 137.175.11.218 GET /HtmlEdit/fckeditor/editor/filemanager/connectors/asp/upload.asp
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:15:46+08:00 ] 182.255.62.32 137.175.11.218 GET /file/fckeditor/editor/filemanager/connectors/asp/upload.asp
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:15:47+08:00 ] 182.255.62.32 137.175.11.218 GET /admin/editor/editor/filemanager/connectors/asp/upload.asp
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:15:47+08:00 ] 182.255.62.32 137.175.11.218 GET /admin.php/admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:15:47+08:00 ] 182.255.62.32 137.175.11.218 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:15:48+08:00 ] 182.255.62.32 137.175.11.218 GET /Editor/editor/filemanager/connectors/asp/upload.asp
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T12:50:31+08:00 ] 182.255.62.32 220.181.108.152 GET /public/static/home/img/two.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T14:56:51+08:00 ] 182.255.62.32 180.153.236.125 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T15:34:22+08:00 ] 182.255.62.32 220.181.108.94 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T15:36:48+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T15:36:51+08:00 ] 182.255.62.32 183.14.16.164 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T15:36:51+08:00 ] 182.255.62.32 183.14.16.164 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:53+08:00 ] 182.255.62.32 183.14.16.164 GET /admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:53+08:00 ] 182.255.62.32 183.14.16.164 GET /admin.php/admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:53+08:00 ] 182.255.62.32 183.14.16.164 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:54+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:54+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:54+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:55+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:36:55+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:37:00+08:00 ] 182.255.62.32 183.14.16.164 POST /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_user` WHERE  `username` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_role` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `access` FROM `xh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `xh_admin_user`  SET `last_login_time`=1536824220,`last_login_ip`=3071152292,`update_time`=1536824220  WHERE  `id` = 1 [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `xh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'user'  AND `name` = 'user_signin' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T15:37:02+08:00 ] 182.255.62.32 183.14.16.164 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T15:37:22+08:00 ] 182.255.62.32 183.14.16.164 GET /admin.php/jobs
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T15:37:29+08:00 ] 182.255.62.32 183.14.16.164 GET /admin.php/admin/jobs
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:24+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:25+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:04:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:26+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:27+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:27+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:04:27+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:06:58+08:00 ] 182.255.62.32 183.3.239.163 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:07:08+08:00 ] 182.255.62.32 183.3.239.163 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:07:29+08:00 ] 182.255.62.32 27.38.37.52 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:07:30+08:00 ] 182.255.62.32 27.38.37.52 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.015600s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:07:30+08:00 ] 182.255.62.32 27.38.37.52 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:07:51+08:00 ] 182.255.62.32 27.38.37.52 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:07:52+08:00 ] 182.255.62.32 27.38.37.52 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:07:52+08:00 ] 182.255.62.32 27.38.37.52 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:08:32+08:00 ] 182.255.62.32 27.38.37.52 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:08:32+08:00 ] 182.255.62.32 27.38.37.52 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:08:32+08:00 ] 182.255.62.32 27.38.37.52 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:13:58+08:00 ] 182.255.62.32 220.181.125.17 GET /ucenter/index.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:14:08+08:00 ] 182.255.62.32 220.181.125.17 GET /login.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-09-13T16:33:42+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T16:33:43+08:00 ] 182.255.62.32 183.14.16.164 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:33:43+08:00 ] 182.255.62.32 183.14.16.164 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:33:56+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T16:33:57+08:00 ] 182.255.62.32 183.14.16.164 GET /public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:33:57+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:34:04+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T16:34:05+08:00 ] 182.255.62.32 183.14.16.164 GET /public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:34:05+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031201s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:34:06+08:00 ] 182.255.62.32 183.14.16.164 GET /ucenter/home.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:34:06+08:00 ] 182.255.62.32 183.14.16.164 GET /login.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:34:16+08:00 ] 182.255.62.32 183.14.16.164 POST /doLogin.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:34:17+08:00 ] 182.255.62.32 183.14.16.164 GET /public/static/img/favicons/favicon.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:34:21+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1316 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '300135' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: earnSum
+---------------------------------------------------------------
+[ 2018-09-13T16:34:22+08:00 ] 182.255.62.32 183.14.16.164 GET /public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:34:22+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:34:24+08:00 ] 182.255.62.32 183.14.16.164 GET /ucenter/home.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:34:26+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+---------------------------------------------------------------
+[ 2018-09-13T16:34:36+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+---------------------------------------------------------------
+[ 2018-09-13T16:34:46+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+---------------------------------------------------------------
+[ 2018-09-13T16:35:51+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T16:35:52+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:35:54+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:35:57+08:00 ] 182.255.62.32 183.14.16.164 GET /ucenter/home.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:35:57+08:00 ] 182.255.62.32 183.14.16.164 GET /login.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:35:59+08:00 ] 182.255.62.32 183.14.16.164 GET /stock.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:39:40+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+---------------------------------------------------------------
+[ 2018-09-13T16:39:42+08:00 ] 182.255.62.32 183.14.16.164 GET /sell.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT SUM(18 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and status = 1  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义变量: res
+[ error ] [8]Use of undefined constant count - assumed 'count'
+[ error ] [8]未定义变量: list
+[ error ] [8]未定义变量: listJson
+[ error ] [8]未定义变量: listJson2
+---------------------------------------------------------------
+[ 2018-09-13T16:39:44+08:00 ] 182.255.62.32 183.14.16.164 GET /history.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 2 and  1=1   ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 2 and  1=1   ) ORDER BY sellTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'profitFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+---------------------------------------------------------------
+[ 2018-09-13T16:39:45+08:00 ] 182.255.62.32 183.14.16.164 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and left(createTime,10)='2018-09-13' ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+---------------------------------------------------------------
+[ 2018-09-13T16:39:47+08:00 ] 182.255.62.32 183.14.16.164 GET /history.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 2 and  1=1   ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 2 and  1=1   ) ORDER BY sellTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'profitFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+---------------------------------------------------------------
+[ 2018-09-13T16:39:50+08:00 ] 182.255.62.32 183.14.16.164 GET /sell.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(18 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=0 and status = 1  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义变量: res
+[ error ] [8]Use of undefined constant count - assumed 'count'
+[ error ] [8]未定义变量: list
+[ error ] [8]未定义变量: listJson
+[ error ] [8]未定义变量: listJson2
+---------------------------------------------------------------
+[ 2018-09-13T16:39:52+08:00 ] 182.255.62.32 183.14.16.164 GET /freetrialSell.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=1 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT SUM(18 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1316 and isFreetrial=1 and status = 1  ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=1 and status = 1 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=1 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 1 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '300135' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 1 ORDER BY createTime desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '300135' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=1 and status = 1 ) ORDER BY createTime desc [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]Use of undefined constant count - assumed 'count'
+[ error ] [8]Object of class think\paginator\driver\Bootstrap could not be converted to int
+[ error ] [8]Use of undefined constant nowPrice - assumed 'nowPrice'
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]Use of undefined constant rate - assumed 'rate'
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'
+---------------------------------------------------------------
+[ 2018-09-13T16:40:20+08:00 ] 182.255.62.32 183.14.16.164 GET /qq_add
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:40:22+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015600s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T16:40:22+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:40:24+08:00 ] 182.255.62.32 183.14.16.164 GET /invite.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+---------------------------------------------------------------
+[ 2018-09-13T16:40:34+08:00 ] 182.255.62.32 183.14.16.164 POST /doLogin.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.015600s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:40:37+08:00 ] 182.255.62.32 183.14.16.164 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015600s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1316 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1316 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1316  AND `status` = 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '300135' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: earnSum
+---------------------------------------------------------------
+[ 2018-09-13T16:40:37+08:00 ] 182.255.62.32 183.14.16.164 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:40:38+08:00 ] 182.255.62.32 183.14.16.164 GET /invite.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_member` WHERE  `inviterId` = 1316 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`mobile`,`createTime` FROM `xh_member` WHERE  `inviterId` = 1316 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:40:42+08:00 ] 182.255.62.32 183.61.51.59 GET /invite.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+---------------------------------------------------------------
+[ 2018-09-13T16:49:49+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:49:50+08:00 ] 182.255.62.32 121.54.44.181 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T16:49:50+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-16x16.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:49:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-32x32.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:49:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-96x96.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:49:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-160x160.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T16:49:51+08:00 ] 182.255.62.32 121.54.44.181 GET /public/static/admin/img/favicons/favicon-192x192.png
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T17:27:54+08:00 ] 182.255.62.32 183.14.16.164 GET /invite.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_member` WHERE  `inviterId` = 1316 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `username`,`mobile`,`createTime` FROM `xh_member` WHERE  `inviterId` = 1316 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T17:54:24+08:00 ] 182.255.62.32 123.59.116.87 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T17:54:24+08:00 ] 182.255.62.32 123.59.116.87 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T17:54:24+08:00 ] 182.255.62.32 123.59.116.87 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T18:59:38+08:00 ] 182.255.62.32 121.54.44.181 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T18:59:40+08:00 ] 182.255.62.32 121.54.44.181 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T18:59:46+08:00 ] 182.255.62.32 121.54.44.181 GET /ucenter/home.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:59:47+08:00 ] 182.255.62.32 121.54.44.181 GET /login.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T18:59:51+08:00 ] 182.255.62.32 121.54.44.181 GET /reg
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: uid
+---------------------------------------------------------------
+[ 2018-09-13T19:00:06+08:00 ] 182.255.62.32 121.54.44.181 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T19:00:07+08:00 ] 182.255.62.32 121.54.44.181 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T19:00:11+08:00 ] 182.255.62.32 121.54.44.181 GET /stock.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T19:00:21+08:00 ] 182.255.62.32 121.54.44.181 GET /buy.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: Con_Lists
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: yuebeishu
+[ error ] [8]未定义数组索引: performance
+[ error ] [8]未定义数组索引: beishu
+[ error ] [8]未定义数组索引: beishu
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T19:07:30+08:00 ] 182.255.62.32 112.17.88.224 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T19:07:31+08:00 ] 182.255.62.32 112.17.88.224 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T19:07:31+08:00 ] 182.255.62.32 112.17.88.224 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T20:06:26+08:00 ] 182.255.62.32 219.140.154.235 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T20:15:17+08:00 ] 182.255.62.32 110.54.153.5 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T20:15:22+08:00 ] 182.255.62.32 110.54.153.5 POST /app_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T20:15:23+08:00 ] 182.255.62.32 110.54.153.5 GET /stock.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T20:15:35+08:00 ] 182.255.62.32 110.54.153.5 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015600s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]Trying to get property of non-object
+[ error ] [8]未定义变量: balance
+[ error ] [8]未定义变量: ablePrice
+[ error ] [8]未定义变量: real_disk_sum
+[ error ] [8]未定义变量: guaranteeFee
+---------------------------------------------------------------
+[ 2018-09-13T20:15:38+08:00 ] 182.255.62.32 110.54.153.5 GET /qq_add
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T20:37:15+08:00 ] 182.255.62.32 111.202.101.97 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015600s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T20:49:02+08:00 ] 182.255.62.32 157.55.39.157 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T21:16:20+08:00 ] 182.255.62.32 175.158.211.56 GET /admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T21:16:21+08:00 ] 182.255.62.32 175.158.211.56 GET /admin.php/admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T21:16:22+08:00 ] 182.255.62.32 175.158.211.56 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T21:17:24+08:00 ] 182.255.62.32 110.54.153.5 POST /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_user` WHERE  `username` = 'admin'  AND `status` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_role` [ RunTime:0.062401s ]
+[ sql ] [ SQL ] SELECT `access` FROM `xh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] UPDATE `xh_admin_user`  SET `last_login_time`=1536844644,`last_login_ip`=1849071877,`update_time`=1536844644  WHERE  `id` = 1 [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `name` FROM `xh_admin_role` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_action` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_action` WHERE  `module` = 'user'  AND `name` = 'user_signin' LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T21:17:27+08:00 ] 182.255.62.32 110.54.153.5 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T21:17:42+08:00 ] 182.255.62.32 110.54.153.5 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.062400s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T21:18:07+08:00 ] 182.255.62.32 110.54.153.5 GET /admin.php/admin/index/index.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T21:18:20+08:00 ] 182.255.62.32 110.54.153.5 GET /admin.php/admin/article/articlelist.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.031200s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_article` LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY id desc LIMIT 0,20 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.046801s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 0 LIMIT 1 [ RunTime:0.000000s ]
+[ error ] [2]Missing argument 1 for think\db\Query::where(), called in D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Article.php on line 118 and defined
+[ error ] [8]未定义变量: field
+---------------------------------------------------------------
+[ 2018-09-13T21:30:41+08:00 ] 182.255.62.32 202.108.211.56 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T21:37:32+08:00 ] 182.255.62.32 220.181.132.198 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T21:37:33+08:00 ] 182.255.62.32 220.181.132.198 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015600s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T21:37:33+08:00 ] 182.255.62.32 220.181.132.198 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T21:38:30+08:00 ] 182.255.62.32 180.163.220.125 GET /
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.000000s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-09-13T21:38:32+08:00 ] 182.255.62.32 180.163.220.125 GET /index_information.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T21:38:32+08:00 ] 182.255.62.32 180.163.220.124 POST /pc_broadcast.html
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000000s ] mysql:dbname=peizi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.046800s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.000000s ]
+---------------------------------------------------------------
+[ 2018-09-13T23:01:52+08:00 ] 182.255.62.32 106.120.161.66 GET /admin.php/admin
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-09-13T23:01:54+08:00 ] 182.255.62.32 106.120.161.66 GET /admin.php/user/publics/signin.html
+[ info ] [ CACHE ] INIT File
