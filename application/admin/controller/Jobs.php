@@ -126,7 +126,7 @@ class Jobs
             }
             echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
             //访问后台函数的权限
-            define('UID', 1);
+//            define('UID', 1);
             session('user_auth.uid', 1);
             if($liquidation == 2 || $liquidation == 3){
                 Db::transaction(function(){
