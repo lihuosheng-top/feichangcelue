@@ -41,7 +41,7 @@ class Interest extends  Admin{
                 ->setPageTitle('按天配资利息管理列表') // 设置页面标题
                 ->addColumns([ // 批量添加列
                     ['id', 'ID'],
-                    ['interest', '利息率'],
+                    ['interest', '利息率（%）'],
                     ['days', '配资周期（天）'],
                     ['createTime','时间']
                 ])
@@ -74,7 +74,7 @@ class Interest extends  Admin{
             ->setPageTitle('按周配资利息管理列表') // 设置页面标题
             ->addColumns([ // 批量添加列
                 ['id', 'ID'],
-                ['interest', '利息率'],
+                ['interest', '利息率（%）'],
                 ['weeks', '配资周期（周）'],
                 ['createTime','时间']
             ])
@@ -108,7 +108,7 @@ class Interest extends  Admin{
             ->setPageTitle('按月配资利息管理列表') // 设置页面标题
             ->addColumns([ // 批量添加列
                 ['id', 'ID'],
-                ['interest', '利息率'],
+                ['interest', '利息率（%）'],
                 ['months', '配资周期（月）'],
                 ['createTime','时间']
             ])
@@ -194,7 +194,7 @@ class Interest extends  Admin{
             ->addSelect('belong', '选择类型', '请选择类型',$TypeArray)
             ->addSelect('days', '选择天数', '请选择类型',$TypeDay)
             ->addFormItems([
-                ['text', 'interest', '利息'],
+                ['text', 'interest', '利息（单位%）'],
             ])
             ->setFormData($info)
             ->fetch();
@@ -250,7 +250,7 @@ class Interest extends  Admin{
             ->addSelect('belong', '选择类型', '请选择类型',$TypeArray)
             ->addSelect('weeks', '选择周数', '请选择类型',$TypeDay)
             ->addFormItems([
-                ['text', 'interest', '利息'],
+                ['text', 'interest', '利息（单位%）'],
             ])
             ->setFormData($info)
             ->fetch();
@@ -274,7 +274,7 @@ class Interest extends  Admin{
             if ($ret > 0) {
                 // 记录行为
                 action_log('month_edit', 'admin_role', $id, UID, $data['name']);
-                return $this->success('编辑成功', url('week'));
+                return $this->success('编辑成功', url('month'));
             } else {
                 return $this->error('编辑失败');
             }
@@ -305,7 +305,7 @@ class Interest extends  Admin{
             ->addSelect('belong', '选择类型', '请选择类型',$TypeArray)
             ->addSelect('months', '选择月数', '请选择类型',$TypeDay)
             ->addFormItems([
-                ['text', 'interest', '利息'],
+                ['text', 'interest', '利息（单位%）'],
             ])
             ->setFormData($info)
             ->fetch();
