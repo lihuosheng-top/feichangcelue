@@ -87,7 +87,6 @@ return [
     'ucenter/real_name'=> 'index/ucenter/real_name',   		//个人中心-实名认证2
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
 
-
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页
     'do_withdraw'=> 'admin/member/do_withdraw',  				//个人中心-首页
@@ -97,9 +96,5 @@ return [
     'buylist'=> 'admin/order/buylist',  				//个人中心-首页
     'liquidation'=> 'admin/order/liquidation',  				//个人中心-首页
     'setStatus'=> 'admin//notemsg/setStatus',  				//个人中心-首页
-
-
-
-
 
 ];

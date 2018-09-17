@@ -151,7 +151,6 @@ class Order extends Admin
             ->fetch(); // 渲染页面
     }
 
-
     //手动平仓
     public function liquidation(){
         global $orderId ;
