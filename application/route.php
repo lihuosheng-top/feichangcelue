@@ -22,6 +22,17 @@ return [
     'freetrialHistory'=> 'index/ucenter/freetrialHistory',       	//结算区 一元模拟
 
 
+    /*配资几个页面开始*/
+    "stock_day"=>"index/Stock/stock_day",
+    "stock_week"=>"index/Stock/stock_week",
+    "stock_month"=>"index/Stock/stock_month",
+    "stock_free"=>"index/Stock/stock_free",
+    /*配资几个页面结束*/
+
+
+
+
+
     'detail'=> 'index/ucenter/detail',       		//结算区-单号详情
     'safeensure'=> 'index/index/safeensure',       		//安全保障
     'gift'=> 'index/index/gift',       			//协议
