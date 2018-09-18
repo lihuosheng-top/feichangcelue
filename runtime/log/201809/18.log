@@ -1,0 +1,1666 @@
+---------------------------------------------------------------
+[ 2018-09-18T12:12:29+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.400391s][吞吐率：2.50req/s] [内存消耗：3,704.06kb] [文件加载：71]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.110351s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.085937s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032227s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.012696s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.013672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.010742s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.012695s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.012696s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.012695s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.013672s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.012695s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.013672s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.012696s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.013672s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:22]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:27]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:34]
+[ error ] [8]未定义变量: usableSum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:39]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:119]
+[ error ] [8]未定义变量: count[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:179]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:180]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:231]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:231]
+[ error ] [8]未定义变量: buyList[D:\phpStudy\PHPTutorial\WWW\feichangcelue\runtime\temp\76fdcc8d18ffb1f5a59f76a0a98f1388.php:231]
+---------------------------------------------------------------
+[ 2018-09-18T12:12:29+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.100586s][吞吐率：9.94req/s] [内存消耗：3,038.67kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016602s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.009765s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.009766s ]
+---------------------------------------------------------------
+[ 2018-09-18T12:12:29+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：0.113281s][吞吐率：8.83req/s] [内存消耗：2,570.51kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T12:12:35+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.412109s][吞吐率：2.43req/s] [内存消耗：2,989.13kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021484s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011719s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T12:12:36+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.117188s][吞吐率：8.53req/s] [内存消耗：3,038.73kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015625s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.021484s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.009766s ]
+---------------------------------------------------------------
+[ 2018-09-18T12:12:36+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.055664s][吞吐率：17.96req/s] [内存消耗：1,935.84kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T12:12:52+08:00 ] ::1 ::1 GET /feichangcelue/stock_day
+[ info ] localhost/feichangcelue/stock_day [运行时间：0.060547s][吞吐率：16.52req/s] [内存消耗：2,333.11kb] [文件加载：55]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_day',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_day[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_day.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T12:13:04+08:00 ] ::1 ::1 GET /feichangcelue/stock_month
+[ info ] localhost/feichangcelue/stock_month [运行时间：0.050781s][吞吐率：19.69req/s] [内存消耗：2,333.14kb] [文件加载：55]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_month',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_month[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_month.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T12:13:09+08:00 ] ::1 ::1 GET /feichangcelue/stock_free
+[ info ] localhost/feichangcelue/stock_free [运行时间：0.061524s][吞吐率：16.25req/s] [内存消耗：2,333.10kb] [文件加载：55]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_free',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=m0b0uovalc47muf4nermgv5k33; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_free[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_free.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T13:00:31+08:00 ] ::1 ::1 GET /feichangcelue/stock_free
+[ info ] localhost/feichangcelue/stock_free [运行时间：0.053711s][吞吐率：18.62req/s] [内存消耗：2,194.21kb] [文件加载：53]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_free',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_free[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_free.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T14:37:08+08:00 ] ::1 ::1 GET /feichangcelue/stock_free
+[ info ] localhost/feichangcelue/stock_free [运行时间：0.062500s][吞吐率：16.00req/s] [内存消耗：2,194.64kb] [文件加载：53]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_free',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=ts5q95g9fvt1g5u2clflmgbgr2',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_free[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_free.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T14:46:26+08:00 ] ::1 ::1 GET /feichangcelue/stock_free
+[ info ] localhost/feichangcelue/stock_free [运行时间：0.054687s][吞吐率：18.29req/s] [内存消耗：2,194.21kb] [文件加载：53]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_free',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_free[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_free.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:04:36+08:00 ] ::1 ::1 GET /feichangcelue/stock_free
+[ info ] localhost/feichangcelue/stock_free [运行时间：0.060547s][吞吐率：16.52req/s] [内存消耗：2,194.64kb] [文件加载：53]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Stock',
+    2 => 'stock_free',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Stock->stock_free[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Stock.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\stock_free.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:04:40+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.295898s][吞吐率：3.38req/s] [内存消耗：2,834.40kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023438s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011719s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:04:41+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.060547s][吞吐率：16.52req/s] [内存消耗：1,935.30kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.007813s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:04:41+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.120117s][吞吐率：8.33req/s] [内存消耗：3,039.54kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.009766s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.021484s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.012696s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.012695s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:07:43+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.294922s][吞吐率：3.39req/s] [内存消耗：2,993.05kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027344s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.014648s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:07:43+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.062500s][吞吐率：16.00req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:07:43+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.121093s][吞吐率：8.26req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.013672s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.019531s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.009766s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.009765s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:08:17+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.284179s][吞吐率：3.52req/s] [内存消耗：2,834.98kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027344s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.017578s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:08:17+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.046875s][吞吐率：21.33req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.007812s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:08:17+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.144531s][吞吐率：6.92req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.009766s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022461s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.016601s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:11:35+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.301758s][吞吐率：3.31req/s] [内存消耗：2,993.13kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025391s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.017578s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:11:35+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.054688s][吞吐率：18.29req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.010742s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:11:35+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.117188s][吞吐率：8.53req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029297s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.011718s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:12:11+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.289063s][吞吐率：3.46req/s] [内存消耗：2,993.24kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028320s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015625s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:12:11+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.045898s][吞吐率：21.79req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:12:11+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.129883s][吞吐率：7.70req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.008789s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027344s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.017578s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:14:04+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.291015s][吞吐率：3.44req/s] [内存消耗：2,993.39kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022461s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.013672s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:14:04+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.046875s][吞吐率：21.33req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:14:04+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.136719s][吞吐率：7.31req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006835s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025390s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.017579s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.017578s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:01+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.253906s][吞吐率：3.94req/s] [内存消耗：2,993.00kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.015625s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.005859s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:01+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.061524s][吞吐率：16.25req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.008789s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:15:01+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.153321s][吞吐率：6.52req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.009766s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026368s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.014648s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.017578s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:03+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.283203s][吞吐率：3.53req/s] [内存消耗：2,835.01kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027344s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.017578s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:03+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.052734s][吞吐率：18.96req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.007813s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:15:03+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.130859s][吞吐率：7.64req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.016601s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024414s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.012696s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.012695s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:13+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.276368s][吞吐率：3.62req/s] [内存消耗：2,993.25kb] [文件加载：65]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006836s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022461s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011719s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:13+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.064453s][吞吐率：15.52req/s] [内存消耗：1,935.65kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.009766s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:15:13+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.120118s][吞吐率：8.33req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.008789s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018555s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.008789s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.012695s ]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:17+08:00 ] ::1 ::1 GET /feichangcelue/
+[ info ] localhost/feichangcelue/ [运行时间：0.278321s][吞吐率：3.59req/s] [内存消耗：2,835.00kb] [文件加载：63]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000976s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'balance',
+  3 => 'ablePrice',
+  4 => 'real_disk_sum',
+  5 => 'guaranteeFee',
+  6 => 'buyList',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023438s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.010742s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:50]
+[ error ] [8]Trying to get property of non-object[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:114]
+[ error ] [8]未定义变量: balance[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:118]
+[ error ] [8]未定义变量: ablePrice[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:119]
+[ error ] [8]未定义变量: real_disk_sum[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:121]
+[ error ] [8]未定义变量: guaranteeFee[D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php:122]
+---------------------------------------------------------------
+[ 2018-09-18T15:15:17+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
+[ info ] localhost/feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map [运行时间：0.046875s][吞吐率：21.33req/s] [内存消耗：1,935.66kb] [文件加载：47]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'stock',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+  'maps' => 'swiper.jquery.min.js.map',
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000977s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-09-18T15:15:17+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
+[ info ] localhost/feichangcelue/app_broadcast.html [运行时间：0.105468s][吞吐率：9.48req/s] [内存消耗：3,039.69kb] [文件加载：57]
+[ info ] [ CACHE ] INIT File
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'app_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Mobile Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4toqlinqjsof9ss275h2q0ooe5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.000000s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ RUN ] app\index\controller\Index->app_broadcast[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.016601s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SELECT `src` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.010742s ]
