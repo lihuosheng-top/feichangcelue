@@ -122,8 +122,9 @@ class  Holiday extends  Admin {
         if ($this->request->isPost()) {
             $data = $this->request->post();
             $datas =$data['day'];
-            $method = "GET";
-            $host = ALI_HOST;
+            $data_one =substr($datas,0,4);
+            $data_tow =substr($datas,4,2);
+            $method = "POST";
             $headers = array();
             $url ='http://www.easybots.cn/api/holiday.php?m='.$data['day'];
             $curl = curl_init();
@@ -134,20 +135,23 @@ class  Holiday extends  Admin {
             curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($curl, CURLOPT_HEADER, false);
             $res_str = curl_exec($curl);
-            $res = json_decode($res_str,true);
+//            $res =json_decode($res_str,false,1000,true);
+//            $res = json_decode($res_str,false,1000 , JSON_BIGINT_AS_STRING);
+            $res =json_decode($res_str,true);
             foreach ($res as $key=>$val){
                 $arr[] =$val;
-//                dump(key($val));
-
             }
-           dump($arr);
+           $res_data =array_keys($arr[0]);
+            foreach ( $res_data as $keys=>$vals){
+                $day_data =(string)$vals;
+                $year_month_day =$data_one.'-'.$data_tow.'-'.$day_data;
+                $data =['day'=>$year_month_day];
+               $res = Db::name('holiday')->insert($data);
+            }
+            if($res){
+                return $this->success('一键获取节假日成功', url('index'));
+            }
 
-//            dump(key($arr[0]));
-//                ksort($arr);
-//            dump(key($arr));
-//                end($arr);
-
-//            $ret = Db::table("xh_holiday")->insertGetId($data);
         }
         return ZBuilder::make('form')
         ->addFormItems([
