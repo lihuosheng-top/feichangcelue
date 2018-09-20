@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:86:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/common/builder/table/layout.html";i:1531882083;s:76:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin/view/layout.html";i:1536577164;s:46:"./application/common/builder/aside/layout.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/recent.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/online.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/switch.html";i:1531882083;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\menu\index.html";i:1531882083;s:76:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\layout.html";i:1536577164;s:46:"./application/common/builder/aside/layout.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/recent.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/online.html";i:1531882083;s:53:"./application/common/builder/aside/blocks/switch.html";i:1531882083;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -42,6 +42,8 @@
 
 
     
+<link href="__LIBS__/jquery-nestable/jquery.nestable.css" rel="stylesheet" type="text/css" />
+
 
     <!-- Bootstrap and OneUI CSS framework -->
     <?php if(\think\Config::get('minify_status') == '1'): ?>
@@ -58,12 +60,7 @@
 
     <!--页面css-->
     
-    <?php if(is_array($css_list) || $css_list instanceof \think\Collection || $css_list instanceof \think\Paginator): $i = 0; $__LIST__ = $css_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-    <link rel="stylesheet" href="__MODULE_CSS__/<?php echo $vo; ?>.css">
-    <?php endforeach; endif; else: echo "" ;endif; ?>
-
-    
-    <?php echo (isset($extra_css) && ($extra_css !== '')?$extra_css:''); if(!(empty($_pop) || (($_pop instanceof \think\Collection || $_pop instanceof \think\Paginator ) && $_pop->isEmpty()))): ?>
+    <?php if(!(empty($_pop) || (($_pop instanceof \think\Collection || $_pop instanceof \think\Paginator ) && $_pop->isEmpty()))): ?>
     <style>
         #page-container.sidebar-l.sidebar-o {
             padding-left: 0;
@@ -559,29 +556,40 @@
         <!-- Pages Content -->
         <div class="content">
             
-            <?php echo hook('page_tips'); if(!(empty($page_tips) || (($page_tips instanceof \think\Collection || $page_tips instanceof \think\Paginator ) && $page_tips->isEmpty()))): ?>
-    <div class="alert alert-<?php echo $tips_type; ?> alert-dismissable">
+            <?php echo hook('page_tips'); ?>
+            
+            
+    <div class="alert alert-warning alert-dismissable">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-        <p><?php echo $page_tips; ?></p>
+        <p><strong><i class="fa fa-fw fa-info-circle"></i> 提示：</strong>按住表头可拖动节点，调整后点击【保存节点】。</p>
     </div>
-    <?php endif; ?>
+
     <div class="row">
         <div class="col-md-12">
             <div class="block">
-                <?php if(empty($_pop) || (($_pop instanceof \think\Collection || $_pop instanceof \think\Paginator ) && $_pop->isEmpty())): if(!(empty($tab_nav) || (($tab_nav instanceof \think\Collection || $tab_nav instanceof \think\Paginator ) && $tab_nav->isEmpty()))): ?>
+                <?php if(!(empty($tab_nav) || (($tab_nav instanceof \think\Collection || $tab_nav instanceof \think\Paginator ) && $tab_nav->isEmpty()))): ?>
                 <ul class="nav nav-tabs">
                     <?php if(is_array($tab_nav['tab_list']) || $tab_nav['tab_list'] instanceof \think\Collection || $tab_nav['tab_list'] instanceof \think\Paginator): $i = 0; $__LIST__ = $tab_nav['tab_list'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$tab): $mod = ($i % 2 );++$i;?>
                     <li <?php if($tab_nav['curr_tab'] == $key): ?>class="active"<?php endif; ?>>
-                    <a href="<?php echo $tab['url']; ?>"><?php echo htmlspecialchars($tab['title']); ?></a>
+                        <a href="<?php echo $tab['url']; ?>"><?php echo $tab['title']; ?></a>
                     </li>
                     <?php endforeach; endif; else: echo "" ;endif; ?>
+                    <li <?php if($tab_nav['curr_tab'] == 'module-sort'): ?>class="active"<?php endif; ?>>
+                        <a href="<?php echo url('', ['group' => 'module-sort']); ?>">模块排序</a>
+                    </li>
                     <li class="pull-right">
                         <ul class="block-options push-10-t push-10-r">
+                            <li>
+                                <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                            </li>
                             <li>
                                 <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                             </li>
                             <li>
-                                <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                                <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                            </li>
+                            <li>
+                                <button type="button" data-toggle="block-option" data-action="close"><i class="si si-close"></i></button>
                             </li>
                         </ul>
                     </li>
@@ -590,159 +598,68 @@
                 <div class="block-header bg-gray-lighter">
                     <ul class="block-options">
                         <li>
+                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                        </li>
+                        <li>
                             <button type="button" data-toggle="block-option" data-action="refresh_toggle" data-action-mode="demo"><i class="si si-refresh"></i></button>
                         </li>
                         <li>
-                            <button type="button" data-toggle="block-option" data-action="fullscreen_toggle"></button>
+                            <button type="button" data-toggle="block-option" data-action="content_toggle"></button>
+                        </li>
+                        <li>
+                            <button type="button" data-toggle="block-option" data-action="close"><i class="si si-close"></i></button>
                         </li>
                     </ul>
-                    <h3 class="block-title"><?php echo htmlspecialchars((isset($page_title) && ($page_title !== '')?$page_title:"")); ?></h3>
+                    <h3 class="block-title"><?php echo $page_title; ?></h3>
                 </div>
-                <?php endif; endif; ?>
+                <?php endif; ?>
                 <div class="block-content tab-content">
                     <div class="tab-pane active">
-                        
-                        <?php echo (isset($extra_html_toolbar_top) && ($extra_html_toolbar_top !== '')?$extra_html_toolbar_top:''); ?>
+                        <?php if(!(empty($menus) || (($menus instanceof \think\Collection || $menus instanceof \think\Paginator ) && $menus->isEmpty()))): ?>
                         <div class="row data-table-toolbar">
                             <div class="col-sm-12">
-                                
-                                <?php if(!(empty($search) || (($search instanceof \think\Collection || $search instanceof \think\Paginator ) && $search->isEmpty()))): ?>
-                                <div class="pull-right search-bar">
-                                    <input type="hidden" name="search_field" id="search-field" value="<?php echo input('param.search_field', '') == '' ? $search['field_all'] : input('param.search_field'); ?>">
-                                    <div class="input-group">
-                                        <div class="input-group-btn">
-                                            <button class="btn btn-default" id="search-btn" data-toggle="dropdown" type="button" aria-expanded="false">
-                                                搜索 <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li>
-                                                    <a tabindex="-1" href="javascript:void(0)" data-field="<?php echo $search['field_all']; ?>">搜索</a>
-                                                </li>
-                                                <?php if(is_array($search['fields']) || $search['fields'] instanceof \think\Collection || $search['fields'] instanceof \think\Paginator): $i = 0; $__LIST__ = $search['fields'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$field): $mod = ($i % 2 );++$i;?>
-                                                <li>
-                                                    <a tabindex="-1" href="javascript:void(0)" data-field="<?php echo $key; ?>"><?php echo htmlspecialchars($field); ?></a>
-                                                </li>
-                                                <?php endforeach; endif; else: echo "" ;endif; ?>
-                                            </ul>
-                                        </div>
-                                        <input type="text" class="form-control" value="<?php echo input('param.keyword', ''); ?>" data-url="<?php echo $search['url']; ?>" id="search-input" name="keyword" placeholder="<?php echo $search['placeholder']; ?>">
-                                    </div>
-                                </div>
-                                <?php endif; ?>
-
-                                
+                                <form action="<?php echo \think\Request::instance()->url(); ?>" method="get">
                                 <div class="toolbar-btn-action">
-                                    <?php if((!empty($top_buttons))): if(is_array($top_buttons) || $top_buttons instanceof \think\Collection || $top_buttons instanceof \think\Paginator): $i = 0; $__LIST__ = $top_buttons;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$button): $mod = ($i % 2 );++$i;?>
-                                            <?php echo $button; endforeach; endif; else: echo "" ;endif; endif; if(isset($_filter_time)): ?>
-                                    <div class="form-inline time-filter">
-                                        <div class="time-filter">
-                                            <div class="input-daterange input-group" data-date-format="yyyy-mm-dd">
-                                                <input class="form-control" type="text" id="_filter_time_from" name="_filter_time_from" value="<?php echo (\think\Request::instance()->get('_filter_time_from') ?: ''); ?>" placeholder="开始日期">
-                                                <span class="input-group-addon"><i class="fa fa-chevron-right"></i></span>
-                                                <input class="form-control" type="text" id="_filter_time_to" name="_filter_time_to" value="<?php echo (\think\Request::instance()->get('_filter_time_to') ?: ''); ?>" placeholder="结束日期">
-                                            </div>
-                                            <input type="hidden" id="_filter_time" name="_filter_time" value="<?php echo $_filter_time; ?>">
-                                            <button type="button" id="btn-filter-time" class="btn btn-default">确定</button>
-                                        </div>
-                                    </div>
-                                    <?php endif; ?>
+                                    <a title="新增" class="btn btn-primary" href="<?php echo url('add', ['module' => \think\Request::instance()->param('group')]); ?>"><i class="fa fa-plus-circle"></i> 新增</a>
+                                    <button title="保存" type="button" class="btn btn-default disabled" id="save" disabled><i class="fa fa-check-circle-o"></i> 保存节点</button>
+                                    <button title="隐藏禁用节点" type="button" class="btn btn-danger" id="hide_disable"><i class="fa fa-eye-slash"></i> 隐藏禁用节点</button>
+                                    <button title="显示禁用节点" type="button" class="btn btn-info" id="show_disable"><i class="fa fa-eye"></i> 显示禁用节点</button>
+                                    <button title="展开所有节点" type="button" class="btn btn-success" id="expand-all"><i class="fa fa-plus"></i> 展开所有节点</button>
+                                    <button title="收起所有节点" type="button" class="btn btn-warning" id="collapse-all"><i class="fa fa-minus"></i> 收起所有节点</button>
+                                    <span class="form-inline">
+                                        <input class="form-control" type="text" name="max" value="<?php echo (\think\Request::instance()->get('max') ?: ''); ?>" placeholder="显示层数">
+                                    </span>
                                 </div>
+                                </form>
                             </div>
                         </div>
-                        <?php echo (isset($extra_html_toolbar_bottom) && ($extra_html_toolbar_bottom !== '')?$extra_html_toolbar_bottom:''); ?>
 
-                        <div class="table-responsive">
-                            <table class="table table-builder table-hover table-bordered table-striped js-table-checkable">
-                            <thead>
-                                <tr>
-                                    <?php if((!$hide_checkbox)): ?>
-                                    <th class="text-center" style="width: 70px;">
-                                        <label class="css-input css-checkbox css-checkbox-primary remove-margin-t remove-margin-b">
-                                            <input type="checkbox" id="check-all"><span></span>
-                                        </label>
-                                    </th>
-                                    <?php endif; if(is_array($columns) || $columns instanceof \think\Collection || $columns instanceof \think\Paginator): $i = 0; $__LIST__ = $columns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$column): $mod = ($i % 2 );++$i;?>
-                                    <th class="column-<?php echo $column['name']; ?> <?php echo (isset($column['class']) && ($column['class'] !== '')?$column['class']:''); ?>">
-                                        
-                                        <?php echo htmlspecialchars((isset($column['title']) && ($column['title'] !== '')?$column['title']:'')); if (isset($order_columns[$column['name']])):  
-                                                $_by = input('param._by') == 'asc' ? 'desc' : 'asc';
-                                                $_param = array_merge(input('get.'), ['_by' => $_by, '_order' => $order_columns[$column['name']]]);
-                                                if ($_param) {
-                                                    $_get = [];
-                                                    foreach ($_param as $key => $value) {
-                                                        $_get[] = $key. '=' .$value;
-                                                    }
-                                                    $_get = '?'.implode('&', $_get);
-                                                }
-                                             ?>
-                                            <a href="<?php echo \think\Request::instance()->baseUrl(); ?><?php echo $_get; ?>" class="pull-right" data-toggle="tooltip" data-original-title="排序">
-                                                <?php 
-                                                    if (input('param._order') == $order_columns[$column['name']]) {
-                                                        echo input('param._by') == 'asc' ? '<i class="fa fa-caret-up"></i>' : '<i class="fa fa-caret-down"></i>';
-                                                    } else {
-                                                        echo '<i class="fa fa-sort text-muted"></i>';
-                                                    }
-                                                 ?>
-                                            </a>
-                                        <?php endif; if (isset($filter_columns[$column['name']])):  
-                                            if (!empty(request()->param('_field_display'))) {
-                                                $_field_display = request()->param('_field_display');
-                                            }
-                                         ?>
-                                        <a href="javascript:void(0);" class="field-filter pull-right" data-filter="<?php echo $filter_columns[$column['name']]['filter']; ?>" data-type="<?php echo $filter_columns[$column['name']]['type']; ?>" data-options='<?php echo (isset($filter_columns[$column["name"]]["options"]) && ($filter_columns[$column["name"]]["options"] !== '')?$filter_columns[$column["name"]]["options"]:""); ?>' data-map='<?php echo (isset($filter_columns[$column["name"]]["map"]) && ($filter_columns[$column["name"]]["map"] !== '')?$filter_columns[$column["name"]]["map"]:""); ?>' data-field-display="<?php echo $column['name']; ?>" data-field="<?php echo $filter_columns[$column['name']]['field']; ?>" data-table="<?php echo $filter_columns[$column['name']]['table']; ?>" data-toggle="tooltip" data-original-title="筛选"><i class="fa fa-filter <?php if(!in_array(($column['name']), is_array($_field_display)?$_field_display:explode(',',$_field_display))): ?>text-muted<?php endif; ?>"></i></a>
-                                        <?php endif; ?>
-                                    </th>
-                                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php if(is_array($row_list) || $row_list instanceof \think\Collection || $row_list instanceof \think\Paginator): $i = 0; $__LIST__ = $row_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$row): $mod = ($i % 2 );++$i;?>
-                                <tr>
-                                    <?php if((!$hide_checkbox)): ?>
-                                    <td class="text-center">
-                                        <label class="css-input css-checkbox css-checkbox-primary">
-                                            <input class="ids" type="checkbox" name="ids[]" value="<?php echo (isset($row['_primary_key_value']) && ($row['_primary_key_value'] !== '')?$row['_primary_key_value']:''); ?>"><span></span>
-                                        </label>
-                                    </td>
-                                    <?php endif; if(is_array($columns) || $columns instanceof \think\Collection || $columns instanceof \think\Paginator): $i = 0; $__LIST__ = $columns;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$column): $mod = ($i % 2 );++$i;?>
-                                    <td class="<?php echo (isset($column['class']) && ($column['class'] !== '')?$column['class']:''); ?>">
-                                        <?php echo (isset($row[$column['name']]) && ($row[$column['name']] !== '')?$row[$column['name']]:''); ?>
-                                    </td>
-                                    <?php endforeach; endif; else: echo "" ;endif; ?>
-                                </tr>
-                                <?php endforeach; endif; else: echo "" ;endif; if(empty($row_list) || (($row_list instanceof \think\Collection || $row_list instanceof \think\Paginator ) && $row_list->isEmpty())): ?>
-                                <tr class="table-empty">
-                                    <?php $colspan = count($columns)+1 ?>
-                                    <td class="text-center empty-info" colspan="<?php echo $colspan; ?>">
-                                        <i class="fa fa-database"></i> 暂无数据<br>
-                                    </td>
-                                </tr>
-                                <?php endif; ?>
-                            </tbody>
-                        </table>
+                        <div class="dd" id="menu_list">
+                            <ol class="dd-list"><?php echo $menus; ?></ol>
                         </div>
-                        <div class="data-table-toolbar">
+                        <?php endif; if(!(empty($modules) || (($modules instanceof \think\Collection || $modules instanceof \think\Paginator ) && $modules->isEmpty()))): ?>
+                        <form action="<?php echo url(''); ?>" method="post" name="sort-form" class="sort-form">
+                            <button title="保存" type="submit" class="btn btn-success push-10 ajax-post" target-form="sort-form">保存排序</button>
                             <div class="row">
-                                <div class="col-sm-12">
-                                    
-                                    <?php if(!(empty($pages) || (($pages instanceof \think\Collection || $pages instanceof \think\Paginator ) && $pages->isEmpty()))): ?>
-                                        <?php echo $pages; endif; if(!(empty($_page_info) || (($_page_info instanceof \think\Collection || $_page_info instanceof \think\Paginator ) && $_page_info->isEmpty()))): ?>
-                                    <div class="pagination-info pull-right">
-                                        <div>
-                                            <input type="text" class="form-control input-sm go-page" id="go-page" name="page" value="<?php echo input('param.page', '1'); ?>">
-                                            <input type="text" class="form-control input-sm nums" id="list-rows" name="list_rows" value="<?php echo input('param.list_rows', '') == '' ? config('list_rows') : input('param.list_rows'); ?>">
-                                            / <strong><?php echo $_page_info->lastPage(); ?></strong> 页，共 <strong><?php echo $_page_info->total(); ?></strong> 条数据，每页显示数量
+                                <div class="col-md-12">
+                                    <div id="sortable" class="connectedSortable push-20">
+                                        <?php if(is_array($modules) || $modules instanceof \think\Collection || $modules instanceof \think\Paginator): $i = 0; $__LIST__ = $modules;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$module): $mod = ($i % 2 );++$i;?>
+                                        <div class="sortable-item pull-left">
+                                            <input type="hidden" name="sort[]" value="<?php echo $key; ?>">
+                                            <i class="<?php echo $module['icon']; ?>"></i> <?php echo $module['title']; ?>
                                         </div>
+                                        <?php endforeach; endif; else: echo "" ;endif; ?>
                                     </div>
-                                    <?php endif; ?>
                                 </div>
                             </div>
-                        </div>
+                        </form>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
         </div>
         <!-- END Pages Content -->
@@ -844,13 +761,95 @@
 
 <!--页面js-->
 
+<script src="__LIBS__/jquery-nestable/jquery.nestable.js"></script>
+<script src="__LIBS__/jquery-ui/jquery-ui.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // 模块拖拽
+        $( "#sortable" ).sortable({
+            connectWith: ".connectedSortable"
+        }).disableSelection();
 
-    <?php if(is_array($js_list) || $js_list instanceof \think\Collection || $js_list instanceof \think\Paginator): $i = 0; $__LIST__ = $js_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-    <script src="__MODULE_JS__/<?php echo $vo; ?>.js"></script>
-    <?php endforeach; endif; else: echo "" ;endif; ?>
+        // 保存节点
+        $('#save').click(function(){
+            Dolphin.loading();
+            $.post("<?php echo url('save'); ?>", {menus: $('#menu_list').nestable('serialize')}, function(data) {
+                Dolphin.loading('hide');
+                if (data.code) {
+                    $('#save').removeClass('btn-success').addClass('btn-default disabled');
+                    Dolphin.notify(data.msg, 'success');
+                } else {
+                    Dolphin.notify(data.msg, 'danger');
+                }
+            });
+        });
 
-    
-    <?php echo (isset($extra_js) && ($extra_js !== '')?$extra_js:''); ?>
+        // 初始化节点拖拽
+        $('#menu_list').nestable({maxDepth:4}).on('change', function(){
+            $('#save').removeAttr("disabled").removeClass('btn-default disabled').addClass('btn-success');
+        });
+
+        // 隐藏禁用节点
+        $('#hide_disable').click(function(){
+            $('.dd-disable').hide();
+        });
+
+        // 显示禁用节点
+        $('#show_disable').click(function(){
+            $('.dd-disable').show();
+        });
+
+        // 展开所有节点
+        $('#expand-all').click(function(){
+            $('#menu_list').nestable('expandAll');
+        });
+
+        // 收起所有节点
+        $('#collapse-all').click(function(){
+            $('#menu_list').nestable('collapseAll');
+        });
+
+        // 禁用节点
+        $('.dd3-content').delegate('.disable', 'click', function(){
+            var self     = $(this);
+            var ids      = self.data('ids');
+            var ajax_url = '<?php echo url("disable", ["table" => "admin_menu"]); ?>';
+            Dolphin.loading();
+            $.post(ajax_url, {ids:ids}, function(data) {
+                Dolphin.loading('hide');
+                if (data.code) {
+                    self.attr('data-original-title', '启用').removeClass('disable').addClass('enable')
+                        .children().removeClass('fa-ban').addClass('fa-check-circle-o')
+                        .closest('.dd-item')
+                        .addClass('dd-disable');
+                } else {
+                    Dolphin.notify(data.msg, 'danger');
+                }
+            });
+            return false;
+        });
+
+        // 启用节点
+        $('.dd3-content').delegate('.enable', 'click', function(){
+            var self     = $(this);
+            var ids      = self.data('ids');
+            var ajax_url = '<?php echo url("enable", ["table" => "admin_menu"]); ?>';
+            Dolphin.loading();
+            $.post(ajax_url, {ids:ids}, function(data) {
+                Dolphin.loading('hide');
+                if (data.code) {
+                    self.attr('data-original-title', '禁用').removeClass('enable').addClass('disable')
+                        .children().removeClass('fa-check-circle-o').addClass('fa-ban')
+                        .closest('.dd-item')
+                        .removeClass('dd-disable');
+                } else {
+                    Dolphin.notify(data.msg, 'danger');
+                }
+            });
+            return false;
+        });
+    });
+</script>
 
 
 
