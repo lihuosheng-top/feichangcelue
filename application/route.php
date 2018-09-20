@@ -27,6 +27,9 @@ return [
     "stock_week"=>"index/Stock/stock_week",
     "stock_month"=>"index/Stock/stock_month",
     "stock_free"=>"index/Stock/stock_free",
+    "stock_day_return"=>"index/Stock/stock_day_return",//日利息数据返回到前台界面使用
+    "stock_week_return"=>"index/Stock/stock_week_return",//周利息数据返回到前台界面使用
+    "stock_month_return"=>"index/Stock/stock_month_return",//月利息数据返回到前台界面使用
     /*配资几个页面结束*/
 
 
@@ -45,6 +48,8 @@ return [
     'news'=>'index/index/news',                     //财经资讯
     'news_t'=>'index/index/news_t',                     //新闻内容
     'app_broadcast'=>'index/index/app_broadcast',   //手机端轮播图
+    'stock_exponential_sh'=>'index/index/stock_exponential_sh', //手机端上证指数
+    'stock_exponential_sz'=>'index/index/stock_exponential_sz', //手机端深证证指数
     'pc_broadcast'=>'index/index/pc_broadcast',     //pc端轮播图
     'index_information'=>'index/index/index_information', //pc端首页配资
     'index_information_first'=>'index/index/index_information_first', //pc端首页配资

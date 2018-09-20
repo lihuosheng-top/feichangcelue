@@ -168,18 +168,18 @@
 						<div class="flex-item-wrapper">
 							<div class="title">上证指数</div>
 							<div class="stock-number  number-red">
-								2699.9501
+								<span class="shnum">2699.9501</span>
 							</div>
-							<div class="meta"><span class="point number-red">48.16</span> <span class="percent-red number-red">1.82%</span></div>
+							<div class="meta"><span class="point number-red shpercent_one">48.16</span> <span class="percent-red number-red shpercent_tow">1.82%</span></div>
 						</div>
 					</div>
 					<div class="weui-flex__item stock-data__item">
 						<div class="flex-item-wrapper">
 							<div class="title">深证成指</div>
 							<div class="stock-number number-xxl number-red">
-								8133.22
+								<span class="sznum">8133.22</span>
 							</div>
-							<div class="meta"><span class="point number-red">133.87</span> <span class="percent number-red">1.67%</span></div>
+							<div class="meta"><span class="point number-red szpercent_one">133.87</span> <span class="percent number-red szpercent_tow">1.67%</span></div>
 						</div>
 					</div>
 				</div>
@@ -298,6 +298,71 @@
 			})();
 		</script>
 		<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
+		<!--深证指数接口-->
+		<script>
+            (function() {
+                $.ajax({
+                    type: "post",
+                    url: "{:url('index/index/stock_exponential_sz')}",
+                    data: {},
+                    dataType: 'json',
+                    success: function(data) {
+						var abc =data.data;
+                        var obj2=eval("("+abc+")")
+                        var leg =obj2.datas.length-1;
+                        $('.sznum').html(obj2.datas[leg][1]);
+                        $('.szpercent_one').html(obj2.datas[leg][5]);
+                        $('.szpercent_tow').html(obj2.datas[leg][4]);
+                        if(obj2.datas[leg][5] <0){
+                            $('.sznum').css('color','#20821C');
+                            $('.szpercent_one').css('color','#20821C');
+                            $('.szpercent_tow').css('color','#20821C');
+                        }
+                        if(obj2.datas[leg][5] >0){
+                            $('.sznum').css('color','#E54349');
+                            $('.szpercent_one').css('color','#E54349');
+                            $('.szpercent_tow').css('color','#E54349');
+                        }
+                    },
+                    error: function() {
+                        console.log("错误");
+                    }
+                });
+            })();
+		</script>
+		<!--上证指数接口-->
+		<script>
+            (function() {
+                $.ajax({
+                    type: "post",
+                    url: "{:url('index/index/stock_exponential_sh')}",
+                    data: {},
+                    dataType: 'json',
+                    success: function(data) {
+                        var abc =data.data;
+                        var obj2=eval("("+abc+")");
+                        var leg =obj2.datas.length-1;
+                        $('.shnum').html(obj2.datas[leg][1]);
+                        $('.shpercent_one').html(obj2.datas[leg][5]);
+                        $('.shpercent_tow').html(obj2.datas[leg][4]);
+                        if(obj2.datas[leg][5] <0){
+                            $('.shnum').css('color','#20821C');
+                            $('.shpercent_one').css('color','#20821C');
+                            $('.shpercent_tow').css('color','#20821C');
+                        }
+                        if(obj2.datas[leg][5] >0){
+                            $('.shnum').css('color','#E54349');
+                            $('.shpercent_one').css('color','#E54349');
+                            $('.shpercent_tow').css('color','#E54349');
+                        }
+                    },
+                    error: function() {
+                        console.log("错误");
+                    }
+                });
+            })();
+		</script>
+
 	</body>
 
 </html>
