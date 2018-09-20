@@ -129,6 +129,7 @@ class Index extends Home
     }
     //实盘可买
 
+
     /**
      **************李火生*******************
      * @param $isFreetrial
@@ -172,6 +173,50 @@ class Index extends Home
         $_SESSION['profiSu'] =$profitSu;
         $this->assign("profitSum", $profitSu);
     }
+
+    /**
+     **************李火生*******************
+     * 深证指数接口数据获取(399001)
+     **************************************
+     */
+    public function  stock_exponential_sz(Request $request){
+        if($request->isPost()){
+            $url = 'http://cq.ssajax.cn/interact/getTradedata.ashx?pic=qlpic_399001_2_1';
+            $apistr = file_get_contents($url);
+            $str = iconv("gb2312", "utf-8", $apistr);
+            $long_str = strlen($str)-1;
+            $information = substr($str, 31,$long_str);//截取后的数据，字符串
+            $information = substr($information, 0,strlen($information)-1);//截取后的数据，字符串
+            return $this->ajax_success("返回数据",$information);
+        }
+    }
+
+    /**
+     **************李火生*******************
+     * 上证指数接口的数据获取（）
+     **************************************
+     */
+    public function  stock_exponential_sh(Request $request){
+        if($request->isPost()){
+            $url = 'http://cq.ssajax.cn/interact/getTradedata.ashx?pic=qlpic_000001_1_1';
+            $apistr = file_get_contents($url);
+            $str = iconv("gb2312", "utf-8", $apistr);
+            $long_str = strlen($str)-1;
+            $information = substr($str, 31,$long_str);//截取后的数据，字符串
+            $information = substr($information, 0,strlen($information)-1);//截取后的数据，字符串
+            return $this->ajax_success("返回数据",$information);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
 
     /**

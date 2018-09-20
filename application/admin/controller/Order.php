@@ -95,6 +95,11 @@ class Order extends Admin
             ->fetch(); // 渲染页面
     }
 
+    /**
+     **************李火生*******************
+     * @return mixed
+     **************************************
+     */
     public function finished(){
     	// 获取筛选
 		$map = $this->getMap();
@@ -151,30 +156,29 @@ class Order extends Admin
             ->fetch(); // 渲染页面
     }
 
-
-    //手动平仓
+    /**
+     **************李火生*******************
+     * 手动平仓
+     **************************************
+     */
     public function liquidation(){
         global $orderId ;
         $orderId = trim(input("orderId"));
         if($orderId=='' || !is_numeric($orderId) || $orderId <= 0){
             error("订单号不对");
         }
-
         Db::transaction(function(){
             global $orderId ;
             $this->stock_sell_do($orderId, 1);
             Db::commit();
-
-            success("操作成功");
+            ajax_success('操作成功');
 
         });
-
         error("操作失败");
     }
 
     //$liquidation: 0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过止盈线自动平仓; 4 收盘时亏损额大于递延条件而自动平仓
     public function stock_sell_do($orderId , $liquidation = 1){
-
         if(!$orderId || !is_numeric($orderId)){
             die(false);
         }
@@ -194,7 +198,6 @@ class Order extends Admin
         }
 //        $arr = (new Alistock())->batch_real_stockinfo($stock['market'].$stock['code']);
         $arr =(new Common())->getMarketValueBycode($stock['code']);
-        dump($arr);
         if(!$arr || !is_array($arr)){
             error("获取股票数据失败");
         }

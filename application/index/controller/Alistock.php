@@ -173,7 +173,6 @@ class Alistock extends Home{
         $querys = "needIndex=0&stocks=$stocks";
         $bodys = "";
         $url = $host . $path . "?" . $querys;
-
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
         curl_setopt($curl, CURLOPT_URL, $url);
@@ -200,6 +199,7 @@ class Alistock extends Home{
         }
         return $arr;
     }
+
 
     public function batch_real_stockinfo_full($stocks){
         $path = "/batch-real-stockinfo";

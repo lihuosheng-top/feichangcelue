@@ -22,6 +22,20 @@ return [
     'freetrialHistory'=> 'index/ucenter/freetrialHistory',       	//结算区 一元模拟
 
 
+    /*配资几个页面开始*/
+    "stock_day"=>"index/Stock/stock_day",
+    "stock_week"=>"index/Stock/stock_week",
+    "stock_month"=>"index/Stock/stock_month",
+    "stock_free"=>"index/Stock/stock_free",
+    "stock_day_return"=>"index/Stock/stock_day_return",//日利息数据返回到前台界面使用
+    "stock_week_return"=>"index/Stock/stock_week_return",//周利息数据返回到前台界面使用
+    "stock_month_return"=>"index/Stock/stock_month_return",//月利息数据返回到前台界面使用
+    /*配资几个页面结束*/
+
+
+
+
+
     'detail'=> 'index/ucenter/detail',       		//结算区-单号详情
     'safeensure'=> 'index/index/safeensure',       		//安全保障
     'gift'=> 'index/index/gift',       			//协议
@@ -34,6 +48,8 @@ return [
     'news'=>'index/index/news',                     //财经资讯
     'news_t'=>'index/index/news_t',                     //新闻内容
     'app_broadcast'=>'index/index/app_broadcast',   //手机端轮播图
+    'stock_exponential_sh'=>'index/index/stock_exponential_sh', //手机端上证指数
+    'stock_exponential_sz'=>'index/index/stock_exponential_sz', //手机端深证证指数
     'pc_broadcast'=>'index/index/pc_broadcast',     //pc端轮播图
     'index_information'=>'index/index/index_information', //pc端首页配资
     'index_information_first'=>'index/index/index_information_first', //pc端首页配资
@@ -87,7 +103,6 @@ return [
     'ucenter/real_name'=> 'index/ucenter/real_name',   		//个人中心-实名认证2
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
 
-
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页
     'do_withdraw'=> 'admin/member/do_withdraw',  				//个人中心-首页
@@ -97,9 +112,5 @@ return [
     'buylist'=> 'admin/order/buylist',  				//个人中心-首页
     'liquidation'=> 'admin/order/liquidation',  				//个人中心-首页
     'setStatus'=> 'admin//notemsg/setStatus',  				//个人中心-首页
-
-
-
-
 
 ];
