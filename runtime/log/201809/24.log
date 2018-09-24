@@ -1,0 +1,646 @@
+---------------------------------------------------------------
+[ 2018-09-24T09:33:53+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023528s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.015006s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.013201s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.011256s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.011859s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.012428s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.011503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.014915s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.013256s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.010723s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.013209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010870s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.011228s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.011433s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:53' , 1537752833) [ RunTime:0.018455s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012462s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752818  ) ORDER BY id desc LIMIT 1 [ RunTime:0.010394s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015536s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.009714s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:54+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023302s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013350s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.013677s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.012416s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:54' , 1537752834) [ RunTime:0.019029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015437s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752819  ) ORDER BY id desc LIMIT 1 [ RunTime:0.012445s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014560s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.012586s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:55+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028240s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014845s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017022s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.014860s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:55' , 1537752835) [ RunTime:0.018513s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017899s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752820  ) ORDER BY id desc LIMIT 1 [ RunTime:0.017085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015822s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014091s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:56+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033191s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015727s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.016121s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.019233s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:56' , 1537752836) [ RunTime:0.020399s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015644s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752821  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018205s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014570s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016354s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:57+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024350s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014880s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014030s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016971s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:57' , 1537752837) [ RunTime:0.017056s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012829s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752822  ) ORDER BY id desc LIMIT 1 [ RunTime:0.015085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015003s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014604s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:58+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033781s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019170s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.016870s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016999s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:58' , 1537752838) [ RunTime:0.022799s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017959s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752823  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018081s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020712s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:33:59+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.224930s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024219s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.040987s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.033749s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:33:59' , 1537752839) [ RunTime:0.023230s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014866s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752824  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012826s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014052s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:00+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040764s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.021184s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.020519s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.023462s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:00' , 1537752840) [ RunTime:0.024001s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.023226s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752825  ) ORDER BY id desc LIMIT 1 [ RunTime:0.020411s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021902s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020656s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:01+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036673s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020652s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020917s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:01' , 1537752841) [ RunTime:0.024926s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020668s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752826  ) ORDER BY id desc LIMIT 1 [ RunTime:0.020316s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021622s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019385s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:02+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035367s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.023163s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.022793s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.021027s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:02' , 1537752842) [ RunTime:0.023118s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020879s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752827  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021138s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.034894s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.021463s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:03+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038782s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024234s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.020921s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020675s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:03' , 1537752843) [ RunTime:0.023239s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019752s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752828  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020355s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.025120s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:04+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033331s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018886s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.018337s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016908s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:04' , 1537752844) [ RunTime:0.023954s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.018089s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752829  ) ORDER BY id desc LIMIT 1 [ RunTime:0.017308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015727s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016661s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:05+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025036s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015163s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.013943s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.011846s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:05' , 1537752845) [ RunTime:0.016345s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012689s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752830  ) ORDER BY id desc LIMIT 1 [ RunTime:0.012576s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011498s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.012817s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:06+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029726s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017669s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017386s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.019061s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:06' , 1537752846) [ RunTime:0.020142s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.016501s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752831  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018414s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016283s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017014s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:07+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035204s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020164s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017696s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016763s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:07' , 1537752847) [ RunTime:0.022085s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017602s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752832  ) ORDER BY id desc LIMIT 1 [ RunTime:0.016963s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017125s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017708s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:08+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030078s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014425s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014266s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.017427s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:08' , 1537752848) [ RunTime:0.018996s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015182s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752833  ) ORDER BY id desc LIMIT 1 [ RunTime:0.013811s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012105s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014456s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:09+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030239s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018751s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.019087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016123s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:09' , 1537752849) [ RunTime:0.022487s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.016995s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752834  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018818s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017177s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:10+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036438s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.021009s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.022757s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.022461s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:10' , 1537752850) [ RunTime:0.024262s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019974s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752835  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021760s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.022058s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019908s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:11+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029617s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014642s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014977s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.015781s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:11' , 1537752851) [ RunTime:0.021308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014746s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752836  ) ORDER BY id desc LIMIT 1 [ RunTime:0.013167s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015767s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014898s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:12+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034934s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.022328s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017154s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.019591s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:12' , 1537752852) [ RunTime:0.023164s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.018353s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752837  ) ORDER BY id desc LIMIT 1 [ RunTime:0.017403s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018179s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017874s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:13+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033122s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020010s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021159s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020968s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:13' , 1537752853) [ RunTime:0.023177s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.018900s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752838  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018312s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.022075s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018404s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:14+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028746s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016201s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014023s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.013120s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:14' , 1537752854) [ RunTime:0.016888s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.011856s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752839  ) ORDER BY id desc LIMIT 1 [ RunTime:0.011579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011839s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013451s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:15+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022133s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014847s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.012087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.012202s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:15' , 1537752855) [ RunTime:0.016567s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.013506s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752840  ) ORDER BY id desc LIMIT 1 [ RunTime:0.010914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011070s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011650s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:16+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029221s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014500s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.016066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.013964s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:16' , 1537752856) [ RunTime:0.016877s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014310s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752841  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015333s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013075s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:17+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034199s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015586s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.015128s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.018408s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:17' , 1537752857) [ RunTime:0.018212s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014541s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752842  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014958s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014373s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:18+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034542s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019016s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017910s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.018716s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:18' , 1537752858) [ RunTime:0.020819s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020040s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752843  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018249s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021560s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019010s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:19+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033327s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017242s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014121s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.014909s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:19' , 1537752859) [ RunTime:0.020885s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014691s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752844  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014914s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.013484s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013654s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:20+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029793s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015342s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014494s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.014548s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:20' , 1537752860) [ RunTime:0.018419s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015086s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752845  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014493s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015355s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017274s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:21+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037542s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020786s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021503s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.022805s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:21' , 1537752861) [ RunTime:0.025730s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020565s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752846  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021952s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021196s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020043s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:22+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029544s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017987s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.015077s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.015466s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:22' , 1537752862) [ RunTime:0.020178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015609s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752847  ) ORDER BY id desc LIMIT 1 [ RunTime:0.016785s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014543s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013371s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:23+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025125s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012335s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.011117s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.011883s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:23' , 1537752863) [ RunTime:0.020520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017317s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752848  ) ORDER BY id desc LIMIT 1 [ RunTime:0.013622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014333s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010044s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:24+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032819s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018485s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.018350s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.017795s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:24' , 1537752864) [ RunTime:0.022292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017526s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752849  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019670s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018599s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017325s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:25+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040283s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.021517s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.018355s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:25' , 1537752865) [ RunTime:0.021949s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.016628s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752850  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018174s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018110s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018178s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:26+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029199s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015018s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.013723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016271s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:26' , 1537752866) [ RunTime:0.017841s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014475s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752851  ) ORDER BY id desc LIMIT 1 [ RunTime:0.016715s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.013938s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013385s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:27+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028170s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.026625s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.020689s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.014392s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:27' , 1537752867) [ RunTime:0.022706s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.014859s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752852  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019734s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017878s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013277s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:28+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028489s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018033s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.014211s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.023004s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:28' , 1537752868) [ RunTime:0.029351s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.015609s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752853  ) ORDER BY id desc LIMIT 1 [ RunTime:0.015520s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017272s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.022696s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:29+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042393s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.025695s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.024131s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.023344s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:29' , 1537752869) [ RunTime:0.031029s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.023236s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752854  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.023821s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.022593s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:30+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039783s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.021842s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.019564s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020489s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:30' , 1537752870) [ RunTime:0.026245s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020111s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752855  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021584s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020639s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020814s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:31+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033707s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018814s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.017195s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016082s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:31' , 1537752871) [ RunTime:0.019796s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.016574s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752856  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016730s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016825s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:32+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023078s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015795s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.012107s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.012214s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:32' , 1537752872) [ RunTime:0.018182s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012340s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752857  ) ORDER BY id desc LIMIT 1 [ RunTime:0.011307s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012684s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011491s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:33+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038142s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020744s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021672s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020364s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:33' , 1537752873) [ RunTime:0.023960s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019375s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752858  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018723s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.019733s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020141s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:34+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022251s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012551s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.011478s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.011999s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:34' , 1537752874) [ RunTime:0.016106s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.010948s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752859  ) ORDER BY id desc LIMIT 1 [ RunTime:0.011347s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012128s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010677s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:35+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024361s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013452s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.020122s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.015055s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:35' , 1537752875) [ RunTime:0.017541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012523s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752860  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014605s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012324s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013444s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:36+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025279s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014068s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.016207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.013159s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:36' , 1537752876) [ RunTime:0.018773s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.013430s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752861  ) ORDER BY id desc LIMIT 1 [ RunTime:0.012574s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.048223s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014967s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:37+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034789s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020791s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.020011s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.023433s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:37' , 1537752877) [ RunTime:0.022825s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019042s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752862  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018501s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018605s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018124s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:38+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030134s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017884s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021429s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.021231s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:38' , 1537752878) [ RunTime:0.023956s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019023s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752863  ) ORDER BY id desc LIMIT 1 [ RunTime:0.018694s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016577s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016356s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:39+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026476s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014662s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.015200s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.014880s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:39' , 1537752879) [ RunTime:0.029233s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.013610s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752864  ) ORDER BY id desc LIMIT 1 [ RunTime:0.014154s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014006s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013544s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:40+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035767s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020722s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.022687s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.019909s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:40' , 1537752880) [ RunTime:0.024512s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.019795s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752865  ) ORDER BY id desc LIMIT 1 [ RunTime:0.020560s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020554s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020077s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:41+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024510s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013794s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.012240s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.012333s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:41' , 1537752881) [ RunTime:0.015975s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.013268s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752866  ) ORDER BY id desc LIMIT 1 [ RunTime:0.013079s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011935s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.012392s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:42+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035260s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020871s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.021902s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.020749s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:42' , 1537752882) [ RunTime:0.026920s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.021153s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752867  ) ORDER BY id desc LIMIT 1 [ RunTime:0.022850s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021883s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.020734s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:43+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023598s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016747s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.013604s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.016245s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:43' , 1537752883) [ RunTime:0.020747s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.011860s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752868  ) ORDER BY id desc LIMIT 1 [ RunTime:0.011967s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011305s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.012229s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:44+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036145s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024655s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.019807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.024503s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:44' , 1537752884) [ RunTime:0.027000s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020557s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752869  ) ORDER BY id desc LIMIT 1 [ RunTime:0.023611s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.020216s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019337s ]
+---------------------------------------------------------------
+[ 2018-09-24T09:34:45+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] [ CACHE ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037042s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.023004s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1316 ) LIMIT 1 [ RunTime:0.022046s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.021212s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-09-24 09:34:45' , 1537752885) [ RunTime:0.026754s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.021695s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1537752870  ) ORDER BY id desc LIMIT 1 [ RunTime:0.021180s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.023263s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.022615s ]

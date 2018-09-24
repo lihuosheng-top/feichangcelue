@@ -21,11 +21,6 @@ function updateMoneyRate(){
 
 
 var buy_moblie={
-
-
-
-
-
     /**
      * 初始化
      */
@@ -119,15 +114,21 @@ var buy_moblie={
 
         });
 
-       // TODO: 触发止损
         //触发止损的点击事件
         $("#stop-loss_ul > a").on('tap',function(e){
             //当前点击高亮
             $(this).addClass("chose-active").siblings("a").removeClass("chose-active");
-
-
-
-
+            var interest_id =$(this)[0].id.split('_')[1];
+            var index_num= $(this)[0].id.split('_')[2];
+            if(interest_id ==null){
+                interest_id =levers_3;
+                index_num =3;
+            }
+            var input_price =$('#buy_number').val();
+            //TODO:6
+            // console.log(interest_id*input_price/3);
+            //公式：配资得的金额*每天的收费+倍数杠杆/100*配资得的金额*10000/倍数
+             $("#publicFee>span").html((input_price*delayFee+interest_id*input_price*100/index_num).toFixed(2) );
             var index = $(this).index();
             //找到之前高亮的金额
             var buy_price = $('#buy_number').val();
@@ -156,11 +157,15 @@ var buy_moblie={
             }
             //改变履约保证金价格
             $("#guaranteeFee").html(ly);
-
+            //总计
+            var total= ly+parseFloat($("#publicFee>span").html()); //总金
+            $('#total').html(total);
 //			//递延条件
 //		    var delay_line = ly - 600 * buy_price;
 //		    $("#delay_line").html(-delay_line);
-            
+
+
+
             //根据之前高亮的价格改变触发止损价格
             $("#stop-loss_ul > a").each(function(i, o){
                 var stop_loss = parseInt(  buy_price * 10000 / ly_arr[i] ) * stopLossRate;
@@ -169,23 +174,6 @@ var buy_moblie={
                 $(o).html(-stop_loss);
                 $(o).attr('id','inter_'+levers_data[i]+'_'+index_num);
             });
-
-            var interest_id =$(this)[0].id.split('_')[1];
-            var index_num= $(this)[0].id.split('_')[2];
-            // if(interest_id ==null){
-            //     interest_id =levers_3;
-            //     index_num =3;
-            // }
-            var input_price =$('#buy_number').val();
-            //TODO:6
-            // console.log(interest_id*input_price/3);
-            //公式：配资得的金额*每天的收费+倍数杠杆/100*配资得的金额*10000/倍数
-            if(interest_id !==null){
-                $("#publicFee>span").html((input_price*delayFee+interest_id*input_price*100/index_num).toFixed(2) );
-            }
-            //总计
-            var total= ly+parseFloat($("#publicFee>span").html()); //总金
-            $('#total').html(total);
 
         });
 
@@ -347,16 +335,13 @@ var buy_moblie={
             var ashareCode=$(this).find('span').eq(0).html();//股票编号
             var ashareName=$(this).find('span').eq(1).html();//股票名
             // alert(ashareCode);
-
-
                 $.ajax({
-                    url:"./index/Index/buy",
+                    url:"./index/Index/month_buy",
                     type:"post",
                     data:{code:ashareCode},
                     dataType:'json',
                     success:function(data){
                         if(data.status == 1){
-
                             // console.log(data.info);
                             var info_3 = data.info.info_arr[3];    //当前价格
                             var info_31 = data.info.info_arr[31];  //涨跌
@@ -1327,7 +1312,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     //交易综合费 publicFee
     // $("#publicFee>span").html((price *18 ).toFixed(2) );
     //TODO:
-    $("#publicFee>span").html((price * delayFee  *levers_3*price*10000/100 ).toFixed(2) );
+    // $("#publicFee>span").html((price * delayFee  *levers_3*price*10000 ).toFixed(2) );
 
     //递延费
     //$("#delay_fee").html(price * delayFee);
@@ -1355,7 +1340,7 @@ $(function () {
         $("#gu").html(gu1); //可买入多少股
         $("#lyl").html(lyl1);//资金利用率
         //交易综合费 publicFee
-        //$("#publicFee>span").html((price1 *18).toFixed(2));
+        // $("#publicFee>span").html((price1 *18).toFixed(2));
 
         //TODO:页面加载时金额默认点击第一个止损a
         var day_loss = $("#buy >p").eq(0).find("i").html()-1 ;//按天

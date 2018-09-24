@@ -223,7 +223,7 @@ class Index extends Home
      **************李火生*******************
      * @param Request $request
      * @return \think\response\View
-     * A股点买
+     * 按日A股点买
      **************************************
      */
     public function buy(Request $request)
@@ -257,8 +257,36 @@ class Index extends Home
             $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
             $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
             $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+            $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
             $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
             $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+            /**
+             * 按天杠杆倍数利息
+             */
+            $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+            $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+            $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+            $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+            $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+            $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+            $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+            $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+            $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+            $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+            /**
+             * 按月杠杆倍数利息
+             */
+            $this->assign('levers_month_1',getStockInterestLeverMonthByLevers("1"));
+            $this->assign('levers_month_2',getStockInterestLeverMonthByLevers("2"));
+            $this->assign('levers_month_3',getStockInterestLeverMonthByLevers("3"));
+            $this->assign('levers_month_4',getStockInterestLeverMonthByLevers("4"));
+            $this->assign('levers_month_5',getStockInterestLeverMonthByLevers("5"));
+            $this->assign('levers_month_6',getStockInterestLeverMonthByLevers("6"));
+            $this->assign('levers_month_7',getStockInterestLeverMonthByLevers("7"));
+            $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
+            $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
+            $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
+
         }
         if (!empty($_POST['code'])) {
             $this->ajax_success(
@@ -284,6 +312,106 @@ class Index extends Home
         $this->assign('day_img', $day_url_info);
         return view('index/mobile/buy');
     }
+
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * @return \think\response\View
+     * 按月点买
+     **************************************
+     */
+    public function  month_buy(Request $request){
+        if (!$_SESSION['member']) {
+            redirect('./login');
+        }
+        if ($request->param()) {
+            $member = $_SESSION['member'];
+            if (isset($member)) {
+                $curDate = date("Y-m-d");
+                $count = Db::table("xh_stock_order")->where("memberId={$member['id']} and isFreetrial=0 and left(createTime,10)='$curDate'")->count();
+                $this->assign('left', 10 - (int)$count);
+            }
+            //TODO:腾讯接口数据
+            //string(484) "大秦铁路~601006~8.17~8.22~8.25~158767~67621~91142~8.17~470~8.16~560~8.15~63~8.14~84~8.13~39~8.18~712~8.19~1036~8.20~705~8.21~802~8.22~978~11:29:53/8.17/213/S/174031/3753|11:29:50/8.18/151/B/123368/3751|11:29:44/8.18/76/B/62168/3748|11:29:41/8.18/520/B/425360/3747|11:29:35/8.17/1/S/817/3744|11:29:32/8.17/235/S/192080/3743~20180706113451~-0.05~-0.61~8.32~8.08~8.18/157428/128963037~158767~13006~0.11~8.50~~8.32~8.08~2.92~1214.62~1214.62~1.17~9.04~7.40~0.88~-3017~8.19~7.41~9.10"; "
+            //http://qt.gtimg.cn/q=sz000858
+            $code_info = input('code'); //由于是int类型，需要转化为string类型
+            $code_info = (string)$code_info;
+            $cod = strval($code_info);
+            $res = $this->getMarketValueBycode($cod);
+            $info_arr = $res['info_arr'];
+            $all_url_info = $res['time_url_info'];
+            $day_url_info = $res['day_url_info'];
+            //分配数据
+            $this->assign('code', $cod);
+            $this->assign('info_arr', $info_arr);
+            $this->assign('time_img', $all_url_info);
+            $this->assign('day_img', $day_url_info);
+            //TODO:腾讯接口数据
+            $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
+            $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
+            $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+            $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
+            $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
+            $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+            /**
+             * 按天杠杆倍数利息
+             */
+            $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+            $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+            $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+            $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+            $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+            $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+            $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+            $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+            $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+            $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+            /**
+             * 按月杠杆倍数利息
+             */
+            $this->assign('levers_month_1',getStockInterestLeverMonthByLevers("1"));
+            $this->assign('levers_month_2',getStockInterestLeverMonthByLevers("2"));
+            $this->assign('levers_month_3',getStockInterestLeverMonthByLevers("3"));
+            $this->assign('levers_month_4',getStockInterestLeverMonthByLevers("4"));
+            $this->assign('levers_month_5',getStockInterestLeverMonthByLevers("5"));
+            $this->assign('levers_month_6',getStockInterestLeverMonthByLevers("6"));
+            $this->assign('levers_month_7',getStockInterestLeverMonthByLevers("7"));
+            $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
+            $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
+            $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
+
+        }
+        if (!empty($_POST['code'])) {
+            $this->ajax_success(
+                array(
+                    // "code"=>$code,
+                    "info_arr" => $info_arr,
+                    "time_img" => $all_url_info,
+                    "day_img" => $day_url_info
+                )
+            );
+        }
+        //$this->buy_ajax(0);
+        //默认一开始界面是这样显示
+        $cod = '000001';
+        $res = (new Common())->getMarketValueBycode($cod);
+        $info_arr = $res['info_arr'];
+        $all_url_info = $res['time_url_info'];
+        $day_url_info = $res['day_url_info'];
+
+        $this->assign('code', $cod);
+        $this->assign('info_arr', $info_arr);
+        $this->assign('time_img', $all_url_info);
+        $this->assign('day_img', $day_url_info);
+
+
+
+        return view('index/mobile/month_buy');
+    }
+
+
+
 
     /**
      **************李火生*******************
@@ -361,11 +489,40 @@ class Index extends Home
             $this->assign('info_arr', $info_arr);
             $this->assign('time_img', $all_url_info);
             $this->assign('day_img', $day_url_info);
+
             $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
             $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
             $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+            $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
             $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
             $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+            /**
+             * 按天杠杆倍数利息
+             */
+            $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+            $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+            $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+            $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+            $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+            $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+            $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+            $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+            $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+            $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+            /**
+             * 按月杠杆倍数利息
+             */
+            $this->assign('levers_month_1',getStockInterestLeverMonthByLevers("1"));
+            $this->assign('levers_month_2',getStockInterestLeverMonthByLevers("2"));
+            $this->assign('levers_month_3',getStockInterestLeverMonthByLevers("3"));
+            $this->assign('levers_month_4',getStockInterestLeverMonthByLevers("4"));
+            $this->assign('levers_month_5',getStockInterestLeverMonthByLevers("5"));
+            $this->assign('levers_month_6',getStockInterestLeverMonthByLevers("6"));
+            $this->assign('levers_month_7',getStockInterestLeverMonthByLevers("7"));
+            $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
+            $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
+            $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
+
         }
         if (!empty($_POST['code'])) {
             $this->ajax_success(
@@ -869,6 +1026,40 @@ class Index extends Home
     //我要配资
     public function stock()
     {
+        $this->assign('dealPoundage', getSysParamsByKey("dealPoundage")); //交易手续费(买入股票时，每万元收9元)
+        $this->assign('delayFee', getSysParamsByKey("delayFee")); //递延费，默认18元每天
+        $this->assign('dealFee', getSysParamsByKey("dealFee")); //第一天的交易费
+        $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
+        $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
+        $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+
+        /**
+         * 按天杠杆倍数利息
+         */
+        $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+        $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+        $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+        $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+        $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+        $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+        $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+        $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+        $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+        $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+        /**
+         * 按月杠杆倍数利息
+         */
+        $this->assign('levers_month_1',getStockInterestLeverMonthByLevers("1"));
+        $this->assign('levers_month_2',getStockInterestLeverMonthByLevers("2"));
+        $this->assign('levers_month_3',getStockInterestLeverMonthByLevers("3"));
+        $this->assign('levers_month_4',getStockInterestLeverMonthByLevers("4"));
+        $this->assign('levers_month_5',getStockInterestLeverMonthByLevers("5"));
+        $this->assign('levers_month_6',getStockInterestLeverMonthByLevers("6"));
+        $this->assign('levers_month_7',getStockInterestLeverMonthByLevers("7"));
+        $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
+        $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
+        $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
+
         return view("index/mobile/pz");
     }
 

@@ -10,7 +10,8 @@ return [
         ':name' => ['index/hello', ['method' => 'post']],
     ],
 //前台路由定义
-    'buy' => 'index/index/buy?code',				  	//A股购买
+    'buy' => 'index/index/buy?code',				  	//按天A股购买
+    'month_buy' => 'index/index/month_buy?code',				  	//按月A股购买
     'buy_entrust' => 'index/index/buy_entrust',	//购买委托
     'freetrial'=> 'index/index/freetrial?code',	    //1元模拟
     'freetrial1'=> 'index/index/freetrial1',

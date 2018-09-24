@@ -79,7 +79,10 @@
     			<div class="con_p">
 	    			<p>配资倍数</p>
 	    			<ul>
-						<li class="con_li"><span><i>3</i>倍</span><span><i>6</i>元</span></li>
+						<li class="con_li">
+							<span><i>3</i>倍</span>
+							<span><i>6</i>元</span>
+						</li>
 						<li><span><i>4</i>倍</span><span><i>8</i>元</span></li>
 	    				<li><span><i>5</i>倍</span><span><i>10</i>元</span></li>
 	    				<li><span><i>6</i>倍</span><span><i>12</i>元</span></li>
@@ -92,8 +95,8 @@
 	    		<p><span>单票持仓</span><span>主板100%，创业板100%</span></p>
 	    		<p><span>持仓时间</span><span>自动延期</span></p>
 	    		<p><span>我要配资金额</span><span><i class="ajax_html">0</i>元</span></p>
-	    		<p><span>触发止盈</span><span><i>0</i>元</span></p>
-	    		<p><span>触发止损</span><span><i>0</i>元</span></p>
+	    		<p><span>亏损警戒线</span><span><i>0</i>元</span></p>
+	    		<p><span>亏损平仓线</span><span><i>0</i>元</span></p>
 	    		<p><span>风险保障金</span><span><i>0</i>元</span></p>
 	    		<p><span>预存管理费</span><span class="fs">非交易日不收取(按月配资除外)</span><span><i>0</i>元/日</span></p>
     		</div>
@@ -131,8 +134,8 @@
 	    		<p><span>单票持仓</span><span>主板100%，创业板100%</span></p>
 	    		<p><span>持仓时间</span><span>自动延期</span></p>
 	    		<p><span>我要配资金额</span><span><i>0</i>元</span></p>
-	    		<p><span>触发止盈</span><span><i>0</i>元</span></p>
-	    		<p><span>触发止损</span><span><i>0</i>元</span></p>
+	    		<p><span>亏损警戒线</span><span><i>0</i>元</span></p>
+	    		<p><span>亏损平仓线</span><span><i>0</i>元</span></p>
 	    		<p><span>风险保障金</span><span><i>0</i>元</span></p>
 	    		<p><span>预存管理费</span><span class="fs">非交易日不收取(按月配资除外)</span><span><i>0</i>元/月</span></p>
     		</div>
@@ -174,6 +177,55 @@
 			</a>
 		</nav>
 	</div>
+
+	<script>
+
+        //数据初始化
+        var delayFee = parseInt("{$delayFee }");
+        var dealFee = parseInt("{$dealFee }");
+        var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
+        var delayLineRate = parseFloat("{$delayLineRate}");
+        var stopLossRate = parseFloat("{$stopLossRate}");
+        var lossLine =parseFloat("{$lossLine}");
+
+        //按天杠杆倍率1到10倍
+        var levers_1 =parseFloat("{$levers_1}");
+        var levers_2 =parseFloat("{$levers_2}");
+        var levers_3 =parseFloat("{$levers_3}");
+        var levers_4 =parseFloat("{$levers_4}");
+        var levers_5 =parseFloat("{$levers_5}");
+        var levers_6 =parseFloat("{$levers_6}");
+        var levers_7 =parseFloat("{$levers_7}");
+        var levers_8 =parseFloat("{$levers_8}");
+        var levers_9 =parseFloat("{$levers_9}");
+        var levers_10 =parseFloat("{$levers_10}");
+
+
+
+
+        //按月杠杆倍率1到10倍
+        var levers_month_1 =parseFloat("{$levers_month_1}");
+        var levers_month_2 =parseFloat("{$levers_month_2}");
+        var levers_month_3 =parseFloat("{$levers_month_3}");
+        var levers_month_4 =parseFloat("{$levers_month_4}");
+        var levers_month_5 =parseFloat("{$levers_month_5}");
+        var levers_month_6 =parseFloat("{$levers_month_6}");
+        var levers_month_7 =parseFloat("{$levers_month_7}");
+        var levers_month_8 =parseFloat("{$levers_month_8}");
+        var levers_month_9 =parseFloat("{$levers_month_9}");
+        var levers_month_10 =parseFloat("{$levers_month_10}");
+
+
+
+		(function () {
+
+
+
+
+        })()
+
+
+	</script>
 <script src="./public/stock/js/jquery-1.11.1.min.js" type="text/javascript"></script>
 <script src="./public/stock/js/swiper.jquery.min.js" type="text/javascript"></script>
 <script>
@@ -192,86 +244,124 @@
 	});
 	
 	$(function(){
+
+		//按天配资
 		$(".con_one .con_p li").click(function(){
-//				console("1112");
 			$(this).addClass('con_li').siblings().removeClass('con_li');
 			var a=parseInt($(".con_one .con_list p input").val());
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
 
 			$(".con_one .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
-			$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+//			$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+			$(".con_one .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
 			if(b==3){
-             	$(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
-               $abc = parseInt($(this).children("span").eq(0).find("i").html());
+//             	$(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+             	$(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+               abc = parseInt($(this).children("span").eq(0).find("i").html());
+                var levers = levers_3;
 			};
             if(b==4){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_4;
             };
             if(b==5){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_5;
             };
             if(b==6){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_6;
             };
             if(b==7){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_7;
             };
             if(b==8){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_8;
             };
             if(b==9){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_9;
             };
             if(b==10){
-                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+//                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+                $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers = levers_10;
             };
 			$(".con_one .con_list>p").eq(7).find("i").html(a);
 
-			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
+//			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
+			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee +levers *a/100).toFixed(2));
 
 			var c=$(".con_one .con_list>p").eq(8).find("i").html();
+
 				var nc=Number(c);
-				$(".con_one .con_spa span").eq(1).html(a+nc)
+				$(".con_one .con_spa span").eq(1).html(a+nc);
            		 $(".con_all").html(a+nc);
 				
 		});
-		
+		//按月配资
 		$(".con_two .con_p li").click(function(){
 			$(this).addClass('con_li').siblings().removeClass('con_li');
 			var a=parseInt($(".con_two .con_list p input").val());
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
 			$(".con_two .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
-			$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+//			$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+			$(".con_two .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
             if(b==3){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+               var levers_month = levers_month_3;
             };
             if(b==4){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_4;
             };
             if(b==5){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_5;
             };
             if(b==6){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_6;
             };
             if(b==7){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_7;
             };
             if(b==8){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_8;
             };
             if(b==9){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+                var levers_month = levers_month_9;
             };
             if(b==10){
-                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+                $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
+//                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+                var levers_month = levers_month_10;
             };
 			$(".con_two .con_list>p").eq(7).find("i").html(a);
 
-			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
+//			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
+			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*delayFee*30*0.7+levers_month*a*30/100).toFixed(2));
 
 			var c=$(".con_two .con_list>p").eq(8).find("i").html();
-			var nc=Number(c);
+			var nc=parseFloat(c);
 			$(".con_two .con_spa span").eq(1).html(a+nc);
             $(".con_all").html(a+nc);
 			
@@ -284,13 +374,12 @@
 			var index=$(this).index();
 			$(this).addClass('t_btn').siblings().removeClass('t_btn');
 			$(".content>div").eq(index).addClass('dis').siblings().removeClass('dis');
-			
-		
+
 		})
 	});
 	
 	$(function(){
-		//第一个文本框
+		//第一个文本框（按天点击文本框默认的数据）
 		$(".con_one .con_list input").bind("input propertychange change",function(event){
         	if($(this).val()!=""&&$(this).val()%100==0){
         		var _this=this;
@@ -302,42 +391,61 @@
 				var a=parseInt($(_this).val());
 				var b=parseInt($(".con_one .con_li").find("i").eq(0).html());
 				$(".con_one .con_list>p").eq(4).find("i").html(a*b);
-				$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+//				$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+				$(".con_one .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
                 if(b==3){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 0;
+                    var levers = levers_3;
                 };
                 if(b==4){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 1;
+                    var levers = levers_4;
                 };
                 if(b==5){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 2;
+                    var levers = levers_5;
                 };
                 if(b==6){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 3;
+                    var levers = levers_6;
                 };
                 if(b==7){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 4;
+                    var levers = levers_7;
                 };
                 if(b==8){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 5;
+                    var levers = levers_8;
                 };
                 if(b==9){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 6;
+                    var levers = levers_9;
                 };
                 if(b==10){
-                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+//                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 7;
+                    var levers = levers_10;
+
                 };
 				$(".con_one .con_list>p").eq(7).find("i").html(a);
 
-				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
+//				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
+				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee+levers*a/100).toFixed(2));
 
 				var c=$(".con_one .con_list>p").eq(8).find("i").html();
 				var nc=Number(c);
@@ -359,7 +467,7 @@
 				$(".con_one .con_spa span").eq(1).html(0)
 			}
 		});
-		//第二个文本框
+		//第二个文本框（按月点击文本框默认的数据）
 		$(".con_two .con_list input").bind("input propertychange change",function(event){
         	if($(this).val()!=""){
         		var _this=this;
@@ -371,43 +479,61 @@
 				var a=parseInt($(_this).val());
 				var b=parseInt($(".con_two .con_li").find("i").eq(0).html());
 				var ajax_html = $(".con_two .con_list>p").eq(4).find("i").html(a*b);
-				$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+//				$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
+				$(".con_two .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
                 if(b==3){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     //倍数下标
                     var Multiple =  $(".con_two .con_list>p").eq(6).find("i");
+                    var levers_month = levers_month_3;
                 };
                 if(b==4){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 1;
+                    var levers_month = levers_month_4;
                 };
                 if(b==5){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 2;
+                    var levers_month = levers_month_5;
                 };
                 if(b==6){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 3;
+                    var levers_month = levers_month_6;
                 };
                 if(b==7){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 4;
+                    var levers_month = levers_month_7;
                 };
                 if(b==8){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 5;
+                    var levers_month = levers_month_8;
                 };
                 if(b==9){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 6;
+                    var levers_month = levers_month_9;
                 };
                 if(b==10){
-                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+//                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
+                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     var Multiple = 7;
+                    var levers_month = levers_month_10;
                 };
 				$(".con_two .con_list>p").eq(7).find("i").html(a);
 
-				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
+//				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
+				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*delayFee*30*0.7+a*levers_month*30/100).toFixed(2));
 
 				var c=$(".con_two .con_list>p").eq(8).find("i").html();
 				var nc=Number(c);

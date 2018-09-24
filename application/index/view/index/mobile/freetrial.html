@@ -222,13 +222,13 @@
 						</div>
 					</li>
 					<li class="mui-row">
-						<p id="check-surplus" class="mui-col-xs-3 mui-col-sm-3">触发止盈</p>
+						<p id="check-surplus" class="mui-col-xs-3 mui-col-sm-3">亏损警戒线</p>
 						<div id="check-surplus_ul" class="chose_item mui-col-xs-9 mui-col-sm-9">
 							<a class="bz_text" href="javascript:void(0);">5000元</a>
 						</div>
 					</li>
 					<li class="mui-row">
-						<p class="mui-col-xs-3 mui-col-sm-3">触发止损</p>
+						<p class="mui-col-xs-3 mui-col-sm-3">亏损平仓线</p>
 						<div id="stop-loss_ul" class="chose_item mui-col-xs-9 mui-col-sm-9 mui-row mui-text-center">
 							<a class="bz_a chose-active chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1000</a>
 							<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1334</a>
@@ -280,6 +280,47 @@
 			</div>
 
 		</div>
+
+		<script>
+            //数据初始化
+            var delayFee = parseInt("{$delayFee }");
+            var dealFee = parseInt("{$dealFee }");
+            var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
+            var delayLineRate = parseFloat("{$delayLineRate}");
+            var stopLossRate = parseFloat("{$stopLossRate}");
+            var lossLine =parseFloat("{$lossLine}");
+
+            //按天杠杆倍率1到10倍
+            var levers_1 =parseFloat("{$levers_1}");
+            var levers_2 =parseFloat("{$levers_2}");
+            var levers_3 =parseFloat("{$levers_3}");
+            var levers_4 =parseFloat("{$levers_4}");
+            var levers_5 =parseFloat("{$levers_5}");
+            var levers_6 =parseFloat("{$levers_6}");
+            var levers_7 =parseFloat("{$levers_7}");
+            var levers_8 =parseFloat("{$levers_8}");
+            var levers_9 =parseFloat("{$levers_9}");
+            var levers_10 =parseFloat("{$levers_10}");
+
+            var levers_data=[
+                levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
+            ];
+            //    console.log(levers_data);
+            //按月杠杆倍率1到10倍
+            var levers_month_1 =parseFloat("{$levers_month_1}");
+            var levers_month_2 =parseFloat("{$levers_month_2}");
+            var levers_month_3 =parseFloat("{$levers_month_3}");
+            var levers_month_4 =parseFloat("{$levers_month_4}");
+            var levers_month_5 =parseFloat("{$levers_month_5}");
+            var levers_month_6 =parseFloat("{$levers_month_6}");
+            var levers_month_7 =parseFloat("{$levers_month_7}");
+            var levers_month_8 =parseFloat("{$levers_month_8}");
+            var levers_month_9 =parseFloat("{$levers_month_9}");
+            var levers_month_10 =parseFloat("{$levers_month_10}");
+
+		</script>
+
+
 		<script src="./public/static/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
 		<script src="./public/static/home/js/moblie/mui.min.js"></script>
 		<script src="./public/static/home/js/echarts.min.js"></script>
@@ -342,11 +383,13 @@
                 window.location.href = url;
             });
             //数据初始化
-            var delayFee = parseInt("{$delayFee }");
-            var dealFee = parseInt("{$dealFee }");
-            var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
-            var delayLineRate = parseFloat("{$delayLineRate}");
-            var stopLossRate = parseFloat("{$stopLossRate}");
+//            var delayFee = parseInt("{$delayFee }");
+//            var dealFee = parseInt("{$dealFee }");
+//            var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
+//            var delayLineRate = parseFloat("{$delayLineRate}");
+//            var stopLossRate = parseFloat("{$stopLossRate}");
+//
+
 
             buy_moblie.init();
 		</script>
@@ -371,7 +414,9 @@
                 var guaranteeFee =$("#guaranteeFee").html(); //履约保证金
                 var all_price_sum =$(".all_price_sum").html();
                 //递延条件？
+				var cont = guaranteeFee *delayLineRate;
                 //递延费（元/天）?从另外一个数据库读取
+				var frees =delayFee;
                 //创建时间
 
 
@@ -387,8 +432,8 @@
                         loss:loss, //触发止损
                         publicFee:publicFee,//交易综合费
                         guaranteeFee:guaranteeFee, //履约保证金
-                        delayLine:0, //递延条件？
-                        delayFee:18,//递延费（元/天）?从另外一个数据库读取?
+                        delayLine:cont, //递延条件？
+                        delayFee:frees,//递延费（元/天）?从另外一个数据库读取?
                         all_price_sum:all_price_sum //总计金额
 
                     },

@@ -27,6 +27,30 @@ function getSysParamsByKey($key){
     return $data['value'];
 }
 
+/**
+ **************李火生*******************
+ * @param $levers
+ * @return mixed
+ * 查询xh_stock_interest_lever 参数
+ **************************************
+ */
+function getStockInterestLeverByLevers($levers){
+    $data =Db::table('xh_stock_interest_lever')->field('interest')->where("`levers`='$levers'")->find();
+    return $data['interest'];
+}
+
+/**
+ **************李火生*******************
+ * @param $levers
+ * @return mixed
+ * 查询xh_stock_interest_lever 参数
+ **************************************
+ */
+function getStockInterestLeverMonthByLevers($levers){
+    $data =Db::table('xh_stock_interest_lever_month')->field('interest')->where("`levers`='$levers'")->find();
+    return $data['interest'];
+}
+
 
 function is_mobile_request() {
     $_SERVER['ALL_HTTP'] = isset($_SERVER['ALL_HTTP']) ? $_SERVER['ALL_HTTP'] : '';
