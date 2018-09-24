@@ -875,9 +875,9 @@ class Ucenter extends Home
             if($$dealAmount>50){
                 error("买入金额超出范围，最高交易50万");
             }
-            if($surplus != $dealAmount * 5000){
-                error("触发止盈数据错误");
-            }
+//            if($surplus != $dealAmount * 5000){
+//                error("触发止盈数据错误");
+//            }
             $create_date = date("Y-m-d H:i:s");
             $res_str = $this->getMarketValueBycode($stockCode);
             $nowPrice = $res_str['info_arr'][3];

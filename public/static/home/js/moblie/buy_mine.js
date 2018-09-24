@@ -160,7 +160,7 @@ var buy_moblie={
 //			//递延条件
 //		    var delay_line = ly - 600 * buy_price;
 //		    $("#delay_line").html(-delay_line);
-            
+
             //根据之前高亮的价格改变触发止损价格
             $("#stop-loss_ul > a").each(function(i, o){
                 var stop_loss = parseInt(  buy_price * 10000 / ly_arr[i] ) * stopLossRate;
