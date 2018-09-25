@@ -1093,6 +1093,14 @@ class Index extends Home
 //        }
 //
 //    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 按天配资传值给点买
+     **************************************
+     */
+
     public function ajax_html(Request $request)
     {
         if ($request->isPost("post.")) {
@@ -1117,6 +1125,13 @@ class Index extends Home
         }
 
     }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 按月配资传值给点买
+     **************************************
+     */
     public function ajax_yue(Request $request)
     {
 

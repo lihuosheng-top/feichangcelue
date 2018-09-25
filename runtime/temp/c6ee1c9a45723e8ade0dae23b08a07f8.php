@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\pz.html";i:1537862778;}*/ ?>
 <!DOCTYPE html>
 <html>
 <head lang="en">
@@ -214,23 +215,23 @@
 
 	<div id="footer">
 		<nav class="ml_tab mui-bar mui-bar-tab">
-			<a class="mui-tab-item" href="{:url('/index')}">
+			<a class="mui-tab-item" href="<?php echo url('/index'); ?>">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="{:url('/stock')}">
+			<a class="mui-tab-item mui-active" href="<?php echo url('/stock'); ?>">
 				<span class="mui-icon mui-icon-phone"></span>
 				<span class="mui-tab-label">我要配资</span>
 			</a>
-			<a class="mui-tab-item" href="{:url('/invite')}">
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
 				<span class="mui-icon mui-icon-postion"></span>
 				<span class="mui-tab-label">我要推广</span>
 			</a>
-			<a class="mui-tab-item" href="{:url('/buy')}">
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
 				<span class="mui-icon mui-icon-stock"></span>
 				<span class="mui-tab-label">我要交易</span>
 			</a>
-			<a class="mui-tab-item " href="{:url('/ucenter/home')}">
+			<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">
 				<span class="mui-icon mui-icon-email"></span>
 				<span class="mui-tab-label" id="abc">账户中心</span>
 			</a>
@@ -240,39 +241,39 @@
 	<script>
 
         //数据初始化
-        var delayFee = parseInt("{$delayFee }");
-        var dealFee = parseInt("{$dealFee }");
-        var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
-        var delayLineRate = parseFloat("{$delayLineRate}");
-        var stopLossRate = parseFloat("{$stopLossRate}");
-        var lossLine =parseFloat("{$lossLine}");
+        var delayFee = parseInt("<?php echo $delayFee; ?>");
+        var dealFee = parseInt("<?php echo $dealFee; ?>");
+        var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+        var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
+        var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
+        var lossLine =parseFloat("<?php echo $lossLine; ?>");
 
         //按天杠杆倍率1到10倍
-        var levers_1 =parseFloat("{$levers_1}");
-        var levers_2 =parseFloat("{$levers_2}");
-        var levers_3 =parseFloat("{$levers_3}");
-        var levers_4 =parseFloat("{$levers_4}");
-        var levers_5 =parseFloat("{$levers_5}");
-        var levers_6 =parseFloat("{$levers_6}");
-        var levers_7 =parseFloat("{$levers_7}");
-        var levers_8 =parseFloat("{$levers_8}");
-        var levers_9 =parseFloat("{$levers_9}");
-        var levers_10 =parseFloat("{$levers_10}");
+        var levers_1 =parseFloat("<?php echo $levers_1; ?>");
+        var levers_2 =parseFloat("<?php echo $levers_2; ?>");
+        var levers_3 =parseFloat("<?php echo $levers_3; ?>");
+        var levers_4 =parseFloat("<?php echo $levers_4; ?>");
+        var levers_5 =parseFloat("<?php echo $levers_5; ?>");
+        var levers_6 =parseFloat("<?php echo $levers_6; ?>");
+        var levers_7 =parseFloat("<?php echo $levers_7; ?>");
+        var levers_8 =parseFloat("<?php echo $levers_8; ?>");
+        var levers_9 =parseFloat("<?php echo $levers_9; ?>");
+        var levers_10 =parseFloat("<?php echo $levers_10; ?>");
 
 
 
 
         //按月杠杆倍率1到10倍
-        var levers_month_1 =parseFloat("{$levers_month_1}");
-        var levers_month_2 =parseFloat("{$levers_month_2}");
-        var levers_month_3 =parseFloat("{$levers_month_3}");
-        var levers_month_4 =parseFloat("{$levers_month_4}");
-        var levers_month_5 =parseFloat("{$levers_month_5}");
-        var levers_month_6 =parseFloat("{$levers_month_6}");
-        var levers_month_7 =parseFloat("{$levers_month_7}");
-        var levers_month_8 =parseFloat("{$levers_month_8}");
-        var levers_month_9 =parseFloat("{$levers_month_9}");
-        var levers_month_10 =parseFloat("{$levers_month_10}");
+        var levers_month_1 =parseFloat("<?php echo $levers_month_1; ?>");
+        var levers_month_2 =parseFloat("<?php echo $levers_month_2; ?>");
+        var levers_month_3 =parseFloat("<?php echo $levers_month_3; ?>");
+        var levers_month_4 =parseFloat("<?php echo $levers_month_4; ?>");
+        var levers_month_5 =parseFloat("<?php echo $levers_month_5; ?>");
+        var levers_month_6 =parseFloat("<?php echo $levers_month_6; ?>");
+        var levers_month_7 =parseFloat("<?php echo $levers_month_7; ?>");
+        var levers_month_8 =parseFloat("<?php echo $levers_month_8; ?>");
+        var levers_month_9 =parseFloat("<?php echo $levers_month_9; ?>");
+        var levers_month_10 =parseFloat("<?php echo $levers_month_10; ?>");
 
 
 
@@ -625,7 +626,7 @@
 //            $(".box").css("display","block");
 //            $.ajax({
 //                type: 'POST',
-//                url: "{:url('index/index/ajax_html')}",
+//                url: "<?php echo url('index/index/ajax_html'); ?>",
 //                data: {'ajax_html':ajax_html,'Con_Lists':Con_Lists,'beishu':beishu,'performance_bond':performance_bond},
 //                dataType: 'json',
 //                success: function (data) {
@@ -652,7 +653,7 @@
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
-                url: "{:url('index/index/ajax_html')}",
+                url: "<?php echo url('index/index/ajax_html'); ?>",
                 data: {'Con_Lists':Con_Lists,'beishu':beishu},
                 dataType: 'json',
                 success: function (data) {
@@ -673,7 +674,7 @@
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
-                url: "{:url('index/index/ajax_yue')}",
+                url: "<?php echo url('index/index/ajax_yue'); ?>",
                 data: {'ajax_html':ajax_html,'yuebeishu':yuebeishu},
                 dataType: 'json',
                 success: function (data) {
@@ -709,7 +710,7 @@
 //            $(".box").css("display","block");
 //            $.ajax({
 //                type: 'POST',
-//                url: "{:url('index/index/ajax_html')}",
+//                url: "<?php echo url('index/index/ajax_html'); ?>",
 //                data: {'ajax_html':ajax_html,'Con_Lists':Con_Lists},
 //                dataType: 'json',
 //                success: function (data) {
@@ -731,7 +732,7 @@
 			<p>提示</p>
 			<p>资配交易</p>
 			<p class="con_spa"><span>交易资金:</span><span class="con_all">0</span></p>
-			<div><a href="{:url('/buy')}">确认</a></div>
+			<div><a href="<?php echo url('/buy'); ?>">确认</a></div>
 		</div>
 	</div>
 	<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
