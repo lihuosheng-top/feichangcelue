@@ -98,7 +98,7 @@
 
 				<p>
 					<span>持仓时间</span>
-					<select>
+					<select class="select_day">
 						<option value="">自动递延</option>
 						<option value="">1天</option>
 						<option value="">2天</option>
@@ -176,7 +176,8 @@
 	    		<!--<p><span>持仓时间</span><span>自动延期</span></p>-->
 	    		<p>
 					<span>持仓时间</span>
-					<select>
+					<select class="select_moon">
+						<option value="">自动递延</option>
 						<option value="">1个月</option>
 						<option value="">2个月</option>
 						<option value="">3个月</option>
@@ -647,6 +648,8 @@
 //        });
         //按日配资
         $(" .con_one .con_btn input").click(function () {
+        	var day_select=$(".select_day option:selected").text();
+        	console.log(day_select);
             var Con_Lists = $(".con_one .con_list>p").eq(4).find("i").html();
             var beishu =$(".con_one .con_li span").eq(0).find("i").html()-2;
             $(".box").css("display","block");
@@ -667,6 +670,8 @@
         //按月配资
 
         $(" .con_two .con_btn input").click(function () {
+        	var moon_select=$(".select_moon option:selected").text();
+        	console.log(moon_select);
             var ajax_html = $(".con_two .con_list>p").eq(4).find("i").html(); //总配资的值
             var yuebeishu =$(".con_two .con_li span").eq(0).find("i").html()-2;
 
