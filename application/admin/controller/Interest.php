@@ -124,6 +124,76 @@ class Interest extends  Admin{
             ->fetch(); // 渲染页面
     }
 
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * 按天杠杆利息配资管理
+     **************************************
+     */
+    public function  lever(){
+        // 数据列表(杠杆倍率)
+        $data_list = Db::table("xh_stock_interest_lever")->order('levers','asc')->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->setPageTitle('按天杠杆利息管理列表') // 设置页面标题
+            ->addColumns([ // 批量添加列
+                ['id', 'ID'],
+                ['interest', '利息率（%）'],
+                ['levers', '杠杆率（倍）'],
+                ['createTime','时间']
+            ])
+            ->addColumns([
+                ['right_button', '操作', 'btn']
+            ])
+            ->addTopButton('add', ['href' => url('lever_edit' )]) // 批量添加顶部按钮
+            ->addRightButton('edit', ['href' => url('lever_edit', ['id' => '__id__'])]) // 批量添加右侧按钮
+            ->addRightButton('delete', ['href' => url('lever_delete', ['id' => '__id__'])])
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 按月杠杆利息管理
+     **************************************
+     */
+    public function  lever_month(){
+        // 数据列表(杠杆倍率)
+        $data_list = Db::table("xh_stock_interest_lever_month")->order('levers','asc')->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->setPageTitle('按月杠杆利息管理列表') // 设置页面标题
+            ->addColumns([ // 批量添加列
+                ['id', 'ID'],
+                ['interest', '利息率（%）'],
+                ['levers', '杠杆率（倍）'],
+                ['createTime','时间']
+            ])
+            ->addColumns([
+                ['right_button', '操作', 'btn']
+            ])
+            ->addTopButton('add', ['href' => url('lever_month_edit' )]) // 批量添加顶部按钮
+            ->addRightButton('edit', ['href' => url('lever_month_edit', ['id' => '__id__'])]) // 批量添加右侧按钮
+            ->addRightButton('delete', ['href' => url('lever_month_delete', ['id' => '__id__'])])
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+
+
+
+
+
     /**
      **************李火生*******************
      * @return mixed
@@ -314,6 +384,115 @@ class Interest extends  Admin{
     /**
      **************李火生*******************
      * @param null $id
+     * 杠杆按天倍率利息编辑
+     **************************************
+     */
+    public function lever_edit($id =null){
+
+        if ($this->request->isPost()) {
+            $data = $this->request->post();
+            $data['createTime'] = date("Y-m-d H:i:s");
+            if($id > 0){
+                $ret = Db::table("xh_stock_interest_lever")->where("id=$id")->update($data);
+            }else{
+                $ret = Db::table("xh_stock_interest_lever")->insertGetId($data);
+            }
+            if ($ret > 0) {
+                // 记录行为
+                action_log('lever_edit', 'admin_role', $id, UID, $data['name']);
+                return $this->success('编辑成功', url('lever'));
+            } else {
+                return $this->error('编辑失败');
+            }
+        }
+        // 获取数据
+        if( $id > 0){
+            $info= Db::table("xh_stock_interest_lever")->where("id=$id")->find();
+            $this->assign('info', $info);
+        }
+        // 使用ZBuilder快速创建表单
+        $TypeDay =array(
+            '1'=>'1倍',
+            '2'=>'2倍',
+            '3'=>'3倍',
+            '4'=>'4倍',
+            '5'=>'5倍',
+            '6'=>'6倍',
+            '7'=>'7倍',
+            '8'=>'8倍',
+            '9'=>'9倍',
+            '10'=>'10倍',
+        );
+        /*天数*/
+        return ZBuilder::make('form')
+            ->addSelect('levers', '选择杠杆倍率', '请选择类型',$TypeDay)
+            ->addFormItems([
+                ['text', 'interest', '利息（单位%）'],
+            ])
+            ->setFormData($info)
+            ->fetch();
+    }
+
+
+    /**
+     **************李火生*******************
+     * @param null $id
+     * 杠杆按月倍率利息编辑
+     **************************************
+     */
+    public function lever_month_edit($id =null){
+
+        if ($this->request->isPost()) {
+            $data = $this->request->post();
+            $data['createTime'] = date("Y-m-d H:i:s");
+            if($id > 0){
+                $ret = Db::table("xh_stock_interest_lever_month")->where("id=$id")->update($data);
+            }else{
+                $ret = Db::table("xh_stock_interest_lever_month")->insertGetId($data);
+            }
+            if ($ret > 0) {
+                // 记录行为
+                action_log('lever_month_edit', 'admin_role', $id, UID, $data['name']);
+                return $this->success('编辑成功', url('lever_month'));
+            } else {
+                return $this->error('编辑失败');
+            }
+        }
+        // 获取数据
+        if( $id > 0){
+            $info= Db::table("xh_stock_interest_lever_month")->where("id=$id")->find();
+            $this->assign('info', $info);
+        }
+        // 使用ZBuilder快速创建表单
+        $TypeDay =array(
+            '1'=>'1倍',
+            '2'=>'2倍',
+            '3'=>'3倍',
+            '4'=>'4倍',
+            '5'=>'5倍',
+            '6'=>'6倍',
+            '7'=>'7倍',
+            '8'=>'8倍',
+            '9'=>'9倍',
+            '10'=>'10倍',
+        );
+        /**/
+        return ZBuilder::make('form')
+            ->addSelect('levers', '选择杠杆倍率', '请选择类型',$TypeDay)
+            ->addFormItems([
+                ['text', 'interest', '利息（单位%）'],
+            ])
+            ->setFormData($info)
+            ->fetch();
+    }
+
+
+
+
+
+    /**
+     **************李火生*******************
+     * @param null $id
      * 按天配资删除
      **************************************
      */
@@ -352,13 +531,52 @@ class Interest extends  Admin{
      **************************************
      */
     public function month_delete($id = null){
+    if($id <= 0){
+        return $this->error("id不正确");
+    }
+    $ret = Db::table("xh_stock_interest_month")->where("id = $id")->delete();
+    if($ret > 0){
+        return $this->success("删除成功");
+    }
+    return $this->error("删除失败");
+}
+
+    /**
+     **************李火生*******************
+     * @param null $id
+     * 按天杠杆倍率删除
+     **************************************
+     */
+    public function lever_delete($id = null){
         if($id <= 0){
             return $this->error("id不正确");
         }
-        $ret = Db::table("xh_stock_interest_month")->where("id = $id")->delete();
+        $ret = Db::table("xh_stock_interest_lever")->where("id = $id")->delete();
         if($ret > 0){
             return $this->success("删除成功");
         }
         return $this->error("删除失败");
+
     }
+
+    /**
+     **************李火生*******************
+     * @param null $id
+     * 按月杠杆倍率删除
+     **************************************
+     */
+    public function lever_month_delete($id = null){
+        if($id <= 0){
+            return $this->error("id不正确");
+        }
+        $ret = Db::table("xh_stock_interest_lever_month")->where("id = $id")->delete();
+        if($ret > 0){
+            return $this->success("删除成功");
+        }
+        return $this->error("删除失败");
+
+    }
+
+
+
 }

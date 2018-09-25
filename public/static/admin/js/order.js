@@ -8,15 +8,38 @@ function doLiquidation(orderId){
     if(!window.confirm("确定平仓吗？")){
         return;
     }
-    $.post( "./liquidation", {orderId : orderId}, function(data){
-        if(data.code == '0'){
-            alert("已平仓");
-            location.reload();
-        }else{
+    $.ajax({
+        url: './liquidation',
+        type: 'POST',
+        dataType: 'JSON',
+        async: false,
+        data: {
+            orderId : orderId
+        },
+        success: function(data){
+            console.log(data);
+            if(data.status ==1){
+                alert(data.info);
+                location.reload();
+            }
+        },
+        error: function(data){
             alert('失败');
-            alert(data.msg);
+            // console.log(data);
+
         }
-    }, 'json' );
+    })
+
+    // $.post( "./liquidation", {orderId : orderId}, function(data){
+    //     // console.log(data);
+    //     if(data.data.code == '0'){
+    //         alert("已平仓");
+    //         location.reload();
+    //     }else{
+    //         alert('失败');
+    //         alert(data.msg);
+    //     }
+    // }, 'json' );
 }
 
 
