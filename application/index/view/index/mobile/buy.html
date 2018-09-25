@@ -222,7 +222,43 @@
 			<li class="mui-row chose_aim">
 				<p class="mui-col-xs-3 mui-col-sm-3">持仓时间</p>
 				<div class="chose_item mui-col-xs-9 mui-col-sm-9">
-					<a class="bz_text" href="javascript:void(0);" style="color: black;">T+1|D</a>
+					<!--<a class="bz_text" href="javascript:void(0);" style="color: black;">T+1|D</a>-->
+					<p>
+						<select>
+							<option value="">自动递延</option>
+							<option value="">1天</option>
+							<option value="">2天</option>
+							<option value="">3天</option>
+							<option value="">4天</option>
+							<option value="">5天</option>
+							<option value="">6天</option>
+							<option value="">7天</option>
+							<option value="">8天</option>
+							<option value="">9天</option>
+							<option value="">10天</option>
+							<option value="">11天</option>
+							<option value="">12天</option>
+							<option value="">13天</option>
+							<option value="">14天</option>
+							<option value="">15天</option>
+							<option value="">16天</option>
+							<option value="">17天</option>
+							<option value="">18天</option>
+							<option value="">19天</option>
+							<option value="">20天</option>
+							<option value="">21天</option>
+							<option value="">22天</option>
+							<option value="">23天</option>
+							<option value="">24天</option>
+							<option value="">25天</option>
+							<option value="">26天</option>
+							<option value="">27天</option>
+							<option value="">28天</option>
+							<option value="">29天</option>
+							<option value="">30天</option>
+							<option value="">31天</option>
+						</select>
+					</p>
 				</div>
 				<p class="mui-col-xs-3 mui-col-sm-3">盈利分配</p>
 				<div class="chose_item mui-col-xs-9 mui-col-sm-9">
@@ -370,9 +406,9 @@
 <!--</script>-->
 <script>
     // 如果不在交易时间，不能点买
-                 if(!buy_moblie.isTradingTime() ){
-                     $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-                 }
+//                 if(!buy_moblie.isTradingTime() ){
+//                     $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+//                 }
     $(".Buy_Step").click(function () {
 
         //名字
