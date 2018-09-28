@@ -99,38 +99,37 @@
 				<p>
 					<span>持仓时间</span>
 					<select class="select_day">
-						<option value="">自动递延</option>
-						<option value="">1天</option>
-						<option value="">2天</option>
-						<option value="">3天</option>
-						<option value="">4天</option>
-						<option value="">5天</option>
-						<option value="">6天</option>
-						<option value="">7天</option>
-						<option value="">8天</option>
-						<option value="">9天</option>
-						<option value="">10天</option>
-						<option value="">11天</option>
-						<option value="">12天</option>
-						<option value="">13天</option>
-						<option value="">14天</option>
-						<option value="">15天</option>
-						<option value="">16天</option>
-						<option value="">17天</option>
-						<option value="">18天</option>
-						<option value="">19天</option>
-						<option value="">20天</option>
-						<option value="">21天</option>
-						<option value="">22天</option>
-						<option value="">23天</option>
-						<option value="">24天</option>
-						<option value="">25天</option>
-						<option value="">26天</option>
-						<option value="">27天</option>
-						<option value="">28天</option>
-						<option value="">29天</option>
-						<option value="">30天</option>
-						<option value="">31天</option>
+						<option value="1" selected>1天</option>
+						<option value="2">2天</option>
+						<option value="3">3天</option>
+						<option value="4">4天</option>
+						<option value="5">5天</option>
+						<option value="6">6天</option>
+						<option value="7">7天</option>
+						<option value="8">8天</option>
+						<option value="9">9天</option>
+						<option value="10">10天</option>
+						<option value="11">11天</option>
+						<option value="12">12天</option>
+						<option value="13">13天</option>
+						<option value="14">14天</option>
+						<option value="15">15天</option>
+						<option value="16">16天</option>
+						<option value="17">17天</option>
+						<option value="18">18天</option>
+						<option value="19">19天</option>
+						<option value="20">20天</option>
+						<option value="21">21天</option>
+						<option value="22">22天</option>
+						<option value="23">23天</option>
+						<option value="24">24天</option>
+						<option value="25">25天</option>
+						<option value="26">26天</option>
+						<option value="27">27天</option>
+						<option value="28">28天</option>
+						<option value="29">29天</option>
+						<option value="30">30天</option>
+						<option value="31">31天</option>
 					</select>
 				</p>
 
@@ -176,20 +175,19 @@
 	    		<!--<p><span>持仓时间</span><span>自动延期</span></p>-->
 	    		<p>
 					<span>持仓时间</span>
-					<select class="select_moon">
-						<option value="">自动递延</option>
-						<option value="">1个月</option>
-						<option value="">2个月</option>
-						<option value="">3个月</option>
-						<option value="">4个月</option>
-						<option value="">5个月</option>
-						<option value="">6个月</option>
-						<option value="">7个月</option>
-						<option value="">8个月</option>
-						<option value="">9个月</option>
-						<option value="">10个月</option>
-						<option value="">11个月</option>
-						<option value="">12个月</option>
+					<select class="select_month">
+						<option value="1" selected>1个月</option>
+						<option value="2">2个月</option>
+						<option value="3">3个月</option>
+						<option value="4">4个月</option>
+						<option value="5">5个月</option>
+						<option value="6">6个月</option>
+						<option value="7">7个月</option>
+						<option value="8">8个月</option>
+						<option value="9">9个月</option>
+						<option value="10">10个月</option>
+						<option value="11">11个月</option>
+						<option value="12">12个月</option>
 					</select>
 				</p>
 
@@ -298,61 +296,67 @@
 	});
 	
 	$(function(){
-
 		//按天配资
 		$(".con_one .con_p li").click(function(){
 			$(this).addClass('con_li').siblings().removeClass('con_li');
 			var a=parseInt($(".con_one .con_list p input").val());
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
-
 			$(".con_one .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
-//			$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-			$(".con_one .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
+			$(".con_one .con_list>p").eq(5).find("i").html((a*lossLine).toFixed(2));//警戒线
 			if(b==3){
-//             	$(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
              	$(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                abc = parseInt($(this).children("span").eq(0).find("i").html());
                 var levers = levers_3;
+                var Multiple = 3;
 			};
             if(b==4){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_4;
+                var Multiple = 4;
             };
             if(b==5){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                var levers = levers_5;
+                var levers = levers_5;//杠杆率
+                var Multiple = 5;//倍数
             };
             if(b==6){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_6;
+                var Multiple = 6;
             };
             if(b==7){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_7;
+                var Multiple = 7;
             };
             if(b==8){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_8;
+                var Multiple = 8;
             };
             if(b==9){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_9;
+                var Multiple = 9;
             };
             if(b==10){
 //                $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
                 $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers = levers_10;
+                var Multiple = 10;
             };
 			$(".con_one .con_list>p").eq(7).find("i").html(a);
 
 //			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
-			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee +levers *a/100).toFixed(2));
+            var day_numbers=$(".select_day option:selected").val();
+
+			$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee +levers*a*Multiple*day_numbers/100).toFixed(2));
 
 			var c=$(".con_one .con_list>p").eq(8).find("i").html();
 
@@ -368,60 +372,160 @@
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
 			$(".con_two .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
 //			$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-			$(".con_two .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
+			$(".con_two .con_list>p").eq(5).find("i").html((a*lossLine).toFixed(2));//警戒线
             if(b==3){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                var levers_month = levers_month_3;
+                var Multiple = 3;
+
             };
             if(b==4){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_4;
+                var Multiple = 4;
             };
             if(b==5){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_5;
+                var Multiple = 5;
             };
             if(b==6){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_6;
+                var Multiple = 6;
             };
             if(b==7){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_7;
+                var Multiple = 7;
             };
             if(b==8){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_8;
+                var Multiple = 8;
             };
             if(b==9){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                 var levers_month = levers_month_9;
+                var Multiple = 9;
             };
             if(b==10){
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
                 var levers_month = levers_month_10;
+                var Multiple = 10;
             };
 			$(".con_two .con_list>p").eq(7).find("i").html(a);
 
 //			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
-			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*delayFee*30*0.7+levers_month*a*30/100).toFixed(2));
+			$(".con_two .con_list>p").eq(8).find("i").html((levers_month*a*Multiple/100).toFixed(2));
 
 			var c=$(".con_two .con_list>p").eq(8).find("i").html();
 			var nc=parseFloat(c);
 			$(".con_two .con_spa span").eq(1).html(a+nc);
             $(".con_all").html(a+nc);
 			
-		})
+		});
+
+		//按天配资选择天数触发的事件，让管理费收取
+        $(".select_day").change(function () {
+            var day_numbers = $(".select_day option:selected").val();
+            var a=parseInt($(".con_one .con_list p input").val());
+			var Multiple =$('.con_one .con_p  .con_li>span').eq(0).find('i')[0].innerHTML;
+			var levers_multiple;
+            switch(Multiple)
+            {
+                case '3':
+					 levers_multiple = levers_3;
+                    break;
+                case '4':
+                     levers_multiple = levers_4;
+                    break;
+                case '5':
+                     levers_multiple = levers_5;
+                    break;
+                case '6':
+                     levers_multiple = levers_6;
+                    break;
+                case '7':
+                     levers_multiple = levers_7;
+                    break;
+                case '8':
+                     levers_multiple = levers_8;
+                    break;
+                case '9':
+                     levers_multiple = levers_9;
+                    break;
+                case '10':
+					 levers_multiple = levers_10;
+                    break;
+				default:
+                    levers_multiple = levers_3;
+            }
+            $(".con_one .con_list>p").eq(8).find("i").html((levers_multiple*a*Multiple*day_numbers/100).toFixed(2));
+            var c=$(".con_one .con_list>p").eq(8).find("i").html();
+            var nc=Number(c);
+            $(".con_one .con_spa span").eq(1).html(a+nc);
+            $(".con_all").html(a+nc);
+
+        });
+
+        //按月配资选择天数触发的事件，让管理费收取
+        $(".select_month").change(function () {
+            var month_numbers = $(".select_month option:selected").val();
+            var a=parseInt($(".con_two .con_list p input").val());
+            var Multiple =$('.con_two .con_p  .con_li>span').eq(0).find('i')[0].innerHTML;
+
+            switch(Multiple)
+            {
+                case '3':
+                    var levers_month = levers_month_3;
+                    break;
+                case '4':
+                    var levers_month = levers_month_4;
+                    break;
+                case '5':
+                    var levers_month = levers_month_5;
+                    break;
+                case '6':
+                    var levers_month = levers_month_6;
+                    break;
+                case '7':
+                    var levers_month = levers_month_7;
+                    break;
+                case '8':
+                    var levers_month = levers_month_8;
+                    break;
+                case '9':
+                    var levers_month = levers_month_9;
+                    break;
+                case '10':
+                    var levers_month = levers_month_10;
+                    break;
+                default:
+                    var levers_month =levers_month_3;
+            }
+            $(".con_two .con_list>p").eq(8).find("i").html((levers_month*a*Multiple*month_numbers/100).toFixed(2));
+            var c=$(".con_two .con_list>p").eq(8).find("i").html();
+            var nc=Number(c);
+            $(".con_two .con_spa span").eq(1).html(a+nc);
+            $(".con_all").html(a+nc);
+
+        })
+
+
+
 
 	});
+
+
 	
 	$(function(){
 		$(".tab li").click(function(){
@@ -446,60 +550,63 @@
 				var b=parseInt($(".con_one .con_li").find("i").eq(0).html());
 				$(".con_one .con_list>p").eq(4).find("i").html(a*b);
 //				$(".con_one .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-				$(".con_one .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
+				$(".con_one .con_list>p").eq(5).find("i").html((a*lossLine).toFixed(2));
                 if(b==3){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 0;
+                    var Multiple = 3;
                     var levers = levers_3;
+
                 };
                 if(b==4){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 1;
+                    var Multiple = 4;
                     var levers = levers_4;
                 };
                 if(b==5){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 2;
+                    var Multiple = 5;
                     var levers = levers_5;
                 };
                 if(b==6){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 3;
+                    var Multiple = 6;
                     var levers = levers_6;
                 };
                 if(b==7){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 4;
+                    var Multiple = 7;
                     var levers = levers_7;
                 };
                 if(b==8){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 5;
+                    var Multiple = 8;
                     var levers = levers_8;
                 };
                 if(b==9){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 6;
+                    var Multiple = 9;
                     var levers = levers_9;
                 };
                 if(b==10){
 //                    $(".con_one .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
                     $(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 7;
+                    var Multiple = 10;
                     var levers = levers_10;
 
                 };
 				$(".con_one .con_list>p").eq(7).find("i").html(a);
 
 //				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*18).toFixed(2));
-				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee+levers*a/100).toFixed(2));
+				//a*倍数*杠杆倍率%*天数(默认一天)
+                var day_number=$(".select_day option:selected").val();
+				$(".con_one .con_list>p").eq(8).find("i").html((a*b/10000*delayFee+levers*a*Multiple*day_number/100).toFixed(2));
 
 				var c=$(".con_one .con_list>p").eq(8).find("i").html();
 				var nc=Number(c);
@@ -528,66 +635,65 @@
 				$('.con_two .con_p').addClass('dis_list');
 				$(".con_two .con_p li").each(function(){
 				    $(this).find("i").eq(1).html(parseInt($(_this).val())*parseInt($(this).find("i").eq(0).html()));
-				    
 				});
 				var a=parseInt($(_this).val());
 				var b=parseInt($(".con_two .con_li").find("i").eq(0).html());
 				var ajax_html = $(".con_two .con_list>p").eq(4).find("i").html(a*b);
 //				$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-				$(".con_two .con_list>p").eq(5).find("i").html((a*b*lossLine).toFixed(2));
+				$(".con_two .con_list>p").eq(5).find("i").html((a*lossLine).toFixed(2));//警戒线
                 if(b==3){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
                     //倍数下标
-                    var Multiple =  $(".con_two .con_list>p").eq(6).find("i");
+                    var Multiple =  3;
                     var levers_month = levers_month_3;
                 };
                 if(b==4){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.2).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 1;
+                    var Multiple = 4;
                     var levers_month = levers_month_4;
                 };
                 if(b==5){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.16).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 2;
+                    var Multiple = 5;
                     var levers_month = levers_month_5;
                 };
                 if(b==6){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1333).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 3;
+                    var Multiple = 6;
                     var levers_month = levers_month_6;
                 };
                 if(b==7){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.11429).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 4;
+                    var Multiple = 7;
                     var levers_month = levers_month_7;
                 };
                 if(b==8){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.1).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 5;
+                    var Multiple = 8;
                     var levers_month = levers_month_8;
                 };
                 if(b==9){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.0889).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 6;
+                    var Multiple = 9;
                     var levers_month = levers_month_9;
                 };
                 if(b==10){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.08).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate).toFixed(2));
-                    var Multiple = 7;
+                    var Multiple = 10;
                     var levers_month = levers_month_10;
                 };
 				$(".con_two .con_list>p").eq(7).find("i").html(a);
 
 //				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
-				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*delayFee*30*0.7+a*levers_month*30/100).toFixed(2));
+				$(".con_two .con_list>p").eq(8).find("i").html((a*levers_month*Multiple/100).toFixed(2));
 
 				var c=$(".con_two .con_list>p").eq(8).find("i").html();
 				var nc=Number(c);
@@ -648,19 +754,18 @@
 //        });
         //按日配资
         $(" .con_one .con_btn input").click(function () {
-        	var day_select=$(".select_day option:selected").text();
-        	console.log(day_select);
+        	var day_select=$(".select_day option:selected").val(); //所选中的天数
             var Con_Lists = $(".con_one .con_list>p").eq(4).find("i").html();
             var beishu =$(".con_one .con_li span").eq(0).find("i").html()-2;
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
                 url: "{:url('index/index/ajax_html')}",
-                data: {'Con_Lists':Con_Lists,'beishu':beishu},
+                data: {'Con_Lists':Con_Lists,'beishu':beishu,'day_select':day_select},
                 dataType: 'json',
                 success: function (data) {
                     console.log(data);
-//                    window.location.href = "./buy";
+                    window.location.href = "./buy";
                 },
                 fail: function (err, status) {
                     console.log(2)
@@ -668,22 +773,18 @@
             })
         });
         //按月配资
-
-        $(" .con_two .con_btn input").click(function () {
-        	var moon_select=$(".select_moon option:selected").text();
-        	console.log(moon_select);
+		$(" .con_two .con_btn input").click(function () {
+        	var month_select=$(".select_month option:selected").val();//选中的月数的值
             var ajax_html = $(".con_two .con_list>p").eq(4).find("i").html(); //总配资的值
             var yuebeishu =$(".con_two .con_li span").eq(0).find("i").html()-2;
-
             $(".box").css("display","block");
             $.ajax({
                 type: 'POST',
                 url: "{:url('index/index/ajax_yue')}",
-                data: {'ajax_html':ajax_html,'yuebeishu':yuebeishu},
+                data: {'ajax_html':ajax_html,'yuebeishu':yuebeishu,'month_select':month_select},
                 dataType: 'json',
                 success: function (data) {
-
-//                    window.location.href = "./buy";
+                    window.location.href = "./month_buy";
                 },
                 fail: function (err, status) {
                     console.log(3)
@@ -739,7 +840,7 @@
 			<div><a href="{:url('/buy')}">确认</a></div>
 		</div>
 	</div>
-	<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>
+	<!--<script language="javascript" src="http://chat.livechatvalue.com/chat/chatClient/monitor.js?jid=5421328761&companyID=1037386&configID=75733&codeType=custom"></script>-->
 </body>
 
 </html>

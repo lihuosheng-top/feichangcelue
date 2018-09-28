@@ -63,7 +63,6 @@ class Index extends Home
             $guaranteeFee = Db::name('stock_order')->field("sum(guaranteeFee)")->where('memberId', $id)->where('status', 1)->where('isFreetrial',0)->select();
             $guaranteeFee = $guaranteeFee[0]['sum(guaranteeFee)'];
             $guaranteeFee = number_format($guaranteeFee, 2, '.', '');
-
             /*******动态资产，可用余额，冻结资金***********************/
             //TODO：持仓盈利(开始)
             $this->real_buy(0);
@@ -83,7 +82,7 @@ class Index extends Home
             //TODO:实盘可买(结束)
             //TODO:余额
             $balance = Db::table("xh_member")->field('usableSum')->where('id', $id)->find();
-//        证卷市值(以第一个市值为主，没有买的话就为0)
+           /*证卷市值(以第一个市值为主，没有买的话就为0)*/
             $market_value_code = Db::table("xh_stock_order")->field('stockCode')->where('memberId', $id)->where('status', 1)->select();
             //可用资金
             $peizi_price = $_SESSION["ajax_html"];
@@ -106,7 +105,7 @@ class Index extends Home
             }
 
         }
-//        分配数据
+        /*分配数据*/
         if (is_mobile_request()) {
             //获取 上证指数 深证成指 创业板指
             $res_str = (new Alistock())->stockIndex();
@@ -127,8 +126,6 @@ class Index extends Home
 
         return view('index');
     }
-    //实盘可买
-
 
     /**
      **************李火生*******************
@@ -144,7 +141,6 @@ class Index extends Home
         foreach ($all_code as $k => $v) {
             $code = $v['stockCode'];
             $re[] = (new Common())->getMarketValueBycode($code);
-//            $result =$res['info_arr'][3];
         }
         $lis = Db::field('xh_stock_order.*, xh_shares.name as stockName, xh_shares.market')->table('xh_stock_order, xh_shares')
             ->where(" xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=$memberId and isFreetrial=$isFreetrial and status = 1")
@@ -193,7 +189,7 @@ class Index extends Home
 
     /**
      **************李火生*******************
-     * 上证指数接口的数据获取（）
+     * 上证指数接口的数据获取
      **************************************
      */
     public function  stock_exponential_sh(Request $request){
@@ -207,16 +203,6 @@ class Index extends Home
             return $this->ajax_success("返回数据",$information);
         }
     }
-
-
-
-
-
-
-
-
-
-
 
 
     /**
@@ -392,21 +378,16 @@ class Index extends Home
                 )
             );
         }
-        //$this->buy_ajax(0);
         //默认一开始界面是这样显示
         $cod = '000001';
         $res = (new Common())->getMarketValueBycode($cod);
         $info_arr = $res['info_arr'];
         $all_url_info = $res['time_url_info'];
         $day_url_info = $res['day_url_info'];
-
         $this->assign('code', $cod);
         $this->assign('info_arr', $info_arr);
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
-
-
-
         return view('index/mobile/month_buy');
     }
 
@@ -534,7 +515,6 @@ class Index extends Home
                 )
             );
         }
-//        $this->buy_ajax(1);
         //默认一开始界面是这样显示
         $freebleSum = Db::name("member")->field('freebleSum')->where('id',$member['id'])->find();
         $freebleSum =$freebleSum['freebleSum'];
@@ -548,7 +528,6 @@ class Index extends Home
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
         $this->assign('freebleSum',$freebleSum);
-
         return view('index/mobile/freetrial');
     }
 
@@ -600,9 +579,6 @@ class Index extends Home
     //感恩回馈
     public function gift()
     {
-//        $article = Db::table("xh_article")->where("id = 12")->find();
-//        $this->assign("d", $article);
-
         return view('index/mobile/gift');
     }
 
@@ -626,7 +602,6 @@ class Index extends Home
             $this->assign('uid',$uid);
             return view('index/mobile/reg');
         }
-
         return view('reg');
     }
 
@@ -656,7 +631,7 @@ class Index extends Home
 		/*二维码*/
 		$share_code ='http://b.bshare.cn/barCode?site=weixin&url='.$share_url;
         /*推广详情*/
-        //推广人数，注册人数
+        /*推广人数，注册人数*/
         $selete_invite_num =Db::table('xh_member')->where('inviterId',$member_id)->count();
         if(!empty($selete_invite_num)){
             /*统计*/
@@ -697,7 +672,6 @@ class Index extends Home
     public function logout()
     {
         unset($_SESSION['member']);
-//		$this->redirect("index");
         $this->success("退出成功", url("/"));
     }
 
@@ -732,6 +706,11 @@ class Index extends Home
 
     }
 
+    /**
+     **************李火生*******************
+     * 注册操作
+     **************************************
+     */
     public function doReg()
     {
         $nick_name = trim($_POST['nick_name']);
@@ -1032,7 +1011,6 @@ class Index extends Home
         $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
         $this->assign('delayLineRate', getSysParamsByKey("delayLineRate")); //递延条件是保证金的0.75倍
         $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
-
         /**
          * 按天杠杆倍数利息
          */
@@ -1059,40 +1037,9 @@ class Index extends Home
         $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
         $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
         $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
-
         return view("index/mobile/pz");
     }
 
-    /**
-     * @param Request $request
-     */
-
-//    public function ajax_html(Request $request)
-//    {
-//        if ($request->isPost("post.")) {
-//            $ajax_html = $request->param('ajax_html');
-//            $Con_Lists = $request->param('Con_Lists');
-//            $beishu = $request->param('beishu');
-//            $performance_bond = $request->param('performance_bond');
-//            $data = round(($ajax_html / 10000), 2);
-//            $DataCon = round(($Con_Lists / 10000), 2);
-//            if ($ajax_html != 0) {
-//                $_SESSION["ajax_html"] = $data;
-//            }
-//            if ($Con_Lists != 0) {
-//                $_SESSION["Con_Lists"] = $DataCon;
-//            }
-//            if ($beishu != 0) {
-//                $_SESSION["beishu"]  = $beishu;
-//            }
-//            if($performance_bond !=0)
-//            {
-//                $_SESSION["performance"] =$performance_bond;
-//            }
-//            $this->ajax_success("获取成功", array("data" => $_SESSION["ajax_html"], "DataCon" => $Con_Lists,"beishu"=>$beishu,"performance_bond"=>$performance_bond));
-//        }
-//
-//    }
 
     /**
      **************李火生*******************
@@ -1111,8 +1058,12 @@ class Index extends Home
             if($_SESSION['ajax_html']){
                 unset($_SESSION['ajax_html']);
             }
+            if($_SESSION['day_select']){
+                unset($_SESSION['month_select']);
+            }
             $Con_Lists = $request->param('Con_Lists');
             $beishu = $request->param('beishu');
+            $day_select =$request->param('day_select');
             $DataCon = round(($Con_Lists / 10000), 2);
             if ($Con_Lists != 0) {
 //                session(array('Con_Lists'=>$DataCon,'expire'=>600));
@@ -1121,7 +1072,10 @@ class Index extends Home
             if ($beishu != 0) {
                 $_SESSION["beishu"]  = $beishu;
             }
-            $this->ajax_success("获取成功", array("data" => $_SESSION["Con_Lists"], "DataCon" => $Con_Lists,"beishu"=>$beishu));
+            if($day_select){
+                $_SESSION['day_select'] =$day_select;
+            }
+            $this->ajax_success("获取成功", array("data" => $_SESSION["Con_Lists"], "DataCon" => $Con_Lists,"beishu"=>$beishu,"day_select"=>$day_select));
         }
 
     }
@@ -1141,9 +1095,13 @@ class Index extends Home
         if($_SESSION['Con_Lists']){
             unset($_SESSION['Con_Lists']);
         }
+        if($_SESSION['day_select']){
+            unset($_SESSION['day_select']);
+        }
         if ($request->isPost("post.")) {
             $ajax_html = $request->param('ajax_html');
             $yuebeishu =$request->param('yuebeishu');
+            $month_select =$request->param('month_select');
             $data = round(($ajax_html / 10000), 2);
             if ($ajax_html != 0) {
                 $_SESSION["ajax_html"] = $data;
@@ -1152,7 +1110,10 @@ class Index extends Home
             {
                 $_SESSION["yuebeishu"] =$yuebeishu;
             }
-            $this->ajax_success("获取成功", array("data" => $_SESSION["ajax_html"],"yuebeishu"=>$yuebeishu));
+            if($month_select){
+                $_SESSION['month_select'] =$month_select;
+            }
+            $this->ajax_success("获取成功", array("data" => $_SESSION["ajax_html"],"yuebeishu"=>$yuebeishu,"month_select"=>$_SESSION['month_select']));
         }
 
 
@@ -1271,9 +1232,4 @@ class Index extends Home
     public  function  index_information_second(){
         return view('index_information_second');
     }
-
-
-
-
-
 }

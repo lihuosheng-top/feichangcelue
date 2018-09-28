@@ -1,5 +1,6 @@
 /**
- * Created by wo on 2017/7/18.
+ * lihuosheng
+ * @param orderId
  */
 function doLiquidation(orderId){
     if( orderId <= 0){
@@ -21,6 +22,9 @@ function doLiquidation(orderId){
             if(data.status ==1){
                 alert(data.info);
                 location.reload();
+            }
+            if(data.code ==0){
+                alert(data.msg);
             }
         },
         error: function(data){

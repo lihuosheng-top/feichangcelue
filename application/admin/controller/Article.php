@@ -38,7 +38,7 @@ class Article extends Admin
             ->addColumns([ // 批量添加列
                 ['id', 'ID'],
                 ['src', '图片地址'],
-                ['href', '超链接'],
+//                ['href', '超链接'],
             ])
             ->addColumn('type', '类型', 'status', '', [1=>'PC', 2=>'手机']) //type为数据库字段名, status为列的属性
             ->addColumns([
@@ -93,9 +93,9 @@ class Article extends Admin
         return ZBuilder::make('form')
             ->addImage('image_id', '图片')
             ->addSelect('type', '选择类型', '请选择类型',  $imagesTypeArray)
-            ->addFormItems([
-                ['text', 'href', '超链接'],
-            ])
+//            ->addFormItems([
+//                ['text', 'href', '超链接'],
+//            ])
             ->setFormData($info)
             ->fetch();
     }

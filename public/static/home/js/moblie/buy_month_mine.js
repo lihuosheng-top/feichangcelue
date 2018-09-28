@@ -1,5 +1,5 @@
 //选中的股票代码
- var selectedCode = "000001";
+var selectedCode = "000001";
 var stopShare=true;
 
 function updateMoneyRate(){
@@ -21,6 +21,7 @@ function updateMoneyRate(){
 
 
 var buy_moblie={
+
     /**
      * 初始化
      */
@@ -64,8 +65,8 @@ var buy_moblie={
             $('.share_title,.chart_box,.stock-price,#buy_step1').hide();
             $('#item2').hide();
 
-                var keywords=$(this).val().toLowerCase(); //在input中输入时
-                $(this).off('keyup').on('keyup',function(){//关键词
+            var keywords=$(this).val().toLowerCase(); //在input中输入时
+            $(this).off('keyup').on('keyup',function(){//关键词
                 //向后台发送查询数据,并渲染列表
                 base.searchCue(keywords);
             })
@@ -88,7 +89,7 @@ var buy_moblie={
         //金额的点击事件
         $("#buy_price_ul > li").on('tap',function(e){
             //点击金额高亮
-		    $(this).find('a').addClass("chose-active").end().siblings("li").find('a').removeClass("chose-active");
+            $(this).find('a').addClass("chose-active").end().siblings("li").find('a').removeClass("chose-active");
 
             var price = parseInt($(this).find('a').html());
 //		    //触发止盈
@@ -114,21 +115,12 @@ var buy_moblie={
 
         });
 
+        // TODO: 触发止损
         //触发止损的点击事件
         $("#stop-loss_ul > a").on('tap',function(e){
             //当前点击高亮
             $(this).addClass("chose-active").siblings("a").removeClass("chose-active");
-            var interest_id =$(this)[0].id.split('_')[1];
-            var index_num= $(this)[0].id.split('_')[2];
-            if(interest_id ==null){
-                interest_id =levers_3;
-                index_num =3;
-            }
-            var input_price =$('#buy_number').val();
-            //TODO:6
-            // console.log(interest_id*input_price/3);
-            //公式：配资得的金额*每天的收费+倍数杠杆/100*配资得的金额*10000/倍数
-             $("#publicFee>span").html((input_price*delayFee+interest_id*input_price*100/index_num).toFixed(2) );
+
             var index = $(this).index();
             //找到之前高亮的金额
             var buy_price = $('#buy_number').val();
@@ -157,14 +149,10 @@ var buy_moblie={
             }
             //改变履约保证金价格
             $("#guaranteeFee").html(ly);
-            //总计
-            var total= ly+parseFloat($("#publicFee>span").html()); //总金
-            $('#total').html(total);
+
 //			//递延条件
 //		    var delay_line = ly - 600 * buy_price;
 //		    $("#delay_line").html(-delay_line);
-
-
 
             //根据之前高亮的价格改变触发止损价格
             $("#stop-loss_ul > a").each(function(i, o){
@@ -172,11 +160,50 @@ var buy_moblie={
                 var index_num= i+3;
                 stop_loss = parseInt(stop_loss);
                 $(o).html(-stop_loss);
-                $(o).attr('id','inter_'+levers_data[i]+'_'+index_num);
+                $(o).attr('id','inter_'+levers_month_data[i]+'_'+index_num);
             });
+
+            //获取天数的值
+            var month_number=$(".select_month option:selected").val();
+            var interest_id =$(this)[0].id.split('_')[1];
+            var index_num= $(this)[0].id.split('_')[2];
+            // if(interest_id ==null){
+            //     interest_id =levers_3;
+            //     index_num =3;
+            // }
+            var input_price =$('#buy_number').val();
+            //TODO:6
+
+            //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
+            if(interest_id !==null){
+                // $("#publicFee>span").html((input_price*delayFee+interest_id*input_price*100/index_num).toFixed(2) );
+                $("#publicFee>span").html((interest_id*input_price*month_number*100).toFixed(2) );
+                $("#check-surplus_ul>a").html((input_price/index_num *10000*lossLine).toFixed(2)); //警戒线
+            }
+            //总计
+            var total= ly+parseFloat($("#publicFee>span").html()); //总金
+            $('#total').html(total);
 
         });
 
+        //按天配资选择天数触发的事件，让管理费收取
+        $(".select_month").change(function () {
+            var month_numbers = $(".select_month option:selected").val();
+            //获取天数的值
+            var interest_id =$('#stop-loss_ul .chose-active')[0].id.split('_')[1]; //倍率
+            var index_num= $('#stop-loss_ul .chose-active')[0].id.split('_')[2]; //倍数
+            var input_price =$('#buy_number').val(); //配资的金额（倍数*保证金需要/10000）
+            //公式：倍率杠杆/100*配资得的金额*10000/倍数*天数
+            if(interest_id !==null){
+                $("#publicFee>span").html((interest_id*input_price*month_numbers*100).toFixed(2) );
+                $("#check-surplus_ul>a").html((input_price/index_num *10000*lossLine).toFixed(2)); //警戒线
+            }
+            //保证金
+            var bond = parseInt(input_price*10000/index_num);
+            //总计(保证金+管理费)
+            var total= bond + parseFloat($("#publicFee>span").html()); //总金
+            $('#total').html(total);
+        })
 
         $(function(){
             //获取股票实时数据和分时数据。每几秒钟就刷新一次
@@ -231,7 +258,7 @@ var buy_moblie={
                 freshTimeInterval = 60 * 1000;
             }
             //获取股票实时数据
-             buy_moblie.getStockInfo();
+            buy_moblie.getStockInfo();
             // buy_moblie.searchCue();
 
         }, 1000 );
@@ -335,78 +362,81 @@ var buy_moblie={
             var ashareCode=$(this).find('span').eq(0).html();//股票编号
             var ashareName=$(this).find('span').eq(1).html();//股票名
             // alert(ashareCode);
-                $.ajax({
-                    url:"./index/Index/month_buy",
-                    type:"post",
-                    data:{code:ashareCode},
-                    dataType:'json',
-                    success:function(data){
-                        if(data.status == 1){
-                            // console.log(data.info);
-                            var info_3 = data.info.info_arr[3];    //当前价格
-                            var info_31 = data.info.info_arr[31];  //涨跌
-                            var info_32 = data.info.info_arr[32];  //涨跌%
-                            //卖5到卖1(先上面一排再下面一排数据)
-                            var info_27 = data.info.info_arr[27];
-                            var info_25 = data.info.info_arr[25];
-                            var info_23 = data.info.info_arr[23];
-                            var info_21 = data.info.info_arr[21];
-                            var info_19 = data.info.info_arr[19];
-                            var info_28 = data.info.info_arr[28];
-                            var info_26 = data.info.info_arr[26];
-                            var info_24 = data.info.info_arr[24];
-                            var info_22 = data.info.info_arr[22];
-                            var info_20 = data.info.info_arr[20];
-                            //买1到买5(先上面一排再下面一排数据)
-                            var info_9 = data.info.info_arr[9];
-                            var info_11 = data.info.info_arr[11];
-                            var info_13 = data.info.info_arr[13];
-                            var info_15 = data.info.info_arr[15];
-                            var info_17 = data.info.info_arr[17];
-                            var info_10 = data.info.info_arr[10];
-                            var info_12 = data.info.info_arr[12];
-                            var info_14 = data.info.info_arr[14];
-                            var info_16 = data.info.info_arr[16];
-                            var info_18 = data.info.info_arr[18];
 
-                            var time_img =data.info.time_img;       //分时K线图
-                            var day_img =data.info.day_img;         //分日K线图
 
-                            $(".J_price").html(info_3);            //当前价格
-                            $(".J_num_1").html(info_31);           //涨跌
-                            $(".J_num_2").html(info_32);           //涨跌%
-                            $(".time_img").attr("src",time_img);   //时K线
-                            $(".day_img").attr("src",day_img);     //日K线
-                            //卖5到卖1(上面一排)
-                            $(".info_27").html(info_27);
-                            $(".info_25").html(info_25);
-                            $(".info_23").html(info_23);
-                            $(".info_21").html(info_21);
-                            $(".info_19").html(info_19);
-                            //卖5到卖1(下面一排)
-                            $(".info_28").html(info_28);
-                            $(".info_26").html(info_26);
-                            $(".info_24").html(info_24);
-                            $(".info_22").html(info_22);
-                            $(".info_20").html(info_20);
-                            //买1到买5(上面一排数据)
-                            $(".info_9").html(info_9);
-                            $(".info_11").html(info_11);
-                            $(".info_13").html(info_13);
-                            $(".info_15").html(info_15);
-                            $(".info_17").html(info_17);
-                            //买1到买5(下面一排数据)
-                            $(".info_10").html(info_10);
-                            $(".info_12").html(info_12);
-                            $(".info_14").html(info_14);
-                            $(".info_16").html(info_16);
-                            $(".info_18").html(info_18);
+            $.ajax({
+                url:"./index/Index/buy",
+                type:"post",
+                data:{code:ashareCode},
+                dataType:'json',
+                success:function(data){
+                    if(data.status == 1){
 
-                        }
-                    },
-                    error:function (data) {
-                        console.log("错误");
+                        // console.log(data.info);
+                        var info_3 = data.info.info_arr[3];    //当前价格
+                        var info_31 = data.info.info_arr[31];  //涨跌
+                        var info_32 = data.info.info_arr[32];  //涨跌%
+                        //卖5到卖1(先上面一排再下面一排数据)
+                        var info_27 = data.info.info_arr[27];
+                        var info_25 = data.info.info_arr[25];
+                        var info_23 = data.info.info_arr[23];
+                        var info_21 = data.info.info_arr[21];
+                        var info_19 = data.info.info_arr[19];
+                        var info_28 = data.info.info_arr[28];
+                        var info_26 = data.info.info_arr[26];
+                        var info_24 = data.info.info_arr[24];
+                        var info_22 = data.info.info_arr[22];
+                        var info_20 = data.info.info_arr[20];
+                        //买1到买5(先上面一排再下面一排数据)
+                        var info_9 = data.info.info_arr[9];
+                        var info_11 = data.info.info_arr[11];
+                        var info_13 = data.info.info_arr[13];
+                        var info_15 = data.info.info_arr[15];
+                        var info_17 = data.info.info_arr[17];
+                        var info_10 = data.info.info_arr[10];
+                        var info_12 = data.info.info_arr[12];
+                        var info_14 = data.info.info_arr[14];
+                        var info_16 = data.info.info_arr[16];
+                        var info_18 = data.info.info_arr[18];
+
+                        var time_img =data.info.time_img;       //分时K线图
+                        var day_img =data.info.day_img;         //分日K线图
+
+                        $(".J_price").html(info_3);            //当前价格
+                        $(".J_num_1").html(info_31);           //涨跌
+                        $(".J_num_2").html(info_32);           //涨跌%
+                        $(".time_img").attr("src",time_img);   //时K线
+                        $(".day_img").attr("src",day_img);     //日K线
+                        //卖5到卖1(上面一排)
+                        $(".info_27").html(info_27);
+                        $(".info_25").html(info_25);
+                        $(".info_23").html(info_23);
+                        $(".info_21").html(info_21);
+                        $(".info_19").html(info_19);
+                        //卖5到卖1(下面一排)
+                        $(".info_28").html(info_28);
+                        $(".info_26").html(info_26);
+                        $(".info_24").html(info_24);
+                        $(".info_22").html(info_22);
+                        $(".info_20").html(info_20);
+                        //买1到买5(上面一排数据)
+                        $(".info_9").html(info_9);
+                        $(".info_11").html(info_11);
+                        $(".info_13").html(info_13);
+                        $(".info_15").html(info_15);
+                        $(".info_17").html(info_17);
+                        //买1到买5(下面一排数据)
+                        $(".info_10").html(info_10);
+                        $(".info_12").html(info_12);
+                        $(".info_14").html(info_14);
+                        $(".info_16").html(info_16);
+                        $(".info_18").html(info_18);
+
                     }
+                },
+                error:function (data) {
+                    console.log("错误");
+                }
             });
 
 
@@ -462,7 +492,7 @@ var buy_moblie={
         $('#buy_step1').html('买入').attr('tapEvent',true).css({'background':'var(--color_red)'});
 
         $.post("./index/Alistock/getStockInfo", {code:selectedCode}, function(data){
-                // console.log(data);
+            // console.log(data);
             if(data.code != '0'){
                 return;
             }
@@ -471,7 +501,7 @@ var buy_moblie={
             $('.title_l').find('#stockName').html(map.info_arr[1]);//招商银行
             $('.title_l').find('#stockNum').html(selectedCode);
             //渲染页面价格
-             var nowPrice=(map.info_arr[3]-0).toFixed(2);
+            var nowPrice=(map.info_arr[3]-0).toFixed(2);
             $("#nowPrice").html(nowPrice);
             $("#num1").html(map.info_arr[31]);
             $("#num2").html(map.info_arr[32] + "%");
@@ -539,43 +569,6 @@ var buy_moblie={
             $(".info_16").html(info_16);
             $(".info_18").html(info_18);
 
-            //卖⑤...卖①...买①...买⑤
-            // var bs = ["sell5_m", "sell5_n", "sell4_m", "sell4_n", "sell3_m", "sell3_n", "sell2_m", "sell2_n", "sell1_m", "sell1_n",
-            //     "buy1_m", "buy1_n", "buy2_m", "buy2_n", "buy3_m", "buy3_n", "buy4_m", "buy4_n", "buy5_m", "buy5_n"];
-            //
-            //
-            // $("#stock-price li > b, .stock-price li > i").each(function(i, o){
-            //     var t = map[bs[i]];
-            //     if(i % 2 == 1){
-            //         t = parseInt(map[bs[i]] / 100);
-            //     }else{
-            //         t = Number(t).toFixed(2);
-            //     }
-            //     $(o).html(t);
-            // });
-
-//	        //今开 最高 ...... 成交额
-//	        bs = ['openPrice', 'turnover', 'todayMax', 'todayMin', 'highLimit', 'downLimit', 'tradeNum', 'tradeAmount' ];
-//	        $("#stock-info li > span.r ").each(function(i, o){
-//	            if(bs[i] == 'tradeNum'){
-//	                $(o).html(map[bs[i]] / 100 + "手");
-//	            }else if(bs[i] == 'tradeAmount'){
-//	                $(o).html(map[bs[i]] / 10000 + "万");
-//	            }else{
-//	                $(o).html(map[bs[i]]);
-//	            }
-//	        });
-
-            // buy_moblie.updateStockNumber();
-
-            //停牌判断
-            // stopShare=true;
-            // if(Number(map.openPrice).toFixed(2)=='0'||Number(map.openPrice).toFixed(2)=='0.00'){
-            //     $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
-            //     stopShare=false;
-            //     updateMoneyRate();
-            //     return;
-            // }
 
 
             /*停牌判断*/
@@ -586,7 +579,7 @@ var buy_moblie={
                 updateMoneyRate();
                 return;
             }
-                // console.log(map.info_arr[48]);
+            // console.log(map.info_arr[48]);
             //不得购买首日上市新股（或复牌首日股票）等当日不设涨跌停板限制的股票；低价股不能买
             if(Number(map.info_arr[48]).toFixed(2)==null ||Number(map.info_arr[47]).toFixed(2)==null){
                 $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
@@ -600,316 +593,7 @@ var buy_moblie={
 
         }, 'json')
     },
-    /**
-     * 获取分时数据
-     */
 
-    // getTimeLine:function (){
-    //     $.post("./index/Alistock/getTimeLine", {code:selectedCode}, function(data){
-    //         if(data.showapi_res_code != '0' || data.showapi_res_body.ret_code != '0'){
-    //             return;
-    //         }
-    //
-    //         var arr = data.showapi_res_body.dataList[0].minuteList;
-    //         //二维数组里面有平均价，现在价格，时间（分钟），成交量等信息
-    //         var chartVal = [];
-    //         //遍历
-    //         $.each(arr, function () {
-    //             var inVal = [];
-    //             var price=this.nowPrice;
-    //             //avg_price:6.456,price:6.45,time:"09:30",totalAmount:7046840.3080199985,totalVolume:1094569.7899999998,volume:32666.5
-    //             if (price >= 0) {
-    //                 //现在日期2017-07-18
-    //                 var dVal = new Date().format("yyyy-MM-dd");// dVal = "2017-07-18"
-    //                 //分割现在日期字符串
-    //                 var s1arr1 = dVal.split("-");//s1arr1 = ["2017", "07", "18"]
-    //                 var s1arr2=this.time.substring(0,2)+':'+this.time.substring(2,4);
-    //                 s1arr2 = s1arr2.split(":");//s1arr2 = ["09", "36"]
-    //                 if (s1arr2.length == 2) {
-    //                     s1arr2.push("00");//s1arr2 = ["09", "36", "00"]
-    //                 }
-    //                 //获取毫秒数
-    //                 //rVal = 1500341760000
-    //                 var rVal = new Date(s1arr1[0], s1arr1[1] - 1, s1arr1[2], s1arr2[0], s1arr2[1], s1arr2[2]).getTime();
-    //                 //毫秒加进数组
-    //                 inVal.push(rVal);
-    //                 //价格加进数组
-    //                 inVal.push(price);
-    //                 //数组加进chartVal数组
-    //                 chartVal.push(inVal);
-    //                 //现在有180多个价格>0的二维数组，数组【0】是毫秒数，【1】是价格
-    //             }
-    //             //console.log(inVal);
-    //             //console.log(chartVal);
-    //         });
-    //         var yestclose = data.showapi_res_body.dataList[0].yestclose;
-    //         //yestclose = "25.11"，昨天收盘价
-    //
-    //         //dataList是几百个二维数组，name是时间，value是数组，包括【0】时间和【1】价格
-    //         //绘制分时图
-    //         var dataList = { "records": chartVal, "y_close": yestclose };
-    //         initTimeLine.chartLine.init('#chart',dataList );
-    //
-    //         $('.loader').hide();
-    //
-    //     }, 'json');
-    // },
-
-    /**
-     * 根据股票实时价格 渲染购买股票标题和价格，更新弹出层的交易数量
-     */
-//     updateStockNumber:function (num){
-//         //渲染购买股票标题和价格
-//         $("#t_stock_name").html($("#stockName").html());//标题
-//         //确认购买的金额
-//         var t_principal = parseInt($('#buy_number').val()) ;
-//         if($('#buy_number').val()==''||$('#buy_number').val()=='0'){t_principal=1}
-//         //现在价格
-//         var nowPrice = parseFloat( $("#nowPrice").html() );
-//         //交易数量xx手
-//         var amount=t_principal;
-//         amount=parseInt(amount * 10000 / nowPrice / 100);
-//         var html='交易品种：'+$("#stockName").html()+'\n交易本金：'+t_principal+'万元'+"\n交易数量："+amount+'手'
-//         if(num==2){
-//             mui.confirm(html,'提示',['确认','取消'],function(e){
-//                 if(e.index==0){
-//                     //点买弹出层的确定按钮
-//                     var params = {};
-//                     params['stockCode'] = $("#stockNum").html();
-//                     //确认购买的金额
-//                     params['dealAmount'] = t_principal;
-//                     //触发止盈
-//                     params['surplus'] = parseInt($("#check-surplus_ul>a").html());
-//                     //触发止损
-//                     params['loss'] = parseInt($("#stop-loss_ul>a.chose-active").html());
-//                     //交易综合费
-//                     params['publicFee'] = parseInt($("#publicFee>span").html());
-//                     //履约保证金
-//                     params['guaranteeFee'] = parseInt($("#guaranteeFee").html());
-//                     //递延条件（履约保证金-6000）
-//                     params['delayLine'] = Math.abs( parseInt( params['loss']  * delayLineRate ) );
-//                     //递延费
-//                     var delay_fee=t_principal * delayFee;
-//                     params['delayFee'] = delay_fee;
-//                     $.post("/index/ucenter/stockBuy", params, function(data){
-// //					    	console.dir(params);
-//                         if(data.code == '0'){
-//                             mui.alert("交易成功");
-//                             location.href = "/freetrialSell.html";
-//                         }else{
-//                             mui.alert(data.msg);
-//                         }
-//                     }, 'json');
-//
-//                 }
-//             });
-//         }
-//     },
-
-
-    /**
-     * 获取K线图的数据（更新股票K线图）
-     */
-
-//     initKChart:function (){
-//
-//         //selectedCode为默认的平安银行或者传入的值
-// //	var selectedCode=selectedCode||600036;
-//         $.post("./index/Alistock/getKLine", {code:selectedCode}, function(data){
-//             if(data.showapi_res_code != '0' || data.showapi_res_body.ret_code != '0'){
-//                 return;
-//             }
-//             var dataList = data.showapi_res_body.dataList;
-//             var data0 = [];
-//             for(var i = 0; i < dataList.length; i++){
-//                 var day = dataList[i]['time'];
-//                 day = day.substring(0,4) + "/" + day.substring(4,6) + "/" + day.substring(6,8);
-//                 data0[i] = [day, dataList[i]['open'], dataList[i]['close'], dataList[i]['min'], dataList[i]['max']];
-//             }
-//             //绘制K线图
-//             buy_moblie.setKChartData(data0);
-//             //loading
-//             $('.loader').hide();
-//         }, 'json');
-//     },
-
-    /**
-     * 为绘制k线图函数服务，分割数据
-     * @param {Object} rawData
-     */
-    // splitData:function (rawData) {
-    //     var categoryData = [];
-    //     var values = []
-    //     for (var i = 0; i < rawData.length; i++) {
-    //         categoryData.push(rawData[i].splice(0, 1)[0]);
-    //         values.push(rawData[i])
-    //     }
-    //     return {
-    //         categoryData: categoryData.reverse(),
-    //         values: values.reverse()
-    //     };
-    // },
-
-    /**
-     * 绘制K线图函数
-     * @param {Object} dataArray
-     */
-//     setKChartData:function (dataArray) {
-//
-// //---K线图
-//         //初始化K线图
-//         var myChartK = echarts.init(document.getElementById('chartK'));
-//         // 数据意义：开盘(open)，收盘(close)，最低(lowest)，最高(highest)
-//         var data0 = buy_moblie.splitData(dataArray);
-//
-//         option = {
-//             title: {
-//                 text: '',
-//                 left: 0
-//             },
-//             tooltip: {
-//                 trigger: 'axis',
-//                 axisPointer: {
-//                     type: 'cross'
-//                 },
-//                 formatter:function(data){
-//                     var dom='开盘价'+data[0].value[1]+'</br>';
-//                     dom+='收盘价'+data[0].value[2]+'</br>';
-//                     dom+='最低价'+data[0].value[3]+'</br>';
-//                     dom+='最高价'+data[0].value[4];
-//                     return dom
-//                 }
-//             },
-//             legend: {
-//                 data: ['日K', 'MA5', 'MA10', 'MA20', 'MA30']
-//             },
-//             grid: {
-//                 left: '10%',
-//                 right: '10%',
-//                 bottom: '15%'
-//             },
-//             xAxis: {
-//                 type: 'category',
-//                 data: data0.categoryData,
-//                 scale: true,
-//                 boundaryGap: false,
-//                 axisLine: {onZero: false},
-//                 splitLine: {show: false},
-//                 splitNumber: 20,
-//                 min: 'dataMin',
-//                 max: 'dataMax'
-//             },
-//             yAxis: {
-//                 scale: true,
-//                 splitArea: {
-//                     show: true
-//                 }
-//             },
-//             dataZoom: [
-//                 {
-//                     type: 'inside',
-//                     start: 0,
-//                     end: 100
-//                 },
-//                 {
-//                     show: true,
-//                     type: 'slider',
-//                     y: '90%',
-//                     start: 0,
-//                     end: 100
-//                 }
-//             ],
-//             series: [
-//                 {
-//                     name: '日K',
-//                     type: 'candlestick',
-//                     data: data0.values,
-//                     markPoint: {
-//                         label: {
-//                             normal: {
-//                                 formatter: function (param) {
-//                                     return param != null ? Math.round(param.value) : '';
-//                                 }
-//                             }
-//                         },
-//                         data: [
-//                             {
-//                                 name: 'XX标点',
-//                                 coord: ['2013/5/31', 2300],
-//                                 value: 2300,
-//                                 itemStyle: {
-//                                     normal: {color: 'rgb(41,60,85)'}
-//                                 }
-//                             },
-//                             {
-//                                 name: 'highest value',
-//                                 type: 'max',
-//                                 valueDim: 'highest'
-//                             },
-//                             {
-//                                 name: 'lowest value',
-//                                 type: 'min',
-//                                 valueDim: 'lowest'
-//                             },
-//                             {
-//                                 name: 'average value on close',
-//                                 type: 'average',
-//                                 valueDim: 'close'
-//                             }
-//                         ],
-//                         tooltip: {
-//                             formatter: function (param) {
-//                                 return param.name + '<br>' + (param.data.coord || '');
-//                             }
-//                         }
-//                     },
-//                     markLine: {
-//                         symbol: ['none', 'none'],
-//                         data: [
-//                             [
-//                                 {
-//                                     name: 'from lowest to highest',
-//                                     type: 'min',
-//                                     valueDim: 'lowest',
-//                                     symbol: 'circle',
-//                                     symbolSize: 10,
-//                                     label: {
-//                                         normal: {show: false},
-//                                         emphasis: {show: false}
-//                                     }
-//                                 },
-//                                 {
-//                                     type: 'max',
-//                                     valueDim: 'highest',
-//                                     symbol: 'circle',
-//                                     symbolSize: 10,
-//                                     label: {
-//                                         normal: {show: false},
-//                                         emphasis: {show: false}
-//                                     }
-//                                 }
-//                             ],
-//                             {
-//                                 name: 'min line on close',
-//                                 type: 'min',
-//                                 valueDim: 'close'
-//                             },
-//                             {
-//                                 name: 'max line on close',
-//                                 type: 'max',
-//                                 valueDim: 'close'
-//                             }
-//                         ]
-//                     }
-//                 },
-//
-//             ]
-//         };
-//
-//         // 使用刚指定的配置项和数据显示图表。
-//         myChartK.setOption(option);
-//
-//     },
 
     /**
      * 判断当前时间是否在9:30-11:30, 13:00-15:00（交易时间）
@@ -1304,7 +988,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     });
     // console.log(price);
     //触发止盈
-    $("#check-surplus_ul>a").html(price *10000*lossLine);
+    $("#check-surplus_ul>a").html(price/3 *10000*lossLine);
     //触发止损
     // $("#stop-loss_ul>a:eq(0)").html(price * -1000);
     // $("#stop-loss_ul>a:eq(1)").html(price * -1333);
@@ -1312,7 +996,12 @@ $("#buy_number").off('keyup').on('keyup',function(){
     //交易综合费 publicFee
     // $("#publicFee>span").html((price *18 ).toFixed(2) );
     //TODO:
-    // $("#publicFee>span").html((price * delayFee  *levers_3*price*10000 ).toFixed(2) );
+    //获取天数的值
+    //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
+    var month_number=$(".select_month option:selected").val();
+    $("#publicFee>span").html((price*month_number*levers_month_3*10000/100 ).toFixed(2) );
+
+    // $("#publicFee>span").html((price * delayFee  *levers_3*price*10000/100 ).toFixed(2) );
 
     //递延费
     //$("#delay_fee").html(price * delayFee);
@@ -1329,68 +1018,43 @@ $("#buy_number").off('keyup').on('keyup',function(){
 
 
 
-$(function () {
-    if($("#buy_number").val()!=""){
+// $(function () {
+//         if($("#buy_number").val()!=""){
+//             var price1 = $('#buy_number').val();
+//             $("#check-surplus_ul>a").html(price1 * 10000 *lossLine);
+//             var nowPrice1 = parseFloat( $("#nowPrice").html() );
+//             var gu1=Math.floor((price1*10000/nowPrice1)/100*100);
+//             var lyl1=(nowPrice1*gu1/(price1*10000)*100).toFixed(2) + "%";
+//             $("#gu").html(gu1); //可买入多少股
+//             $("#lyl").html(lyl1);//资金利用率
+//             //TODO:页面加载时金额默认点击第一个止损a
+//             var day_loss = $("#buy >p").eq(0).find("i").html()-1 ;//按天
+//             var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-1 ;//按月
+//
+//             // $("#stop-loss_ul > a").eq(abc).addClass("chose-active").siblings("a").removeClass("chose-active");
+//             if(day_loss != null && day_loss!=-1){
+//                 // $("#publicFee>span").html((price1 * 18).toFixed(2) ); //按天
+//                 //TODO:2
+//                 $("#publicFee>span").html((price1 * delayFee).toFixed(2) ); //按天
+//
+//             }
+//
+//             if(month_loss != null && month_loss!=-1){
+//                 // $("#publicFee>span").html((price1 * 18 * 30 *0.7 ).toFixed(2) ); //按天
+//                 //TODO:3
+//                 $("#publicFee>span").html((price1 * delayFee * 30 *0.7 ).toFixed(2) ); //按天
+//             }
+//             if(month_loss == -1 && day_loss == -1){
+//                 // $("#publicFee>span").html((price1 *18 ).toFixed(2) ); //按天
+//                 //TODO:4
+//                 $("#publicFee>span").html((price1 *delayFee  ).toFixed(2) ); //按天
+//             }
+//
+//         }
+//     }
+//
+// );
 
-        var price1 = $('#buy_number').val();
-        $("#check-surplus_ul>a").html(price1 * 10000 *lossLine);
-        var nowPrice1 = parseFloat( $("#nowPrice").html() );
-        var gu1=Math.floor((price1*10000/nowPrice1)/100*100);
-        var lyl1=(nowPrice1*gu1/(price1*10000)*100).toFixed(2) + "%";
-        $("#gu").html(gu1); //可买入多少股
-        $("#lyl").html(lyl1);//资金利用率
-        //交易综合费 publicFee
-        // $("#publicFee>span").html((price1 *18).toFixed(2));
 
-        //TODO:页面加载时金额默认点击第一个止损a
-        var day_loss = $("#buy >p").eq(0).find("i").html()-1 ;//按天
-        var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-1 ;//按月
-
-        // $("#stop-loss_ul > a").eq(abc).addClass("chose-active").siblings("a").removeClass("chose-active");
-        if(day_loss != null && day_loss!=-1){
-            // $("#publicFee>span").html((price1 * 18).toFixed(2) ); //按天
-            //TODO:2
-             $("#publicFee>span").html((price1 * delayFee).toFixed(2) ); //按天
-
-        }
-
-        if(month_loss != null && month_loss!=-1){
-            // $("#publicFee>span").html((price1 * 18 * 30 *0.7 ).toFixed(2) ); //按天
-         //TODO:3
-             $("#publicFee>span").html((price1 * delayFee * 30 *0.7 ).toFixed(2) ); //按天
-        }
-        if(month_loss == -1 && day_loss == -1){
-            // $("#publicFee>span").html((price1 *18 ).toFixed(2) ); //按天
-
-            //TODO:4
-            $("#publicFee>span").html((price1 *delayFee  ).toFixed(2) ); //按天
-        }
-
-    }
-}
-
-);
-
-$(function () {
-    //绑定的触发止损
-    // var abc = $("#buy >p").eq(0).find("i").html()-1 ;
-    // alert(abc);
-    // $("#stop-loss_ul > a").eq(abc).addClass("chose-active").siblings("a").removeClass("chose-active");
-   // if(abc>0){
-   //     $("#stop-loss_ul > a").html(abc);
-   //     $("#stop-loss_ul > a").eq(abc).addClass("chose-active").siblings("a").removeClass("chose-active");
-   // }
-
-    // var e = document.createEvent("on");
-    // e.initEvent('on',true,true);
-    // $("#stop-loss_ul > a").eq(abc).dispatchEvent(e);
-    // alert(abc);
-
-    // $("#stop-loss_ul > a").eq(ba).addClass("chose-active");
-    //履约保证金
-    // var performance_bond =$(".perfor h1").html();
-    // $("#guaranteeFee").html(performance_bond);
-    // alert(performance_bond);
-});
 
 

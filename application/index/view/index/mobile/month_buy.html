@@ -78,7 +78,7 @@
     <!--链接-->
     <div class="bg_fff mui-segmented-control mui-segmented-control-inverted">
         <a class="mui-control-item " href="./buy.html">按日点买</a>
-        <a class="mui-control-item mui-active" href="./month_buy.html">按月点买</a>
+        <a class="mui-control-item  mui-active " href="./month_buy.html">按月点买</a>
         <a class="sell_a mui-control-item" href="{:url('index/ucenter/sell')}">点卖</a>
         <a class="mui-control-item" href="{:url('index/ucenter/history')}">结算</a>
     </div>
@@ -93,8 +93,6 @@
             <ul  class="search_ul"></ul>
         </div>
         <!--标题-->
-
-
         <div class="share_title share_title1 bg_fff mui-clearfix">
             <div class="title_l mui-pull-left">
 
@@ -112,8 +110,6 @@
         <div class="chart_box">
             <!--控制器-->
             <div class="chart_control mui-segmented-control mui-segmented-control-inverted">
-                <!--<a class="mui-control-item mui-active" href="#item_1">分时</a>-->
-                <!--<a class="mui-control-item" href="#item_2">日K</a>-->
                 <a class="mui-control-item mui-active" href="#item_1">分时</a>
                 <a class="mui-control-item" href="#item_2">日K</a>
             </div>
@@ -131,19 +127,7 @@
                     <img class="day_img" src="{$day_img}" alt="">
                 </div>
             </div>
-            <!--loading-->
-            <!--<div class="loader">-->
-            <!--<div class="loading-3">-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--<i></i>-->
-            <!--</div>-->
-            <!--</div>-->
+
         </div>
         <!--买买买-->
         <div class="stock-price f-right mui-row" id="stock-price">
@@ -164,9 +148,6 @@
         </div>
         <a type="button" id="buy_step1" tapEvent='true' class="ml_btn_bot mui-btn mui-btn-block " href="javascript:;">买入</a>
     </div>
-
-
-
     <!--购买界面-->
     <div id="item2" class="mui-control-content mui-active bg_fff">
         <!--标题-->
@@ -208,9 +189,9 @@
                 <a class="chose_a chose_a_bot" href="javascript:void(0);">50万</a>
             </li>
         </div>
-        {if !empty($_SESSION['Con_Lists'] || $_SESSION['ajax_html'])}
+        {if !empty($_SESSION['ajax_html'])}
         <div class="mui-input-row mui-row">
-            <span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" value="{if $_SESSION['ajax_html'] != null}{$_SESSION['ajax_html']} {else} {$_SESSION['Con_Lists']} {/if}" id="buy_number" class="ajax_html" maxlength="4">万元
+            <span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" value="{$_SESSION['ajax_html']}" id="buy_number" class="ajax_html" maxlength="4">万元
         </div>
         {else}
         <div class="mui-input-row mui-row">
@@ -218,11 +199,34 @@
         </div>
         {/if}
         <p class="pad10 color_black font12">可买入<span id="gu" class="color_red">-</span>股，资金利用率<span id="lyl" class="color_red">-</span></p>
+
         <ul class="choseBox2" style="margin: 0;">
             <li class="mui-row chose_aim">
                 <p class="mui-col-xs-3 mui-col-sm-3">持仓时间</p>
                 <div class="chose_item mui-col-xs-9 mui-col-sm-9">
-                    <a class="bz_text" href="javascript:void(0);" style="color: black;">T+1|D</a>
+                    <p>
+                        {if !empty($_SESSION['month_select'])}
+                        <select class="select_month">
+                            <option value="{$_SESSION['month_select']}" selected >{$_SESSION['month_select']}个月</option>
+                        </select>
+                        {else}
+                        <select class="select_month">
+                            <option value="1" selected>1个月</option>
+                            <option value="2">2个月</option>
+                            <option value="3">3个月</option>
+                            <option value="4">4个月</option>
+                            <option value="5">5个月</option>
+                            <option value="6">6个月</option>
+                            <option value="7">7个月</option>
+                            <option value="8">8个月</option>
+                            <option value="9">9个月</option>
+                            <option value="10">10个月</option>
+                            <option value="11">11个月</option>
+                            <option value="12">12个月</option>
+                        </select>
+                        {/if}
+
+                    </p>
                 </div>
                 <p class="mui-col-xs-3 mui-col-sm-3">盈利分配</p>
                 <div class="chose_item mui-col-xs-9 mui-col-sm-9">
@@ -255,16 +259,12 @@
                 </div>
             </li>
         </ul>
+
         <div class="result_box">
             <ul class="pad10" style="margin: 0;">
                 <li class="mui-clearfix">
                     <span class="li_l mui-pull-left">交易综合费</span>
-
-                    <!--<span id="publicFee" class="li_r mui-pull-right"><span class="color_red" id="publicFee_all">{$delayFee * 2 + $dealFee}</span>&nbsp;元</span>-->
-                    <!--<span id="publicFee" class="li_r mui-pull-right"><span class="color_red" id="publicFee_all">{$delayFee}</span>&nbsp;元</span>-->
-
                     <span id="publicFee" class="li_r mui-pull-right"><span class="color_red" id="publicFee_all">{$delayFee}</span>&nbsp;元</span>
-
                 </li>
                 <li class="total mui-clearfix">
                     <span class="li_l mui-pull-left">总计</span>
@@ -279,8 +279,6 @@
                 <a href="./protocol_3.html" target="_blank">《尚牛在线服务协议》</a>
             </div>
         </div>
-
-
         <button id="buy_step3" type="button" class="ml_btn_bot mui-btn mui-btn-block buy_step3 Buy_Step">买入</button>
     </div>
 
@@ -293,9 +291,7 @@
         <p>交易品种:<b class="J_name"></b></p>
         <p>交易总操盘:<b></b>万元</p>
         <p>交易数量:<b></b>手</p>
-        <!--
-                <div><a href="{:url('index/ucenter/sell')}" id="buy_bt">确认</a> <a href="" >取消</a></div>
-        -->
+
         <div><button id="buy_bt">确认</button> <button class="buy_cancel" >取消</button></div>
     </div>
 </div>
@@ -326,27 +322,10 @@
     //数据初始化
     var delayFee = parseInt("{$delayFee }");
     var dealFee = parseInt("{$dealFee }");
-    var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
+//    var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
     var delayLineRate = parseFloat("{$delayLineRate}");
     var stopLossRate = parseFloat("{$stopLossRate}");
     var lossLine =parseFloat("{$lossLine}");
-
-    //按天杠杆倍率1到10倍
-    var levers_1 =parseFloat("{$levers_1}");
-    var levers_2 =parseFloat("{$levers_2}");
-    var levers_3 =parseFloat("{$levers_3}");
-    var levers_4 =parseFloat("{$levers_4}");
-    var levers_5 =parseFloat("{$levers_5}");
-    var levers_6 =parseFloat("{$levers_6}");
-    var levers_7 =parseFloat("{$levers_7}");
-    var levers_8 =parseFloat("{$levers_8}");
-    var levers_9 =parseFloat("{$levers_9}");
-    var levers_10 =parseFloat("{$levers_10}");
-
-    var levers_data=[
-        levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
-    ];
-    //    console.log(levers_data);
     //按月杠杆倍率1到10倍
     var levers_month_1 =parseFloat("{$levers_month_1}");
     var levers_month_2 =parseFloat("{$levers_month_2}");
@@ -358,6 +337,9 @@
     var levers_month_8 =parseFloat("{$levers_month_8}");
     var levers_month_9 =parseFloat("{$levers_month_9}");
     var levers_month_10 =parseFloat("{$levers_month_10}");
+    var levers_month_data =[
+        levers_month_3,levers_month_4,levers_month_5,levers_month_6,levers_month_7,levers_month_8,levers_month_9,levers_month_10
+    ];
 
 </script>
 
@@ -365,14 +347,11 @@
 <script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/home/js/echarts.min.js"></script>
 <script src="__STATIC__/home/js/moblie/buy_month_mine.js"></script>
-<!--<script>-->
-<!--alert({$_SESSION["beishu"]});-->
-<!--</script>-->
 <script>
     // 如果不在交易时间，不能点买
-    //                 if(!buy_moblie.isTradingTime() ){
-    //                     $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-    //                 }
+                     if(!buy_moblie.isTradingTime() ){
+                         $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+                     }
     $(".Buy_Step").click(function () {
 
         //名字
@@ -387,7 +366,6 @@
             //股票多少手
             var dealQuantity =$("#gu").html();
             $("#box .box_con").find('b').eq(2).html(dealQuantity/100);
-
         }
 
     })
@@ -401,7 +379,7 @@
         swipeBack: true //启用右滑关闭功能
     });
 
-    //href
+
     mui('body').on('tap', 'a', function() {
         var data_href = this.getAttribute("data-href");
         var href = this.getAttribute("href");
@@ -414,6 +392,8 @@
     buy_moblie.init();
 </script>
 
+
+
 <script type="text/javascript">
     mui.init({
         swipeBack: true //启用右滑关闭功能
@@ -421,48 +401,76 @@
 
 </script>
 
-
 <script>
-
     $("#buy_bt").click(function () {
         var dealQuantity =$("#gu").html();
         var  dealAmount =$('#buy_number').val();
         var name = $("#stockName").html();
         var stockCode =$("#stockNum").html();//股票代码
         var nowPrice =$("#nowPrice").html();//成交价格（成交订单的实时价格）
-        var surplus= $("#check-surplus_ul a").html();//触发止盈
+        var surplus= $("#check-surplus_ul a").html();//警戒线
         var loss =$("#stop-loss_ul .chose-active").html();//触发止损
         var publicFee =$("#publicFee_all").html(); //交易综合费
         var guaranteeFee =$("#guaranteeFee").html(); //履约保证金
-        var all_price_sum =$(".all_price_sum").html();
-        //递延条件？
+        var all_price_sum =$(".all_price_sum").html(); //总金额
+        var buy_month_num = $(".select_month option:selected").val(); //配资的月数
+        //递延条件？(保证金*后台递延的多少倍)
         var fee_condition = guaranteeFee * delayLineRate;
-        //递延费（元/天）?从另外一个数据库读取
-        var diyanfei =delayFee;
+        var Multiple  =dealAmount*10000/guaranteeFee; //配资的倍数
+        /*倍数后台过来的尴尬倍率*/
+        switch(Multiple)
+        {
+            case 3:
+                var levers_multiples = levers_month_3;
+                break;
+            case 4:
+                var levers_multiples = levers_month_4;
+                break;
+            case 5:
+                var levers_multiples = levers_month_5;
+                break;
+            case 6:
+                var levers_multiples = levers_month_6;
+                break;
+            case 7:
+                var levers_multiples = levers_month_7;
+                break;
+            case 8:
+                var levers_multiples = levers_month_8;
+                break;
+            case 9:
+                var levers_multiples = levers_month_9;
+                break;
+            case 10:
+                var levers_multiples = levers_month_10;
+                break;
+        }
+        //当过了配资月数之后自动每天的递延费(倍数对应的倍率*保证金*倍数*1天)
+        var day_deferred =levers_multiples*guaranteeFee*Multiple;
         //创建时间
-
-
         $.ajax({
             type:"post",
-            url:"{:url('index/Ucenter/stockBuy')}",
+            url:"{:url('index/Ucenter/stockBuyByMonth')}",
             data:{
                 name:name,//股票的名字
                 stockCode:stockCode, //股票代号
                 nowPrice:nowPrice, //成交价格
                 dealAmount:dealAmount, //交易总操盘
                 dealQuantity:dealQuantity, //交易多少手(数量)
-                surplus:surplus,//触发止盈
+                surplus:surplus,//警戒线
                 loss:loss, //触发止损
                 publicFee:publicFee,//交易综合费
                 guaranteeFee:guaranteeFee, //履约保证金
-                delayLine:fee_condition, //递延条件？
-                delayFee:diyanfei,//递延费（元/天）?从另外一个数据库读取?
-                all_price_sum:all_price_sum //总计金额
-
+                buy_month_num :buy_month_num, //配资的天数
+                delayLine:fee_condition, //递延条件
+                delayFee:day_deferred,//递延费（元/天)
+                all_price_sum:all_price_sum, //总计金额
+                stock_by_pay_type:2,	//判断买入的类型是按月还是按日（1为按天，2为按月）
+                Multiple:Multiple,  //买入时的倍数
+                levers_multiples:levers_multiples, //买入倍数对应的杠杆率
             },
             dataType:'json',
             success:function(data){
-
                 if(data.code ==0) {
                     mui.alert(data.msg);
                     $("#box").css("display","none");
@@ -477,25 +485,22 @@
                         window.location.href = './sell';
                     },1000)
                 }
-
                 if(data.code ==-1) {
                     mui.alert(data.msg);
                     $("#box").css("display","none");
                 }
-
             },
             error:function() {
-
                 mui.alert('未登录，请登录');
                 $("#box").css("display","none");
                 setTimeout(function(){
                     location.href='./login.html'
                 },3000)
-
             }
         })
 
     });
+
     $(".buy_cancel").click(function () {
         $("#box").css("display","none");
     });

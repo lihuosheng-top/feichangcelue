@@ -9,7 +9,6 @@
 namespace app\admin\controller;
 
 use app\admin\controller\Admin;
-//use app\cms\home\Common;
 use app\user\model\Role as RoleModel;
 use app\common\builder\ZBuilder;
 use app\admin\model\Module as ModuleModel;
@@ -21,14 +20,12 @@ use think\Db;
 use app\user\validate\User;
 use util\Tree;
 use app\common\controller\common;
-
 use app\index\controller\Alistock;
 use app\index\controller\Home;
-
+use think\Request;
 
 class Order extends Admin
 {
-
     //股票持仓列表（点买列表）
     public function buyList(){
 		// 获取筛选
@@ -39,7 +36,6 @@ class Order extends Admin
             $uid = $auth['uid'];
             $condition = " and recommendCode='{$uid}'";
         }
-
         // 数据列表
         $data_list = Db::table(["xh_stock_order"=>'a', "xh_member"=>'b' ])
             ->field("a.*, b.username, b.mobile")
@@ -55,7 +51,6 @@ class Order extends Admin
             }
             $list[$i] = $v;
         }
-
         // 分页数据
         $page = $data_list->render();
 
@@ -84,7 +79,9 @@ class Order extends Admin
                 ['publicFee', '综合费(元)'],
                 ['guaranteeFee', '保证金(元)'],
                 ['delayLine', '递延线(元)'],
-                ['delayDays', '递延天数'],
+                ['buy_day_num','配资天数'],
+                ['buy_month_num','配资月数(月)'],
+                ['delayDays', '递延天数（天）'],
                 ['delayFeeSum', '递延费(元)'],
                 ['createTime', '买入时间' ],
                 ['right_button', '操作', 'btn']
@@ -194,7 +191,7 @@ class Order extends Admin
             error("股票不存在");
         }
         if(substr($order['createTime'], 0, 10) == date("Y-m-d")){
-            error("当天点买的股票下个工作日才能卖出");
+          $this->error("当天点买的股票下个工作日才能卖出");
         }
 //        $arr = (new Alistock())->batch_real_stockinfo($stock['market'].$stock['code']);
         $arr =(new Common())->getMarketValueBycode($stock['code']);

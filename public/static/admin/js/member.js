@@ -1,5 +1,7 @@
 /**
- * Created by wo on 2017/7/21.
+ * lihuosheng
+ * @param id
+ * @param status
  */
 
 function doWithdraw(id, status){

@@ -1138,3 +1138,14 @@ function ajax_success($msg = '提交成功',$data=array()){
     $return['data'] = $data;
     exit(json_encode($return,JSON_UNESCAPED_UNICODE));
 }
+
+
+//function user($data,$arr){
+//    $data_holidays =Db::table($arr)->field('day')->select();
+//        foreach ($data_holidays as $val) {
+//            if ($value == $val["day"]) {
+//                $time = date("Y-m-d", strtotime("+1 days", strtotime($val["day"])));
+//                return user($daty,$val["day"]);
+//            }
+//        }
+//}

@@ -16,7 +16,7 @@
 		<header class="ml_header mui-bar mui-bar-nav">
 			<a class="color_red mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back(-1)"></a>
 			<h1 class="mui-title">
-		    	<a class="Asharebuy color_red" href="./buy.html">A股点买</a>
+		    	<a class="Asharebuy color_red" href="{:url('index/index/buy')}">A股点买</a>
 		    	<a class="freetrial" href="./freetrial.html">免费体验</a>
 		    </h1>
 		</header>
@@ -48,6 +48,7 @@
 			<!--链接-->
 			<div class="bg_fff mui-segmented-control mui-segmented-control-inverted">
 				<a class="mui-control-item " href="./buy.html">点买</a>
+				<a class="mui-control-item " href="./month_buy.html">按月点买</a>
 				<a class="sell_a mui-control-item mui-active" href="./freetrialSell.html">点卖<span id="shareNum">{$count}</span></a>
 				<a class="mui-control-item" href="./history.html">结算</a>
 			</div>
@@ -74,7 +75,7 @@
 				        </a>
 				        <div class="cont mui-row">
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
-				        		<p class="font12">止盈 <em>{$vo.surplus}</em>元</p>
+				        		<p class="font12">警戒线 <em>{$vo.surplus}</em>元</p>
 				        		<p class="font12">止损 <b>{$vo.loss}</b>元</p>
 				        	</div>
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
@@ -99,10 +100,25 @@
 				            		<span class="li_l mui-pull-left font12">交易单号</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.id}</span>
 				            	</li>
+								<li class="mui-clearfix">
+									<span class="li_l mui-pull-left font12">买入金额（万）</span>
+									<span class="li_r mui-pull-right font12">{$vo.dealAmount}万元</span>
+								</li>
+								<li class="mui-clearfix">
+									<span class="li_l mui-pull-left font12">数量（手）</span>
+									<span class="li_r mui-pull-right font12">{$vo.dealQuantity}手</span>
+								</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">保证金</span>
-				            		<span class="li_r mui-pull-right font12">{$vo.guaranteeFee}元</span>
+				            		<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.guaranteeFee}元</span>
 				            	</li>
+
+								<li class="mui-clearfix">
+									<span class="li_l mui-pull-left font12">已付综合费</span>
+									<span class="li_r mui-pull-right font12">{$vo.publicFee}元</span>
+								</li>
+
+
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延线</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.delayLine}元</span>
@@ -111,6 +127,17 @@
 				            		<span class="li_l mui-pull-left font12">止损线</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.loss}元</span>
 				            	</li>
+								<li class="mui-clearfix">
+									{if !empty($vo.buy_day_num)}
+									<span class="li_l mui-pull-left font12">配资天数</span>
+									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_day_num}天</span>
+									{/if}
+									{if !empty($vo.buy_month_num)}
+									<span class="li_l mui-pull-left font12" >配资月数</span>
+									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_month_num}个月</span>
+									{/if}
+								</li>
+
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延天数</span>
 				            		<!--<span class="li_r mui-pull-right font12">{if condition="$vo.delayDays gt 2"}{$vo.delayDays - 2}{else}0{/if}天</span>-->
@@ -119,7 +146,7 @@
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延费</span>
 				            		<!--<span class="li_r mui-pull-right font12">{$vo.delayFeeSum}</span>-->
-				            		<span class="li_r mui-pull-right font12">{if condition="$list2[$i]['delayDays'] gt 2"}{$list2[$i-1][delayDays] * 18}{else}0{/if}</span>
+				            		<span class="li_r mui-pull-right font12">{if condition="$list2[$i]['delayDays'] gt 2"}{$list2[$i-1][delayDays] * 18}{else}0{/if}元</span>
 				            	</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">浮动盈亏比</span>
@@ -145,7 +172,6 @@
 				</ul>
 				<p class="mtop_25 mui-text-center">当前持仓所需递延费为<span class="color_red">{$delayFeeSum|default=0}</span> 元（周末及节假日免费）</br>持仓盈利总计：<span class="color_red">{$profitSum|default=0}</span> 元</p>
 			</div>
-
 		</div>
 
 		<!---js---->

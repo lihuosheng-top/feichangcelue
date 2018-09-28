@@ -24,12 +24,8 @@ class Jobs
             }
             $stocks .= $v['code'];
         }
-//        dump($stocks);
-
-//        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
         $stockMap =(new Common())->getMarketVlueByCodes($stocks);
 
-        //print_r($stockMap);
         foreach($stockMap as $k => $v){
             foreach ($v as $keys=>$values){
                 $data['detail']=implode(',',$values);
@@ -39,13 +35,6 @@ class Jobs
                 $ret = Db::table("xh_online_stock_detail")->insertGetId($data);
                 echo ($ret."<br/>");
             }
-//            $data['detail'] = $this->object2array($v);
-//            $data['detail'] = implode(',',$v);
-//            $data['createTime'] = date("Y-m-d H:i:s");
-//            $data['createTimeStamp'] = time();
-//            $data['code']= $v['info_arr'][2];
-//            $ret = Db::table("xh_online_stock_detail")->insertGetId($data);
-//            echo ($ret."<br/>");
         }
         $t2 = time();
         echo "t2-t1=".($t2 - $t1);
@@ -87,12 +76,6 @@ class Jobs
             }
             $stocks .= $v['stockCode'];
         }
-//        dump($stocks);exit();
-
-//        $stockMap = (new Alistock())->batch_real_stockinfo_full($stocks);
-//        $stockMap = (new Common())->getMarketVlueByCodes($stocks);
-//        dump($stockMap);
-
         $orderList = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->select();
@@ -141,43 +124,6 @@ class Jobs
             echo "t2-t1=".($t2 - $t1)."<br/>";
         }
 
-
-//            $diff_rate = $stockDetail->diff_rate ;//涨跌幅
-//            if($diff_rate <= -9.95){//股票跌停则不允许卖出
-//                echo $v['stockCode']."跌停<br/>";
-//                continue;
-//            }
-//            $nowPrice = $stockDetail->nowPrice ;   //实时价格
-//            if($nowPrice <= 0){
-//                continue;
-//            }
-//            $profit = ((float)$nowPrice - (float)$v['dealPrice']) * $v['dealQuantity'] * 100; //交易盈亏
-//            $profit = round($profit, 2);
-//            //如果盈亏大于止盈线或小于止损线，则即时强制平仓
-//            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过止盈线自动平仓
-//            if($profit > $surplus){
-//                $liquidation = 3;
-//            }else if($profit < $loss){
-//                $liquidation = 2;
-//            }
-//            echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
-//
-//            //访问后台函数的权限
-//            define('UID', 1);
-//            session('user_auth.uid', 1);
-//            if($liquidation == 2 || $liquidation == 3){
-//                Db::transaction(function(){
-//                    global $orderId, $liquidation;
-//                    //echo "orderId=$orderId, liquidation=$liquidation";
-//                    (new Order())->stock_sell_do($orderId, $liquidation);
-//                    Db::commit();
-//                });
-//                //(new Order())->stock_sell_do($orderId, $liquidation);
-//            }
-//
-//
-//        $t2 = time();
-//        echo "t2-t1=".($t2 - $t1)."<br/>";
     }
 
     //获取股票实时价格，判断亏损额大于递延条件则不允许递延（每天结束交易时运行一次）
@@ -243,12 +189,10 @@ class Jobs
             if(!is_numeric($delayFee)|| $delayFee <= 0) {
                 die("递延费({$delayFee})不正确");
             }
-
             //获取交易列表
             $orderList = Db::table("xh_stock_order")
                 ->where("status=1 and isFreetrial=0 and TO_DAYS(now()) - TO_DAYS(createTime)  > 0 ")
                 ->select();
-
 //          TODO：
             $hList = Db::table("xh_holiday")->field("day")->select();
             foreach($orderList as $k=>$v){
@@ -274,10 +218,6 @@ class Jobs
             $t2=time();
             echo "time=".($t2 - $t1);
         });
-    }
-
-    public function ff(){
-
     }
 
     function getWorkdaysCount ($start_date, $orderId, $memberId, $delayFee, $hList=null )
@@ -351,6 +291,8 @@ class Jobs
 
         return $days;
     }
+    /*统计实际的配资天数即配资7天，则其中有三天是节假日，则实际就得添加10天的值才能计算到那一天（每天凌晨判断一次，如果是节假日自动加一）*/
+
 
 
 }
