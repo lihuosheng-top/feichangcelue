@@ -84,6 +84,7 @@ class Order extends Admin
                 ['delayDays', '递延天数（天）'],
                 ['delayFeeSum', '递延费(元)'],
                 ['createTime', '买入时间' ],
+                ['buy_day_end_time','配资到期时间'],
                 ['right_button', '操作', 'btn']
             ])
             ->addRightButton('custom', $btn ) // 批量添加右侧按钮
@@ -144,7 +145,10 @@ class Order extends Admin
                 ['profit', '盈亏(元)'],
                 ['profitSelf', '盈利分配(元)'],
                 ['guaranteeFee', '保证金(元)'],
+                ['delayDays', '递延天数（天）'],
+                ['buy_month_num','配资月数(月)'],
                 ['createTime', '买入时间' ],
+                ['buy_day_end_time','配资到期时间'],
                 ['sellTime', '卖出时间' ],
                 ['liquidation', '类型' ],
             ])

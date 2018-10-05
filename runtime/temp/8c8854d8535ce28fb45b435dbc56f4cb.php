@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:86:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\freetrialSell.html";i:1538761442;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1536401700;}*/ ?>
 <!doctype html>
 <html>
 
@@ -16,56 +17,77 @@
 		<header class="ml_header mui-bar mui-bar-nav">
 			<a class="color_red mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="javascript:history.back(-1)"></a>
 			<h1 class="mui-title">
-		    	<a class="Asharebuy color_red" href="{:url('index/index/buy')}">A股点买</a>
-		    	<a class="freetrial" href="./freetrial.html">免费体验</a>
+		    	<a class="Asharebuy " href="./buy.html">A股点买</a>
+		    	<a class="freetrial color_red" href="./freetrial.html">免费体验</a>
 		    </h1>
 		</header>
-		<!--{include file="public:PublicNav"}-->
+
 		<nav class="ml_tab mui-bar mui-bar-tab">
-			<a class="mui-tab-item" href="{:url('/index')}">
+			<a class="mui-tab-item" href="<?php echo url('/index'); ?>">
 				<span class="mui-icon mui-icon-home"></span>
 				<span class="mui-tab-label">首页</span>
 			</a>
-			<a class="mui-tab-item " href="{:url('/stock')}">
+			<a class="mui-tab-item " href="<?php echo url('/stock'); ?>">
 				<span class="mui-icon mui-icon-phone"></span>
 				<span class="mui-tab-label">我要配资</span>
 			</a>
-			<a class="mui-tab-item" href="{:url('/invite')}">
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
 				<span class="mui-icon mui-icon-postion"></span>
 				<span class="mui-tab-label">我要推广</span>
 			</a>
-			<a class="mui-tab-item mui-active" href="{:url('/buy')}">
+			<a class="mui-tab-item mui-active" href="<?php echo url('/buy'); ?>">
 				<span class="mui-icon mui-icon-stock"></span>
 				<span class="mui-tab-label">我要交易</span>
 			</a>
-			<a class="mui-tab-item " href="{:url('/ucenter/home')}">
+			<a class="mui-tab-item " href="<?php echo url('/ucenter/home'); ?>">
 				<span class="mui-icon mui-icon-email"></span>
 				<span class="mui-tab-label" id="abc">账户中心</span>
 			</a>
 		</nav>
+		<!--<nav class="ml_tab mui-bar mui-bar-tab">
+			<a class="mui-tab-item " href="<?php echo url('/index'); ?>">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item " href="<?php echo url('/stock'); ?>">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">我要配资</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/invite'); ?>">
+				<span class="mui-icon mui-icon-postion"></span>
+				<span class="mui-tab-label">我要推广</span>
+			</a>
+			<a class="mui-tab-item" href="<?php echo url('/buy'); ?>">
+				<span class="mui-icon mui-icon-stock"></span>
+				<span class="mui-tab-label">我要交易</span>
+			</a>
+			<a class="mui-tab-item mui-active" href="<?php echo url('/ucenter/home'); ?>">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label" id="abc">账户中心</span>
+			</a>
+		</nav>-->
 		<!--主体-->
 		<div class="mui-content">
 			<!--链接-->
 			<div class="bg_fff mui-segmented-control mui-segmented-control-inverted">
-				<a class="mui-control-item " href="./buy.html">点买</a>
-				<a class="mui-control-item " href="./month_buy.html">按月点买</a>
-				<a class="sell_a mui-control-item mui-active" href="./freetrialSell.html">点卖<span id="shareNum">{$count}</span></a>
-				<a class="mui-control-item" href="./history.html">结算</a>
+				<a class="mui-control-item " href="./freetrial.html">点买</a>
+				<a class="sell_a mui-control-item mui-active" href="./freetrialSell.html">点卖<span id="shareNum"><?php echo $count; ?></span></a>
+				<a class="mui-control-item" href="./freetrialHistory.html">结算</a>
 			</div>
 			<!--内容-->
 			<div id="item1" class="mui-control-content mui-active">
-				{if condition="($list|count) gt  0 "}
+				<?php if(($list|count) >  0): ?>
 				<ul class="mui-table-view" id="ul_list">
-					{volist name="list" id="vo" }
+					<?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 				    <li class="mui-table-view-cell mui-collapse">
 				        <a class="mui-navigate-right" href="#">
 				        	<div class="share_l mui-pull-left">
 				        		<h5 class="stockName">
-				        			{$vo.stockName}
-				        			<span class="stockNum font12">({$vo.stockCode})</span>
+				        			<?php echo $vo['stockName']; ?>
+				        			<span class="stockNum font12">(<?php echo $vo['stockCode']; ?>)</span>
 				        		</h5>
-				        		<p>金额：<span class="moneyNum" style="margin-right: 5px;">{$vo.dealAmount}万</span>
-				        			  <span class="usableNum">{$vo.dealQuantity * 100}</span>股
+				        		<p>金额：<span class="moneyNum" style="margin-right: 5px;"><?php echo $vo['dealAmount']; ?>万</span>
+				        			  <span class="usableNum"><?php echo $vo['dealQuantity'] * 100; ?></span>股
 				        			(<span class="state">可用</span>)
 				        		</p>
 				        	</div>
@@ -75,111 +97,100 @@
 				        </a>
 				        <div class="cont mui-row">
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
-				        		<p class="font12">警戒线 <em>{$vo.surplus}</em>元</p>
-				        		<p class="font12">止损 <b>{$vo.loss}</b>元</p>
+				        		<p class="font12">警戒线 <em><?php echo $vo['surplus']; ?></em>元</p>
+				        		<p class="font12">止损 <b><?php echo $vo['loss']; ?></b>元</p>
 				        	</div>
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
-				        		<p class="font12">买入<em>{$vo.dealPrice|round=###,2}</em>元</p>
-				        		<p class="font12">当前<b class="color" id="new_price">{$list2[$i-1][nowPrice]|round=###,2}</b>元</p>
+				        		<p class="font12">买入<em><?php echo round($vo['dealPrice'],2); ?></em>元</p>
+				        		<p class="font12">当前<b class="color" id="new_price"><?php echo round($list2[$i-1][nowPrice],2); ?></b>元</p>
 				        	</div>
 				        	<div class="num_info mui-col-xs-3 mui-col-sm-3 color" >
-				        	{$list2[$i-1][profitAmount]}
+				        	<?php echo $list2[$i-1][profitAmount]; ?>
 				        	</div>
 				        	<div class="num_info color_red mui-text-right mui-col-xs-3 mui-col-sm-3">
-				        		<!--<button id="{$vo.id}" index="{$i}" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
-				        		<button id="{$vo.id}" index="{$i}" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
+				        		<!--<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
+				        		<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
 				        	</div>
 				        </div>
 				        <div class="share_info mui-collapse-content">
 				            <ul>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">买入时间</span>
-				            		<span class="li_r mui-pull-right font12">{$vo.createTime}</span>
+				            		<span class="li_r mui-pull-right font12"><?php echo $vo['createTime']; ?></span>
 				            	</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">交易单号</span>
-				            		<span class="li_r mui-pull-right font12">{$vo.id}</span>
+				            		<span class="li_r mui-pull-right font12"><?php echo $vo['id']; ?></span>
 				            	</li>
-								<li class="mui-clearfix">
-									<span class="li_l mui-pull-left font12">买入金额（万）</span>
-									<span class="li_r mui-pull-right font12">{$vo.dealAmount}万元</span>
-								</li>
-								<li class="mui-clearfix">
-									<span class="li_l mui-pull-left font12">数量（手）</span>
-									<span class="li_r mui-pull-right font12">{$vo.dealQuantity}手</span>
-								</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">保证金</span>
-				            		<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.guaranteeFee}元</span>
+				            		<span class="li_r mui-pull-right font12"><?php echo $vo['guaranteeFee']; ?>元</span>
 				            	</li>
 
 								<li class="mui-clearfix">
 									<span class="li_l mui-pull-left font12">已付综合费</span>
-									<span class="li_r mui-pull-right font12">{$vo.publicFee}元</span>
+									<span class="li_r mui-pull-right font12"><?php echo $vo['publicFee']; ?>元</span>
 								</li>
-
-
-				            	<li class="mui-clearfix">
+								<?php if(!empty($vo['delayLine'])): ?>
+								<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延线</span>
-				            		<span class="li_r mui-pull-right font12">{$vo.delayLine}元</span>
+				            		<span class="li_r mui-pull-right font12"><?php echo $vo['delayLine']; ?>元</span>
 				            	</li>
+								<?php endif; ?>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">止损线</span>
-				            		<span class="li_r mui-pull-right font12">{$vo.loss}元</span>
+				            		<span class="li_r mui-pull-right font12"><?php echo $vo['loss']; ?>元</span>
 				            	</li>
 								<li class="mui-clearfix">
-									{if !empty($vo.buy_day_num)}
+									<?php if(!empty($vo['buy_day_num'])): ?>
 									<span class="li_l mui-pull-left font12">配资天数</span>
-									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_day_num}天</span>
-									{/if}
-									{if !empty($vo.buy_month_num)}
+									<span class="li_r mui-pull-right font12" style="color:#e60012"><?php echo $vo['buy_day_num']; ?>天</span>
+									<?php endif; if(!empty($vo['buy_month_num'])): ?>
 									<span class="li_l mui-pull-left font12" >配资月数</span>
-									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_month_num}个月</span>
-									{/if}
+									<span class="li_r mui-pull-right font12" style="color:#e60012"><?php echo $vo['buy_month_num']; ?>个月</span>
+									<?php endif; ?>
 								</li>
-
 								<li class="mui-clearfix">
-									{if !empty($vo.buy_day_end_time)}
+									<?php if(!empty($vo['buy_day_end_time'])): ?>
 									<span class="li_l mui-pull-left font12">配资到期时间</span>
-									<span class="li_r mui-pull-right font12">{$vo.buy_day_end_time}</span>
-									{/if}
+									<span class="li_r mui-pull-right font12"><?php echo $vo['buy_day_end_time']; ?></span>
+									<?php endif; ?>
 								</li>
-
-
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延天数</span>
-				            		<!--<span class="li_r mui-pull-right font12">{if condition="$vo.delayDays gt 2"}{$vo.delayDays - 2}{else}0{/if}天</span>-->
-				            		<span class="li_r mui-pull-right font12">{if condition="$list2[$i]['delayDays'] gt 2"}{$list2[$i-1][delayDays]}{else}0{/if}天</span>
+				            		<!--<span class="li_r mui-pull-right font12"><?php if($vo['delayDays'] > 2): ?><?php echo $vo['delayDays'] - 2; else: ?>0<?php endif; ?>天</span>-->
+				            		<span class="li_r mui-pull-right font12"><?php if($list2[$i]['delayDays'] > 2): ?><?php echo $list2[$i-1][delayDays]; else: ?>0<?php endif; ?>天</span>
 				            	</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延费</span>
-				            		<!--<span class="li_r mui-pull-right font12">{$vo.delayFeeSum}</span>-->
-				            		<span class="li_r mui-pull-right font12">{if condition="$list2[$i]['delayDays'] gt 2"}{$list2[$i-1][delayDays] * 18}{else}0{/if}元</span>
+				            		<!--<span class="li_r mui-pull-right font12"><?php echo $vo['delayFeeSum']; ?></span>-->
+				            		<span class="li_r mui-pull-right font12"><?php if($list2[$i]['delayDays'] > 2): ?><?php echo $list2[$i-1][delayDays] * 18; else: ?>0<?php endif; ?></span>
 				            	</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">浮动盈亏比</span>
-				            		<span class="li_r mui-pull-right font12 color">{$list2[$i-1][rate] * 100}%</span>
+				            		<span class="li_r mui-pull-right font12 color"><?php echo $list2[$i-1][rate] * 100; ?>%</span>
 				            	</li>
 				            	<p class="float_p bg_fff">浮动盈亏
 				            		<span class="color profitAmount">
-				            		{$list2[$i-1][profitAmount]}
+				            		<?php echo $list2[$i-1][profitAmount]; ?>
 				            		</span>
 				            	</p>
 				            </ul>
 				        </div>
 				    </li>
-					{/volist}
+					<?php endforeach; endif; else: echo "" ;endif; ?>
 				    <div class="pagination_box">
-				    	{$list->render()}
+				    	<?php echo $list->render(); ?>
 				    </div>
 
-            		{else}
+            		<?php else: ?>
             		<p class="data_empty">暂无持仓</p>
-            		{/if}
+            		<?php endif; ?>
 
 				</ul>
-				<p class="mtop_25 mui-text-center">当前持仓所需递延费为<span class="color_red">{$delayFeeSum|default=0}</span> 元（周末及节假日免费）</br>持仓盈利总计：<span class="color_red">{$profitSum|default=0}</span> 元</p>
+				<p class="mtop_25 mui-text-center">当前持仓所需递延费为<span class="color_red"><?php echo (isset($delayFeeSum) && ($delayFeeSum !== '')?$delayFeeSum:0); ?></span> 元（周末及节假日免费）</br>持仓盈利总计：<span class="color_red"><?php echo (isset($profitSum) && ($profitSum !== '')?$profitSum:0); ?></span> 元</p>
 			</div>
+
 		</div>
 
 		<!---js---->
@@ -222,9 +233,9 @@
          $('.sell_btn').on('tap',function(e){
          	var index = $(this).attr("index");
          	//所有未点卖的股票信息
-		    var listJson = JSON.parse('{$listJson}').data;
+		    var listJson = JSON.parse('<?php echo $listJson; ?>').data;
 		    //股票中的4个信息
-		    var listJson2 = JSON.parse('{$listJson2}');
+		    var listJson2 = JSON.parse('<?php echo $listJson2; ?>');
 
 		    var i = index - 1;
 		    //股票名称编号
@@ -244,17 +255,17 @@
 			 console.log(price_now);
          	mui.confirm(t_code+'\n'+t_quantity+'\n'+t_time+'\n'+t_profit,'确认卖出？',['确认','取消'],function(e){
          		if(e.index==0){
-				    var params = { orderId : orderId };
+				    var params = {orderId : orderId };
 				    if(orderId <= 0){
 				        mui.alert("订单号不正确");
 				        return;
 				    }
 				    $(this).attr("disabled", true);
-				    $.post("./index/ucenter/stockSell", params, function(data){
+				    $.post("./index/ucenter/doFreetrialSell", params, function(data){
 				        $(".sell_btn").attr("disabled", false);
-				        if(data.code == '0'){
+				        if(data.code == 1 ){
 				            mui.alert("交易成功");
-				            location.href = "./history.html";
+				            location.href = "./freetrialHistory.html";
 				        }else{
 				            mui.alert(data.msg);
 				        }
@@ -276,7 +287,7 @@
 				var code = $(".stockNum").html();
 				$.ajax({
 					type:"GET",
-					url:"{:url('index/index/index')}",
+					url:"<?php echo url('index/index/index'); ?>",
 					data:{"code":code},
 					dataType:"json",
 					success:function (data) {

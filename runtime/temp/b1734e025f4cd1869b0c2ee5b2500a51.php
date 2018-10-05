@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\freetrial.html";i:1538759732;}*/ ?>
 <!doctype html>
 <html>
 
@@ -77,8 +78,8 @@
 	<!--链接-->
 	<div class="bg_fff mui-segmented-control mui-segmented-control-inverted">
 		<a class="mui-control-item mui-active" href="./freetrial.html">按日点买(体验)</a>
-		<a class="sell_a mui-control-item" href="{:url('index/ucenter/freetrialSell')}">点卖(体验)</a>
-		<a class="mui-control-item" href="{:url('index/ucenter/freetrialHistory')}">结算(体验)</a>
+		<a class="sell_a mui-control-item" href="<?php echo url('index/ucenter/freetrialSell'); ?>">点卖(体验)</a>
+		<a class="mui-control-item" href="<?php echo url('index/ucenter/freetrialHistory'); ?>">结算(体验)</a>
 	</div>
 	<!--内容-->
 	<div id="item1" class="mui-control-content mui-active">
@@ -93,13 +94,13 @@
 		<!--标题-->
 		<div class="share_title share_title1 bg_fff mui-clearfix">
 			<div class="title_l mui-pull-left">
-				<h5 id="stockName" class="J_name">{$info_arr[1]}</h5>
-				<span id="stockNum" class="font14 J_code">{$info_arr[2]}</span>
+				<h5 id="stockName" class="J_name"><?php echo $info_arr[1]; ?></h5>
+				<span id="stockNum" class="font14 J_code"><?php echo $info_arr[2]; ?></span>
 			</div>
 			<div class="title_r mui-pull-right">
-				<h5 id="nowPrice" class="color J_price">{$info_arr[3]}</h5>
-				<span id="num1" class="color font14 J_num_1">{$info_arr[31]}</span>
-				<span id="num2" class="color font14 "><b class="J_num_2">{$info_arr[32]}</b>%</span>
+				<h5 id="nowPrice" class="color J_price"><?php echo $info_arr[3]; ?></h5>
+				<span id="num1" class="color font14 J_num_1"><?php echo $info_arr[31]; ?></span>
+				<span id="num2" class="color font14 "><b class="J_num_2"><?php echo $info_arr[32]; ?></b>%</span>
 			</div>
 		</div>
 		<!--图表-->
@@ -114,31 +115,31 @@
 			<div id="item_1" class="mui-control-content mui-active">
 				<!-- 为ECharts准备分时图 -->
 				<div class="figure" id="chart" style="-weheighbkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;position:relative;overflow:hidden;width:100%;margin: 0 auto;">
-					<img class="time_img" src="{$time_img}" alt="">
+					<img class="time_img" src="<?php echo $time_img; ?>" alt="">
 				</div>
 			</div>
 			<!--item2-->
 			<div id="item_2" class="mui-control-content" style="z-index: 2">
 				<div class="figure" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;position:relative;overflow:hidden;width:100%;margin: 0 auto;">
-					<img class="day_img" src="{$day_img}" alt="">
+					<img class="day_img" src="<?php echo $day_img; ?>" alt="">
 				</div>
 			</div>
 		</div>
 		<!--买买买-->
 		<div class="stock-price f-right mui-row" id="stock-price">
 			<ul class="sell mui-col-xs-6 mui-row">
-				<li class=""><em>卖⑤</em><b class="red info_27">{$info_arr[27]}</b><i class="info_28">{$info_arr[28]}</i></li>
-				<li class=""><em>卖④</em><b class="red info_25">{$info_arr[25]}</b><i class="info_26">{$info_arr[26]}</i></li>
-				<li class=""><em>卖③</em><b class="red info_23">{$info_arr[23]}</b><i class="info_24">{$info_arr[24]}</i></li>
-				<li class=""><em>卖②</em><b class="red info_21">{$info_arr[21]}</b><i class="info_22">{$info_arr[22]}</i></li>
-				<li class=""><em>卖①</em><b class="red info_19">{$info_arr[19]}</b><i class="info_20">{$info_arr[20]}</i></li>
+				<li class=""><em>卖⑤</em><b class="red info_27"><?php echo $info_arr[27]; ?></b><i class="info_28"><?php echo $info_arr[28]; ?></i></li>
+				<li class=""><em>卖④</em><b class="red info_25"><?php echo $info_arr[25]; ?></b><i class="info_26"><?php echo $info_arr[26]; ?></i></li>
+				<li class=""><em>卖③</em><b class="red info_23"><?php echo $info_arr[23]; ?></b><i class="info_24"><?php echo $info_arr[24]; ?></i></li>
+				<li class=""><em>卖②</em><b class="red info_21"><?php echo $info_arr[21]; ?></b><i class="info_22"><?php echo $info_arr[22]; ?></i></li>
+				<li class=""><em>卖①</em><b class="red info_19"><?php echo $info_arr[19]; ?></b><i class="info_20"><?php echo $info_arr[20]; ?></i></li>
 			</ul>
 			<ul class="buy mui-col-xs-6 mui-row">
-				<li><em>买①</em><b class="red info_9">{$info_arr[9]}</b><i class="info_10">{$info_arr[10]}</i></li>
-				<li><em>买②</em><b class="red info_11">{$info_arr[11]}</b><i class="info_12">{$info_arr[12]}</i></li>
-				<li><em>买③</em><b class="red info_13">{$info_arr[13]}</b><i class="info_14">{$info_arr[14]}</i></li>
-				<li><em>买④</em><b class="red info_15">{$info_arr[15]}</b><i class="info_16">{$info_arr[16]}</i></li>
-				<li><em>买⑤</em><b class="red info_17">{$info_arr[17]}</b><i class="info_18">{$info_arr[18]}</i></li>
+				<li><em>买①</em><b class="red info_9"><?php echo $info_arr[9]; ?></b><i class="info_10"><?php echo $info_arr[10]; ?></i></li>
+				<li><em>买②</em><b class="red info_11"><?php echo $info_arr[11]; ?></b><i class="info_12"><?php echo $info_arr[12]; ?></i></li>
+				<li><em>买③</em><b class="red info_13"><?php echo $info_arr[13]; ?></b><i class="info_14"><?php echo $info_arr[14]; ?></i></li>
+				<li><em>买④</em><b class="red info_15"><?php echo $info_arr[15]; ?></b><i class="info_16"><?php echo $info_arr[16]; ?></i></li>
+				<li><em>买⑤</em><b class="red info_17"><?php echo $info_arr[17]; ?></b><i class="info_18"><?php echo $info_arr[18]; ?></i></li>
 			</ul>
 		</div>
 		<a type="button" id="buy_step1" tapEvent='true' class="ml_btn_bot mui-btn mui-btn-block " href="javascript:;">买入</a>
@@ -151,11 +152,11 @@
 		<!--标题-->
 		<div class="t_stock_name share_title bg_fff mui-clearfix" style="padding-bottom: 0;">
 			<div class="title_l mui-pull-left">
-				<h5 id="stockName" class="J_name">{$info_arr[1]}</h5>
-				<span id="stockNum" class="font14 J_code">{$info_arr[2]}</span>
+				<h5 id="stockName" class="J_name"><?php echo $info_arr[1]; ?></h5>
+				<span id="stockNum" class="font14 J_code"><?php echo $info_arr[2]; ?></span>
 			</div>
 			<div class="title_r mui-pull-right mui-text-right">
-				<h5 class="color_red" style="font-size: 24px;">{$usableSum|default=0}</h5>
+				<h5 class="color_red" style="font-size: 24px;"><?php echo (isset($usableSum) && ($usableSum !== '')?$usableSum:0); ?></h5>
 				<p>账户余额(元)</p>
 			</div>
 		</div>
@@ -186,15 +187,15 @@
 				<a class="chose_a chose_a_bot" href="javascript:void(0);">50万</a>
 			</li>
 		</div>
-		{if !empty($_SESSION['Con_Lists'])}
+		<?php if(!empty($_SESSION['Con_Lists'])): ?>
 		<div class="mui-input-row mui-row">
-			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" value="{$_SESSION['Con_Lists']}" id="buy_number" class="ajax_html" maxlength="4">万元
+			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" value="<?php echo $_SESSION['Con_Lists']; ?>" id="buy_number" class="ajax_html" maxlength="4">万元
 		</div>
-		{else}
+		<?php else: ?>
 		<div class="mui-input-row mui-row">
 			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" placeholder="请输入金额" id="buy_number" maxlength="4">万元
 		</div>
-		{/if}
+		<?php endif; ?>
 		<p class="pad10 color_black font12">可买入<span id="gu" class="color_red">-</span>股，资金利用率<span id="lyl" class="color_red">-</span></p>
 
 		<ul class="choseBox2" style="margin: 0;">
@@ -271,7 +272,7 @@
 			<ul class="pad10" style="margin: 0;">
 				<li class="mui-clearfix">
 					<span class="li_l mui-pull-left">交易综合费</span>
-					<span id="publicFee" class="li_r mui-pull-right"><span class="color_red" id="publicFee_all">{$delayFee}</span>&nbsp;元</span>
+					<span id="publicFee" class="li_r mui-pull-right"><span class="color_red" id="publicFee_all"><?php echo $delayFee; ?></span>&nbsp;元</span>
 				</li>
 				<li class="total mui-clearfix">
 					<span class="li_l mui-pull-left">总计</span>
@@ -307,24 +308,24 @@
 </div>
 <script>
     //数据初始化
-    var delayFee = parseInt("{$delayFee }");
-    var dealFee = parseInt("{$dealFee }");
-    //    var publicFee = parseInt("{$delayFee * 2 + $dealFee }");
-    var delayLineRate = parseFloat("{$delayLineRate}");
-    var stopLossRate = parseFloat("{$stopLossRate}");
-    var lossLine =parseFloat("{$lossLine}");
+    var delayFee = parseInt("<?php echo $delayFee; ?>");
+    var dealFee = parseInt("<?php echo $dealFee; ?>");
+    //    var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+    var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
+    var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
+    var lossLine =parseFloat("<?php echo $lossLine; ?>");
 
     //按天杠杆倍率1到10倍
-    var levers_1 =parseFloat("{$levers_1}");
-    var levers_2 =parseFloat("{$levers_2}");
-    var levers_3 =parseFloat("{$levers_3}");
-    var levers_4 =parseFloat("{$levers_4}");
-    var levers_5 =parseFloat("{$levers_5}");
-    var levers_6 =parseFloat("{$levers_6}");
-    var levers_7 =parseFloat("{$levers_7}");
-    var levers_8 =parseFloat("{$levers_8}");
-    var levers_9 =parseFloat("{$levers_9}");
-    var levers_10 =parseFloat("{$levers_10}");
+    var levers_1 =parseFloat("<?php echo $levers_1; ?>");
+    var levers_2 =parseFloat("<?php echo $levers_2; ?>");
+    var levers_3 =parseFloat("<?php echo $levers_3; ?>");
+    var levers_4 =parseFloat("<?php echo $levers_4; ?>");
+    var levers_5 =parseFloat("<?php echo $levers_5; ?>");
+    var levers_6 =parseFloat("<?php echo $levers_6; ?>");
+    var levers_7 =parseFloat("<?php echo $levers_7; ?>");
+    var levers_8 =parseFloat("<?php echo $levers_8; ?>");
+    var levers_9 =parseFloat("<?php echo $levers_9; ?>");
+    var levers_10 =parseFloat("<?php echo $levers_10; ?>");
     var levers_data=[
         levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
     ];
@@ -427,7 +428,7 @@
         //创建时间
         $.ajax({
             type:"post",
-            url:"{:url('index/Ucenter/freetrialBuy')}",
+            url:"<?php echo url('index/Ucenter/freetrialBuy'); ?>",
             data:{
                 name:name,//股票的名字
                 stockCode:stockCode, //股票代号

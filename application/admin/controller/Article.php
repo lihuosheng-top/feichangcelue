@@ -24,13 +24,10 @@ use util\Tree;
 class Article extends Admin
 {
     public function imageslist(){
-
         // 数据列表
-        $data_list = Db::table("xh_images")->where()->order("id desc")->paginate();
-
+        $data_list = Db::table("xh_images")->order("id desc")->paginate();
         // 分页数据
         $page = $data_list->render();
-
         // 使用ZBuilder快速创建数据表格
         return ZBuilder::make('table')
             ->hideCheckbox()
@@ -38,7 +35,7 @@ class Article extends Admin
             ->addColumns([ // 批量添加列
                 ['id', 'ID'],
                 ['src', '图片地址'],
-//                ['href', '超链接'],
+                ['href', '超链接'],
             ])
             ->addColumn('type', '类型', 'status', '', [1=>'PC', 2=>'手机']) //type为数据库字段名, status为列的属性
             ->addColumns([
@@ -87,15 +84,15 @@ class Article extends Admin
             $this->assign('info', $info);
         }
 
-        $imagesTypeArray =  array('1'=>'PC轮播图片', '2'=>'手机轮播图片' );
+        $imagesTypeArray =  array('1'=>'PC轮播图片(pc像素:1920*400)', '2'=>'手机轮播图片(手机像素:720*300)' );
 
         // 使用ZBuilder快速创建表单
         return ZBuilder::make('form')
-            ->addImage('image_id', '图片')
+            ->addImage('image_id', '图片(手机像素:720*300)  (pc像素:1920*400)')
             ->addSelect('type', '选择类型', '请选择类型',  $imagesTypeArray)
-//            ->addFormItems([
-//                ['text', 'href', '超链接'],
-//            ])
+            ->addFormItems([
+                ['text', 'href', '超链接'],
+            ])
             ->setFormData($info)
             ->fetch();
     }

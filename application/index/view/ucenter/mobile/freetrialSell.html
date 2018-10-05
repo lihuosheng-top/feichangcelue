@@ -75,7 +75,7 @@
 				        </a>
 				        <div class="cont mui-row">
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
-				        		<p class="font12">止盈 <em>{$vo.surplus}</em>元</p>
+				        		<p class="font12">警戒线 <em>{$vo.surplus}</em>元</p>
 				        		<p class="font12">止损 <b>{$vo.loss}</b>元</p>
 				        	</div>
 				        	<div class="mui-col-xs-3 mui-col-sm-3">
@@ -104,14 +104,37 @@
 				            		<span class="li_l mui-pull-left font12">保证金</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.guaranteeFee}元</span>
 				            	</li>
-				            	<li class="mui-clearfix">
+
+								<li class="mui-clearfix">
+									<span class="li_l mui-pull-left font12">已付综合费</span>
+									<span class="li_r mui-pull-right font12">{$vo.publicFee}元</span>
+								</li>
+								{if !empty($vo.delayLine)}
+								<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延线</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.delayLine}元</span>
 				            	</li>
+								{/if}
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">止损线</span>
 				            		<span class="li_r mui-pull-right font12">{$vo.loss}元</span>
 				            	</li>
+								<li class="mui-clearfix">
+									{if !empty($vo.buy_day_num)}
+									<span class="li_l mui-pull-left font12">配资天数</span>
+									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_day_num}天</span>
+									{/if}
+									{if !empty($vo.buy_month_num)}
+									<span class="li_l mui-pull-left font12" >配资月数</span>
+									<span class="li_r mui-pull-right font12" style="color:#e60012">{$vo.buy_month_num}个月</span>
+									{/if}
+								</li>
+								<li class="mui-clearfix">
+									{if !empty($vo.buy_day_end_time)}
+									<span class="li_l mui-pull-left font12">配资到期时间</span>
+									<span class="li_r mui-pull-right font12">{$vo.buy_day_end_time}</span>
+									{/if}
+								</li>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">递延天数</span>
 				            		<!--<span class="li_r mui-pull-right font12">{if condition="$vo.delayDays gt 2"}{$vo.delayDays - 2}{else}0{/if}天</span>-->

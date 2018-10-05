@@ -746,21 +746,18 @@ class Ucenter extends Home
                 if($dealAmount<0.06){
                     error('买入的金额太低，最低交易600');
                 }
-//                if($surplus != $dealAmount * 10000 *$lossLine/$Multiple){
-//                    error("亏损警戒线数据错误");
-//                }
-//                //公式：倍数杠杆/100*保证金*天数*倍数
+                if($surplus != $dealAmount * 10000 *$lossLine/$Multiple+$dealAmount*10000){
+                    error("亏损警戒线数据错误");
+                }
+                //公式：倍数杠杆/100*保证金*天数*倍数
 //                if($publicFee !=$levers_multiples*$guaranteeFee*$buy_day_num*$Multiple/100){
 //                    error("交易综合费数据错误");
 //                }
-//                //当过了配资天数之后自动每天的递延费(倍数对应的倍率*保证金*倍数*1天)
+                //当过了配资天数之后自动每天的递延费(倍数对应的倍率*保证金*倍数*1天)
 //                if($delayFee !=$levers_multiples*$guaranteeFee*$Multiple){
 //                    error("递延费数据错误");
 //                }
-                if(abs($delayLine) != abs( (int)($guaranteeFee* $delayLineRate) ) ) {
-                    error("递延条件数据错误");
-                }
-                if(abs($loss) != (int)($guaranteeFee * $stopLossRate)){
+                if(abs($loss) != (int)($guaranteeFee * $stopLossRate+$guaranteeFee*$Multiple)){
                         error("触发止损数据错误");
                 }
                 $create_date = date("Y-m-d H:i:s");
@@ -769,81 +766,26 @@ class Ucenter extends Home
                 /**
                  * TODO:开始
                  */
-//                for($i=0;$i<$buy_day_num;$i++){
-//                    $daty[] = date("Y-m-d", strtotime('.+'.$i.'days.', $now_time));
-//                }
-//                $data_holidays =Db::table('xh_holiday')->field('day')->select();
-//                //halt($data_holidays);
-//                foreach ($daty as $key=>$value){
-//                    foreach ($data_holidays as $val){
-//                        if($value == $val["day"]){
-//                            dump($val["day"]);
-//                            $time = date("Y-m-d",strtotime("+1 days",strtotime($val["day"])));
-//                            if($time == $value){
-//
-//                            }
-//                        }
-//                    }
-//                }
-//
-//                exit;
+                $buy_day_nums =$buy_day_num;
+                $data_holidays =Db::table('xh_holiday')->field('day')->where('day','>',$curDate)->select();
+                foreach($data_holidays as $k => $v)
+                {
+                    $data_holiday[] = $v['day'];
+                }
+                $i_day = 1;
+                while($buy_day_nums)
+                {
+                    $temp = date("Y-m-d", strtotime('+'.$i_day.' days', $now_time));
+                    $i_day++;
+                    if (!in_array($temp, $data_holiday))
+                        $buy_day_nums--;
+                }
 
+               $temp_str_time = strtotime("next day", strtotime($temp)) - 1;
+                $temps =date("Y-m-d H:i:s",$temp_str_time);
                 /**
                  * TODO:结束
                  */
-
-
-
-
-
-
-
-                /*对计算未来几天是节假日的情况添加几天进入到配资统计天数，方便计算到期那一天*/
-//                $data_holidays =Db::table('xh_holiday')->field('day')->where('day','>',$curDate)->select();
-//                for($i =1;$i<=$buy_day_num;$i++){
-//                    $buy_day_expire_single =date("Y-m-d", strtotime('.+'.$i.'days.', $now_time));
-//                    foreach ($data_holidays as $key=>$val){
-//                        if($buy_day_expire_single == $val["day"]){
-//                            $buy_day_expire_all[] =$buy_day_expire_single;
-//                        }
-//                    }
-//                }
-//
-////                $buy_test =date("Y-m-d", strtotime('+8 days', $now_time));
-//               $all_day_expire =count($buy_day_expire_all);//计算出来配资天数中有几天是节假日
-//                //dump($buy_day_expire_all);//里面具体哪几号
-////                dump($all_day_expire);//6
-//
-//                $buy_test =date("Y-m-d", strtotime('.+'.$buy_day_num.'days.', $now_time));
-////                dump($buy_test);//06
-//                $count_day_num =$all_day_expire +$buy_day_num; //计算到那一天
-//                $buy_day_expire_data =date("Y-m-d", strtotime('.+'.$count_day_num.'days.', $now_time)); //配资到的那一天是几号
-////                dump($buy_day_expire_data);//12
-//
-//                $data_holidays_tow =Db::table('xh_holiday')->field('day')->where('day','>',$buy_test)->where('day','<=',$buy_day_expire_data)->select();
-////                dump($data_holidays_tow);
-//                foreach ($data_holidays_tow as $k=>$v) {
-//                    if($buy_day_expire_data ==$v['day']){
-//                        $buy_day_expire_data_all[] =$buy_day_expire_data;
-//                    }
-//                }
-//                dump($buy_day_expire_data_all);
-//                $all_days_expire_count =count($buy_day_expire_data_all)+$count_day_num; //前面的加上后面那几天
-//                dump($all_days_expire_count);
-//
-//                $buy_test_tow =date("Y-m-d", strtotime('.+'.$all_days_expire_count.'days.', $now_time));
-//                dump($buy_test_tow);
-//
-//                $data_holidays_three =Db::table('xh_holiday')->field('day')->where('day','>',$buy_day_expire_data)->where('day','<=',$buy_test_tow)->select();
-//                dump($data_holidays_three);
-//
-//                foreach ($data_holidays_three as $ks=>$vs){
-//                    if($buy_test_tow==$vs['day']){
-//                        $buy_day_expire_data_all_three[] =$$buy_test_tow;
-//                    }
-//                }
-//               dump($buy_day_expire_data_all_three);
-//                exit();
                 if(Db::table("xh_stock_order")->where("memberId=$memberId and left(createTime,10)=' $curDate'" )->count() >= 10){
                     error("您今天已购买了10次，不能再购买了。");
                 }
@@ -905,6 +847,7 @@ class Ucenter extends Home
                         'stock_by_pay_type'=>$stock_by_pay_type, //判断买入的类型是按月还是按日（1为按天，2为按月）
                         'buy_day_num'=>$buy_day_num, //配资的天数
 //                        'count_day_num'=>$count_day_num, //计算累加天数，方便计算配资天数到期的那一天
+                        'buy_day_end_time'=>$temps, //按天配资所配资到的结束那天（中间已经除去非工作日）
                     ];
                 }else{
               $this->error('余额不足，请前往充值','/home');
@@ -964,14 +907,21 @@ class Ucenter extends Home
 //                if($delayFee !=$levers_multiples*$guaranteeFee*$Multiple){
 //                    error("递延费数据错误");
 //                }
-            if(abs($delayLine) != abs( (int)($guaranteeFee* $delayLineRate) ) ) {
-                error("递延条件数据错误");
-            }
-            if(abs($loss) != (int)($guaranteeFee * $stopLossRate)){
-                error("触发止损数据错误");
-            }
+//            if(abs($delayLine) != abs( (int)($guaranteeFee* $delayLineRate) ) ) {
+//                error("递延条件数据错误");
+//            }
+//            if(abs($loss) != (int)($guaranteeFee * $stopLossRate)){
+//                error("触发止损数据错误");
+//            }
             $create_date = date("Y-m-d H:i:s");
             $curDate = date("Y-m-d");
+
+            /**
+             * 计算购买一个月之后的时间
+             */
+          $day_times =  date("Y-m-d H:i:s", strtotime("+$buy_month_num months", strtotime($curDate)));
+            $temp_str_time = strtotime("next day", strtotime($day_times)) - 1;
+            $buy_day_end_time =date("Y-m-d H:i:s",$temp_str_time);
             if(Db::table("xh_stock_order")->where("memberId=$memberId and left(createTime,10)=' $curDate'" )->count() >= 10){
                 error("您今天已购买了10次，不能再购买了。");
             }
@@ -1026,6 +976,7 @@ class Ucenter extends Home
                     'isFreetrial'=>0, //a股购买（0为a股购买,1为免费体验）
                     'stock_by_pay_type'=>$stock_by_pay_type, //判断买入的类型是按月还是按日（1为按天，2为按月）
                     'buy_month_num'=>$buy_month_num, //配资的月数
+                     'buy_day_end_time'=>$buy_day_end_time,                                   //配资到期时间
                 ];
             }else{
                 $this->error('余额不足，请前往充值','/home');
@@ -1053,34 +1004,72 @@ class Ucenter extends Home
             $member = $_SESSION['member'];
             $memberId = (int)$member['id'];
             $stockCode = trim($_POST['stockCode']);
-            $all_price_sum = trim($_POST['all_price_sum']);//总计金额??????
-
+            $all_price_sum = trim($_POST['all_price_sum']);//总计金额
             $dealAmount = (float)trim($_POST['dealAmount']);      //买入金额(万元)
-            $surplus = (int)trim($_POST['surplus']);            //触 发 止 盈
+            $surplus = (int)trim($_POST['surplus']);            //警戒线
             $loss = (int)trim($_POST['loss']);                  //触 发 止 损
-
+            $stockname =trim($_POST['name']);                    //股票的名字
             $publicFee = (int)trim($_POST['publicFee']);        //交易综合费
             $guaranteeFee = (int)trim($_POST['guaranteeFee']);  //履约保证金
-            $delayLine = (int)trim($_POST['delayLine']);        //递 延 条 件
-            $delayFee = (int)trim($_POST['delayFee']);          //递延费 18元/天
+            $delayLine = (int)trim($_POST['delayLine']);        //递延条件
+            $delayFee = (int)trim($_POST['delayFee']);          //递延费（元/天)
+            $stock_by_pay_type = (int)trim($_POST['stock_by_pay_type']);  //判断买入的类型是按月还是按日（1为按天，2为按月
+            $Multiple =(int)trim($_POST['Multiple']); //买入的倍数
+            $levers_multiples =(float)trim($_POST['levers_multiples']); //买入得到倍数对应的杠杆率
+            $buy_day_num = trim($_POST['buy_day_num']); //配资的天数
             //读取系统设置的参数
             $sys_delayFee = (int)(getSysParamsByKey("delayFee"));
             $sys_dealFee = (int)(getSysParamsByKey("dealFee"));
             $delayLineRate = (float)getSysParamsByKey("delayLineRate"); //递延条件是保证金的0.75倍
             $stopLossRate = (float)getSysParamsByKey("stopLossRate"); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
             $maxDiffRate = (float)getSysParamsByKey("maxDiffRate"); //当某股票当天涨跌幅大于8%时不能购买
+            $lossLine = (float)getSysParamsByKey("lossLine"); //亏损警戒线
 
             if($$dealAmount>50){
                 error("买入金额超出范围，最高交易50万");
             }
-//            if($surplus != $dealAmount * 5000){
-//                error("触发止盈数据错误");
-//            }
+            if($dealAmount<0.06){
+                error('买入的金额太低，最低交易600');
+            }
+            if($surplus != $dealAmount * 10000 *$lossLine/$Multiple+$dealAmount*10000){
+                error("亏损警戒线数据错误");
+            }
+
+            if(abs($loss) != (int)($guaranteeFee * $stopLossRate+$guaranteeFee*$Multiple)){
+                error("触发止损数据错误");
+            }
             $create_date = date("Y-m-d H:i:s");
+            $curDate = date("Y-m-d");
+            $now_time =time();
+            /**
+             * TODO:开始
+             */
+            $buy_day_nums =$buy_day_num;
+            $data_holidays =Db::table('xh_holiday')->field('day')->where('day','>',$curDate)->select();
+            foreach($data_holidays as $k => $v)
+            {
+                $data_holiday[] = $v['day'];
+            }
+            $i_day = 1;
+            while($buy_day_nums)
+            {
+                $temp = date("Y-m-d", strtotime('+'.$i_day.' days', $now_time));
+                $i_day++;
+                if (!in_array($temp, $data_holiday))
+                    $buy_day_nums--;
+            }
+
+            $temp_str_time = strtotime("next day", strtotime($temp)) - 1;
+            $temps =date("Y-m-d H:i:s",$temp_str_time);
+            /**
+             * TODO:结束
+             */
             $res_str = $this->getMarketValueBycode($stockCode);
             $nowPrice = $res_str['info_arr'][3];
             $data = $res_str['info_arr'];
-
+            if(!empty(stristr($data[1],'S'))){
+                error('不能购买S、ST、*ST、S*ST、SST、以及被交易所特别处理的股票');
+            }
             if ($data) {
                 $nowPrice = $data[3];
                 $diff_rate = $data[32];
@@ -1103,13 +1092,28 @@ class Ucenter extends Home
             $new_freebleSum = $freebleSum - (float)$all_price_sum;
 
             if($new_freebleSum > 0){
-
                 Db::name('member')->data('freebleSum', $new_freebleSum)->where('id', $memberId)->update();
+//                $data = [
+//                    'memberId' => $memberId,
+//                    'stockCode' => $stockCode,
+//                    'dealPrice' => $nowPrice,
+//                    'dealAmount' => $dealAmount,
+//                    'dealQuantity' => $dealQuantity,
+//                    'surplus' => $surplus,
+//                    'loss' => $loss,
+//                    'publicFee' => $publicFee,
+//                    'guaranteeFee' => $guaranteeFee,
+//                    'delayLine' => $delayLine,
+//                    'delayFee' => $sys_delayFee,
+//                    'createTime' => $create_date,
+//                    'status' => 1,
+//                    'isFreetrial'=>1 //免费体验
+//                ];
                 $data = [
-                    'memberId' => $memberId,
-                    'stockCode' => $stockCode,
+                    'memberId' => $memberId, //用户id
+                    'stockCode' => $stockCode, //股票代号
                     'dealPrice' => $nowPrice,
-                    'dealAmount' => $dealAmount,
+                    'dealAmount' => $dealAmount,    //买入金额(万元)
                     'dealQuantity' => $dealQuantity,
                     'surplus' => $surplus,
                     'loss' => $loss,
@@ -1117,11 +1121,14 @@ class Ucenter extends Home
                     'guaranteeFee' => $guaranteeFee,
                     'delayLine' => $delayLine,
                     'delayFee' => $sys_delayFee,
-                    'createTime' => $create_date,
+                    'createTime' => $create_date, //买入的时间
                     'status' => 1,
-                    'isFreetrial'=>1 //免费体验
+                    'isFreetrial'=>1 ,//免费体验
+                    'stock_by_pay_type'=>$stock_by_pay_type, //判断买入的类型是按月还是按日（1为按天，2为按月）
+                    'buy_day_num'=>$buy_day_num, //配资的天
+                    'buy_day_end_time'=>$temps, //按天配资所配资到的结束那天（中间已经除去非工作日）
                 ];
-            }else{
+                }else{
                 $this->error('体验金已用完，不能再购买');
             }
             $res = Db::name('stock_order')->data($data)->insert();
@@ -1162,10 +1169,10 @@ class Ucenter extends Home
             error("节假日不能交易");
         }
         //TODO:限制购买时间
-        $curTime = date("H:i:s");
-        if (!($curTime >= '09:30:00' && $curTime <= '11:30:00' || $curTime >= '13:00:00' && $curTime <= '14:58:00')) {
-            error("非交易时间,<br/>可交易时间（09:30:00-11:30:00）（13:00:00-14:58:00）");
-        }
+//        $curTime = date("H:i:s");
+//        if (!($curTime >= '09:30:00' && $curTime <= '11:30:00' || $curTime >= '13:00:00' && $curTime <= '14:58:00')) {
+//            error("非交易时间,<br/>可交易时间（09:30:00-11:30:00）（13:00:00-14:58:00）");
+//        }
 
     }
 
