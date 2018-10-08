@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\guild.html";i:1538977064;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1532575172;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1538309066;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\guild.html";i:1538978957;s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1536287824;s:83:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1538978957;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

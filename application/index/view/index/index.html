@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+   
 </head>
 <body class="index_body">
 {include file="public:top" /}
@@ -9,6 +10,12 @@
 <link rel="stylesheet" type="text/css" href="./public/static/home/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css"/>
+<style type="text/css">
+	.item a{
+		display: block;
+		overflow: hidden;
+	} 
+</style>
 <!--banner-->
 <div class="banner_login br-w100">
     <div class="bBanner br-w100">
@@ -42,20 +49,26 @@
                 <!-- 轮播（Carousel）项目 -->
                 <div class="carousel-inner">
                     <div class="item active">
-                        <div class="carImg"></div>
+                    <a href=""> <div class="carImg"></div></a>
+                       
+                    	
                     </div>
                     <div class="item">
-                        <div class="carImg2"></div>
+                        <a href=""><div class="carImg2"></div></a>
+                        
+                    
                     </div>
                     <div class="item">
-                        <div class="carImg3"></div>
+                      <a href=""><div class="carImg3"></div></a>
+                        
+                    
                     </div>
                 </div>
                 <!-- 轮播（Carousel）按钮导航 -->
                 <a class="carousel-control left" href="#myCarousel"
-                   data-slide="prev">&lsaquo;</a>
+                   data-slide="prev" style="z-index: 99999;">&lsaquo;</a>
                 <a class="carousel-control right" href="#myCarousel"
-                   data-slide="next">&rsaquo;</a>
+                   data-slide="next"style="z-index: 99999;">&rsaquo;</a>
             </div>
         </div>
 
@@ -279,12 +292,19 @@
             dataType:'json',
             success:function(data){
                 console.log(data);
+//              console.log($(".item a")[0]);
                 var img_car =data.data[0].src;
+                var img_href =data.data[0].href;
                 $('.carImg').css('background','url('+'"'+img_car+'"'+')');
+                $(".item a")[0].href=img_href;
+                var img_href2 =data.data[1].href2;
                 var img_car2 =data.data[1].src;
                 $('.carImg2').css('background','url('+'"'+img_car2+'"'+')');
+                  $(".item a")[1].href=img_href2;
+                var img_href3 =data.data[2].href;
                 var img_car3 =data.data[2].src;
                 $('.carImg3').css('background','url('+'"'+img_car3+'"'+')');
+                $(".item a")[2].href=img_href3;
             },
             error:function (data) {
                 console.log("错误");

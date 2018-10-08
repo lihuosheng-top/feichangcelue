@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1538978704;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1538983036;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -89,6 +89,10 @@
 			.weui-flex {
 				display: flex;
 			}
+		.swiper-slide a{
+			display: block;
+			height: auto;
+		}
 		</style>
 	</head>
 
@@ -96,10 +100,11 @@
 
 		<div class="wapper">
 			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" id="banner1"><img src="" alt=""></div>
-					<div class="swiper-slide" id="banner2"><img src="" alt=""></div>
-					<div class="swiper-slide" id="banner3"><img src="" alt=""></div>
+				<div class="swiper-wrapper" id="swiper-list">
+					<div class="swiper-slide" id="banner1"><a href="#"><img src="" alt=""></a></div>
+					<div class="swiper-slide" id="banner2"><a href="#"><img src="" alt=""></a></div>
+					<div class="swiper-slide" id="banner3"><a href="#"><img src="" alt=""></a></div>
+					
 				</div>
 				<!--<div class="swiper-wrapper">-->
 				<!--<div class="swiper-slide" id="banner1"><img src="/feichangcelue/public/uploads/images/20180713/3d416b03da1b9123bdb83623842d879d.png" alt=""></div>-->
@@ -283,14 +288,27 @@
 					data: {},
 					dataType: 'json',
 					success: function(data) {
-						              console.log(data);
+//						console.log(data);
+						
+//					console.log($('#banner2 img')[1]);
+//					console.log($('#banner1 img')[1]);
 						var banner1 = data.data[0].src;
+						var banner1_href = data.data[0].href;
 						$('#banner1 img')[0].src = banner1;
+						$('#banner1 a')[0].href = banner1_href;
 						$('#banner1 img')[1].src = banner1;
+						$('#banner1 a')[1].href = banner1_href;
+						
+						var banner2_href = data.data[1].href;
 						var banner2 = data.data[1].src;
 						$('#banner2 img')[0].src = banner2;
+						$('#banner2 a')[0].href = banner2_href;
+						
+						
+						var banner3_href = data.data[2].href;
 						var banner3 = data.data[2].src;
 						$('#banner3 img')[1].src = banner3;
+						$('#banner3 a')[1].href = banner3_href;
 					},
 					error: function(data) {
 						console.log("错误");
