@@ -278,7 +278,7 @@
             url:"{:url('index/index/pc_broadcast')}",
             dataType:'json',
             success:function(data){
-//                console.log(data);
+                console.log(data);
                 var img_car =data.data[0].src;
                 $('.carImg').css('background','url('+'"'+img_car+'"'+')');
                 var img_car2 =data.data[1].src;

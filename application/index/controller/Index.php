@@ -1184,7 +1184,7 @@ class Index extends Home
      */
     public function app_broadcast(Request $request){
         if($request->isPost()){
-            $res =Db::name('images')->field('src')->order('id','desc')->where('type',2)->limit(0,3)->select();
+            $res =Db::name('images')->field('src,href')->order('id','desc')->where('type',2)->limit(0,3)->select();
             if(!empty($res)){
                 $this->ajax_success('成功',$res);
             }
@@ -1198,7 +1198,7 @@ class Index extends Home
      */
     public function pc_broadcast(Request $request){
         if($request->isPost()){
-            $res = Db::name('images')->field('src')->order('id','desc')->where('type',1)->limit(0,3)->select();
+            $res = Db::name('images')->field('src,href')->order('id','desc')->where('type',1)->limit(0,3)->select();
             if(!empty($res)){
                $this->ajax_success('成功',$res);
             }

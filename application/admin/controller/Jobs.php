@@ -1,6 +1,4 @@
 <?php
-
-
 namespace app\admin\controller;
 //use app\common\controller\Common;
 use think\Db;
@@ -83,7 +81,7 @@ class Jobs
         foreach($orderList as $k=>$v){;
             global $orderId, $liquidation;
             $orderId = $v['id'];
-            $surplus = $v['surplus']; //止盈线
+            $surplus = $v['surplus']; //警戒线
             $loss = $v['loss'];//止损线
 //            $stockDetail = $stockMap[$v['stockCode']];
             /*从实时数据过来*/

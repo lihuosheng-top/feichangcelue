@@ -186,15 +186,9 @@
 				<a class="chose_a chose_a_bot" href="javascript:void(0);">50万</a>
 			</li>
 		</div>
-		{if !empty($_SESSION['Con_Lists'])}
-		<div class="mui-input-row mui-row">
-			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" value="{$_SESSION['Con_Lists']}" id="buy_number" class="ajax_html" maxlength="4">万元
-		</div>
-		{else}
 		<div class="mui-input-row mui-row">
 			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" placeholder="请输入金额" id="buy_number" maxlength="4">万元
 		</div>
-		{/if}
 		<p class="pad10 color_black font12">可买入<span id="gu" class="color_red">-</span>股，资金利用率<span id="lyl" class="color_red">-</span></p>
 
 		<ul class="choseBox2" style="margin: 0;">

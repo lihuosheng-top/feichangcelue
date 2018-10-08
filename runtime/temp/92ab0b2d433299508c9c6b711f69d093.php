@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1537428837;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1538978704;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -283,7 +283,7 @@
 					data: {},
 					dataType: 'json',
 					success: function(data) {
-						//                console.log(data);
+						              console.log(data);
 						var banner1 = data.data[0].src;
 						$('#banner1 img')[0].src = banner1;
 						$('#banner1 img')[1].src = banner1;
