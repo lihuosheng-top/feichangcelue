@@ -144,7 +144,7 @@ var buy_moblie={
             //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
             if(interest_id !==null){
                 //警戒线
-                $("#check-surplus_ul>a").html((input_price/index_num *10000*lossLine+input_price*10000).toFixed(2));
+                $("#check-surplus_ul>a").html(-(input_price/index_num *10000*lossLine+input_price*10000).toFixed(2));
                 $("#publicFee>span").html((interest_id*input_price*day_number*100).toFixed(2) );
             }
             //总计
@@ -163,7 +163,7 @@ var buy_moblie={
             //公式：倍率杠杆/100*配资得的金额*10000/倍数*天数
             if(interest_id !==null){
                 $("#publicFee>span").html((interest_id*input_price*day_numbers*100).toFixed(2) );
-                $("#check-surplus_ul>a").html((input_price/index_num *10000*lossLine+input_price*10000).toFixed(2)); //警戒线
+                $("#check-surplus_ul>a").html(-(input_price/index_num *10000*lossLine+input_price*10000).toFixed(2)); //警戒线
             }
             //保证金
             var bond = parseInt(input_price*10000/index_num);
@@ -923,7 +923,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
         $('#buy_price_ul > li a').removeClass("chose-active");
     });
     //警戒线
-    $("#check-surplus_ul>a").html((price/3 *10000*lossLine+price*10000).toFixed(2));
+    $("#check-surplus_ul>a").html(-(price/3 *10000*lossLine+price*10000).toFixed(2));
 
     //TODO:
     //获取天数的值

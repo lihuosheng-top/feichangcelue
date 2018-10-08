@@ -303,7 +303,7 @@
 			var a=parseInt($(".con_one .con_list p input").val());//保证金
 			var b=parseInt($(this).children("span").eq(0).find("i").html());//倍数
 			$(".con_one .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
-			$(".con_one .con_list>p").eq(5).find("i").html((a*lossLine+a*b).toFixed(2));//警戒线
+			$(".con_one .con_list>p").eq(5).find("i").html(-(a*lossLine+a*b).toFixed(2));//警戒线
 			if(b==3){
              	$(".con_one .con_list>p").eq(6).find("i").html(-(a*stopLossRate+a*b).toFixed(2));
                abc = parseInt($(this).children("span").eq(0).find("i").html());
@@ -373,7 +373,7 @@
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
 			$(".con_two .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
 //			$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-			$(".con_two .con_list>p").eq(5).find("i").html((a*lossLine+a*b).toFixed(2));//警戒线
+			$(".con_two .con_list>p").eq(5).find("i").html(-(a*lossLine+a*b).toFixed(2));//警戒线
             if(b==3){
 //                $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
                 $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate+a*b).toFixed(2));
@@ -641,7 +641,7 @@
 				var b=parseInt($(".con_two .con_li").find("i").eq(0).html());
 				var ajax_html = $(".con_two .con_list>p").eq(4).find("i").html(a*b);
 //				$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
-				$(".con_two .con_list>p").eq(5).find("i").html((a*lossLine+a*b).toFixed(2));//警戒线
+				$(".con_two .con_list>p").eq(5).find("i").html(-(a*lossLine+a*b).toFixed(2));//警戒线
                 if(b==3){
 //                    $(".con_two .con_list>p").eq(6).find("i").html(-(a*b*0.26667).toFixed(2));
                     $(".con_two .con_list>p").eq(6).find("i").html(-(a*stopLossRate+a*b).toFixed(2));
