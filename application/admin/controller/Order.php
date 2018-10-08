@@ -178,7 +178,7 @@ class Order extends Admin
         error("操作失败");
     }
 
-    //$liquidation: 0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过止盈线自动平仓; 4 收盘时亏损额大于递延条件而自动平仓
+    //$liquidation: 0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过警戒线; 4 收盘时亏损额大于递延条件而自动平仓
     public function stock_sell_do($orderId , $liquidation = 1){
         if(!$orderId || !is_numeric($orderId)){
             die(false);
@@ -237,7 +237,7 @@ class Order extends Admin
         if($liquidation == 2){
             $remarks = "亏损超过止损线自动";
         }else if($liquidation == 3){
-            $remarks = "盈利超过止盈线自动";
+            $remarks = "亏损超过警戒线自动";
         }else if($liquidation == 4){
             $remarks = "收盘时亏损额超过递延线自动";
         }
@@ -246,7 +246,6 @@ class Order extends Admin
         $sql = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
             values ($memberId, '1', $amount, $usableSum , '{$remarks}', now() );";
         $ret = Db::execute($sql);
-
         return $ret;
     }
 

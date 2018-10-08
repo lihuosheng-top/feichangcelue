@@ -9,6 +9,7 @@ return [
         ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
         ':name' => ['index/hello', ['method' => 'post']],
     ],
+
 //前台路由定义
     'buy' => 'index/index/buy?code',				  	//按天A股购买
     'month_buy' => 'index/index/month_buy?code',				  	//按月A股购买

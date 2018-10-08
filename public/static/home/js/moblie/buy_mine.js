@@ -138,8 +138,6 @@ var buy_moblie={
             var index_num= $(this)[0].id.split('_')[2];
             var input_price =$('#buy_number').val();
 
-
-
             //TODO:6
             //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
             if(interest_id !==null){

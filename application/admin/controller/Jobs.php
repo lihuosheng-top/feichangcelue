@@ -59,10 +59,14 @@ class Jobs
         return  $object;
     }
 
-
     //获取股票实时价格，自动平仓 (每秒运行一次)
     public function pingCang(){
         $t1 = time();
+        //触发止损所发出短信信息
+        $loss_information ="尊敬的用户，你在本平台已达强制平仓线本,平台已自动平仓《尚牛在线》";
+        //平仓警戒线发的短信信息
+        $surplus_information ="尊敬的用户，你在本平台所建仓已达警戒线，敬请注意或及时补仓以免造成损失《尚牛在线》";
+
         $res = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->field("distinct(stockCode)")
@@ -80,13 +84,13 @@ class Jobs
 
         foreach($orderList as $k=>$v){;
             global $orderId, $liquidation;
+            $send_phone_num =Db::table('xh_member')->where('id',$v['memberId'])->find();
             $orderId = $v['id'];
             $surplus = $v['surplus']; //警戒线
             $loss = $v['loss'];//止损线
 //            $stockDetail = $stockMap[$v['stockCode']];
             /*从实时数据过来*/
             $stockDetail =(new Common())->getMarketValueBycode_second($v['stockCode']);
-//            dump($stockDetail);
             $diff_rate = $stockDetail['info_arr']['31'] ;//涨跌幅
             if($diff_rate <= -9.95){//股票跌停则不允许卖出
                 echo $v['stockCode']."跌停<br/>";
@@ -98,12 +102,17 @@ class Jobs
             }
             $profit = ((float)$nowPrice - (float)$v['dealPrice']) * $v['dealQuantity'] * 100; //交易盈亏
             $profit = round($profit, 2);
-            //如果盈亏大于止盈线或小于止损线，则即时强制平仓
-            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过止盈线自动平仓
-            if($profit > $surplus){
+            //如果亏损小于止损线，则即时强制平仓
+            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过警戒线线自动平仓
+            if($profit < $surplus){
+
                 $liquidation = 3;
+                //这部分是超过警戒线的值发送一个短信给用户
+             (new  Common())->sendMobileToInformation($send_phone_num['mobile'],$surplus_information);
             }else if($profit < $loss){
                 $liquidation = 2;
+                //这部分是超过止损线的值发送的一个信息给用户
+                (new  Common())->sendMobileToInformation($send_phone_num['mobile'], $loss_information);
             }
             echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
             //访问后台函数的权限
@@ -116,7 +125,6 @@ class Jobs
                     (new Order())->stock_sell_do($orderId, $liquidation);
                     Db::commit();
                 });
-                //(new Order())->stock_sell_do($orderId, $liquidation);
             }
             $t2 = time();
             echo "t2-t1=".($t2 - $t1)."<br/>";
@@ -252,7 +260,6 @@ class Jobs
                     $days++;
                     //如果days大于2，则添加递延费记录
                     if($days > 2 && !Db::table("xh_day_delayfee")->where("day='$timerDate' and orderId=$orderId")->find()){
-
                         $member = Db::table("xh_member")->field("username,mobile,usableSum")->where("id=$memberId")->find();
                         $usableSum = $member['usableSum'];
                         if($usableSum >= $delayFee){//如果可用余额大于即将扣除的递延费
@@ -274,7 +281,6 @@ class Jobs
                             $data['remarks'] = "扣除{$timerDate}递延费{$delayFee}元(订单号:$orderId)";
                             $data['createTime'] = date("Y-m-d H:i:s");
                             Db::table("xh_member_fundrecord")->insertGetId($data);
-
                         }else{//如果余额不足  添加系统消息
                             $msg = "用户".$member['username']."(手机号为".$member['mobile'].")余额{$usableSum}元，扣除{$timerDate}的递延费{$delayFee}元失败(订单号:$orderId)";
                             Db::table("xh_note_msg")->insertGetId(array('message'=>$msg, 'createTime'=>date("Y-m-d H:i:s")));

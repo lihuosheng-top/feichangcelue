@@ -248,4 +248,32 @@ class Common extends Controller
         exit(json_encode($return));
     }
 
+    /**
+     **************李火生*******************
+     * 警戒线，触发止损线发送给用户的信息
+     * @param $mobile @接收短信的手机号
+     * @param $content  @接收短信的信息内容
+     **************************************
+     */
+  public  function sendMobileToInformation($mobile,$content)
+    {
+        //接受验证码的手机号码
+        $arr = json_decode($mobile, true);
+        $mobiles = strlen($arr);
+        if (isset($mobiles) != 11) {
+            $this->error("手机号码不正确");
+        }
+        $url = "http://120.26.38.54:8000/interface/smssend.aspx";
+        $post_data = array("account" => "peizi", "password" => "123qwe", "mobile" => $mobile, "content" => $content);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+        $output = curl_exec($ch);
+        curl_close($ch);
+    }
+
+
+
 }

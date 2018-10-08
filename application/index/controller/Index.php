@@ -942,7 +942,6 @@ class Index extends Home
                 $this->ajax_success("发送失败");
             }
             //json格式转换
-
         }
     }
 
@@ -1232,4 +1231,10 @@ class Index extends Home
     public  function  index_information_second(){
         return view('index_information_second');
     }
+
+
+
+
+
+
 }
