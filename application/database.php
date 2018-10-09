@@ -6,12 +6,12 @@ return [
 //    // 服务器地址
 //	'hostname'        => '127.0.0.1',
 //    // 用户名
-    'username'        => 'siring',
-    'hostname'        => 'rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com',
-//	'username'        => 'root',
+//    'username'        => 'siring',
+  //  'hostname'        => 'rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com',
+	'username'        => 'root',
 //    // 密码
-    'password'        => 'Siringdatabase_123',
-//	 'password'        => 'root',
+//    'password'        => 'Siringdatabase_123',
+	 'password'        => '@sm00009.com',
 
     // 数据库名
     'database'        => 'peizi',

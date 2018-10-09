@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/application/admin/controller/Jobs.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="274">
-              <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
               <folding>
                 <element signature="e#74#87#0#PHP" expanded="true" />
                 <marker date="1538997646044" expanded="true" signature="8171:8257" ph="update xh_st... " />
@@ -246,7 +246,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="width" value="1360" />
     <option name="height" value="728" />
   </component>
@@ -366,15 +366,15 @@
       <workItem from="1538317973841" duration="4751000" />
       <workItem from="1538669588281" duration="1179000" />
       <workItem from="1538729620362" duration="22513000" />
-      <workItem from="1538966417740" duration="20737000" />
+      <workItem from="1538966417740" duration="20867000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270095000" />
+    <option name="totallyTimeSpent" value="270225000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1360" height="728" extended-state="0" />
+    <frame x="0" y="0" width="1360" height="728" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.008461539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -838,7 +838,7 @@
     <entry file="file://$PROJECT_DIR$/application/admin/controller/Jobs.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
-          <caret line="26" column="18" lean-forward="true" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
           <folding>
             <element signature="e#74#87#0#PHP" expanded="true" />
             <marker date="1538997646044" expanded="true" signature="8171:8257" ph="update xh_st... " />
