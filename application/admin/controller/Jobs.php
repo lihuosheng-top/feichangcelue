@@ -37,7 +37,6 @@ class Jobs
         $t2 = time();
         echo "t2-t1=".($t2 - $t1);
         //print_r($this->object2array($stockMap));
-
     }
 
     private function object2array(&$object) {
