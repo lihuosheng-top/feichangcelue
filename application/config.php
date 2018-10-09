@@ -12,9 +12,9 @@ return [
     // 数据包目录路径
     'packet_path'        => ROOT_PATH. 'packet/',
     // 文件上传路径
-    'upload_path'        => ROOT_PATH . 'public' . DS . 'uploads',
+    'upload_path'        => ROOT_PATH. 'public' . DS .  'uploads',
     // 文件上传临时目录
-    'upload_temp_path'   => ROOT_PATH . 'public' . DS . 'uploads' . DS . 'temp/',
+    'upload_temp_path'   => ROOT_PATH. 'public' . DS . 'uploads' . DS . 'temp/',
 
     // +----------------------------------------------------------------------
     // | 验证码设置

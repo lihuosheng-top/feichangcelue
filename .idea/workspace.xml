@@ -29,8 +29,13 @@
       <file leaf-file-name="Ucenter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Ucenter.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="906">
               <caret line="1269" column="29" lean-forward="false" selection-start-line="1269" selection-start-column="29" selection-end-line="1269" selection-end-column="29" />
+=======
+            <state relative-caret-position="274">
+              <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+>>>>>>> 961d0b9c381ac012808c0de0c006e1dd5da25d3c
               <folding>
                 <marker date="1538761589706" expanded="true" signature="46942:47098" ph="update xh_st... " />
                 <marker date="1538761589706" expanded="true" signature="47215:47279" ph="update xh_me... " />
@@ -210,11 +215,17 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+<<<<<<< HEAD
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1376" />
     <option name="height" value="744" />
+=======
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="width" value="1360" />
+    <option name="height" value="728" />
+>>>>>>> 961d0b9c381ac012808c0de0c006e1dd5da25d3c
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -314,15 +325,26 @@
       <workItem from="1538317973841" duration="4751000" />
       <workItem from="1538669588281" duration="1179000" />
       <workItem from="1538729620362" duration="22513000" />
+<<<<<<< HEAD
       <workItem from="1538966417740" duration="30019000" />
+=======
+      <workItem from="1538966417740" duration="20867000" />
+>>>>>>> 961d0b9c381ac012808c0de0c006e1dd5da25d3c
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="279377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
+=======
+    <option name="totallyTimeSpent" value="270225000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1360" height="728" extended-state="1" />
+>>>>>>> 961d0b9c381ac012808c0de0c006e1dd5da25d3c
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12462006" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -813,9 +835,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/guild.html">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="267">
           <caret line="67" column="34" lean-forward="false" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="34" />
           <folding />
+=======
+        <state relative-caret-position="274">
+          <caret line="26" column="18" lean-forward="false" selection-start-line="26" selection-start-column="18" selection-end-line="26" selection-end-column="18" />
+          <folding>
+            <element signature="e#74#87#0#PHP" expanded="true" />
+            <marker date="1538997646044" expanded="true" signature="8171:8257" ph="update xh_st... " />
+          </folding>
+>>>>>>> 961d0b9c381ac012808c0de0c006e1dd5da25d3c
         </state>
       </provider>
     </entry>
