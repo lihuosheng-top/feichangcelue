@@ -1211,6 +1211,23 @@ class Index extends Home
      **************************************
      */
     public  function  index_information(){
+        /**
+         * 按天杠杆倍数利息
+         */
+        $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+        $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+        $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+        $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+        $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+        $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+        $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+        $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+        $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+        $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+
+        $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
+        $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+
         return view('index_information');
     }
     /**
@@ -1220,6 +1237,24 @@ class Index extends Home
      **************************************
      */
     public  function  index_information_first(){
+
+        /**
+         * 按月杠杆倍数利息
+         */
+        $this->assign('levers_month_1',getStockInterestLeverMonthByLevers("1"));
+        $this->assign('levers_month_2',getStockInterestLeverMonthByLevers("2"));
+        $this->assign('levers_month_3',getStockInterestLeverMonthByLevers("3"));
+        $this->assign('levers_month_4',getStockInterestLeverMonthByLevers("4"));
+        $this->assign('levers_month_5',getStockInterestLeverMonthByLevers("5"));
+        $this->assign('levers_month_6',getStockInterestLeverMonthByLevers("6"));
+        $this->assign('levers_month_7',getStockInterestLeverMonthByLevers("7"));
+        $this->assign('levers_month_8',getStockInterestLeverMonthByLevers("8"));
+        $this->assign('levers_month_9',getStockInterestLeverMonthByLevers("9"));
+        $this->assign('levers_month_10',getStockInterestLeverMonthByLevers("10"));
+
+        $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
+        $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
+
         return view('index_information_first');
     }
     /**
@@ -1229,6 +1264,26 @@ class Index extends Home
      **************************************
      */
     public  function  index_information_second(){
+
+        /**
+         * 按天杠杆倍数利息
+         */
+        $this->assign('levers_1',getStockInterestLeverByLevers("1"));
+        $this->assign('levers_2',getStockInterestLeverByLevers("2"));
+        $this->assign('levers_3',getStockInterestLeverByLevers("3"));
+        $this->assign('levers_4',getStockInterestLeverByLevers("4"));
+        $this->assign('levers_5',getStockInterestLeverByLevers("5"));
+        $this->assign('levers_6',getStockInterestLeverByLevers("6"));
+        $this->assign('levers_7',getStockInterestLeverByLevers("7"));
+        $this->assign('levers_8',getStockInterestLeverByLevers("8"));
+        $this->assign('levers_9',getStockInterestLeverByLevers("9"));
+        $this->assign('levers_10',getStockInterestLeverByLevers("10"));
+
+
+
+
+        $this->assign('lossLine', getSysParamsByKey("lossLine")); //亏损警戒线
+        $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
         return view('index_information_second');
     }
 
