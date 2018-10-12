@@ -58,16 +58,18 @@ var buy_moblie={
             return format;
         };
 
-        //点击input
+        //点击input focus
         $('#searchTxt1').off('focus').on('focus',function(e){
             //让下面的消失，让ul出来
             $('.search_ul').show();
             $('.share_title,.chart_box,.stock-price,#buy_step1').hide();
             $('#item2').hide();
 
-                var keywords=$(this).val().toLowerCase(); //在input中输入时
+
                 $(this).off('keyup').on('keyup',function(){//关键词
-                //向后台发送查询数据,并渲染列表
+                    var keywords=$(this).val().toLowerCase(); //在input中输入时
+                    // console.log(keywords);
+                    // alert(keywords);
                 base.searchCue(keywords);
             })
 
@@ -223,7 +225,7 @@ var buy_moblie={
                 freshTimeInterval = 60 * 1000;
             }
             //获取股票实时数据
-             buy_moblie.getStockInfo();
+            //  buy_moblie.getStockInfo();
             // buy_moblie.searchCue();
 
         }, 1000 );
@@ -300,6 +302,7 @@ var buy_moblie={
             }
         });
     },
+
 
 
     /**

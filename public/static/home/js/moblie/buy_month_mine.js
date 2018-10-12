@@ -64,9 +64,8 @@ var buy_moblie={
             $('.search_ul').show();
             $('.share_title,.chart_box,.stock-price,#buy_step1').hide();
             $('#item2').hide();
-
-            var keywords=$(this).val().toLowerCase(); //在input中输入时
             $(this).off('keyup').on('keyup',function(){//关键词
+                var keywords=$(this).val().toLowerCase(); //在input中输入时
                 //向后台发送查询数据,并渲染列表
                 base.searchCue(keywords);
             })

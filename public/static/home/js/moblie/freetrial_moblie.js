@@ -74,6 +74,7 @@ var buy_moblie={
                 base.searchCue(keywords);
             })
 
+
         }).on('blur',function(){
             $('.search_ul').hide();
             $('.search_ul').html('');
