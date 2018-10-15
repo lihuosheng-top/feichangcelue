@@ -53,9 +53,19 @@ return [
     'stock_exponential_sh'=>'index/index/stock_exponential_sh', //手机端上证指数
     'stock_exponential_sz'=>'index/index/stock_exponential_sz', //手机端深证证指数
     'pc_broadcast'=>'index/index/pc_broadcast',     //pc端轮播图
-    'index_information'=>'index/index/index_information', //pc端首页配资
-    'index_information_first'=>'index/index/index_information_first', //pc端首页配资
-    'index_information_second'=>'index/index/index_information_second', //pc端首页配资
+
+    'index_information'=>'index/index/index_information', //pc端首页配资(免费体验)
+    'index_information_first'=>'index/index/index_information_first', //pc端首页配资（按月配资）
+    'index_information_second'=>'index/index/index_information_second', //pc端首页配资（按天配资）
+    'EntrustmentAgreement'=>'index/index/EntrustmentAgreement',//pc端配资协议
+    'PcBuy'=>'index/index/PcBuy',//pc端配资点买（按日点买）
+    'PcMonthBuy'=>'index/index/PcMonthBuy',//pc端配资点买（按月点买）
+    'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
+    'PcSell'=>'index/index/PcSell',//pc端配资点卖
+    'PcFreeSell'=>'index/index/PcFreeSell',//pc端配资点卖（免费体验）
+
+
+
 
 
 	'qq_add'=>'index/index/qq_add',                 //qq客服
@@ -77,6 +87,7 @@ return [
     'sendMobileCode'=>'index/index/sendMobileCode',         //短信验证
     "stock"=>"index/index/stock",
     //"authllpay_wap"=>"index/lianlianauthpay/authllpay_wap",         //银行卡充值
+
 
     "updateNewPwd"=>"index/index/updateNewPwd",                         //密码修改
     "doReanNameAuth"=>"index/ucenter/doReanNameAuth",                   //认证信息

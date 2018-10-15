@@ -195,12 +195,12 @@
 	    		<p><span>亏损警戒线</span><span><i>0</i>元</span></p>
 	    		<p><span>亏损平仓线</span><span><i>0</i>元</span></p>
 	    		<p><span>风险保障金</span><span><i>0</i>元</span></p>
-	    		<p><span>预存管理费</span><span class="fs">非交易日不收取(按月配资除外)</span><span><i>0</i>元/月</span></p>
+	    		<p><span>预存管理费</span><span class="fs"></span>（一次性收取所有月份管理费）<span><i>0</i>元</span></p>
     		</div>
     		<div class="con_s">申请即表示已阅读并同意<a href="./gift.html"><<尚牛在线配资协议>></a></div>
     		<div class="con_pay">
     			<p class="con_spa"><span>共计应支付：</span><span class="all_allprice">0</span></p>
-    			<p class="con_ps">准备资金=风险保证金+日管理费*天数</p>
+    			<p class="con_ps">准备资金=风险保证金+月管理费*月数</p>
     		</div>
     		<div class="con_btn"><input type="button" value="立即申请" /></div>
 
@@ -371,6 +371,8 @@
 			$(this).addClass('con_li').siblings().removeClass('con_li');
 			var a=parseInt($(".con_two .con_list p input").val());
 			var b=parseInt($(this).children("span").eq(0).find("i").html());
+			//获取月数的值
+			var month_num =$('.select_month option:selected').val();
 			$(".con_two .con_list>p").eq(4).find("i").html(a*b.toFixed(2));
 //			$(".con_two .con_list>p").eq(5).find("i").html((a*b/2).toFixed(2));
 			$(".con_two .con_list>p").eq(5).find("i").html(-(a*lossLine+a*b).toFixed(2));//警戒线
@@ -426,7 +428,7 @@
 			$(".con_two .con_list>p").eq(7).find("i").html(a);
 
 //			$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
-			$(".con_two .con_list>p").eq(8).find("i").html((levers_month*a*Multiple/100).toFixed(2));
+			$(".con_two .con_list>p").eq(8).find("i").html((month_num *levers_month*a*Multiple/100).toFixed(2));
 
 			var c=$(".con_two .con_list>p").eq(8).find("i").html();
 			var nc=parseFloat(c);
@@ -692,9 +694,11 @@
                     var levers_month = levers_month_10;
                 };
 				$(".con_two .con_list>p").eq(7).find("i").html(a);
+                //获取月数的值
+                var month_num =$('.select_month option:selected').val();
 
 //				$(".con_two .con_list>p").eq(8).find("i").html((a*b/10000*18*30*0.7).toFixed(2));
-				$(".con_two .con_list>p").eq(8).find("i").html((a*levers_month*Multiple/100).toFixed(2));
+				$(".con_two .con_list>p").eq(8).find("i").html((month_num*a*levers_month*Multiple/100).toFixed(2));
 
 				var c=$(".con_two .con_list>p").eq(8).find("i").html();
 				var nc=Number(c);

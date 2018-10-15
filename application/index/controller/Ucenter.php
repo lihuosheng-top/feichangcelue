@@ -1229,9 +1229,9 @@ class Ucenter extends Home
         }
 //                TODO:别忘记1
         //0到10个
-//         if(substr($order['createTime'], 0, 10) == date("Y-m-d")){
-//             error("当天点买的股票下个工作日才能卖出");
-//         }
+         if(substr($order['createTime'], 0, 10) == date("Y-m-d")){
+             error("当天点买的股票下个工作日才能卖出");
+         }
         //判断是都在购买中遇到节假日或者周末进行跳过（只计算工作日）
 
 

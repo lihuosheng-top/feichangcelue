@@ -1211,6 +1211,24 @@ class Index extends Home
      **************************************
      */
     public  function  index_information(){
+        /* 一开始进入首页显示的数据3倍的数据*/
+        $data_money =getStockInterestLeverByLevers("3");
+        $res_money =200+200*3*$data_money/100;
+        $res_bei =200*3*$data_money/100;
+        /*日利息*/
+        $this->assign('res_bei',$res_bei);
+        /*分配到准备资金那里*/
+        $this->assign('res_money',$res_money);
+        /*亏损警戒线*/
+        $con_line =getSysParamsByKey("lossLine");
+        $cordon_line = $con_line*200+600;
+        /*亏损平仓线*/
+        $loss_line =  getSysParamsByKey("stopLossRate")*200+600;
+        $this->assign('cordon_line',$cordon_line);
+        $this->assign('loss_line',$loss_line);
+
+
+
         /**
          * 按天杠杆倍数利息
          */
@@ -1237,6 +1255,23 @@ class Index extends Home
      **************************************
      */
     public  function  index_information_first(){
+
+        /* 一开始进入首页显示的数据3倍的数据*/
+        $data_money =getStockInterestLeverMonthByLevers("3");
+        $res_money =200+200*3*$data_money/100;
+        $res_bei =200*3*$data_money/100;
+        /*月利息*/
+        $this->assign('res_bei',$res_bei);
+        /*分配到准备资金那里*/
+        $this->assign('res_money',$res_money);
+        /*亏损警戒线*/
+        $con_line =getSysParamsByKey("lossLine");
+        $cordon_line = $con_line*200+600;
+        /*亏损平仓线*/
+        $loss_line =  getSysParamsByKey("stopLossRate")*200+600;
+        $this->assign('cordon_line',$cordon_line);
+        $this->assign('loss_line',$loss_line);
+
 
         /**
          * 按月杠杆倍数利息
@@ -1265,6 +1300,23 @@ class Index extends Home
      */
     public  function  index_information_second(){
 
+        /* 一开始进入首页显示的数据3倍的数据*/
+        $data_money =getStockInterestLeverByLevers("3");
+        $res_money =200+200*3*$data_money/100;
+        $res_bei =200*3*$data_money/100;
+        /*日利息*/
+        $this->assign('res_bei',$res_bei);
+        /*分配到准备资金那里*/
+        $this->assign('res_money',$res_money);
+        /*亏损警戒线*/
+        $con_line =getSysParamsByKey("lossLine");
+        $cordon_line = $con_line*200+600;
+        /*亏损平仓线*/
+        $loss_line =  getSysParamsByKey("stopLossRate")*200+600;
+        $this->assign('cordon_line',$cordon_line);
+        $this->assign('loss_line',$loss_line);
+
+
         /**
          * 按天杠杆倍数利息
          */
@@ -1286,6 +1338,70 @@ class Index extends Home
         $this->assign('stopLossRate', getSysParamsByKey("stopLossRate")); //触发止损是保证金的0.8倍（当亏损额大于触发止损时，马上强制平仓）
         return view('index_information_second');
     }
+
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端配资委托协议
+     **************************************
+     */
+    public function EntrustmentAgreement(){
+        return view('entrustment_agreement');
+    }
+
+    /**
+ **************李火生*******************
+ * @return \think\response\View
+ * pc端A股点买(按天)
+ **************************************
+ */
+    public function PcBuy(){
+        return view('pc_buy');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股点买（按月）
+     **************************************
+     */
+    public function PcMonthBuy(){
+        return view('pc_month_buy');
+    }
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股（免费体验）点买
+     **************************************
+     */
+    public function PcFreeBuy(){
+        return view('pc_free_buy');
+    }
+
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股点卖
+     **************************************
+     */
+    public function PcSell(){
+        return view('pc_sell');
+    }
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股（免费体验）点卖
+     **************************************
+     */
+    public function PcFreeSell(){
+        return view('pc_free_sell');
+    }
+
+
+
+
 
 
 
