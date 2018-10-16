@@ -1431,8 +1431,8 @@ class Index extends Home
     }
 
     public function captchas(){
-        $config =config::get('captcha');
-        $captcha = new \think\captcha\Captcha($config);
+//        $config =config::get('captcha');
+//        $captcha = new \think\captcha\Captcha($config);
 //        return $captcha->entry();
 //        $captcha = new Captcha([
 //            'imageW'=>1000,
@@ -1441,7 +1441,8 @@ class Index extends Home
 //            'useNoise'=>false,
 //            'length'=>5,
 //        ]);
-        return $captcha->entry();
+//        return $captcha->entry();
+
     }
 
 
