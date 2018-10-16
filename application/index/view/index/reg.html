@@ -8,7 +8,7 @@
 {include file="public:top" /}
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>
+<!--<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>-->
 
 <!--注册区-->
 <div class="br-content login_reg_cont">
@@ -120,36 +120,6 @@
     </div>
 </div>
 <!--valid-img-->
-<div class="popup" id="popup-valid-img" >
-    <div class="popup-header group">
-        <h2>请先输入验证码</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <form action="#">
-            <div class="field-row group">
-                <label>验证码：</label>
-                <div class="field-val" style="width:350px">
-                    <div id="mpanel"></div>
-                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
-                    <!--<img src="{:url('captcha_src')}"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
-                    <!--<img src="{:url('captcha_src')}"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
-                    <!--<img src="{:url('index/index/captcha')}" alt="captcha" onclick="this.src=this.src+ '?' +Math.random()"/>-->
-                    <!--<img src="{:url('index/Index/captchas')}" alt="captcha" onclick="this.src='{:url('index/Index/captchas')}?id='+Math.random();"/>-->
-
-                    <!--<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '{:captcha_src()}');" style="color:#E01923">看不清楚？</a>-->
-                    <button id="pop_sign_up">确认</button>
-                </div>
-            </div>
-            <div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i>输入的验证码有误！</div></div>
-
-            <div class="btn-row group">
-                <a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>
-            </div>
-            <input id="hiddenText" type="text" style="display:none" />
-        </form>
-    </div>
-</div>
 
 {include file="public:footer" /}
 <script src="__STATIC__/home/js/reg.js"></script>
@@ -175,8 +145,8 @@
         <!--})-->
     <!--}-->
 <!--</script>-->
-<script src="__STATIC__/home/js/verify.js"></script>
-<script>
+<!--<script src="__STATIC__/home/js/verify.js"></script>-->
+<!--<script>
     $('#mpanel').codeVerify({
         type : 2,
         figure : 10,	//位数，仅在type=2时生效
@@ -194,7 +164,7 @@
             alert('验证码不匹配！');
         }
     });
-</script>
+</script>-->
 </body>
 </html>
 

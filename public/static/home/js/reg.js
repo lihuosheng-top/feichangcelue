@@ -118,67 +118,21 @@ var reg={
 			
 			//点击获取校验码
             $("#auth_reg_smsA").click(function () {
-            	var code=$('#mobileno_code');
-               	var _base = $(this);
-				var w = _base.parent();
-				if (!_base.hasClass("active")) {
-			        return false;
-			    }
-
-				// 弹出img框
-                tool.popup.hidePopup();
-                tool.popup.showPopup($("#popup-valid-img"));
-                // 输入img验证码
-                $("#txt_valid_code").unbind("keyup").bind("keyup", function () {
-                    var trigger = $(this);
-                    var _val = $(this).val();
-
-                    //如果长度=4
-                    if (_val.length == 4) {
-						$.ajax({
-							url:'/index/index/sendMobileCode',
-							data:{
-								mobile: $("#mobileno").val(),
-								// imgCode:_val,
-							},
-                            dataType:'json',
-							type:'get',
-							success:function(data) {
-
-                                $("#txt_valid_code").val("");
-                                // $('#forgot_passImg').attr('src', '/index.php/captcha.html');
-								if(data.code == '0'){
-									//隐藏img弹窗
-									tool.popup.hidePopup($("#popup-valid-img"));
-									w.addClass("capcha-count-down");
-									//禁用btn
-                                    _base.removeClass("active");
-                                    $(".time-counter span", w).text("60");
-                                    $("#auth_reg_timerD").show();
-                                    var getCodeCounter = window.setInterval(function () {
-                                        var w = $(".capcha-count-down:visible").eq(0);
-                                        var s = parseInt($(".time-counter span", w).text(), 10) - 1;
-                                        if (s > 0) {
-                                            $(".time-counter span", w).text(s);
-                                        } else {
-                                            window.clearInterval(getCodeCounter)
-                                            w.removeClass("capcha-count-down");
-                                            //启用btn
-                                            $(".btn-get-capcha", w).addClass("active");
-                                            $("#auth_reg_timerD").hide();
-                                        }
-                                    }, 1000);
-								}
-								else{
-                                    tool.popup_err_msg("短信发送失败:"+data.msg);
-                                }
-							}
-						})
-                    }else {//如果长度不等于4
-                        $(this).val(_val.substr(0, 4));
-                    }
-                });
-        
+//          	alert(111);
+            	var phone=$("#mobileno").val();
+            	console.log(phone);
+              $.ajax({
+				    type:"post",                      //请求类型
+				    url:"index/index/sendMobileCode",           //URL
+				    data:{phone},   //传递的参数
+				    dataType:"json",                 //返回的数据类型
+				    success:function(data){          //data就是返回的json类型的数据
+				      alert("222")
+				    },
+				    error:function(data){
+				        alert("失败");
+				    }
+				});
             });
             
 		},
