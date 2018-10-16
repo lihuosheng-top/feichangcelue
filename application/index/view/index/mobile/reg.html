@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="__STATIC__/home/css/mui.min.css" rel="stylesheet" />
 		<link href="__STATIC__/home/css/moblie/login.css" rel="stylesheet" />
+
 	</head>
 <!--登录-->
 	<body class="reg_body">
@@ -22,7 +23,8 @@
 			    </div>
 			    <div class="mobilenoCode_row mui-input-row">
 			        <input id="mobilenoCode" type="text" class="mui-input-clear" name="code" placeholder="请输入验证码">
-			        <a href="javascript:;" onclick="yzm()" id="mobileno_code_a">获取验证码</a>
+			        <!--<a href="javascript:;" onclick="yzm()" id="mobileno_code_a">获取验证码</a>-->
+			        <button onclick="yzm()" id="mobileno_code_a">获取验证码</button>
 			    </div>
 			    <div class="mui-input-row">
 			        <input id="pwd" type="password" name="login_pwd" class="mui-input-clear" placeholder="请输入密码">
@@ -55,9 +57,58 @@
 			reg_moblie.init()
 		</script>
 		<script>
-			function yzm() {
+            function buttonCountdown($el, msNum, timeFormat) {
+                var text = $el.data("text") || $el.text(),
+                    timer = 0;
+                $el.prop("disabled", true).addClass("disabled")
+                    .on("bc.clear", function () {
+                        clearTime();
+                    });
+
+                (function countdown() {
+                    var time = showTime(msNum)[timeFormat];
+                    $el.text(time + '后失效');
+                    if (msNum <= 0) {
+                        msNum = 0;
+                        clearTime();
+                    } else {
+                        msNum -= 1000;
+                        timer = setTimeout(arguments.callee, 1000);
+                    }
+                })();
+
+                function clearTime() {
+                    clearTimeout(timer);
+                    $el.prop("disabled", false).removeClass("disabled").text(text);
+                }
+
+                function showTime(ms) {
+                    var d = Math.floor(ms / 1000 / 60 / 60 / 24),
+                        h = Math.floor(ms / 1000 / 60 / 60 % 24),
+                        m = Math.floor(ms / 1000 / 60 % 60),
+                        s = Math.floor(ms / 1000 % 60),
+                        ss = Math.floor(ms / 1000);
+
+                    return {
+                        d: d + "天",
+                        h: h + "小时",
+                        m: m + "分",
+                        ss: ss + "秒",
+                        "d:h:m:s": d + "天" + h + "小时" + m + "分" + s + "秒",
+                        "h:m:s": h + "小时" + m + "分" + s + "秒",
+                        "m:s": m + "分" + s + "秒"
+                    };
+                }
+                return this;
+            }
+
+
+
+//            $('#mobileno_code_a').click(function () {
+//                buttonCountdown($(this), 1000 * 60 * 1, "ss");
+//            });
+            function yzm() {
 				var mobile = $("#mobileno").val();
-				alert("发送成功");
 				$.ajax({
 					url:"{:url('index/index/sendMobileCode')}",
 					type:"POST", //GET
@@ -66,7 +117,14 @@
 					data:{'mobile':mobile},
 					dataType:"json",
                     success:function(data){
-                        console.log(data);
+					    console.log(data);
+                        if(data.code ==0){
+                            alert(data.msg);
+                        }
+                        if(data.status==1){
+//                            console.log($(this));
+                			buttonCountdown($('#mobileno_code_a'), 1000 * 60 * 1, "ss");
+                        }
 
                     },
 					error:function () {

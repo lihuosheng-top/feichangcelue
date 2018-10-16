@@ -394,7 +394,13 @@ class Index extends Home
         $this->assign('info_arr', $info_arr);
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
-        return view('index/mobile/month_buy');
+
+        if (is_mobile_request()) {
+            return view('index/mobile/month_buy');
+        }else{
+            return view('month_buy');
+        }
+
     }
 
 
@@ -713,7 +719,7 @@ class Index extends Home
         unset($member['usableSum']);
         unset($member['freebleSum']);
 //        $this->success("登录成功", url("/"));
-        $this->success("登录成功", url("index"));
+        $this->success("登录成功", url("/"));
 
 
     }
@@ -921,6 +927,12 @@ class Index extends Home
         //接受验证码的手机号码
         if ($request->isPost()) {
             $mobile = $request->param("mobile");
+            $db_phone =Db::name('member')->where('mobile',$mobile)->find();
+
+            if(!empty($db_phone)){
+                $this->error('此手机号已注册，请前往登录！');
+            }
+
             $mobileCode = rand(100000, 999999);
             $arr = json_decode($mobile, true);
             /*var_dump($arr);
@@ -1431,8 +1443,8 @@ class Index extends Home
     }
 
     public function captchas(){
-        $config =config::get('captcha');
-        $captcha = new \think\captcha\Captcha($config);
+//        $config =config::get('captcha');
+//        $captcha = new \think\captcha\Captcha($config);
 //        return $captcha->entry();
 //        $captcha = new Captcha([
 //            'imageW'=>1000,
@@ -1441,7 +1453,8 @@ class Index extends Home
 //            'useNoise'=>false,
 //            'length'=>5,
 //        ]);
-        return $captcha->entry();
+//        return $captcha->entry();
+
     }
 
 

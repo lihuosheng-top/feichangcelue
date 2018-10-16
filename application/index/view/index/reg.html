@@ -44,7 +44,8 @@
                 <!--验证码-->
                 <div id="mobileno2" class="field-wrapper capcha-wrapper capcha-count-down" style="display:none">
                     <input type="text" class="text" placeholder="请输入短信校验码" name="mobileno_code" id="mobileno_code" data-error-msg="校验码未填" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
-                    <a id="auth_reg_smsA" href="javascript:void(0)" class="btn-get-capcha">获取校验码</a>
+                    <!--<a id="auth_reg_smsA" class="btn-get-capcha">获取校验码</a>-->
+                    <button id="auth_reg_smsA" class="btn-get-capcha">获取校验码</button>
                     <div id="auth_reg_timerD" class="time-counter" style="display: none;"><!--<i class="icon icon-caret-left"></i>--><span>10</span></div>
                 </div>
                 <div class="agree-wrapper group">
@@ -165,6 +166,53 @@
         }
     });
 </script>-->
+<script>
+    function buttonCountdown($el, msNum, timeFormat) {
+        var text = $el.data("text") || $el.text(),
+            timer = 0;
+        $el.prop("disabled", true).addClass("disabled")
+            .on("bc.clear", function () {
+                clearTime();
+            });
+
+        (function countdown() {
+            var time = showTime(msNum)[timeFormat];
+            $el.text(time + '后失效');
+            if (msNum <= 0) {
+                msNum = 0;
+                clearTime();
+            } else {
+                msNum -= 1000;
+                timer = setTimeout(arguments.callee, 1000);
+            }
+        })();
+
+        function clearTime() {
+            clearTimeout(timer);
+            $el.prop("disabled", false).removeClass("disabled").text(text);
+        }
+
+        function showTime(ms) {
+            var d = Math.floor(ms / 1000 / 60 / 60 / 24),
+                h = Math.floor(ms / 1000 / 60 / 60 % 24),
+                m = Math.floor(ms / 1000 / 60 % 60),
+                s = Math.floor(ms / 1000 % 60),
+                ss = Math.floor(ms / 1000);
+
+            return {
+                d: d + "天",
+                h: h + "小时",
+                m: m + "分",
+                ss: ss + "秒",
+                "d:h:m:s": d + "天" + h + "小时" + m + "分" + s + "秒",
+                "h:m:s": h + "小时" + m + "分" + s + "秒",
+                "m:s": m + "分" + s + "秒"
+            };
+        }
+        return this;
+    }
+
+</script>
 </body>
 </html>
 

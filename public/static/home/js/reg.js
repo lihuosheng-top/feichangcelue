@@ -115,22 +115,32 @@ var reg={
 			 $("#reg_agree").click(function () {
 			    javascript: window.open('./reg_agree', '服务协议', 'height=800,width=1000,top=0,left=200,toolbar=no,menubar=no,scrollbars=yes, resizable=no,location=no, status=no');
 			});
-			
+
 			//点击获取校验码
             $("#auth_reg_smsA").click(function () {
-//          	alert(111);
+         	// alert(111);
             	var phone=$("#mobileno").val();
-            	console.log(phone);
+            	// console.log(phone);
               $.ajax({
 				    type:"post",                      //请求类型
-				    url:"index/index/sendMobileCode",           //URL
-				    data:{phone},   //传递的参数
+				    url:"./sendMobileCode",           //URL
+				    data:{
+                        'mobile':phone
+                    },   //传递的参数
 				    dataType:"json",                 //返回的数据类型
 				    success:function(data){          //data就是返回的json类型的数据
-				      alert("222")
+                        // console.log(data);
+                        if(data.code ==0){
+                          alert(data.msg);
+                        }
+                        if(data.status==1){
+                            // alert("发送成功,请留意短信")
+                            buttonCountdown($('#auth_reg_smsA'), 1000 * 60 * 1, "ss");
+                        }
+
 				    },
 				    error:function(data){
-				        alert("失败");
+				        console.log('失败');
 				    }
 				});
             });
@@ -217,7 +227,7 @@ var reg={
 
 //          var refId = store.getCookie("refId", 1);
             $.ajax({
-            	url:'/index/index/doReg',
+            	url:'./doReg',
                 type:"post",
                 dataType:"json",
             	data:{
@@ -225,16 +235,18 @@ var reg={
                     login_pwd: $('#pwd').val(),
                     mobile: $('#mobileno').val(),
                     code: $('#mobileno_code').val(),
-                    recommendCode:$('#recommend_code').val(),
+                    inviterId:$('#recommend_code').val(),
             	},
             	success:function(data){
-            		if (data.code != '0') {
-                        base.popup_err_msg(data.msg);
-                        return;
+            	    // console.log(data);
+            		if (data.code == 0) {
+                        // base.popup_err_msg(data.msg);
+                        alert(data.msg);
                    	}
-                     else {
-                        base.popup_err_msg("注册成功");
-                        window.location.href="/login.html";
+                     if(data.code ==1) {
+                        // base.popup_err_msg("注册成功");
+                        alert('恭喜您,注册成功！');
+                        window.location.href="./login.html";
                     }
             	}
             })
