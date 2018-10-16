@@ -2,7 +2,7 @@
 
 <meta name="keywords" content="{:config('web_site_keywords')}">
 <meta name="description" content="{:config('web_site_description')}">
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/common.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
 <!--头部-->
 <header class="ml_header br-w100">
     <div class="h_top br-w100">
@@ -10,6 +10,12 @@
             <div class="h_topL br-fl">
                 服务热线：{$phone}
             </div>
+                {if !empty($_SESSION['member'])}
+            <div   style="text-align: right;" >
+                用户：{$_SESSION['member']['mobile']}
+                <span class="loginout"><a href="{:url('index/index/logout')}">退出登录</a></span>
+            </div>
+                {/if}
 
 
            <!-- <div id="page_shared_layout_login" class="h_topR br-fr" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if} >
@@ -48,7 +54,7 @@
     <div class="h_bot br-w100">
         <div class="w1024 br-clearfix">
             <div class="h_botL br-fl">
-                <a href="/"><img src="./public/static/home/img/moblie/fcml2.png" style="height:80px; " /></a>
+                <a href="/"><img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " /></a>
             </div>
             <div class="h_botR br-fr">
                 <ul class="br-clearfix" id="menu-ul">
@@ -64,6 +70,7 @@
                             <li class=""><a href="./help.html">常见问题</a></li>
                         </ul>
                     </li>
+                    <li class="br-fl"><a href="./buy.html">A股点买</a></li>
                 </ul>
             </div>
         </div>
@@ -71,8 +78,8 @@
 </header>
 
 
-<script src="./public/static/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-<script src="./public/static/home/js/general.js"></script>
+<script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
+<script src="__STATIC__/home/js/general.js"></script>
 
 <script>
     //自动选中active
@@ -94,9 +101,9 @@
                 }
             }
         }
-
-
     });
+    //退出登录
+
 
 
 </script>

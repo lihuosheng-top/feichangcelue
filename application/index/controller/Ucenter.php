@@ -668,11 +668,9 @@ class Ucenter extends Home
     {
         $this->getHistoryData(0);
         if (is_mobile_request()) {
-
-
             return view('ucenter/mobile/history');
         }
-        return view('ucenter/mobile/history');
+        return view('history');
     }
 
     //结算区 免费模拟

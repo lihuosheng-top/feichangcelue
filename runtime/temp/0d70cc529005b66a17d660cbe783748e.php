@@ -1,11 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1539593723;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539601352;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539585678;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539601352;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   
 </head>
-<body class="index_body">
+<body class="buy_body">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -115,226 +114,230 @@
 
 
 </script>
-<link href="__STATIC__/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css"/>
-<style type="text/css">
-	.item a{
-		display: block;
-		overflow: hidden;
-	}
-    /*隐藏*/
-    .pz-type-swith{
-        display: none;
-    }
-</style>
-<!--banner-->
-<div class="banner_login br-w100">
-    <div class="bBanner br-w100">
 
-        <div class="w1024">
-                <div class="login_main" <?php if($_SESSION['member'] != ''): ?> style="display: none;" <?php endif; ?>>
-                <p>用户登录</p>
-
-                    <input type="text" name="" id="username" placeholder="用户名"/>
-                    <div id="err1" class="err">请输入正确用户名</div>
-                    <input type="password" name="" id="password" placeholder="密码"/>
-                    <div id="err2" class="err">请输入正确密码</div>
-                    <div class="login_box">
-                        <a href="javascript:viod()" class="btn_login">登录</a>
-                        <a href="./reg.html" class="btn_reg">注册</a>
-                    </div>
-
-            </div>
+<!--A股点买部分-->
+<div class="br-content">
+<div class="w1024">
+<div class="stock-buy">
+    <section class="play-area">
+        <div class="nav-left">
+            <a href="./freetrial" style="height: initial;">一元模拟盘体验</a>
+            <a href="./buy" class="active">A股（T + 1）</a>
         </div>
-
-        <!--轮播图-->
-        <div class="home_banner">
-            <div id="myCarousel" class="carousel slide">
-                <!-- 轮播（Carousel）指标 -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
-                <!-- 轮播（Carousel）项目 -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                    <a href=""> <div class="carImg"></div></a>
-                       
-                    	
+        <nav>
+            <ul class="clearfix">
+                <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
+                <li class=""><a href="./sell.html"><em>02 </em>| 点卖区</a></li>
+                <li class=""><a href="./history"><em>03 </em> | 结算区</a></li>
+            </ul>
+        </nav>
+        <section class="clearfix">
+            <div class="left-info">
+                <header>
+                	<div class="change-stock">
+                        <input id="searchTxt1" class="search_txt" type="text" placeholder="请输入股票名称/代码/简拼">
+                        <button id="searchCancel" class="cancel">取消</button>
+                        <div id="search_history" class="hide">
+                            <table border="0" cellspacing="0" cellpadding="0" class="c9">
+                                <thead><tr><th class="nc">名称</th><th>代码</th><th>简拼</th></tr></thead>
+                               <tbody><tr class="active"><td>平安银行</td><td>000001</td><td>payh</td></tr><tr><td>万科a</td><td>000002</td><td>wka</td></tr><tr><td>国农科技</td><td>000004</td><td>gnkj</td></tr><tr><td>世纪星源</td><td>000005</td><td>sjxy</td></tr><tr><td>深振业a</td><td>000006</td><td>szya</td></tr><tr><td>全新好<label style="background-color:red">[停牌股]</label></td><td>000007</td><td>qxh</td></tr><tr><td>神州高铁</td><td>000008</td><td>szgt</td></tr><tr><td>中国宝安</td><td>000009</td><td>zgba</td></tr><tr><td>美丽生态</td><td>000010</td><td>mlst</td></tr><tr><td>深物业a</td><td>000011</td><td>swya</td></tr></tbody>
+                            </table>
+                        </div>
+                        <div id="search_cue" class="hide">
+                            <table border="0" cellspacing="0" cellpadding="0" class="c9">
+                                <thead><tr><th class="nc">名称</th><th>代码</th><th>简拼</th></tr></thead>
+                                <tbody><tr class="active"><td>万科a</td><td>000002</td><td>wka</td></tr></tbody>
+                            </table>
+                        </div>
                     </div>
-                    <div class="item">
-                        <a href=""><div class="carImg2"></div></a>
-                        
+                    <div class="stock-name">
+                        <span id="stockName">招商银行(600036)</span>
+                        <button id="changeStock" class="change_stock hide">选择股票</button>
+                    </div>
                     
-                    </div>
-                    <div class="item">
-                      <a href=""><div class="carImg3"></div></a>
+                </header>
+                <section class="stock-detail clearfix" data-price="0">
+                    <div class="stock-new row f-left">
+                        <strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>
+                        <span class="up-arrow-box" style="display: inline-block;">
+                            <span class="top-part"></span>
+                            <span class="bottom-part"></span>
+                        </span>
+                        <span class="down-arrow-box" style="display: none;">
+                            <span class="top-part"></span>
+                            <span class="bottom-part"></span>
+                        </span>
                         
-                    
+                        <i class="icon icon-refresh" id="refreshBtn"></i>
+                        <span id="num1" class="color font14">--</span>
+						<span id="num2" class="color font14">--</span>
                     </div>
-                </div>
-                <!-- 轮播（Carousel）按钮导航 -->
-                <a class="carousel-control left" href="#myCarousel"
-                   data-slide="prev" style="z-index: 99999;">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel"
-                   data-slide="next"style="z-index: 99999;">&rsaquo;</a>
+                    <div class="stock-price f-right" id="stock-price">
+                        <ul class="sell">
+                            <li><em>卖⑤</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖④</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖③</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖②</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖①</em><b class="red">--</b><i>--</i></li>
+                        </ul>
+                        <ul class="buy">
+                            <li><em>买①</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买②</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买③</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买④</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买⑤</em><b class="red">--</b><i>--</i></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="stock-figure">
+                    <ul class="row">
+                        <li class="active" id="chartContro">分时</li>
+                        <li class="hide" id="chartKContro">k线</li>
+                    </ul>
+                    <!-- 为ECharts准备分时图 -->
+   					<div class="figure active" id="chart" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:block;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+                    <!--<div class="figure " id="chart" _echarts_instance_="1498120573127" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; cursor: default; display: none;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>-->
+   					<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+                    <!--<div class="figure hide" id="chartk" _echarts_instance_="1498120573128" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; display: block; cursor: default;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-tooltip zr-element" style="position: absolute; display: block; border-style: solid; white-space: nowrap; transition: left 0.1s, top 0.1s; background-color: rgb(255, 255, 255); border-width: 1px; border-color: rgb(204, 204, 204); border-radius: 4px; color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 11px; line-height: 17px; padding: 10px; left: 143.5px; top: 37px;">2017年04月17日<br>最高：<span style="color:#DD2200;">18.9</span><br>最低：<span style="color:#00A800;">18.6</span><br>收盘：<span style="color:#F96900;">18.88</span></div></div></div>-->
+                	<!--loading-->
+                	<div class="loading"></div>
+                </section>
+                <section class="stock-info" id="stock-info">
+                    <h3>股票信息</h3>
+                    <ul class="row">
+                        <li class="open"><span class="l">今开</span><span class="r">--</span></li>
+                        <li class="amplitude"><span class="l">振幅</span><span class="r">--</span></li>
+                        <li class="high"><span class="l">最高</span><span class="r">--</span></li>
+                        <li class="low"><span class="l">最低</span><span class="r">--</span></li>
+                        <li class="max"><span class="l">涨停价</span><span class="r">--</span></li>
+                        <li class="min"><span class="l">跌停价</span><span class="r">--</span></li>
+                        <li class="volume"><span class="l">成交量</span><span class="r">--手</span></li>
+                        <li class="amount"><span class="l">成交额</span><span class="r">--万</span></li>
+                    </ul>
+                </section>
             </div>
-        </div>
+            <div class="right-buy">
+                <div class="buy_price">
+                    <p class="top">推荐买入金额<em></em><span class="f-right">今天还可点买<b id="restChance"><?php if($left != ''): ?><?php echo $left; else: ?>-<?php endif; ?></b>次</span></p>
+                    <ul id="buy_price_ul"><li class="active">1万</li><li> 2万</li><li> 3万</li><li> 5万</li><li> 10万</li><li> 20万</li><li> 30万</li><li> 50万</li></ul>
+                </div>
+                 <div class="open-time">
+                    <span>谋&nbsp;略&nbsp;金&nbsp;额</span>
+                    <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i><div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div></div>
+                    <input type="tel" style="width: 150px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+                </div>
+                <p class="efficiency">资金使用率 可买入<span id="gu">-</span>股，资金利用率<span id="lyl">-</span></p>
+                <div class="open-time">
+                    <span>持&nbsp;仓&nbsp;时&nbsp;间</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">最短2天，最长20天，交易综合费按天支付，默认每天自动延期，自动从账户余额扣除交易综合费(余额不足时自动终止)</div></div>
+                    <ul class="work-interval">
+                        <li class="active">T+1|D</li>
+                    </ul>
+                </div>
+                <div class="check-surplus">
+                    <span>触&nbsp;发&nbsp;止&nbsp;盈</span>
+                    <div class="delay_tip">
+                        <i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止盈。</div>
+                    </div>
+                    <ul id="check-surplus_ul"><li class="active" data-val="50">5000</li></ul>
+                </div>
+                <div class="stop-loss choose-loss" id="stop-loss" style="margin-bottom: 15px;">
+                    <span>触&nbsp;发&nbsp;止&nbsp;损</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止损。</div></div>
+                    <ul id="stop-loss_ul"><li class="active" data-val="8">-1000</li><li data-val="6">-1333</li><li data-val="5">-1700</li></ul>
+                </div>
+                <div class="open-time">
+                     <span>盈&nbsp;利&nbsp;分&nbsp;配</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">当谋略盈利时，</br>谋略人将获得大部分盈利</div></div>
+                    <ul class="work-interval">
+                        <li class="active">90%</li>
+                    </ul>
+                </div>
+                <div class="com_fee">
+                    <span>交易综合费</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">交易综合费包含第一天的交易费，第二天的递延费，每万元点买金的交易综合费为45元，每万元点买金的递延费<?php echo $delayFee; ?>元/天。</div></div>
+                    <span class="delete_price"><strong id="publicFee"><?php echo $delayFee * 2 + $dealFee; ?></strong>元（包括前两日）</span>
+                    
+                </div>
+                <div class="perf_bond">
+                    <span>履约保证金</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">履约保证金为点买人委托平台冻结用于履行交易亏损赔付义务的保证金，结束时根据谋略盈亏结算。保证金越低风险也越大，保证金越高抗风险也越高。</div></div>
+                    <strong class="br-bz" id="guaranteeFee">1250</strong>元
+                </div>
+                <div class="delay_condition">
+                    <p>
+                    	<span>递 延 费</span>
+                    	<em id="delay_fee"><?php echo $delayFee; ?></em>元/天 <span class="fkxy">(浮亏小于<em id="delay_line">650</em>时允许递延)</span>
+                    </p>
+                </div>
+                <div class="protocol_row">
+                    <p><input type="checkbox" name="agree_pro" id="agree_pro" checked="true">我已阅并签署以下协议</p>
+                    <a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>
+                    <a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
+                    <a href="/protocol_3.html" target="_blank">《非常谋略服务协议》</a>
+                </div>
+                <button id="btn_buy" >点买</button>
+                <p id="su_sm_p" class="total hide">当前可点买总额：210万；单股点买金额不超过：50万。</p>
+            </div>
+        </section>
+    </section>
+</div>
 
-    </div>
 </div>
-<!--点买A股-->
-<div class="AS_box br-w100">
-    <!--3个盒子-->
-    <div class="three_box w1024 br-clearfix">
-        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (3).png"/></a>
-            <p class="tit">一分钟了解尚牛在线</p>
-            <p class="tib">全新的投资人策略匹配平台</p>
-        </div>
-        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block; height: 192.02px;"><img src="./public/static/home/img/p (2).png"/></a>
-            <p class="tit">用心服务</p>
-            <p class="tib">一对一专业客服（电话 微信 QQ）</br>全程指导</p>
-        </div>
-        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png"/></a>
-            <p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 256; ?></span>条</p>
-            <p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 5758000, 2 ); ?></span>元</p>
-        </div>
-    </div>
-    <div class="w pz-type-swith" style="">
-    	<ul  class="userMenu">
-        <li  data-id="index_informatiom_one"><a class="on dianji current">免息配资</a></li>
-        <li data-id="index_informatiom_two"><a class=" dianji" >按月配资</a></li>
-        <li data-id="index_informatiom_three"><a class=" dianji" >按天配资</a></li>
-    </ul>
-    <div class="pz-day-content-all" id="content">
-    </div>
-    </div>
-    <div class="AS_box_cont w1024 br-text-center">
-        <h1 class="br-ml-title">POINT TO BUY A SHARES</h1>
-        <div class="br-ml-line"></div>
-        <p class="br-ml-bt">点买A股</p>
-        <div class="AS_contImg br-clearfix">
-            <div class="three_item br-fl">
-                <div class="ASitem_top"><img src="./public/static/home/img/01.png"/></div>
-                <div class="ASitem_bot br-clearfix">
-                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (1).png"/></span>
-                    <p class="ASbot_r br-fl">点买人只需冻结最低1250元履<br>约保证金支付45元交易综合费</p>
-                </div>
-            </div>
-            <div class="three_item br-fl">
-                <div class="ASitem_top"><img src="./public/static/home/img/02.png"/></div>
-                <div class="ASitem_bot br-clearfix">
-                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (2).png"/></span>
-                    <p class="ASbot_r br-fl">即刻提交谋略系统智能匹<br>配投资人，投资人实施买入</p>
-                </div>
-            </div>
-            <div class="three_item br-fl">
-                <div class="ASitem_top"><img src="./public/static/home/img/03.png"/></div>
-                <div class="ASitem_bot br-clearfix">
-                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (3).png"/></span>
-                    <p class="ASbot_r br-fl">谋略到期后单笔1万元交<br>易本金获得90%交易盈利</p>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
-<!--获得更高收益-->
-<div class="highYields br-w100">
-    <div class="w1024 br-clearfix">
-        <div class="high_l br-fl ">
-            <h1>获得更高收益</h1>
-            <p>提供投资谋略金和投资人分享高额回报</p>
-            <!--<a href="javascript:void(0);" class="">进入点买A股</a>-->
-        </div>
-        <div class="high_r br-fr ">
-            <!--<table>
-                <?php if(is_array($buyList) || $buyList instanceof \think\Collection || $buyList instanceof \think\Paginator): $i = 0; $__LIST__ = $buyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-                <tr>
-                    <td class="nickname"><?php echo $vo['mobile']; ?></td>
-                    <td class="time"><?php echo $vo['time']; ?></td>
-                    <td class="celue">尚牛</td>
-                    <td class="stockNumber"><?php echo $vo['stockName']; ?>[<?php echo $vo['stockCode']; ?>]</td>
-                </tr>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </table>-->
-            <img src="__STATIC__/home/img/ewm1.jpg" width="180" height="180" style="margin-top:5px;">
-        </div>
-    </div>
-</div>
-<!--5重保障-->
-<div class="guarantee br-w100">
-    <div class="w1024 br-text-center">
-        <h1 class="br-ml-title">WE WILL ENSURE YOUR BEST INTEREST</h1>
-        <div class="br-ml-line"></div>
-        <p class="br-ml-bt">5重保障最大力度保障您的利益</p>
-        <div class="guarantee_botBox br-clearfix">
-            <div class="guarantee_item bg1">网站安全</div>
-            <div class="guarantee_item bg1">风控<br>保险体质</div>
-            <div class="guarantee_item bg1">第三方<br>资金托管</div>
-            <div class="guarantee_item bg1">资金<br>安全保障</div>
-            <div class="guarantee_item bg1">和投资人<br>收益共享<br>风险共担</div>
 
+<!--弹出层-->
+<!--点买确认-->
+<div class="popup popup-big" id="popup-buy" style="display: none; top: 0px;">
+    <div class="popup-header group">
+        <h2>点买确认</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb">
+            <tbody><tr>
+                <td width="15%">交易品种：</td>
+                <td width="35%" id="t_stock_name">-</td>
+                <td width="15%">交易本金：</td>
+                <td width="35%" class="c-red" id="t_principal">-</td>
+            </tr>
+            <tr>
+                <td>持仓时间：</td>
+                <td name="work-interval">截止至下个交易日 15:00:00</td>
+                <td>交易数量：</td>
+                <td id="t_shou">1手</td>
+            </tr>
+            <tr>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市价：</td>
+                <td>五档最优成交</td>
+                <td colspan="2"><a id="hmdA" href="javascript:void(window.open(&#39;/policy/restricted&#39;))" style="display:none;font-size:18px;color:red">该股票已被列入黑名单，点我查看全部</a></td>
+            </tr>
+        </tbody></table>
+        <div class="btn-div">
+            <button class="btn btn-pri" id="popup-confirm-btn" >确定</button>
+            <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
+            <div class="f-right timer" style="display:none;"><b class="red">5秒</b>后自动返回</div>
         </div>
     </div>
 </div>
-<!--点买人盈利亏损-->
-<div class="PAL br-w100 br-text-center">
-    <div class="w1024 br-clearfix">
-        <div class="PAL_item br-fl">
-            <div class="item_img"></div>
-            <p>点买人获得90%的交易盈利，系统自动<br>划入点买人的尚牛在线账户</p>
+
+<!--温馨提示（协议）-->
+<div class="popup popup-small popup-agree-tip" id="popup-agree-tip" style="display: none; top: 0px;">
+    <div class="popup-header group">
+        <h2>温馨提示</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <i class="icon icon-warning"></i>
+        <div class="protocol-row">
+            <a href="http://feichangcl.com/Policy/protocol_3" target="_blank">《非常谋略服务协议》</a>
         </div>
-        <div class="PAL_item br-fr">
-            <div class="item_img"></div>
-            <p>点买人承担冻结履约保证金以内的亏损<br>超出部分由投资人承担</p>
-        </div>
+        <button class="js-close-popup">确定</button>
     </div>
 </div>
-<!--service-->
-<div class="service br-text-center br-w100">
-    <div class="w1024">
-        <h1 class="br-ml-title">OUR SERVICE</h1>
-        <div class="br-ml-line"></div>
-        <p class="br-ml-bt">我们的服务</p>
-        <div class="service_box br-clearfix">
-            <h1>A股点买去<span>尚牛在线</span></h1>
-            <p class="sp1">“股票点买最安全平台”</p>
-            <p class="sp2">急速撮合<br>仅需填写简单资料<br>提交谋略<br>就能马上提交投资人赚钱</p>
-            <!--<a href="javascript:void(0);">立即注册</a>-->
-        </div>
-    </div>
-</div>
-<!--微信交易-->
-<div class="weChatDeal br-w100">
-    <div class="w1024">
-        <div class="weChatDeal_box">
-            <h1>微信端交易更加方便</span></h1>
-            <p class="sp1">“下单 持仓 结算 一目了然”</p>
-            <p class="sp2">更多优惠活动等着您</p>
-        </div>
-    </div>
-</div>
-<!--合作伙伴-->
-<div class="companion br-w100 br-text-center">
-    <div class="w1024">
-        <h1 class="br-ml-title">PARTNERS</h1>
-        <div class="br-ml-line"></div>
-        <p class="br-ml-bt">合作伙伴</p>
-        <div class="companion_box br-clearfix">
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-            <div class="cp_item"></div>
-        </div>
-    </div>
-</div>
+<!--  遮罩  -->
+<div id="popBg" style="width:100%;height:100%;z-index: 0;background: #eee; opacity: 0.5;position: fixed;left: 0; top: 0;display: none"></div>
 
 <!--底部-->
 <footer class="br-w100">
@@ -593,123 +596,15 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-
-<!--认证银行卡-提示绑定-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <!--<div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>-->
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="./ucenter/bankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <!--<div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>-->
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
-    </div>
-</div>
-<script src="__STATIC__/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="__STATIC__/home/js/index.js"></script>
 <script>
-    (function(){
-        $.ajax({
-            type:"post",
-            url:"<?php echo url('index/index/pc_broadcast'); ?>",
-            dataType:'json',
-            success:function(data){
-                console.log(data);
-//              console.log($(".item a")[0]);
-                var img_car =data.data[0].src;
-                var img_href =data.data[0].href;
-
-                $('.carImg').css('background','url('+'"'+img_car+'"'+')');
-                $(".item a")[0].href=img_href;
-                var img_href2 =data.data[1].href;
-                var img_car2 =data.data[1].src;
-                $('.carImg2').css('background','url('+'"'+img_car2+'"'+')');
-                  $(".item a")[1].href=img_href2;
-                var img_href3 =data.data[2].href;
-                var img_car3 =data.data[2].src;
-                $('.carImg3').css('background','url('+'"'+img_car3+'"'+')');
-                $(".item a")[2].href=img_href3;
-
-            },
-            error:function (data) {
-                console.log("错误");
-            }
-        });
-    })();
+    var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");
+    var delayFee = parseInt("<?php echo $delayFee; ?>");
+    var dealFee = parseInt("<?php echo $dealFee; ?>");
+    var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+    var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
+    var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
 </script>
-<!--局部刷新-->
-<script type="text/javascript">
- $(".userMenu").on("click", "li", function(){
-// 	console.log($(this).children("a"));
-        $(this).children("a").addClass("on")
-        $(this).siblings().children("a").removeClass("on");
-        var sId = $(this).data("id");  //获取data-id的值
-        window.location.hash = sId;  //设置锚点
-        loadInner(sId);
-    });
-    function loadInner(sId){
-        var sId = window.location.hash;
-        var pathn, i;
-        switch(sId){
-            case "#index_informatiom_one": pathn = "index_information.html"; i = 0; break;
-　　　　　　　case "#index_informatiom_two": pathn = "index_information_first.html"; i = 1; break;
-            case "#index_informatiom_three": pathn = "index_information_second.html"; i = 2; break;
-　　　　　　  default: pathn = "index_information.html"; i = 0; break;
-        }
-        $("#content").load(pathn); //加载相对应的内容
-        $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
-    }
-    var sId = window.location.hash;
-    loadInner(sId);
-    
-    
-
-</script>
-
+<script src="__STAITC__/home/js/echarts.min.js"></script>
+<script src="__STATIC__/home/js/buy1.js"></script>
 </body>
 </html>

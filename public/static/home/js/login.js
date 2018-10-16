@@ -40,7 +40,7 @@ var user_Login={
         		return;
         	}
 	        $.ajax({
-	        	url:'./index/index/doLogin',
+	        	url:"./doLogin",
 	        	data:{
 	        		nick_name: $("#用户名i").val(),
 	        		login_pwd: $("#登录密码i").val()
@@ -48,13 +48,24 @@ var user_Login={
 	        	dataType:'json',
 	        	type:'post',
 	        	success:function(data){
-	        		if(data==null){return};
-	        		if (data.code != '0') {
-                        tool.popup_err_msg(data.msg);
+                    // if(data==null){return};
+                    // if (data.code != '0') {
+                    //     tool.popup_err_msg(data.msg);
+                    //     return;
+                   	// }else {
+                    //     tool.popup_err_msg("登录成功");
+                    //     location.href = data.data.redirect_url;
+                    // }
+                    if(data==null){return};
+                    if (data.code != '0') {
+                        // tool.popup_err_msg(data.msg);
+                        alert(data.msg);
+                        window.location.href ='./index';
                         return;
-                   	}else {
-                        tool.popup_err_msg("登录成功");
-                        location.href = data.data.redirect_url;
+                    }else {
+                        // tool.popup_err_msg("登录成功");
+                        alert(data.msg);
+                        // window.location.href = "./index";
                     }
 	        	}
 	        })

@@ -11,6 +11,8 @@ use app\common\controller\Common;
 use app\index\controller\Ucenter;
 use think\Session;
 use think\Config;
+use think\cache;
+use think\captcha\Captcha;
 
 class Index extends Home
 {
@@ -296,7 +298,11 @@ class Index extends Home
         $this->assign('info_arr', $info_arr);
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
-        return view('index/mobile/buy');
+        if (is_mobile_request()) {
+            return view('index/mobile/buy');
+        }else{
+            return view('buy');
+        }
     }
 
 
@@ -528,7 +534,12 @@ class Index extends Home
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
         $this->assign('freebleSum',$freebleSum);
-        return view('index/mobile/freetrial');
+        if(is_mobile_request()){
+            return view('index/mobile/freetrial');
+        }else{
+            return view('freetrial');
+        }
+
     }
 
     //协议-1
@@ -701,7 +712,8 @@ class Index extends Home
         unset($member['password']);
         unset($member['usableSum']);
         unset($member['freebleSum']);
-        $this->success("登录成功", url("/"));
+//        $this->success("登录成功", url("/"));
+        $this->success("登录成功", url("index"));
 
 
     }
@@ -894,7 +906,6 @@ class Index extends Home
      */
     //检查图片验证码是否正确
     	public function checkImageCode($code){
-
             $data = array('captcha' => $code); new \think\captcha\Captcha();
             $res = $this->validate($data,[
                 'captcha|验证码'=>'require|captcha'
@@ -1397,6 +1408,40 @@ class Index extends Home
      */
     public function PcFreeSell(){
         return view('pc_free_sell');
+    }
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股结算
+     **************************************
+     */
+    public function PcHistory(){
+        return view('pc_history');
+    }
+
+    /**
+     **************李火生*******************
+     * @return \think\response\View
+     * pc端A股（免费体验）结算
+     **************************************
+     */
+    public  function  PcFreeHistory(){
+        return view('pc_free_history');
+    }
+
+    public function captchas(){
+        $config =config::get('captcha');
+        $captcha = new \think\captcha\Captcha($config);
+//        return $captcha->entry();
+//        $captcha = new Captcha([
+//            'imageW'=>1000,
+//            'imageH'=>1000,
+//            'fontSize'=>180,
+//            'useNoise'=>false,
+//            'length'=>5,
+//        ]);
+        return $captcha->entry();
     }
 
 

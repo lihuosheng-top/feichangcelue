@@ -130,7 +130,6 @@ class File extends SplFileObject
      */
     public function getMime()
     {
-        return null;
         $finfo = finfo_open(FILEINFO_MIME_TYPE);
         return finfo_file($finfo, $this->filename);
     }

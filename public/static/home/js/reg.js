@@ -124,26 +124,29 @@ var reg={
 				if (!_base.hasClass("active")) {
 			        return false;
 			    }
-				//弹出img框
+
+				// 弹出img框
                 tool.popup.hidePopup();
                 tool.popup.showPopup($("#popup-valid-img"));
-                //输入img验证码
+                // 输入img验证码
                 $("#txt_valid_code").unbind("keyup").bind("keyup", function () {
                     var trigger = $(this);
                     var _val = $(this).val();
+
                     //如果长度=4
                     if (_val.length == 4) {
 						$.ajax({
 							url:'/index/index/sendMobileCode',
 							data:{
-								mobile: $("#mobileno").val(), 
-								imgCode:_val,
+								mobile: $("#mobileno").val(),
+								// imgCode:_val,
 							},
                             dataType:'json',
 							type:'get',
 							success:function(data) {
+
                                 $("#txt_valid_code").val("");
-                                $('#forgot_passImg').attr('src', '/index.php/captcha.html');
+                                // $('#forgot_passImg').attr('src', '/index.php/captcha.html');
 								if(data.code == '0'){
 									//隐藏img弹窗
 									tool.popup.hidePopup($("#popup-valid-img"));

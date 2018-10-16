@@ -1,11 +1,209 @@
 ---------------------------------------------------------------
-[ 2018-10-15T10:17:05+08:00 ] ::1 ::1 GET /feichangcelue/
+[ 2018-10-15T19:23:41+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.044762s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036179s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.019591s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.017349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.018301s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.030255s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.018329s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.017042s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.018810s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.016833s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.020313s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.016964s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:23:42+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:42+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:42+08:00 ] ::1 ::1 GET /feichangcelue/index/index/captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:42+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:43+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:43+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:47+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:23:56+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:24:59+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:25:38+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:25:39+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:27:14+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:27:27+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:27:43+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:29:59+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:30:00+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:00+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:00+08:00 ] ::1 ::1 GET /feichangcelue/index/index/captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:00+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:01+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:01+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:02+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/index/index/captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:03+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:51+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:30:52+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:52+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:52+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:53+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:30:53+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:32:23+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ info ] [ CACHE ] INIT File
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:32:24+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:32:24+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:32:24+08:00 ] ::1 ::1 GET /feichangcelue/index_captcha.html
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:32:25+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:32:25+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] [ CACHE ] INIT File
+---------------------------------------------------------------
+[ 2018-10-15T19:33:08+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:33:11+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:33:14+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:37:16+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [4096]Object of class think\Response could not be converted to string
+---------------------------------------------------------------
+[ 2018-10-15T19:37:44+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [4096]Object of class think\Response could not be converted to string
+---------------------------------------------------------------
+[ 2018-10-15T19:38:59+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [1]Call to undefined function captchas()
+---------------------------------------------------------------
+[ 2018-10-15T19:43:28+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-15T19:55:31+08:00 ] ::1 ::1 GET /feichangcelue/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.052057s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
 [ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
 			from xh_stock_order as a, xh_member as b, xh_shares as c
 			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.018525s ]
+			order by a.id desc limit 7 [ RunTime:0.017817s ]
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
@@ -18,956 +216,111 @@
 [ error ] [8]未定义变量: buyList
 [ error ] [8]未定义变量: buyList
 ---------------------------------------------------------------
-[ 2018-10-15T10:17:08+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.032446s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.017048s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.015480s ]
----------------------------------------------------------------
-[ 2018-10-15T10:17:08+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.030317s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.010865s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010528s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010621s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.008490s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.009791s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009725s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.007221s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010514s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.010283s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010219s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.008478s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010174s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010318s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.007778s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010203s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.010132s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.009294s ]
----------------------------------------------------------------
-[ 2018-10-15T10:17:30+08:00 ] ::1 ::1 GET /feichangcelue/PcBuy
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: time_img
-[ error ] [8]未定义变量: day_img
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义变量: dealFee
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义变量: dealFee
-[ error ] [8]未定义变量: delayLineRate
-[ error ] [8]未定义变量: stopLossRate
-[ error ] [8]未定义变量: lossLine
-[ error ] [8]未定义变量: levers_1
-[ error ] [8]未定义变量: levers_2
-[ error ] [8]未定义变量: levers_3
-[ error ] [8]未定义变量: levers_4
-[ error ] [8]未定义变量: levers_5
-[ error ] [8]未定义变量: levers_6
-[ error ] [8]未定义变量: levers_7
-[ error ] [8]未定义变量: levers_8
-[ error ] [8]未定义变量: levers_9
-[ error ] [8]未定义变量: levers_10
----------------------------------------------------------------
-[ 2018-10-15T10:20:41+08:00 ] ::1 ::1 GET /feichangcelue/history.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:20:41+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:55:33+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T10:20:45+08:00 ] ::1 ::1 GET /feichangcelue/PcBuy
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: time_img
-[ error ] [8]未定义变量: day_img
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义变量: info_arr
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义变量: dealFee
-[ error ] [8]未定义变量: delayFee
-[ error ] [8]未定义变量: dealFee
-[ error ] [8]未定义变量: delayLineRate
-[ error ] [8]未定义变量: stopLossRate
-[ error ] [8]未定义变量: lossLine
-[ error ] [8]未定义变量: levers_1
-[ error ] [8]未定义变量: levers_2
-[ error ] [8]未定义变量: levers_3
-[ error ] [8]未定义变量: levers_4
-[ error ] [8]未定义变量: levers_5
-[ error ] [8]未定义变量: levers_6
-[ error ] [8]未定义变量: levers_7
-[ error ] [8]未定义变量: levers_8
-[ error ] [8]未定义变量: levers_9
-[ error ] [8]未定义变量: levers_10
----------------------------------------------------------------
-[ 2018-10-15T10:20:49+08:00 ] ::1 ::1 GET /feichangcelue/freetrial.html
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义数组索引: member
-[ sql ] [ DB ] CONNECT:[ UseTime:0.042857s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018528s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.017889s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.016232s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.016926s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.016926s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.016933s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.016406s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.017058s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016825s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.019107s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014972s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.016996s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.016936s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.017067s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.016419s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.016895s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.017233s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.017191s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.017712s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.017229s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.018801s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.016908s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.016196s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.017476s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.018262s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017053s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015827s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.017309s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.016477s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016935s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.018010s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018005s ]
-[ sql ] [ SQL ] SELECT `freebleSum` FROM `xh_member` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.015598s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017057s ]
----------------------------------------------------------------
-[ 2018-10-15T10:20:51+08:00 ] ::1 ::1 GET /feichangcelue/freetrialHistory.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:20:51+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:55:36+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T10:20:55+08:00 ] ::1 ::1 GET /feichangcelue/freetrial.html
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义数组索引: member
-[ sql ] [ DB ] CONNECT:[ UseTime:0.029782s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012640s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.013126s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.011649s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.010392s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.011625s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.011064s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.012784s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.011683s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.011558s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011852s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010721s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011308s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.011289s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.012000s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011520s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011240s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.011864s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011347s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011513s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.011119s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.012506s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009704s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011424s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.011433s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.010133s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011944s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011582s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.011893s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011782s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011653s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.011750s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012513s ]
-[ sql ] [ SQL ] SELECT `freebleSum` FROM `xh_member` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.009755s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011684s ]
----------------------------------------------------------------
-[ 2018-10-15T10:21:01+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义数组索引: member
-[ error ] [8]未定义数组索引: member
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
-[ sql ] [ DB ] CONNECT:[ UseTime:0.028878s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012543s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.009224s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010315s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.011129s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.011087s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.011360s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.011513s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.010456s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.010173s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011276s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010844s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011660s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.012343s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009855s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011453s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011291s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010060s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011417s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011113s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.011678s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.012131s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010494s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011669s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.011683s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.011083s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011489s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.012275s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010482s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011566s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011452s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010325s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011492s ]
----------------------------------------------------------------
-[ 2018-10-15T10:21:15+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义数组索引: member
-[ error ] [8]未定义数组索引: member
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
-[ sql ] [ DB ] CONNECT:[ UseTime:0.035513s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015879s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.014310s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.014635s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.015092s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.013372s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.015286s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.014769s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.014812s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.013341s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015921s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014465s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.014870s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015700s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015097s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.014208s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.014279s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.015369s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015783s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014420s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014584s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.016061s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.012420s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.014218s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015446s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.018370s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.014587s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.014490s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014677s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014376s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.015771s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014491s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015633s ]
----------------------------------------------------------------
-[ 2018-10-15T10:21:18+08:00 ] ::1 ::1 GET /feichangcelue/history.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:21:19+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:21:21+08:00 ] ::1 ::1 POST /feichangcelue/doLogin.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.032316s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015011s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.012714s ]
----------------------------------------------------------------
-[ 2018-10-15T10:21:24+08:00 ] ::1 ::1 GET /feichangcelue/public/static/img/favicons/favicon.png
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:21:25+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:21:25+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T10:21:33+08:00 ] ::1 ::1 POST /feichangcelue/doLogin.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.025436s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011567s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.010327s ]
----------------------------------------------------------------
-[ 2018-10-15T10:21:36+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:39:42+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.048242s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.010396s ]
-[ error ] [8]未定义数组索引: member
+[ 2018-10-15T19:56:06+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义变量: usableSum
-[ error ] [8]未定义数组索引: member
-[ error ] [8]未定义变量: count
-[ error ] [8]未定义变量: earnSum
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
 ---------------------------------------------------------------
-[ 2018-10-15T11:39:44+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.034558s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.016487s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015439s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015831s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015400s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016812s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.016816s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015728s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.016280s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.016409s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015841s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015914s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.016066s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015749s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.015852s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015992s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.016874s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.015976s ]
----------------------------------------------------------------
-[ 2018-10-15T11:39:44+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.035800s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015111s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.014002s ]
----------------------------------------------------------------
-[ 2018-10-15T11:39:54+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.027972s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.012358s ]
-[ error ] [8]未定义数组索引: member
-[ error ] [8]Trying to get property of non-object
-[ error ] [8]未定义变量: balance
-[ error ] [8]未定义变量: ablePrice
-[ error ] [8]未定义变量: real_disk_sum
-[ error ] [8]未定义变量: guaranteeFee
----------------------------------------------------------------
-[ 2018-10-15T11:39:56+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:39:56+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.037690s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.016639s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.016041s ]
----------------------------------------------------------------
-[ 2018-10-15T11:39:56+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sz.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:39:56+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sh.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:39:57+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:56:28+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ error ] [8]未定义数组索引: member
 [ error ] [8]未定义数组索引: member
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
-[ sql ] [ DB ] CONNECT:[ UseTime:0.025123s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011710s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.010125s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.009612s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.009668s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.009866s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.010780s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.010030s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.012654s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.010414s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011047s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009586s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.010232s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010455s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009946s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010374s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.010228s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010876s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010456s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.010466s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010048s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.010861s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010517s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011397s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010162s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.010988s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.009956s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.010017s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.009728s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010347s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.010431s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010562s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010542s ]
----------------------------------------------------------------
-[ 2018-10-15T11:40:11+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.025607s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.011794s ]
 [ error ] [8]未定义数组索引: member
-[ error ] [8]Trying to get property of non-object
-[ error ] [8]未定义变量: balance
-[ error ] [8]未定义变量: ablePrice
-[ error ] [8]未定义变量: real_disk_sum
-[ error ] [8]未定义变量: guaranteeFee
+[ error ] [8]未定义变量: usableSum
+[ error ] [1]Call to undefined function captchas()
 ---------------------------------------------------------------
-[ 2018-10-15T11:40:12+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:40:13+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.041651s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.018612s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.016988s ]
----------------------------------------------------------------
-[ 2018-10-15T11:40:13+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sh.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:40:13+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sz.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:40:14+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/home.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:40:15+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:40:19+08:00 ] ::1 ::1 POST /feichangcelue/doLogin.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.025131s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012673s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.009609s ]
----------------------------------------------------------------
-[ 2018-10-15T11:40:22+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:41:44+08:00 ] ::1 ::1 GET /feichangcelue/reg
-[ info ] [ CACHE ] INIT File
-[ error ] [8]未定义数组索引: uid
----------------------------------------------------------------
-[ 2018-10-15T11:41:53+08:00 ] ::1 ::1 POST /feichangcelue/sendMobileCode.html
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:42:26+08:00 ] ::1 ::1 POST /feichangcelue/doReg.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.026545s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012023s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `username` = 'lihuosheng' LIMIT 1 [ RunTime:0.010426s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `mobile` = '18998906797' LIMIT 1 [ RunTime:0.011301s ]
-[ sql ] [ SQL ] INSERT INTO `xh_member` (`username` , `mobile` , `password` , `createTime` , `freebleSum` , `inviterId`) VALUES ('lihuosheng' , '18998906797' , 'e10adc3949ba59abbe56e057f20f883e' , '2018-10-15 11:42:26' , 10000 , NULL) [ RunTime:0.032105s ]
----------------------------------------------------------------
-[ 2018-10-15T11:42:30+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.036174s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.016137s ]
+[ 2018-10-15T19:57:06+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
 [ error ] [8]未定义数组索引: member
-[ error ] [8]Trying to get property of non-object
-[ error ] [8]未定义变量: balance
-[ error ] [8]未定义变量: ablePrice
-[ error ] [8]未定义变量: real_disk_sum
-[ error ] [8]未定义变量: guaranteeFee
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:31+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:57:30+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:31+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.031666s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.013532s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.011565s ]
+[ 2018-10-15T19:57:39+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:32+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sz.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:57:55+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:32+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sh.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T19:59:47+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:34+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/home.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T20:00:31+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:35+08:00 ] ::1 ::1 GET /feichangcelue/login.html
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T20:00:46+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:46+08:00 ] ::1 ::1 POST /feichangcelue/doLogin.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.031234s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015234s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.013577s ]
+[ 2018-10-15T20:01:48+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:50+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.035435s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019223s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.018244s ]
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.018564s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.020101s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.016926s ]
-[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.017317s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.018692s ]
-[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.019545s ]
-[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.018471s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1330 LIMIT 1 [ RunTime:0.017769s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1 [ RunTime:0.017227s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017968s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` IS NULL LIMIT 1 [ RunTime:0.015749s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.016382s ]
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组索引: ajax_html
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义数组下标: 0
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]Trying to get property of non-object
-[ error ] [8]未定义变量: earnSum
+[ 2018-10-15T20:03:59+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:51+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
-[ info ] [ CACHE ] INIT File
+[ 2018-10-15T20:06:59+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:51+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.039351s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013585s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.012539s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.014694s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.013171s ]
+[ 2018-10-15T20:08:35+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:52+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sh.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.033483s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017087s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.015118s ]
+[ 2018-10-15T20:09:34+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:42:52+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sz.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.063089s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018517s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.016052s ]
+[ 2018-10-15T20:10:15+08:00 ] ::1 ::1 GET /feichangcelue/reg.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
 ---------------------------------------------------------------
-[ 2018-10-15T11:43:22+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/home.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.035794s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017585s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.016543s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.017238s ]
----------------------------------------------------------------
-[ 2018-10-15T11:43:25+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.036232s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019035s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.016428s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.018485s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1330 and isFreetrial=0 and left(createTime,10)='2018-10-15' ) LIMIT 1 [ RunTime:0.016241s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017741s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.016187s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.017151s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.020621s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.017354s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.017684s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.017477s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.017933s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.017307s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.018427s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.017014s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.017819s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.017703s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.017587s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017014s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.018934s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.017697s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.017686s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016053s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.017444s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.018739s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.016174s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.017641s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.016598s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.017469s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017280s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.017686s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.017964s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.017654s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.017194s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.017594s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015656s ]
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
----------------------------------------------------------------
-[ 2018-10-15T11:43:28+08:00 ] ::1 ::1 GET /feichangcelue/month_buy.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.034500s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015554s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.014708s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.017225s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1330 and isFreetrial=0 and left(createTime,10)='2018-10-15' ) LIMIT 1 [ RunTime:0.014967s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016708s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.014913s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015749s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.014850s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.016078s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.015931s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015352s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.016079s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016056s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.016163s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.015478s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015656s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015353s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015560s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015725s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015680s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.015809s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015350s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016136s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015950s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.016082s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014781s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.014931s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015772s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015962s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015334s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.016154s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.015908s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015929s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016260s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015826s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015768s ]
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
----------------------------------------------------------------
-[ 2018-10-15T11:43:32+08:00 ] ::1 ::1 GET /feichangcelue/sell.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.029044s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011784s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.009474s ]
-[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.011355s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012178s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1330 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.009265s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010786s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.009415s ]
-[ sql ] [ SQL ] SELECT SUM(0 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1330 and isFreetrial=0 and status = 1  ) LIMIT 1 [ RunTime:0.010139s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.010174s ]
-[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.011978s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 LIMIT 1 [ RunTime:0.010272s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.009870s ]
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义变量: res
-[ error ] [8]Use of undefined constant count - assumed 'count'
-[ error ] [8]未定义变量: list
-[ error ] [8]未定义变量: listJson
-[ error ] [8]未定义变量: listJson2
----------------------------------------------------------------
-[ 2018-10-15T11:43:34+08:00 ] ::1 ::1 GET /feichangcelue/month_buy.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.033490s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012950s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.010264s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012764s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1330 and isFreetrial=0 and left(createTime,10)='2018-10-15' ) LIMIT 1 [ RunTime:0.011301s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012760s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.010449s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.011972s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.010217s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.011366s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.011597s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.011325s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.012298s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.011828s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.012536s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.008934s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011601s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.011720s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.011272s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011573s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011550s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.011475s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011785s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011473s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.011794s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.013031s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.011405s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011729s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.011342s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.011555s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.011498s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011731s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.011834s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011138s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011691s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.011355s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011246s ]
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: yuebeishu
-[ error ] [8]未定义数组索引: performance
-[ error ] [8]未定义数组索引: beishu
----------------------------------------------------------------
-[ 2018-10-15T11:43:41+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.033287s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018001s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.015480s ]
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.017149s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.017213s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.014872s ]
-[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016277s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.016861s ]
-[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.018294s ]
-[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016576s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1330 LIMIT 1 [ RunTime:0.016097s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1 [ RunTime:0.016789s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016591s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` IS NULL LIMIT 1 [ RunTime:0.015240s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.015578s ]
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组索引: ajax_html
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义数组下标: 0
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]Trying to get property of non-object
-[ error ] [8]未定义变量: earnSum
----------------------------------------------------------------
-[ 2018-10-15T11:43:42+08:00 ] ::1 ::1 GET /feichangcelue/public/stock/js/maps/swiper.jquery.min.js.map
-[ info ] [ CACHE ] INIT File
----------------------------------------------------------------
-[ 2018-10-15T11:43:43+08:00 ] ::1 ::1 POST /feichangcelue/app_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.027032s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011572s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.008812s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.011089s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 2 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.010183s ]
----------------------------------------------------------------
-[ 2018-10-15T11:43:44+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sz.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.038438s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017277s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.015932s ]
----------------------------------------------------------------
-[ 2018-10-15T11:43:44+08:00 ] ::1 ::1 POST /feichangcelue/stock_exponential_sh.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.022874s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011252s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.008684s ]
----------------------------------------------------------------
-[ 2018-10-15T11:43:46+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.039206s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019880s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.018046s ]
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.020666s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.021317s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015848s ]
-[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.018614s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.018540s ]
-[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.021362s ]
-[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.017998s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1330 LIMIT 1 [ RunTime:0.018790s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1 [ RunTime:0.018622s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.019434s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` IS NULL LIMIT 1 [ RunTime:0.018293s ]
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组索引: ajax_html
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义数组下标: 0
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义变量: count
-[ error ] [8]未定义变量: earnSum
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
----------------------------------------------------------------
-[ 2018-10-15T11:43:48+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.041735s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019815s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.016822s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.019772s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.018420s ]
----------------------------------------------------------------
-[ 2018-10-15T11:43:48+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.026417s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012236s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.010125s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011483s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009596s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.009291s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009143s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.010337s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009316s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011480s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010506s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009490s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010514s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011139s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.011112s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.011964s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.010906s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010603s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009870s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.010296s ]
----------------------------------------------------------------
-[ 2018-10-15T11:45:47+08:00 ] ::1 ::1 GET /feichangcelue/
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.035621s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010720s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.012029s ]
-[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
-			from xh_stock_order as a, xh_member as b, xh_shares as c
-			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
-			order by a.id desc limit 7 [ RunTime:0.010312s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.011430s ]
-[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.008794s ]
-[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.012035s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.009964s ]
-[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1330 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.013791s ]
-[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009996s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1330 LIMIT 1 [ RunTime:0.010282s ]
-[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1330  AND `status` = 1 [ RunTime:0.009882s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010098s ]
-[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` IS NULL LIMIT 1 [ RunTime:0.009688s ]
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组下标: 1
-[ error ] [8]未定义数组索引: ajax_html
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义数组下标: 0
-[ error ] [2]trim() expects parameter 1 to be string, array given
-[ error ] [8]未定义变量: count
-[ error ] [8]未定义变量: earnSum
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
-[ error ] [8]未定义变量: buyList
----------------------------------------------------------------
-[ 2018-10-15T11:45:50+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.037418s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017334s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.015532s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.017948s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015595s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.017499s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015303s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016256s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.017413s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.016557s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.017376s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.016373s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.016160s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.016208s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.016835s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.017420s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016084s ]
-[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015809s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.016863s ]
-[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016312s ]
----------------------------------------------------------------
-[ 2018-10-15T11:45:50+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
-[ info ] [ CACHE ] INIT File
-[ sql ] [ DB ] CONNECT:[ UseTime:0.027766s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.024803s ]
-[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1330 ) LIMIT 1 [ RunTime:0.011839s ]
-[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.014115s ]
-[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.012655s ]
+[ 2018-10-15T20:10:47+08:00 ] ::1 ::1 GET /feichangcelue/reg.html?
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum

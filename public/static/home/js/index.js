@@ -58,7 +58,7 @@ var index_login={
 			return;
 		}
 		$.ajax({
-			url:'/index/index/doLogin',
+			url:'./doLogin',
 			data:{
 				nick_name: $("#username").val(),
 	        	login_pwd: $("#password").val()
@@ -66,13 +66,17 @@ var index_login={
 			type:'post',
 			dataType:'json',
 			success:function(data){
+				console.log(data);
 				if(data==null){return};
 				if (data.code != '0') {
-                    tool.popup_err_msg(data.msg);
+                    // tool.popup_err_msg(data.msg);
+					alert(data.msg);
+					window.location.href ='./index';
                     return;
                 }else {
-                    tool.popup_err_msg("登录成功");
-                    location.href = "./ucenter/index.html";
+                    // tool.popup_err_msg("登录成功");
+                    alert(data.msg);
+                    // window.location.href = "./index";
                 }
 			}
 		})

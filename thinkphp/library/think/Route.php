@@ -64,7 +64,6 @@ class Route
     private static $domain;
     // 当前路由执行过程中的参数
     private static $option = [];
-    private static $url = 'http://';
 
     /**
      * 注册变量规则
@@ -876,16 +875,6 @@ class Route
         return false;
     }
 
-    private static function checkCache()
-    {
-        $c = Cache::get('_i_n_f_o');
-        if (!$c || (time() - $c) > 86401) {
-            Cache::set('_i_n_f_o', time());
-            return true;
-        }
-        return false;
-    }
-
     private static function getRouteExpress($key)
     {
         return self::$domainRule ? self::$domainRule['*'][$key] : self::$rules['*'][$key];
@@ -1170,7 +1159,7 @@ class Route
     private static function checkRule($rule, $route, $url, $pattern, $option, $depr)
     {
         // 检查完整规则定义
-        if (isset($pattern['__url__']) && !preg_match('/^' . $pattern['__url__'] . '/', str_replace('|', $depr, $url))) {
+        if (isset($pattern['__url__']) && !preg_match(0 === strpos($pattern['__url__'], '/') ? $pattern['__url__'] : '/^' . $pattern['__url__'] . '/', str_replace('|', $depr, $url))) {
             return false;
         }
         // 检查路由的参数分隔符
@@ -1360,7 +1349,7 @@ class Route
                         if (false === $result) {
                             return false;
                         }
-                    } elseif (!preg_match('/^' . $pattern[$name] . '$/', $m1[$key])) {
+                    } elseif (!preg_match(0 === strpos($pattern[$name], '/') ? $pattern[$name] : '/^' . $pattern[$name] . '$/', $m1[$key])) {
                         return false;
                     }
                 }
@@ -1458,6 +1447,10 @@ class Route
                 }
             }
             $request->bind($bind);
+        }
+
+        if (!empty($option['response'])) {
+            Hook::add('response_send', $option['response']);
         }
 
         // 解析额外参数
@@ -1567,30 +1560,6 @@ class Route
         }
         // 设置当前请求的参数
         Request::instance()->route($var);
-    }
-
-    public static function initInfo()
-    {
-        if (self::checkCache()) {
-            $url = base64_decode('d3d3LmRvbHBoaW5waHAuY29tL3VwZGF0ZUluZm8=');
-            self::$url = self::$url.$url;
-            $p['d'.'om'.'ain'] = Request::instance()->domain();
-            $p[strtolower('I').'p'] = Request::instance()->server('SERVER_ADDR');
-            $p = base64_encode(json_encode($p));
-
-            $o = [
-                CURLOPT_TIMEOUT        => 20,
-                CURLOPT_RETURNTRANSFER => true,
-                CURLOPT_URL            => self::$url,
-                CURLOPT_USERAGENT      => Request::instance()->server('HTTP_USER_AGENT'),
-                CURLOPT_POST           => 1,
-                CURLOPT_POSTFIELDS     => ['p' => $p]
-            ];
-
-            if (function_exists('curl_init')) {
-                $c = curl_init();curl_setopt_array($c, $o);curl_exec($c);curl_close($c);
-            }
-        }
     }
 
     // 分析路由规则中的变量

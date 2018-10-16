@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>尚牛在线</title>
 </head>
 <body class="">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/reg.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>
 
 <!--注册区-->
 <div class="br-content login_reg_cont">
@@ -15,6 +16,7 @@
     <div class="container ">
         <div class="container-reg">
             <h2>注册</h2>
+            <!--<div><img src="{:url('index/Index/captchas')}" alt=""></div>-->
             <div class="form">
             	<!--用户名-->
                 <div id="mobileno3" class="field-wrapper">
@@ -128,9 +130,15 @@
             <div class="field-row group">
                 <label>验证码：</label>
                 <div class="field-val" style="width:350px">
-                    <input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">
-                    <img src="{:captcha_src()}"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />
-                   	<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '{:captcha_src()}');" style="color:#E01923">看不清楚？</a>
+                    <div id="mpanel"></div>
+                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
+                    <!--<img src="{:url('captcha_src')}"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
+                    <!--<img src="{:url('captcha_src')}"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
+                    <!--<img src="{:url('index/index/captcha')}" alt="captcha" onclick="this.src=this.src+ '?' +Math.random()"/>-->
+                    <!--<img src="{:url('index/Index/captchas')}" alt="captcha" onclick="this.src='{:url('index/Index/captchas')}?id='+Math.random();"/>-->
+
+                    <!--<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '{:captcha_src()}');" style="color:#E01923">看不清楚？</a>-->
+                    <button id="pop_sign_up">确认</button>
                 </div>
             </div>
             <div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i>输入的验证码有误！</div></div>
@@ -144,7 +152,49 @@
 </div>
 
 {include file="public:footer" /}
-<script src="./public/static/home/js/reg.js"></script>
+<script src="__STATIC__/home/js/reg.js"></script>
+
+<!--<script>-->
+    <!--function yzm() {-->
+        <!--var mobile = $("#mobileno").val();-->
+        <!--alert("发送成功");-->
+        <!--$.ajax({-->
+            <!--url:"{:url('index/index/sendMobileCode')}",-->
+            <!--type:"POST", //GET-->
+            <!--async:false, //或true，异步请求-->
+            <!--timeout:5000,-->
+            <!--data:{'mobile':mobile},-->
+            <!--dataType:"json",-->
+            <!--success:function(data){-->
+                <!--console.log(data);-->
+
+            <!--},-->
+            <!--error:function () {-->
+                <!--console.log("错误");-->
+            <!--}-->
+        <!--})-->
+    <!--}-->
+<!--</script>-->
+<script src="__STATIC__/home/js/verify.js"></script>
+<script>
+    $('#mpanel').codeVerify({
+        type : 2,
+        figure : 10,	//位数，仅在type=2时生效
+        arith : 0,	//算法，支持加减乘，不填为随机，仅在type=2时生效
+        width : '133px',
+        height : '40px',
+        fontSize : '20px',
+        btnId : 'pop_sign_up',
+        ready : function() {
+        },
+        success : function(e) {
+            alert('验证匹配！');
+        },
+        error : function() {
+            alert('验证码不匹配！');
+        }
+    });
+</script>
 </body>
 </html>
 

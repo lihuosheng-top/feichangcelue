@@ -46,6 +46,7 @@ return [
 
     'reg/:uid'=> ['index/index/reg', ['method' => 'get'] ],      			//注册(带参数)
     'reg'=> 'index/index/reg?uid',       			//注册(不带参数)
+    'index_captcha'=>'index/Index/captchas',           //验证码
 
     'news'=>'index/index/news',                     //财经资讯
     'news_t'=>'index/index/news_t',                     //新闻内容
