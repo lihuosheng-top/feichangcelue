@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539676082;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539677377;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -130,7 +130,7 @@
         <nav>
             <ul class="clearfix">
                 <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
+                <li class=""><a href="./month_buy"><em> 02 </em>| 点买区</a></li>
                 <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
                 <li class=""><a href="./history"><em>04 </em> | 结算区</a></li>
             </ul>

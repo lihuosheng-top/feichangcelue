@@ -44,14 +44,15 @@
                         </div>
                     </div>
                     <div class="stock-name">
-                        <span id="stockName">招商银行(600036)</span>
+                        <!--<span id="stockName">招商银行(600036)</span>-->
+                        <span id="stockName">{$info_arr[1]}({$info_arr[2]})</span>
                         <button id="changeStock" class="change_stock hide">选择股票</button>
                     </div>
                     
                 </header>
                 <section class="stock-detail clearfix" data-price="0">
                     <div class="stock-new row f-left">
-                        <strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>
+                        <strong class="J_price" id="nowPrice">{$info_arr[3]}</strong><i class="icon stockicon"></i>
                         <span class="up-arrow-box" style="display: inline-block;">
                             <span class="top-part"></span>
                             <span class="bottom-part"></span>
@@ -62,23 +63,23 @@
                         </span>
                         
                         <i class="icon icon-refresh" id="refreshBtn"></i>
-                         <span id="num1" class="color font14">--</span>
-						<span id="num2" class="color font14">--</span>
+                         <span id="num1" class="color font14 J_num_1">{$info_arr[31]}%</span>
+						<span id="num2" class="color font14 J_num_2">{$info_arr[32]}%</span>
                     </div>
                     <div class="stock-price f-right" id="stock-price">
                         <ul class="sell">
-                            <li><em>卖⑤</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖④</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖③</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖②</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖①</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖⑤</em><b class="red info_27">{$info_arr[27]}</b><i class="info_28">{$info_arr[28]}</i></li>
+                            <li><em>卖④</em><b class="red info_25">{$info_arr[25]}</b><i class="info_26">{$info_arr[26]}</i></li>
+                            <li><em>卖③</em><b class="red info_23">{$info_arr[23]}</b><i class="info_24">{$info_arr[24]}</i></li>
+                            <li><em>卖②</em><b class="red info_21">{$info_arr[21]}</b><i class="info_22">{$info_arr[22]}</i></li>
+                            <li><em>卖①</em><b class="red info_19">{$info_arr[19]}</b><i class="info_20">{$info_arr[20]}</i></li>
                         </ul>
                         <ul class="buy">
-                            <li><em>买①</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买②</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买③</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买④</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买⑤</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买①</em><b class="red info_9">{$info_arr[9]}</b><i class="info_10">{$info_arr[10]}</i></li>
+                            <li><em>买②</em><b class="red info_11">{$info_arr[11]}</b><i class="info_12">{$info_arr[12]}</i></li>
+                            <li><em>买③</em><b class="red info_13">{$info_arr[13]}</b><i class="info_14">{$info_arr[14]}</i></li>
+                            <li><em>买④</em><b class="red info_15">{$info_arr[15]}</b><i class="info_16">{$info_arr[16]}</i></li>
+                            <li><em>买⑤</em><b class="red info_17">{$info_arr[17]}</b><i class="info_18">{$info_arr[18]}</i></li>
                         </ul>
                     </div>
                 </section>
@@ -88,9 +89,13 @@
                         <li class="hide" id="chartKContro">k线</li>
                     </ul>
                     <!-- 为ECharts准备分时图 -->
-   					<div class="figure active" id="chart" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:block;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+   					<div class="figure active" id="chart" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:block;position:relative;overflow:hidden;width:520px;height:280px;">
+                        <img class="time_img" src="{$time_img}" alt="">
+                    </div>
                     <!--<div class="figure " id="chart" _echarts_instance_="1498120573127" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; cursor: default; display: none;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>-->
-   					<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+   					<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;">
+                        <img class="day_img" src="{$day_img}" alt="">
+                    </div>
                     <!--<div class="figure hide" id="chartk" _echarts_instance_="1498120573128" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; display: block; cursor: default;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-tooltip zr-element" style="position: absolute; display: block; border-style: solid; white-space: nowrap; transition: left 0.1s, top 0.1s; background-color: rgb(255, 255, 255); border-width: 1px; border-color: rgb(204, 204, 204); border-radius: 4px; color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 11px; line-height: 17px; padding: 10px; left: 143.5px; top: 37px;">2017年04月17日<br>最高：<span style="color:#DD2200;">18.9</span><br>最低：<span style="color:#00A800;">18.6</span><br>收盘：<span style="color:#F96900;">18.88</span></div></div></div>-->
                 	<!--loading-->
                 	<div class="loading"></div>
@@ -98,14 +103,22 @@
                 <section class="stock-info" id="stock-info">
                     <h3>股票信息</h3>
                     <ul class="row">
-                        <li class="open"><span class="l">今开</span><span class="r">--</span></li>
-                        <li class="amplitude"><span class="l">振幅</span><span class="r">--</span></li>
-                        <li class="high"><span class="l">最高</span><span class="r">--</span></li>
-                        <li class="low"><span class="l">最低</span><span class="r">--</span></li>
-                        <li class="max"><span class="l">涨停价</span><span class="r">--</span></li>
-                        <li class="min"><span class="l">跌停价</span><span class="r">--</span></li>
-                        <li class="volume"><span class="l">成交量</span><span class="r">--手</span></li>
-                        <li class="amount"><span class="l">成交额</span><span class="r">--万</span></li>
+                        <!--<li class="open"><span class="l">今开</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="amplitude"><span class="l">振幅</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="high"><span class="l">最高</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="low"><span class="l">最低</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="max"><span class="l">涨停价</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="min"><span class="l">跌停价</span><span class="r">&#45;&#45;</span></li>-->
+                        <!--<li class="volume"><span class="l">成交量</span><span class="r">&#45;&#45;手</span></li>-->
+                        <!--<li class="amount"><span class="l">成交额</span><span class="r">&#45;&#45;万</span></li>-->
+                        <li class="open"><span class="l">今开</span><span class="r info_5">{$info_arr[5]}</span></li>
+                        <li class="amplitude"><span class="l">振幅</span><span class="r info_43">{$info_arr[43]}</span></li>
+                        <li class="high"><span class="l">最高</span><span class="r info_41">{$info_arr[41]}</span></li>
+                        <li class="low"><span class="l">最低</span><span class="r info_42">{$info_arr[42]}</span></li>
+                        <li class="max"><span class="l">涨停价</span><span class="r info_47">{$info_arr[47]}</span></li>
+                        <li class="min"><span class="l">跌停价</span><span class="r info_48">{$info_arr[48]}</span></li>
+                        <li class="volume"><span class="l">成交量</span><span class="r info_36">{$info_arr[36]}手</span></li>
+                        <li class="amount"><span class="l">成交额</span><span class="r info_37">{$info_arr[37]}万</span></li>
                     </ul>
                 </section>
             </div>

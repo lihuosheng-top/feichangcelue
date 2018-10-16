@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\history.html";i:1539676967;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:82:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\freetrialHistory.html";i:1539584858;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -126,29 +126,20 @@
     <section class="play-area">
         <nav>
             <ul class="clearfix">
-                <li class=""><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
-                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
-                <li class="active"><a href="./history"><em>04 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrial.html"><em> 01 </em>| 点买区</a></li>
+                <li class=""><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
+                <li class="active"><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
             </ul>
         </nav>
        <section>
             <nav class="row" style="position: relative;">
                 <div class="select">
                     <span>时间：</span>
-                    <a href="/history.html?recent=7" id="recent7" class="">最近7个交易日</a>
-                    <a href="/history.html?recent=30" id="recent30">最近30个交易日</a>
+                    <a href="./freetrialHistory.html?recent=7" id="recent7" class="">最近7个交易日</a>
+                    <a href="./freetrialHistory.html?recent=30" id="recent30">最近30个交易日</a>
                     <a id="selectByDate">按时间选择<span class="sanj"></span></a>
                 </div>
-                <!--<div class="select split" style="display:none;">
-                    <span>状态：</span>
-                    <a id="status-0" class="active">全部</a>
-                    <a id="status-6">待结算</a>
-                    <a id="status-5">平仓中</a>
-                    <a id="status-4">待平仓</a>
-                    <a id="status-7">已结算</a>
-                    <a id="status-r">今日流单</a>
-                </div>-->
+
                 <div class="jiesuan-deal pa" style="top:200px;left:300px" id="JchooseDate" data-val="0">
                     <h4 class=" pb5 f14 db lh18" style="height:30px;">
                         <span class="left_gray fl">&lt;</span>
@@ -168,7 +159,7 @@
             <ul id="settle-list" class="history-list">
 
                 <?php if(count($list) == 0): ?>
-                <div class="data-empty"><p>暂时没有数据</p><a href="/buy.html">立即去点买</a></div>
+                <div class="data-empty"><p>暂时没有数据</p><a href="./buy.html">立即去点买</a></div>
                 <?php endif; if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
             	<li>
             		<label class="w175"><em><?php echo $vo['sellTime']; ?></em><em>单号：<?php echo $vo['id']; ?></em></label>
@@ -184,7 +175,26 @@
                 </li>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
-           
+           <div class="page-bar" style="display: none;">
+                <div class="jPaginate" style="padding-left: 88px;">
+                	<div class="jPag-control-back">
+                		<a class="jPag-first" style="color: rgb(136, 136, 136); background-color: rgb(249, 249, 249);">首页</a>
+                		<span class="jPag-sprevious-img">&lt;</span>
+                	</div>
+                	<div style="overflow: hidden; width: 33px;">
+                		<ul class="jPag-pages" style="width: 49px;">
+                			<li><span class="jPag-current" style="color: rgb(255, 255, 255); background-color: #FF3337;">1</span></li>
+                		</ul>
+                	</div>
+                	<div class="jPag-control-front" style="left: 138px;">
+                		<span class="jPag-snext-img">&gt;</span>
+                		<a class="jPag-last" style="color: rgb(136, 136, 136); background-color: rgb(249, 249, 249);">尾页</a>
+                	</div>
+                </div>
+                <div class="total-pages" style="display:none;">
+                    <em>1条，</em><em>共1页</em>
+                </div>
+            </div>
            <?php echo $list->render(); ?>
         </section>
     </section>
@@ -636,5 +646,6 @@
 
 <script src="/public/static/home/js/history.js"></script>
 
+</script>
 </body>
 </html>

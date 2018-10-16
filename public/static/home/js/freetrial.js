@@ -129,7 +129,117 @@ function selectAShare(dom){
 		var ashareName=$(this).find('td').eq(0).html();
 		var ashareCode=$(this).find('td').eq(1).html();
 		$('.stock-name').find('span').html(ashareName+'('+ashareCode+')');
-		//隐藏搜索框，值清空
+
+
+        /**
+         * TODO:股票赋值开始
+         */
+        $.ajax({
+            url:"./index/Index/buy",
+            type:"post",
+            data:{code:ashareCode},
+            dataType:'json',
+            success:function(data){
+                if(data.status == 1){
+
+                    // console.log(data.info);
+                    var info_3 = data.info.info_arr[3];    //当前价格
+                    var info_31 = data.info.info_arr[31];  //涨跌
+                    var info_32 = data.info.info_arr[32];  //涨跌%
+                    //卖5到卖1(先上面一排再下面一排数据)
+                    var info_27 = data.info.info_arr[27];
+                    var info_25 = data.info.info_arr[25];
+                    var info_23 = data.info.info_arr[23];
+                    var info_21 = data.info.info_arr[21];
+                    var info_19 = data.info.info_arr[19];
+                    var info_28 = data.info.info_arr[28];
+                    var info_26 = data.info.info_arr[26];
+                    var info_24 = data.info.info_arr[24];
+                    var info_22 = data.info.info_arr[22];
+                    var info_20 = data.info.info_arr[20];
+                    //买1到买5(先上面一排再下面一排数据)
+                    var info_9 = data.info.info_arr[9];
+                    var info_11 = data.info.info_arr[11];
+                    var info_13 = data.info.info_arr[13];
+                    var info_15 = data.info.info_arr[15];
+                    var info_17 = data.info.info_arr[17];
+                    var info_10 = data.info.info_arr[10];
+                    var info_12 = data.info.info_arr[12];
+                    var info_14 = data.info.info_arr[14];
+                    var info_16 = data.info.info_arr[16];
+                    var info_18 = data.info.info_arr[18];
+                    //股票信息部分（今开->振幅—>最高.....）
+                    var info_5 = data.info.info_arr[5];
+                    var info_43 = data.info.info_arr[43];
+                    var info_41 = data.info.info_arr[41];
+                    var info_42 = data.info.info_arr[42];
+                    var info_47 = data.info.info_arr[47];
+                    var info_48 = data.info.info_arr[48];
+                    var info_36 = data.info.info_arr[36];
+                    var info_37 = data.info.info_arr[37];
+
+
+
+                    var time_img =data.info.time_img;       //分时K线图
+                    var day_img =data.info.day_img;         //分日K线图
+
+                    $(".J_price").html(info_3);            //当前价格
+                    $(".J_num_1").html(info_31);           //涨跌
+                    $(".J_num_2").html(info_32);           //涨跌%
+                    $(".time_img").attr("src",time_img);   //时K线
+                    $(".day_img").attr("src",day_img);     //日K线
+                    //卖5到卖1(上面一排)
+                    $(".info_27").html(info_27);
+                    $(".info_25").html(info_25);
+                    $(".info_23").html(info_23);
+                    $(".info_21").html(info_21);
+                    $(".info_19").html(info_19);
+                    //卖5到卖1(下面一排)
+                    $(".info_28").html(info_28);
+                    $(".info_26").html(info_26);
+                    $(".info_24").html(info_24);
+                    $(".info_22").html(info_22);
+                    $(".info_20").html(info_20);
+                    //买1到买5(上面一排数据)
+                    $(".info_9").html(info_9);
+                    $(".info_11").html(info_11);
+                    $(".info_13").html(info_13);
+                    $(".info_15").html(info_15);
+                    $(".info_17").html(info_17);
+                    //买1到买5(下面一排数据)
+                    $(".info_10").html(info_10);
+                    $(".info_12").html(info_12);
+                    $(".info_14").html(info_14);
+                    $(".info_16").html(info_16);
+                    $(".info_18").html(info_18);
+                    //股票信息部分（今开->振幅—>最高.....）
+                    $(".info_5").html(info_5); //今开
+                    $(".info_43").html(info_43);//振幅
+                    $(".info_41").html(info_41);//最高
+                    $(".info_42").html(info_42);//最低
+                    $(".info_47").html(info_47);//涨跌价
+                    $(".info_48").html(info_48);//跌停价
+                    $(".info_36").html(info_36);//成交量（手）
+                    $(".info_37").html(info_37);//成交额（万）
+
+                }
+            },
+            error:function (data) {
+                console.log("错误");
+            }
+        });
+
+
+        /**
+         * TODO:股票赋值结束
+         */
+
+
+
+
+
+
+        //隐藏搜索框，值清空
 		cue.hide();
 	    $("#searchTxt1").val("");
 

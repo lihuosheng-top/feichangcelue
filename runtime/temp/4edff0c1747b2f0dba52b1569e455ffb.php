@@ -1,11 +1,40 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\history.html";i:1539676967;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\guild.html";i:1539068351;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>非常谋略</title>
+    <title>尚牛在线</title>
+    <style>
+        .pic{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .guide-section{
+            width: 1024px;
+            margin: 0 auto;
+            padding:50px;
+            box-sizing: border-box;
+        }
+        .content dt,.content dd{
+            margin-bottom: 15px;
+        }
+        .content dl{
+            margin-bottom: 50px;
+        }
+        .content dd{
+            padding-left: 50px;
+        }
+        .content dd table{
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        .content dd table td{
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
 </head>
-<body class="history_body grey buy-body logged-in">
+<body class="guild_body helpcenter logged-in">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -117,266 +146,87 @@
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/guide.css"/>
 
-<!--结算区-->
+<!--帮助区-新手教学-->
 <div class="br-content">
-<div class="w1024">
-<div class="stock-sell stock-buy stock-settle">
-    <section class="play-area">
-        <nav>
-            <ul class="clearfix">
-                <li class=""><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
-                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
-                <li class="active"><a href="./history"><em>04 </em> | 结算区</a></li>
-            </ul>
-        </nav>
-       <section>
-            <nav class="row" style="position: relative;">
-                <div class="select">
-                    <span>时间：</span>
-                    <a href="/history.html?recent=7" id="recent7" class="">最近7个交易日</a>
-                    <a href="/history.html?recent=30" id="recent30">最近30个交易日</a>
-                    <a id="selectByDate">按时间选择<span class="sanj"></span></a>
-                </div>
-                <!--<div class="select split" style="display:none;">
-                    <span>状态：</span>
-                    <a id="status-0" class="active">全部</a>
-                    <a id="status-6">待结算</a>
-                    <a id="status-5">平仓中</a>
-                    <a id="status-4">待平仓</a>
-                    <a id="status-7">已结算</a>
-                    <a id="status-r">今日流单</a>
-                </div>-->
-                <div class="jiesuan-deal pa" style="top:200px;left:300px" id="JchooseDate" data-val="0">
-                    <h4 class=" pb5 f14 db lh18" style="height:30px;">
-                        <span class="left_gray fl">&lt;</span>
-                        <span class="cen fl"><span id="yearSpan">2017</span>年</span>
-                        <span class="right_gray fr ">&gt;</span>
-                    </h4>
-                    <div style=" width: 224px; height: 110px; overflow: hidden;margin: 0 auto;">
-                        <div style=" width: 224px; height: 110px;margin-left:0px" id="JyearContent">
-                            <ul class="jiesuan-dea2 tc">
-                            	
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </nav>
-            <ul id="settle-list" class="history-list">
-
-                <?php if(count($list) == 0): ?>
-                <div class="data-empty"><p>暂时没有数据</p><a href="/buy.html">立即去点买</a></div>
-                <?php endif; if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-            	<li>
-            		<label class="w175"><em><?php echo $vo['sellTime']; ?></em><em>单号：<?php echo $vo['id']; ?></em></label>
-            		<label class="w130"><em><strong><?php echo $vo['stockName']; ?>(<?php echo $vo['stockCode']; ?>)</strong></em><em><b><?php echo $vo['dealQuantity'] * 100; ?>股</b></em></label>
-            		<label class="w136"><em><strong
-                       <?php if($vo['profit'] < 0): ?> class="c-green" <?php else: ?> class="c-red" <?php endif; ?>
-                    ><?php echo round($vo['profit'],2); ?></strong></em><em>交易盈亏</em></label>
-            		<label class="w136"><em
-                            <?php if($vo['profit'] < 0): ?> class="ft16 c-green" <?php else: ?> class="ft16 c-red" <?php endif; ?>
-                    ><?php if($vo['profit'] > 0): ?> <?php echo round($vo['profit']*(1-$profitFee),2); else: ?> <?php echo round($vo['profit'],2); endif; ?></em><em>盈利分配</em></label>
-            		<label class="w120 "><a class="detail_a" href="/detail.html?id=<?php echo $vo['id']; ?>">查看详情</a></label>
-            		<label class="w120 hide-important"></label>
-                </li>
-                <?php endforeach; endif; else: echo "" ;endif; ?>
-            </ul>
-           
-           <?php echo $list->render(); ?>
-        </section>
-    </section>
-    <!--确认点卖？-->
-    <div class="confirm-sell" style="display: none;">
-        <p>确定点卖？</p>
-        <button class="wap-confirm">确定</button>
-        <button class="wap-deny">取消</button>
-    </div>
+<section class="guide-section">
+<div class="content">
+    <div class="pic"><img src="public/static/home/img/one.jpg" ></div>
+    <dl>
+        <dt>什么是股票配资？</dt>
+        <dd>股票配资是一种创新的股票投资工具，通过股票配资，能有效的提高投资收益，堪称炒股利器。
+            在系统性或确定性机会出现时，投资者运用配资工具，可以在尚牛在线获得自有资金3-10倍的实盘资金，
+            能够将收益放大到10倍。投资者需要注意，配资工具在放大收益也会放大风险，
+            投资者应在投资机会比较确定并管理好风险的前提下使用，选择相对稳健的品种。
+        </dd>
+    </dl>
+    <dl>
+        <dt>如何配资与交易？</dt>
+        <dd>本平台与合作券商有签定合作协议，即您在本平台的账户成功注册后即为合作卷商的证券账户及证券密码，您可凭您的证券账户及证券密码在合作券商进行交易，请您
+            务必确保您的信息如实准确，以免产生不必要麻烦。
+        </dd>
+    </dl>
+    <dl>
+        <dt>尚牛在线如何进行股票配资的风险管理？</dt>
+        <dd>
+            为了保护配资资金安全，同时帮您养成良好的投资习惯，交易账户会设置警戒线和平仓线。
+            亏损警告线：当总操盘资金低于警戒线（亏损至本金*50%）以下时，系统会自动通知请及时进行补仓。
+            亏损平仓线：当总操盘资金低于平仓线（亏损至本金*80%）以下时，系统将把您的股票进行平仓。
+            为避免平仓发生，请时刻关注本金是否充足。由于客户持有当天新建仓股票，
+            达到强平线时导致强平不成功，超过强平线后系统会短信通知用户及时进行补亏，
+            倘若用户不补亏导致本金亏损至100%时，券商将有权强制收回交易账号进行结算（相当于券商回收），
+            穿仓部分客户无需赔偿。
+        </dd>
+    </dl>
+    <dl>
+        <dt>股票配资限制购买的股票有哪些？</dt>
+        <dd>1、不得购买权证类可以T+0交易的证券；</dd>
+        <dd>2、用户不得买入当天禁买股，禁买股包括但不仅限于：ST、*ST、SST、*SST、分级基金等被证券交易所特别处理的股票；</dd>
+        <dd>3、不得购买首日上市新股（或复牌首日股票）等当日不设涨跌停板限制的股票；</dd>
+        <dd>4、已发布停牌、退市公告或有潜在退市风险的股票； </dd>
+        <dd>5、有可能导致结算日无法正常卖出或亏损超过保证金的股票； </dd>
+        <dd>6、上市20日以内的新股； </dd>
+        <dd>7、不得进行坐庄、对敲、接盘、大宗交易、内幕信息等违反股票交易法律法规及证券公司规定的交易。</dd>
+    </dl>
+    <dl>
+        <dt>股票配资的注意事项有哪些？</dt>
+        <dd>操盘前必读</dd>
+        <dd>股票停牌处理 </dd>
+        <dd>如果您买的股票遇到停牌，可选择以下方法：</dd>
+        <dd>(1)按停牌股票市值追加20%作为停牌准备金，股票复牌后，如股票上涨，退还全部停牌保证金，下跌在停牌保证金里扣除下跌部分金额（剩余退还）</dd>
+        <dd>(2)选择以停牌前一交易日收盘价作为结算价格对停牌股票进行清算。</dd>
+        <dd>交易手续费</dd>
+        <dd>其他注意事项</dd>
+        <dd>1、交易盈利部分可在平仓结算后随时提现，申请结算（工作时间内）及时到达您账户，如您申请提款到银行卡，工作时间及时到账（节假日无休）；</dd>
+        <dd>2、按天配资支付管理费，如1月10日15:00前配资，系统当天扣除第1天管理费，1月11日自动（08:30分）扣除第二天管理费，以此类推；</dd>
+        <dd>3、按月配资支付利息，如1月10日配资，当天扣除第1个月利息，2月11日支付第2个月利息，以此类推；</dd>
+        <dd>4、配资到期前一个交易日，应将股票账号平仓，进行结算。如到期未结算，系统将自动延期收取对应费用。</dd>
+    </dl>
+    <dl>
+        <dt>配资与融资融券业务的区别是什么？</dt>
+        <dd>股票配资业务与融资融券业务从本质上讲都是增加投资者的操盘资金，但两者又有着很大的差别。
+             股票配资是股民在一定本金的情况下，提供放大资金比例操盘，然后支付一定的利息；
+            融资融券则是投资者向具有上海证券交易所或深圳证券交易所会员资格的证券公司提供担保物，
+            借入资金买入本所上市证券或借入本所上市证券并卖出的行为。但是在融资融券实际操作中存在着诸多的限制，
+            以下对两项业务做个对比：</dd>
+        <dd>
+            <table>
+                <tr><td>融资融券</td><td>股票配资</td></tr>
+                <tr><td>开户必须满6个月</td><td>无限制</td></tr>
+                <tr><td>资金要求最低10万</td><td>100元起</td></tr>
+                <tr><td>标地股少（可交易的股票少）</td><td>可交易的股票多</td></tr>
+                <tr><td>融资额度低（一般50%）</td><td>配资额度高（1-10倍杠杆）</td></tr>
+                <tr><td>交易佣金高（通常在千分之1以上）</td><td>交易佣金低（万分之2）</td></tr>
+                <tr><td>融资最长期限6个月</td><td>配资期限无限制</td></tr>
+                <tr><td>需要足额的担保物</td><td>不需要</td></tr>
+            </table>
+        </dd>
+    </dl>
 </div>
-
+</section>
 </div>
-</div>
-<!------>
-<!--申请递延-->
-<div class="popup popup-middle" id="popup-delay">
-    <div class="popup-header group">
-        <h2>申请递延</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="delay-box">
-            <div class="delay-info">当前非递延申请时间,请稍后再来！</div>
-            <div class="delay-foot">
-                <button class="btn btn-pri">确定</button>
-                <a href="javascript:;" class="delay-btn f-right">递延规则<i class="icon icon-caret-up"></i></a>
-            </div>
-        </div>
-    </div>
-    <div class="delay-rule hide popup-footer">
-        <p>递延申请：点买人付费申请</p>
-        <p>申请时间：00:00:00-12:00:00</p>
-        <p>递延申请：点买人付费申请</p>
-        <p>递延申请：点买人付费申请</p>
-    </div>
-</div>
-<!--点卖确认-->
-<div class="popup popup-big" id="popup-sell">
-    <div class="popup-header group">
-        <h2>点卖确认</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb table-sell">
-            <tbody><tr>
-                <td width="15%">交易品种：</td>
-                <td width="35%">-</td>
-                <td width="15%">卖出数量：</td>
-                <td width="35%">-</td>
-            </tr>
-            <tr>
-                <td>买入时间：</td>
-                <td>-</td>
-                <td>递延天数：</td>
-                <td>-</td>
-            </tr>
-            <tr>
-                <td>浮动盈亏</td>
-                <td class="c-red" id="sell_profit">-</td>
-                <td>(仅供参考)</td>
-                <td></td>
-            </tr>
-        </tbody></table>
-        <div class="btn-div">
-            <button class="btn btn-pri" id="popup-confirm-btn">确定</button>
-            <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
-        </div>
-    </div>
-    
-</div>
-<!--即时卖出-->
-<div class="popup popup-middle" id="popup-buy-apply">
-    <div class="popup-header group">
-        <h2>即时卖出</h2>
-    </div>
-    <div class="popup-body group">
-    </div>
-</div>
-<!--限价卖出-->
-<div class="popup popup-middle" id="popup-sell-price-success">
-    <div class="popup-header group">
-        <h2>限价卖出</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <center><i class="icon icon-circle-check"></i>限价委托提交成功！</center>
-        <div class="f-right"><b class="red">5秒</b>后自动跳转至卖出区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
-    </div>
-</div>
-<!--卖出委托价格修改-->
-<div class="popup popup-big" id="popup-change-price">
-    <div class="popup-header group">
-        <h2>卖出委托价格修改</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb table-change-price">
-            <tbody><tr>
-                <td width="15%">最&nbsp;&nbsp;新&nbsp;&nbsp;价：</td>
-                <td width="35%">-</td>
-                <td width="15%">委托价格：</td>
-                <td width="35%"></td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <label for="change-price-1" class="active">
-                        <input type="radio" name="change-sell-price" id="change-price-1" class="radio" checked="">即时卖出
-                    </label>
-                </td>
-                <td colspan="2">
-                    <label for="change-price-2">
-                        <input type="radio" name="change-sell-price" id="change-price-2" class="radio">最新价触发<input type="text" id="change-sell-price" size="8" placeholder="输入价格" class="text" style="position:relative">时，即时卖出
-                    </label>
-                </td>
-            </tr>
-        </tbody></table>
-        <div class="btn-div">
-            <button class="btn btn-pri" id="popup-confirm-change-price-btn">确定</button>
-            <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
-        </div>
-    </div>
-</div>
-<!--即时卖出-->
-<div class="popup popup-middle" id="popup-sell-success">
-    <div class="popup-header group">
-        <h2>即时卖出</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <center><i class="icon icon-circle-check"></i>卖出成功！</center>
-        <div class="f-right"><b class="red">5秒</b>后自动跳转至结算区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
-    </div>
-</div>
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-                
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
-    </div>
-</div>
-
-
 <!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
@@ -634,7 +484,6 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-<script src="/public/static/home/js/history.js"></script>
-
+<script src="./public/static/home/js/help.js"></script>
 </body>
 </html>

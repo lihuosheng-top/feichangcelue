@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\history.html";i:1539676967;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\freetrialSell.html";i:1539584858;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>非常谋略</title>
 </head>
-<body class="history_body grey buy-body logged-in">
+<body class="sell_body grey buy-body logged-in">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -118,74 +118,41 @@
 
 </script>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-
-<!--结算区-->
+<!--点卖区-->
 <div class="br-content">
 <div class="w1024">
-<div class="stock-sell stock-buy stock-settle">
+<div class="stock-buy stock-sell">
     <section class="play-area">
         <nav>
             <ul class="clearfix">
-                <li class=""><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
-                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
-                <li class="active"><a href="./history"><em>04 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrial.html"><em> 01 </em>| 点买区</a></li>
+                <li class="active"><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
+                <li class=""><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
             </ul>
         </nav>
-       <section>
-            <nav class="row" style="position: relative;">
-                <div class="select">
-                    <span>时间：</span>
-                    <a href="/history.html?recent=7" id="recent7" class="">最近7个交易日</a>
-                    <a href="/history.html?recent=30" id="recent30">最近30个交易日</a>
-                    <a id="selectByDate">按时间选择<span class="sanj"></span></a>
-                </div>
-                <!--<div class="select split" style="display:none;">
-                    <span>状态：</span>
-                    <a id="status-0" class="active">全部</a>
-                    <a id="status-6">待结算</a>
-                    <a id="status-5">平仓中</a>
-                    <a id="status-4">待平仓</a>
-                    <a id="status-7">已结算</a>
-                    <a id="status-r">今日流单</a>
-                </div>-->
-                <div class="jiesuan-deal pa" style="top:200px;left:300px" id="JchooseDate" data-val="0">
-                    <h4 class=" pb5 f14 db lh18" style="height:30px;">
-                        <span class="left_gray fl">&lt;</span>
-                        <span class="cen fl"><span id="yearSpan">2017</span>年</span>
-                        <span class="right_gray fr ">&gt;</span>
-                    </h4>
-                    <div style=" width: 224px; height: 110px; overflow: hidden;margin: 0 auto;">
-                        <div style=" width: 224px; height: 110px;margin-left:0px" id="JyearContent">
-                            <ul class="jiesuan-dea2 tc">
-                            	
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="clear"></div>
-                </div>
-            </nav>
-            <ul id="settle-list" class="history-list">
-
-                <?php if(count($list) == 0): ?>
-                <div class="data-empty"><p>暂时没有数据</p><a href="/buy.html">立即去点买</a></div>
-                <?php endif; if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
-            	<li>
-            		<label class="w175"><em><?php echo $vo['sellTime']; ?></em><em>单号：<?php echo $vo['id']; ?></em></label>
-            		<label class="w130"><em><strong><?php echo $vo['stockName']; ?>(<?php echo $vo['stockCode']; ?>)</strong></em><em><b><?php echo $vo['dealQuantity'] * 100; ?>股</b></em></label>
-            		<label class="w136"><em><strong
-                       <?php if($vo['profit'] < 0): ?> class="c-green" <?php else: ?> class="c-red" <?php endif; ?>
-                    ><?php echo round($vo['profit'],2); ?></strong></em><em>交易盈亏</em></label>
-            		<label class="w136"><em
-                            <?php if($vo['profit'] < 0): ?> class="ft16 c-green" <?php else: ?> class="ft16 c-red" <?php endif; ?>
-                    ><?php if($vo['profit'] > 0): ?> <?php echo round($vo['profit']*(1-$profitFee),2); else: ?> <?php echo round($vo['profit'],2); endif; ?></em><em>盈利分配</em></label>
-            		<label class="w120 "><a class="detail_a" href="/detail.html?id=<?php echo $vo['id']; ?>">查看详情</a></label>
-            		<label class="w120 hide-important"></label>
+        <section>
+            <center>
+                当前持仓所需递延费为&nbsp;<label id="delayLbl" style="color:#d42b2e ;font-size:22px;font-weight:600">0</label>&nbsp;元
+                &nbsp;<label style="font-size:18px">(周末及节假日免费)</label>，持仓盈利总计：<span id="totalProfit" style="font-size: 22px;"> <?php echo $profitSum; ?> </span>元
+            </center>
+            <?php if($list|count > 0): ?>
+            <ul id="sell-list">
+                <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <li class="br-clearfix">
+                    <label class="w186"><em><?php echo $vo['createTime']; ?></em><em>单号：<?php echo $vo['id']; ?></em></label>
+                    <label class="w125"><em><?php echo round($vo['dealAmount'],2); ?>万元</em><em>止损：<b><?php echo $vo['loss']; ?>元</b></em></label>
+                    <label class="w115"><em><strong><?php echo $vo['stockName']; ?>(<?php echo $vo['stockCode']; ?>)</strong></em><em><b class=""><?php echo $vo['dealQuantity'] * 100; ?></b>股可用</em></label>
+                    <label class="w140"><em><strong></strong></em><em><b class=""><?php echo round($vo['dealPrice'],2); ?></b><i class="icon icon-arrow-right"></i>-><b class=""><?php echo round($list2[$i-1][nowPrice],2); ?></b></em><em>
+                        <strong class="" <?php if($list2[$i-1][profitAmount] < 0): ?> style="color:green" <?php else: ?> style="color:red" <?php endif; ?> >
+                        <?php echo $list2[$i-1][profitAmount]; ?>(<?php echo $list2[$i-1][rate] * 100; ?>%)</strong></em></label>
+                    <label class="w180"><button class="btnSell" id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btn btn-pri sell-btn " >点卖（不可递延）</button></label>
                 </li>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
+            <?php echo $list->render(); else: ?>
+            <div class="data-empty"><p>暂时没有等待卖出的A股</p><a href="./buy.html">立即去点买</a></div>
+            <?php endif; ?>
            
-           <?php echo $list->render(); ?>
         </section>
     </section>
     <!--确认点卖？-->
@@ -198,7 +165,6 @@
 
 </div>
 </div>
-<!------>
 <!--申请递延-->
 <div class="popup popup-middle" id="popup-delay">
     <div class="popup-header group">
@@ -228,22 +194,23 @@
         <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
     </div>
     <div class="popup-body group">
+        <input type="hidden" id="orderId" />
         <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb table-sell">
             <tbody><tr>
                 <td width="15%">交易品种：</td>
-                <td width="35%">-</td>
+                <td width="35%" id="t_code">-</td>
                 <td width="15%">卖出数量：</td>
-                <td width="35%">-</td>
+                <td width="35%" id="t_quantity">-</td>
             </tr>
             <tr>
                 <td>买入时间：</td>
-                <td>-</td>
+                <td id="t_time">-</td>
                 <td>递延天数：</td>
-                <td>-</td>
+                <td id="t_delayDays">-</td>
             </tr>
             <tr>
                 <td>浮动盈亏</td>
-                <td class="c-red" id="sell_profit">-</td>
+                <td class="c-red" id="t_profit">-</td>
                 <td>(仅供参考)</td>
                 <td></td>
             </tr>
@@ -634,7 +601,60 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-<script src="/public/static/home/js/history.js"></script>
-
+<!--<script src="/public/static/home/js/sell.js"></script>-->
 </body>
 </html>
+
+<script>
+$(".btnSell").click(function(e){
+    var index = $(this).attr("index");
+    var listJson = JSON.parse('<?php echo $listJson; ?>').data;
+    var listJson2 = JSON.parse('<?php echo $listJson2; ?>');
+    console.log(listJson)
+
+    var i = index - 1;
+    $("#t_code").html(listJson[i]['stockName'] + "(" + listJson[i]['stockCode'] + ")");
+    $("#t_quantity").html(listJson[i]['dealQuantity'] + "手");
+    $("#t_time").html(listJson[i]['createTime']);
+    $("#t_delayDays").html(listJson2[i]['delayDays']);
+    $("#t_profit").html(listJson2[i]['profitAmount']);
+
+    var prf = parseFloat(listJson2[i]['profitAmount']);
+    if(prf < 0){
+        $("#t_profit").attr("class", "c-green");
+    }else if(prf > 0){
+        $("#t_profit").attr("class", "c-red");
+    }else{
+        $("#t_profit").removeAttr("class");
+    }
+
+    var orderId = $(this).attr('id');
+    $("#orderId").val(orderId);
+
+    tool.popup.showPopup($("#popup-sell"));
+});
+
+
+$("#popup-confirm-btn").click(function(e){
+
+    var orderId = $("#orderId").val();
+    var params = { orderId : orderId };
+    if(orderId <= 0){
+        tool.popup_err_msg("订单号不正确");
+        return;
+    }
+    $(this).attr("disabled", true);
+    $.post("/index/ucenter/doFreetrialSell", params, function(data){
+        $("#popup-confirm-btn").attr("disabled", false);
+        if(data.code == '0'){
+            tool.popup_err_msg("交易成功");
+            location.href = "/freetrialHistory.html";
+        }else{
+            tool.popup_err_msg(data.msg);
+        }
+    }, 'json');
+});
+
+
+
+</script>
