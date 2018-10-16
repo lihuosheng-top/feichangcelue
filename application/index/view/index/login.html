@@ -6,8 +6,8 @@
 </head>
 <body class="user-reg login_body">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/reg.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
 
 <!--登录区-->
 <div class="br-content login_reg_cont">
@@ -24,6 +24,7 @@
                     <input type="password" class="text" placeholder="请输入密码" name="pwd" id="登录密码i" onkeydown="if (event.keyCode == 13) { user_Login() }">
                     <label class="psw-err1 hide">密码不能为空</label>
                 </div>
+
                 <div class="link-wrapper group login_forgot">
                     <a href="./forgot_pass.html">忘记密码</a>
                 </div>
@@ -100,6 +101,6 @@
 </div>
 
 {include file="public:footer" /}
-<script src="./public/static/home/js/login.js"></script>
+<script src="__STATIC__/home/js/login.js"></script>
 </body>
 </html>

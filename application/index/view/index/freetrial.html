@@ -6,7 +6,7 @@
 </head>
 <body class="buy_body">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/freetrial.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/freetrial.css"/>
 
 <!--A股点买部分-->
 <div class="br-content">
@@ -14,14 +14,14 @@
 <div class="stock-buy">
     <section class="play-area">
         <div class="nav-left">
-            <a href="/freetrial.html" class="active" style="height: initial;">一元模拟盘体验</a>
-            <a href="/buy.html" >A股（T + 1）</a>
+            <a href="./freetrial.html" class="active" style="height: initial;">一元模拟盘体验</a>
+            <a href="./buy.html" >A股（T + 1）</a>
         </div>
         <nav>
             <ul class="clearfix">
                 <li class="active"><a href="#"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="/freetrialSell.html"><em>02 </em>| 点卖区</a></li>
-                <li class=""><a href="/freetrialHistory.html"><em>03 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
+                <li class=""><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
             </ul>
         </nav>
         <section class="clearfix">
@@ -155,8 +155,6 @@
                 </div>
                 <div class="protocol_row">
                     <p><input type="checkbox" name="agree_pro" id="agree_pro" checked="">我已阅并签署以下协议</p>
-                    <a href="/protocol_1.html" target="_blank">《非常谋略点买人参与沪深A股交易合作涉及费用及资费标准》</a>
-                    <a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
                     <a href="/protocol_3.html" target="_blank">《非常谋略服务协议》</a>
                 </div>
                 <button id="btn_buy" >点买</button>
@@ -498,7 +496,7 @@
     var dealFee = parseInt("{$dealFee }");
     var publicFee = parseInt("{$delayFee + $dealFee }");
 </script>
-<script src="/public/static/home/js/echarts.min.js"></script>
-<script src="/public/static/home/js/freetrial.js"></script>
+<script src="__STATIC__/home/js/echarts.min.js"></script>
+<script src="__STATIC__/home/js/freetrial.js"></script>
 </body>
 </html>

@@ -422,7 +422,6 @@ class App
             // 初始化应用
             $config       = self::init();
             self::$suffix = $config['class_suffix'];
-            Route::initInfo();
 
             // 应用调试模式
             self::$debug = Env::get('app_debug', Config::get('app_debug'));
@@ -493,7 +492,7 @@ class App
                 $dir   = CONF_PATH . $module . 'extra';
                 $files = scandir($dir);
                 foreach ($files as $file) {
-                    if (strpos($file, CONF_EXT)) {
+                    if ('.' . pathinfo($file, PATHINFO_EXTENSION) === CONF_EXT) {
                         $filename = $dir . DS . $file;
                         Config::load($filename, pathinfo($file, PATHINFO_FILENAME));
                     }

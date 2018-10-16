@@ -6,7 +6,7 @@
 </head>
 <body class="history_body grey buy-body logged-in">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
 
 <!--结算区-->
 <div class="br-content">
@@ -15,17 +15,17 @@
     <section class="play-area">
         <nav>
             <ul class="clearfix">
-                <li class=""><a href="/freetrial.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="/freetrialSell.html"><em>02 </em>| 点卖区</a></li>
-                <li class="active"><a href="/freetrialHistory.html"><em>03 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrial.html"><em> 01 </em>| 点买区</a></li>
+                <li class=""><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
+                <li class="active"><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
             </ul>
         </nav>
        <section>
             <nav class="row" style="position: relative;">
                 <div class="select">
                     <span>时间：</span>
-                    <a href="/freetrialHistory.html?recent=7" id="recent7" class="">最近7个交易日</a>
-                    <a href="/freetrialHistory.html?recent=30" id="recent30">最近30个交易日</a>
+                    <a href="./freetrialHistory.html?recent=7" id="recent7" class="">最近7个交易日</a>
+                    <a href="./freetrialHistory.html?recent=30" id="recent30">最近30个交易日</a>
                     <a id="selectByDate">按时间选择<span class="sanj"></span></a>
                 </div>
 
@@ -48,7 +48,7 @@
             <ul id="settle-list" class="history-list">
 
                 {if condition="count($list) eq 0"}
-                <div class="data-empty"><p>暂时没有数据</p><a href="/buy.html">立即去点买</a></div>
+                <div class="data-empty"><p>暂时没有数据</p><a href="./buy.html">立即去点买</a></div>
                 {/if}
                 {volist name="list" id="vo"}
             	<li>
