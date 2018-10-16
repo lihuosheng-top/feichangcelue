@@ -164,6 +164,7 @@ var general={
 		
 		//-----tabs click-----
         $(".tabs-wrapper > nav li a").click(function () {
+        	
             if (!$(this).parent().hasClass("active")) {
                 var w = $(this).parents(".tabs-wrapper").eq(0);
                 $("> nav li", w).removeClass("active");
@@ -175,6 +176,9 @@ var general={
                 }, 3000);
             }
         });
+		
+		
+		
         
         //date
         Date.prototype.format = function (format) {

@@ -86,26 +86,34 @@
 <script src="__STATIC__/home/js/general.js"></script>
 
 <script>
+	$("#menu-ul li").on('click',function(){
+			
+             $(this).siblings().children('a').removeClass('active');
+			$(this).children('a').addClass('active');
+			console.log($(this).children('a'))
+			
+		});
     //自动选中active
-    $(function(){
-        var menuArr = [];
-        menuArr[0] = ["index.html"  ];
-        menuArr[1] = ["buy.html", "sell.html", "history.html" ];
-        menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
-        menuArr[3] = ["mobile.html",  ];
-        menuArr[4] = [ "guild.html" ,"help.html" ];
-        for(var i = 0 ; i < menuArr.length; i++ ){
-            for(var j = 0 ; j < menuArr[i].length; j++){
-                if(location.href.indexOf(menuArr[i][j]) > 0){
-                    $("#menu-ul > li a").removeClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
-                    //console.log(i+'------'+j);
-                    return;
-                }
-            }
-        }
-    });
+//  $(function(){
+//      var menuArr = [];
+//      menuArr[0] = ["index.html"  ];
+//      menuArr[1] = ["buy.html", "sell.html", "history.html" ];
+//      menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
+//      menuArr[3] = ["mobile.html",  ];
+//      menuArr[4] = [ "guild.html" ,"help.html" ];
+//      menuArr[5] = [ "safeensure.html"];
+//      for(var i = 0 ; i < menuArr.length; i++ ){
+//          for(var j = 0 ; j < menuArr[i].length; j++){
+//              if(location.href.indexOf(menuArr[i][j]) > 0){
+//                  $("#menu-ul > li a").removeClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
+//                    console.log(i+'------'+j);
+//                  return;
+//              }
+//          }
+//      }
+//  });
     //退出登录
 
 
