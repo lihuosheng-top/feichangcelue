@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\reg.html";i:1539605415;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539601352;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\reg.html";i:1539669160;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,9 @@
             </div>
                 <?php if(!empty($_SESSION['member'])): ?>
             <div   style="text-align: right;" >
-                用户：<?php echo $_SESSION['member']['mobile']; ?>
+                <?php if(!empty($_SESSION['member']['username'])): ?>
+                用户：<?php echo $_SESSION['member']['username']; else: ?>
+                用户信息：<?php echo $_SESSION['member']['mobile']; endif; ?>
                 <span class="loginout"><a href="<?php echo url('index/index/logout'); ?>">退出登录</a></span>
             </div>
                 <?php endif; ?>
@@ -117,7 +119,7 @@
 </script>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>
+<!--<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>-->
 
 <!--注册区-->
 <div class="br-content login_reg_cont">
@@ -153,7 +155,8 @@
                 <!--验证码-->
                 <div id="mobileno2" class="field-wrapper capcha-wrapper capcha-count-down" style="display:none">
                     <input type="text" class="text" placeholder="请输入短信校验码" name="mobileno_code" id="mobileno_code" data-error-msg="校验码未填" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
-                    <a id="auth_reg_smsA" href="javascript:void(0)" class="btn-get-capcha">获取校验码</a>
+                    <!--<a id="auth_reg_smsA" class="btn-get-capcha">获取校验码</a>-->
+                    <button id="auth_reg_smsA" class="btn-get-capcha">获取校验码</button>
                     <div id="auth_reg_timerD" class="time-counter" style="display: none;"><!--<i class="icon icon-caret-left"></i>--><span>10</span></div>
                 </div>
                 <div class="agree-wrapper group">
@@ -229,36 +232,6 @@
     </div>
 </div>
 <!--valid-img-->
-<div class="popup" id="popup-valid-img" >
-    <div class="popup-header group">
-        <h2>请先输入验证码</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <form action="#">
-            <div class="field-row group">
-                <label>验证码：</label>
-                <div class="field-val" style="width:350px">
-                    <div id="mpanel"></div>
-                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
-                    <!--<img src="<?php echo url('captcha_src'); ?>"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
-                    <!--<img src="<?php echo url('captcha_src'); ?>"  id="forgot_passImg" style="height:35px;float:left;margin-right:5px;"  />-->
-                    <!--<img src="<?php echo url('index/index/captcha'); ?>" alt="captcha" onclick="this.src=this.src+ '?' +Math.random()"/>-->
-                    <!--<img src="<?php echo url('index/Index/captchas'); ?>" alt="captcha" onclick="this.src='<?php echo url('index/Index/captchas'); ?>?id='+Math.random();"/>-->
-
-                    <!--<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '<?php echo captcha_src(); ?>');" style="color:#E01923">看不清楚？</a>-->
-                    <button id="pop_sign_up">确认</button>
-                </div>
-            </div>
-            <div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i>输入的验证码有误！</div></div>
-
-            <div class="btn-row group">
-                <a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>
-            </div>
-            <input id="hiddenText" type="text" style="display:none" />
-        </form>
-    </div>
-</div>
 
 <!--底部-->
 <footer class="br-w100">
@@ -540,8 +513,8 @@
         <!--})-->
     <!--}-->
 <!--</script>-->
-<script src="__STATIC__/home/js/verify.js"></script>
-<script>
+<!--<script src="__STATIC__/home/js/verify.js"></script>-->
+<!--<script>
     $('#mpanel').codeVerify({
         type : 2,
         figure : 10,	//位数，仅在type=2时生效
@@ -559,6 +532,53 @@
             alert('验证码不匹配！');
         }
     });
+</script>-->
+<script>
+    function buttonCountdown($el, msNum, timeFormat) {
+        var text = $el.data("text") || $el.text(),
+            timer = 0;
+        $el.prop("disabled", true).addClass("disabled")
+            .on("bc.clear", function () {
+                clearTime();
+            });
+
+        (function countdown() {
+            var time = showTime(msNum)[timeFormat];
+            $el.text(time + '后失效');
+            if (msNum <= 0) {
+                msNum = 0;
+                clearTime();
+            } else {
+                msNum -= 1000;
+                timer = setTimeout(arguments.callee, 1000);
+            }
+        })();
+
+        function clearTime() {
+            clearTimeout(timer);
+            $el.prop("disabled", false).removeClass("disabled").text(text);
+        }
+
+        function showTime(ms) {
+            var d = Math.floor(ms / 1000 / 60 / 60 / 24),
+                h = Math.floor(ms / 1000 / 60 / 60 % 24),
+                m = Math.floor(ms / 1000 / 60 % 60),
+                s = Math.floor(ms / 1000 % 60),
+                ss = Math.floor(ms / 1000);
+
+            return {
+                d: d + "天",
+                h: h + "小时",
+                m: m + "分",
+                ss: ss + "秒",
+                "d:h:m:s": d + "天" + h + "小时" + m + "分" + s + "秒",
+                "h:m:s": h + "小时" + m + "分" + s + "秒",
+                "m:s": m + "分" + s + "秒"
+            };
+        }
+        return this;
+    }
+
 </script>
 </body>
 </html>

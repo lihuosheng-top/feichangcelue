@@ -713,7 +713,7 @@ class Index extends Home
         unset($member['usableSum']);
         unset($member['freebleSum']);
 //        $this->success("登录成功", url("/"));
-        $this->success("登录成功", url("index"));
+        $this->success("登录成功", url("/"));
 
 
     }
@@ -921,6 +921,12 @@ class Index extends Home
         //接受验证码的手机号码
         if ($request->isPost()) {
             $mobile = $request->param("mobile");
+            $db_phone =Db::name('member')->where('mobile',$mobile)->find();
+
+            if(!empty($db_phone)){
+                $this->error('此手机号已注册，请前往登录！');
+            }
+
             $mobileCode = rand(100000, 999999);
             $arr = json_decode($mobile, true);
             /*var_dump($arr);

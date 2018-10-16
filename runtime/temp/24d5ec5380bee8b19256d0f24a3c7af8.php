@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1539593723;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539601352;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1539593723;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +20,9 @@
             </div>
                 <?php if(!empty($_SESSION['member'])): ?>
             <div   style="text-align: right;" >
-                用户：<?php echo $_SESSION['member']['mobile']; ?>
+                <?php if(!empty($_SESSION['member']['username'])): ?>
+                用户：<?php echo $_SESSION['member']['username']; else: ?>
+                用户信息：<?php echo $_SESSION['member']['mobile']; endif; ?>
                 <span class="loginout"><a href="<?php echo url('index/index/logout'); ?>">退出登录</a></span>
             </div>
                 <?php endif; ?>

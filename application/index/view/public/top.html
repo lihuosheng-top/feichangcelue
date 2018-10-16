@@ -12,7 +12,11 @@
             </div>
                 {if !empty($_SESSION['member'])}
             <div   style="text-align: right;" >
-                用户：{$_SESSION['member']['mobile']}
+                {if !empty($_SESSION['member']['username'])}
+                用户：{$_SESSION['member']['username']}
+                {else if}
+                用户信息：{$_SESSION['member']['mobile']}
+                {/if}
                 <span class="loginout"><a href="{:url('index/index/logout')}">退出登录</a></span>
             </div>
                 {/if}
