@@ -1,9 +1,8 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\freetrial.html";i:1539585678;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\buy.html";i:1539676605;s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539679410;s:83:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>尚牛在线配资</title>
 </head>
 <body class="buy_body">
 <title>首页</title>
@@ -92,32 +91,40 @@
 <script src="__STATIC__/home/js/general.js"></script>
 
 <script>
+	$("#menu-ul li").on('click',function(){
+//			alert(111);
+             $(this).siblings().children('a').removeClass('active');
+			$(this).children('a').addClass('active');
+			console.log($(this).children('a'))
+			
+		});
     //自动选中active
-    $(function(){
-        var menuArr = [];
-        menuArr[0] = ["index.html"  ];
-        menuArr[1] = ["buy.html", "sell.html", "history.html" ];
-        menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
-        menuArr[3] = ["mobile.html",  ];
-        menuArr[4] = [ "guild.html" ,"help.html" ];
-        for(var i = 0 ; i < menuArr.length; i++ ){
-            for(var j = 0 ; j < menuArr[i].length; j++){
-                if(location.href.indexOf(menuArr[i][j]) > 0){
-                    $("#menu-ul > li a").removeClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
-                    //console.log(i+'------'+j);
-                    return;
-                }
-            }
-        }
-    });
+//  $(function(){
+//      var menuArr = [];
+//      menuArr[0] = ["index.html"  ];
+//      menuArr[1] = ["buy.html", "sell.html", "history.html" ];
+//      menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
+//      menuArr[3] = ["mobile.html",  ];
+//      menuArr[4] = [ "guild.html" ,"help.html" ];
+//      menuArr[5] = [ "safeensure.html"];
+//      for(var i = 0 ; i < menuArr.length; i++ ){
+//          for(var j = 0 ; j < menuArr[i].length; j++){
+//              if(location.href.indexOf(menuArr[i][j]) > 0){
+//                  $("#menu-ul > li a").removeClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
+//                    console.log(i+'------'+j);
+//                  return;
+//              }
+//          }
+//      }
+//  });
     //退出登录
 
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/freetrial.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
 
 <!--A股点买部分-->
 <div class="br-content">
@@ -125,14 +132,15 @@
 <div class="stock-buy">
     <section class="play-area">
         <div class="nav-left">
-            <a href="./freetrial.html" class="active" style="height: initial;">一元模拟盘体验</a>
-            <a href="./buy.html" >A股（T + 1）</a>
+            <a href="./freetrial" style="height: initial;">一元模拟盘体验</a>
+            <a href="./buy" class="active">A股（T + 1）</a>
         </div>
         <nav>
             <ul class="clearfix">
-                <li class="active"><a href="#"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
-                <li class=""><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
+                <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
+                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
+                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
+                <li class=""><a href="./history"><em>04 </em> | 结算区</a></li>
             </ul>
         </nav>
         <section class="clearfix">
@@ -155,14 +163,16 @@
                         </div>
                     </div>
                     <div class="stock-name">
-                        <span id="stockName">招商银行(600036)</span>
+                        <!--<span id="stockName">招商银行(600036)</span>-->
+                        <span id="stockName"><?php echo $info_arr[1]; ?>(<?php echo $info_arr[2]; ?>)</span>
                         <button id="changeStock" class="change_stock hide">选择股票</button>
                     </div>
                     
                 </header>
                 <section class="stock-detail clearfix" data-price="0">
                     <div class="stock-new row f-left">
-                        <strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>
+                        <!--<strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>-->
+                        <strong class="J_price" id="nowPrice"><?php echo $info_arr[3]; ?></strong><i class="icon stockicon"></i>
                         <span class="up-arrow-box" style="display: inline-block;">
                             <span class="top-part"></span>
                             <span class="bottom-part"></span>
@@ -173,23 +183,25 @@
                         </span>
                         
                         <i class="icon icon-refresh" id="refreshBtn"></i>
-                         <span id="num1" class="color font14">--</span>
-						<span id="num2" class="color font14">--</span>
+                        <!--<span id="num1" class="color font14">&#45;&#45;</span>-->
+                        <span id="num1" class="color font14 J_num_1"><?php echo $info_arr[31]; ?>%</span>
+						<!--<span id="num2" class="color font14">&#45;&#45;</span>-->
+						<span id="num2" class="color font14 J_num_2"><?php echo $info_arr[32]; ?>%</span>
                     </div>
                     <div class="stock-price f-right" id="stock-price">
                         <ul class="sell">
-                            <li><em>卖⑤</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖④</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖③</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖②</em><b class="red">--</b><i>--</i></li>
-                            <li><em>卖①</em><b class="red">--</b><i>--</i></li>
+                            <li><em>卖⑤</em><b class="red info_27"><?php echo $info_arr[27]; ?></b><i class="info_28"><?php echo $info_arr[28]; ?></i></li>
+                            <li><em>卖④</em><b class="red info_25"><?php echo $info_arr[25]; ?></b><i class="info_26"><?php echo $info_arr[26]; ?></i></li>
+                            <li><em>卖③</em><b class="red info_23"><?php echo $info_arr[23]; ?></b><i class="info_24"><?php echo $info_arr[24]; ?></i></li>
+                            <li><em>卖②</em><b class="red info_21"><?php echo $info_arr[21]; ?></b><i class="info_22"><?php echo $info_arr[22]; ?></i></li>
+                            <li><em>卖①</em><b class="red info_19"><?php echo $info_arr[19]; ?></b><i class="info_20"><?php echo $info_arr[20]; ?></i></li>
                         </ul>
                         <ul class="buy">
-                            <li><em>买①</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买②</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买③</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买④</em><b class="red">--</b><i>--</i></li>
-                            <li><em>买⑤</em><b class="red">--</b><i>--</i></li>
+                            <li><em>买①</em><b class="red info_9"><?php echo $info_arr[9]; ?></b><i class="info_10"><?php echo $info_arr[10]; ?></i></li>
+                            <li><em>买②</em><b class="red info_11"><?php echo $info_arr[11]; ?></b><i class="info_12"><?php echo $info_arr[12]; ?></i></li>
+                            <li><em>买③</em><b class="red info_13"><?php echo $info_arr[13]; ?></b><i class="info_14"><?php echo $info_arr[14]; ?></i></li>
+                            <li><em>买④</em><b class="red info_15"><?php echo $info_arr[15]; ?></b><i class="info_16"><?php echo $info_arr[16]; ?></i></li>
+                            <li><em>买⑤</em><b class="red info_17"><?php echo $info_arr[17]; ?></b><i class="info_18"><?php echo $info_arr[18]; ?></i></li>
                         </ul>
                     </div>
                 </section>
@@ -199,9 +211,13 @@
                         <li class="hide" id="chartKContro">k线</li>
                     </ul>
                     <!-- 为ECharts准备分时图 -->
-   					<div class="figure active" id="chart" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:block;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+   					<div class="figure active" id="chart" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:block;position:relative;overflow:hidden;width:520px;height:280px;">
+                        <img class="time_img" src="<?php echo $time_img; ?>" alt="">
+                    </div>
                     <!--<div class="figure " id="chart" _echarts_instance_="1498120573127" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; cursor: default; display: none;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>-->
-   					<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;"></div>
+   					<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;">
+                        <img class="day_img" src="<?php echo $day_img; ?>" alt="">
+                    </div>
                     <!--<div class="figure hide" id="chartk" _echarts_instance_="1498120573128" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; display: block; cursor: default;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-tooltip zr-element" style="position: absolute; display: block; border-style: solid; white-space: nowrap; transition: left 0.1s, top 0.1s; background-color: rgb(255, 255, 255); border-width: 1px; border-color: rgb(204, 204, 204); border-radius: 4px; color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 11px; line-height: 17px; padding: 10px; left: 143.5px; top: 37px;">2017年04月17日<br>最高：<span style="color:#DD2200;">18.9</span><br>最低：<span style="color:#00A800;">18.6</span><br>收盘：<span style="color:#F96900;">18.88</span></div></div></div>-->
                 	<!--loading-->
                 	<div class="loading"></div>
@@ -209,28 +225,27 @@
                 <section class="stock-info" id="stock-info">
                     <h3>股票信息</h3>
                     <ul class="row">
-                        <li class="open"><span class="l">今开</span><span class="r">--</span></li>
-                        <li class="amplitude"><span class="l">振幅</span><span class="r">--</span></li>
-                        <li class="high"><span class="l">最高</span><span class="r">--</span></li>
-                        <li class="low"><span class="l">最低</span><span class="r">--</span></li>
-                        <li class="max"><span class="l">涨停价</span><span class="r">--</span></li>
-                        <li class="min"><span class="l">跌停价</span><span class="r">--</span></li>
-                        <li class="volume"><span class="l">成交量</span><span class="r">--手</span></li>
-                        <li class="amount"><span class="l">成交额</span><span class="r">--万</span></li>
+                        <li class="open"><span class="l">今开</span><span class="r info_5"><?php echo $info_arr[5]; ?></span></li>
+                        <li class="amplitude"><span class="l">振幅</span><span class="r info_43"><?php echo $info_arr[43]; ?></span></li>
+                        <li class="high"><span class="l">最高</span><span class="r info_41"><?php echo $info_arr[41]; ?></span></li>
+                        <li class="low"><span class="l">最低</span><span class="r info_42"><?php echo $info_arr[42]; ?></span></li>
+                        <li class="max"><span class="l">涨停价</span><span class="r info_47"><?php echo $info_arr[47]; ?></span></li>
+                        <li class="min"><span class="l">跌停价</span><span class="r info_48"><?php echo $info_arr[48]; ?></span></li>
+                        <li class="volume"><span class="l">成交量</span><span class="r info_36"><?php echo $info_arr[36]; ?>手</span></li>
+                        <li class="amount"><span class="l">成交额</span><span class="r info_37"><?php echo $info_arr[37]; ?>万</span></li>
                     </ul>
                 </section>
             </div>
             <div class="right-buy">
                 <div class="buy_price">
-                    <p class="top">买入金额<em></em></p>
-                    <ul id="buy_price_ul">
-                        <li class="active">2000</li>
-                        <li> 3000</li>
-                        <li> 5000</li>
-                        <li> 1W</li>
-                    </ul>
+                    <p class="top">推荐买入金额<em></em><span class="f-right">今天还可点买<b id="restChance"><?php if($left != ''): ?><?php echo $left; else: ?>-<?php endif; ?></b>次</span></p>
+                    <ul id="buy_price_ul"><li class="active">1万</li><li> 2万</li><li> 3万</li><li> 5万</li><li> 10万</li><li> 20万</li><li> 30万</li><li> 50万</li></ul>
                 </div>
-                <p class="price-warning free_blue">操作提示：免费体验限额2000元，更多金额请到A股点买区操作。</p>
+                 <div class="open-time">
+                    <span>谋&nbsp;略&nbsp;金&nbsp;额</span>
+                    <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i><div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div></div>
+                    <input type="tel" style="width: 150px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+                </div>
                 <p class="efficiency">资金使用率 可买入<span id="gu">-</span>股，资金利用率<span id="lyl">-</span></p>
                 <div class="open-time">
                     <span>持&nbsp;仓&nbsp;时&nbsp;间</span>
@@ -244,10 +259,15 @@
                     <div class="delay_tip">
                         <i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止盈。</div>
                     </div>
-                    <ul id="check-surplus_ul"><li class="active" data-val="20">20%</li></ul>
+                    <ul id="check-surplus_ul"><li class="active" data-val="50">5000</li></ul>
                 </div>
-                 <div class="open-time">
-                    <span>盈&nbsp;利&nbsp;分&nbsp;配</span>
+                <div class="stop-loss choose-loss" id="stop-loss" style="margin-bottom: 15px;">
+                    <span>触&nbsp;发&nbsp;止&nbsp;损</span>
+                    <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止损。</div></div>
+                    <ul id="stop-loss_ul"><li class="active" data-val="8">-1000</li><li data-val="6">-1333</li><li data-val="5">-1700</li></ul>
+                </div>
+                <div class="open-time">
+                     <span>盈&nbsp;利&nbsp;分&nbsp;配</span>
                     <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">当谋略盈利时，</br>谋略人将获得大部分盈利</div></div>
                     <ul class="work-interval">
                         <li class="active">90%</li>
@@ -256,16 +276,24 @@
                 <div class="com_fee">
                     <span>交易综合费</span>
                     <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">交易综合费包含第一天的交易费，第二天的递延费，每万元点买金的交易综合费为45元，每万元点买金的递延费<?php echo $delayFee; ?>元/天。</div></div>
-                    <span class="delete_price"><strong id="publicFee">1</strong>元（包括前两日）</span>
+                    <span class="delete_price"><strong id="publicFee"><?php echo $delayFee * 2 + $dealFee; ?></strong>元（包括前两日）</span>
                     
                 </div>
                 <div class="perf_bond">
                     <span>履约保证金</span>
                     <div class="delay_tip"><i class="icon icon-help"></i><div class="showtip">履约保证金为点买人委托平台冻结用于履行交易亏损赔付义务的保证金，结束时根据谋略盈亏结算。保证金越低风险也越大，保证金越高抗风险也越高。</div></div>
-                    <strong class="br-bz" id="guaranteeFee">0</strong>元
+                    <strong class="br-bz" id="guaranteeFee">1250</strong>元
+                </div>
+                <div class="delay_condition">
+                    <p>
+                    	<span>递 延 费</span>
+                    	<em id="delay_fee"><?php echo $delayFee; ?></em>元/天 <span class="fkxy">(浮亏小于<em id="delay_line">650</em>时允许递延)</span>
+                    </p>
                 </div>
                 <div class="protocol_row">
-                    <p><input type="checkbox" name="agree_pro" id="agree_pro" checked="">我已阅并签署以下协议</p>
+                    <p><input type="checkbox" name="agree_pro" id="agree_pro" checked="true">我已阅并签署以下协议</p>
+                    <a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>
+                    <a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
                     <a href="/protocol_3.html" target="_blank">《非常谋略服务协议》</a>
                 </div>
                 <button id="btn_buy" >点买</button>
@@ -312,218 +340,7 @@
         </div>
     </div>
 </div>
-<!--非常谋略点买人参与沪深A股交易合作涉及费用及资费标准-->
-<div class="popup popup-mbig popup-agree" id="popup-agree-btn1" style="display: none; top: 0px;">
-    <div class="popup-body group">
-        <div class="agree-main">
-            <h1>非常谋略点买人参与沪深A股交易合作涉及费用及资费标准</h1>
-            <div class="article">
-                <p>点买人通过<label>非常谋略</label>参与沪深A股交易合作将涉及交易综合费和履约保证金的发生。如点买人参与持仓时间为T＋1｜D的交易合作还将涉及递延费的发生。</p>
-                <p><strong>一、交易综合费</strong></p>
-                <p>1、交易综合费为<label>非常谋略</label>向点买人收取的费用。交易综合费包含：1）<label>非常谋略</label>为点买人提供交易合作信息发布、交易合作撮合、交易指令通讯、交易风控管理与交易清结算等服务而收取的信息服务费；2）<label>非常谋略</label>代第三方支付平台收取用于第三方支付为点买人提供资金存取、冻结、解冻和支付等服务手续费。</p>
-                <p>2、交易综合费以交易本金为计费基数，按每万元交易本金50元计费。计算公式：点买人支付交易综合费＝交易本金×50/10000。（下表数值仅为用户查询方便提供，交易综合费具体数值通过<label>非常谋略</label>点买页面公布，以点买人实际选择为准。）</p>
-                <table border="1">
-                    <tbody><tr>
-                        <td>交易本金</td>
-                        <td>计费标准</td>
-                        <td>支付:交易综合费</td>
-                    </tr>
-                    <tr>
-                        <td>1万元</td>
-                        <td>50元/万元</td>
-                        <td>50元</td>
-                    </tr>
-                    <tr>
-                        <td>2万元</td>
-                        <td>50元/万元</td>
-                        <td>100元</td>
-                    </tr>
-                    <tr>
-                        <td>3万元</td>
-                        <td>50元/万元</td>
-                        <td>150元</td>
-                    </tr>
-                    <tr>
-                        <td>4万元</td>
-                        <td>50元/万元</td>
-                        <td>200元</td>
-                    </tr>
-                    <tr>
-                        <td>5万元</td>
-                        <td>50元/万元</td>
-                        <td>250元</td>
-                    </tr>
-                    <tr>
-                        <td>10万元</td>
-                        <td>50元/万元</td>
-                        <td>500元</td>
-                    </tr>
-                    <tr>
-                        <td>20万元</td>
-                        <td>50元/万元</td>
-                        <td>1000元</td>
-                    </tr>
-                    <tr>
-                        <td>30万元</td>
-                        <td>50元/万元</td>
-                        <td>1500元</td>
-                    </tr>
-                    <tr>
-                        <td>40万元</td>
-                        <td>50元/万元</td>
-                        <td>2000元</td>
-                    </tr>
-                    <tr>
-                        <td>50万元</td>
-                        <td>50元/万元</td>
-                        <td>2500元</td>
-                    </tr>
-                </tbody></table>
-                <p>3、3、交易综合费于点买人签署《交易合作协议》时即支付。交易综合费一经支付不予退还。当且仅当因<label>非常谋略</label>原因导致系统故障，致使点买人和投资人交易合作失败时，点买人方可向<label>非常谋略</label>申请退还交易综合费。</p>
-                <p><strong>二、履约保证金</strong></p>
-                <p>1、履约保证金为点买人委托<label>非常谋略</label>平台冻结用于履行交易亏损赔付义务的保证金。点买人以冻结履约保证金之数额作为承担交易亏损赔付的上限。</p>
-                <p>2、履约保证金以交易本金为计算基数，以触发止损为冻结系数，计算点买人应冻结履约保证金金额。计算公式：点买人冻结履约保证金＝交易本金×｜触发止损/0.8｜。（下表数值仅为用户查询方便提供，触发止损具体数值通过<label>非常谋略</label>点买页面公布，以点买人实际选择为准。）</p>
-                <table border="1">
-                    <tbody><tr>
-                        <td rowspan="2" align="center">交易本金</td>
-                        <td colspan="2">持仓时间T+1|D</td>
-                    </tr>
-                    <tr>
-                        <td>触发止损率/万元</td>
-                        <td>冻结:履约保证金</td>
-                    </tr>
-                    <tr>
-                        <td>1万元</td>
-                        <td>-1600</td>
-                        <td>2000元</td>
-                    </tr>
-                    <tr>
-                        <td>2万元</td>
-                        <td>-3200</td>
-                        <td>4000元</td>
-                    </tr>
-                    <tr>
-                        <td>3万元</td>
-                        <td>-4800</td>
-                        <td>6000元</td>
-                    </tr>
-                    <tr>
-                        <td>4万元</td>
-                        <td>-6400</td>
-                        <td>8000元</td>
-                    </tr>
-                    <tr>
-                        <td>5万元</td>
-                        <td>-8000</td>
-                        <td>10000元</td>
-                    </tr>
-                    <tr>
-                        <td>10万元</td>
-                        <td>-16000</td>
-                        <td>20000元</td>
-                    </tr>
-                    <tr>
-                        <td>20万元</td>
-                        <td>-32000</td>
-                        <td>40000元</td>
-                    </tr>
-                    <tr>
-                        <td>30万元</td>
-                        <td>-48000</td>
-                        <td>60000元</td>
-                    </tr>
-                    <tr>
-                        <td>40万元</td>
-                        <td>-64000</td>
-                        <td>80000元</td>
-                    </tr>
-                    <tr>
-                        <td>50万元</td>
-                        <td>-80000</td>
-                        <td>100000元</td>
-                    </tr>
-                </tbody></table>
-                <p>3、交易合作结束，根据<label>非常谋略</label>清结算结果，如交易盈利，点买人冻结履约保证金全额解冻。如交易亏损，从点买人通过<label>非常谋略</label>平台冻结在汇潮支付的履约保证金中，扣减点买人所应承担亏损赔付额的数额，扣减后余额解冻。</p>
-                <p><strong>三、递延费（仅在持仓时间为T＋1｜D的交易存在产生此费用</strong></p>
-                <p>1、递延费为点买人通过<label>非常谋略</label>平台向投资人申请将交易品种持仓时间递延至下一交易日所支付的费用。递延费包含：1）<label>非常谋略</label>收取的信息服务费。2）<label>非常谋略</label>代投资人收取用于补偿投资人资金占用费。</p>
-                <p>2、递延费以交易本金为计费基数，根据递延申请次数进行分档计费。具体为：第2至20次递延，单次递延按每万元交易本金22元计费。计算公式：点买人支付递延费＝交易本金×22/10000。</p>
-                <table border="1">
-                    <tbody><tr>
-                        <td align="center" rowspan="2">交易本金</td>
-                        <td colspan="2">第三个交易日起</td>
-                    </tr>
-                    <tr>
-                        <td>计费标准</td>
-                        <td>支付:递延费</td>
-                    </tr>
-                    <tr>
-                        <td>1万元</td>
-                        <td>22元/万元</td>
-                        <td>22元</td>
-                    </tr>
-                    <tr>
-                        <td>2万元</td>
-                        <td>22元/万元</td>
-                        <td>44元</td>
-                    </tr>
-                    <tr>
-                        <td>3万元</td>
-                        <td>22元/万元</td>
-                        <td>66元</td>
-                    </tr>
-                    <tr>
-                        <td>4万元</td>
-                        <td>22元/万元</td>
-                        <td>88元</td>
-                    </tr>
-                    <tr>
-                        <td>5万元</td>
-                        <td>22元/万元</td>
-                        <td>110元</td>
-                    </tr>
-                    <tr>
-                        <td>10万元</td>
-                        <td>22元/万元</td>
-                        <td>220元</td>
-                    </tr>
-                    <tr>
-                        <td>20万元</td>
-                        <td>22元/万元</td>
-                        <td>440元</td>
-                    </tr>
-                    <tr>
-                        <td>30万元</td>
-                        <td>22元/万元</td>
-                        <td>660元</td>
-                    </tr>
-                    <tr>
-                        <td>40万元</td>
-                        <td>22元/万元</td>
-                        <td>880元</td>
-                    </tr>
-                    <tr>
-                        <td>50万元</td>
-                        <td>22元/万元</td>
-                        <td>1100元</td>
-                    </tr>
-                </tbody></table>
 
-                <p>3、递延费于点买人申请递延时即支付。递延申请成功则递延费不予退还，递延申请失败则递延费自动退还。当天14：50如点买人不主动卖出，且符合递延条件，则默认为点买人需要递延。</p>
-                <p>本附件系点买人与投资人签署《交易合作协议》的重要组成部分，具有同等法律效力。</p>
-                <p><strong>四、关于以上资费标准的声明</strong></p>
-                <p>1、<label>非常谋略</label>平台声明，以上所有涉及资费标准的数据，均为平台根据市场行情阶段性调整的实时标准，该数据具有一定浮动性。</p>
-                <p>2、<label>非常谋略</label>平台关于以上资费标准不做不予调整的承诺，平台将根据客观的市场行情对资费标准进行适时调整，关于调整结果将及时告知所有平台用户，并将一如既往地尊重用户在新的资费条件下是否选择继续与平台合作的权利。</p>
-                <p>&nbsp;</p>
-            </div>
-        </div>
-    </div>
-    <div class="btn-div">
-        <input id="cbip" type="checkbox" checked="checked">已阅读并同意协议
-        <button class="btn btn-pri" id="popup-confirm-btn2">确定</button>
-        <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
-    </div>
-    <br>
-</div>
 <!--温馨提示（协议）-->
 <div class="popup popup-small popup-agree-tip" id="popup-agree-tip" style="display: none; top: 0px;">
     <div class="popup-header group">
@@ -533,71 +350,11 @@
     <div class="popup-body group">
         <i class="icon icon-warning"></i>
         <div class="protocol-row">
-            <a href="http://feichangcl.com/Policy/protocol_1" target="_blank">&gt;《非常谋略点买人参与沪深A股交易合作涉及费用及资费标准》</a>
-            <a href="http://feichangcl.com/Policy/protocol_2" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
             <a href="http://feichangcl.com/Policy/protocol_3" target="_blank">《非常谋略服务协议》</a>
         </div>
         <button class="js-close-popup">确定</button>
     </div>
 </div>
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify" style="display: none; top: 0px;">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth" style="display: none; top: 0px;">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-                
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
-    </div>
-</div>
-
 <!--  遮罩  -->
 <div id="popBg" style="width:100%;height:100%;z-index: 0;background: #eee; opacity: 0.5;position: fixed;left: 0; top: 0;display: none"></div>
 
@@ -859,11 +616,14 @@
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
 <script>
+    var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");
     var delayFee = parseInt("<?php echo $delayFee; ?>");
     var dealFee = parseInt("<?php echo $dealFee; ?>");
-    var publicFee = parseInt("<?php echo $delayFee + $dealFee; ?>");
+    var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+    var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
+    var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
 </script>
-<script src="__STATIC__/home/js/echarts.min.js"></script>
-<script src="__STATIC__/home/js/freetrial.js"></script>
+<script src="__STAITC__/home/js/echarts.min.js"></script>
+<script src="__STATIC__/home/js/buy1.js"></script>
 </body>
 </html>

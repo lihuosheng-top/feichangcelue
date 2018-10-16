@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\month_buy.html";i:1539676067;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:85:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\month_buy.html";i:1539676605;s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539679194;s:83:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,6 +91,11 @@
 <script src="__STATIC__/home/js/general.js"></script>
 
 <script>
+//	$("#menu-ul li").on('click',function(){
+////			alert(111);
+//			$(this).children('a').addClass('active');
+//			$(this).siblings().children('a').removeClass('active');
+//		});
     //自动选中active
     $(function(){
         var menuArr = [];
@@ -99,13 +104,14 @@
         menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
         menuArr[3] = ["mobile.html",  ];
         menuArr[4] = [ "guild.html" ,"help.html" ];
+        menuArr[5] = [ "safeensure.html"];
         for(var i = 0 ; i < menuArr.length; i++ ){
             for(var j = 0 ; j < menuArr[i].length; j++){
                 if(location.href.indexOf(menuArr[i][j]) > 0){
                     $("#menu-ul > li a").removeClass("active");
                     $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
                     $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
-                    //console.log(i+'------'+j);
+                      console.log(i+'------'+j);
                     return;
                 }
             }

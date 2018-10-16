@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\reg.html";i:1539669160;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html";i:1539676605;s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539679410;s:83:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>尚牛在线</title>
+    <meta charset="UTF-8">
+   
 </head>
-<body class="">
+<body class="index_body">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -92,146 +92,260 @@
 <script src="__STATIC__/home/js/general.js"></script>
 
 <script>
+	$("#menu-ul li").on('click',function(){
+//			alert(111);
+             $(this).siblings().children('a').removeClass('active');
+			$(this).children('a').addClass('active');
+			console.log($(this).children('a'))
+			
+		});
     //自动选中active
-    $(function(){
-        var menuArr = [];
-        menuArr[0] = ["index.html"  ];
-        menuArr[1] = ["buy.html", "sell.html", "history.html" ];
-        menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
-        menuArr[3] = ["mobile.html",  ];
-        menuArr[4] = [ "guild.html" ,"help.html" ];
-        for(var i = 0 ; i < menuArr.length; i++ ){
-            for(var j = 0 ; j < menuArr[i].length; j++){
-                if(location.href.indexOf(menuArr[i][j]) > 0){
-                    $("#menu-ul > li a").removeClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
-                    $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
-                    //console.log(i+'------'+j);
-                    return;
-                }
-            }
-        }
-    });
+//  $(function(){
+//      var menuArr = [];
+//      menuArr[0] = ["index.html"  ];
+//      menuArr[1] = ["buy.html", "sell.html", "history.html" ];
+//      menuArr[2] = ["freetrial.html", "freetrialSell.html", "freetrialHistory.html"  ];
+//      menuArr[3] = ["mobile.html",  ];
+//      menuArr[4] = [ "guild.html" ,"help.html" ];
+//      menuArr[5] = [ "safeensure.html"];
+//      for(var i = 0 ; i < menuArr.length; i++ ){
+//          for(var j = 0 ; j < menuArr[i].length; j++){
+//              if(location.href.indexOf(menuArr[i][j]) > 0){
+//                  $("#menu-ul > li a").removeClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(0).addClass("active");
+//                  $("#menu-ul > li").eq(i).find("a").eq(j+1).addClass("active");
+//                    console.log(i+'------'+j);
+//                  return;
+//              }
+//          }
+//      }
+//  });
     //退出登录
 
 
 
 </script>
+<link href="__STATIC__/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css"/>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
-<!--<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/verify.css"/>-->
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css"/>
+<style type="text/css">
+	.item a{
+		display: block;
+		overflow: hidden;
+	}
+    /*隐藏*/
+    /*.pz-type-swith{*/
+        /*display: none;*/
+    /*}*/
+</style>
+<!--banner-->
+<div class="banner_login br-w100">
+    <div class="bBanner br-w100">
 
-<!--注册区-->
-<div class="br-content login_reg_cont">
-<section class="section section-form " id="section-reg">
-    <div class="container ">
-        <div class="container-reg">
-            <h2>注册</h2>
-            <!--<div><img src="<?php echo url('index/Index/captchas'); ?>" alt=""></div>-->
-            <div class="form">
-            	<!--用户名-->
-                <div id="mobileno3" class="field-wrapper">
-                    <input type="tel" class="text" placeholder="请输入用户名，长度不小于6位" name="mobile" id="mobile" data-error-msg="请输入用户名">
-                </div>
-                <div id="pwd_errName" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->用户名长度不能少于6位</div></div>
-                <!--密码-->
-                <div id="mobileno4" class="field-wrapper">
-                    <input type="password" class="text" placeholder="请输入登录密码，长度不小于6位" name="pwd" id="pwd">
-                </div>
-                <div id="pwd_err1" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->密码长度不能少于6位</div></div>
-                <div id="mobileno5" class="field-wrapper">
-                    <input type="password" class="text" placeholder="请再次输入登录密码" name="mobile_code" id="mobile_code">
-                </div>
-                <div id="mobile_code_err1" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->两次密码不一致</div></div>
-                <!--机构推荐码-->
-                <div id="mobileno6" class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入机构推荐码" name="recommend_code" id="recommend_code">
-                </div>
-                <div id="recommend_code_err1" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->请输入4位数机构码</div></div>
-                <!--手机号-->
-                <div id="mobileno1" class="field-wrapper" style="display:none">
-                    <input type="tel" class="text" placeholder="请输入11位手机号" name="mobileno" id="mobileno" data-error-msg="请输入正确手机号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
-                </div>
-                <!--验证码-->
-                <div id="mobileno2" class="field-wrapper capcha-wrapper capcha-count-down" style="display:none">
-                    <input type="text" class="text" placeholder="请输入短信校验码" name="mobileno_code" id="mobileno_code" data-error-msg="校验码未填" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
-                    <!--<a id="auth_reg_smsA" class="btn-get-capcha">获取校验码</a>-->
-                    <button id="auth_reg_smsA" class="btn-get-capcha">获取校验码</button>
-                    <div id="auth_reg_timerD" class="time-counter" style="display: none;"><!--<i class="icon icon-caret-left"></i>--><span>10</span></div>
-                </div>
-                <div class="agree-wrapper group">
-                    <input type="checkbox" name="agree" id="agree" checked="checked"><label for="agree">我已阅读并同意</label> <a href="javascript:;" id="reg_agree">《系统服务协议》</a>
-                </div>
-                <div class="btn-wrapper">
-                    <a id="auth_regA" href="javascript:void(0)" class="btn btn-pri js-reg-next">下一步</a>
-                </div>
-                <div class="quick-link-wrapper group">
-                    已有帐号? 直接&nbsp;<a href="./login.html">登录</a>
-                </div>
-            </div>
+        <div class="w1024">
+                <div class="login_main" <?php if($_SESSION['member'] != ''): ?> style="display: none;" <?php endif; ?>>
+                <p>用户登录</p>
 
-        </div>
-    </div>
-</section>
-</div>
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
+                    <input type="text" name="" id="username" placeholder="用户名"/>
+                    <div id="err1" class="err">请输入正确用户名</div>
+                    <input type="password" name="" id="password" placeholder="密码"/>
+                    <div id="err2" class="err">请输入正确密码</div>
+                        <a href="./forgot_pass.html" style="color:#E01923 ">忘记密码</a>
+                    <div class="login_box">
+                        <a href="javascript:viod()" class="btn_login">登录</a>
+                        <a href="./reg.html" class="btn_reg">注册</a>
+                    </div>
 
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
             </div>
         </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
+
+        <!--轮播图-->
+        <div class="home_banner">
+            <div id="myCarousel" class="carousel slide">
+                <!-- 轮播（Carousel）指标 -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                <!-- 轮播（Carousel）项目 -->
+                <div class="carousel-inner">
+                    <div class="item active">
+                    <a href=""> <div class="carImg"></div></a>
+                       
+                    	
+                    </div>
+                    <div class="item">
+                        <a href=""><div class="carImg2"></div></a>
+                        
+                    
+                    </div>
+                    <div class="item">
+                      <a href=""><div class="carImg3"></div></a>
+                        
+                    
+                    </div>
+                </div>
+                <!-- 轮播（Carousel）按钮导航 -->
+                <a class="carousel-control left" href="#myCarousel"
+                   data-slide="prev" style="z-index: 99999;">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel"
+                   data-slide="next"style="z-index: 99999;">&rsaquo;</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!--点买A股-->
+<div class="AS_box br-w100">
+    <!--3个盒子-->
+    <div class="three_box w1024 br-clearfix">
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (3).png"/></a>
+            <p class="tit">一分钟了解尚牛在线</p>
+            <p class="tib">全新的投资人策略匹配平台</p>
+        </div>
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block; height: 192.02px;"><img src="./public/static/home/img/p (2).png"/></a>
+            <p class="tit">用心服务</p>
+            <p class="tib">一对一专业客服（电话 微信 QQ）</br>全程指导</p>
+        </div>
+        <div class="three_item br-fl"><a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png"/></a>
+            <p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 256; ?></span>条</p>
+            <p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 5758000, 2 ); ?></span>元</p>
+        </div>
+    </div>
+    <div class="w pz-type-swith" style="">
+    	<ul  class="userMenu">
+        <li  data-id="index_informatiom_one"><a class="on dianji current">免息配资</a></li>
+        <li data-id="index_informatiom_two"><a class=" dianji" >按月配资</a></li>
+        <li data-id="index_informatiom_three"><a class=" dianji" >按天配资</a></li>
+    </ul>
+    <div class="pz-day-content-all" id="content">
+    </div>
+    </div>
+    <div class="AS_box_cont w1024 br-text-center">
+        <h1 class="br-ml-title">POINT TO BUY A SHARES</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">点买A股</p>
+        <div class="AS_contImg br-clearfix">
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/01.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (1).png"/></span>
+                    <p class="ASbot_r br-fl">点买人只需冻结最低1250元履<br>约保证金支付45元交易综合费</p>
+                </div>
+            </div>
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/02.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (2).png"/></span>
+                    <p class="ASbot_r br-fl">即刻提交谋略系统智能匹<br>配投资人，投资人实施买入</p>
+                </div>
+            </div>
+            <div class="three_item br-fl">
+                <div class="ASitem_top"><img src="./public/static/home/img/03.png"/></div>
+                <div class="ASitem_bot br-clearfix">
+                    <span class="ASbot_l br-fl"><img src="./public/static/home/img/num (3).png"/></span>
+                    <p class="ASbot_r br-fl">谋略到期后单笔1万元交<br>易本金获得90%交易盈利</p>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-<!--valid-img-->
+<!--获得更高收益-->
+<div class="highYields br-w100">
+    <div class="w1024 br-clearfix">
+        <div class="high_l br-fl ">
+            <h1>获得更高收益</h1>
+            <p>提供投资谋略金和投资人分享高额回报</p>
+            <!--<a href="javascript:void(0);" class="">进入点买A股</a>-->
+        </div>
+        <div class="high_r br-fr ">
+            <!--<table>
+                <?php if(is_array($buyList) || $buyList instanceof \think\Collection || $buyList instanceof \think\Paginator): $i = 0; $__LIST__ = $buyList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+                <tr>
+                    <td class="nickname"><?php echo $vo['mobile']; ?></td>
+                    <td class="time"><?php echo $vo['time']; ?></td>
+                    <td class="celue">尚牛</td>
+                    <td class="stockNumber"><?php echo $vo['stockName']; ?>[<?php echo $vo['stockCode']; ?>]</td>
+                </tr>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </table>-->
+            <img src="__STATIC__/home/img/ewm1.jpg" width="180" height="180" style="margin-top:5px;">
+        </div>
+    </div>
+</div>
+<!--5重保障-->
+<div class="guarantee br-w100">
+    <div class="w1024 br-text-center">
+        <h1 class="br-ml-title">WE WILL ENSURE YOUR BEST INTEREST</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">5重保障最大力度保障您的利益</p>
+        <div class="guarantee_botBox br-clearfix">
+            <div class="guarantee_item bg1">网站安全</div>
+            <div class="guarantee_item bg1">风控<br>保险体质</div>
+            <div class="guarantee_item bg1">第三方<br>资金托管</div>
+            <div class="guarantee_item bg1">资金<br>安全保障</div>
+            <div class="guarantee_item bg1">和投资人<br>收益共享<br>风险共担</div>
+
+        </div>
+    </div>
+</div>
+<!--点买人盈利亏损-->
+<div class="PAL br-w100 br-text-center">
+    <div class="w1024 br-clearfix">
+        <div class="PAL_item br-fl">
+            <div class="item_img"></div>
+            <p>点买人获得90%的交易盈利，系统自动<br>划入点买人的尚牛在线账户</p>
+        </div>
+        <div class="PAL_item br-fr">
+            <div class="item_img"></div>
+            <p>点买人承担冻结履约保证金以内的亏损<br>超出部分由投资人承担</p>
+        </div>
+    </div>
+</div>
+<!--service-->
+<div class="service br-text-center br-w100">
+    <div class="w1024">
+        <h1 class="br-ml-title">OUR SERVICE</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">我们的服务</p>
+        <div class="service_box br-clearfix">
+            <h1>A股点买去<span>尚牛在线</span></h1>
+            <p class="sp1">“股票点买最安全平台”</p>
+            <p class="sp2">急速撮合<br>仅需填写简单资料<br>提交谋略<br>就能马上提交投资人赚钱</p>
+            <!--<a href="javascript:void(0);">立即注册</a>-->
+        </div>
+    </div>
+</div>
+<!--微信交易-->
+<div class="weChatDeal br-w100">
+    <div class="w1024">
+        <div class="weChatDeal_box">
+            <h1>微信端交易更加方便</span></h1>
+            <p class="sp1">“下单 持仓 结算 一目了然”</p>
+            <p class="sp2">更多优惠活动等着您</p>
+        </div>
+    </div>
+</div>
+<!--合作伙伴-->
+<div class="companion br-w100 br-text-center">
+    <div class="w1024">
+        <h1 class="br-ml-title">PARTNERS</h1>
+        <div class="br-ml-line"></div>
+        <p class="br-ml-bt">合作伙伴</p>
+        <div class="companion_box br-clearfix">
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+            <div class="cp_item"></div>
+        </div>
+    </div>
+</div>
 
 <!--底部-->
 <footer class="br-w100">
@@ -490,97 +604,123 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-<script src="__STATIC__/home/js/reg.js"></script>
 
-<!--<script>-->
-    <!--function yzm() {-->
-        <!--var mobile = $("#mobileno").val();-->
-        <!--alert("发送成功");-->
-        <!--$.ajax({-->
-            <!--url:"<?php echo url('index/index/sendMobileCode'); ?>",-->
-            <!--type:"POST", //GET-->
-            <!--async:false, //或true，异步请求-->
-            <!--timeout:5000,-->
-            <!--data:{'mobile':mobile},-->
-            <!--dataType:"json",-->
-            <!--success:function(data){-->
-                <!--console.log(data);-->
-
-            <!--},-->
-            <!--error:function () {-->
-                <!--console.log("错误");-->
-            <!--}-->
-        <!--})-->
-    <!--}-->
-<!--</script>-->
-<!--<script src="__STATIC__/home/js/verify.js"></script>-->
-<!--<script>
-    $('#mpanel').codeVerify({
-        type : 2,
-        figure : 10,	//位数，仅在type=2时生效
-        arith : 0,	//算法，支持加减乘，不填为随机，仅在type=2时生效
-        width : '133px',
-        height : '40px',
-        fontSize : '20px',
-        btnId : 'pop_sign_up',
-        ready : function() {
-        },
-        success : function(e) {
-            alert('验证匹配！');
-        },
-        error : function() {
-            alert('验证码不匹配！');
-        }
-    });
-</script>-->
+<!--认证银行卡-提示绑定-->
+<div class="popup" id="popup-id-verify">
+    <div class="popup-header group">
+        <h2>认证银行卡</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <!--<div class="field-row group" style="text-align:center">
+            <ol class="popup-note">
+                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
+                <li style="text-align:left;">请务必认真填写真实资料</li>
+                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
+            </ol>
+            <p>为了保障您的账户安全，请先绑定银行卡</p>
+        </div>-->
+        <div class="btn-row group">
+            <a class="btn btn-pri" href="./ucenter/bankCards.html">去绑定</a>
+            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
+        </div>
+    </div>
+</div>
+<!--实名认证-->
+<div class="popup" id="popup-realname-auth">
+    <div class="popup-header group">
+        <h2>实名认证</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <!--<div class="field-row group" style="text-align:center">
+            <ol class="popup-note">
+                <li style="text-align:left;">一个身份证对应一个账号</li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
+            </ol>
+            <p>为了保障您的账户安全，请先进行实名认证</p>
+        </div>-->
+        <div class="field-row group">
+            <label>真实姓名：</label>
+            <div class="field-val"><input id="姓名i" type="text" class="text"></div>
+        </div>
+        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
+        <div class="field-row group">
+            <label>身份证号：</label>
+            <div class="field-val">
+                <div class="field-val">
+                    <input id="身份证i" type="text" class="text">
+                </div>
+            </div>
+        </div>
+        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
+        <div class="btn-row group">
+            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
+            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
+        </div>
+    </div>
+</div>
+<script src="__STATIC__/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<script src="__STATIC__/home/js/index.js"></script>
 <script>
-    function buttonCountdown($el, msNum, timeFormat) {
-        var text = $el.data("text") || $el.text(),
-            timer = 0;
-        $el.prop("disabled", true).addClass("disabled")
-            .on("bc.clear", function () {
-                clearTime();
-            });
+    (function(){
+        $.ajax({
+            type:"post",
+            url:"<?php echo url('index/index/pc_broadcast'); ?>",
+            dataType:'json',
+            success:function(data){
+                console.log(data);
+//              console.log($(".item a")[0]);
+                var img_car =data.data[0].src;
+                var img_href =data.data[0].href;
 
-        (function countdown() {
-            var time = showTime(msNum)[timeFormat];
-            $el.text(time + '后失效');
-            if (msNum <= 0) {
-                msNum = 0;
-                clearTime();
-            } else {
-                msNum -= 1000;
-                timer = setTimeout(arguments.callee, 1000);
+                $('.carImg').css('background','url('+'"'+img_car+'"'+')');
+                $(".item a")[0].href=img_href;
+                var img_href2 =data.data[1].href;
+                var img_car2 =data.data[1].src;
+                $('.carImg2').css('background','url('+'"'+img_car2+'"'+')');
+                  $(".item a")[1].href=img_href2;
+                var img_href3 =data.data[2].href;
+                var img_car3 =data.data[2].src;
+                $('.carImg3').css('background','url('+'"'+img_car3+'"'+')');
+                $(".item a")[2].href=img_href3;
+
+            },
+            error:function (data) {
+                console.log("错误");
             }
-        })();
-
-        function clearTime() {
-            clearTimeout(timer);
-            $el.prop("disabled", false).removeClass("disabled").text(text);
+        });
+    })();
+</script>
+<!--局部刷新-->
+<script type="text/javascript">
+ $(".userMenu").on("click", "li", function(){
+// 	console.log($(this).children("a"));
+        $(this).children("a").addClass("on")
+        $(this).siblings().children("a").removeClass("on");
+        var sId = $(this).data("id");  //获取data-id的值
+        window.location.hash = sId;  //设置锚点
+        loadInner(sId);
+    });
+    function loadInner(sId){
+        var sId = window.location.hash;
+        var pathn, i;
+        switch(sId){
+            case "#index_informatiom_one": pathn = "index_information.html"; i = 0; break;
+　　　　　　　case "#index_informatiom_two": pathn = "index_information_first.html"; i = 1; break;
+            case "#index_informatiom_three": pathn = "index_information_second.html"; i = 2; break;
+　　　　　　  default: pathn = "index_information.html"; i = 0; break;
         }
-
-        function showTime(ms) {
-            var d = Math.floor(ms / 1000 / 60 / 60 / 24),
-                h = Math.floor(ms / 1000 / 60 / 60 % 24),
-                m = Math.floor(ms / 1000 / 60 % 60),
-                s = Math.floor(ms / 1000 % 60),
-                ss = Math.floor(ms / 1000);
-
-            return {
-                d: d + "天",
-                h: h + "小时",
-                m: m + "分",
-                ss: ss + "秒",
-                "d:h:m:s": d + "天" + h + "小时" + m + "分" + s + "秒",
-                "h:m:s": h + "小时" + m + "分" + s + "秒",
-                "m:s": m + "分" + s + "秒"
-            };
-        }
-        return this;
+        $("#content").load(pathn); //加载相对应的内容
+        $(".userMenu li").eq(i).addClass("current").siblings().removeClass("current"); //当前列表高亮
     }
+    var sId = window.location.hash;
+    loadInner(sId);
+    
+    
 
 </script>
+
 </body>
 </html>
-
-
