@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1539593723;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1539671494;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539659103;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -143,6 +143,7 @@
                     <div id="err1" class="err">请输入正确用户名</div>
                     <input type="password" name="" id="password" placeholder="密码"/>
                     <div id="err2" class="err">请输入正确密码</div>
+                        <a href="./forgot_pass.html" style="color:#E01923 ">忘记密码</a>
                     <div class="login_box">
                         <a href="javascript:viod()" class="btn_login">登录</a>
                         <a href="./reg.html" class="btn_reg">注册</a>
