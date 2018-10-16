@@ -19,8 +19,9 @@
         <nav>
             <ul class="clearfix">
                 <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./sell.html"><em>02 </em>| 点卖区</a></li>
-                <li class=""><a href="./history"><em>03 </em> | 结算区</a></li>
+                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
+                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
+                <li class=""><a href="./history"><em>04 </em> | 结算区</a></li>
             </ul>
         </nav>
         <section class="clearfix">
@@ -52,7 +53,7 @@
                 <section class="stock-detail clearfix" data-price="0">
                     <div class="stock-new row f-left">
                         <!--<strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>-->
-                        <strong class="" id="nowPrice">{$info_arr[3]}</strong><i class="icon stockicon"></i>
+                        <strong class="J_price" id="nowPrice">{$info_arr[3]}</strong><i class="icon stockicon"></i>
                         <span class="up-arrow-box" style="display: inline-block;">
                             <span class="top-part"></span>
                             <span class="bottom-part"></span>
@@ -64,24 +65,24 @@
                         
                         <i class="icon icon-refresh" id="refreshBtn"></i>
                         <!--<span id="num1" class="color font14">&#45;&#45;</span>-->
-                        <span id="num1" class="color font14">{$info_arr[31]}%</span>
+                        <span id="num1" class="color font14 J_num_1">{$info_arr[31]}%</span>
 						<!--<span id="num2" class="color font14">&#45;&#45;</span>-->
-						<span id="num2" class="color font14">{$info_arr[32]}%</span>
+						<span id="num2" class="color font14 J_num_2">{$info_arr[32]}%</span>
                     </div>
                     <div class="stock-price f-right" id="stock-price">
                         <ul class="sell">
-                            <li><em>卖⑤</em><b class="red">{$info_arr[27]}</b><i>{$info_arr[28]}</i></li>
-                            <li><em>卖④</em><b class="red">{$info_arr[25]}</b><i>{$info_arr[26]}</i></li>
-                            <li><em>卖③</em><b class="red">{$info_arr[23]}</b><i>{$info_arr[24]}</i></li>
-                            <li><em>卖②</em><b class="red">{$info_arr[21]}</b><i>{$info_arr[22]}</i></li>
-                            <li><em>卖①</em><b class="red">{$info_arr[19]}</b><i>{$info_arr[20]}</i></li>
+                            <li><em>卖⑤</em><b class="red info_27">{$info_arr[27]}</b><i class="info_28">{$info_arr[28]}</i></li>
+                            <li><em>卖④</em><b class="red info_25">{$info_arr[25]}</b><i class="info_26">{$info_arr[26]}</i></li>
+                            <li><em>卖③</em><b class="red info_23">{$info_arr[23]}</b><i class="info_24">{$info_arr[24]}</i></li>
+                            <li><em>卖②</em><b class="red info_21">{$info_arr[21]}</b><i class="info_22">{$info_arr[22]}</i></li>
+                            <li><em>卖①</em><b class="red info_19">{$info_arr[19]}</b><i class="info_20">{$info_arr[20]}</i></li>
                         </ul>
                         <ul class="buy">
-                            <li><em>买①</em><b class="red">{$info_arr[9]}</b><i>{$info_arr[10]}</i></li>
-                            <li><em>买②</em><b class="red">{$info_arr[11]}</b><i>{$info_arr[12]}</i></li>
-                            <li><em>买③</em><b class="red">{$info_arr[13]}</b><i>{$info_arr[14]}</i></li>
-                            <li><em>买④</em><b class="red">{$info_arr[15]}</b><i>{$info_arr[16]}</i></li>
-                            <li><em>买⑤</em><b class="red">{$info_arr[17]}</b><i>{$info_arr[18]}</i></li>
+                            <li><em>买①</em><b class="red info_9">{$info_arr[9]}</b><i class="info_10">{$info_arr[10]}</i></li>
+                            <li><em>买②</em><b class="red info_11">{$info_arr[11]}</b><i class="info_12">{$info_arr[12]}</i></li>
+                            <li><em>买③</em><b class="red info_13">{$info_arr[13]}</b><i class="info_14">{$info_arr[14]}</i></li>
+                            <li><em>买④</em><b class="red info_15">{$info_arr[15]}</b><i class="info_16">{$info_arr[16]}</i></li>
+                            <li><em>买⑤</em><b class="red info_17">{$info_arr[17]}</b><i class="info_18">{$info_arr[18]}</i></li>
                         </ul>
                     </div>
                 </section>
@@ -105,14 +106,14 @@
                 <section class="stock-info" id="stock-info">
                     <h3>股票信息</h3>
                     <ul class="row">
-                        <li class="open"><span class="l">今开</span><span class="r">{$info_arr[5]}</span></li>
-                        <li class="amplitude"><span class="l">振幅</span><span class="r">{$info_arr[43]}</span></li>
-                        <li class="high"><span class="l">最高</span><span class="r">{$info_arr[41]}</span></li>
-                        <li class="low"><span class="l">最低</span><span class="r">{$info_arr[42]}</span></li>
-                        <li class="max"><span class="l">涨停价</span><span class="r">{$info_arr[47]}</span></li>
-                        <li class="min"><span class="l">跌停价</span><span class="r">{$info_arr[48]}</span></li>
-                        <li class="volume"><span class="l">成交量</span><span class="r">{$info_arr[36]}手</span></li>
-                        <li class="amount"><span class="l">成交额</span><span class="r">{$info_arr[37]}万</span></li>
+                        <li class="open"><span class="l">今开</span><span class="r info_5">{$info_arr[5]}</span></li>
+                        <li class="amplitude"><span class="l">振幅</span><span class="r info_43">{$info_arr[43]}</span></li>
+                        <li class="high"><span class="l">最高</span><span class="r info_41">{$info_arr[41]}</span></li>
+                        <li class="low"><span class="l">最低</span><span class="r info_42">{$info_arr[42]}</span></li>
+                        <li class="max"><span class="l">涨停价</span><span class="r info_47">{$info_arr[47]}</span></li>
+                        <li class="min"><span class="l">跌停价</span><span class="r info_48">{$info_arr[48]}</span></li>
+                        <li class="volume"><span class="l">成交量</span><span class="r info_36">{$info_arr[36]}手</span></li>
+                        <li class="amount"><span class="l">成交额</span><span class="r info_37">{$info_arr[37]}万</span></li>
                     </ul>
                 </section>
             </div>

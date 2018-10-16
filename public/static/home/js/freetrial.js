@@ -94,7 +94,7 @@ function selectInit(tbody) {
 		//发送请求
 		$.ajax({
 			type:"get",
-			url:"/index/Alistock/getSharesByKeywords",
+			url:"./index/Alistock/getSharesByKeywords",
 			data:{keywords:keywords},
 			dataType:'json',
 			success:function(data){

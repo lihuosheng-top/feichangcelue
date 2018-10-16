@@ -394,7 +394,13 @@ class Index extends Home
         $this->assign('info_arr', $info_arr);
         $this->assign('time_img', $all_url_info);
         $this->assign('day_img', $day_url_info);
-        return view('index/mobile/month_buy');
+
+        if (is_mobile_request()) {
+            return view('index/mobile/month_buy');
+        }else{
+            return view('month_buy');
+        }
+
     }
 
 
