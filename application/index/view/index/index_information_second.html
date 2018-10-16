@@ -12,14 +12,7 @@
 		<div class="pz-day-content">
 			<div class="pz-day-public pzdaymoney">
 				<h2>保证金</h2>
-<<<<<<< HEAD
-
-				<input type="text" id="deposite_money" value="100"/>
-
-=======
 				<input type="text" id="deposite_money" value="200"/>
-			
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
 			</div>
 			<div class="pz-day-public pzdaytimes">
 				<h2>选择杠杆率</h2>
@@ -196,10 +189,7 @@
 			var lossLine = parseFloat("{$lossLine}");
 			//  点击下拉
 			$(".nav_listdown").on("click", function() {
-<<<<<<< HEAD
 
-=======
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
 				if($(this).children("ul").css('display') == 'none') {
 					$(this).children("ul").show();
 				} else {
@@ -223,16 +213,6 @@
 				//倍率小数
 				var b;
 				switch(a) {
-<<<<<<< HEAD
-
-
-					case 1:
-						b = levers_1;
-						break;
-					case 2:
-						b = levers_2;
-						break;
-=======
 //
 //					case 1:
 //						b = levers_1;
@@ -240,7 +220,7 @@
 //					case 2:
 //						b = levers_2;
 //						break;
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
+
 					case 3:
 						b = levers_3;
 						break;
@@ -266,13 +246,9 @@
 						b = levers_10;
 						break;
 				}
-<<<<<<< HEAD
 
-
-				
-=======
 				//倍数*倍率*天数*保证金/100
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
+
 				var all = a * b * c*bao/100;
 				all = all.toFixed(2)
 				$("#rateFee").text(all);
@@ -287,14 +263,7 @@
 //				获得资金
 				$("#gain_money").text(preparation_money);
 //				亏损警戒线：
-<<<<<<< HEAD
-                var loss_warn=stopLossRate*bao+allnum;
-				$("#loss_warn").text(loss_warn);
-				//               亏损平仓线
-				 var loss_close=lossLine*bao+allnum;
-				$("#loss_close").text(allnum);
 
-=======
                 var loss_warn=stopLossRate*bao+preparation_money;
 				$("#loss_warn").text(-loss_warn);
 				//亏损平仓线
@@ -302,8 +271,7 @@
 				$("#loss_close").text(-loss_close);
 				//天数改变
                 $('#duration').text(c);
-				
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
+
 
 			});
 
@@ -323,22 +291,13 @@
 				var b;
 				switch(a) {
 
-<<<<<<< HEAD
-
-					case 1:
-						b = levers_1;
-						break;
-					case 2:
-						b = levers_2;
-						break;
-=======
 //					case 1:
 //						b = levers_1;
 //						break;
 //					case 2:
 //						b = levers_2;
 //						break;
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
+
 					case 3:
 						b = levers_3;
 						break;
@@ -395,15 +354,9 @@
 			});
 
 			//  保证金改变
-<<<<<<< HEAD
-			$("#deposite_money").change(function() {
 
-				var a = $(this).val();
-				$("#deposit_money").html(a);
-
-=======
 			$("#deposite_money").on('input', function() {
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
+
 //				保证金
 			 var bao = parseInt($("#deposite_money").val());
 			 $("#deposit_money").text(bao);
@@ -465,17 +418,12 @@
                 var loss_warn=stopLossRate*bao+preparation_money;
 				$("#loss_warn").text(-loss_warn);
 				//               亏损平仓线
-<<<<<<< HEAD
-				 var loss_close=lossLine*bao+allnum;
-				$("#loss_close").text(allnum);
 
-=======
 				 var loss_close=lossLine*bao+preparation_money;
 				$("#loss_close").text(-loss_close);
                 //天数改变
                 $('#duration').text(c);
 				
->>>>>>> 07287fe6c98bf34fb4be82b44ef4e44179c7dd96
 			});
 		</script>
 	</body>
