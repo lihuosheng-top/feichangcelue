@@ -721,7 +721,7 @@ class Ucenter extends Home
                 $dealAmount = (float)trim($_POST['dealAmount']);      //买入金额(万元)
                 $surplus = (int)trim($_POST['surplus']);            //警戒线
                 $loss = (int)trim($_POST['loss']);                  //触 发 止 损
-                $stockname =trim($_POST['name']);                    //股票的名字
+//                $stockname =trim($_POST['name']);                    //股票的名字
                 $publicFee = (int)trim($_POST['publicFee']);        //交易综合费
 
                 $guaranteeFee = (int)trim($_POST['guaranteeFee']);  //履约保证金
@@ -872,7 +872,7 @@ class Ucenter extends Home
             $dealAmount = (float)trim($_POST['dealAmount']);      //买入金额(万元)
             $surplus = (int)trim($_POST['surplus']);            //警戒线
             $loss = (int)trim($_POST['loss']);                  //触 发 止 损
-            $stockname =trim($_POST['name']);                    //股票的名字
+//            $stockname =trim($_POST['name']);                    //股票的名字
             $publicFee = (int)trim($_POST['publicFee']);        //交易综合费
             $guaranteeFee = (int)trim($_POST['guaranteeFee']);  //履约保证金
             $delayLine = (int)trim($_POST['delayLine']);        //递延条件
@@ -1006,7 +1006,7 @@ class Ucenter extends Home
             $dealAmount = (float)trim($_POST['dealAmount']);      //买入金额(万元)
             $surplus = (int)trim($_POST['surplus']);            //警戒线
             $loss = (int)trim($_POST['loss']);                  //触 发 止 损
-            $stockname =trim($_POST['name']);                    //股票的名字
+//            $stockname =trim($_POST['name']);                    //股票的名字
             $publicFee = (int)trim($_POST['publicFee']);        //交易综合费
             $guaranteeFee = (int)trim($_POST['guaranteeFee']);  //履约保证金
             $delayLine = (int)trim($_POST['delayLine']);        //递延条件

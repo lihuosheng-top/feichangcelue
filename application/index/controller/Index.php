@@ -164,7 +164,7 @@ class Index extends Home
             $list3[$i]['nowPrice'] = $nowPric;
             $list3[$i]['rate'] = $rate;
             $list3[$i]['profitAmoun'] = $profitAmoun;
-            $a = $list3[$i]['profitAmoun'];
+//            $a = $list3[$i]['profitAmoun'];
             $list3[$i]['delayDays'] = $delayDays;
         }
         $profitSu = number_format($profitSu, 2, '.', '');

@@ -154,6 +154,7 @@ var buy_moblie={
 
         });
 
+
         //按天配资选择天数触发的事件，让管理费收取
         $(".select_day").change(function () {
             var day_numbers = $(".select_day option:selected").val();
@@ -171,7 +172,7 @@ var buy_moblie={
             //总计(保证金+管理费)
             var total= bond + parseFloat($("#publicFee>span").html()); //总金
             $('#total').html(total);
-        })
+        });
 
         $(function(){
             //获取股票实时数据和分时数据。每几秒钟就刷新一次
