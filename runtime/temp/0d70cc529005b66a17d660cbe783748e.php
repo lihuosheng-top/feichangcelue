@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539756736;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539757439;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -719,13 +719,38 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
+		<!--<script>-->
+			<!--var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");-->
+			<!--var delayFee = parseInt("<?php echo $delayFee; ?>");-->
+			<!--var dealFee = parseInt("<?php echo $dealFee; ?>");-->
+			<!--var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");-->
+			<!--var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");-->
+			<!--var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");-->
+		<!--</script>-->
+
 		<script>
-			var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");
+			//数据初始化
 			var delayFee = parseInt("<?php echo $delayFee; ?>");
 			var dealFee = parseInt("<?php echo $dealFee; ?>");
-			var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+			//    var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
 			var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
 			var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
+			var lossLine =parseFloat("<?php echo $lossLine; ?>");
+
+			//按天杠杆倍率1到10倍
+			var levers_1 =parseFloat("<?php echo $levers_1; ?>");
+			var levers_2 =parseFloat("<?php echo $levers_2; ?>");
+			var levers_3 =parseFloat("<?php echo $levers_3; ?>");
+			var levers_4 =parseFloat("<?php echo $levers_4; ?>");
+			var levers_5 =parseFloat("<?php echo $levers_5; ?>");
+			var levers_6 =parseFloat("<?php echo $levers_6; ?>");
+			var levers_7 =parseFloat("<?php echo $levers_7; ?>");
+			var levers_8 =parseFloat("<?php echo $levers_8; ?>");
+			var levers_9 =parseFloat("<?php echo $levers_9; ?>");
+			var levers_10 =parseFloat("<?php echo $levers_10; ?>");
+			var levers_data=[
+				levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
+			];
 		</script>
 		<script src="__STAITC__/home/js/echarts.min.js"></script>
 		<script src="__STATIC__/home/js/buy1.js"></script>

@@ -59,6 +59,7 @@ return [
     'index_information_first'=>'index/index/index_information_first', //pc端首页配资（按月配资）
     'index_information_second'=>'index/index/index_information_second', //pc端首页配资（按天配资）
     'EntrustmentAgreement'=>'index/index/EntrustmentAgreement',//pc端配资协议
+    'Advertisement'=>'index/index/Advertisement',//pc端广告
     'PcBuy'=>'index/index/PcBuy',//pc端配资点买（按日点买）
     'PcMonthBuy'=>'index/index/PcMonthBuy',//pc端配资点买（按月点买）
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）

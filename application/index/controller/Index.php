@@ -1438,6 +1438,10 @@ class Index extends Home
         return view('entrustment_agreement');
     }
 
+    public function  Advertisement(){
+        return view('advertisement');
+    }
+
     /**
  **************李火生*******************
  * @return \think\response\View
