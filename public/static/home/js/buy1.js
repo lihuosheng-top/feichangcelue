@@ -380,17 +380,17 @@ function getStockInfo(){
 			$(".stock-detail .down-arrow-box").hide();
 		}
 
-        // 如果不在交易时间，判断当前价格和昨日收盘价格
-        if(!isTradingTime() ){
-            // if(nowPrice < map.closePrice){
-            //     $(".stock-detail .up-arrow-box").hide();
-            //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
-            // }else{
-            //     $(".stock-detail .up-arrow-box").css("display", "inline-block");
-            //     $(".stock-detail .down-arrow-box").hide();
-            // }
-            $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-        }
+        // 如果不在交易时间，判断当前价格和昨日收盘价格(TODO：时间设置)
+        // if(!isTradingTime() ){
+        //     // if(nowPrice < map.closePrice){
+        //     //     $(".stock-detail .up-arrow-box").hide();
+        //     //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
+        //     // }else{
+        //     //     $(".stock-detail .up-arrow-box").css("display", "inline-block");
+        //     //     $(".stock-detail .down-arrow-box").hide();
+        //     // }
+        //     $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+        // }
 
         // if(nowPrice < map.closePrice){
         //     $("#nowPrice").removeClass('red').removeClass('green').addClass("green");
@@ -887,13 +887,11 @@ function updateMoneyRate(){
     	if($('#buy_number').val()==''||$('#buy_number').val()=='0'){price=1}
     	if(price>50){$('#buy_number').val('50');price=50;}
 	    //可买入-股，资金利用率-%
-	    var nowPrice = parseFloat( $("#nowPrice").html() ); //当前的
-
+	    var nowPrice = parseFloat( $("#nowPrice").html() ); //当前的股票价钱
 	    if(nowPrice=='0'){
 	    	$("#gu").html('-');
     		$("#lyl").html('-');
 	    }else{
-//	    	console.log('price:'+price)
 	    	var gu=Math.floor((price*10000/nowPrice)/100)*100;
 		    var lyl=(nowPrice*gu/(price*10000)*100).toFixed(2) + "%";
 		    $("#gu").html(gu);
@@ -901,32 +899,53 @@ function updateMoneyRate(){
 	    }
 }
 
+
+
 $(function(){
     $("#stop-loss_ul > li:eq(0)").click();
 });
 
+
 $("#stop-loss_ul > li").click(function(e){
-    var index = $(this).index();
-    var buy_price = parseInt($('#buy_number').val());
+    var index = $(this).index(); //下标
+    console.log(index);
+    var buy_price = parseInt($('#buy_number').val()); //输入的价格
 	if($('#buy_number').val()==''||$('#buy_number').val()=='0'){buy_price=1}
 	if(buy_price>50){$('#buy_number').val('50');buy_price=50;}
     $(this).addClass("active").siblings("li").removeClass("active");
     var p = parseInt($(this).html());
-    var ly_arr=[8, 6, 5];
+    // var ly_arr=[8, 6, 5];
+    var ly_arr=[3, 4, 5, 6, 7, 8, 9, 10];
     var ly = parseInt( buy_price * 10000 / ly_arr[index] );
-
     $("#guaranteeFee").html(ly);
-
-
     //触发止损
     $("#stop-loss_ul > li ").each(function(i, o){
-        var stop_loss = parseInt( buy_price * 10000 / ly_arr[i] ) * stopLossRate;
+        var stop_loss = parseInt( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
+        var index_num= i+3;
         stop_loss = parseInt(stop_loss);
         $(o).html(-stop_loss);
+        $(o).attr('id','inter_'+levers_data[i]+'_'+index_num);
     });
+    //获取天数的值
+    var day_number=$(".select_day option:selected").val();
+    var interest_id =$(this)[0].id.split('_')[1];
+    var index_num= $(this)[0].id.split('_')[2];
+    var input_price =$('#buy_number').val();
 
-    var delay_line = parseInt( $("#stop-loss_ul > li.active ").html() * delayLineRate );
-    $("#delay_line").html(Math.abs(delay_line));
+    //TODO:6
+    //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
+    if(interest_id !==null){
+        //警戒线
+        $("#check-surplus_ul>li").html(-(input_price/index_num *10000*lossLine+input_price*10000).toFixed(2));
+
+        $("#publicFee").html((interest_id*input_price*day_number*100).toFixed(2) );
+    }
+    //总计
+    var total= ly+parseFloat($("#publicFee").html()); //总金
+    $('#total').html(total);
+
+    // var delay_line = parseInt( $("#stop-loss_ul > li.active ").html() * delayLineRate );
+    // $("#delay_line").html(Math.abs(delay_line));
 
 });
 
@@ -934,12 +953,14 @@ $("#stop-loss_ul > li").click(function(e){
 $("#btn_buy").click(function(e){
 	var agree_val=$('input[name="agree_pro"]:checked').val()
 	if(!agree_val){
-		tool.popup_err_msg("请阅读并签署谋略协议");
+	    alert("请阅读并签署谋略协议");
+		 // tool.popup_err_msg("请阅读并签署谋略协议");
 		return;
 	}
-    $.post("/index/index/isLogin", {}, function(data){
+    $.post("./index/index/isLogin", {}, function(data){
         if(data != 1){
-            //alert("请先登录")
+            alert("请先登录");
+            window.location.href ='./login';
             tool.popup.showPopup($("#popup-user-login"));
         }else{
             $("#popup-buy").show();
@@ -970,10 +991,11 @@ $("#popup-confirm-btn").click(function(e){
     params['delayLine'] = parseInt($("#delay_line").html());
     params['delayFee'] = parseInt($("#delay_fee").html());
 
-    $.post("/index/ucenter/stockBuy", params, function(data){
+
+    $.post("./index/ucenter/stockBuy", params, function(data){
         if(data.code == '0'){
             tool.popup_err_msg("交易成功");
-            location.href = "/freetrialSell.html";
+            location.href = "./freetrialSell.html";
         }else{
             tool.popup_err_msg(data.msg);
             $('#popBg').hide()
@@ -991,7 +1013,10 @@ function updateStockNumber(){
     var nowPrice = parseFloat( $("#nowPrice").html() );
     var amount = t_principal;
     $("#t_shou").html(parseInt(amount * 10000 / nowPrice / 100) + "手");
+    var totals = parseFloat($('#total').html());
+    $('#totals').html(totals);
 }
+
 
 
 var initTimeLine={
@@ -1325,7 +1350,7 @@ $("#buy_number").blur(function(){
 });
 //按键抬起时判断值来触发按钮
 $("#buy_number").off('keyup').on('keyup',function(){
-	var price = parseInt($('#buy_number').val());
+	var price = parseInt($('#buy_number').val()); //这是1到50万那里
 	if($("#buy_number").val()==''||$('#buy_number').val()=='0'){price=1}
 	if(price>50){$("#buy_number").val('50');price=50;}
 	//金额高亮
@@ -1335,12 +1360,27 @@ $("#buy_number").off('keyup').on('keyup',function(){
 			return false;
 		}
 		$('#buy_price_ul > li').removeClass("active");
-	})
-//	console.log(price);
-    $("#check-surplus_ul>li").html(price * 5000);
-    $("#stop-loss_ul>li:eq(0)").html(price * -1000);
-    $("#stop-loss_ul>li:eq(1)").html(price * -1333);
-    $("#stop-loss_ul>li:eq(2)").html(price * -1700);
+	});
+    // $("#check-surplus_ul>li").html(price * 5000); //警戒线
+    // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
+    // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
+    // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
+    // $("#publicFee").html(price * publicFee );
+    // $("#delay_fee").html(price * delayFee);
+    $("#check-surplus_ul>li").html(-(price/3 *10000*lossLine+price*10000).toFixed(2)); //警戒线
+
+
+    //TODO:
+    //获取天数的值
+    //公式：倍数杠杆/100*配资得的金额*10000/倍数*天数
+    var day_number=$(".select_day option:selected").val();
+    $("#publicFee").html((price*day_number*levers_3*10000/100 ).toFixed(2) );
+
+    //触发止损默认第一个高亮
+    $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
+    // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
+    // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
     $("#publicFee").html(price * publicFee );
     $("#delay_fee").html(price * delayFee);
 

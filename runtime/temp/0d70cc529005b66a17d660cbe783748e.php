@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539757439;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539768055;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -348,6 +348,13 @@
 										<option value="31">31天</option>
 									</select>
 								</div>
+								<div class="check-surplus">
+									<span>亏&nbsp;损&nbsp;警戒&nbsp;线</span>
+									<div class="delay_tip">
+										<i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止盈。</div>
+									</div>
+									<ul id="check-surplus_ul"><li class="active" data-val="50">5000</li></ul>
+								</div>
 
 								<div class="stop-loss choose-loss" id="stop-loss" style="margin-bottom: 15px;">
 									<span>亏&nbsp;损&nbsp;平&nbsp;仓&nbsp;线</span>
@@ -379,7 +386,7 @@
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">交易综合费包含第一天的交易费，第二天的递延费，每万元点买金的交易综合费为45元，每万元点买金的递延费<?php echo $delayFee; ?>元/天。</div>
 									</div>
-									<span class="delete_price"><strong id="publicFee"><?php echo $delayFee * 2 + $dealFee; ?></strong>元（包括前两日）</span>
+									<span class="delete_price"><strong id="publicFee">0</strong>元</span>
 
 								</div>
 								<div class="perf_bond">
@@ -388,6 +395,13 @@
 										<div class="showtip">履约保证金为点买人委托平台冻结用于履行交易亏损赔付义务的保证金，结束时根据谋略盈亏结算。保证金越低风险也越大，保证金越高抗风险也越高。</div>
 									</div>
 									<strong class="br-bz" id="guaranteeFee">1250</strong>元
+								</div>
+								<div class="perf_bond">
+									<span>总计</span>
+									<div class="delay_tip"><i class="icon icon-help"></i>
+										<div class="showtip"></div>
+									</div>
+									<strong class="br-bz" id="total">0</strong>元
 								</div>
 
 								<div class="protocol_row">
@@ -429,12 +443,19 @@
 							<td id="t_shou">1手</td>
 						</tr>
 						<tr>
-							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市价：</td>
-							<td>五档最优成交</td>
-							<td colspan="2">
-								<a id="hmdA" href="javascript:void(window.open(&#39;/policy/restricted&#39;))" style="display:none;font-size:18px;color:red">该股票已被列入黑名单，点我查看全部</a>
-							</td>
+							<td>总计：</td>
+							<td ><span id="totals">0</span><span>元</span></td>
+							<td></td>
+							<td ></td>
 						</tr>
+
+						<!--<tr>-->
+							<!--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市价：</td>-->
+							<!--<td>五档最优成交</td>-->
+							<!--<td colspan="2">-->
+								<!--<a id="hmdA" href="javascript:void(window.open(&#39;/policy/restricted&#39;))" style="display:none;font-size:18px;color:red">该股票已被列入黑名单，点我查看全部</a>-->
+							<!--</td>-->
+						<!--</tr>-->
 					</tbody>
 				</table>
 				<div class="btn-div">
@@ -752,6 +773,8 @@
 				levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
 			];
 		</script>
+		<script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
+		<script src="__STATIC__/home/js/general.js"></script>
 		<script src="__STAITC__/home/js/echarts.min.js"></script>
 		<script src="__STATIC__/home/js/buy1.js"></script>
 	</body>

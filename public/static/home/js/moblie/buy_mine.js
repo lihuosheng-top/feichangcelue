@@ -136,6 +136,7 @@ var buy_moblie={
 
             //获取天数的值
             var day_number=$(".select_day option:selected").val();
+
             var interest_id =$(this)[0].id.split('_')[1];
             var index_num= $(this)[0].id.split('_')[2];
             var input_price =$('#buy_number').val();
@@ -929,6 +930,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
         }
         $('#buy_price_ul > li a').removeClass("chose-active");
     });
+
     //警戒线
     $("#check-surplus_ul>a").html(-(price/3 *10000*lossLine+price*10000).toFixed(2));
 
