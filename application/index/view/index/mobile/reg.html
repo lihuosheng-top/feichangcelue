@@ -56,6 +56,7 @@
 			})
 			reg_moblie.init()
 		</script>
+		<!--这种情况是button标签的情况-->
 		<script>
             function buttonCountdown($el, msNum, timeFormat) {
                 var text = $el.data("text") || $el.text(),
@@ -119,7 +120,7 @@
                     success:function(data){
 					    console.log(data);
                         if(data.code ==0){
-                            alert(data.msg);
+                            mui.alert(data.msg);
                         }
                         if(data.status==1){
 //                            console.log($(this));

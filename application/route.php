@@ -59,6 +59,7 @@ return [
     'index_information_first'=>'index/index/index_information_first', //pc端首页配资（按月配资）
     'index_information_second'=>'index/index/index_information_second', //pc端首页配资（按天配资）
     'EntrustmentAgreement'=>'index/index/EntrustmentAgreement',//pc端配资协议
+    'Advertisement'=>'index/index/Advertisement',//pc端广告
     'PcBuy'=>'index/index/PcBuy',//pc端配资点买（按日点买）
     'PcMonthBuy'=>'index/index/PcMonthBuy',//pc端配资点买（按月点买）
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
@@ -85,15 +86,18 @@ return [
  //   "index"=>"index/index/index",               //首页
     'doReg'=>'index/index/doReg',               //注册
     'reg_agreement'=>'index/index/reg_agreement', //注册协议
-    'sendMobileCode'=>'index/index/sendMobileCode',         //短信验证
+    'sendMobileCode'=>'index/index/sendMobileCode',         //（注册）短信验证
     "stock"=>"index/index/stock",
     //"authllpay_wap"=>"index/lianlianauthpay/authllpay_wap",         //银行卡充值
+
 
 
     "updateNewPwd"=>"index/index/updateNewPwd",                         //密码修改
     "doReanNameAuth"=>"index/ucenter/doReanNameAuth",                   //认证信息
     "home"=>"ucenter/mobile/home",
 
+    'sendMobileCodeByPassWord'=> 'index/index/sendMobileCodeByPassWord',  //忘记密码-（短信验证）
+    'checkForgotMobileCode'=> 'index/index/checkForgotMobileCode',  //忘记密码-
     'forgot_pass'=> 'index/index/forgot_pass',  //忘记密码-01账户名
     'mobile_val'=> 'index/index/mobile_val',   	//忘记密码-02密码重置
     'pass_reset'=> 'index/index/pass_reset',   	//忘记密码-03密码找回

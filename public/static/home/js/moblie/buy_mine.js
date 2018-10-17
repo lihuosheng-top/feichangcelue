@@ -520,15 +520,21 @@ var buy_moblie={
             /*停牌判断*/
             // console.log(map.info_arr[5]);
             if(Number(map.info_arr[5]).toFixed(2)=='0'){
-                $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
+                $('#buy_step1').html(map.info_arr[5]).attr('tapEvent',false).css({'background':'#767679'});
                 $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('此股票不能购买！');
                 updateMoneyRate();
                 return;
             }
                 // console.log(map.info_arr[48]);
             //不得购买首日上市新股（或复牌首日股票）等当日不设涨跌停板限制的股票；低价股不能买
-            if(Number(map.info_arr[48]).toFixed(2)==null ||Number(map.info_arr[47]).toFixed(2)==null){
-                $('#buy_step1').html(map.remark).attr('tapEvent',false).css({'background':'#767679'});
+            if(Number(map.info_arr[48]).toFixed(2)==null ){
+                $('#buy_step1').html(map.info_arr[48]).attr('tapEvent',false).css({'background':'#767679'});
+                $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('此股票没有设涨跌限制，不能购买！');
+                updateMoneyRate();
+                return;
+            }
+            if(Number(map.info_arr[47]).toFixed(2)==null){
+                $('#buy_step1').html(map.info_arr[47]).attr('tapEvent',false).css({'background':'#767679'});
                 $('#buy_step1').attr('tapEvent',false).css({'background':'#767679'}).html('此股票没有设涨跌限制，不能购买！');
                 updateMoneyRate();
                 return;

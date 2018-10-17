@@ -34,7 +34,7 @@
                 <div id="mobile_code_err1" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->两次密码不一致</div></div>
                 <!--机构推荐码-->
                 <div id="mobileno6" class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入机构推荐码" name="recommend_code" id="recommend_code">
+                    <input type="text" class="text" placeholder="请输入推荐码" name="recommend_code" id="recommend_code">
                 </div>
                 <div id="recommend_code_err1" class="error-wrapper" style="display:none"><div><!--<i class="icon icon-x-altx-alt"></i>-->请输入4位数机构码</div></div>
                 <!--手机号-->
@@ -123,49 +123,6 @@
 <!--valid-img-->
 
 {include file="public:footer" /}
-<script src="__STATIC__/home/js/reg.js"></script>
-
-<!--<script>-->
-    <!--function yzm() {-->
-        <!--var mobile = $("#mobileno").val();-->
-        <!--alert("发送成功");-->
-        <!--$.ajax({-->
-            <!--url:"{:url('index/index/sendMobileCode')}",-->
-            <!--type:"POST", //GET-->
-            <!--async:false, //或true，异步请求-->
-            <!--timeout:5000,-->
-            <!--data:{'mobile':mobile},-->
-            <!--dataType:"json",-->
-            <!--success:function(data){-->
-                <!--console.log(data);-->
-
-            <!--},-->
-            <!--error:function () {-->
-                <!--console.log("错误");-->
-            <!--}-->
-        <!--})-->
-    <!--}-->
-<!--</script>-->
-<!--<script src="__STATIC__/home/js/verify.js"></script>-->
-<!--<script>
-    $('#mpanel').codeVerify({
-        type : 2,
-        figure : 10,	//位数，仅在type=2时生效
-        arith : 0,	//算法，支持加减乘，不填为随机，仅在type=2时生效
-        width : '133px',
-        height : '40px',
-        fontSize : '20px',
-        btnId : 'pop_sign_up',
-        ready : function() {
-        },
-        success : function(e) {
-            alert('验证匹配！');
-        },
-        error : function() {
-            alert('验证码不匹配！');
-        }
-    });
-</script>-->
 <script>
     function buttonCountdown($el, msNum, timeFormat) {
         var text = $el.data("text") || $el.text(),
@@ -213,6 +170,49 @@
     }
 
 </script>
+<script src="__STATIC__/home/js/reg.js"></script>
+
+<!--<script>-->
+    <!--function yzm() {-->
+        <!--var mobile = $("#mobileno").val();-->
+        <!--alert("发送成功");-->
+        <!--$.ajax({-->
+            <!--url:"{:url('index/index/sendMobileCode')}",-->
+            <!--type:"POST", //GET-->
+            <!--async:false, //或true，异步请求-->
+            <!--timeout:5000,-->
+            <!--data:{'mobile':mobile},-->
+            <!--dataType:"json",-->
+            <!--success:function(data){-->
+                <!--console.log(data);-->
+
+            <!--},-->
+            <!--error:function () {-->
+                <!--console.log("错误");-->
+            <!--}-->
+        <!--})-->
+    <!--}-->
+<!--</script>-->
+<!--<script src="__STATIC__/home/js/verify.js"></script>-->
+<!--<script>
+    $('#mpanel').codeVerify({
+        type : 2,
+        figure : 10,	//位数，仅在type=2时生效
+        arith : 0,	//算法，支持加减乘，不填为随机，仅在type=2时生效
+        width : '133px',
+        height : '40px',
+        fontSize : '20px',
+        btnId : 'pop_sign_up',
+        ready : function() {
+        },
+        success : function(e) {
+            alert('验证匹配！');
+        },
+        error : function() {
+            alert('验证码不匹配！');
+        }
+    });
+</script>-->
 </body>
 </html>
 
