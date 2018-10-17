@@ -421,6 +421,28 @@
                 $('#duration').text(c);
 
 			});
+			function applyFinancingQy() {
+			  
+        	var day_select=$("#num_day").text(); //所选中的天数
+            var Con_Lists = $("#total_money").text();
+            var beishu =$("#beilv").text();
+            console.log(day_select);console.log(Con_Lists);console.log(beishu);
+            $.ajax({
+                type: 'POST',
+                url: "{:url('index/index/ajax_html')}",
+                data: {'Con_Lists':Con_Lists,'beishu':beishu,'day_select':day_select},
+                dataType: 'json',
+                success: function (data) {
+                	
+                    console.log(data);
+//                  window.location.href = "./buy";
+                },
+                fail: function (err, status) {
+                    console.log(2)
+                }
+            })
+        };
+
 		</script>
 
 
