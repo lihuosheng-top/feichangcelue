@@ -740,6 +740,8 @@ class Index extends Home
         /*if( !isset($nick_name) || !isset($login_pwd) || !isset($mobile) || !isset($code) || !isset($recommendCode) ) {
             error("参数填写不正确");
         }*/
+
+        $freebleSun =getSysParamsByKey("freebleSun");
         if (strlen($nick_name) < 6) {
             $this->error("用户名应不少于6个字符");
         }
@@ -757,7 +759,8 @@ class Index extends Home
         $data['mobile'] = $mobile;
         $data['password'] = md5($login_pwd);
         $data['createTime'] = date("Y-m-d H:i:s");
-        $data['freebleSum'] = 10000;  //体验金（不能提现）
+        $data['freebleSum'] = $freebleSun;  //体验金（不能提现）
+
 
         if(!empty($inviterId)){
             $data['inviterId'] =$inviterId;
@@ -872,7 +875,6 @@ class Index extends Home
             exit();*/
             $mobile = $_POST['mobile'];
             $login_newPwd = input('login_pwd');
-
             $yzm = $request->input('yzm');
             if ($login_newPwd == '') {
                 $this->error("密码不能为空");
@@ -921,12 +923,20 @@ class Index extends Home
             return $res;
         }
 
-
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 接收注册时的验证码
+     **************************************
+     */
     public function sendMobileCode(Request $request)
     {
         //接受验证码的手机号码
         if ($request->isPost()) {
             $mobile = $request->param("mobile");
+            if(empty($mobile)){
+                $this->error('手机号码不能为空！');
+            }
             $db_phone =Db::name('member')->where('mobile',$mobile)->find();
 
             if(!empty($db_phone)){
@@ -948,6 +958,61 @@ class Index extends Home
                 $_SESSION['mobile'] = $mobile;
             }
             $content = "尊敬的用户，您本次验证码为{$mobileCode}，十分钟内有效";
+            //$content = urlencode($content);
+
+            $url = "http://120.26.38.54:8000/interface/smssend.aspx";
+            $post_data = array("account" => "peizi", "password" => "123qwe", "mobile" => "$mobile", "content" => $content);
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, $url);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+            curl_setopt($ch, CURLOPT_POST, 1);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $post_data);
+            $output = curl_exec($ch);
+            curl_close($ch);
+            if ($output) {
+                $this->ajax_success("发送成功", $output);
+            } else {
+                $this->ajax_success("发送失败");
+            }
+            //json格式转换
+        }
+    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 接收找回密码的验证码
+     **************************************
+     */
+    public function sendMobileCodeByPassWord(Request $request)
+    {
+        //接受验证码的手机号码
+        if ($request->isPost()) {
+            $mobile = $request->param("mobile");
+            if(empty($mobile)){
+                $this->error('手机号码不能为空！');
+            }
+            $db_phone =Db::name('member')->where('mobile',$mobile)->find();
+
+            if(empty($db_phone)){
+                $this->error('此手机号未注册，请前往注册！');
+            }
+
+            $mobileCode = rand(100000, 999999);
+            $arr = json_decode($mobile, true);
+            /*var_dump($arr);
+            exit();*/
+            $mobiles = strlen($arr);
+            if (isset($mobiles) != 11) {
+                $this->error("手机号码不正确");
+            }
+
+            //存入session中
+            if (strlen($mobileCode) > 0) {
+                $_SESSION['mobileCode'] = $mobileCode;
+                $_SESSION['mobile'] = $mobile;
+            }
+            $content = "尊敬的用户，您本次找回密码验证码为{$mobileCode}，十分钟内有效";
             //$content = urlencode($content);
 
             $url = "http://120.26.38.54:8000/interface/smssend.aspx";

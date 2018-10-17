@@ -37,6 +37,19 @@
 		        });
 		    };
 })(jQuery);
+
+function getCookieValue(name) {
+    var strCookie=document.cookie;
+    var arrCookie=strCookie.split(";");
+    for(var i=0;i<arrCookie.length;i++){
+        var c=arrCookie[0].split("=");
+        if(c[0]==name){
+            return c[1];
+        }
+    }
+    return "";
+}
+
 var forgot={
 	init:function(){
 		this.eventsBind()
@@ -67,18 +80,17 @@ var forgot={
 		})
 			//点击获取校验码
             $("#auth_reg_smsA").click(function () {
-            	alert(111);
             		var phone=$("#phone").val();
-            	// console.log(phone);
+            		document.cookie = 'phone=' + phone;
               $.ajax({
 				    type:"post",                      //请求类型
-				    url:"./sendMobileCode",           //URL
+				    url:"./sendMobileCodeByPassWord",           //URL
 				    data:{
                         'mobile':phone
                     },   //传递的参数
 				    dataType:"json",                 //返回的数据类型
 				    success:function(data){          //data就是返回的json类型的数据
-                        // console.log(data);
+                        console.log(data);
                         if(data.code ==0){
                           alert(data.msg);
                         }
@@ -98,13 +110,21 @@ var forgot={
         $('#step2-btn').click(function() {
         	$('#phone,#mobile_code').trigger('keyup');
         	if($('#mobile_code').val().length!=0){
-        		$.post("/index/index/checkForgotMobileCode", {mobile: $("#phone").val(), code:$('#mobile_code').val()}, function(data){
+        		$.post("./checkForgotMobileCode", {mobile: $("#phone").val(), code:$('#mobile_code').val()}, function(data){
 						$("#mobile_code").val('');
-                      if(data.code != '0'){
-                         tool.popup_err_msg(data.msg);
-                      } else {
-						  	window.location.href='/pass_reset.html';
+                    if(data.code ==0){
+                        alert(data.msg);
+                        window.location.href='./pass_reset.html';
+                    }
+                    if(data.code ==-1){
+                        alert(data.msg);
+                    }
+                      if(data.code ==1){
+                         alert(data.msg);
+                          window.location.href='./pass_reset.html';
                       }
+
+
                 }, 'json');    
         	}
         });
@@ -112,13 +132,13 @@ var forgot={
  
         //step2页面
 		$('#pwd').on('keyup afterpaste change',function(){
-			$('#pwd_err1').hide()
+			$('#pwd_err1').hide();
 			if($(this).val().length<6){
 				$('#pwd_err1').show()
 			}
 		})
 		$('#cpwd').on('keyup afterpaste change',function(){
-			$('#cpwd_err1').hide()
+			$('#cpwd_err1').hide();
 			if($(this).val()!=$('#pwd').val()){
 				$('#cpwd_err1').show()
 			}
@@ -126,20 +146,23 @@ var forgot={
 		//下一步2
 		$('#step3-btn').click(function(){
         	$('#pwd,#cpwd').trigger('keyup');
+        	var phones =getCookieValue('phone');
         	if($('#pwd').val().length!=0&&$('#cpwd').val()==$('#pwd').val()){
         		$.ajax({
            				type:"post",
-           				url:"/index/index/updateNewPwd",
+           				url:"./updateNewPwd",
            				data:{
-           					mobile:$("#phone").val(),
-           					login_newPwd:$('#pwd').val(),
+           					'mobile':phones,
+                            'login_pwd':$('#pwd').val(),
            				},
            				dataType:'json',
            				success:function(data){
-	                        if(data.code != '0'){
-	                            tool.popup_err_msg(data.msg);
-	                        }else{
-	                            window.location.href='/reset_result.html';
+                            if(data.code ==0){
+                                alert(data.msg);
+                            }
+	                        if(data.code == 1){
+	                            alert(data.msg);
+                                window.location.href='./reset_result.html';
 	                        }
            				}
            			});  

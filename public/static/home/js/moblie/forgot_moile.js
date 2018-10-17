@@ -29,7 +29,7 @@ var forgot_moile={
 					var imgCode=$('#txt_valid_code').val()
 					//获取验证码和验证图片验证码
 	            	$.ajax({
-	            		url:'/index/index/sendMobileCode',
+	            		url:'./index/index/sendMobileCode',
 						data:{
 							mobile: mobile, 
 							imgCode:imgCode,
@@ -101,7 +101,7 @@ var forgot_moile={
                       	//如果验证码对了，发送请求更改密码
 						  	$.ajax({
 					           	type:"post",
-					           	url:"/index/index/updateNewPwd",
+					           	url:"./index/index/updateNewPwd",
 					           	data:{
 					           	mobile:$("#mobileno").val(),
 					           	login_newPwd:$('#pwd').val(),

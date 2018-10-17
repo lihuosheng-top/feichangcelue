@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>尚牛在线</title>
+    <style>
+        .btn-get-capcha{
+            position: absolute;
+            right: 0;
+            top: 0;
+            height: 44px;
+            background-color: #d42b2e;
+            color: #fff;
+            border-radius: 5px;
+            padding: 0 5px;
+        }
+    </style>
 </head>
 <body class="grey buy-body">
 {include file="public:top" /}
@@ -21,7 +33,7 @@
             </ul>
         </nav>
         <div class="step-body group">
-            <form action="#" data-success="">
+            <!--<form action="#" data-success="">-->
                 <div class="field-wrapper">
                 	 <div class="field-wrapper">
 	                    <input type="text" class="text" placeholder="请输入11位手机号" name="phone" id="phone">
@@ -29,7 +41,7 @@
 	                <div id="phone_err1" class="error-wrapper" style="display:none"><div><i class="icon icon-x-altx-alt"></i>请输入正确的手机号码</div></div>
                     <div class="field-wrapper capcha-wrapper">
                         <input class="text" placeholder="请输入短信校验码" name="mobile_code" id="mobile_code" data-error-msg="验证码未填" type="text">
-                        <a id="auth_reg_smsA" href="javascript:void(0)" class="btn-get-capcha ">获取校验码</a>
+                        <button id="auth_reg_smsA" href="javascript:void(0)" class="btn-get-capcha ">获取校验码</button>
                         <div id="auth_reg_timerD" class="time-counter" style="display: none;"><i class="icon icon-caret-left"></i><span>10</span></div>
                     </div>
                 </div>
@@ -37,7 +49,7 @@
                 <div class="btn-wrapper">
                     <a href="javascript:;" id="step2-btn" class="btn btn-pri">下一步</a>
                 </div>
-            </form>
+            <!--</form>-->
         </div>
     </div>
 </section>
@@ -102,35 +114,82 @@
         </div>
     </div>
 </div>
-valid-img
-<div class="popup" id="popup-valid-img">
-    <div class="popup-header group">
-        <h2>请先输入验证码</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <form action="#">
-            <div class="field-row group">
-                <label>验证码：</label>
-                <div class="field-val" style="width:350px">
-                    <input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">
-                    <img src="/index.php/captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
-                   	<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>
-                </div>
-            </div>
-            <div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i><span>输入的验证码有误！</span></div></div>
+<!--valid-img-->
+<!--<div class="popup" id="popup-valid-img">-->
+    <!--<div class="popup-header group">-->
+        <!--<h2>请先输入验证码</h2>-->
+        <!--<a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>-->
+    <!--</div>-->
+    <!--<div class="popup-body group">-->
+        <!--<form action="#">-->
+            <!--<div class="field-row group">-->
+                <!--<label>验证码：</label>-->
+                <!--<div class="field-val" style="width:350px">-->
+                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
+                    <!--<img src="/index.php/captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">-->
+                   	<!--< id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i><span>输入的验证码有误！</span></div></div>-->
 
-            <div class="btn-row group">
-                <a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>
-            </div>
-        </form>
-    </div>
-</div>
+            <!--<div class="btn-row group">-->
+                <!--<a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>-->
+            <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
+<script>
+    function buttonCountdown($el, msNum, timeFormat) {
+        var text = $el.data("text") || $el.text(),
+            timer = 0;
+        $el.prop("disabled", true).addClass("disabled")
+            .on("bc.clear", function () {
+                clearTime();
+            });
 
+        (function countdown() {
+            var time = showTime(msNum)[timeFormat];
+            $el.text(time + '后失效');
+            if (msNum <= 0) {
+                msNum = 0;
+                clearTime();
+            } else {
+                msNum -= 1000;
+                timer = setTimeout(arguments.callee, 1000);
+            }
+        })();
+
+        function clearTime() {
+            clearTimeout(timer);
+            $el.prop("disabled", false).removeClass("disabled").text(text);
+        }
+
+        function showTime(ms) {
+            var d = Math.floor(ms / 1000 / 60 / 60 / 24),
+                h = Math.floor(ms / 1000 / 60 / 60 % 24),
+                m = Math.floor(ms / 1000 / 60 % 60),
+                s = Math.floor(ms / 1000 % 60),
+                ss = Math.floor(ms / 1000);
+
+            return {
+                d: d + "天",
+                h: h + "小时",
+                m: m + "分",
+                ss: ss + "秒",
+                "d:h:m:s": d + "天" + h + "小时" + m + "分" + s + "秒",
+                "h:m:s": h + "小时" + m + "分" + s + "秒",
+                "m:s": m + "分" + s + "秒"
+            };
+        }
+        return this;
+    }
+
+</script>
 <script src="__STATIC__/home/js/forgot.js"></script>
 <script type="text/javascript">
 	$(function(){forgot.init();})
 </script>
+
 </body>
 </html>
 

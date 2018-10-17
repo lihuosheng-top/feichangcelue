@@ -85,15 +85,18 @@ return [
  //   "index"=>"index/index/index",               //首页
     'doReg'=>'index/index/doReg',               //注册
     'reg_agreement'=>'index/index/reg_agreement', //注册协议
-    'sendMobileCode'=>'index/index/sendMobileCode',         //短信验证
+    'sendMobileCode'=>'index/index/sendMobileCode',         //（注册）短信验证
     "stock"=>"index/index/stock",
     //"authllpay_wap"=>"index/lianlianauthpay/authllpay_wap",         //银行卡充值
+
 
 
     "updateNewPwd"=>"index/index/updateNewPwd",                         //密码修改
     "doReanNameAuth"=>"index/ucenter/doReanNameAuth",                   //认证信息
     "home"=>"ucenter/mobile/home",
 
+    'sendMobileCodeByPassWord'=> 'index/index/sendMobileCodeByPassWord',  //忘记密码-（短信验证）
+    'checkForgotMobileCode'=> 'index/index/checkForgotMobileCode',  //忘记密码-
     'forgot_pass'=> 'index/index/forgot_pass',  //忘记密码-01账户名
     'mobile_val'=> 'index/index/mobile_val',   	//忘记密码-02密码重置
     'pass_reset'=> 'index/index/pass_reset',   	//忘记密码-03密码找回

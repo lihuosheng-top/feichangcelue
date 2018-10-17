@@ -32,11 +32,89 @@
             border-bottom: 1px solid #ccc;
         }
     </style>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/guide.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
 </head>
 <body class="guild_body helpcenter logged-in">
-{include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="./public/static/home/css/guide.css"/>
+<!--{include file="public:top" /}-->
+<header class="ml_header br-w100">
+    <div class="h_top br-w100">
+        <div class="w1024 br-clearfix">
+            <div class="h_topL br-fl">
+                服务热线：{$phone}
+            </div>
+            {if !empty($_SESSION['member'])}
+            <div   style="text-align: right;" >
+                {if !empty($_SESSION['member']['username'])}
+                用户：{$_SESSION['member']['username']}
+                {else if}
+                用户信息：{$_SESSION['member']['mobile']}
+                {/if}
+                <span class="loginout"><a href="{:url('index/index/logout')}">退出登录</a></span>
+            </div>
+            {/if}
+
+
+            <!-- <div id="page_shared_layout_login" class="h_topR br-fr" {if condition="$_SESSION['member'] neq '' "} style="display: none;" {/if} >
+                 <a class="login" href="javascript:void(0);">登录</a>
+                 <a class="register" href="./reg.html">注册</a>
+             </div>
+
+             <ul id="page_shared_layout_unlogin" class="top-links f-right" {if condition="$_SESSION['member'] eq '' "} style="display: none;" {/if}>
+             <li class="show-logout" style="display: list-item;"><a href="javascript:_hmt.push(['_trackEvent', 'login', 'click', 'head-login',1]);" name="popup-user-login-click">登录</a></li>
+             <li class="show-logout sep" style="display: list-item;">|</li>
+             <li class="show-logout" style="display: list-item;"><a href="/user/reg">注册</a></li>
+             <li class="show-login" style="display: block;">您好，&nbsp;</li>
+             <li class="show-login top-user-wrapper" style="display: block;">
+                     <span class="top-username">
+                         <a id="page_shared_layout_login_name" href="./ucenter/index">{$_SESSION['member']['username']}</a>
+                         <i class="icon icon-arrow-drop-down"></i>
+                     </span>
+                 <div class="overlay-account">
+                     <div class="group account-group">
+                         <span class="f-left">可用<b class="account-val" id="shared_header_mb">{$usableSum}</b></span>
+                         <a name="realnameAuth" class="f-right" href="./ucenter/payment.html">充值</a>
+                     </div>
+                     <div class="account-links group">
+                         <a class="f-left" href="./ucenter/index.html">个人中心</a>
+                         <span class="f-left sep">|</span>
+
+
+                         <a class="f-right js-logout" href="{:url('index/index/logout')}">安全退出</a>
+                     </div>
+                 </div>
+                 /.overlay-account
+             </li>
+             </ul>-->
+        </div>
+    </div>
+    <div class="h_bot br-w100">
+        <div class="w1024 br-clearfix">
+            <div class="h_botL br-fl">
+                <a href="/"><img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " /></a>
+            </div>
+            <div class="h_botR br-fr">
+                <ul class="br-clearfix" id="menu-ul">
+                    <!--<li class="br-fl"><a href="{:url('index')}" class="active">首页</a></li>-->
+                    <li class="br-fl"><a href="./index.html">首页</a></li>
+                    <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
+                     <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
+                    <li class="br-fl"><a href="./safeensure.html" >安全保障</a></li>
+                    <li class="br-fl help_box">
+                        <a href="./guild.html" class="active">帮助中心</a>
+                        <ul class="new-sub-nav hide">
+                            <li class=""><a href="./guild.html">新手教学</a></li>
+                            <li class=""><a href="./help.html">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li class="br-fl"><a href="./buy.html">A股点买</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
 
 <!--帮助区-新手教学-->
 <div class="br-content">
