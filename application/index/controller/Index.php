@@ -1445,7 +1445,13 @@ class Index extends Home
      **************************************
      */
     public function  Advertisement(){
-        return view('advertisement');
+
+        if (is_mobile_request()) {
+            return view('index/mobile/advertisement');
+        }else{
+            return view('advertisement');
+        }
+
     }
 
     /**
@@ -1517,20 +1523,7 @@ class Index extends Home
         return view('pc_free_history');
     }
 
-    public function captchas(){
-//        $config =config::get('captcha');
-//        $captcha = new \think\captcha\Captcha($config);
-//        return $captcha->entry();
-//        $captcha = new Captcha([
-//            'imageW'=>1000,
-//            'imageH'=>1000,
-//            'fontSize'=>180,
-//            'useNoise'=>false,
-//            'length'=>5,
-//        ]);
-//        return $captcha->entry();
 
-    }
 
 
 
