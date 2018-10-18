@@ -849,7 +849,7 @@ $("#refreshBtn").off().click(function(e){
     //最多2秒钟点击一次
     setTimeout(function(){
         refreshBtnDisabled = false;
-    }, 2000);
+    }, 5000);
 });
 
 
@@ -1070,10 +1070,11 @@ $("#popup-confirm-btn").click(function(e){
         }
         if(data.code == '0'){
             alert(data.msg);
-            // location.href = "./";
+            location.href = "./buy";
         }
         if(data.code == '1'){
             alert(data.msg);
+            window.location.href ='./sell';
         }
         // else{
         //     tool.popup_err_msg(data.msg);

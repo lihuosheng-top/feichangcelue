@@ -30,12 +30,27 @@
             <ul id="sell-list">
                 {volist name="list" id="vo" }
             	<li class="br-clearfix">
-            		<label class="w186"><em>{$vo.createTime}</em><em>单号：{$vo.id}</em></label>
-            		<label class="w125"><em>{$vo.dealAmount|round=###,2}万元</em><em>止损：<b>{$vo.loss}元</b></em></label>
-                    <label class="w115"><em><strong>{$vo.stockName}({$vo.stockCode})</strong></em><em><b class="">{$vo.dealQuantity * 100}</b>股可用</em></label>
-                    <label class="w140"><em><strong></strong></em><em><b class="">{$vo.dealPrice|round=###,2}</b><i class="icon icon-arrow-right"></i>-><b class="">{$list2[$i-1][nowPrice]|round=###,2}</b></em><em>
+            		<label class="w186">
+                        <em>下单：<b>{$vo.createTime}</b></em>
+                        <em>单号：{$vo.id}</em>
+                        <em>到期：<b>{$vo.buy_day_end_time}</b></em>
+                    </label>
+            		<label class="w125">
+                        <em>{$vo.dealAmount|round=###,2}万元</em>
+                        <em>止损：<b>{$vo.loss}元</b></em>
+                        <em>警戒线：<b>{$vo.surplus}元</b></em>
+                    </label>
+                    <label class="w115">
+                        <em><strong>{$vo.stockName}({$vo.stockCode})</strong></em>
+                        <em><b class="">{$vo.dealQuantity * 100}</b>股可用</em>
+                        <em>配资时间：<b>{$vo.buy_day_num}天</b></em>
+                    </label>
+                    <label class="w140">
+                        <em><strong></strong></em>
+                        <em><b class="">{$vo.dealPrice|round=###,2}</b><i class="icon icon-arrow-right"></i>-><b class="">{$list2[$i-1][nowPrice]|round=###,2}</b></em><em>
                         <strong class="" {if condition="$list2[$i-1][profitAmount] lt 0"} style="color:green" {else if condition="$list2[$i-1][profitAmount] gt 0" } style="color:red" {/if} >
-                        {$list2[$i-1][profitAmount]}({$list2[$i-1][rate] * 100}%)</strong></em></label>
+                        {$list2[$i-1][profitAmount]}({$list2[$i-1][rate] * 100}%)</strong></em>
+                    </label>
                     <label class="w180"><button class="btnSell" id="{$vo.id}" index="{$i}" class="btn btn-pri sell-btn " >点卖</button></label>
             	</li>
                 {/volist}
@@ -276,18 +291,25 @@ $("#popup-confirm-btn").click(function(e){
     var orderId = $("#orderId").val();
     var params = { orderId : orderId };
     if(orderId <= 0){
-        tool.popup_err_msg("订单号不正确");
+        alert("订单号不正确");
         return;
     }
     $(this).attr("disabled", true);
-    $.post("/index/ucenter/stockSell", params, function(data){
+    $.post("./index/ucenter/stockSell", params, function(data){
         $("#popup-confirm-btn").attr("disabled", false);
-        if(data.code == '0'){
-            tool.popup_err_msg("交易成功");
-            location.href = "/history.html";
-        }else{
-            tool.popup_err_msg(data.msg);
+        if(data.code =='-1'){
+            alert(data.msg);
         }
+        if(data.code =='0'){
+            alert("交易成功");
+            location.href = "./history.html";
+        }
+//        if(data.code == '0'){
+//            tool.popup_err_msg("交易成功");
+//            location.href = "./history.html";
+//        }else{
+//            tool.popup_err_msg(data.msg);
+//        }
     }, 'json');
 });
 
