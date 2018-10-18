@@ -3,6 +3,7 @@
 <meta name="keywords" content="{:config('web_site_keywords')}">
 <meta name="description" content="{:config('web_site_description')}">
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
+
 <!--头部-->
 <header class="ml_header br-w100">
     <div class="h_top br-w100">
@@ -10,6 +11,10 @@
             <div class="h_topL br-fl">
                 服务热线：{$phone}
             </div>
+              <div class="h_topLL br-fl" style="padding-left: 10px;color: red;">
+                   深圳市尚美时尚产业投资管理有限公司
+            </div>
+         
                 {if !empty($_SESSION['member'])}
             <div   style="text-align: right;" >
                 {if !empty($_SESSION['member']['username'])}
@@ -58,10 +63,12 @@
     <div class="h_bot br-w100">
         <div class="w1024 br-clearfix">
             <div class="h_botL br-fl">
-                <a href="/"><img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " /></a>
+                <a href="/">
+                	<img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " />
+                	<span style="color: #FF3439;">深圳市尚美时尚产业投资管理有限公司</span>
+                </a>
             </div>
             <div class="h_botR br-fr">
-                <ul class="br-clearfix" id="menu-ul">
                     <!--<li class="br-fl"><a href="{:url('index')}" class="active">首页</a></li>-->
                     <li class="br-fl"><a href="./index.html" class="active">首页</a></li>
                     <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
@@ -74,6 +81,7 @@
                             <li class=""><a href="./help.html">常见问题</a></li>
                         </ul>
                     </li>
+                    <li class="br-fl"><a href="./company.html">关于我们</a></li>
                     <li class="br-fl"><a href="./buy.html">A股点买</a></li>
                 </ul>
             </div>
