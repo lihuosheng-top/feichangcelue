@@ -802,7 +802,8 @@ em, i, b {
 
     .stock-sell .play-area > section li {
         /*width: 816px;*/
-        height: 84px;
+          height: 108px;
+        line-height: 108px;
         color: #9A9691;
         border-bottom: 1px solid #EFEFEF;
         margin-top: 20px;
