@@ -799,11 +799,17 @@ em, i, b {
         }
 
     /*卖出确认弹框*/
-
+        ul.pagination{
+            height: auto !important;
+            overflow: hidden;
+        }
+        #sell-list li{
+             height: 108px;
+             line-height: 108px;
+         }
     .stock-sell .play-area > section li {
         /*width: 816px;*/
-          height: 108px;
-        line-height: 108px;
+
         color: #9A9691;
         border-bottom: 1px solid #EFEFEF;
         margin-top: 20px;

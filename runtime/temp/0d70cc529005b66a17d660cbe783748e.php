@@ -1,11 +1,20 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539832464;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539855460;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
+
     <title>尚牛在线</title>
+	<style>
+		.select_day {
+			width: 96px;
+			height: 38px;
+			border: solid 1px #D42B2E;
+			color: #D42B2E;
+		}
+	</style>
 </head>
 <body class="buy_body">
 <!--<title>首页</title>
@@ -201,7 +210,7 @@
         </div>
         <nav>
             <ul class="clearfix">
-                <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区(按天)</a></li>
+                <li class="active"><a href="./buy.html"><em> 01<?php echo $_SESSION["beishu"]; ?> </em>| 点买区(按天)</a></li>
                 <li class=""><a href="./month_buy"><em> 02 </em>| 点买区（按月）</a></li>
                 <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
                 <li class=""><a href="./history"><em>04 </em> | 结算区</a></li>
@@ -279,7 +288,7 @@
 									</div>
 									<!--<div class="figure " id="chart" _echarts_instance_="1498120573127" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; cursor: default; display: none;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas></div></div>-->
 									<div class="figure hide" id="chartK" style="-webkit-tap-highlight-color:transparent;user-select:none;background:none;cursor:default;display:none;position:relative;overflow:hidden;width:520px;height:280px;">
-										<img class="day_img" src="<?php echo $day_img; ?>" alt="">
+										<img class="day_img" src="<?php echo $day_img; ?>" alt="" width="100%">
 									</div>
 									<!--<div class="figure hide" id="chartk" _echarts_instance_="1498120573128" style="-webkit-tap-highlight-color: transparent; user-select: none; background: none; display: block; cursor: default;"><div style="position: relative; overflow: hidden; width: 520px; height: 240px;"><div data-zr-dom-id="bg" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none;"></div><canvas width="520" height="240" data-zr-dom-id="0" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="1" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><canvas width="520" height="240" data-zr-dom-id="_zrender_hover_" class="zr-element" style="position: absolute; left: 0px; top: 0px; width: 520px; height: 240px; user-select: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></canvas><div class="echarts-tooltip zr-element" style="position: absolute; display: block; border-style: solid; white-space: nowrap; transition: left 0.1s, top 0.1s; background-color: rgb(255, 255, 255); border-width: 1px; border-color: rgb(204, 204, 204); border-radius: 4px; color: rgb(102, 102, 102); font-family: 微软雅黑; font-size: 11px; line-height: 17px; padding: 10px; left: 143.5px; top: 37px;">2017年04月17日<br>最高：<span style="color:#DD2200;">18.9</span><br>最低：<span style="color:#00A800;">18.6</span><br>收盘：<span style="color:#F96900;">18.88</span></div></div></div>-->
 									<!--loading-->
@@ -316,11 +325,22 @@
 									</ul>
 								</div>
 								<div class="open-time">
+
+									<?php if(!empty($_SESSION['Con_Lists'])): ?>
+									<span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;</span>
+									<div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
+										<div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
+									</div>
+									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" value="<?php echo $_SESSION['Con_Lists']; ?>" placeholder="请输入金额">万元
+									<?php else: ?>
 									<span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;额</span>
 									<div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
 										<div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
 									</div>
 									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+									<?php endif; ?>
+
+
 								</div>
 								<p class="efficiency">资金使用率 可买入<span id="gu">-</span>股，资金利用率<span id="lyl">-</span></p>
 								<div class="open-time">
@@ -331,6 +351,42 @@
 									<!--<ul class="work-interval">
                         <li class="active">T+1|D</li>
                     </ul>-->
+									<?php if(!empty($_SESSION['day_select'])): ?>
+									<select class="select_day">
+										<option value="<?php echo $_SESSION['day_select']; ?>" selected><?php echo $_SESSION['day_select']; ?>天</option>
+										<option value="1">1天</option>
+										<option value="2">2天</option>
+										<option value="3">3天</option>
+										<option value="4">4天</option>
+										<option value="5">5天</option>
+										<option value="6">6天</option>
+										<option value="7">7天</option>
+										<option value="8">8天</option>
+										<option value="9">9天</option>
+										<option value="10">10天</option>
+										<option value="11">11天</option>
+										<option value="12">12天</option>
+										<option value="13">13天</option>
+										<option value="14">14天</option>
+										<option value="15">15天</option>
+										<option value="16">16天</option>
+										<option value="17">17天</option>
+										<option value="18">18天</option>
+										<option value="19">19天</option>
+										<option value="20">20天</option>
+										<option value="21">21天</option>
+										<option value="22">22天</option>
+										<option value="23">23天</option>
+										<option value="24">24天</option>
+										<option value="25">25天</option>
+										<option value="26">26天</option>
+										<option value="27">27天</option>
+										<option value="28">28天</option>
+										<option value="29">29天</option>
+										<option value="30">30天</option>
+										<option value="31">31天</option>
+									</select>
+									<?php else: ?>
 									<select class="select_day">
 										<option value="1" selected>1天</option>
 										<option value="2">2天</option>
@@ -364,6 +420,8 @@
 										<option value="30">30天</option>
 										<option value="31">31天</option>
 									</select>
+									<?php endif; ?>
+
 								</div>
 								<div class="check-surplus">
 									<span>亏&nbsp;损&nbsp;警戒&nbsp;线</span>
@@ -378,16 +436,42 @@
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止损。</div>
 									</div>
+									<!--<?php if(!empty($_SESSION["beishu"])): ?>-->
+										<!--<ul id="stop-loss_ul">-->
+											<!--<li class="" data-val="8" <?php if($_SESSION['beishu'] == 3): ?> class ="active"<?php endif; ?>>-1000</li>-->
+											<!--<li data-val="6" <?php if($_SESSION['beishu'] == 4): ?> class ="active" <?php endif; ?>>-1333</li>-->
+											<!--<li data-val="5" <?php if($_SESSION['beishu'] == 5): ?> class ="active" <?php endif; ?>>-1700</li>-->
+											<!--<li class="" data-val="8" <?php if($_SESSION['beishu'] == 6): ?> class ="active" <?php endif; ?>>-1000</li>-->
+											<!--<li data-val="6" <?php if($_SESSION['beishu'] == 7): ?> class ="active" <?php endif; ?>>-1333</li>-->
+											<!--<li data-val="5" <?php if($_SESSION['beishu'] == 8): ?> class ="active" <?php endif; ?>>-1700</li>-->
+											<!--<li class="" data-val="8" <?php if($_SESSION['beishu'] == 9): ?> class ="active" <?php endif; ?>>-1000</li>-->
+											<!--<li data-val="6" <?php if($_SESSION['beishu'] == 10): ?> class ="active" <?php endif; ?>>-1333</li>-->
+										<!--</ul>-->
+									<!--<?php else: ?>-->
+										<!--<ul id="stop-loss_ul">-->
+											<!--<li class="" data-val="8">-1000</li>-->
+											<!--<li data-val="6">-1333</li>-->
+											<!--<li data-val="5">-1700</li>-->
+											<!--<li class="" data-val="8">-1000</li>-->
+											<!--<li data-val="6">-1333</li>-->
+											<!--<li data-val="5">-1700</li>-->
+											<!--<li class="" data-val="8">-1000</li>-->
+											<!--<li data-val="6">-1333</li>-->
+										<!--</ul>-->
+									<!--<?php endif; ?>-->
 									<ul id="stop-loss_ul">
 										<li class="" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 										<li data-val="5">-1700</li>
-									    <li class="" data-val="8">-1000</li>
+										<li class="" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 										<li data-val="5">-1700</li>
-									    <li class="" data-val="8">-1000</li>
+										<li class="" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 									</ul>
+
+
+
 								</div>
 								<div class="open-time">
 									<span>盈&nbsp;利&nbsp;分&nbsp;配</span>
@@ -499,7 +583,12 @@
 		</div>
 		<!--  遮罩  -->
 		<div id="popBg" style="width:100%;height:100%;z-index: 0;background: #eee; opacity: 0.5;position: fixed;left: 0; top: 0;display: none"></div>
-
+		<!--按天配资过来的倍数-->
+		<div id="buy" style="display: none">
+			<p>
+				<i><?php echo $_SESSION["beishu"]; ?></i>
+			</p>
+		</div>
 		<!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
@@ -790,10 +879,13 @@
 				levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
 			];
 		</script>
+
 		<script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
+
 		<script src="__STATIC__/home/js/general.js"></script>
 		<script src="__STATIC__/home/js/echarts.min.js"></script>
 		<script src="__STATIC__/home/js/buy1.js"></script>
+
 	</body>
 
 </html>

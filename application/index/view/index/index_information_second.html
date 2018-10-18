@@ -425,7 +425,7 @@
 			  
         	var day_select=$("#num_day").text(); //所选中的天数
             var Con_Lists = $("#total_money").text();
-            var beishu =$("#beilv").text();
+            var beishu =$("#beilv >span").text();
             console.log(day_select);console.log(Con_Lists);console.log(beishu);
             $.ajax({
                 type: 'POST',
@@ -435,7 +435,7 @@
                 success: function (data) {
                 	
                     console.log(data);
-//                  window.location.href = "./buy";
+                  window.location.href = "./buy";
                 },
                 fail: function (err, status) {
                     console.log(2)

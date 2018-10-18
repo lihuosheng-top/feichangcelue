@@ -59,6 +59,7 @@
 			</div>
 			<div class="pz-day-public pzdaynumber">
 				<h2>我需要操盘的月数？</h2>
+
 				<div class="pz-select">
 					<div class="nav_listdown" id="nav_listdown2">
 						<p class="set_listdown"><span class="j-num" id="num_day">1</span>月</p>
@@ -77,6 +78,7 @@
 							<li class="j-duration-item" data-duration="1"><span>12</span>月</li>
 						</ul>
 					</div>
+
 				</div>
 			</div>
 		</div>
@@ -420,7 +422,7 @@
                 data: {'ajax_html':ajax_html,'yuebeishu':yuebeishu,'month_select':month_select},
                 dataType: 'json',
                 success: function (data) {
-//                  window.location.href = "./month_buy";
+                  window.location.href = "./month_buy";
                 },
                 fail: function (err, status) {
                     console.log(3)

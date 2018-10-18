@@ -382,7 +382,7 @@ function getStockInfo(){
 
         // 如果不在交易时间，判断当前价格和昨日收盘价格(TODO：时间设置)
         if(!isTradingTime() ){
-        //     // if(nowPrice < map.closePrice){
+            // if(nowPrice < map.closePrice){
         //     //     $(".stock-detail .up-arrow-box").hide();
         //     //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
         //     // }else{
@@ -899,14 +899,35 @@ function updateMoneyRate(){
 	    }
 }
 
+// $(function(){
+//     $("#stop-loss_ul > li:eq(0)").click();
+// });
+
+//TODO：
+$(function () {
+
+    var day_loss = $("#buy >p").eq(0).find("i").html()-3 ;//按天
+    // (day_loss)
+    // $("#stop-loss_ul > li:eq(1)").click();
+    var datas =$("#buy >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+    }else {
+        $("#stop-loss_ul > li").eq(day_loss).click();
+        if(day_loss != null && day_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(day_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(day_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
 
 
-$(function(){
-    $("#stop-loss_ul > li:eq(0)").click();
 });
 
 
+
 $("#stop-loss_ul > li").click(function(e){
+    console.log(e);
     var index = $(this).index(); //下标
     console.log(index);
     var buy_price = parseInt($('#buy_number').val()); //输入的价格
@@ -926,9 +947,11 @@ $("#stop-loss_ul > li").click(function(e){
         $(o).html(-stop_loss);
         $(o).attr('id','inter_'+levers_data[i]+'_'+index_num);
     });
+
     //获取天数的值
     var day_number=$(".select_day option:selected").val();
     var interest_id =$(this)[0].id.split('_')[1];
+    // console.log(interest_id);
     var index_num= $(this)[0].id.split('_')[2];
     var input_price =$('#buy_number').val();
 
@@ -1457,7 +1480,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     $("#publicFee").html((price*day_number*levers_3*10000/100 ).toFixed(2) );
 
     //触发止损默认第一个高亮
-    $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    // $("#stop-loss_ul > li:eq(0)").trigger('tap');
     // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
     // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
     // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
@@ -1465,7 +1488,20 @@ $("#buy_number").off('keyup').on('keyup',function(){
     // $("#delay_fee").html(price * delayFee);
 
 	
-    $("#stop-loss_ul > li:eq(0)").click();
+    // $("#stop-loss_ul > li:eq(0)").click();
+    var day_loss = $("#buy >p").eq(0).find("i").html()-3 ;//按天
+    var datas =$("#buy >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+        $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    }else {
+        $("#stop-loss_ul > li").eq(day_loss).click();
+        if(day_loss != null && day_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(day_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(day_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
 	//更新资金利用率数据
     updateMoneyRate();
 	

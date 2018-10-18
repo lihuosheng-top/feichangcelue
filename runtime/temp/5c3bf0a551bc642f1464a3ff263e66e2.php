@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\freetrialSell.html";i:1539843639;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\freetrialSell.html";i:1539849124;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -687,6 +687,10 @@ $("#popup-confirm-btn").click(function(e){
         }
         if(data.code =='0'){
             alert("交易成功");
+            window.location.href = "./freetrialHistory.html";
+        }
+        if(data.code =='1'){
+            alert(data.msg);
             window.location.href = "./freetrialHistory.html";
         }
     }, 'json');

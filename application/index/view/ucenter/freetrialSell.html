@@ -306,6 +306,10 @@ $("#popup-confirm-btn").click(function(e){
             alert("交易成功");
             window.location.href = "./freetrialHistory.html";
         }
+        if(data.code =='1'){
+            alert(data.msg);
+            window.location.href = "./freetrialHistory.html";
+        }
     }, 'json');
 });
 
