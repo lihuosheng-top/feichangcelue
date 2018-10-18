@@ -15,9 +15,9 @@
     <section class="play-area">
         <nav>
             <ul class="clearfix">
-                <li class=""><a href="./freetrial.html"><em> 01 </em>| 点买区</a></li>
-                <li class=""><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
-                <li class="active"><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrial.html"><em> 01 </em>| (体验)点买区</a></li>
+                <li class=""><a href="./freetrialSell.html"><em>02 </em>| （体验）点卖区</a></li>
+                <li class="active"><a href="./freetrialHistory.html"><em>03 </em> | （体验）结算区</a></li>
             </ul>
         </nav>
        <section>
@@ -48,7 +48,7 @@
             <ul id="settle-list" class="history-list">
 
                 {if condition="count($list) eq 0"}
-                <div class="data-empty"><p>暂时没有数据</p><a href="./buy.html">立即去点买</a></div>
+                <div class="data-empty"><p>暂时没有数据</p><a href="./freetrial.html">立即去点买</a></div>
                 {/if}
                 {volist name="list" id="vo"}
             	<li>
@@ -60,7 +60,7 @@
             		<label class="w136"><em
                             {if condition="$vo.profit lt 0"} class="ft16 c-green" {else if condition="$vo.profit gt 0" } class="ft16 c-red" {/if}
                     >{if condition="$vo.profit gt 0"} {$vo.profit*(1-$profitFee)|round=2} {else} {$vo.profit|round=2} {/if}</em><em>盈利分配</em></label>
-            		<label class="w120 "><a class="detail_a" href="/detail.html?id={$vo.id}">查看详情</a></label>
+            		<label class="w120 "><a class="detail_a" href="./detail.html?id={$vo.id}">查看详情</a></label>
             		<label class="w120 hide-important"></label>
                 </li>
                 {/volist}
@@ -171,7 +171,7 @@
     </div>
     <div class="popup-body group">
         <center><i class="icon icon-circle-check"></i>限价委托提交成功！</center>
-        <div class="f-right"><b class="red">5秒</b>后自动跳转至卖出区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
+        <div class="f-right"><b class="red">5秒</b>后自动跳转至卖出区，<a href="./ucenter/history.html" class="js-close-popup">立即跳转</a></div>
     </div>
 </div>
 <!--卖出委托价格修改-->
@@ -215,7 +215,7 @@
     </div>
     <div class="popup-body group">
         <center><i class="icon icon-circle-check"></i>卖出成功！</center>
-        <div class="f-right"><b class="red">5秒</b>后自动跳转至结算区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
+        <div class="f-right"><b class="red">5秒</b>后自动跳转至结算区，<a href="./ucenter/history.html" class="js-close-popup">立即跳转</a></div>
     </div>
 </div>
 <!--认证银行卡-->
@@ -235,7 +235,7 @@
             <p>为了保障您的账户安全，请先绑定银行卡</p>
         </div>
         <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
+            <a class="btn btn-pri" href="./ucenter/BankCards.html">去绑定</a>
             <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
         </div>
     </div>
@@ -278,8 +278,8 @@
 
 
 {include file="public:footer" /}
-<script src="/public/static/home/js/history.js"></script>
+<script src="__STATIC__/home/js/freehistory.js"></script>
 
-</script>
+
 </body>
 </html>

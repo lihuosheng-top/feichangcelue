@@ -14,9 +14,9 @@
     <section class="play-area">
         <nav>
             <ul class="clearfix">
-                <li class=""><a href="./freetrial.html"><em> 01 </em>| 点买区</a></li>
-                <li class="active"><a href="./freetrialSell.html"><em>02 </em>| 点卖区</a></li>
-                <li class=""><a href="./freetrialHistory.html"><em>03 </em> | 结算区</a></li>
+                <li class=""><a href="./freetrial.html"><em> 01 </em>| （体验）点买区</a></li>
+                <li class="active"><a href="./freetrialSell.html"><em>02 </em>| （体验）点卖区</a></li>
+                <li class=""><a href="./freetrialHistory.html"><em>03 </em> | （体验）结算区</a></li>
             </ul>
         </nav>
         <section>
@@ -28,9 +28,28 @@
             <ul id="sell-list">
                 {volist name="list" id="vo" }
                 <li class="br-clearfix">
-                    <label class="w186"><em>{$vo.createTime}</em><em>单号：{$vo.id}</em></label>
-                    <label class="w125"><em>{$vo.dealAmount|round=###,2}万元</em><em>止损：<b>{$vo.loss}元</b></em></label>
-                    <label class="w115"><em><strong>{$vo.stockName}({$vo.stockCode})</strong></em><em><b class="">{$vo.dealQuantity * 100}</b>股可用</em></label>
+                    <label class="w186">
+                        <em>下单：<b>{$vo.createTime}</b></em>
+                        <em>单号：{$vo.id}</em>
+                        <em>到期：<b>{$vo.buy_day_end_time}</b></em>
+                    </label>
+                    <label class="w125">
+                        <em>{$vo.dealAmount|round=###,2}万元</em>
+                        <em>止损：<b>{$vo.loss}元</b></em>
+                        <em>警戒线：<b>{$vo.surplus}元</b></em>
+                    </label>
+                    <label class="w115">
+                        <em><strong>{$vo.stockName}({$vo.stockCode})</strong></em>
+                        <em><b class="">{$vo.dealQuantity * 100}</b>股可用</em>
+
+                        {if !empty($vo.buy_day_num)}
+                        <em>配资时间：<b>{$vo.buy_day_num}天</b></em>
+                        {/if}
+                        {if !empty($vo.buy_month_num)}
+                        <em>配资时间：<b>{$vo.buy_month_num}月</b></em>
+                        {/if}
+
+                    </label>
                     <label class="w140"><em><strong></strong></em><em><b class="">{$vo.dealPrice|round=###,2}</b><i class="icon icon-arrow-right"></i>-><b class="">{$list2[$i-1][nowPrice]|round=###,2}</b></em><em>
                         <strong class="" {if condition="$list2[$i-1][profitAmount] lt 0"} style="color:green" {else if condition="$list2[$i-1][profitAmount] gt 0" } style="color:red" {/if} >
                         {$list2[$i-1][profitAmount]}({$list2[$i-1][rate] * 100}%)</strong></em></label>
@@ -40,7 +59,7 @@
             </ul>
             {$list->render()}
             {else}
-            <div class="data-empty"><p>暂时没有等待卖出的A股</p><a href="./buy.html">立即去点买</a></div>
+            <div class="data-empty"><p>暂时没有等待卖出的A股</p><a href="./freetrial.html">立即去点买</a></div>
             {/if}
            
         </section>
@@ -192,7 +211,7 @@
             <p>为了保障您的账户安全，请先绑定银行卡</p>
         </div>
         <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
+            <a class="btn btn-pri" href="./ucenter/BankCards.html">去绑定</a>
             <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
         </div>
     </div>
@@ -278,13 +297,14 @@ $("#popup-confirm-btn").click(function(e){
         return;
     }
     $(this).attr("disabled", true);
-    $.post("/index/ucenter/doFreetrialSell", params, function(data){
+    $.post("./index/ucenter/doFreetrialSell", params, function(data){
         $("#popup-confirm-btn").attr("disabled", false);
-        if(data.code == '0'){
-            tool.popup_err_msg("交易成功");
-            location.href = "/freetrialHistory.html";
-        }else{
-            tool.popup_err_msg(data.msg);
+        if(data.code =='-1'){
+            alert(data.msg);
+        }
+        if(data.code =='0'){
+            alert("交易成功");
+            window.location.href = "./freetrialHistory.html";
         }
     }, 'json');
 });

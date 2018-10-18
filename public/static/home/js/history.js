@@ -103,7 +103,7 @@ $("#JchooseDate").find(".left_gray,.right_gray").click(function() {
 		if(m < 10) {
 			m = "0" + m;
 		}
-		location.href = "/history.html?recent=" + y + "-" + m;
+		location.href = "./history.html?recent=" + y + "-" + m;
 	});
 });
 
@@ -119,7 +119,7 @@ $(function(){
 		if(m < 10) {
 			m = "0" + m;
 		}
-		location.href = "/history.html?recent=" + y + "-" + m;
+		location.href = "./history.html?recent=" + y + "-" + m;
 	});
 })
 
