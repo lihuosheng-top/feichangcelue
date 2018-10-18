@@ -381,7 +381,7 @@ function getStockInfo(){
 		}
 
         // 如果不在交易时间，判断当前价格和昨日收盘价格(TODO：时间设置)
-        // if(!isTradingTime() ){
+        if(!isTradingTime() ){
         //     // if(nowPrice < map.closePrice){
         //     //     $(".stock-detail .up-arrow-box").hide();
         //     //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
@@ -389,8 +389,8 @@ function getStockInfo(){
         //     //     $(".stock-detail .up-arrow-box").css("display", "inline-block");
         //     //     $(".stock-detail .down-arrow-box").hide();
         //     // }
-        //     $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-        // }
+            $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+        }
 
         // if(nowPrice < map.closePrice){
         //     $("#nowPrice").removeClass('red').removeClass('green').addClass("green");
