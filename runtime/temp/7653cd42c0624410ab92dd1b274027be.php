@@ -1,14 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539828735;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\month_buy.html";i:1539757047;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539756694;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
-    <title>尚牛在线</title>
-</head>
-<body class="buy_body">
-<!--<title>首页</title>
+	<head>
+		<meta charset="UTF-8">
+	</head>
+	<body class="buy_body">
+		<title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
 <meta name="description" content="<?php echo config('web_site_description'); ?>">
@@ -128,100 +125,141 @@
 
 
 
-</script>-->
+</script>
+		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css" />
+		<style type="text/css">
+			.select_month {
+				width: 96px;
+				height: 38px;
+				border: solid 1px #D42B2E;
+				color: #D42B2E;
+			}
+		</style>
+		<!--A股点买部分-->
+		<div class="br-content">
+			<div class="w1024">
+				<div class="stock-buy">
+					<section class="play-area">
+						<div class="nav-left">
+							<a href="./freetrial" style="height: initial;">一元模拟盘体验</a>
+							<a href="./buy" class="active">A股（T + 1）</a>
+						</div>
+						<nav>
+							<ul class="clearfix">
+								<li class="">
+									<a href="./buy.html"><em> 01 </em>| 点买区（天）</a>
+								</li>
+								<li class="active">
+									<a href="./month_buy.html"><em> 02 </em>| 点买区(月)</a>
+								</li>
+								<li class="">
+									<a href="./sell.html"><em>03 </em>| 点卖区</a>
+								</li>
+								<li class="">
+									<a href="./history"><em>04 </em> | 结算区</a>
+								</li>
+							</ul>
+						</nav>
+						<section class="clearfix">
+							<div class="left-info">
+								<header>
+									<div class="change-stock">
+										<input id="searchTxt1" class="search_txt" type="text" placeholder="请输入股票名称/代码/简拼">
+										<button id="searchCancel" class="cancel">取消</button>
+										<div id="search_history" class="hide">
+											<table border="0" cellspacing="0" cellpadding="0" class="c9">
+												<thead>
+													<tr>
+														<th class="nc">名称</th>
+														<th>代码</th>
+														<th>简拼</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="active">
+														<td>平安银行</td>
+														<td>000001</td>
+														<td>payh</td>
+													</tr>
+													<tr>
+														<td>万科a</td>
+														<td>000002</td>
+														<td>wka</td>
+													</tr>
+													<tr>
+														<td>国农科技</td>
+														<td>000004</td>
+														<td>gnkj</td>
+													</tr>
+													<tr>
+														<td>世纪星源</td>
+														<td>000005</td>
+														<td>sjxy</td>
+													</tr>
+													<tr>
+														<td>深振业a</td>
+														<td>000006</td>
+														<td>szya</td>
+													</tr>
+													<tr>
+														<td>全新好<label style="background-color:red">[停牌股]</label></td>
+														<td>000007</td>
+														<td>qxh</td>
+													</tr>
+													<tr>
+														<td>神州高铁</td>
+														<td>000008</td>
+														<td>szgt</td>
+													</tr>
+													<tr>
+														<td>中国宝安</td>
+														<td>000009</td>
+														<td>zgba</td>
+													</tr>
+													<tr>
+														<td>美丽生态</td>
+														<td>000010</td>
+														<td>mlst</td>
+													</tr>
+													<tr>
+														<td>深物业a</td>
+														<td>000011</td>
+														<td>swya</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+										<div id="search_cue" class="hide">
+											<table border="0" cellspacing="0" cellpadding="0" class="c9">
+												<thead>
+													<tr>
+														<th class="nc">名称</th>
+														<th>代码</th>
+														<th>简拼</th>
+													</tr>
+												</thead>
+												<tbody>
+													<tr class="active">
+														<td>万科a</td>
+														<td>000002</td>
+														<td>wka</td>
+													</tr>
+												</tbody>
+											</table>
+										</div>
+									</div>
+									<div class="stock-name">
+										<!--<span id="stockName">招商银行(600036)</span>-->
+										<span id="stockName"><?php echo $info_arr[1]; ?>(<?php echo $info_arr[2]; ?>)</span>
+										<button id="changeStock" class="change_stock hide">选择股票</button>
+									</div>
 
-
-<header class="ml_header br-w100">
-    <div class="h_top br-w100">
-        <div class="w1024 br-clearfix">
-            <div class="h_topL br-fl">
-                服务热线：<?php echo $phone; ?>
-            </div>
-            <?php if(!empty($_SESSION['member'])): ?>
-            <div   style="text-align: right;" >
-                <?php if(!empty($_SESSION['member']['username'])): ?>
-                用户：<?php echo $_SESSION['member']['username']; else: ?>
-                用户信息：<?php echo $_SESSION['member']['mobile']; endif; ?>
-                <span class="loginout"><a href="<?php echo url('index/index/logout'); ?>">退出登录</a></span>
-            </div>
-            <?php endif; ?>
-            
-        </div>
-    </div>
-    <div class="h_bot br-w100">
-        <div class="w1024 br-clearfix">
-            <div class="h_botL br-fl">
-                <a href="/"><img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " /></a>
-            </div>
-            <div class="h_botR br-fr">
-                <ul class="br-clearfix" id="menu-ul">
-                    <!--<li class="br-fl"><a href="<?php echo url('index'); ?>" class="active">首页</a></li>-->
-                    <li class="br-fl"><a href="./index.html" >首页</a></li>
-                    <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
-                     <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
-                    <li class="br-fl"><a href="./safeensure.html">安全保障</a></li>
-                    <li class="br-fl help_box">
-                        <a href="./guild.html">帮助中心</a>
-                        <ul class="new-sub-nav hide">
-                            <li class=""><a href="./guild.html">新手教学</a></li>
-                            <li class=""><a href="./help.html">常见问题</a></li>
-                        </ul>
-                    </li>
-                    <li class="br-fl"><a href="./buy.html" class="active">A股点买</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</header>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-
-<!--A股点买部分-->
-<div class="br-content">
-<div class="w1024">
-<div class="stock-buy">
-    <section class="play-area">
-        <div class="nav-left">
-            <a href="./freetrial" style="height: initial;">一元模拟盘体验</a>
-            <a href="./buy" class="active">A股（T + 1）</a>
-        </div>
-        <nav>
-            <ul class="clearfix">
-                <li class="active"><a href="./buy.html"><em> 01 </em>| 点买区(按天)</a></li>
-                <li class=""><a href="./month_buy"><em> 02 </em>| 点买区（按月）</a></li>
-                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
-                <li class=""><a href="./history"><em>04 </em> | 结算区</a></li>
-            </ul>
-        </nav>
-        <section class="clearfix">
-            <div class="left-info">
-                <header>
-                	<div class="change-stock">
-                        <input id="searchTxt1" class="search_txt" type="text" placeholder="请输入股票名称/代码/简拼">
-                        <button id="searchCancel" class="cancel">取消</button>
-                        <div id="search_history" class="hide">
-                            <table border="0" cellspacing="0" cellpadding="0" class="c9">
-                                <thead><tr><th class="nc">名称</th><th>代码</th><th>简拼</th></tr></thead>
-                               <tbody><tr class="active"><td>平安银行</td><td>000001</td><td>payh</td></tr><tr><td>万科a</td><td>000002</td><td>wka</td></tr><tr><td>国农科技</td><td>000004</td><td>gnkj</td></tr><tr><td>世纪星源</td><td>000005</td><td>sjxy</td></tr><tr><td>深振业a</td><td>000006</td><td>szya</td></tr><tr><td>全新好<label style="background-color:red">[停牌股]</label></td><td>000007</td><td>qxh</td></tr><tr><td>神州高铁</td><td>000008</td><td>szgt</td></tr><tr><td>中国宝安</td><td>000009</td><td>zgba</td></tr><tr><td>美丽生态</td><td>000010</td><td>mlst</td></tr><tr><td>深物业a</td><td>000011</td><td>swya</td></tr></tbody>
-                            </table>
-                        </div>
-                        <div id="search_cue" class="hide">
-                            <table border="0" cellspacing="0" cellpadding="0" class="c9">
-                                <thead><tr><th class="nc">名称</th><th>代码</th><th>简拼</th></tr></thead>
-                                <tbody><tr class="active"><td>万科a</td><td>000002</td><td>wka</td></tr></tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <div class="stock-name">
-                        <!--<span id="stockName">招商银行(600036)</span>-->
-                        <span id="stockName"><?php echo $info_arr[1]; ?>(<?php echo $info_arr[2]; ?>)</span>
-                        <button id="changeStock" class="change_stock hide">选择股票</button>
-                    </div>
-                </header>
-                <section class="stock-detail clearfix" data-price="0">
-                    <div class="stock-new row f-left">
-                        <!--<strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>-->
-                        <strong class="J_price" id="nowPrice"><?php echo $info_arr[3]; ?></strong><i class="icon stockicon"></i>
-                        <span class="up-arrow-box" style="display: inline-block;">
+								</header>
+								<section class="stock-detail clearfix" data-price="0">
+									<div class="stock-new row f-left">
+										<!--<strong class="" id="nowPrice">00.00</strong><i class="icon stockicon"></i>-->
+										<strong class="J_price" id="nowPrice"><?php echo $info_arr[3]; ?></strong><i class="icon stockicon"></i>
+										<span class="up-arrow-box" style="display: inline-block;">
                             <span class="top-part"></span>
 										<span class="bottom-part"></span>
 										</span>
@@ -286,9 +324,7 @@
 							</div>
 							<div class="right-buy">
 								<div class="buy_price">
-									<p class="top">推荐买入金额<em></em>
-										<span class="f-right">今天还可点买<b id="restChance"><?php if($left != ''): ?><?php echo $left; else: ?>-<?php endif; ?></b>次</span>
-									</p>
+									<p class="top">推荐买入金额<em></em><span class="f-right">今天还可点买<b id="restChance"><?php if($left != ''): ?><?php echo $left; else: ?>-<?php endif; ?></b>次</span></p>
 									<ul id="buy_price_ul">
 										<li class="active">1万</li>
 										<li> 2万</li>
@@ -313,64 +349,35 @@
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">最短2天，最长20天，交易综合费按天支付，默认每天自动延期，自动从账户余额扣除交易综合费(余额不足时自动终止)</div>
 									</div>
-									<!--<ul class="work-interval">
-                        <li class="active">T+1|D</li>
-                    </ul>-->
-									<select class="select_day">
-										<option value="1" selected>1天</option>
-										<option value="2">2天</option>
-										<option value="3">3天</option>
-										<option value="4">4天</option>
-										<option value="5">5天</option>
-										<option value="6">6天</option>
-										<option value="7">7天</option>
-										<option value="8">8天</option>
-										<option value="9">9天</option>
-										<option value="10">10天</option>
-										<option value="11">11天</option>
-										<option value="12">12天</option>
-										<option value="13">13天</option>
-										<option value="14">14天</option>
-										<option value="15">15天</option>
-										<option value="16">16天</option>
-										<option value="17">17天</option>
-										<option value="18">18天</option>
-										<option value="19">19天</option>
-										<option value="20">20天</option>
-										<option value="21">21天</option>
-										<option value="22">22天</option>
-										<option value="23">23天</option>
-										<option value="24">24天</option>
-										<option value="25">25天</option>
-										<option value="26">26天</option>
-										<option value="27">27天</option>
-										<option value="28">28天</option>
-										<option value="29">29天</option>
-										<option value="30">30天</option>
-										<option value="31">31天</option>
+									<select class="select_month">
+										<option value="1" selected>1个月</option>
+										<option value="2">2个月</option>
+										<option value="3">3个月</option>
+										<option value="4">4个月</option>
+										<option value="5">5个月</option>
+										<option value="6">6个月</option>
+										<option value="7">7个月</option>
+										<option value="8">8个月</option>
+										<option value="9">9个月</option>
+										<option value="10">10个月</option>
+										<option value="11">11个月</option>
+										<option value="12">12个月</option>
 									</select>
 								</div>
-								<div class="check-surplus">
-									<span>亏&nbsp;损&nbsp;警戒&nbsp;线</span>
-									<div class="delay_tip">
-										<i class="icon icon-help"></i><div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止盈。</div>
-									</div>
-									<ul id="check-surplus_ul"><li class="active" data-val="50">5000</li></ul>
-								</div>
-
+							
 								<div class="stop-loss choose-loss" id="stop-loss" style="margin-bottom: 15px;">
 									<span>亏&nbsp;损&nbsp;平&nbsp;仓&nbsp;线</span>
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止损。</div>
 									</div>
 									<ul id="stop-loss_ul">
-										<li class="" data-val="8">-1000</li>
+										<li class="active" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 										<li data-val="5">-1700</li>
-									    <li class="" data-val="8">-1000</li>
+										<li class="active" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 										<li data-val="5">-1700</li>
-									    <li class="" data-val="8">-1000</li>
+										<li class="active" data-val="8">-1000</li>
 										<li data-val="6">-1333</li>
 									</ul>
 								</div>
@@ -388,7 +395,7 @@
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">交易综合费包含第一天的交易费，第二天的递延费，每万元点买金的交易综合费为45元，每万元点买金的递延费<?php echo $delayFee; ?>元/天。</div>
 									</div>
-									<span class="delete_price"><strong id="publicFee">0</strong>元</span>
+									<span class="delete_price"><strong id="publicFee"><?php echo $delayFee * 2 + $dealFee; ?></strong>元（包括前两日）</span>
 
 								</div>
 								<div class="perf_bond">
@@ -398,19 +405,12 @@
 									</div>
 									<strong class="br-bz" id="guaranteeFee">1250</strong>元
 								</div>
-								<div class="perf_bond">
-									<span>总计</span>
-									<div class="delay_tip"><i class="icon icon-help"></i>
-										<div class="showtip"></div>
-									</div>
-									<strong class="br-bz" id="total">0</strong>元
-								</div>
-
+							
 								<div class="protocol_row">
 									<p><input type="checkbox" name="agree_pro" id="agree_pro" checked="true">我已阅并签署以下协议</p>
-									<!--<a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>-->
-									<!--<a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>-->
-									<a style="color:#f00;" target="_blank" href="<?php echo url('index/index/EntrustmentAgreement'); ?>">《尚牛在线操盘协议》</a>
+									<a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>
+									<a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
+									<a href="/protocol_3.html" target="_blank">《非常谋略服务协议》</a>
 								</div>
 								<button id="btn_buy">点买</button>
 								<p id="su_sm_p" class="total hide">当前可点买总额：210万；单股点买金额不超过：50万。</p>
@@ -440,24 +440,17 @@
 						</tr>
 						<tr>
 							<td>持仓时间：</td>
-							<td ><span id="buy_day_num">1</span><span>天</span></td>
+							<td name="work-interval">截止至下个交易日 15:00:00</td>
 							<td>交易数量：</td>
-							<td ><span id="t_shou"></span><span>手</span></td>
+							<td id="t_shou">1手</td>
 						</tr>
 						<tr>
-							<td>总计：</td>
-							<td ><span id="totals">0</span><span>元</span></td>
-							<td></td>
-							<td ></td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市价：</td>
+							<td>五档最优成交</td>
+							<td colspan="2">
+								<a id="hmdA" href="javascript:void(window.open(&#39;/policy/restricted&#39;))" style="display:none;font-size:18px;color:red">该股票已被列入黑名单，点我查看全部</a>
+							</td>
 						</tr>
-
-						<!--<tr>-->
-							<!--<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;市价：</td>-->
-							<!--<td>五档最优成交</td>-->
-							<!--<td colspan="2">-->
-								<!--<a id="hmdA" href="javascript:void(window.open(&#39;/policy/restricted&#39;))" style="display:none;font-size:18px;color:red">该股票已被列入黑名单，点我查看全部</a>-->
-							<!--</td>-->
-						<!--</tr>-->
 					</tbody>
 				</table>
 				<div class="btn-div">
@@ -742,43 +735,16 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-		<!--<script>-->
-			<!--var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");-->
-			<!--var delayFee = parseInt("<?php echo $delayFee; ?>");-->
-			<!--var dealFee = parseInt("<?php echo $dealFee; ?>");-->
-			<!--var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");-->
-			<!--var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");-->
-			<!--var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");-->
-		<!--</script>-->
-
 		<script>
-			//数据初始化
+			var dealPoundage = parseInt("<?php echo $dealPoundage; ?>");
 			var delayFee = parseInt("<?php echo $delayFee; ?>");
 			var dealFee = parseInt("<?php echo $dealFee; ?>");
-			//    var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
+			var publicFee = parseInt("<?php echo $delayFee * 2 + $dealFee; ?>");
 			var delayLineRate = parseFloat("<?php echo $delayLineRate; ?>");
 			var stopLossRate = parseFloat("<?php echo $stopLossRate; ?>");
-			var lossLine =parseFloat("<?php echo $lossLine; ?>");
-
-			//按天杠杆倍率1到10倍
-			var levers_1 =parseFloat("<?php echo $levers_1; ?>");
-			var levers_2 =parseFloat("<?php echo $levers_2; ?>");
-			var levers_3 =parseFloat("<?php echo $levers_3; ?>");
-			var levers_4 =parseFloat("<?php echo $levers_4; ?>");
-			var levers_5 =parseFloat("<?php echo $levers_5; ?>");
-			var levers_6 =parseFloat("<?php echo $levers_6; ?>");
-			var levers_7 =parseFloat("<?php echo $levers_7; ?>");
-			var levers_8 =parseFloat("<?php echo $levers_8; ?>");
-			var levers_9 =parseFloat("<?php echo $levers_9; ?>");
-			var levers_10 =parseFloat("<?php echo $levers_10; ?>");
-			var levers_data=[
-				levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
-			];
 		</script>
-		<script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-		<script src="__STATIC__/home/js/general.js"></script>
-		<script src="__STATIC__/home/js/echarts.min.js"></script>
-		<script src="__STATIC__/home/js/buy1.js"></script>
+		<script src="__STAITC__/home/js/echarts.min.js"></script>
+		<script src="__STATIC__/home/js/month_buy1.js"></script>
 	</body>
 
 </html>

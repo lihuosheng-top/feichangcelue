@@ -69,7 +69,7 @@
             		<label class="w136"><em
                             {if condition="$vo.profit lt 0"} class="ft16 c-green" {else if condition="$vo.profit gt 0" } class="ft16 c-red" {/if}
                     >{if condition="$vo.profit gt 0"} {$vo.profit*(1-$profitFee)|round=2} {else} {$vo.profit|round=2} {/if}</em><em>盈利分配</em></label>
-            		<label class="w120 "><a class="detail_a" href="/detail.html?id={$vo.id}">查看详情</a></label>
+            		<label class="w120 "><a class="detail_a" href="./detail.html?id={$vo.id}">查看详情</a></label>
             		<label class="w120 hide-important"></label>
                 </li>
                 {/volist}
@@ -268,7 +268,7 @@
 
 
 {include file="public:footer" /}
-<script src="/public/static/home/js/history.js"></script>
+<script src="__STATIC__/home/js/history.js"></script>
 
 </body>
 </html>
