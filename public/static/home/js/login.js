@@ -60,7 +60,7 @@ var user_Login={
                     if (data.code != '0') {
                         // tool.popup_err_msg(data.msg);
                         alert(data.msg);
-                        window.location.href ='./index';
+                        window.history.go(-1);
                         return;
                     }else {
                         // tool.popup_err_msg("登录成功");
