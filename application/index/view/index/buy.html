@@ -167,7 +167,9 @@
 							</div>
 							<div class="right-buy">
 								<div class="buy_price">
-									<p class="top">推荐买入金额<em></em><span class="f-right">今天还可点买<b id="restChance">{if condition="$left neq ''"}{$left}{else }-{/if}</b>次</span></p>
+									<p class="top">推荐买入金额<em></em>
+										<!--<span class="f-right">今天还可点买<b id="restChance">{if condition="$left neq ''"}{$left}{else }-{/if}</b>次</span>-->
+									</p>
 									<ul id="buy_price_ul">
 										<li class="active">1万</li>
 										<li> 2万</li>
@@ -287,9 +289,9 @@
 
 								<div class="protocol_row">
 									<p><input type="checkbox" name="agree_pro" id="agree_pro" checked="true">我已阅并签署以下协议</p>
-									<a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>
-									<a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>
-									<a href="/protocol_3.html" target="_blank">《非常谋略服务协议》</a>
+									<!--<a href="/protocol_1.html" target="_blank">《非常谋略策略人参与沪深A股交易合作涉及费用及资费标准》</a>-->
+									<!--<a href="/protocol_2.html" target="_blank">《非常谋略投资人与点买人参与沪深A股交易合作协议》</a>-->
+									<a style="color:#f00;" target="_blank" href="{:url('index/index/EntrustmentAgreement')}">《尚牛在线操盘协议》</a>
 								</div>
 								<button id="btn_buy">点买</button>
 								<p id="su_sm_p" class="total hide">当前可点买总额：210万；单股点买金额不超过：50万。</p>
@@ -319,9 +321,9 @@
 						</tr>
 						<tr>
 							<td>持仓时间：</td>
-							<td name="work-interval">截止至下个交易日 15:00:00</td>
+							<td ><span id="buy_day_num">1</span><span>天</span></td>
 							<td>交易数量：</td>
-							<td id="t_shou">1手</td>
+							<td ><span id="t_shou"></span><span>手</span></td>
 						</tr>
 						<tr>
 							<td>总计：</td>
@@ -400,7 +402,7 @@
 		</script>
 		<script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
 		<script src="__STATIC__/home/js/general.js"></script>
-		<script src="__STAITC__/home/js/echarts.min.js"></script>
+		<script src="__STATIC__/home/js/echarts.min.js"></script>
 		<script src="__STATIC__/home/js/buy1.js"></script>
 	</body>
 
