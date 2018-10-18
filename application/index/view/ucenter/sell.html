@@ -43,7 +43,14 @@
                     <label class="w115">
                         <em><strong>{$vo.stockName}({$vo.stockCode})</strong></em>
                         <em><b class="">{$vo.dealQuantity * 100}</b>股可用</em>
+
+                        {if !empty($vo.buy_day_num)}
                         <em>配资时间：<b>{$vo.buy_day_num}天</b></em>
+                        {/if}
+                        {if !empty($vo.buy_month_num)}
+                        <em>配资时间：<b>{$vo.buy_month_num}月</b></em>
+                        {/if}
+
                     </label>
                     <label class="w140">
                         <em><strong></strong></em>
