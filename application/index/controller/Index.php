@@ -1215,7 +1215,7 @@ class Index extends Home
      */
     public function news(){
         $res =Db::name('article')->order('createTime','desc')->paginate(5,false,[
-            'type'      =>'Index',
+            'type'      =>'index',
             'var_page'  => 'page',
             'list_rows' => 3,
         ]);
