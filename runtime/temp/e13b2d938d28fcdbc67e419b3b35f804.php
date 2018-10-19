@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:67:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html";i:1539855460;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\buy.html";i:1539914468;s:80:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:83:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -331,13 +331,13 @@
 									<div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
 										<div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
 									</div>
-									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" value="<?php echo $_SESSION['Con_Lists']; ?>" placeholder="请输入金额">万元
+									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="6" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('','');" value="<?php echo $_SESSION['Con_Lists']; ?>" placeholder="请输入金额">万元
 									<?php else: ?>
 									<span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;额</span>
 									<div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
 										<div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
 									</div>
-									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+									<input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="6" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('','');" placeholder="请输入金额">万元
 									<?php endif; ?>
 
 

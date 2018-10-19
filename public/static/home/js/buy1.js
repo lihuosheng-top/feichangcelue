@@ -882,8 +882,12 @@ $("#buy_price_ul > li").click(function(e){
 
 });
 
+
+//小数点传值1
 function updateMoneyRate(){
-    	var price = parseInt($('#buy_number').val());
+//		var price = parseInt($('#buy_number').val());
+    	var price = parseFloat($('#buy_number').val());
+//  	console.log(price);
     	if($('#buy_number').val()==''||$('#buy_number').val()=='0'){price=1}
     	if(price>50){$('#buy_number').val('50');price=50;}
 	    //可买入-股，资金利用率-%
@@ -904,6 +908,7 @@ function updateMoneyRate(){
 // });
 
 //TODO：
+//小数点传值3
 $(function () {
 
     var day_loss = $("#buy >p").eq(0).find("i").html()-3 ;//按天
@@ -925,12 +930,13 @@ $(function () {
 });
 
 
-
+//小数点传值4
 $("#stop-loss_ul > li").click(function(e){
-    console.log(e);
+//  console.log(e);
     var index = $(this).index(); //下标
     console.log(index);
-    var buy_price = parseInt($('#buy_number').val()); //输入的价格
+//  var buy_price = parseInt($('#buy_number').val()); //输入的价格
+    var buy_price = parseFloat($('#buy_number').val()); //输入的价格
 	if($('#buy_number').val()==''||$('#buy_number').val()=='0'){buy_price=1}
 	if(buy_price>50){$('#buy_number').val('50');buy_price=50;}
     $(this).addClass("active").siblings("li").removeClass("active");
@@ -942,8 +948,10 @@ $("#stop-loss_ul > li").click(function(e){
     //触发止损
     $("#stop-loss_ul > li ").each(function(i, o){
         var stop_loss = parseInt( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
+//      var stop_loss = parseFloat( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
         var index_num= i+3;
         stop_loss = parseInt(stop_loss);
+//      stop_loss= parseFloat(stop_loss);
         $(o).html(-stop_loss);
         $(o).attr('id','inter_'+levers_data[i]+'_'+index_num);
     });
@@ -1438,12 +1446,15 @@ var initTimeLine={
 $('#buy_number').on('onkeyup',function(){
 	
 })
+//小数点传值2
 //失去焦点时控制范围
 $("#buy_number").blur(function(){
 				var nub=$("#buy_number").val();
 				if(nub==""){
 					$("#buy_number").val("1");
-				}else if(nub<1){
+				}
+//				else if(nub<1){
+	           else if(nub<0.01){
 					$("#buy_number").val("1");
 				}else if(nub>50){
 					$("#buy_number").val("50");

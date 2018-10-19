@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:88:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information_second.html";i:1539854035;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:100:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index_information_second.html";i:1539913140;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -436,7 +436,7 @@
                 success: function (data) {
                 	
                     console.log(data);
-//                  window.location.href = "./buy";
+                  window.location.href = "./buy";
                 },
                 fail: function (err, status) {
                     console.log(2)
