@@ -381,7 +381,7 @@ function getStockInfo(){
         }
 
         // 如果不在交易时间，判断当前价格和昨日收盘价格(TODO：时间设置)
-        if(!isTradingTime() ){
+        // if(!isTradingTime() ){
         //     // if(nowPrice < map.closePrice){
         //     //     $(".stock-detail .up-arrow-box").hide();
         //     //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
@@ -389,8 +389,8 @@ function getStockInfo(){
         //     //     $(".stock-detail .up-arrow-box").css("display", "inline-block");
         //     //     $(".stock-detail .down-arrow-box").hide();
         //     // }
-            $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-        }
+        //     $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+        // }
 
         // if(nowPrice < map.closePrice){
         //     $("#nowPrice").removeClass('red').removeClass('green').addClass("green");
@@ -881,9 +881,9 @@ $("#buy_price_ul > li").click(function(e){
 
 
 });
-
+//小数点传值1
 function updateMoneyRate(){
-    var price = parseInt($('#buy_number').val());
+    var price = parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){price=1}
     if(price>50){$('#buy_number').val('50');price=50;}
     //可买入-股，资金利用率-%
@@ -901,15 +901,34 @@ function updateMoneyRate(){
 
 
 
-$(function(){
-    $("#stop-loss_ul > li:eq(0)").click();
+// $(function(){
+//     $("#stop-loss_ul > li:eq(0)").click();
+// });
+$(function () {
+    var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-3 ;//按天
+    // alert(month_loss);
+    // $("#stop-loss_ul > li:eq(1)").click();
+    var datas =$("#yuebeishu >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+    }else {
+        $("#stop-loss_ul > li").eq(month_loss).click();
+        if(month_loss != null && month_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(month_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(month_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
+
+
 });
 
-
+//小数点传值
 $("#stop-loss_ul > li").click(function(e){
     var index = $(this).index(); //下标
     console.log(index);
-    var buy_price = parseInt($('#buy_number').val()); //输入的价格
+
+    var buy_price = parseFloat($('#buy_number').val()); //输入的价格
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){buy_price=1}
     if(buy_price>50){$('#buy_number').val('50');buy_price=50;}
     $(this).addClass("active").siblings("li").removeClass("active");
@@ -1415,12 +1434,15 @@ var initTimeLine={
 $('#buy_number').on('onkeyup',function(){
 
 })
+//小数点传值
 //失去焦点时控制范围
 $("#buy_number").blur(function(){
     var nub=$("#buy_number").val();
     if(nub==""){
         $("#buy_number").val("1");
-    }else if(nub<1){
+    }
+    // else if(nub<1){
+    else if(nub<0.01){
         $("#buy_number").val("1");
     }else if(nub>50){
         $("#buy_number").val("50");
@@ -1457,7 +1479,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     $("#publicFee").html((price*month_number*levers_month_3*10000/100 ).toFixed(2) );
 
     //触发止损默认第一个高亮
-    $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    // $("#stop-loss_ul > li:eq(0)").trigger('tap');
     // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
     // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
     // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
@@ -1465,7 +1487,20 @@ $("#buy_number").off('keyup').on('keyup',function(){
     // $("#delay_fee").html(price * delayFee);
 
 
-    $("#stop-loss_ul > li:eq(0)").click();
+    // $("#stop-loss_ul > li:eq(0)").click();
+    var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-3 ;//按天
+    var datas =$("#yuebeishu >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+        $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    }else {
+        $("#stop-loss_ul > li").eq(month_loss).click();
+        if(month_loss != null && month_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(month_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(month_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
     //更新资金利用率数据
     updateMoneyRate();
 

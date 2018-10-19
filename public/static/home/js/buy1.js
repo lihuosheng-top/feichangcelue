@@ -908,7 +908,7 @@ function updateMoneyRate(){
 // });
 
 //TODO：
-//小数点传值3
+
 $(function () {
 
     var day_loss = $("#buy >p").eq(0).find("i").html()-3 ;//按天
@@ -948,7 +948,6 @@ $("#stop-loss_ul > li").click(function(e){
     //触发止损
     $("#stop-loss_ul > li ").each(function(i, o){
         var stop_loss = parseInt( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
-//      var stop_loss = parseFloat( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
         var index_num= i+3;
         stop_loss = parseInt(stop_loss);
 //      stop_loss= parseFloat(stop_loss);
