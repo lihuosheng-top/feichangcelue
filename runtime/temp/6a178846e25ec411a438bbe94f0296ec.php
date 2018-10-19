@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\forgot_pass.html";i:1539689468;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:75:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\forgot_pass.html";i:1539918820;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -570,6 +570,7 @@
     }
 
 </script>
+<script src="__STATIC__/home/js/jquery.cookie.js"></script>
 <script src="__STATIC__/home/js/forgot.js"></script>
 <script type="text/javascript">
 	$(function(){forgot.init();})

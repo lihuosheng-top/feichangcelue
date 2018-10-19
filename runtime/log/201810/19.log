@@ -16115,3 +16115,137 @@
 [ sql ] [ DB ] CONNECT:[ UseTime:0.033813s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
 [ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012462s ]
 [ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.009629s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:06:42+08:00 ] ::1 ::1 GET /feichangcelue/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039785s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016678s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015724s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:06:44+08:00 ] ::1 ::1 GET /feichangcelue/forgot_pass.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035058s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014848s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.012550s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:06:54+08:00 ] ::1 ::1 POST /feichangcelue/sendMobileCodeByPassWord
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037574s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.018151s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.017238s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `mobile` = '18998906797' LIMIT 1 [ RunTime:0.017701s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:07:12+08:00 ] ::1 ::1 POST /feichangcelue/checkForgotMobileCode
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036254s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019145s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.017978s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  mobile='18998906797' ) LIMIT 1 [ RunTime:0.019226s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:07:14+08:00 ] ::1 ::1 GET /feichangcelue/pass_reset.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035038s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013570s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.012685s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:07:36+08:00 ] ::1 ::1 POST /feichangcelue/updateNewPwd
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031546s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012629s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.011516s ]
+[ sql ] [ SQL ] UPDATE `xh_member`  SET `password`='e10adc3949ba59abbe56e057f20f883e'  WHERE  (  mobile='18998906797' ) [ RunTime:0.017072s ]
+[ error ] [8]未定义数组索引: mobileCode
+---------------------------------------------------------------
+[ 2018-10-19T11:07:38+08:00 ] ::1 ::1 GET /feichangcelue/reset_result.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031601s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010813s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.009589s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:07:41+08:00 ] ::1 ::1 GET /feichangcelue/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026263s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011882s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.010996s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:07:56+08:00 ] ::1 ::1 POST /feichangcelue/doLogin
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032407s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011863s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.010395s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  username='18998906797' or mobile = '18998906797' ) LIMIT 1 [ RunTime:0.011051s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:08:00+08:00 ] ::1 ::1 GET /feichangcelue/reset_result.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042652s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017852s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016816s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:15:08+08:00 ] ::1 ::1 GET /feichangcelue/login.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.042854s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013997s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.013113s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:15:10+08:00 ] ::1 ::1 GET /feichangcelue/forgot_pass.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035292s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014345s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.012094s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:15:21+08:00 ] ::1 ::1 POST /feichangcelue/sendMobileCodeByPassWord
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032717s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013399s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.011915s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `mobile` = '18998906797' LIMIT 1 [ RunTime:0.013156s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:17:20+08:00 ] ::1 ::1 POST /feichangcelue/sendMobileCodeByPassWord
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032240s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011571s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.010550s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `mobile` = '13922830809' LIMIT 1 [ RunTime:0.010889s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:17:41+08:00 ] ::1 ::1 GET /feichangcelue/logout.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037791s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012046s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.010935s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:17:43+08:00 ] ::1 ::1 GET /feichangcelue/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036454s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.016942s ]
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+[ error ] [8]未定义变量: buyList
+---------------------------------------------------------------
+[ 2018-10-19T11:17:46+08:00 ] ::1 ::1 GET /feichangcelue/forgot_pass.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-19T11:17:51+08:00 ] ::1 ::1 POST /feichangcelue/sendMobileCodeByPassWord
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028968s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012690s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `mobile` = '13922830809' LIMIT 1 [ RunTime:0.011695s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:18:12+08:00 ] ::1 ::1 POST /feichangcelue/checkForgotMobileCode
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031369s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011989s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  mobile='13922830809' ) LIMIT 1 [ RunTime:0.011715s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:18:13+08:00 ] ::1 ::1 GET /feichangcelue/pass_reset.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
+---------------------------------------------------------------
+[ 2018-10-19T11:18:31+08:00 ] ::1 ::1 POST /feichangcelue/updateNewPwd
+[ error ] [8]未定义数组索引: mobileCode
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040303s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020903s ]
+[ sql ] [ SQL ] UPDATE `xh_member`  SET `password`='fcea920f7412b5da7be0cf42b8c93759'  WHERE  (  mobile='13922830809' ) [ RunTime:0.025854s ]
+---------------------------------------------------------------
+[ 2018-10-19T11:18:33+08:00 ] ::1 ::1 GET /feichangcelue/reset_result.html
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义数组索引: member
+[ error ] [8]未定义变量: usableSum
