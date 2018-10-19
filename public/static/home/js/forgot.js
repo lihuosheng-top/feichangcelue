@@ -162,6 +162,7 @@ var forgot={
                             }
 	                        if(data.code == 1){
 	                            alert(data.msg);
+                                $.cookie('phone', null);
                                 window.location.href='./reset_result.html';
 	                        }
            				}
