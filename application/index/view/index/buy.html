@@ -36,6 +36,7 @@
                 用户信息：{$_SESSION['member']['mobile']}
                 {/if}
                 <span class="loginout"><a href="{:url('index/index/logout')}">退出登录</a></span>
+				<span>余额：{$usableSum|default=0}元</span>
             </div>
             {/if}
             

@@ -35,6 +35,7 @@
                 用户信息：{$_SESSION['member']['mobile']}
                 {/if}
                 <span class="loginout"><a href="{:url('index/index/logout')}">退出登录</a></span>
+                <span>体验金余额：{$freebleSum|default=0}元</span>
             </div>
             {/if}
 
@@ -196,11 +197,20 @@
                             </ul>
                         </div>
                         <div class="open-time">
+                            {if !empty($_SESSION['free_ajax_html'])}
+                            <span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;</span>
+                            <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
+                                <div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
+                            </div>
+                            <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="6" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('','');" value="{$_SESSION['free_ajax_html']}" placeholder="请输入金额">万元
+                            {else}
                             <span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;额</span>
                             <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
                                 <div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
                             </div>
                             <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+                            {/if}
+
                         </div>
                         <p class="efficiency">资金使用率 可买入<span id="gu">-</span>股，资金利用率<span id="lyl">-</span></p>
                         <div class="open-time">
@@ -211,6 +221,42 @@
                             <!--<ul class="work-interval">
                 <li class="active">T+1|D</li>
             </ul>-->
+                            {if !empty($_SESSION['free_day_select'])}
+                            <select class="select_day">
+                                <option value="{$_SESSION['free_day_select']}" selected>{$_SESSION['free_day_select']}天</option>
+                                <option value="1">1天</option>
+                                <option value="2">2天</option>
+                                <option value="3">3天</option>
+                                <option value="4">4天</option>
+                                <option value="5">5天</option>
+                                <option value="6">6天</option>
+                                <option value="7">7天</option>
+                                <option value="8">8天</option>
+                                <option value="9">9天</option>
+                                <option value="10">10天</option>
+                                <option value="11">11天</option>
+                                <option value="12">12天</option>
+                                <option value="13">13天</option>
+                                <option value="14">14天</option>
+                                <option value="15">15天</option>
+                                <option value="16">16天</option>
+                                <option value="17">17天</option>
+                                <option value="18">18天</option>
+                                <option value="19">19天</option>
+                                <option value="20">20天</option>
+                                <option value="21">21天</option>
+                                <option value="22">22天</option>
+                                <option value="23">23天</option>
+                                <option value="24">24天</option>
+                                <option value="25">25天</option>
+                                <option value="26">26天</option>
+                                <option value="27">27天</option>
+                                <option value="28">28天</option>
+                                <option value="29">29天</option>
+                                <option value="30">30天</option>
+                                <option value="31">31天</option>
+                            </select>
+                            {else}
                             <select class="select_day">
                                 <option value="1" selected>1天</option>
                                 <option value="2">2天</option>
@@ -244,6 +290,7 @@
                                 <option value="30">30天</option>
                                 <option value="31">31天</option>
                             </select>
+                            {/if}
                         </div>
                         <div class="check-surplus">
                             <span>亏&nbsp;损&nbsp;警戒&nbsp;线</span>
@@ -379,7 +426,11 @@
 </div>
 <!--  遮罩  -->
 <div id="popBg" style="width:100%;height:100%;z-index: 0;background: #eee; opacity: 0.5;position: fixed;left: 0; top: 0;display: none"></div>
-
+<div id="free_buy" style="display: none">
+    <p>
+        <i>{$_SESSION["freebeishu"]}</i>
+    </p>
+</div>
 {include file="public:footer" /}
 <!--<script>-->
 <!--var dealPoundage = parseInt("{$dealPoundage }");-->

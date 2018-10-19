@@ -859,7 +859,7 @@ $("#refreshBtn").off().click(function(e){
 //金额的点击事件
 $("#buy_price_ul > li").click(function(e){
 //  $(this).addClass("active").siblings("li").removeClass("active");
-    var price = parseInt($(this).html()); //点击的金额1万到50万
+    var price = parseFloat($(this).html()); //点击的金额1万到50万
 //  $("#check-surplus_ul>li").html(price * 5000);
 //  $("#stop-loss_ul>li:eq(0)").html(price * -1000);
 //  $("#stop-loss_ul>li:eq(1)").html(price * -1333);
@@ -898,18 +898,38 @@ function updateMoneyRate(){
         $("#lyl").html(lyl);
     }
 }
+//TODO：
+
+$(function () {
+
+    var day_loss = $("#free_buy >p").eq(0).find("i").html()-3 ;//按天
+
+    // $("#stop-loss_ul > li:eq(1)").click();
+    var datas =$("#free_buy >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+    }else {
+        $("#stop-loss_ul > li").eq(day_loss).click();
+        if(day_loss != null && day_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(day_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(day_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
 
 
-
-$(function(){
-    $("#stop-loss_ul > li:eq(0)").click();
 });
+
+//
+// $(function(){
+//     $("#stop-loss_ul > li:eq(0)").click();
+// });
 
 
 $("#stop-loss_ul > li").click(function(e){
     var index = $(this).index(); //下标
     console.log(index);
-    var buy_price = parseInt($('#buy_number').val()); //输入的价格
+    var buy_price = parseFloat($('#buy_number').val()); //输入的价格
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){buy_price=1}
     if(buy_price>50){$('#buy_number').val('50');buy_price=50;}
     $(this).addClass("active").siblings("li").removeClass("active");
@@ -1086,7 +1106,7 @@ $("#popup-confirm-btn").click(function(e){
 //根据股票实时价格 更新弹出层的交易数量
 function updateStockNumber(){
     $("#t_stock_name").html($("#stockName").html());
-    var t_principal=parseInt($('#buy_number').val());
+    var t_principal=parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){t_principal=1}
     $("#t_principal").html(t_principal + "万元");
     var nowPrice = parseFloat( $("#nowPrice").html() );
@@ -1420,7 +1440,8 @@ $("#buy_number").blur(function(){
     var nub=$("#buy_number").val();
     if(nub==""){
         $("#buy_number").val("1");
-    }else if(nub<1){
+    }
+    else if(nub<0.01){
         $("#buy_number").val("1");
     }else if(nub>50){
         $("#buy_number").val("50");
@@ -1457,7 +1478,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     $("#publicFee").html((price*day_number*levers_3*10000/100 ).toFixed(2) );
 
     //触发止损默认第一个高亮
-    $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    // $("#stop-loss_ul > li:eq(0)").trigger('tap');
     // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
     // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
     // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
@@ -1465,7 +1486,21 @@ $("#buy_number").off('keyup').on('keyup',function(){
     // $("#delay_fee").html(price * delayFee);
 
 
-    $("#stop-loss_ul > li:eq(0)").click();
+    // $("#stop-loss_ul > li:eq(0)").click();
+
+    var day_loss = $("#free_buy >p").eq(0).find("i").html()-3 ;//按天
+    var datas =$("#free_buy >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+        $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    }else {
+        $("#stop-loss_ul > li").eq(day_loss).click();
+        if(day_loss != null && day_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(day_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(day_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
     //更新资金利用率数据
     updateMoneyRate();
 

@@ -232,9 +232,6 @@ function selectAShare(dom){
          * TODO:股票赋值结束
          */
 
-
-
-
         //隐藏搜索框，值清空
         cue.hide();
         $("#searchTxt1").val("");
@@ -381,7 +378,7 @@ function getStockInfo(){
         }
 
         // 如果不在交易时间，判断当前价格和昨日收盘价格(TODO：时间设置)
-        // if(!isTradingTime() ){
+        if(!isTradingTime() ){
         //     // if(nowPrice < map.closePrice){
         //     //     $(".stock-detail .up-arrow-box").hide();
         //     //     $(".stock-detail .down-arrow-box").css("display", "inline-block");
@@ -389,8 +386,8 @@ function getStockInfo(){
         //     //     $(".stock-detail .up-arrow-box").css("display", "inline-block");
         //     //     $(".stock-detail .down-arrow-box").hide();
         //     // }
-        //     $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
-        // }
+            $('#btn_buy').attr('disabled',true).css({'background':'#767679'}).html('点买时间9:30-11:30, 13:00-14:58');
+        }
 
         // if(nowPrice < map.closePrice){
         //     $("#nowPrice").removeClass('red').removeClass('green').addClass("green");
@@ -1105,7 +1102,7 @@ $("#popup-confirm-btn").click(function(e){
 //根据股票实时价格 更新弹出层的交易数量
 function updateStockNumber(){
     $("#t_stock_name").html($("#stockName").html());
-    var t_principal=parseInt($('#buy_number').val());
+    var t_principal=parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){t_principal=1}
     $("#t_principal").html(t_principal + "万元");
     var nowPrice = parseFloat( $("#nowPrice").html() );

@@ -1287,9 +1287,9 @@ class Ucenter extends Home
             if (!$stock) {
                 error("股票不存在");
             }
-//            if (substr($order['createTime'], 0, 10) == date("Y-m-d")) {
-//                error("当天点买的股票下个工作日才能卖出");
-//            }
+            if (substr($order['createTime'], 0, 10) == date("Y-m-d")) {
+                error("当天点买的股票下个工作日才能卖出");
+            }
             $arr = (new Common())->getMarketValueBycode($code);
             $nowPrice = $arr['info_arr'][3];
             //计算盈亏
