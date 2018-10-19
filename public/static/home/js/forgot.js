@@ -148,7 +148,6 @@ var forgot={
         	$('#pwd,#cpwd').trigger('keyup');
         	// var phones =getCookieValue('phone');
 			var phones = $.cookie('phone');
-			alert(phones);
         	if($('#pwd').val().length!=0&&$('#cpwd').val()==$('#pwd').val()){
         		$.ajax({
            				type:"post",
