@@ -87,3 +87,29 @@ var index_login={
 //初始化
 $(function(){index_login.init();})
 
+
+function hq_code(s) {
+    var zqcode = "sh000001";
+    if (s == '0') $("#a0001_img").attr('src', 'http://image.sinajs.cn/newchart/min/n/' + zqcode + '.gif');
+    if (s == '1') $("#a0001_img").attr('src', 'http://image.sinajs.cn/newchart/daily/n/' + zqcode + '.gif');
+    if (s == '2') $("#a0001_img").attr('src', 'http://image.sinajs.cn/newchart/weekly/n/' + zqcode + '.gif');
+    if (s == '3') $("#a0001_img").attr('src', 'http://image.sinajs.cn/newchart/monthly/n/' + zqcode + '.gif');
+}
+
+function hq_code1(s) {
+    var zqcode = "sz399001";
+    if (s == '0') $("#s0001_img").attr('src', 'http://image.sinajs.cn/newchart/min/n/' + zqcode + '.gif');
+    if (s == '1') $("#s0001_img").attr('src', 'http://image.sinajs.cn/newchart/daily/n/' + zqcode + '.gif');
+    if (s == '2') $("#s0001_img").attr('src', 'http://image.sinajs.cn/newchart/weekly/n/' + zqcode + '.gif');
+    if (s == '3') $("#s0001_img").attr('src', 'http://image.sinajs.cn/newchart/monthly/n/' + zqcode + '.gif');
+}
+$("#a0001_bnt a").click(function() {
+    hq_code($(this).attr('sv'));
+    $("#a0001_bnt a").removeClass('cur');
+    $(this).addClass('cur');
+})
+$("#s0001_bnt a").click(function() {
+    hq_code1($(this).attr('sv'));
+    $("#s0001_bnt a").removeClass('cur');
+    $(this).addClass('cur');
+})
