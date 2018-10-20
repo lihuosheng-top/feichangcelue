@@ -415,6 +415,29 @@
 
     });
 </script>
+<script>
+    //按月配资
+    function applyFinancingQy() {
+        var day_select=$("#num_day").text();//选中的月数的值
+        var ajax_html = $("#total_money").text(); //总配资的值
+        var yuebeishu =$("#num").text();
+//          $(".box").css("display","block");
+        $.ajax({
+            type: 'POST',
+            url: "{:url('index/index/ajax_free')}",
+            data: {'free_ajax_html':ajax_html,'freebeishu':yuebeishu,'free_day_select':day_select},
+            dataType: 'json',
+            success: function (data) {
+                window.location.href = "./freetrial";
+            },
+            fail: function (err, status) {
+                console.log(3)
+            }
+        })
+    };
+</script>
+
+
 </body>
 
 </html>

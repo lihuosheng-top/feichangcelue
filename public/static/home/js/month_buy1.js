@@ -232,9 +232,6 @@ function selectAShare(dom){
          * TODO:股票赋值结束
          */
 
-
-
-
         //隐藏搜索框，值清空
         cue.hide();
         $("#searchTxt1").val("");
@@ -881,9 +878,9 @@ $("#buy_price_ul > li").click(function(e){
 
 
 });
-
+//小数点传值1
 function updateMoneyRate(){
-    var price = parseInt($('#buy_number').val());
+    var price = parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){price=1}
     if(price>50){$('#buy_number').val('50');price=50;}
     //可买入-股，资金利用率-%
@@ -901,15 +898,34 @@ function updateMoneyRate(){
 
 
 
-$(function(){
-    $("#stop-loss_ul > li:eq(0)").click();
+// $(function(){
+//     $("#stop-loss_ul > li:eq(0)").click();
+// });
+$(function () {
+    var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-3 ;//按天
+    // alert(month_loss);
+    // $("#stop-loss_ul > li:eq(1)").click();
+    var datas =$("#yuebeishu >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+    }else {
+        $("#stop-loss_ul > li").eq(month_loss).click();
+        if(month_loss != null && month_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(month_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(month_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
+
+
 });
 
-
+//小数点传值
 $("#stop-loss_ul > li").click(function(e){
     var index = $(this).index(); //下标
     console.log(index);
-    var buy_price = parseInt($('#buy_number').val()); //输入的价格
+
+    var buy_price = parseFloat($('#buy_number').val()); //输入的价格
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){buy_price=1}
     if(buy_price>50){$('#buy_number').val('50');buy_price=50;}
     $(this).addClass("active").siblings("li").removeClass("active");
@@ -1086,7 +1102,7 @@ $("#popup-confirm-btn").click(function(e){
 //根据股票实时价格 更新弹出层的交易数量
 function updateStockNumber(){
     $("#t_stock_name").html($("#stockName").html());
-    var t_principal=parseInt($('#buy_number').val());
+    var t_principal=parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){t_principal=1}
     $("#t_principal").html(t_principal + "万元");
     var nowPrice = parseFloat( $("#nowPrice").html() );
@@ -1415,12 +1431,15 @@ var initTimeLine={
 $('#buy_number').on('onkeyup',function(){
 
 })
+//小数点传值
 //失去焦点时控制范围
 $("#buy_number").blur(function(){
     var nub=$("#buy_number").val();
     if(nub==""){
         $("#buy_number").val("1");
-    }else if(nub<1){
+    }
+    // else if(nub<1){
+    else if(nub<0.01){
         $("#buy_number").val("1");
     }else if(nub>50){
         $("#buy_number").val("50");
@@ -1457,7 +1476,7 @@ $("#buy_number").off('keyup').on('keyup',function(){
     $("#publicFee").html((price*month_number*levers_month_3*10000/100 ).toFixed(2) );
 
     //触发止损默认第一个高亮
-    $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    // $("#stop-loss_ul > li:eq(0)").trigger('tap');
     // $("#stop-loss_ul>li:eq(0)").html(price * -1000);
     // $("#stop-loss_ul>li:eq(1)").html(price * -1333);
     // $("#stop-loss_ul>li:eq(2)").html(price * -1700);
@@ -1465,7 +1484,20 @@ $("#buy_number").off('keyup').on('keyup',function(){
     // $("#delay_fee").html(price * delayFee);
 
 
-    $("#stop-loss_ul > li:eq(0)").click();
+    // $("#stop-loss_ul > li:eq(0)").click();
+    var month_loss = $("#yuebeishu >p").eq(0).find("i").html()-3 ;//按天
+    var datas =$("#yuebeishu >p").eq(0).find("i").html();
+    if(datas== ''){
+        $("#stop-loss_ul > li:eq(0)").click();
+        $("#stop-loss_ul > li:eq(0)").trigger('tap');
+    }else {
+        $("#stop-loss_ul > li").eq(month_loss).click();
+        if(month_loss != null && month_loss!=-3){
+            // consol$("#stop-loss_ul > li").html();
+            $("#stop-loss_ul > li").eq(month_loss).trigger('tap');
+            $("#stop-loss_ul > li").eq(month_loss).addClass("active").siblings("li").removeClass("active");
+        }
+    }
     //更新资金利用率数据
     updateMoneyRate();
 

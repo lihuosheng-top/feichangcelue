@@ -908,10 +908,11 @@ function updateMoneyRate(){
 // });
 
 //TODO：
-//小数点传值3
+
 $(function () {
 
     var day_loss = $("#buy >p").eq(0).find("i").html()-3 ;//按天
+
     // (day_loss)
     // $("#stop-loss_ul > li:eq(1)").click();
     var datas =$("#buy >p").eq(0).find("i").html();
@@ -948,7 +949,6 @@ $("#stop-loss_ul > li").click(function(e){
     //触发止损
     $("#stop-loss_ul > li ").each(function(i, o){
         var stop_loss = parseInt( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
-//      var stop_loss = parseFloat( buy_price * 10000 / ly_arr[i] ) * stopLossRate + buy_price*10000;
         var index_num= i+3;
         stop_loss = parseInt(stop_loss);
 //      stop_loss= parseFloat(stop_loss);
@@ -1117,7 +1117,7 @@ $("#popup-confirm-btn").click(function(e){
 //根据股票实时价格 更新弹出层的交易数量
 function updateStockNumber(){
     $("#t_stock_name").html($("#stockName").html());
-    var t_principal=parseInt($('#buy_number').val());
+    var t_principal=parseFloat($('#buy_number').val());
     if($('#buy_number').val()==''||$('#buy_number').val()=='0'){t_principal=1}
     $("#t_principal").html(t_principal + "万元");
     var nowPrice = parseFloat( $("#nowPrice").html() );

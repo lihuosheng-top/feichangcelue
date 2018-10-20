@@ -146,7 +146,8 @@ var forgot={
 		//下一步2
 		$('#step3-btn').click(function(){
         	$('#pwd,#cpwd').trigger('keyup');
-        	var phones =getCookieValue('phone');
+        	// var phones =getCookieValue('phone');
+			var phones = $.cookie('phone');
         	if($('#pwd').val().length!=0&&$('#cpwd').val()==$('#pwd').val()){
         		$.ajax({
            				type:"post",
@@ -162,6 +163,7 @@ var forgot={
                             }
 	                        if(data.code == 1){
 	                            alert(data.msg);
+                                $.cookie('phone', null);
                                 window.location.href='./reset_result.html';
 	                        }
            				}

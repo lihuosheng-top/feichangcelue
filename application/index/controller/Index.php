@@ -1207,6 +1207,40 @@ class Index extends Home
 
     }
 
+    public function ajax_free(Request $request)
+    {
+        if ($request->isPost("post.")) {
+
+            if($_SESSION['yuebeishu']){
+                unset($_SESSION['yuebeishu']);
+            }
+            if($_SESSION['ajax_html']){
+                unset($_SESSION['ajax_html']);
+            }
+            if($_SESSION['day_select']){
+                unset($_SESSION['month_select']);
+            }
+            $Con_Lists = $request->param('free_ajax_html');
+            $beishu = $request->param('freebeishu');
+            $day_select =$request->param('free_day_select');
+            $DataCon = round(($Con_Lists / 10000), 2);
+            if ($Con_Lists != 0) {
+//                session(array('Con_Lists'=>$DataCon,'expire'=>600));
+                $_SESSION["free_ajax_html"] = $DataCon;
+            }
+            if ($beishu != 0) {
+                $_SESSION["freebeishu"]  = $beishu;
+            }
+            if($day_select){
+                $_SESSION['free_day_select'] =$day_select;
+            }
+            $this->ajax_success("获取成功", array("data" => $_SESSION["free_ajax_html"], "DataCon" => $Con_Lists,"freebeishu"=>$beishu,"free_day_select"=>$day_select));
+        }
+
+    }
+
+
+
     /**
      **************李火生*******************
      * @return \think\response\View
