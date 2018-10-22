@@ -817,7 +817,7 @@ class Index extends Home
                 }
                 $this->success("注册成功", url("/"));
             }else{
-                $no_content ="注册成功奖励'.$usableSum.'";
+                $no_content ="注册成功奖励'.$usableSum.'元，请留意账户";
                 $this->sendMobileToInformation($mobile,$no_content);
                 $this->success("注册成功", url("/"));
             }
