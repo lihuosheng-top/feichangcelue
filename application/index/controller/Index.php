@@ -799,11 +799,12 @@ class Index extends Home
                    Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+$invitingAwards]);
                }
                $inv_content ="成功被邀请加入获得奖励".$invitingAwards."元,注册成功奖励".$usableSum."元";
+               $all_invitingAwards =$invitingAwards+$usableSum;
                 /*被邀请人（新注册）*/
                 $invited_data =[
                     'memberId'=>$id,
                     'flow'=>1, //收入
-                    'amount'=>$invitingAwards,
+                    'amount'=>$all_invitingAwards,
                     'remarks'=>$inv_content,
                     'createTime'=>$create_time
                 ];
