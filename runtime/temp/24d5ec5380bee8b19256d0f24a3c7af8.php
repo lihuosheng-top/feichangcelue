@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540184730;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540189316;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -452,13 +452,15 @@
 						<?php if(!empty($news_informations)): ?>
 						<div class="bd">
 
-							<?php if(is_array($news_informations) || $news_informations instanceof \think\Collection || $news_informations instanceof \think\Paginator): $i = 0; $__LIST__ = $news_informations;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+
 							<span id="bd-one">
+								<?php if(is_array($news_informations) || $news_informations instanceof \think\Collection || $news_informations instanceof \think\Paginator): $i = 0; $__LIST__ = $news_informations;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
 								<li>
-									<i class="dw_Cbg  "></i>
+									<i class="dw_Cbg "></i>
 									<span class="date"><?php echo $vo['createTime']; ?></span>
-									<a id="bd_colors" href="#" target="_blank">■ 【尚牛在线】<?php echo $vo['title']; ?></a>
+									<a id="bd_colors" class="bd_cid" data-id="bd_colors_<?php echo $vo['id']; ?>" href="#javascript:void(0)" >■ 【尚牛在线】<?php echo $vo['title']; ?></a>
 							</li>
+										<?php endforeach; endif; else: echo "" ;endif; ?>
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
 								<!--<a id="bd_colors" href="/aboutus/2242.html" target="_blank">■ 【宝尚配资】从四大异象来剖析当下市场 A…</a>-->
 							<!--</li>-->
@@ -478,11 +480,13 @@
 								<!--<a id="bd_colors" href="/aboutus/2237.html" target="_blank">■ 【宝尚配资】IPO发审会暂停一周背后：“…</a>-->
 							<!--</li>-->
 							</span>
-							<?php endforeach; endif; else: echo "" ;endif; ?>
-							<!--<span id="bd-two">-->
-                            <!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-07</span>-->
-							<!--<a id="bd_colors" href="/aboutus/2210.html" target="_blank">■ 紧急通知（收款账户更换）</a>-->
-							<!--</li>-->
+
+							<span id="bd-two">
+								<?php if(is_array($news_informations_tow) || $news_informations_tow instanceof \think\Collection || $news_informations_tow instanceof \think\Paginator): $i = 0; $__LIST__ = $news_informations_tow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?>
+                            <li><i class="dw_Cbg  "></i><span class="date"><?php echo $value['createTime']; ?></span>
+							<a id="bd_colors" href="#" class="bd_colors_<?php echo $value['id']; ?>" target="_blank">■ <?php echo $value['title']; ?></a>
+							</li>
+								<?php endforeach; endif; else: echo "" ;endif; ?>
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>-->
 								<!--<a id="bd_colors" href="/aboutus/2209.html" target="_blank">■ 国庆期间软件变更通知</a>-->
 							<!--</li>-->
@@ -501,7 +505,7 @@
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-06-16</span>-->
 								<!--<a id="bd_colors" href="/aboutus/1859.html" target="_blank">■ 2018端午节放假通知</a>-->
 							<!--</li>-->
-							<!--</span>-->
+							</span>
 
 						</div>
 						<?php endif; ?>
@@ -1057,6 +1061,33 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+	<!--资讯点击进去传ID给后台进入详情页面-->
+		<script >
+            $(".bd_cid").click(function () {
+                var article_id = $(this).data("id");
+                var article_ids = article_id.split('_')[2];
+                $.ajax({
+                    type:'POST',
+                    url:'<?php echo url("index/index/new_id"); ?>',
+                    dataType: 'json',
+                    data:{
+                        "article_id":article_ids
+                    },
+                    success: function(data){
+                        console.log(data);
+                        window.location.href="./news_t";
+                    },
+                    error:function(data) {
+                        console.log("获取失败");
+                    },
+                });
+
+            });
+
+
+
+		</script>
+
 
 </body>
 </html>

@@ -323,13 +323,15 @@
 						{if !empty($news_informations)}
 						<div class="bd">
 
-							{volist name ="news_informations" id ='vo'}
+
 							<span id="bd-one">
+								{volist name ="news_informations" id ='vo'}
 								<li>
-									<i class="dw_Cbg  "></i>
+									<i class="dw_Cbg "></i>
 									<span class="date">{$vo.createTime}</span>
-									<a id="bd_colors" href="#" target="_blank">■ 【尚牛在线】{$vo.title}</a>
+									<a id="bd_colors" class="bd_cid" data-id="bd_colors_{$vo.id}" href="#javascript:void(0)" >■ 【尚牛在线】{$vo.title}</a>
 							</li>
+										{/volist}
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
 								<!--<a id="bd_colors" href="/aboutus/2242.html" target="_blank">■ 【宝尚配资】从四大异象来剖析当下市场 A…</a>-->
 							<!--</li>-->
@@ -349,11 +351,13 @@
 								<!--<a id="bd_colors" href="/aboutus/2237.html" target="_blank">■ 【宝尚配资】IPO发审会暂停一周背后：“…</a>-->
 							<!--</li>-->
 							</span>
-							{/volist}
-							<!--<span id="bd-two">-->
-                            <!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-07</span>-->
-							<!--<a id="bd_colors" href="/aboutus/2210.html" target="_blank">■ 紧急通知（收款账户更换）</a>-->
-							<!--</li>-->
+
+							<span id="bd-two">
+								{volist name='news_informations_tow' id ='value'}
+                            <li><i class="dw_Cbg  "></i><span class="date">{$value.createTime}</span>
+							<a id="bd_colors" href="#" class="bd_colors_{$value.id}" target="_blank">■ {$value.title}</a>
+							</li>
+								{/volist}
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>-->
 								<!--<a id="bd_colors" href="/aboutus/2209.html" target="_blank">■ 国庆期间软件变更通知</a>-->
 							<!--</li>-->
@@ -372,7 +376,7 @@
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-06-16</span>-->
 								<!--<a id="bd_colors" href="/aboutus/1859.html" target="_blank">■ 2018端午节放假通知</a>-->
 							<!--</li>-->
-							<!--</span>-->
+							</span>
 
 						</div>
 						{/if}
@@ -603,6 +607,33 @@
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
+	<!--资讯点击进去传ID给后台进入详情页面-->
+		<script >
+            $(".bd_cid").click(function () {
+                var article_id = $(this).data("id");
+                var article_ids = article_id.split('_')[2];
+                $.ajax({
+                    type:'POST',
+                    url:'{:url("index/index/new_id")}',
+                    dataType: 'json',
+                    data:{
+                        "article_id":article_ids
+                    },
+                    success: function(data){
+                        console.log(data);
+                        window.location.href="./news_t";
+                    },
+                    error:function(data) {
+                        console.log("获取失败");
+                    },
+                });
+
+            });
+
+
+
+		</script>
+
 
 </body>
 </html>

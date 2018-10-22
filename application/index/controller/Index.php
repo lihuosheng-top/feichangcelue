@@ -1303,7 +1303,7 @@ class Index extends Home
         if (is_mobile_request()) {
             return view('index/mobile/news_t');
         }else{
-            return view('aboutus');
+            return view('news_t');
         }
     }
     /**
@@ -1608,9 +1608,11 @@ class Index extends Home
      */
 
     public function  zixun(){
-        $news_informations =Db::name('article')->order('createTime','desc')->select();
+        $news_informations =Db::name('article')->order('createTime','desc')->limit(7)->select();
 //      halt($news_infomations);
         $this->assign('news_informations',$news_informations);
+        $news_informations_tow =Db::name('article')->order('createTime','desc')->limit(7,7)->select();
+        $this->assign('news_informations_tow',$news_informations_tow);
     }
 
 

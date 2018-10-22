@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\news_t.html";i:1540185297;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\news_t.html";i:1540189608;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,5 +77,24 @@
     </div>
 </div>
 	
+<script src="./public/static/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
+<script src="./public/static/home/js/moblie/mui.min.js"></script>
+<script src="./public/static/home/js/moblie/reg.js"></script>
+<script>
+    $.ajax({
+        type:'POST',
+        url:'<?php echo url("index/index/news_t"); ?>',
+        dataType: 'json',
+        success: function(data){
+            console.log(data);
+//            $(".article_title").html(data.data.title);
+//            $(".article_create_time").html(data.data.createTime);
+//            $(".contbox").html(data.data.content);
+        },
+        error:function(data) {
+            console.log("失败");
+        },
+    });
+</script>
 </body>
 </html>
