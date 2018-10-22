@@ -746,7 +746,10 @@ class Index extends Home
             error("参数填写不正确");
         }*/
 
-        $freebleSun =getSysParamsByKey("freebleSun");
+        $freebleSun =getSysParamsByKey("freebleSun"); //免费体验的金额
+        $usableSum =getSysParamsByKey("usableSum"); //注册成功奖励的金钱
+        $invitingAwards =getSysParamsByKey("invitingAwards"); //注册成功奖励的金钱
+
         if (strlen($nick_name) < 6) {
             $this->error("用户名应不少于6个字符");
         }
@@ -765,7 +768,7 @@ class Index extends Home
         $data['password'] = md5($login_pwd);
         $data['createTime'] = date("Y-m-d H:i:s");
         $data['freebleSum'] = $freebleSun;  //体验金（不能提现）
-
+        $data['usableSum']  = $usableSum ; //注册成功奖励的
 
         if(!empty($inviterId)){
             $data['inviterId'] =$inviterId;
@@ -775,42 +778,50 @@ class Index extends Home
         }
 
         $id = Db::table("xh_member")->insertGetId($data);
+
         if ($id > 0) {
             /*要求成功之后得对应的奖励10元进入账户（注册成功,被邀请人和邀请人都奖励10元）*/
             if(!empty($inviterId)){
                 $create_time = date("Y-m-d H:i:s");
+                $create_content ="成功邀请一人注册账户奖励'.$invitingAwards.'元";
                 /*邀请人*/
                 $active_inviter_data =[
                     'memberId'=>$inviterId,
                     'flow'=>1, //收入
-                    'amount'=>10, //10元钱
-                    'remarks'=>'成功邀请一人注册账户奖励10元',
+                    'amount'=>$invitingAwards, //10元钱
+                    'remarks'=>$create_content,
                     'createTime'=>$create_time
                 ];
                 $reward_one =Db::table('xh_member_fundrecord')->insertGetId($active_inviter_data);
                 $active_inviter_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$inviterId)->find();
                if(!empty($active_inviter_data_usableSum)){
-                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
-                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+10]);
+                   Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+$invitingAwards]);
+                   Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+$invitingAwards]);
                }
+               $inv_content ="成功被邀请加入获得奖励'.$invitingAwards.'元,注册成功奖励'.$usableSum.'";
                 /*被邀请人（新注册）*/
                 $invited_data =[
                     'memberId'=>$id,
                     'flow'=>1, //收入
-                    'amount'=>10,
-                    'remarks'=>'成功被邀请加入获得奖励10元',
+                    'amount'=>$invitingAwards,
+                    'remarks'=>$inv_content,
                     'createTime'=>$create_time
                 ];
                 $reward_tow =Db::table('xh_member_fundrecord')->insertGetId($invited_data);
                //对余额进行修改(先查在改)
                 $invite_data_usableSum =Db::table('xh_member')->field('usableSum')->where('id',$id)->find();
                 if(!empty($invite_data_usableSum)){
-                    Db::table('xh_member')->where('id',$id)->update(['usableSum'=>$invite_data_usableSum['usableSum']+10]);
-                    Db::table('xh_member_fundrecord')->where('id',$reward_tow)->update(['usableSum'=>$invite_data_usableSum['usableSum']+10]);
+                    Db::table('xh_member')->where('id',$id)->update(['usableSum'=>$invite_data_usableSum['usableSum']+$invitingAwards]);
+                    Db::table('xh_member_fundrecord')->where('id',$reward_tow)->update(['usableSum'=>$invite_data_usableSum['usableSum']+$invitingAwards]);
+                    $this->sendMobileToInformation($mobile,$inv_content);
                 }
+                $this->success("注册成功", url("/"));
+            }else{
+                $no_content ="注册成功奖励'.'$usableSum'.'";
+                $this->sendMobileToInformation($mobile,$no_content);
+                $this->success("注册成功", url("/"));
             }
 
-            $this->success("注册成功", url("/"));
         } else {
             $this->error("注册失败", url("/"));
         }
