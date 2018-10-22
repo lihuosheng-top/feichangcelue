@@ -15,9 +15,9 @@ table {
 .pz-day-form table tr {
     line-height: 35px;
 }
-.w{width:1000px;min-width:1000px;margin:0 auto; }
+.w{width:1000px;min-width:1000px;margin: 39px auto;}
 .pz-process{width:1000px;margin:10px auto 20px;}
-.pz-type-swith{margin-top: 19px}
+.pz-type-swith{margin-top: 145px;}
 .pz-type-swith ul{overflow: hidden;top: 1px;position:relative;}
 .nav_listdown ul{
 	z-index: 999;
