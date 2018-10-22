@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1539930035;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1540174862;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
 </head>
 
 <body>
