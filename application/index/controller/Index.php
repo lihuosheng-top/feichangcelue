@@ -783,7 +783,7 @@ class Index extends Home
             /*要求成功之后得对应的奖励10元进入账户（注册成功,被邀请人和邀请人都奖励10元）*/
             if(!empty($inviterId)){
                 $create_time = date("Y-m-d H:i:s");
-                $create_content ="成功邀请一人注册账户奖励'.$invitingAwards.'元";
+                $create_content ="成功邀请一人注册账户奖励".$invitingAwards."元";
                 /*邀请人*/
                 $active_inviter_data =[
                     'memberId'=>$inviterId,
@@ -798,7 +798,7 @@ class Index extends Home
                    Db::table('xh_member')->where('id',$inviterId)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+$invitingAwards]);
                    Db::table('xh_member_fundrecord')->where('id',$reward_one)->update(['usableSum'=>$active_inviter_data_usableSum['usableSum']+$invitingAwards]);
                }
-               $inv_content ="成功被邀请加入获得奖励'.$invitingAwards.'元,注册成功奖励'.$usableSum.'";
+               $inv_content ="成功被邀请加入获得奖励".$invitingAwards."元,注册成功奖励".$usableSum."元";
                 /*被邀请人（新注册）*/
                 $invited_data =[
                     'memberId'=>$id,
@@ -817,7 +817,7 @@ class Index extends Home
                 }
                 $this->success("注册成功", url("/"));
             }else{
-                $no_content ="注册成功奖励'.$usableSum.'元，请留意账户";
+                $no_content ="注册成功奖励".$usableSum."元，请留意账户";
                 $this->sendMobileToInformation($mobile,$no_content);
                 $this->success("注册成功", url("/"));
             }
