@@ -124,10 +124,15 @@ class Index extends Home
 //            $this->assign('earnSum', $earnSum);//总盈亏
             $this->assign("buyList", $buyList);
             return view('index/mobile/index');
+        }else{
+            $this->zixun();
+            return view('index');
         }
 
-        return view('index');
+
     }
+
+
 
     /**
      **************李火生*******************
@@ -1295,7 +1300,11 @@ class Index extends Home
                 }
             }
         }
-        return view('index/mobile/news_t');
+        if (is_mobile_request()) {
+            return view('index/mobile/news_t');
+        }else{
+            return view('aboutus');
+        }
     }
     /**
      **************李火生*******************
@@ -1597,6 +1606,12 @@ class Index extends Home
     /**
      * pC端首页最底部连接结束
      */
+
+    public function  zixun(){
+        $news_informations =Db::name('article')->order('createTime','desc')->select();
+//      halt($news_infomations);
+        $this->assign('news_informations',$news_informations);
+    }
 
 
 

@@ -317,60 +317,65 @@
 				<div class="pb6-r">
 					<div class="gonggaoBox">
 						<div class="hd">
-							<span id="hd-one">股票资讯 <a href="/neican/index.html" target="_blank" class="gg">更多...</a></span>
-							<span id="hd-two">网站公告 <a href="/gonggao/index.html" target="_blank" class="gg">更多...</a></span>
+							<span id="hd-one">股票资讯 <a href="#" target="_blank" class="gg">更多...</a></span>
+							<span id="hd-two">网站公告 <a href="#" target="_blank" class="gg">更多...</a></span>
 						</div>
+						{if !empty($news_informations)}
 						<div class="bd">
 
+							{volist name ="news_informations" id ='vo'}
 							<span id="bd-one">
-                                                        <li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>
-							<a id="bd_colors" href="/aboutus/2243.html" target="_blank">■ 【宝尚配资】正在熊周期的底部顶住别倒下越…</a>
+								<li>
+									<i class="dw_Cbg  "></i>
+									<span class="date">{$vo.createTime}</span>
+									<a id="bd_colors" href="#" target="_blank">■ 【尚牛在线】{$vo.title}</a>
 							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>
-								<a id="bd_colors" href="/aboutus/2242.html" target="_blank">■ 【宝尚配资】从四大异象来剖析当下市场 A…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>
-								<a id="bd_colors" href="/aboutus/2241.html" target="_blank">■ 【宝尚配资】每次股市大跌都是财富上台阶的…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>
-								<a id="bd_colors" href="/aboutus/2240.html" target="_blank">■ 【宝尚配资】越阴暗越悲壮或许机会越大播种…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>
-								<a id="bd_colors" href="/aboutus/2239.html" target="_blank">■ 【宝尚配资】美国财政部：包括中国在内的主…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>
-								<a id="bd_colors" href="/aboutus/2238.html" target="_blank">■ 【宝尚配资】驰援上市公司不止深圳！广州、…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-10-17</span>
-								<a id="bd_colors" href="/aboutus/2237.html" target="_blank">■ 【宝尚配资】IPO发审会暂停一周背后：“…</a>
-							</li>
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2242.html" target="_blank">■ 【宝尚配资】从四大异象来剖析当下市场 A…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2241.html" target="_blank">■ 【宝尚配资】每次股市大跌都是财富上台阶的…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2240.html" target="_blank">■ 【宝尚配资】越阴暗越悲壮或许机会越大播种…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2239.html" target="_blank">■ 【宝尚配资】美国财政部：包括中国在内的主…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2238.html" target="_blank">■ 【宝尚配资】驰援上市公司不止深圳！广州、…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-17</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2237.html" target="_blank">■ 【宝尚配资】IPO发审会暂停一周背后：“…</a>-->
+							<!--</li>-->
 							</span>
-							<span id="bd-two">
-                            <li><i class="dw_Cbg  "></i><span class="date">2018-10-07</span>
-							<a id="bd_colors" href="/aboutus/2210.html" target="_blank">■ 紧急通知（收款账户更换）</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>
-								<a id="bd_colors" href="/aboutus/2209.html" target="_blank">■ 国庆期间软件变更通知</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-09-27</span>
-								<a id="bd_colors" href="/aboutus/2205.html" target="_blank">■ 2018年国庆节放假通知！</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-09-23</span>
-								<a id="bd_colors" href="/aboutus/2195.html" target="_blank">■ 2018中秋【宝尚】放假通知</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-09-03</span>
-								<a id="bd_colors" href="/aboutus/2133.html" target="_blank">■ 特大好消息：迎中秋，庆国庆配资送豪…</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-07-26</span>
-								<a id="bd_colors" href="/aboutus/2015.html" target="_blank">■ 最新通知，限制购买的股票。</a>
-							</li>
-							<li><i class="dw_Cbg  "></i><span class="date">2018-06-16</span>
-								<a id="bd_colors" href="/aboutus/1859.html" target="_blank">■ 2018端午节放假通知</a>
-							</li>
-							</span>
+							{/volist}
+							<!--<span id="bd-two">-->
+                            <!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-07</span>-->
+							<!--<a id="bd_colors" href="/aboutus/2210.html" target="_blank">■ 紧急通知（收款账户更换）</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2209.html" target="_blank">■ 国庆期间软件变更通知</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-27</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2205.html" target="_blank">■ 2018年国庆节放假通知！</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-23</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2195.html" target="_blank">■ 2018中秋【宝尚】放假通知</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-03</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2133.html" target="_blank">■ 特大好消息：迎中秋，庆国庆配资送豪…</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-07-26</span>-->
+								<!--<a id="bd_colors" href="/aboutus/2015.html" target="_blank">■ 最新通知，限制购买的股票。</a>-->
+							<!--</li>-->
+							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-06-16</span>-->
+								<!--<a id="bd_colors" href="/aboutus/1859.html" target="_blank">■ 2018端午节放假通知</a>-->
+							<!--</li>-->
+							<!--</span>-->
 
 						</div>
-
+						{/if}
 					</div>
 					<!--切换 end-->
 				</div>
