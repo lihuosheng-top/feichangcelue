@@ -1557,8 +1557,46 @@ class Index extends Home
         return view('pc_free_history');
     }
 
+    /**
+     * pC端首页最底部连接开始
+     */
+//    public  function  PcPublicFoot(){
+//        return view('PcPublicFoot');
+//    }
+    public  function  PcBuyDay(){
+        return view('pc_buy_day');
+    }
+    public  function  PcBuyMonth(){
+        return view('pc_buy_month');
+    }
+    public  function  PcBuyFree(){
+        return view('pc_buy_free');
+    }
+    public  function  atlxjj(){
+        return view('atlxjj');
+    }
+    public  function  aylxjj(){
+        return view('aylxjj');
+    }
+    public  function  mxlxjj(){
+        return view('mxlxjj');
+    }
+    public  function  rhzchy(){
+        return view('rhzchy');
+    }
+    public  function  rhsmrz(){
+        return view('rhsmrz');
+    }
+    public  function  rhjxcz(){
+        return view('rhjxcz');
+    }
+    public  function  rhsqpz(){
+        return view('rhsqpz');
+    }
 
-
+    /**
+     * pC端首页最底部连接结束
+     */
 
 
 

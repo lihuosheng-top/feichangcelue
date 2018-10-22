@@ -197,6 +197,7 @@ class Jobs
         Db::transaction(function () {
             $t1 = time();
             require_once(dirname(__FILE__) . "/../../index/controller/Home.php");
+
             $delayFee = \app\index\controller\getSysParamsByKey("delayFee");
             if (!is_numeric($delayFee) || $delayFee <= 0) {
                 die("递延费({$delayFee})不正确");

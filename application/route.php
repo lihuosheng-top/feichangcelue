@@ -65,7 +65,22 @@ return [
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
     'PcSell'=>'index/index/PcSell',//pc端配资点卖
     'PcFreeSell'=>'index/index/PcFreeSell',//pc端配资点卖（免费体验）
-
+    /**
+     * pC端首页最底部连接开始
+     */
+    'PcBuyDay'=>'index/index/PcBuyDay', //pc底部股票配资（按天）
+    'PcBuyMonth'=>'index/index/PcBuyMonth', //pc底部股票配资（按月）
+    'PcBuyFree'=>'index/index/PcBuyFree', //pc底部股票配资(免费体验）
+    'atlxjj'=>'index/index/atlxjj', //按天利息讲解
+    'aylxjj'=>'index/index/aylxjj', //按月利息讲解
+    'mxlxjj'=>'index/index/mxlxjj', //免费利息讲解
+    'rhzchy'=>'index/index/rhzchy', //如何注册会员
+    'rhsmrz'=>'index/index/rhsmrz', //如何实名验证
+    'rhjxcz'=>'index/index/rhjxcz', //如何进行充值
+    'rhsqpz'=>'index/index/rhsqpz', //如何申请配资
+    /**
+     * pC端首页下面的连接结束
+     */
 
 
 

@@ -744,20 +744,7 @@ class Ucenter extends Home
                 if($dealAmount<0.06){
                     error('买入的金额太低，最低交易600');
                 }
-//                if($surplus != -($dealAmount * 10000 *$lossLine/$Multiple+$dealAmount*10000)){
-//                    error("亏损警戒线数据错误");
-//                }
-                //公式：倍数杠杆/100*保证金*天数*倍数
-//                if($publicFee !=$levers_multiples*$guaranteeFee*$buy_day_num*$Multiple/100){
-//                    error("交易综合费数据错误");
-//                }
-                //当过了配资天数之后自动每天的递延费(倍数对应的倍率*保证金*倍数*1天)
-//                if($delayFee !=$levers_multiples*$guaranteeFee*$Multiple){
-//                    error("递延费数据错误");
-//                }
-//                if(abs($loss) != (int)($guaranteeFee * $stopLossRate+$guaranteeFee*$Multiple)){
-//                        error("触发止损数据错误");
-//                }
+//
                 $create_date = date("Y-m-d H:i:s");
                 $curDate = date("Y-m-d");
                 $now_time =time();
