@@ -1,0 +1,455 @@
+---------------------------------------------------------------
+[ 2018-10-22T16:52:28+08:00 ] ::1 ::1 GET /feichangcelue/index.html
+[ info ] localhost/feichangcelue/index.html [运行时间：0.693500s][吞吐率：1.44req/s] [内存消耗：3,983.55kb] [文件加载：71]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/PcBuyMonth',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.199171s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.198375s ]
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'news_informations',
+  3 => 'news_informations_tow',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033505s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.013143s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.012682s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.012252s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.011924s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.012061s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.011304s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.011652s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.011116s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.011614s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.011645s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011762s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.012455s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.011562s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7,7 [ RunTime:0.011798s ]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:52]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:38]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:43]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:50]
+[ error ] [8]未定义变量: usableSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:55]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:162]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:232]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:233]
+---------------------------------------------------------------
+[ 2018-10-22T16:52:28+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] localhost/feichangcelue/public/static/static/home/js/moblie/reg.js [运行时间：0.463765s][吞吐率：2.16req/s] [内存消耗：1,994.86kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'js',
+  'moblie' => 'reg.js',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.062319s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.067762s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:28+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] localhost/feichangcelue/public/static/static/home/js/moblie/mui.min.js [运行时间：0.460509s][吞吐率：2.17req/s] [内存消耗：1,994.96kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'js',
+  'moblie' => 'mui.min.js',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.023781s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.030821s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:29+08:00 ] ::1 ::1 GET /feichangcelue/public/static/home/img/index_tr_up.jpg
+[ info ] localhost/feichangcelue/public/static/home/img/index_tr_up.jpg [运行时间：0.351450s][吞吐率：2.85req/s] [内存消耗：1,994.90kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/public/static/home/css/index.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42',
+)
+[ info ] [ PARAM ] array (
+  'img' => 'index_tr_up.jpg',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.020390s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.101367s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:29+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/mui.min.js
+[ info ] localhost/feichangcelue/public/static/static/home/js/moblie/mui.min.js [运行时间：0.196088s][吞吐率：5.10req/s] [内存消耗：1,994.96kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'js',
+  'moblie' => 'mui.min.js',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010108s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.034011s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:30+08:00 ] ::1 ::1 GET /feichangcelue/public/static/static/home/js/moblie/reg.js
+[ info ] localhost/feichangcelue/public/static/static/home/js/moblie/reg.js [运行时间：0.279753s][吞吐率：3.57req/s] [内存消耗：1,994.86kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => '*/*',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'js',
+  'moblie' => 'reg.js',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.029072s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.040003s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:30+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.373452s][吞吐率：2.68req/s] [内存消耗：3,252.31kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010046s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.064443s ]
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033777s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.012168s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.011467s ]
+---------------------------------------------------------------
+[ 2018-10-22T16:52:31+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：0.940744s][吞吐率：1.06req/s] [内存消耗：3,637.08kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015111s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.073579s ]
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'res_bei',
+  3 => 'res_money',
+  4 => 'cordon_line',
+  5 => 'loss_line',
+  6 => 'levers_1',
+  7 => 'levers_2',
+  8 => 'levers_3',
+  9 => 'levers_4',
+  10 => 'levers_5',
+  11 => 'levers_6',
+  12 => 'levers_7',
+  13 => 'levers_8',
+  14 => 'levers_9',
+  15 => 'levers_10',
+  16 => 'lossLine',
+  17 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032211s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.016673s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.017238s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.016862s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.016504s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.018940s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.016470s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.017571s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.017560s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.018093s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017590s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.016837s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.017387s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.016890s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.018937s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.017010s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.017280s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.017272s ]
+---------------------------------------------------------------
+[ 2018-10-22T16:52:33+08:00 ] ::1 ::1 POST /feichangcelue/index/index/new_id.html
+[ info ] localhost/feichangcelue/index/index/new_id.html [运行时间：0.204464s][吞吐率：4.89req/s] [内存消耗：2,602.87kb] [文件加载：52]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'new_id',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '13',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540198350; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540198350',
+)
+[ info ] [ PARAM ] array (
+  'article_id' => '40',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010982s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.018788s ]
+[ info ] [ RUN ] app\index\controller\Index->new_id[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-22T16:52:33+08:00 ] ::1 ::1 GET /feichangcelue/news_t
+[ info ] localhost/feichangcelue/news_t [运行时间：0.197215s][吞吐率：5.07req/s] [内存消耗：2,901.80kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'news_t',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540198350; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540198350',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.009932s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021150s ]
+[ info ] [ RUN ] app\index\controller\Index->news_t[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\news_t.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+) ]
+[ info ] [ LOG ] INIT File
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\abe5da24479cd9ab956614c3140c77d5.php:41]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\abe5da24479cd9ab956614c3140c77d5.php:46]
+[ error ] [8]未定义数组索引: member[D:\phpStudy\WWW\feichangcelue\runtime\temp\abe5da24479cd9ab956614c3140c77d5.php:53]
+[ error ] [8]未定义变量: usableSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\abe5da24479cd9ab956614c3140c77d5.php:58]
+---------------------------------------------------------------
+[ 2018-10-22T16:52:34+08:00 ] ::1 ::1 POST /feichangcelue/news_t.html
+[ info ] localhost/feichangcelue/news_t.html [运行时间：0.239123s][吞吐率：4.18req/s] [内存消耗：3,302.65kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'news_t',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/news_t',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'firstEnterUrlInSession=http%3A//localhost/feichangcelue/index.html; PHPSESSID=keuhr1o8nfd8tqn3g1jnqlcm42; pageReferrInSession=http%3A//localhost/feichangcelue/PcBuyMonth; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540198350; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540198350',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.007607s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.018667s ]
+[ info ] [ RUN ] app\index\controller\Index->news_t[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032719s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.013433s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` WHERE  `id` = 40 LIMIT 1 [ RunTime:0.012694s ]
