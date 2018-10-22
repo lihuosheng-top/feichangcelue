@@ -784,14 +784,14 @@
 .pb6 .pb6-l ul li .icon {
     position: relative;
     left: 73px;
-    width: 150px;
+    width: 235px;
     height: 150px;
     margin-bottom: 12px;
     top: 15px;
 }
 
 .pb6 .pb6-l ul li .icon.icon-left {
-    background: url(../img/apps.png) no-repeat;
+    background: url(../img/moblie/fcml2.png) no-repeat;
     background-position: 1px 1px;
 }
 
@@ -921,7 +921,7 @@
 .pb6 .pb6-r .gonggaoBox .hd{
     float: left;
     height: 70px;
-    width: 895px;
+    width: 1199px;
     border-bottom: 1px solid #ddd;
 }
 .pb6 .pb6-r .gonggaoBox .hd span{
@@ -935,7 +935,7 @@
 }
 
 .pb6 .pb6-r .gonggaoBox .hd #hd-two{
-    margin-left: 335px; 
+    margin-left: 450px;
 }
 .pb6 .pb6-r .gonggaoBox .hd span a{
     color: #F89C12;
@@ -946,7 +946,7 @@
     margin-top: 10px;
     font-size: 12px;
     line-height: 35px;
-    width: 415px;
+    width: 542px;
     padding-left:28px;
     border-right: 1px solid #F0F0F0;
 }
@@ -955,9 +955,8 @@
     margin-top: 10px;
     font-size: 14px;
     line-height: 35px;
-    width: 415px;
-    padding-left:23px; 
-
+    width: 542px;
+    padding-left: 27px;
 }
 #bd_colors {
     color: #666666;
