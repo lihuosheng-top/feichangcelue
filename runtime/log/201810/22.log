@@ -1,0 +1,162 @@
+---------------------------------------------------------------
+[ 2018-10-22T11:44:28+08:00 ] ::1 ::1 GET /feichangcelue/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036445s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.018699s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.018061s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.015224s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.016917s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.017120s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.016465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.017215s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.017045s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.017597s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.016541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017296s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016168s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.021317s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016786s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.016236s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016946s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.016283s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016668s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603238' LIMIT 1 [ RunTime:0.015728s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015000s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015236s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015064s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015110s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015894s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015021s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1340 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.018056s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016273s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.017101s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015901s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016405s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.014614s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016309s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.020451s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.017099s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015814s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016353s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.014903s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.019316s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015841s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016108s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.015808s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1340 LIMIT 1 [ RunTime:0.016570s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1 [ RunTime:0.016061s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015116s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+---------------------------------------------------------------
+[ 2018-10-22T11:44:29+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039625s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016799s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.014726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015193s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.017539s ]
+---------------------------------------------------------------
+[ 2018-10-22T11:44:29+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038955s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016764s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015507s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015907s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015651s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.014792s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.014194s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.016119s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.016173s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.017300s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.016033s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015158s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017607s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015919s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.016746s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.016104s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.013483s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015863s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.013102s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.025749s ]
+---------------------------------------------------------------
+[ 2018-10-22T11:51:45+08:00 ] ::1 ::1 GET /feichangcelue/
+[ sql ] [ DB ] CONNECT:[ UseTime:0.048701s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017166s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016945s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.018371s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016137s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.017598s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.018267s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.019439s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.018022s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603238' LIMIT 1 [ RunTime:0.017408s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017196s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019396s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016408s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017530s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016110s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014999s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1340 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.017288s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.014860s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015949s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016035s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015529s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016207s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016123s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016073s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016367s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016031s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016369s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015995s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.015774s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.016224s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.014725s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016054s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1340 LIMIT 1 [ RunTime:0.015468s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1340  AND `status` = 1 [ RunTime:0.015851s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016853s ]
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组下标: 1
+[ error ] [8]未定义数组索引: ajax_html
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [2]trim() expects parameter 1 to be string, array given
+[ error ] [8]未定义变量: count
+[ error ] [8]未定义变量: earnSum
+---------------------------------------------------------------
+[ 2018-10-22T11:51:47+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034437s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014791s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.012132s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.012358s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.013446s ]
+---------------------------------------------------------------
+[ 2018-10-22T11:51:47+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ sql ] [ DB ] CONNECT:[ UseTime:0.044550s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016557s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1340 ) LIMIT 1 [ RunTime:0.012937s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015714s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015676s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015845s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.013755s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.015406s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.015086s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015891s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.016094s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015824s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015947s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.014015s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014009s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.013312s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.016410s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.013962s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.016146s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.014152s ]
