@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540194611;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540199610;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -145,6 +145,13 @@
 			.item a {
 				display: block;
 				overflow: hidden;
+			}
+			.bd_cid{
+				width: 300px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: inline-block;
 			}
 			/*隐藏*/
 			/*.pz-type-swith{*/
@@ -461,24 +468,7 @@
 									<a id="bd_colors" class="bd_cid" data-id="bd_colors_<?php echo $vo['id']; ?>" href="#javascript:void(0)" >■ 【尚牛在线】<?php echo $vo['title']; ?></a>
 							</li>
 										<?php endforeach; endif; else: echo "" ;endif; ?>
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2242.html" target="_blank">■ 【宝尚配资】从四大异象来剖析当下市场 A…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-19</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2241.html" target="_blank">■ 【宝尚配资】每次股市大跌都是财富上台阶的…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2240.html" target="_blank">■ 【宝尚配资】越阴暗越悲壮或许机会越大播种…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2239.html" target="_blank">■ 【宝尚配资】美国财政部：包括中国在内的主…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-18</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2238.html" target="_blank">■ 【宝尚配资】驰援上市公司不止深圳！广州、…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-10-17</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2237.html" target="_blank">■ 【宝尚配资】IPO发审会暂停一周背后：“…</a>-->
-							<!--</li>-->
+
 							</span>
 
 							<span id="bd-two">
@@ -487,24 +477,6 @@
 							<a id="bd_colors" href="#javascript:void(0)" class="bd_cid"  data-id="bd_colors_<?php echo $value['id']; ?>" >■ <?php echo $value['title']; ?></a>
 							</li>
 								<?php endforeach; endif; else: echo "" ;endif; ?>
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2209.html" target="_blank">■ 国庆期间软件变更通知</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-27</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2205.html" target="_blank">■ 2018年国庆节放假通知！</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-23</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2195.html" target="_blank">■ 2018中秋【宝尚】放假通知</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-03</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2133.html" target="_blank">■ 特大好消息：迎中秋，庆国庆配资送豪…</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-07-26</span>-->
-								<!--<a id="bd_colors" href="/aboutus/2015.html" target="_blank">■ 最新通知，限制购买的股票。</a>-->
-							<!--</li>-->
-							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-06-16</span>-->
-								<!--<a id="bd_colors" href="/aboutus/1859.html" target="_blank">■ 2018端午节放假通知</a>-->
-							<!--</li>-->
 							</span>
 
 						</div>
@@ -968,8 +940,8 @@
 			<div style="width: 90%; margin: 0 auto;">
 				<p style="text-align:center;"><strong style="color:rgb(255, 0, 0);font-family:Microsoft Yahei;font-size:20px;">紧急通知</strong></p>
 				<p style="text-align:center;">&nbsp;</p>
-				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;尊敬的会员！【深圳市</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;">尚牛在线商务有限公司】账户对账中，线下公司入款请更换子公司银行账户进行入款，请勿转账宝尚账户，因为公司账户对账期间财务没办法给您查询您的入款！！！给您带来的不便敬请谅解！！</span></strong></p>
-				<p><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">&nbsp; &nbsp; &nbsp; &nbsp; 为了给用户带来更好的配资服务，尚牛与券商对交易端进行全新升级。此次升级，针对页面优化、APP页面升级、个人中心，委托挂单，等方面都进行了优化升级。</span><br style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">全新交易端不支持旧版本数据及操盘记录，已经在操盘的客户请在原来的版本进行操盘。</span></p>
+				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;尊敬的会员！【深圳市</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;">尚牛在线商务有限公司】账户对账中，线下公司入款请更换子公司银行账户进行入款，请勿转账尚牛账户，因为公司账户对账期间财务没办法给您查询您的入款！！！给您带来的不便敬请谅解！！</span></strong></p>
+				<p><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">&nbsp; &nbsp; &nbsp; &nbsp; 为了给用户带来更好的配资服务，尚牛与券商对交易端进行全新升级。此次升级，针对页面优化,微信公众号页面升级、个人中心，委托挂单，等方面都进行了优化升级。</span><br style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">全新交易端不支持旧版本数据及操盘记录，已经在操盘的客户请在原来的版本进行操盘。</span></p>
 			</div>
 		</div>
 		<script src="__STATIC__/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
