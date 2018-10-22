@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540189316;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540189950;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -484,7 +484,7 @@
 							<span id="bd-two">
 								<?php if(is_array($news_informations_tow) || $news_informations_tow instanceof \think\Collection || $news_informations_tow instanceof \think\Paginator): $i = 0; $__LIST__ = $news_informations_tow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?>
                             <li><i class="dw_Cbg  "></i><span class="date"><?php echo $value['createTime']; ?></span>
-							<a id="bd_colors" href="#" class="bd_colors_<?php echo $value['id']; ?>" target="_blank">■ <?php echo $value['title']; ?></a>
+							<a id="bd_colors" href="#javascript:void(0)" class="bd_cid"  data-id="bd_colors_<?php echo $value['id']; ?>" >■ <?php echo $value['title']; ?></a>
 							</li>
 								<?php endforeach; endif; else: echo "" ;endif; ?>
 							<!--<li><i class="dw_Cbg  "></i><span class="date">2018-09-28</span>-->
