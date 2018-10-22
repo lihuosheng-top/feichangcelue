@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540189950;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540192282;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540180391;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -968,8 +968,8 @@
 			<div style="width: 90%; margin: 0 auto;">
 				<p style="text-align:center;"><strong style="color:rgb(255, 0, 0);font-family:Microsoft Yahei;font-size:20px;">紧急通知</strong></p>
 				<p style="text-align:center;">&nbsp;</p>
-				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;尊敬的会员！【深圳市</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;">宝尚电子商务有限公司】账户对账中，线下公司入款请更换子公司银行账户进行入款，请勿转账宝尚账户，因为公司账户对账期间财务没办法给您查询您的入款！！！给您带来的不便敬请谅解！！</span></strong></p>
-				<p><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">&nbsp; &nbsp; &nbsp; &nbsp; 为了给用户带来更好的配资服务，宝尚已券商对交易端进行全新升级。此次升级，针对页面优化、APP页面升级、个人中心，委托挂单，等方面都进行了优化升级。</span><br style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">全新交易端不支持旧版本数据及操盘记录，已经在操盘的客户请在原来的版本进行操盘。</span></p>
+				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;尊敬的会员！【深圳市</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;">尚牛在线商务有限公司】账户对账中，线下公司入款请更换子公司银行账户进行入款，请勿转账宝尚账户，因为公司账户对账期间财务没办法给您查询您的入款！！！给您带来的不便敬请谅解！！</span></strong></p>
+				<p><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">&nbsp; &nbsp; &nbsp; &nbsp; 为了给用户带来更好的配资服务，尚牛与券商对交易端进行全新升级。此次升级，针对页面优化、APP页面升级、个人中心，委托挂单，等方面都进行了优化升级。</span><br style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">全新交易端不支持旧版本数据及操盘记录，已经在操盘的客户请在原来的版本进行操盘。</span></p>
 			</div>
 		</div>
 		<script src="__STATIC__/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
