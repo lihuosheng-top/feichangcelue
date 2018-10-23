@@ -16,6 +16,8 @@ use think\helper\Hash;
 use think\Db;
 use app\common\builder\ZBuilder;
 use app\user\model\User as UserModel;
+use think\Request;
+use think\session;
 
 /**
  * 后台默认控制器
@@ -25,8 +27,7 @@ class Index extends Admin
 {
     /**
      * 后台首页
-     * @author 蔡伟明 <314013107@qq.com>
-     * @return string
+     *
      */
     public function index()
     {
@@ -156,7 +157,12 @@ class Index extends Admin
     }
 
 
-    //入金明细
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 资金明细
+     **************************************
+     */
     public function rechargelist(){
     	// 获取筛选
         $map = $this->getMap();
@@ -201,5 +207,39 @@ class Index extends Admin
             ->setPages($page) // 设置分页数据
             ->fetch(); // 渲染页面
     }
+
+    /**
+     **************李火生*******************
+     * 如果判断有人申请充值和提现申请，后台给一个提示音
+     **************************************
+     */
+    public function  informationHint(Request $request){
+        if($request->isPost()){
+            /**
+             * 充值申请
+             */
+            $czsq = session::get('czsq');
+            if(!empty($czsq)){
+                $res =Db::table('xh_member_withdraw')->where('id',$czsq)->find();
+                if(!empty($res)){
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>1]);
+                }
+            }
+            /**
+             * 提现申请
+             */
+            $txsq =session::get('txsq');
+            if(!empty($txsq)){
+                $ret =Db::table('xh_member_withdraw')->where('id',$txsq)->find();
+                if(!empty($ret)){
+                    return $this->ajax_success('提现申请提示音返回成功',['txsq'=>1]);
+                }
+            }
+
+             }
+    }
+
+
+
 
 }

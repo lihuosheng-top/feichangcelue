@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1539064450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1540282651;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -123,7 +123,7 @@
 						<a href="<?php echo url('index/index/stock'); ?>"><img src="./public/stock/img/yue.png" alt="">按月配资</a>
 					</li>
 					<li>
-						<a href="./freetrial.html"><img src="./public/stock/img/mian.png" alt="">免费体验</a>
+						<a href="./freetrial.html"><img src="./public/stock/img/mian.png" alt="">免息体验</a>
 					</li>
 				</ul>
 			</div>

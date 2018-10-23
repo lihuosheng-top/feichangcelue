@@ -7,7 +7,25 @@
 {/block}
 
 {block name="script"}
+
 <script>
+    //自调用获取申请或者提现提示音
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            url: "{:url('admin/index/informationhint')}",
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+              console.log(data);
+            },
+            fail: function (err, status) {
+                console.log('失败')
+            }
+        })
+    });
+
+
 
 </script>
 {/block}

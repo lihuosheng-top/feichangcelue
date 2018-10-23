@@ -136,8 +136,12 @@ class Ucenter extends Home
 //                $url =request()->domain().url('index/index/index', ['id'=> $memberId]);
                 $content ='账号为:'.$memberId.'</br>手机号为:'.$mobile.'</br>用户名为:'.$name.'</br>通过银行卡号为：'.$bank_num.'</br>充值了：'.$pay_money.'</br>备注：'.$beizhu.'</br>申请时间:'.$create_time.'</br>'.'<span style="color: red">请管理员进行对账，查验是否充值进入账户(进行审核)</span>';
                 \phpmailer\Email::send($data['email'],$title,$content);
-                Db::name('member_card_pay')->data($data)->insert();
-                $this->success('申请成功');
+               $res_data = Db::name('member_card_pay')->insertGetId($data);
+               if($res_data>0){
+                   session('czsq',$res_data); //TODO:充值提示音
+                   $this->success('申请成功');
+               }
+
             }
         }
 
@@ -243,9 +247,9 @@ class Ucenter extends Home
             $realName = $member['realName'];
             /*先判断是否在平台上面购买过股票，是则可以进行提现，不是则提示未在尚牛平台上面配资不能进行提现*/
             $is_buy_stock =Db::table('xh_stock_order')->where('memberId',$memberId)->where('isFreetrial',0)->select();
-            if(empty($is_buy_stock)){
-                error("提现最低要求进行在尚牛平台上面进行配资一次");
-            }
+//            if(empty($is_buy_stock)){
+//                error("提现最低要求进行在尚牛平台上面进行配资一次");
+//            }
 
             if ($usableSum >= $minWithdraw && $amount < $minWithdraw) {
                 error("最小提现金额为{$minWithdraw}元");
@@ -279,6 +283,10 @@ class Ucenter extends Home
             $ret = Db::table("xh_member_withdraw")->insertGetId($data);
             if ($ret <= 0) {
                 error("添加数据失败.");
+            }
+            //记录新的数据提现申请（易于后台操作）//TODO:新添加（提现申请提示音）
+            if($ret>0){
+                session( 'txsq',$ret);
             }
 
             //资金变动

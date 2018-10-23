@@ -9,6 +9,7 @@
 namespace app\admin\controller;
 
 use app\admin\controller\Admin;
+use app\cms\admin\Recycle;
 use app\user\model\Role as RoleModel;
 use app\common\builder\ZBuilder;
 use app\admin\model\Module as ModuleModel;
@@ -18,6 +19,7 @@ use app\user\model\User as UserModel;
 use think\Cache;
 use think\Db;
 use app\user\validate\User;
+use think\Request;
 use util\Tree;
 
 
@@ -169,6 +171,11 @@ class Article extends Admin
             ->fetch();
     }
 
+    /**
+     **************李火生*******************
+     * @param null $id
+     **************************************
+     */
     public function article_delete($id = null){
         if($id <= 0){
             return $this->error("id不正确");
@@ -179,6 +186,38 @@ class Article extends Admin
         }
         return $this->error("删除失败");
     }
+
+    /**
+     **************李火生*******************
+     * 紧急通知按钮控制前端界面是否显示
+     **************************************
+     */
+    public function EmergencyNotice(){
+            $data_list = Db::table("xh_images")->order("id desc")->paginate();
+            // 分页数据
+            $page = $data_list->render();
+            // 使用ZBuilder快速创建数据表格
+            return ZBuilder::make('table')
+                ->hideCheckbox()
+                ->setPageTitle('图片列表') // 设置页面标题
+                ->addColumns([ // 批量添加列
+                    ['id', 'ID'],
+                    ['src', '图片地址'],
+                    ['href', '超链接'],
+                ])
+                ->addColumn('type', '类型', 'status', '', [1=>'PC', 2=>'手机']) //type为数据库字段名, status为列的属性
+                ->addColumns([
+                    ['right_button', '操作', 'btn']
+                ])
+                ->addTopButton('add', ['href' => url('images_edit' )]) // 批量添加顶部按钮
+                ->addRightButton('edit', ['href' => url('images_edit', ['id' => '__id__'])]) // 批量添加右侧按钮
+                ->addRightButton('delete', ['href' => url('images_delete', ['id' => '__id__'])])
+                ->setRowList($data_list) // 设置表格数据
+                ->setPages($page) // 设置分页数据
+                ->fetch(); // 渲染页面
+        
+    }
+
 
 
 

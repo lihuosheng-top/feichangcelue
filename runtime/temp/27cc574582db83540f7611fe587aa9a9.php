@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1539064449;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1540288403;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -645,7 +645,25 @@
 
 <!--页面js-->
 
+
 <script>
+    //自调用获取申请或者提现提示音
+    $(function () {
+        $.ajax({
+            type: 'POST',
+            url: "<?php echo url('admin/index/informationhint'); ?>",
+            data: {},
+            dataType: 'json',
+            success: function (data) {
+              console.log(data);
+            },
+            fail: function (err, status) {
+                console.log('失败')
+            }
+        })
+    });
+
+
 
 </script>
 
