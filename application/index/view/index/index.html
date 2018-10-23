@@ -480,7 +480,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="baoshang">
+		<div class="baoshang" data-id ="1">
 			<i class="bsc" onclick="t()"></i>
 			<div style="clear:both;"></div>
 			<div style="width: 90%; margin: 0 auto;">
@@ -500,6 +500,26 @@
 </script>
 		<script>
 			(function() {
+				var  baoshang=$(".baoshang").data("id");
+				// console.log(baoshang);
+				if(baoshang==0){
+					$(".baoshang").hide();
+				}
+// 				else{
+// 					$(".baoshang").show();
+// 				}
+				// 紧急通知传值
+// 						$.ajax({
+// 									type: "post",
+// 									url: "{:url('index/index/pc_broadcast')}",
+// 									dataType: 'json',
+// 									success: function(data) {
+// 									if(data)
+// 									},
+// 									error: function(data) {
+// 										console.log("错误");
+// 									}
+// 								});
 				$.ajax({
 					type: "post",
 					url: "{:url('index/index/pc_broadcast')}",
@@ -526,6 +546,7 @@
 						console.log("错误");
 					}
 				});
+				
 			})();
 		</script>
 		<!--局部刷新-->
