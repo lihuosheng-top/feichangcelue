@@ -159,8 +159,8 @@
 				<p>账户余额(元)</p>
 			</div>
 		</div>
-		<p class="p_title1 color_black bg_fff">推荐配资金额</p>
-		<div id="buy_price_ul" class="choseBox1 mui-row mui-text-center bg_fff">
+		<p class="p_title1 color_black bg_fff" style="display: none">推荐配资金额</p>
+		<div id="buy_price_ul" class="choseBox1 mui-row mui-text-center bg_fff" style="display: none;">
 			<li class="chose_item mui-col-xs-3">
 				<a class="chose_a chose-active" href="javascript:void(0);">1万</a>
 			</li>
@@ -187,7 +187,7 @@
 			</li>
 		</div>
 		<div class="mui-input-row mui-row">
-			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" placeholder="请输入金额" id="buy_number" maxlength="4">万元
+			<span class="mui-col-xs-3 mui-col-sm-3 span_buy_l" style="font-size: 14px !important;">我要配资金额</span><input type="text" placeholder="请输入金额" id="buy_number" maxlength="4" value="0.05" disabled >万元
 		</div>
 		<p class="pad10 color_black font12">可买入<span id="gu" class="color_red">-</span>股，资金利用率<span id="lyl" class="color_red">-</span></p>
 
@@ -197,37 +197,37 @@
 				<div class="chose_item mui-col-xs-9 mui-col-sm-9">
 					<p>
 						<select class="select_day">
-							<option value="1" selected>1天</option>
-							<option value="2">2天</option>
-							<option value="3">3天</option>
-							<option value="4">4天</option>
-							<option value="5">5天</option>
-							<option value="6">6天</option>
-							<option value="7">7天</option>
-							<option value="8">8天</option>
-							<option value="9">9天</option>
-							<option value="10">10天</option>
-							<option value="11">11天</option>
-							<option value="12">12天</option>
-							<option value="13">13天</option>
-							<option value="14">14天</option>
-							<option value="15">15天</option>
-							<option value="16">16天</option>
-							<option value="17">17天</option>
-							<option value="18">18天</option>
-							<option value="19">19天</option>
-							<option value="20">20天</option>
-							<option value="21">21天</option>
-							<option value="22">22天</option>
-							<option value="23">23天</option>
-							<option value="24">24天</option>
-							<option value="25">25天</option>
-							<option value="26">26天</option>
-							<option value="27">27天</option>
-							<option value="28">28天</option>
-							<option value="29">29天</option>
-							<option value="30">30天</option>
-							<option value="31">31天</option>
+							<!--<option value="1" selected>1天</option>-->
+							<!--<option value="2">2天</option>-->
+							<!--<option value="3">3天</option>-->
+							<!--<option value="4">4天</option>-->
+							<!--<option value="5">5天</option>-->
+							<!--<option value="6">6天</option>-->
+							<!--<option value="7">7天</option>-->
+							<!--<option value="8">8天</option>-->
+							<!--<option value="9">9天</option>-->
+							<!--<option value="10">10天</option>-->
+							<!--<option value="11">11天</option>-->
+							<!--<option value="12">12天</option>-->
+							<!--<option value="13">13天</option>-->
+							<!--<option value="14">14天</option>-->
+							<!--<option value="15">15天</option>-->
+							<!--<option value="16">16天</option>-->
+							<!--<option value="17">17天</option>-->
+							<!--<option value="18">18天</option>-->
+							<!--<option value="19">19天</option>-->
+							<option value="20" selected>20天</option>
+							<!--<option value="21">21天</option>-->
+							<!--<option value="22">22天</option>-->
+							<!--<option value="23">23天</option>-->
+							<!--<option value="24">24天</option>-->
+							<!--<option value="25">25天</option>-->
+							<!--<option value="26">26天</option>-->
+							<!--<option value="27">27天</option>-->
+							<!--<option value="28">28天</option>-->
+							<!--<option value="29">29天</option>-->
+							<!--<option value="30">30天</option>-->
+							<!--<option value="31">31天</option>-->
 						</select>
 					</p>
 				</div>
@@ -249,15 +249,15 @@
 			</li>
 			<li class="mui-row">
 				<p class="mui-col-xs-3 mui-col-sm-3">亏损平仓线</p>
-				<div id="stop-loss_ul" class="chose_item mui-col-xs-9 mui-col-sm-9 mui-row mui-text-center">
-					<a class="bz_a chose-active  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-600</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-800</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1000</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1200</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1332</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1600</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1700</a>
-					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1800</a>
+				<div id="stop-loss_ul" class="chose_item mui-col-xs-9 mui-col-sm-9 mui-row mui-text-center" >
+					<a class="bz_a   chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;" >-600</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;" >-800</a>
+					<a class="bz_a chose-active  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);">-1000</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;">-1200</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;">-1332</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;">-1600</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;">-1700</a>
+					<a class="bz_a  chose_a chose_a_bot mui-col-xs-3 mui-col-sm-3 font12" href="javascript:void(0);" style="opacity: 0.2;">-1800</a>
 				</div>
 			</li>
 		</ul>
@@ -310,16 +310,26 @@
     var lossLine =parseFloat("{$lossLine}");
 
     //按天杠杆倍率1到10倍
-    var levers_1 =parseFloat("{$levers_1}");
-    var levers_2 =parseFloat("{$levers_2}");
-    var levers_3 =parseFloat("{$levers_3}");
-    var levers_4 =parseFloat("{$levers_4}");
-    var levers_5 =parseFloat("{$levers_5}");
-    var levers_6 =parseFloat("{$levers_6}");
-    var levers_7 =parseFloat("{$levers_7}");
-    var levers_8 =parseFloat("{$levers_8}");
-    var levers_9 =parseFloat("{$levers_9}");
-    var levers_10 =parseFloat("{$levers_10}");
+//    var levers_1 =parseFloat("{$levers_1}");
+//    var levers_2 =parseFloat("{$levers_2}");
+//    var levers_3 =parseFloat("{$levers_3}");
+//    var levers_4 =parseFloat("{$levers_4}");
+//    var levers_5 =parseFloat("{$levers_5}");
+//    var levers_6 =parseFloat("{$levers_6}");
+//    var levers_7 =parseFloat("{$levers_7}");
+//    var levers_8 =parseFloat("{$levers_8}");
+//    var levers_9 =parseFloat("{$levers_9}");
+//    var levers_10 =parseFloat("{$levers_10}");
+    var levers_1 =parseFloat("0");
+    var levers_2 =parseFloat("0");
+    var levers_3 =parseFloat("0");
+    var levers_4 =parseFloat("0");
+    var levers_5 =parseFloat("0");
+    var levers_6 =parseFloat("0");
+    var levers_7 =parseFloat("0");
+    var levers_8 =parseFloat("0");
+    var levers_9 =parseFloat("0");
+    var levers_10 =parseFloat("0");
     var levers_data=[
         levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
     ];
@@ -327,7 +337,7 @@
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
 <script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/home/js/echarts.min.js"></script>
-<script src="__STATIC__/home/js/moblie/buy_mine.js"></script>
+<script src="__STATIC__/home/js/moblie/freetrial_moblie.js"></script>
 <script>
     // 如果不在交易时间，不能点买
     //                 if(!buy_moblie.isTradingTime() ){

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1540275258;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1540281800;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +21,7 @@
 <div class="pz-day-content">
     <div class="pz-day-public pzdaymoney">
         <h2>保证金</h2>
-        <input type="text" id="deposite_money" value="100"/>
+        <input type="text" id="deposite_money" value="100" disabled/>
 
     </div>
     <div class="pz-day-public pzdaytimes">
@@ -434,7 +434,7 @@
             data: {'free_ajax_html':ajax_html,'freebeishu':yuebeishu,'free_day_select':day_select},
             dataType: 'json',
             success: function (data) {
-                // window.location.href = "./freetrial";
+                 window.location.href = "./freetrial";
             },
             fail: function (err, status) {
                 console.log(3)

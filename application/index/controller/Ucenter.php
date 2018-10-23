@@ -1013,7 +1013,7 @@ class Ucenter extends Home
             if($$dealAmount>50){
                 error("买入金额超出范围，最高交易50万");
             }
-            if($dealAmount<0.06){
+            if($dealAmount<0.01){
                 error('买入的金额太低，最低交易600');
             }
 //            if($surplus != $dealAmount * 10000 *$lossLine/$Multiple+$dealAmount*10000){
@@ -1062,9 +1062,9 @@ class Ucenter extends Home
                 error("获取价格数据异常");
             }
             $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
-            if($dealQuantity <1){
-                error("买入数量必须大于1手");
-            }
+//            if($dealQuantity <1){
+//                error("买入数量必须大于1手");
+//            }
             if(!$nowPrice || !is_numeric($nowPrice) || $nowPrice <= 0){
                 error("股票价格异常");
             }

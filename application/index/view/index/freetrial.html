@@ -181,11 +181,11 @@
                         </section>
                     </div>
                     <div class="right-buy">
-                        <div class="buy_price">
+                        <div class="buy_price" style="display: none;">
                             <p class="top">推荐买入金额<em></em>
                                 <span class="f-right">今天还可点买<b id="restChance">{if condition="$left neq ''"}{$left}{else }-{/if}</b>次</span>
                             </p>
-                            <ul id="buy_price_ul">
+                            <ul id="buy_price_ul" >
                                 <li class="active">1万</li>
                                 <li> 2万</li>
                                 <li> 3万</li>
@@ -202,13 +202,13 @@
                             <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
                                 <div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
                             </div>
-                            <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="6" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('','');" value="{$_SESSION['free_ajax_html']}" placeholder="请输入金额">万元
+                            <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="6" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('','');"  value="{$_SESSION['free_ajax_html']}" placeholder="请输入金额" >万元
                             {else}
                             <span>我&nbsp;要&nbsp;配&nbsp;资&nbsp;金&nbsp;额</span>
                             <div class="delay_tip" style="margin-right:0;"><i class="icon icon-help"></i>
                                 <div class="showtip">最高谋略金额50万元，除平台推荐金额之外，用户可自行设定点买金额。</div>
                             </div>
-                            <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额">万元
+                            <input type="tel" style="width: 110px;height: 30px;border-radius: 5px;color: rgb(51, 51, 51);margin: 10px 15px;border: 1px solid #DBDBDB;text-align: center;" id="buy_number" maxlength="2" onkeypress="if(event.keyCode==13||event.which==13){return false;}" onkeyup="this.value=this.value.replace(/[^\.\d]/g,'');this.value=this.value.replace('.','');" placeholder="请输入金额" value="0.05">万元
                             {/if}
 
                         </div>
@@ -224,71 +224,71 @@
                             {if !empty($_SESSION['free_day_select'])}
                             <select class="select_day">
                                 <option value="{$_SESSION['free_day_select']}" selected>{$_SESSION['free_day_select']}天</option>
-                                <option value="1">1天</option>
-                                <option value="2">2天</option>
-                                <option value="3">3天</option>
-                                <option value="4">4天</option>
-                                <option value="5">5天</option>
-                                <option value="6">6天</option>
-                                <option value="7">7天</option>
-                                <option value="8">8天</option>
-                                <option value="9">9天</option>
-                                <option value="10">10天</option>
-                                <option value="11">11天</option>
-                                <option value="12">12天</option>
-                                <option value="13">13天</option>
-                                <option value="14">14天</option>
-                                <option value="15">15天</option>
-                                <option value="16">16天</option>
-                                <option value="17">17天</option>
-                                <option value="18">18天</option>
-                                <option value="19">19天</option>
-                                <option value="20">20天</option>
-                                <option value="21">21天</option>
-                                <option value="22">22天</option>
-                                <option value="23">23天</option>
-                                <option value="24">24天</option>
-                                <option value="25">25天</option>
-                                <option value="26">26天</option>
-                                <option value="27">27天</option>
-                                <option value="28">28天</option>
-                                <option value="29">29天</option>
-                                <option value="30">30天</option>
-                                <option value="31">31天</option>
+                                <!--<option value="1">1天</option>-->
+                                <!--<option value="2">2天</option>-->
+                                <!--<option value="3">3天</option>-->
+                                <!--<option value="4">4天</option>-->
+                                <!--<option value="5">5天</option>-->
+                                <!--<option value="6">6天</option>-->
+                                <!--<option value="7">7天</option>-->
+                                <!--<option value="8">8天</option>-->
+                                <!--<option value="9">9天</option>-->
+                                <!--<option value="10">10天</option>-->
+                                <!--<option value="11">11天</option>-->
+                                <!--<option value="12">12天</option>-->
+                                <!--<option value="13">13天</option>-->
+                                <!--<option value="14">14天</option>-->
+                                <!--<option value="15">15天</option>-->
+                                <!--<option value="16">16天</option>-->
+                                <!--<option value="17">17天</option>-->
+                                <!--<option value="18">18天</option>-->
+                                <!--<option value="19">19天</option>-->
+                                <!--<option value="20">20天</option>-->
+                                <!--<option value="21">21天</option>-->
+                                <!--<option value="22">22天</option>-->
+                                <!--<option value="23">23天</option>-->
+                                <!--<option value="24">24天</option>-->
+                                <!--<option value="25">25天</option>-->
+                                <!--<option value="26">26天</option>-->
+                                <!--<option value="27">27天</option>-->
+                                <!--<option value="28">28天</option>-->
+                                <!--<option value="29">29天</option>-->
+                                <!--<option value="30">30天</option>-->
+                                <!--<option value="31">31天</option>-->
                             </select>
                             {else}
                             <select class="select_day">
-                                <option value="1" selected>1天</option>
-                                <option value="2">2天</option>
-                                <option value="3">3天</option>
-                                <option value="4">4天</option>
-                                <option value="5">5天</option>
-                                <option value="6">6天</option>
-                                <option value="7">7天</option>
-                                <option value="8">8天</option>
-                                <option value="9">9天</option>
-                                <option value="10">10天</option>
-                                <option value="11">11天</option>
-                                <option value="12">12天</option>
-                                <option value="13">13天</option>
-                                <option value="14">14天</option>
-                                <option value="15">15天</option>
-                                <option value="16">16天</option>
-                                <option value="17">17天</option>
-                                <option value="18">18天</option>
-                                <option value="19">19天</option>
-                                <option value="20">20天</option>
-                                <option value="21">21天</option>
-                                <option value="22">22天</option>
-                                <option value="23">23天</option>
-                                <option value="24">24天</option>
-                                <option value="25">25天</option>
-                                <option value="26">26天</option>
-                                <option value="27">27天</option>
-                                <option value="28">28天</option>
-                                <option value="29">29天</option>
-                                <option value="30">30天</option>
-                                <option value="31">31天</option>
+                                <!--<option value="1" selected>1天</option>-->
+                                <!--<option value="2">2天</option>-->
+                                <!--<option value="3">3天</option>-->
+                                <!--<option value="4">4天</option>-->
+                                <!--<option value="5">5天</option>-->
+                                <!--<option value="6">6天</option>-->
+                                <!--<option value="7">7天</option>-->
+                                <!--<option value="8">8天</option>-->
+                                <!--<option value="9">9天</option>-->
+                                <!--<option value="10">10天</option>-->
+                                <!--<option value="11">11天</option>-->
+                                <!--<option value="12">12天</option>-->
+                                <!--<option value="13">13天</option>-->
+                                <!--<option value="14">14天</option>-->
+                                <!--<option value="15">15天</option>-->
+                                <!--<option value="16">16天</option>-->
+                                <!--<option value="17">17天</option>-->
+                                <!--<option value="18">18天</option>-->
+                                <!--<option value="19">19天</option>-->
+                                <option value="20" selected>20天</option>
+                                <!--<option value="21">21天</option>-->
+                                <!--<option value="22">22天</option>-->
+                                <!--<option value="23">23天</option>-->
+                                <!--<option value="24">24天</option>-->
+                                <!--<option value="25">25天</option>-->
+                                <!--<option value="26">26天</option>-->
+                                <!--<option value="27">27天</option>-->
+                                <!--<option value="28">28天</option>-->
+                                <!--<option value="29">29天</option>-->
+                                <!--<option value="30">30天</option>-->
+                                <!--<option value="31">31天</option>-->
                             </select>
                             {/if}
                         </div>
@@ -306,14 +306,14 @@
                                 <div class="showtip">当合作交易品种的浮动盈亏率达到特定数值时，投资人有权即时卖出交易品种全部持有数量进行止损。</div>
                             </div>
                             <ul id="stop-loss_ul">
-                                <li class="" data-val="8">-1000</li>
-                                <li data-val="6">-1333</li>
+                                <li class="" data-val="8" style="opacity: 0.2;">-1000</li>
+                                <li data-val="6" style="opacity: 0.2;">-1333</li>
                                 <li data-val="5">-1700</li>
-                                <li class="" data-val="8">-1000</li>
-                                <li data-val="6">-1333</li>
-                                <li data-val="5">-1700</li>
-                                <li class="" data-val="8">-1000</li>
-                                <li data-val="6">-1333</li>
+                                <li class="" data-val="8" style="opacity: 0.2;">-1000</li>
+                                <li data-val="6" style="opacity: 0.2;">-1333</li>
+                                <li data-val="5" style="opacity: 0.2;">-1700</li>
+                                <li class="" data-val="8" style="opacity: 0.2;">-1000</li>
+                                <li data-val="6" style="opacity: 0.2;">-1333</li>
                             </ul>
                         </div>
                         <div class="open-time">
@@ -451,16 +451,26 @@
     var lossLine =parseFloat("{$lossLine}");
 
     //按天杠杆倍率1到10倍
-    var levers_1 =parseFloat("{$levers_1}");
-    var levers_2 =parseFloat("{$levers_2}");
-    var levers_3 =parseFloat("{$levers_3}");
-    var levers_4 =parseFloat("{$levers_4}");
-    var levers_5 =parseFloat("{$levers_5}");
-    var levers_6 =parseFloat("{$levers_6}");
-    var levers_7 =parseFloat("{$levers_7}");
-    var levers_8 =parseFloat("{$levers_8}");
-    var levers_9 =parseFloat("{$levers_9}");
-    var levers_10 =parseFloat("{$levers_10}");
+//    var levers_1 =parseFloat("{$levers_1}");
+//    var levers_2 =parseFloat("{$levers_2}");
+//    var levers_3 =parseFloat("{$levers_3}");
+//    var levers_4 =parseFloat("{$levers_4}");
+//    var levers_5 =parseFloat("{$levers_5}");
+//    var levers_6 =parseFloat("{$levers_6}");
+//    var levers_7 =parseFloat("{$levers_7}");
+//    var levers_8 =parseFloat("{$levers_8}");
+//    var levers_9 =parseFloat("{$levers_9}");
+//    var levers_10 =parseFloat("{$levers_10}");
+    var levers_1 =parseFloat("0");
+    var levers_2 =parseFloat("0");
+    var levers_3 =parseFloat("0");
+    var levers_4 =parseFloat("0");
+    var levers_5 =parseFloat("0");
+    var levers_6 =parseFloat("0");
+    var levers_7 =parseFloat("0");
+    var levers_8 =parseFloat("0");
+    var levers_9 =parseFloat("0");
+    var levers_10 =parseFloat("0");
     var levers_data=[
         levers_3,levers_4,levers_5,levers_6,levers_7,levers_8,levers_9,levers_10
     ];

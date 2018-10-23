@@ -907,13 +907,13 @@ $(function () {
     // $("#stop-loss_ul > li:eq(1)").click();
     var datas =$("#free_buy >p").eq(0).find("i").html();
     if(datas== ''){
-        $("#stop-loss_ul > li:eq(0)").click();
+        $("#stop-loss_ul > li:eq(2)").click();
     }else {
-        $("#stop-loss_ul > li").eq(day_loss).click();
+        $("#stop-loss_ul > li").eq(2).click();
         if(day_loss != null && day_loss!=-3){
             // consol$("#stop-loss_ul > li").html();
-            $("#stop-loss_ul > li").eq(day_loss).trigger('tap');
-            $("#stop-loss_ul > li").eq(day_loss).addClass("active").siblings("li").removeClass("active");
+            $("#stop-loss_ul > li").eq(2).trigger('tap');
+            $("#stop-loss_ul > li").eq(2).addClass("active").siblings("li").removeClass("active");
         }
     }
 
@@ -926,7 +926,7 @@ $(function () {
 // });
 
 
-$("#stop-loss_ul > li").click(function(e){
+$("#stop-loss_ul > li:eq(2)").click(function(e){
     var index = $(this).index(); //下标
     console.log(index);
     var buy_price = parseFloat($('#buy_number').val()); //输入的价格
