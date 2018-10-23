@@ -1,0 +1,394 @@
+---------------------------------------------------------------
+[ 2018-10-23T19:18:10+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.316406s][吞吐率：3.16req/s] [内存消耗：3,253.52kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.117187s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.110352s ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026367s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.016602s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.018555s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.016601s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.017579s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.016602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_withdraw` [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.017579s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 252 LIMIT 1 [ RunTime:0.017578s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:10+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/index/index.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/index.html [运行时间：0.334961s][吞吐率：2.99req/s] [内存消耗：3,359.12kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005859s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027344s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.018555s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.018555s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.017578s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.017579s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.017578s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:11+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.122070s][吞吐率：8.19req/s] [内存消耗：2,991.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.005860s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023438s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_withdraw` [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 252 LIMIT 1 [ RunTime:0.015625s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:11+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/index/index.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/index.html [运行时间：0.291016s][吞吐率：3.44req/s] [内存消耗：3,148.70kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001954s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004882s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022461s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.014648s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.016602s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.014648s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.014648s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.014649s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:12+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.127930s][吞吐率：7.82req/s] [内存消耗：2,991.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004883s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025390s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_withdraw` [ RunTime:0.016601s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.016602s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 252 LIMIT 1 [ RunTime:0.016601s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:12+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/index/index.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/index.html [运行时间：0.283203s][吞吐率：3.53req/s] [内存消耗：3,148.70kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004883s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022461s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.013672s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.014648s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.014649s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.013671s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.013672s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.013672s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:13+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.126953s][吞吐率：7.88req/s] [内存消耗：2,991.98kb] [文件加载：58]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004883s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025390s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_withdraw` [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.016601s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_withdraw` WHERE  `id` = 252 LIMIT 1 [ RunTime:0.015625s ]
+---------------------------------------------------------------
+[ 2018-10-23T19:18:13+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/index/index.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/index.html [运行时间：0.267578s][吞吐率：3.74req/s] [内存消耗：3,148.70kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\PHPTutorial\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => '*/*',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.81 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=nb7iqgqp01c2b690dagid9qca5; pageReferrInSession=http%3A//localhost/; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540290435; VisitorCapacity=1; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1540290644',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.001953s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004883s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\PHPTutorial\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.018555s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.012695s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.011719s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.010742s ]
