@@ -243,9 +243,11 @@ class Index extends Admin
         if($request->isPost()){
             if($_POST['name'] =='txsq'){
                 session::delete('txsq');
+                return $this->ajax_success('成功',['status'=>1]);
             }
-            if($_POST['name'] =='txsq'){
+            if($_POST['name'] =='czsq'){
                 session::delete('czsq');
+                return $this->ajax_success('成功',['status'=>1]);
             }
 
         }
