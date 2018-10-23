@@ -239,6 +239,18 @@ class Index extends Admin
              }
     }
 
+    public function setInformationHint(Request $request){
+        if($request->isPost()){
+            if($_POST['name'] =='txsq'){
+                session::delete('txsq');
+            }
+            if($_POST['name'] =='txsq'){
+                session::delete('czsq');
+            }
+
+        }
+    }
+
 
 
 

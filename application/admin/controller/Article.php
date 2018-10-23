@@ -215,7 +215,7 @@ class Article extends Admin
                 ->setRowList($data_list) // 设置表格数据
                 ->setPages($page) // 设置分页数据
                 ->fetch(); // 渲染页面
-        
+
     }
 
 

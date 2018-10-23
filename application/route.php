@@ -146,5 +146,6 @@ return [
     'liquidation'=> 'admin/order/liquidation',  				//个人中心-首页
     'setStatus'=> 'admin//notemsg/setStatus',  				//个人中心-首页
     'informationhint'=>'admin/index/informationhint',     //充值和提现在后台设置的提示音
+    'setInformationHint'=>'admin/index/setInformationHint',     //充值和提现在后台设置的提示音(清除session)
 
 ];
