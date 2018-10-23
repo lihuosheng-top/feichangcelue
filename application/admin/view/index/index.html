@@ -25,18 +25,33 @@
 					data: {},
 					dataType: 'json',
 					success: function (data) {
-						console.log(data);
+						// console.log(data);
 						if(data.data.txsq==1){
 								 var audioElement = document.createElement('audio');
 													audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
 													audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
 													//audioElement.load()
-							
+							           
 													$.get();
 							
 													audioElement.addEventListener("load", function() {
 															audioElement.play();
 													}, true);
+													$.ajax({
+															type: 'POST',
+															url: "{:url('admin/index/setInformationHint')}",
+															data: {"name":"txsq"},
+															dataType: 'json',
+															success: function (data) {
+													        
+																
+													
+															},
+															fail: function (err, status) {
+																	console.log('失败')
+															}
+													})
+													
 						}
 						
 			

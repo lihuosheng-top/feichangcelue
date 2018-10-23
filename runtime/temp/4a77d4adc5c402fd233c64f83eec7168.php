@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:81:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html";i:1540293435;s:76:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\layout.html";i:1539334158;s:46:"./application/common/builder/aside/layout.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/online.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539334158;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:81:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\index\index.html";i:1540293816;s:76:"D:\phpStudy\PHPTutorial\WWW\feichangcelue/application/admin\view\layout.html";i:1539334158;s:46:"./application/common/builder/aside/layout.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/online.html";i:1539334158;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539334158;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -663,18 +663,33 @@
 					data: {},
 					dataType: 'json',
 					success: function (data) {
-						console.log(data);
+						// console.log(data);
 						if(data.data.txsq==1){
 								 var audioElement = document.createElement('audio');
 													audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
 													audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
 													//audioElement.load()
-							
+							           
 													$.get();
 							
 													audioElement.addEventListener("load", function() {
 															audioElement.play();
 													}, true);
+													$.ajax({
+															type: 'POST',
+															url: "<?php echo url('admin/index/setInformationHint'); ?>",
+															data: {"name":"txsq"},
+															dataType: 'json',
+															success: function (data) {
+													        
+																
+													
+															},
+															fail: function (err, status) {
+																	console.log('失败')
+															}
+													})
+													
 						}
 						
 			
