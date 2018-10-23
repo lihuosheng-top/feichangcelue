@@ -893,9 +893,12 @@ function updateMoneyRate(){
         $("#lyl").html('-');
     }else{
         var gu=Math.floor((price*10000/nowPrice)/100)*100;
-        var lyl=(nowPrice*gu/(price*10000)*100).toFixed(2) + "%";
+        if(price !=0){
+            var lyl=(nowPrice*gu/(price*10000)*100).toFixed(2) + "%";
+            $("#lyl").html(lyl);
+        }
         $("#gu").html(gu);
-        $("#lyl").html(lyl);
+
     }
 }
 //TODO：

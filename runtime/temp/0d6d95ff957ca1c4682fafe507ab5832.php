@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\freetrial.html";i:1540281707;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\freetrial.html";i:1540282623;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -181,7 +181,7 @@
                     <!--<li class="br-fl"><a href="<?php echo url('index'); ?>" class="active">首页</a></li>-->
                     <li class="br-fl"><a href="./index.html" >首页</a></li>
                     <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
-                     <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
+                     <li class="br-fl"><a href="./freetrial2.html">免息体验</a></li>-->
                     <li class="br-fl"><a href="./safeensure.html">安全保障</a></li>
                     <li class="br-fl help_box">
                         <a href="./guild.html">帮助中心</a>
@@ -205,7 +205,7 @@
         <div class="stock-buy">
             <section class="play-area">
                 <div class="nav-left">
-                    <a href="./freetrial" class="active" style="height: initial;">免费体验</a>
+                    <a href="./freetrial" class="active" style="height: initial;">免息体验</a>
                     <a href="./buy" >A股（T + 1）</a>
                 </div>
                 <nav>
