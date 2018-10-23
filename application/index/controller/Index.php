@@ -1354,23 +1354,22 @@ class Index extends Home
      **************************************
      */
     public  function  index_information(){
-        /* 一开始进入首页显示的数据3倍的数据*/
-        $data_money =getStockInterestLeverByLevers("3");
-        $res_money =200+200*3*$data_money/100;
-        $res_bei =200*3*$data_money/100;
+        /* 一开始进入首页显示的数据5倍的数据*/
+        $data_money =getStockInterestLeverByLevers("5");
+        $res_money =100;
+//        $res_bei =200*5*$data_money/100;
+        $res_bei =0;  //免费体验利息为0
         /*日利息*/
         $this->assign('res_bei',$res_bei);
         /*分配到准备资金那里*/
         $this->assign('res_money',$res_money);
         /*亏损警戒线*/
         $con_line =getSysParamsByKey("lossLine");
-        $cordon_line = $con_line*200+600;
+        $cordon_line = $con_line*100+500;
         /*亏损平仓线*/
-        $loss_line =  getSysParamsByKey("stopLossRate")*200+600;
+        $loss_line =  getSysParamsByKey("stopLossRate")*100+500;
         $this->assign('cordon_line',$cordon_line);
         $this->assign('loss_line',$loss_line);
-
-
 
         /**
          * 按天杠杆倍数利息

@@ -110,13 +110,10 @@ class Article extends Admin
     }
 
     public function articlelist(){
-
         // 数据列表
-        $data_list = Db::table("xh_article")->where()->order("id desc")->paginate();
-
+        $data_list = Db::table("xh_article")->order("id desc")->paginate();
         // 分页数据
         $page = $data_list->render();
-
         // 使用ZBuilder快速创建数据表格
         return ZBuilder::make('table')
             ->hideCheckbox()
