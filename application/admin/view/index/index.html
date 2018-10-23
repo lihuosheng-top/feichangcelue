@@ -37,21 +37,26 @@
 													audioElement.addEventListener("load", function() {
 															audioElement.play();
 													}, true);
-													$.ajax({
-															type: 'POST',
-															url: "{:url('admin/index/setInformationHint')}",
-															data: {"name":"txsq"},
-															dataType: 'json',
-															success: function (data) {
-													        
-																
+													 
+													data.data.txsq=0;
+// 													$.ajax({
+// 															type: 'POST',
+// 															url: "{:url('admin/index/setInformationHint')}",
+// 															data: {"name":"txsq"},
+// 															dataType: 'json',
+// 															success: function (data) {
+// 													        
+// 																
+// 													
+// 															},
+// 															fail: function (err, status) {
+// 																	console.log('失败')
+// 															}
+// 													})
 													
-															},
-															fail: function (err, status) {
-																	console.log('失败')
-															}
-													})
-													
+						}
+						else{
+							audioElement.pause();
 						}
 						
 			
