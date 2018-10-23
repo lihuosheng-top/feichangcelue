@@ -222,6 +222,7 @@ class Index extends Admin
             if(!empty($czsq)){
                 $res =Db::table('xh_member_withdraw')->where('id',$czsq)->find();
                 if(!empty($res)){
+
                     return $this->ajax_success('充值申请提示音返回成功',['czsq'=>1]);
                 }
             }
@@ -232,7 +233,7 @@ class Index extends Admin
             if(!empty($txsq)){
                 $ret =Db::table('xh_member_withdraw')->where('id',$txsq)->find();
                 if(!empty($ret)){
-                    return $this->ajax_success('提现申请提示音返回成功',['txsq'=>1]);
+                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>2]);
                 }
             }
 
@@ -243,9 +244,11 @@ class Index extends Admin
         if($request->isPost()){
             if($_POST['name'] =='txsq'){
                 session::delete('txsq');
+                return $this->ajax_success('成功',['status'=>1]);
             }
-            if($_POST['name'] =='txsq'){
+            if($_POST['name'] =='czsq'){
                 session::delete('czsq');
+                return $this->ajax_success('成功',['status'=>1]);
             }
 
         }
