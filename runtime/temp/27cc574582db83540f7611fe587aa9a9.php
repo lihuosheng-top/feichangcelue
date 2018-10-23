@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1540288403;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1540297268;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -543,7 +543,10 @@
         <!-- Pages Content -->
         <div class="content">
             
-            <?php echo hook('page_tips');  echo "尚牛在线";  ?>
+            <?php echo hook('page_tips');  echo "尚牛在线";
+		    
+		 ?>
+		
 
         </div>
         <!-- END Pages Content -->
@@ -648,23 +651,56 @@
 
 <script>
     //自调用获取申请或者提现提示音
-    $(function () {
-        $.ajax({
-            type: 'POST',
-            url: "<?php echo url('admin/index/informationhint'); ?>",
-            data: {},
-            dataType: 'json',
-            success: function (data) {
-              console.log(data);
-            },
-            fail: function (err, status) {
-                console.log('失败')
-            }
-        })
+    $(document).ready(function(){
+        //循环执行，每隔1秒钟执行一次 1000
+        var t1=setInterval(function(){
+            refreshCount()
+        }, 5000);
+
+        function refreshCount() {
+            $.ajax({
+                    type: 'POST',
+                    url: "<?php echo url('admin/index/informationhint'); ?>",
+                    data: {},
+                    dataType: 'json',
+                    success: function (data) {
+                         console.log(data);
+                        if(data.data.czsq==2){
+                                ring();
+//                                clearInterval(t1);
+                                $.ajax({
+                                    type: 'POST',
+                                    url: "<?php echo url('admin/index/setInformationHint'); ?>",
+                                    data: {"name":"txsq"},
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        console.log('cg');
+                                    },
+                                    fail: function (err, status) {
+                                            console.log('失败')
+                                    }
+                                });
+                        }
+                    },
+                    fail: function (err, status) {
+                            console.log('失败')
+                    }
+            })
+        }
     });
+    function ring(){
+        console.log(111);
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
+        audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+        //audioElement.load()
+        $.get();
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
 
-
-
+        }, true);
+        audioElement.pause();
+    }
 </script>
 
 

@@ -3,29 +3,65 @@
 {block name="page-header"}{/block}
 
 {block name="content"}
-    {php} echo "尚牛在线"; {/php}
+    {php} echo "尚牛在线";
+		    
+		{/php}
+		
 {/block}
 
 {block name="script"}
 
 <script>
     //自调用获取申请或者提现提示音
-    $(function () {
-        $.ajax({
-            type: 'POST',
-            url: "{:url('admin/index/informationhint')}",
-            data: {},
-            dataType: 'json',
-            success: function (data) {
-              console.log(data);
-            },
-            fail: function (err, status) {
-                console.log('失败')
-            }
-        })
+    $(document).ready(function(){
+        //循环执行，每隔1秒钟执行一次 1000
+        var t1=setInterval(function(){
+            refreshCount()
+        }, 5000);
+
+        function refreshCount() {
+            $.ajax({
+                    type: 'POST',
+                    url: "{:url('admin/index/informationhint')}",
+                    data: {},
+                    dataType: 'json',
+                    success: function (data) {
+                         console.log(data);
+                        if(data.data.czsq==2){
+                                ring();
+//                                clearInterval(t1);
+                                $.ajax({
+                                    type: 'POST',
+                                    url: "{:url('admin/index/setInformationHint')}",
+                                    data: {"name":"txsq"},
+                                    dataType: 'json',
+                                    success: function (data) {
+                                        console.log('cg');
+                                    },
+                                    fail: function (err, status) {
+                                            console.log('失败')
+                                    }
+                                });
+                        }
+                    },
+                    fail: function (err, status) {
+                            console.log('失败')
+                    }
+            })
+        }
     });
+    function ring(){
+        console.log(111);
+        var audioElement = document.createElement('audio');
+        audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
+        audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+        //audioElement.load()
+        $.get();
+        audioElement.addEventListener("load", function() {
+            audioElement.play();
 
-
-
+        }, true);
+        audioElement.pause();
+    }
 </script>
 {/block}
