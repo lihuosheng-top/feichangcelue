@@ -6,6 +6,14 @@
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
 </head>
+<style type="text/css">
+	.set_listdown{
+		background: #fff !important;
+	}
+	.nav_listdown p{
+		line-height: 36px !important;
+	}
+</style>
 
 <body>
 
@@ -19,14 +27,9 @@
         <h2>选择杠杆率</h2>
         <div class="pz-select">
             <div class="nav_listdown" id="nav_listdown">
-                <p class="set_listdown" id="beilv"><span class="j-num" id="num">3</span>倍</p>
-                <ul class="new_listdown">
-                    <!--<li class="j-multiple-item" data-id="1" >-->
-                    <!--<span class="multiple">1</span>倍-->
-                    <!--</li>-->
-                    <!--<li class="j-multiple-item" data-id="2" >-->
-                    <!--<span class="multiple">2</span>倍-->
-                    <!--</li>-->
+                <p class="set_listdown" id="beilv"><span class="j-num" id="num">5</span>倍</p>
+             <!--  <ul class="new_listdown">
+                  
                     <li class="j-multiple-item" data-id="3" >
                         <span class="multiple">3</span>倍
                     </li>
@@ -51,8 +54,8 @@
                     <li class="j-multiple-item" data-id="10" >
                         <span class="multiple">10</span>倍
                     </li>
-                </ul>
-                <input type="hidden" id="multiple" value="2">
+                </ul> -->
+                <input type="hidden" id="multiple" value="5">
             </div>
         </div>
     </div>
@@ -60,8 +63,8 @@
         <h2>我需要操盘的天数？</h2>
         <div class="pz-select">
             <div class="nav_listdown" id="nav_listdown2">
-                <p class="set_listdown" id="day"><span class="j-num" id="num_day">1</span>天</p>
-                <ul class="new_listdown">
+                <p class="set_listdown" id="day"><span class="j-num" id="num_day">20</span>天</p>
+               <!-- <ul class="new_listdown">
                     <li class="j-duration-item" data-duration="1"><span>1</span>天</li>
                     <li class="j-duration-item" data-duration="2"><span>2</span>天</li>
                     <li class="j-duration-item" data-duration="3"><span>3</span>天</li>
@@ -93,7 +96,7 @@
                     <li class="j-duration-item" data-duration="3"><span>29</span>天</li>
                     <li class="j-duration-item" data-duration="3"><span>30</span>天</li>
 
-                </ul>
+                </ul> -->
             </div>
             <input type="hidden" id="use_data" value="">
         </div>
@@ -124,10 +127,10 @@
         <tr>
             <td style="background-color:#fcfcfc;">总操盘资金：</td>
             <td width="300" style="background-color:#fcfcfc;">
-                <div style="width:250px; margin:0 auto 0 16px;"><span id="total_money">600</span>元</div>
+                <div style="width:250px; margin:0 auto 0 16px;"><span id="total_money">1000</span>元</div>
             </td>
             <td>获得资金</td>
-            <td><span id="gain_money">600</span>元</td>
+            <td><span id="gain_money">1000</span>元</td>
         </tr>
         <tr>
             <td style="background-color:#fcfcfc;">亏损警戒线：</td>
@@ -421,6 +424,7 @@
         var day_select=$("#num_day").text();//选中的月数的值
         var ajax_html = $("#total_money").text(); //总配资的值
         var yuebeishu =$("#num").text();
+		// console.log(yuebeishu);
 //          $(".box").css("display","block");
         $.ajax({
             type: 'POST',
@@ -428,7 +432,7 @@
             data: {'free_ajax_html':ajax_html,'freebeishu':yuebeishu,'free_day_select':day_select},
             dataType: 'json',
             success: function (data) {
-                window.location.href = "./freetrial";
+                // window.location.href = "./freetrial";
             },
             fail: function (err, status) {
                 console.log(3)
