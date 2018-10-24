@@ -35963,3 +35963,2557 @@
 )
 [ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
 [ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:21:36+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.221669s][吞吐率：4.51req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015390s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024342s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:21:41+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.290489s][吞吐率：3.44req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014709s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024338s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:21:46+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.219822s][吞吐率：4.55req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012508s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022631s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:21:51+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.230092s][吞吐率：4.35req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010987s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022590s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:21:56+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.298860s][吞吐率：3.35req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.017048s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026043s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:01+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.228612s][吞吐率：4.37req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012258s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022384s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:06+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.264194s][吞吐率：3.79req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015701s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.029021s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:11+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.229737s][吞吐率：4.35req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011800s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022260s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:16+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.206870s][吞吐率：4.83req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010819s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020925s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:21+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.270545s][吞吐率：3.70req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012299s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025610s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:26+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.232597s][吞吐率：4.30req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013280s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025298s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:31+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.251998s][吞吐率：3.97req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013390s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024452s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:36+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.246605s][吞吐率：4.06req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012341s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.023545s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:41+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.266665s][吞吐率：3.75req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.019240s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025810s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:46+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.228736s][吞吐率：4.37req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012908s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024110s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:51+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.281543s][吞吐率：3.55req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014080s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.030064s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:22:56+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.214015s][吞吐率：4.67req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011643s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021535s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:01+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.496106s][吞吐率：2.02req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.053123s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.072242s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:05+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/index/index.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/index.html [运行时间：0.888566s][吞吐率：1.13req/s] [内存消耗：3,318.04kb] [文件加载：67]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'index',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/admin.php/user/publics/signin.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014262s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.028781s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.041073s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.020193s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.018178s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.019402s ]
+[ sql ] [ SQL ] SELECT `password` FROM `xh_admin_user` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.018880s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.019093s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.018092s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.018889s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.017529s ]
+---------------------------------------------------------------
+[ 2018-10-24T11:23:12+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.317010s][吞吐率：3.15req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.018566s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.031851s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:17+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.202318s][吞吐率：4.94req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012178s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020841s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:22+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.222746s][吞吐率：4.49req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010837s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025313s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:27+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.210229s][吞吐率：4.76req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010776s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022371s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:32+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.336717s][吞吐率：2.97req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.020245s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.034888s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:37+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.324285s][吞吐率：3.08req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012269s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021406s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:42+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.260963s][吞吐率：3.83req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013909s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.047166s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:47+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.316761s][吞吐率：3.16req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.019080s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026945s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:52+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.215058s][吞吐率：4.65req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010682s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024249s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:23:57+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.201908s][吞吐率：4.95req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012225s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021232s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:02+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.208343s][吞吐率：4.80req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013413s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021494s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:07+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.220916s][吞吐率：4.53req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014709s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.029527s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:12+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.226084s][吞吐率：4.42req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011907s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020789s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:17+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.257436s][吞吐率：3.88req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015282s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.027512s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:22+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.222885s][吞吐率：4.49req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014797s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024503s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:27+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.427316s][吞吐率：2.34req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016766s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025597s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:32+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.347019s][吞吐率：2.88req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013701s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.067144s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:37+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.272594s][吞吐率：3.67req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014539s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025452s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:42+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.215507s][吞吐率：4.64req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012752s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024964s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:47+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.203056s][吞吐率：4.92req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011881s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020191s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:52+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.217057s][吞吐率：4.61req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011077s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022062s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:24:57+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.217356s][吞吐率：4.60req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014313s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020927s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:02+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.209799s][吞吐率：4.77req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011546s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019967s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:07+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.220933s][吞吐率：4.53req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013134s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022166s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:12+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.212903s][吞吐率：4.70req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010981s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021474s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:17+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.238377s][吞吐率：4.20req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014417s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024023s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:22+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.211410s][吞吐率：4.73req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010959s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020303s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:27+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.209826s][吞吐率：4.77req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011687s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021213s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:32+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.294280s][吞吐率：3.40req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.019301s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.033044s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:37+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.215437s][吞吐率：4.64req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010970s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021904s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:43+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.397754s][吞吐率：2.51req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.017771s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.048638s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:47+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.205336s][吞吐率：4.87req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012247s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019793s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:52+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.207222s][吞吐率：4.83req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011734s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021262s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:25:57+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.240601s][吞吐率：4.16req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012713s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.032736s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:02+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.214285s][吞吐率：4.67req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011169s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022074s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:07+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.206408s][吞吐率：4.84req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011874s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022545s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:12+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.219910s][吞吐率：4.55req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012728s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022602s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:17+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.210484s][吞吐率：4.75req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012645s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021073s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:22+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.344196s][吞吐率：2.91req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.022151s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.048498s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-10-24T11:26:27+08:00 ] ::1 ::1 POST /feichangcelue/admin.php/admin/index/informationhint.html
+[ info ] localhost/feichangcelue/admin.php/admin/index/informationhint.html [运行时间：0.213624s][吞吐率：4.68req/s] [内存消耗：2,974.34kb] [文件加载：59]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'index',
+    2 => 'informationhint',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'pragma' => 'no-cache',
+  'cache-control' => 'no-cache',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/index/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014237s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022535s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->informationHint[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Index.php ]
+[ info ] [ LOG ] INIT File
