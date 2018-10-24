@@ -13,6 +13,7 @@
 
 <script>
     //自调用获取申请或者提现提示音
+
     $(document).ready(function(){
         //循环执行，每隔1秒钟执行一次 1000
         var t1=setInterval(function(){
@@ -20,23 +21,23 @@
         }, 5000);
 
         function refreshCount() {
+//      
             $.ajax({
                     type: 'POST',
                     url: "{:url('admin/index/informationhint')}",
                     data: {},
                     dataType: 'json',
                     success: function (data) {
-                         console.log(data);
+                        
                         if(data.data.czsq==2){
                                 ring();
-//                                clearInterval(t1);
                                 $.ajax({
                                     type: 'POST',
                                     url: "{:url('admin/index/setInformationHint')}",
                                     data: {"name":"txsq"},
                                     dataType: 'json',
+                                    async: true,
                                     success: function (data) {
-                                        console.log('cg');
                                     },
                                     fail: function (err, status) {
                                             console.log('失败')
@@ -51,9 +52,9 @@
         }
     });
     function ring(){
-        console.log(111);
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
+<<<<<<< HEAD
         audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
         //audioElement.load()
         $.get();
@@ -67,6 +68,14 @@
         },2000);
 
 
+=======
+//      
+				setTimeout(function(){ 
+									audioElement.pause();
+								},2000);
+				audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+   
+>>>>>>> aea46b98d06eb5bf6edfbf290a75e503337fc7b9
     }
 </script>
 {/block}
