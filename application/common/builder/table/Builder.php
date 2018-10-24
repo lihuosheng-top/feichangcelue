@@ -476,6 +476,32 @@ class Builder extends ZBuilder
                     ),
                 ];
                 break;
+            case 'notice_enable':
+                // 默认属性
+                $btn_attribute = [
+                    'title'       => '首页紧急通知（弹窗）启用',
+                    'icon'        => 'fa fa-check-circle-o',
+                    'class'       => 'btn btn-success ajax-post confirm',
+                    'target-form' => 'ids',
+                    'href'        => url(
+                        $this->_module.'/'.$this->_controller.'/notice_enable',
+                        ['table' => $table, 'field' => $field]
+                    ),
+                ];
+                break;
+            case 'notice_disable':
+                // 默认属性
+                $btn_attribute = [
+                    'title'       => '首页紧急通知（弹窗）关闭',
+                    'icon'        => 'fa fa-ban',
+                    'class'       => 'btn btn-warning ajax-post confirm',
+                    'target-form' => 'ids',
+                    'href'        => url(
+                        $this->_module.'/'.$this->_controller.'/notice_disable',
+                        ['table' => $table, 'field' => $field]
+                    ),
+                ];
+                break;
 
             // 禁用按钮
             case 'disable':

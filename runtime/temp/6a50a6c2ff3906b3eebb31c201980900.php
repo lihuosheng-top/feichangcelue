@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1540281800;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html";i:1540372027;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -164,7 +164,7 @@
         </tr>
         <tr>
             <td>操盘须知</td>
-            <td colspan="3">投资沪深A股，<span class="position">仓位不限制</span>，收益全归您。</td>
+            <td colspan="3">投资沪深A股，<span class="position">仓位不限制</span>，亲，您占百分之七十，我们公司占百分之三十，如有疑问，请咨询在线客服。</td>
         </tr>
         </tbody>
     </table>
