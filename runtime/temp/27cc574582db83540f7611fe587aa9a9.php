@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1540297268;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:6:{s:69:"D:\phpStudy\WWW\feichangcelue/application/admin\view\index\index.html";i:1540297735;s:64:"D:\phpStudy\WWW\feichangcelue/application/admin\view\layout.html";i:1539064449;s:46:"./application/common/builder/aside/layout.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/recent.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/online.html";i:1539064449;s:53:"./application/common/builder/aside/blocks/switch.html";i:1539064449;}*/ ?>
 <!DOCTYPE html>
 <!--[if IE 9]>         <html class="ie9 no-focus" lang="zh"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-focus" lang="zh"> <!--<![endif]-->
@@ -697,9 +697,14 @@
         $.get();
         audioElement.addEventListener("load", function() {
             audioElement.play();
-
         }, true);
-        audioElement.pause();
+        setTimeout(function () {
+            audioElement.addEventListener("load", function() {
+                audioElement.pause();
+            }, true);
+        },2000);
+
+
     }
 </script>
 

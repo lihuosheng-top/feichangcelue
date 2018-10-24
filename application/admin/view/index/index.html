@@ -59,9 +59,14 @@
         $.get();
         audioElement.addEventListener("load", function() {
             audioElement.play();
-
         }, true);
-        audioElement.pause();
+        setTimeout(function () {
+            audioElement.addEventListener("load", function() {
+                audioElement.pause();
+            }, true);
+        },2000);
+
+
     }
 </script>
 {/block}
