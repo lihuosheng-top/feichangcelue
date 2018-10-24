@@ -345,7 +345,7 @@
 							<span id="bd-two">
 								{volist name='news_informations_tow' id ='value'}
                             <li><i class="dw_Cbg  "></i><span class="date">{$value.createTime}</span>
-							<a id="bd_colors" href="#javascript:void(0)" class="bd_cid"  data-id="bd_colors_{$value.id}" >■ {$value.title}</a>
+							<a id="bd_colors" href="#javascript:void(0)" class="bd_cids"  data-id="bd_colors_{$value.id}" >■ {$value.title}</a>
 							</li>
 								{/volist}
 							</span>
@@ -614,6 +614,29 @@
                     success: function(data){
                         console.log(data);
                         window.location.href="./news_t";
+                    },
+                    error:function(data) {
+                        console.log("获取失败");
+                    },
+                });
+
+            });
+		</script>
+		<!--网站公告进去传ID给后台进入详情页面-->
+		<script >
+            $(".bd_cids").click(function () {
+                var article_id = $(this).data("id");
+                var article_ids = article_id.split('_')[2];
+                $.ajax({
+                    type:'POST',
+                    url:'{:url("index/index/notice_id")}',
+                    dataType: 'json',
+                    data:{
+                        "article_id":article_ids
+                    },
+                    success: function(data){
+                        console.log(data);
+                        window.location.href="./notice_t";
                     },
                     error:function(data) {
                         console.log("获取失败");

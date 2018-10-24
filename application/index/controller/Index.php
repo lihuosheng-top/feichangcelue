@@ -1310,7 +1310,7 @@ class Index extends Home
             if(!empty($article_id)){
                 $res = Db::name('article')->where('id',$article_id)->find();
                 if($res){
-                    session('article_id',null);
+//                    session('article_id',null);
                     $this->ajax_success('获取成功',$res);
                 }
             }
@@ -1321,6 +1321,53 @@ class Index extends Home
             return view('news_t');
         }
     }
+
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 获取点击过来的notice_id
+     **************************************
+     */
+    public function notice_id(Request $request){
+        if($request->isPost()){
+            $article_id =$_POST['article_id'];
+            if(!empty($article_id)){
+                session('notice_id',$article_id);
+                $this->ajax_success('获取成功',$article_id);
+            }
+
+        }
+    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 网站公告详情
+     * @return \think\response\View
+     **************************************
+     */
+    public function notice_t(Request $request){
+        if($request->isPost()){
+            $notice_id = Session::get('notice_id');
+            if(!empty($notice_id)){
+                $res = Db::name('notice')->where('id',$notice_id)->find();
+                if($res){
+//                    session('notice_id',null);
+                    $this->ajax_success('获取成功',$res);
+                }
+            }
+        }
+        if (is_mobile_request()) {
+            return view('index/mobile/notice_t');
+        }else{
+            return view('notice_t');
+        }
+    }
+
+
+
+
     /**
      **************李火生*******************
      * @param Request $request
@@ -1623,9 +1670,8 @@ class Index extends Home
 
     public function  zixun(){
         $news_informations =Db::name('article')->order('createTime','desc')->limit(7)->select();
-//      halt($news_infomations);
         $this->assign('news_informations',$news_informations);
-        $news_informations_tow =Db::name('article')->order('createTime','desc')->limit(7,7)->select();
+        $news_informations_tow =Db::name('notice')->order('createTime','desc')->limit(7)->select();
         $this->assign('news_informations_tow',$news_informations_tow);
     }
 
