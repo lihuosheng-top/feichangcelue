@@ -35,7 +35,7 @@ class Member extends Admin
 
         // 数据列表
         $data_list = Db::table("xh_member")->where($map)
-        ->where($condition)->where('status',1)->order("id desc")->paginate();
+        ->where($condition)->where('statuss',1)->order("id desc")->paginate();
 
         // 分页数据
         $page = $data_list->render();
@@ -138,7 +138,7 @@ class Member extends Admin
         if($id <= 0){
             return $this->error("id不正确");
         }
-            $data = ['status'=>0];
+            $data = ['statuss'=>0];
             if (Db::table("xh_member")->where("id=$id")->update($data)) {
                 // 记录行为
                 action_log('member_delete', 'admin_role', $id, UID, $data['name']);
@@ -649,7 +649,7 @@ class Member extends Admin
         if($id <= 0){
             return $this->error("id不正确");
         }
-        $data = ['status'=>1];
+        $data = ['statuss'=>1];
         if (Db::table("xh_member")->where("id=$id")->update($data)) {
             // 记录行为
             action_log('member_delete', 'admin_role', $id, UID, $data['name']);
