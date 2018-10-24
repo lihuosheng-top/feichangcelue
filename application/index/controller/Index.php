@@ -709,6 +709,9 @@ class Index extends Home
         if (!$member || $member['password'] != $login_pwd) {
             $this->error("用户名或密码不正确", url("index/index/login"));
         }
+        if ( $member['status'] != 1) {
+            $this->error("用户名已被锁定", url("index/index/login"));
+        }
         $_SESSION['member'] = $member;
         $redirect_url = $_SESSION['redirect_url'];
         if (!isset($redirect_url) || $redirect_url == '') {
