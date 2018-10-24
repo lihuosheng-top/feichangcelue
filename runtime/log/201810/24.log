@@ -1257,3 +1257,67 @@
 [ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.010466s ]
 [ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.010057s ]
 [ error ] [8]未定义变量: condition[D:\phpStudy\WWW\feichangcelue\application\admin\controller\Member.php:38]
+---------------------------------------------------------------
+[ 2018-10-24T15:44:10+08:00 ] ::1 ::1 GET /feichangcelue/admin.php/admin/menu
+[ info ] localhost/feichangcelue/admin.php/admin/menu [运行时间：0.649797s][吞吐率：1.54req/s] [内存消耗：3,569.76kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'menu',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/admin.php/admin/menu/add/module/admin/pid/273.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=35t2t30pa3kg5e5p3tqk9vghp5; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html; dolphin_home___forward__=%2Ffeichangcelue%2Fadmin.php%2Fadmin%2Fmenu',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011234s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021668s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'xinhuo_admin_',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Menu->index[ D:\phpStudy\WWW\feichangcelue\application\admin\controller\Menu.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/admin\view\menu\index.html [ array (
+  0 => '_admin_base_layout',
+  1 => 'system_color',
+  2 => '_top_menus',
+  3 => '_top_menus_all',
+  4 => '_sidebar_menus',
+  5 => '_location',
+  6 => 'aside',
+  7 => '_pop',
+  8 => 'menus',
+  9 => 'tab_nav',
+  10 => 'page_title',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032495s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.012798s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_admin_config` WHERE  `id` = 1 LIMIT 1 [ RunTime:0.011034s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_menu` [ RunTime:0.011749s ]
+[ sql ] [ SQL ] SELECT `module`,`title` FROM `xh_admin_menu` WHERE  `status` = 1  AND `pid` = 0 ORDER BY id,sort [ RunTime:0.011156s ]
+[ sql ] [ SQL ] SELECT `id`,`pid`,`module`,`title`,`icon`,`url_type`,`url_value`,`url_target`,`online_hide`,`create_time`,`update_time`,`sort`,`system_menu`,`status` FROM `xh_admin_menu` WHERE  `module` = 'admin' ORDER BY sort,id [ RunTime:0.015005s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_attachment` [ RunTime:0.010447s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` = 14 LIMIT 1 [ RunTime:0.010685s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_user` [ RunTime:0.012323s ]
+[ sql ] [ SQL ] SELECT `avatar` FROM `xh_admin_user` WHERE  `id` = 38 LIMIT 1 [ RunTime:0.009977s ]
+[ sql ] [ SQL ] SELECT `path` FROM `xh_admin_attachment` WHERE  `id` IS NULL LIMIT 1 [ RunTime:0.010978s ]

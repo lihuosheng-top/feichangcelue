@@ -615,7 +615,7 @@ class Member extends Admin
 
         // 数据列表
         $data_list = Db::table("xh_member")->where($map)
-            ->where($condition)->where('status',0)->order("id desc")->paginate();
+            ->where($condition)->where('statuss',0)->order("id desc")->paginate();
 
         // 分页数据
         $page = $data_list->render();
