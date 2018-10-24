@@ -220,10 +220,9 @@ class Index extends Admin
              */
             $czsq = session::get('czsq');
             if(!empty($czsq)){
-                $res =Db::table('xh_member_withdraw')->where('id',$czsq)->find();
+                $res =Db::table('xh_member_card_pay')->where('id',$czsq)->find();
                 if(!empty($res)){
-
-                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>1]);
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>2]);
                 }
             }
             /**
@@ -233,15 +232,22 @@ class Index extends Admin
             if(!empty($txsq)){
                 $ret =Db::table('xh_member_withdraw')->where('id',$txsq)->find();
                 if(!empty($ret)){
-                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>2]);
+                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>3]);
                 }
             }
 
              }
     }
 
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 清空session
+     **************************************
+     */
     public function setInformationHint(Request $request){
         if($request->isPost()){
+            dump($_POST['name']);
             if($_POST['name'] =='txsq'){
                 session::delete('txsq');
                 return $this->ajax_success('成功',['status'=>1]);

@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540282623;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1540347593;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -236,8 +236,8 @@
 				</div>
 				<div class="three_item br-fl">
 					<a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png" /></a>
-					<p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 256; ?></span>条</p>
-					<p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 5758000, 2 ); ?></span>元</p>
+					<p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 502458; ?></span>条</p>
+					<p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 2662534560, 2 ); ?></span>元</p>
 				</div>
 			</div>
 			<div class="w pz-type-swith" style="">
