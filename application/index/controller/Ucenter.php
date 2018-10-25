@@ -1447,6 +1447,7 @@ class Ucenter extends Home
            if(!empty($data)){
                $res = Db::table('xh_alipay_examine')->insert($data);
                if($res){
+                   session('zfbcz',$res); //TODO:充值提示音
                    return $this->ajax_success('提交成功,请等候审核',$data);
                }
            }
@@ -1469,8 +1470,9 @@ class Ucenter extends Home
             $data['createTime']=date("Y-m-d H:i:s");
             $data['status']=0;
             if(!empty($data)){
-                $res = Db::table('xh_wechat_examine')->insert($data);
+                $res = Db::table('xh_wechat_examine')->insertGetId($data);
                 if($res){
+                    session('wxcz',$res); //TODO:充值提示音
                     return $this->ajax_success('提交成功,请等候审核',$data);
                 }
             }

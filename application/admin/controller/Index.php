@@ -236,6 +236,30 @@ class Index extends Admin
                 }
             }
 
+            /**
+             * 支付宝充值申请
+             */
+            $zfbcz = session::get('zfbcz');
+            if(!empty($czsq)){
+                $res =Db::table('xh_alipay_examine')->where('id',$zfbcz)->find();
+                if(!empty($res)){
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>4]);
+                }
+            }
+
+
+            /**
+             * 微信充值申请
+             */
+            $wxcz = session::get('wxcz');
+            if(!empty($czsq)){
+                $res =Db::table('xh_wechat_examine')->where('id',$wxcz)->find();
+                if(!empty($res)){
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>5]);
+                }
+            }
+
+
              }
     }
 
@@ -247,13 +271,20 @@ class Index extends Admin
      */
     public function setInformationHint(Request $request){
         if($request->isPost()){
-            dump($_POST['name']);
             if($_POST['name'] =='txsq'){
                 session::delete('txsq');
                 return $this->ajax_success('成功',['status'=>1]);
             }
             if($_POST['name'] =='czsq'){
                 session::delete('czsq');
+                return $this->ajax_success('成功',['status'=>1]);
+            }
+            if($_POST['name'] =='zfbcz'){
+                session::delete('zfbcz');
+                return $this->ajax_success('成功',['status'=>1]);
+            }
+            if($_POST['name'] =='wxcz'){
+                session::delete('wxcz');
                 return $this->ajax_success('成功',['status'=>1]);
             }
 

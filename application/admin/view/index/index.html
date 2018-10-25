@@ -59,6 +59,49 @@
                                 }
                             });
                         }
+
+
+
+                        if(data.data.czsq==4){
+                            ring();
+                            $.ajax({
+                                type: 'POST',
+                                url: "{:url('admin/index/setInformationHint')}",
+                                data: {"name":"zfbcz"},
+                                dataType: 'json',
+                                async: true,
+                                success: function (data) {
+                                },
+                                fail: function (err, status) {
+                                    console.log('失败')
+                                }
+                            });
+                        }
+                        if(data.data.czsq==5){
+                            ring();
+                            $.ajax({
+                                type: 'POST',
+                                url: "{:url('admin/index/setInformationHint')}",
+                                data: {"name":"wxcz"},
+                                dataType: 'json',
+                                async: true,
+                                success: function (data) {
+                                },
+                                fail: function (err, status) {
+                                    console.log('失败')
+                                }
+                            });
+                        }
+
+
+
+
+
+
+
+
+
+
                     },
                     fail: function (err, status) {
                             console.log('失败')
