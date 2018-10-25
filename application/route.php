@@ -41,6 +41,8 @@ return [
     'detail'=> 'index/ucenter/detail',       		//结算区-单号详情
     'safeensure'=> 'index/index/safeensure',       		//安全保障
     'gift'=> 'index/index/gift',       			//协议
+    'emergency_notices'=> 'index/index/emergency_notices',  //紧急通知
+    'emergency'=> 'index/index/emergency',  //紧急通知(关闭开启)
     'help'=> 'index/index/help',       			//帮助中心-常见问题
     'guild'=> 'index/index/guild',       		//帮助中心-新手教学
 

@@ -126,6 +126,8 @@ class Index extends Home
             return view('index/mobile/index');
         }else{
             $this->zixun();
+            $this->emergency_notices();
+            $this->emergency();
             return view('index');
         }
 
@@ -1673,6 +1675,28 @@ class Index extends Home
         $this->assign('news_informations',$news_informations);
         $news_informations_tow =Db::name('notice')->order('createTime','desc')->limit(7)->select();
         $this->assign('news_informations_tow',$news_informations_tow);
+    }
+
+    /**
+     **************李火生*******************
+     * PC端紧急通知返回的数据
+     **************************************
+     */
+    public  function  emergency_notices(){
+        $number =Db::name('notice')->count();
+        $data =Db::name('notice')->order('createTime','desc')->limit($number,1)->find();
+        $this->assign('notice_content',$data);
+
+    }
+
+    /**
+     **************李火生*******************
+     * 关闭紧急通知按钮
+     **************************************
+     */
+    public function emergency(){
+        $content =Db::name('emergency_notice')->limit(1,1)->find();
+        $this->assign('btn_emergency',$content);
     }
 
 
