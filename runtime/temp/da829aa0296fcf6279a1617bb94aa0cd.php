@@ -1,12 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\login.html";i:1539680150;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\rhsqpz.html";i:1540434944;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>尚牛在线</title>
-</head>
-<body class="user-reg login_body">
-<title>首页</title>
+    <title>Title</title>
+	<title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
 <meta name="description" content="<?php echo config('web_site_description'); ?>">
@@ -135,101 +133,88 @@
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
-
-<!--登录区-->
-<div class="br-content login_reg_cont">
-<section class="section section-form" id="page_auth_login">
-    <div class="container">
-        <div class="section-border group">
-            <h2 class="login_h2">账户登录</h2>
-            <div class="form">
-                <div class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入用户名" name="phone" id="用户名i" data-error-msg="请输入用户名">
-                    <label class="name-err1 hide">用户名不能为空</label>
+	<link href="__STATIC__/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css" />
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
+</head>
+<body>
+<div class="content" style="margin-top: 130px;">
+	<div style="width: 700px; margin: 20px auto;">
+		<img src="__STATIC__/home/img/sq.png" alt="" width="100%">
+		</div>
+</div>
+	<div class="foot">
+    <div class="wrapper clearfix">
+    <div class="foots">
+             <div class="footTel">
+                <div class="footTel-top">
+                    <img src="__STATIC__/home/img/foot-shares.png" alt="">
+                    <span>股票配资</span>
                 </div>
-                <div class="field-wrapper">
-                    <input type="password" class="text" placeholder="请输入密码" name="pwd" id="登录密码i" onkeydown="if (event.keyCode == 13) { user_Login() }">
-                    <label class="psw-err1 hide">密码不能为空</label>
-                </div>
-
-                <div class="link-wrapper group login_forgot">
-                    <a href="./forgot_pass.html" style="color: #fff; margin-left: 9px;">忘记密码</a>
-                </div>
-
-                <div class="btn-wrapper login_bw">
-                    <a class="btn btn-pri" id="login-btn">登录</a>
+                <div class="footTel-links">
+                    <p><a href="./PcBuyDay">按天配资申请</a></p>
+                    <p><a href="./PcBuyMonth">按月配资申请</a></p>
+                    <!-- <p><a href="./">按周配资申请</a></p> -->
+                    <p><a href="./PcBuyFree">免息配资申请</a></p>
                 </div>
 
             </div>
-            <div class="login_reg quick-link-wrapper group">
-                <p><a href="./reg.html">马上注册</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-</div>
-
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
+            <div class="footTel">
+                <div class="footTel-top">
+                    <img src="__STATIC__/home/img/foot-guide.png" alt="">
+                    <span>配资利息讲解</span>
                 </div>
+                <div class="footTel-links">
+                    <p><a href="./atlxjj">按天利息讲解</a></p>
+                    <!-- <p><a href="/aboutus/azlxjj.html">按周利息讲解</a></p> -->
+                    <p><a href="./aylxjj">按月利息讲解</a></p>
+                    <p><a href="./mxlxjj">免息配资讲解</a></p>
+
+
+                </div>
+
             </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
+            <div class="footTel">
+                <div class="footTel-top">
+                    <img src="__STATIC__/home/img/foot-offi.png" alt="">
+                    <span>尚牛微信</span>
+                </div>
+                <div class="footTel-links">
+                    <p></p><p><img style="float: none; margin: 0px" alt=""width="100%" src="__STATIC__/home/img/20170626180649.png"></p><p></p>
+                </div>
+
+            </div>
+            <div class="footTel">
+                <div class="footTel-top">
+                    <img src="__STATIC__/home/img/foot-offi.png" alt="">
+                    <span>尚牛公众号</span>
+                </div>
+                <div class="footTel-links">
+                    <p></p><div><img style="float: none; margin: 0px" width="100% "alt="" src="__STATIC__/home/img/20170816183336.png"></div><p></p>
+                </div>
+
+            </div>
+            <div class="footTel">
+                <div class="footTel-top">
+                    <img src="__STATIC__/home/img/foot-help.png" alt="">
+                    <span>新手帮助中心</span>
+                </div>
+                <div class="footTel-links">
+                    <p><a href="./rhzchy">如何注册会员</a></p>
+                    <p><a href="./rhsmrz">如何实名认证</a></p>
+                    <p><a href="./rhjxcz">如何进行充值</a></p>
+                    <p><a href="./rhsqpz">如何申请配资</a></p>
+
+                </div>
+
+            </div>
+          
         </div>
     </div>
 </div>
-
-<!--底部-->
+	
+			<!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
         <a href="./company.html">关于我们</a>
@@ -486,6 +471,5 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-<script src="__STATIC__/home/js/login.js"></script>
 </body>
 </html>

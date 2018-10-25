@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\rhsmrz.html";i:1540434944;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\aylxjj.html";i:1540192923;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -137,13 +137,78 @@
 		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css" />
 		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css" />
 		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
+		<style type="text/css">
+			.day-content {
+				width: 50%;
+				margin: 150px auto;
+			}
+
+			.day-content p {
+				margin-top: 10px;
+				TEXT-TRANSFORM: none;
+				TEXT-INDENT: 0px;
+				overflow: hidden;
+				FONT: 16px/30px "Microsoft Yahei";
+				WHITE-SPACE: normal;
+				FLOAT: none;
+				LETTER-SPACING: normal;
+				COLOR: rgb(102, 102, 102);
+				WORD-SPACING: 0px;
+				-webkit-text-stroke-width: 0px;
+			}
+
+			.cms_content {
+				margin-top: 10px;
+				height: 42px;
+				width: 100%;
+				border-bottom: 2px solid #dcd8cd;
+				position: relative;
+			}
+
+			.cms_content h2 {
+				color: #666;
+				position: absolute;
+				top: 0;
+				left: 0px;
+				z-index: 1;
+				margin-bottom: -2px;
+				float: left;
+				font: normal 22px/40px 'Microsoft Yahei';
+				border-bottom: 2px solid #b31d23;
+			}
+		</style>
 	</head>
 	<body>
-		<div class="content" style="margin-top: 130px;">
-			<div style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/rhsm.png" alt="" width="100%"></div>
-			<div style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/rhsm01.png" alt="" width="100%"></div>
-		</div>
-		<div class="foot">
+		<body>
+			<div class="day-content">
+				<div class="cms_content">
+					<h2>按月利息讲解</h2>
+				</div>
+
+			
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">按月利息【尚牛在线打造全国最低】</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">1-2倍配资利息：1分</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">本金1000元,1倍配:1000元,利息10元 /月&nbsp;<br></span><span
+						 style="FONT-SIZE: 18px">本金1000元,2倍配:2000元,利息20元 /月</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px"><br></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">3-4倍配资利息：0.9<span style="FONT-SIZE: 18px">分</span></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">本金1000元,3倍配:3000元,利息27元 /月&nbsp;<br></span><span
+						 style="FONT-SIZE: 18px">本金1000元,4倍配:4000元,利息36元 /月&nbsp;</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px"><br></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">5-6倍配资利息：0.8<span style="FONT-SIZE: 18px">分</span></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">本金1000元,5倍配:5000元,利息40元 /月&nbsp;<br></span><span
+						 style="FONT-SIZE: 18px">本金1000元,6倍配:6000元,利息48元 /月&nbsp;</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">7-8倍配资利息：0.7<span style="FONT-SIZE: 18px">分</span></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">本金1000元,7倍配:7000元,利息49元 /月&nbsp;<br></span><span
+						 style="FONT-SIZE: 18px">本金1000元,8倍配:8000元,利息56元 /月&nbsp;</span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px"><br></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">9倍配资利息：0.65<span style="FONT-SIZE: 18px">分</span></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px"><span style="FONT-SIZE: 18px"></span></span><span
+						 style="FONT-SIZE: 18px">本金1000元,9倍配:9000元,利息58.5元 /月&nbsp;<br><br>10倍配资利息：0.6<span style="FONT-SIZE: 18px">分</span></span></p>
+					<p style="WHITE-SPACE: normal"><span style="FONT-SIZE: 18px">本金1000元,10倍配:10000元,利息60元 /月&nbsp;</span></p>
+				
+			</div>
+			<div class="foot">
     <div class="wrapper clearfix">
     <div class="foots">
              <div class="footTel">
@@ -213,7 +278,7 @@
     </div>
 </div>
 	
-		<!--底部-->
+			<!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
         <a href="./company.html">关于我们</a>
@@ -470,5 +535,6 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
+		</body>
 	</body>
 </html>

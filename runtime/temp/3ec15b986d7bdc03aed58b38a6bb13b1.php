@@ -1,10 +1,10 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\rhsmrz.html";i:1540434944;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\rhzchy.html";i:1540434944;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1539593722;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Title</title>
-		<title>首页</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
 <meta name="description" content="<?php echo config('web_site_description'); ?>">
@@ -133,17 +133,19 @@
 
 
 </script>
-		<link href="__STATIC__/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css" />
-		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css" />
-		<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
-	</head>
-	<body>
-		<div class="content" style="margin-top: 130px;">
-			<div style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/rhsm.png" alt="" width="100%"></div>
-			<div style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/rhsm01.png" alt="" width="100%"></div>
-		</div>
-		<div class="foot">
+	<link href="__STATIC__/libs/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index.css" />
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css" />
+	<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/index_information.css" />
+</head>
+<body>
+	
+	<div class="content" style="margin-top: 130px;">
+		<div style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/zhuce01.png" alt="" width="100%"></div>
+		<div  style="width: 700px; margin: 20px auto;"><img src="__STATIC__/home/img/zhuce02.png" alt="" width="100%"></div>
+	</div>
+
+	<div class="foot">
     <div class="wrapper clearfix">
     <div class="foots">
              <div class="footTel">
@@ -213,7 +215,7 @@
     </div>
 </div>
 	
-		<!--底部-->
+			<!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
         <a href="./company.html">关于我们</a>
@@ -470,5 +472,5 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-	</body>
+</body>
 </html>
