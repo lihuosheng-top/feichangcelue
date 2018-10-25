@@ -6,6 +6,34 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link href="../public/static/home/css/mui.min.css" rel="stylesheet" />
 		<link href="../public/static/home/css/moblie/mobliecom.css" rel="stylesheet" />
+		<style type="text/css">
+						.form-list li span{
+							display: inline-block;
+							color: #333;
+							font-size: 14px;
+						}
+						.form-list li input{
+							display: inline-block;
+							color: #333;
+							font-size: 14px;
+							height: 36px;
+						}
+						.form-list li .title{
+							width: 22%;
+							text-align: right;
+							
+						}
+						
+						.form-list li .content{
+							width: 60%;
+						}
+						
+			#submit{
+				color: #fff;
+			    border: 1px solid #007aff;
+			    background-color: #007aff;
+			}
+		</style>
 	</head>
 <!--个人中心-充值-支付宝-->
 	<body class="quick_body payment_body">
@@ -22,18 +50,76 @@
 			<p class="wx_p3">账号：尚牛在线商贸有限公司</p>
 			<div class="ball ball_l"></div>
 			<div class="ball ball_r"></div>
+			<form action="" method="post">
+				<ul class="form-list">
+					<li>
+						<span class="title">金额:</span>
+						<span class="content"><input type="text" name="amount" id="amount" value="" /></span>
+					</li>
+					<li>
+						<span class="title" style="vertical-align: 40px;">说明:</span>
+						<span class="content"><textarea rows="2" cols="60" name="instructions" id="instructions">
+							
+						</textarea></span>
+					</li>
+					<li>
+						<span class="title">支付宝账号:</span>
+						<span class="content"><input type="text" name="alipay" id="alipay" value="" /></span>
+					</li>
+				</ul>
+				<!-- <div class="upload_img">
+					<p>截图凭证：</p>
+					<ul>
+						<li class="upload_input">
+							<a href="javascript:;">
+								<img src="__STATIC__/index/image/icon-cam.png">
+							</a>
+							<input type="file" id="myfile" enctype="multipart/form-data"  multiple accept="image/jpeg, image/jpg, image/png" name="credentials">
+						</li>
+					</ul>
+				</div> -->
+				<div class="buts" style="text-align: center;">
+					<input type="button" value="确认提交" id="submit"/>
+				</div>
+				
+			</form>
 		  </div>
+			
 		</div>
 
 
 
 
+
 		<!---js---->
-		<script src="../public/static/home/js/moblie/mui.min.js"></script>
+	<script src="../public/static/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
+	<script src="../public/static/home/js/moblie/mui.min.js"></script>
+	<script src="../public/static/home/js/moblie/clipboard.min.js"></script>
 		<script type="text/javascript">
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
 			})
 		</script>
+		<script type="text/javascript">
+				
+					
+					  $('#submit').click(function() {
+						var amount=$("#amount").val();
+						var instructions=$("#instructions").val();
+						var alipay=$("#alipay").val();
+						$.ajax({
+							type: "post",
+							url: "/tools/user_ajax.ashx?action=get_avoidmoney",
+							dataType: 'JSON',
+							data:{"1":amount,"2":instructions,"3":alipay},
+							error: function(result) {	  
+							},
+							success: function(result) {
+		
+							}
+						});
+					  });
+				
+			</script>
 	</body>
 </html>

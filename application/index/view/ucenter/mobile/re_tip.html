@@ -8,6 +8,106 @@
 		<link href="../public/static/home/css/moblie/mobliecom.css" rel="stylesheet" />
 		<style type="text/css">
 			*{-webkit-user-select: text;user-select: text;}
+			.form-list li span{
+				display: inline-block;
+				color: #333;
+				font-size: 14px;
+			}
+			.form-list li input{
+				display: inline-block;
+				color: #333;
+				font-size: 14px;
+				height: 36px;
+			}
+			.form-list li .title{
+				width: 22%;
+				text-align: right;
+				
+			}
+			
+			.form-list li .content{
+				width: 60%;
+			}
+			/* 多图片上传样式 */
+			.upload_img{
+    width: 90%;
+    padding: 0 .47rem;
+    box-sizing: border-box;
+    margin-bottom: .5rem;
+	margin: 1.5rem;
+}
+.upload_img p{
+    font-size: .32rem;
+    color: #333;
+    margin-bottom: .2rem;
+}
+.upload_img ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.upload_img .img_box_li{
+    position: relative;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 2.37rem;
+    height: 1.96rem;
+}
+.upload_img .img_box_li img{
+    width: 100%;
+    height: 100%;
+}
+.upload_img .img_box_li button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: .4rem;
+    height: .4rem;
+    transform: translate(50%,-50%);
+    border-radius: 50%;
+    text-align: center;
+    line-height: .4rem;
+    background-color: rgba(0, 0, 0, .6);
+    font-size: .36rem;
+    color: #fff;
+    border: 0;
+    padding: 0;
+}
+.upload_img .upload_input{
+    position: relative;
+    width: 1.37rem;
+    height: .96rem;
+    border: 1px dashed #c5c5c5;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.upload_img .upload_input a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: .64rem;
+    height: .64rem;
+    transform: translate(50%,15%);
+}
+.upload_img .upload_input a img{
+    width: 100%;
+    height: 100%;
+}
+.upload_img .upload_input input{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#submit{
+	color: #fff;
+    border: 1px solid #007aff;
+    background-color: #007aff;
+}
 		</style>
 	</head>
 <!--个人中心-->
@@ -27,7 +127,39 @@
 		    	</div>
 		    	<a id="copy_btn" class="copy mui-pull-right mui-col-xs-1" href="javascript:;">复制</a>
 		    </section>
-			
+			<form action="" method="post">
+				<ul class="form-list">
+					<li>
+						<span class="title">金额:</span>
+						<span class="content"><input type="text" name="amount" id="amount" value="" /></span>
+					</li>
+					<li>
+						<span class="title" style="vertical-align: 40px;">说明:</span>
+						<span class="content"><textarea rows="2" cols="60" name="instructions" id="instructions">
+							
+						</textarea></span>
+					</li>
+					<li>
+						 <span class="title">支付宝账号:</span>
+						 <span class="content"><input type="text" name="alipay" id="alipay" value="" /></span>
+					</li>
+				</ul>
+				<!-- <div class="upload_img">
+                    <p>截图凭证：</p>
+                    <ul>
+                        <li class="upload_input">
+                            <a href="javascript:;">
+                                <img src="__STATIC__/index/image/icon-cam.png">
+                            </a>
+                            <input type="file" id="myfile" enctype="multipart/form-data"  multiple accept="image/jpeg, image/jpg, image/png" name="credentials">
+                        </li>
+                    </ul>
+                </div> -->
+				<div class="buts" style="text-align: center;">
+					<input type="button" value="确认提交" id="submit"/>
+				</div>
+				
+			</form>
 
 
 
@@ -81,5 +213,63 @@
 			
     
 		</script>
+	 
+	 <!-- 图片上传js -->
+	<!-- <script type="text/javascript">
+	 	// 删除图片
+        function removeImg(obj){
+            $(obj).parent().remove();
+        }
+        // 上传图片
+        $(function(){
+            $('#myfile').change(function(){
+                var objUrl = [],
+                    str = '';
+                var len =  this.files.length;
+                for(var i = 0; i < len; i++){
+                    // 存地址
+                    objUrl.push(getObjectURL(this.files[i]));
+                }
+                $.each(objUrl, function(idx, val){
+                    str += '<li class="img_box_li">\
+                            <img src="'+val+'">\
+                            <button onclick="javascript:removeImg(this);" class="close_img">×</button>\
+                        </li>'
+                })
+                $('.upload_input').before(str);
+            })
+            // 在浏览器上预览本地图片
+            function getObjectURL(file) {
+                var url = null;
+                if(window.URL != undefined) { // mozilla(firefox)
+                    url = window.URL.createObjectURL(file);
+                } else if(window.webkitURL != undefined) { // webkit or chrome
+                    url = window.webkitURL.createObjectURL(file);
+                }
+                return url;
+            }
+        });
+	 </script>
+	 --><script type="text/javascript">
+		
+			
+			  $('#submit').click(function() {
+				var amount=$("#amount").val();
+				var instructions=$("#instructions").val();
+				var alipay=$("#alipay").val();
+				$.ajax({
+					type: "post",
+					url: "/tools/user_ajax.ashx?action=get_avoidmoney",
+					dataType: 'JSON',
+					data:{"1":amount,"2":instructions,"3":alipay},
+					error: function(result) {	  
+					},
+					success: function(result) {
+
+					}
+				});
+			  });
+		
+	</script>
 	</body>
 </html>
