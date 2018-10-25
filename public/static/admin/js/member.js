@@ -38,3 +38,43 @@ function doDate(id,status){
         }
     }, 'json' );
 }
+
+
+function doAlipay(id,status){
+    if( id <= 0){
+        alert("id错误");
+        return;
+    }
+    if(!window.confirm("确定审核通过？")){
+        return;
+    }
+    $.post( "./alipay_examine_action", {id : id,status:status}, function(data){
+        if(data.code == '0'){
+            alert("审核成功");
+            location.reload();
+        }else{
+            alert("审核失败");
+            alert(data.msg);
+        }
+    }, 'json' );
+}
+
+function doWechat(id,status){
+    if( id <= 0){
+        alert("id错误");
+        return;
+    }
+    if(!window.confirm("确定审核通过？")){
+        return;
+    }
+    $.post( "./weichat_examine_action", {id : id,status:status}, function(data){
+        if(data.code == '0'){
+            alert("审核成功");
+            location.reload();
+        }else{
+            alert("审核失败");
+            alert(data.msg);
+        }
+    }, 'json' );
+}
+

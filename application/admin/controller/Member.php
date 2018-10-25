@@ -615,7 +615,49 @@ class Member extends Admin
      **************************************
      */
     public function  alipay_examine(){
-        
+
+        $data_list = Db::table(["xh_alipay_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where("a.user_id = b.id")
+            ->order("id desc")
+            ->paginate();
+
+        // 分页数据
+        $page = $data_list->render();
+        $list = array();
+        foreach($data_list as $i=>$v){
+            if($v['status'] == 0){
+                $v['status'] = '待审核';
+            }
+            if($v['status'] == 1){
+                $v['status'] = '通过';
+            }
+            if($v['status'] == 2){
+                $v['status'] = '未通过';
+            }
+            $list[$i] = $v;
+        }
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('alipay_examine') // 设置数据表名
+            ->setSearch(['memberId' => '用户ID', 'username' => '用户名', 'mobile' => '手机号']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['status','状态'],
+            ])
+            ->setRowList($list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
     }
 
     /**
@@ -623,7 +665,32 @@ class Member extends Admin
      * 支付宝的审核操作（0未审核，1审核通过，2审核不通过）
      **************************************
      */
-    public function alipay_examine_action(){
+    public function alipay_examine_action()
+    {
+        $id = (int)trim(input("id"));
+        if ($id <= 0) {
+            error("数据错误");
+        }
+        $status = (int)trim(input("status"));//1 审核通过；2审核失败，0待审核
+        if ($status != 1 && $status != 2 && $status != 0) {
+            error("状态值不对");
+        }
+
+        $withdraw = Db::table("xh_alipay_examine")->where("id=$id")->find();
+        if (!$withdraw) {
+            error("数据不存在");
+        }
+
+        Db::table("xh_alipay_examine")->where("id=$id")->update(array("status" => $status));
+        if ($status == 1) {
+            //审核不通过
+            success('审核通过');
+
+        } else if ($status == 1) {
+            //审核通过
+            error('失败');
+        }
+        success("操作成功");
 
     }
 
@@ -633,7 +700,51 @@ class Member extends Admin
      **************************************
      */
     public function  alipay_examine_unaudited(){
+        // 获取查询条件
+        $map = $this->getMap();
+        // 数据列表
+        $data_list = Db::table(["xh_alipay_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where($map)
+            ->where("a.user_id = b.id and a.status=0")
+            ->order("id desc")
+            ->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        $btn_yes = [
+            'title' => '审核通过',
+            'icon'  => 'fa fa-fw fa-check-square-o',
+            'href'  => "javascript:doAlipay(__id__,1)"
+        ];
+        $btn_no = [
+            'title' => '审核不通过',
+            'icon'  => 'fa fa-fw fa-power-off',
+            'href'  => "javascript:doAlipay(__id__,2)"
+        ];
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('alipay_examine') // 设置数据表名
+            ->setSearch(['username','mobile']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
 
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('custom', $btn_yes)
+            ->addRightButton('custom', $btn_no)
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
     }
 
 
@@ -647,7 +758,48 @@ class Member extends Admin
      **************************************
      */
     public function  weichat_examine(){
+        $data_list = Db::table(["xh_wechat_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where("a.user_id = b.id")
+            ->order("id desc")
+            ->paginate();
 
+        // 分页数据
+        $page = $data_list->render();
+        $list = array();
+        foreach($data_list as $i=>$v){
+            if($v['status'] == 0){
+                $v['status'] = '待审核';
+            }
+            if($v['status'] == 1){
+                $v['status'] = '通过';
+            }
+            if($v['status'] == 2){
+                $v['status'] = '未通过';
+            }
+            $list[$i] = $v;
+        }
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('wechat_examine') // 设置数据表名
+            ->setSearch(['memberId' => '用户ID', 'username' => '用户名', 'mobile' => '手机号']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['status','状态'],
+            ])
+            ->setRowList($list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
     }
 
     /**
@@ -656,7 +808,30 @@ class Member extends Admin
      **************************************
      */
     public function weichat_examine_action(){
+        $id = (int)trim(input("id"));
+        if ($id <= 0) {
+            error("数据错误");
+        }
+        $status = (int)trim(input("status"));//1 审核通过；2审核失败，0待审核
+        if ($status != 1 && $status != 2 && $status != 0) {
+            error("状态值不对");
+        }
 
+        $withdraw = Db::table("xh_wechat_examine")->where("id=$id")->find();
+        if (!$withdraw) {
+            error("数据不存在");
+        }
+
+        Db::table("xh_wechat_examine")->where("id=$id")->update(array("status" => $status));
+        if ($status == 1) {
+            //审核不通过
+            success('审核通过');
+
+        } else if ($status == 1) {
+            //审核通过
+            error('失败');
+        }
+        success("操作成功");
     }
 
     /**
@@ -665,23 +840,52 @@ class Member extends Admin
      **************************************
      */
     public function  weichat_examine_unaudited(){
+        // 获取查询条件
+        $map = $this->getMap();
+        // 数据列表
+        $data_list = Db::table(["xh_wechat_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where($map)
+            ->where("a.user_id = b.id and a.status=0")
+            ->order("id desc")
+            ->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        $btn_yes = [
+            'title' => '审核通过',
+            'icon'  => 'fa fa-fw fa-check-square-o',
+            'href'  => "javascript:doWechat(__id__,1)"
+        ];
+        $btn_no = [
+            'title' => '审核不通过',
+            'icon'  => 'fa fa-fw fa-power-off',
+            'href'  => "javascript:doWechat(__id__,2)"
+        ];
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('wechat_examine') // 设置数据表名
+            ->setSearch(['username','mobile']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
 
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('custom', $btn_yes)
+            ->addRightButton('custom', $btn_no)
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     /**

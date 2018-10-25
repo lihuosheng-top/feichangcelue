@@ -133,6 +133,9 @@ return [
     'ucenter/dowithdraw'=>"index/ucenter/doWithdraw",       //银行卡体现
     'ucenter/alipay'=> 'index/ucenter/alipay',   			//个人中心-充值-支付宝
     'ucenter/re_tip'=> 'index/ucenter/re_tip',   			//个人中心-充值-支付宝-2
+    'ucenter/getInformaiotnAlipay'=> 'index/ucenter/getInformationAlipay',  //个人中心-充值-支付宝申请
+    'ucenter/getInformaiotnWeChat'=> 'index/ucenter/getInformationWeChat',  //个人中心-充值-微信申请
+
     'ucenter/wechatpay'=> 'index/ucenter/wechatpay',   		//个人中心-充值-微信
     'ucenter/quick_pay'=> 'index/ucenter/quick_pay',   		//个人中心-充值-银联支付
     'ucenter/user_info'=> 'index/ucenter/user_info',   		//个人中心-实名认证

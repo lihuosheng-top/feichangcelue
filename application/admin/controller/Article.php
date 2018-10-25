@@ -286,6 +286,17 @@ class Article extends Admin
         $data_list = Db::table("xh_emergency_notice")->paginate();
         // 分页数据
         $page = $data_list->render();
+        $list = array();
+        foreach($data_list as $i=>$v){
+            if($v['status'] == 0){
+                $v['status'] = '关闭';
+            }
+            if($v['status'] == 1){
+                $v['status'] = '开启';
+            }
+            $list[$i] = $v;
+        }
+
         // 使用ZBuilder快速创建数据表格
         return ZBuilder::make('table')
             ->hideCheckbox()
@@ -300,7 +311,8 @@ class Article extends Admin
             ])
             ->addRightButton('enable', ['href' => url('notice_enable', ['id' => '__id__'])]) // 批量添加右侧按钮
             ->addRightButton('disable', ['href' => url('notice_disable', ['id' => '__id__'])])
-            ->setRowList($data_list) // 设置表格数据
+//            ->setRowList($data_list) // 设置表格数据
+            ->setRowList($list) // 设置表格数据
             ->setPages($page) // 设置分页数据
             ->fetch(); // 渲染页面
     }

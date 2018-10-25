@@ -8,6 +8,7 @@ use think\Model;
 
 use think\Db;
 use think\View;
+use think\Request;
 
 
 class Ucenter extends Home
@@ -1427,5 +1428,58 @@ class Ucenter extends Home
         success("修改成功");
 
     }
+
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 支付宝充值获取信息存库
+     **************************************
+     */
+    public function  getInformationAlipay(Request $request){
+        if($request->isPost()){
+            $data['pay_money']=trim($_POST['amount']);
+            $data['pay_explain']=trim($_POST['instructions']);
+            $data['pay_number']=trim($_POST['alipay']);
+            $data['user_id']=trim($_SESSION['member']['id']);
+            $data['createTime']=date("Y-m-d H:i:s");
+            $data['status']=0;
+           if(!empty($data)){
+               $res = Db::table('xh_alipay_examine')->insert($data);
+               if($res){
+                   return $this->ajax_success('提交成功,请等候审核',$data);
+               }
+           }
+
+        }
+    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 微信充值获取信息进行存库操作
+     **************************************
+     */
+    public function  getInformationWeChat(Request $request){
+        if($request->isPost()){
+            $data['pay_money']=trim($_POST['amount']);
+            $data['pay_explain']=trim($_POST['instructions']);
+            $data['pay_number']=trim($_POST['alipay']);
+            $data['user_id']=trim($_SESSION['member']['id']);
+            $data['createTime']=date("Y-m-d H:i:s");
+            $data['status']=0;
+            if(!empty($data)){
+                $res = Db::table('xh_wechat_examine')->insert($data);
+                if($res){
+                    return $this->ajax_success('提交成功,请等候审核',$data);
+                }
+            }
+
+        }
+    }
+
+
+
+
 
 }
