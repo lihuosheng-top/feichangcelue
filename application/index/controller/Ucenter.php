@@ -1445,8 +1445,8 @@ class Ucenter extends Home
             $data['createTime']=date("Y-m-d H:i:s");
             $data['status']=0;
            if(!empty($data)){
-               $res = Db::table('xh_alipay_examine')->insert($data);
-               if($res){
+               $res = Db::table('xh_alipay_examine')->insertGetId($data);
+               if($res>0){
                    session('zfbcz',$res); //TODO:充值提示音
                    return $this->ajax_success('提交成功,请等候审核',$data);
                }
