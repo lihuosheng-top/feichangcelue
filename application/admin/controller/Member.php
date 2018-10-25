@@ -35,7 +35,7 @@ class Member extends Admin
 
         // 数据列表
         $data_list = Db::table("xh_member")->where($map)
-        ->where($condition)->order("id desc")->paginate();
+        ->where($condition)->where('statuss',1)->order("id desc")->paginate();
 
         // 分页数据
         $page = $data_list->render();
@@ -74,6 +74,7 @@ class Member extends Admin
             ->addRightButtons('edit') // 批量添加右侧按钮
             ->addRightButton('custom', $btn_recharge)
             ->addRightButton('custom', $btn_fundrecord)
+            ->addRightButton('delete'  ,['href' => url('delete', ['id' => '__id__'])])
             ->setRowList($data_list) // 设置表格数据
             ->setPages($page) // 设置分页数据
             ->fetch(); // 渲染页面
@@ -81,9 +82,11 @@ class Member extends Admin
 
 
     /**
-     * 编辑
+     **************李火生*******************
      * @param null $id
      * @return mixed|void
+     * 编辑
+     **************************************
      */
     public function edit($id = null)
     {
@@ -121,6 +124,30 @@ class Member extends Admin
             ])
             ->setFormData($info)
             ->fetch();
+    }
+
+
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 软删除
+     **************************************
+     */
+    public function delete($id=null)
+    {
+        if($id <= 0){
+            return $this->error("id不正确");
+        }
+            $data = ['statuss'=>0];
+            if (Db::table("xh_member")->where("id=$id")->update($data)) {
+                // 记录行为
+                action_log('member_delete', 'admin_role', $id, UID, $data['name']);
+                return $this->success('删除成功', url('index'));
+            } else {
+                return $this->error('删除失败');
+            }
+
+
     }
 
 
@@ -515,30 +542,14 @@ class Member extends Admin
         }
         success("操作成功");
     }
-//    public function bank_app()
-//    {
-//        $id = (int)trim(input("id"));
-//        dump($id);
-//        // 保存数据
-//        if ($this->request->isPost()) {
-//            $data = [
-//                'status'=>1
-//            ];
-//            if (Db::table("xh_member_card_pay")->where("id=$id")->update($data)) {
-//                // 记录行为
-//                return $this->success('审核通过', url('index'));
-//            } else {
-//                return $this->error('审核失败');
-//            }
-//        }
-//    }
+
 
     /**
      **************李火生*******************
      * 用户银行卡充值操作（审核）
      **************************************
      */
-public function recharge_operation(){
+    public function recharge_operation(){
     // 获取查询条件
     $map = $this->getMap();
     // 数据列表
@@ -585,5 +596,74 @@ public function recharge_operation(){
         ->setPages($page) // 设置分页数据
         ->fetch(); // 渲染页面
 }
+
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 删除列表的用户列表
+     **************************************
+     */
+    public function del_index(){
+        // 获取筛选
+        $map = $this->getMap();
+
+        $auth = session('user_auth');
+        if($auth['role'] == 2){
+            $uid = $auth['uid'];
+            $condition = "recommendCode='{$uid}'";
+        }
+
+        // 数据列表
+        $data_list = Db::table("xh_member")->where($map)
+            ->where($condition)->where('statuss',0)->order("id desc")->paginate();
+
+        // 分页数据
+        $page = $data_list->render();
+
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->setPageTitle('用户列表') // 设置页面标题
+            ->addTimeFilter('createTime')//时间
+            ->setTableName('admin_user') // 设置数据表名
+            ->setSearch([ 'username' => '用户名', 'mobile' => '手机','recommendCode'=>'机构推荐码']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['username', '用户名'],
+                ['mobile', '手机号'],
+                ['usableSum', '可用余额(元)'],
+                ['recommendCode', '机构推荐码'],
+                ['createTime', '创建时间' ],
+                ['realName', '真实姓名' ],
+                ['IDNumber', '身份证号' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('edit'  ,['href' => url('edits', ['id' => '__id__'])])
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+
+
+    public function edits($id=null)
+    {
+        if($id <= 0){
+            return $this->error("id不正确");
+        }
+        $data = ['statuss'=>1];
+        if (Db::table("xh_member")->where("id=$id")->update($data)) {
+            // 记录行为
+            action_log('member_delete', 'admin_role', $id, UID, $data['name']);
+            return $this->success('恢复成功', url('index'));
+        } else {
+            return $this->error('恢复失败');
+        }
+
+
+    }
+
+
+
+
+
 
 }

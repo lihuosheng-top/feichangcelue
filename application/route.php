@@ -50,6 +50,7 @@ return [
 
     'news'=>'index/index/news',                     //财经资讯
     'news_t'=>'index/index/news_t',                     //新闻内容
+    'notice_t'=>'index/index/notice_t',                     //新闻内容
     'app_broadcast'=>'index/index/app_broadcast',   //手机端轮播图
     'stock_exponential_sh'=>'index/index/stock_exponential_sh', //手机端上证指数
     'stock_exponential_sz'=>'index/index/stock_exponential_sz', //手机端深证证指数

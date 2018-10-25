@@ -18,23 +18,23 @@
         //循环执行，每隔1秒钟执行一次 1000
         var t1=setInterval(function(){
             refreshCount()
-        }, 5000);
+        }, 6000);
 
         function refreshCount() {
-//      
             $.ajax({
                     type: 'POST',
                     url: "{:url('admin/index/informationhint')}",
                     data: {},
                     dataType: 'json',
                     success: function (data) {
-                        
+
                         if(data.data.czsq==2){
+                            console.log(data);
                                 ring();
                                 $.ajax({
                                     type: 'POST',
                                     url: "{:url('admin/index/setInformationHint')}",
-                                    data: {"name":"txsq"},
+                                    data: {"name":"czsq"},
                                     dataType: 'json',
                                     async: true,
                                     success: function (data) {
@@ -43,6 +43,21 @@
                                             console.log('失败')
                                     }
                                 });
+                        }
+                        if(data.data.czsq==3){
+                            ring();
+                            $.ajax({
+                                type: 'POST',
+                                url: "{:url('admin/index/setInformationHint')}",
+                                data: {"name":"txsq"},
+                                dataType: 'json',
+                                async: true,
+                                success: function (data) {
+                                },
+                                fail: function (err, status) {
+                                    console.log('失败')
+                                }
+                            });
                         }
                     },
                     fail: function (err, status) {
@@ -54,12 +69,10 @@
     function ring(){
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
-//      
 				setTimeout(function(){ 
 									audioElement.pause();
-								},2000);
+								},6000);
 				audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
-   
     }
 </script>
 {/block}
