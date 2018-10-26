@@ -801,7 +801,8 @@ class Ucenter extends Home
                     error("获取价格数据异常");
                 }
 
-                $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+//                $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+                $dealQuantity = $dealAmount * 10000 / $nowPrice / 100; //买入多少手
                 if($dealQuantity <1){
                     error("买入数量必须大于1手");
                 }
@@ -936,7 +937,7 @@ class Ucenter extends Home
             } else {
                 error("获取价格数据异常");
             }
-            $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+            $dealQuantity = $dealAmount * 10000 / $nowPrice / 100; //买入多少手
             if($dealQuantity <1){
                 error("买入数量必须大于1手(100股)");
             }
