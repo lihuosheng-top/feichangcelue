@@ -1560,6 +1560,16 @@ class Index extends Home
 
     }
 
+    public function  Advertisement_2(){
+
+        if (is_mobile_request()) {
+            return view('index/mobile/advertisement_2');
+        }else{
+            return view('advertisement_2');
+        }
+
+    }
+
     /**
  **************李火生*******************
  * @return \think\response\View
