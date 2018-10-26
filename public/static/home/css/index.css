@@ -967,7 +967,8 @@
     width: 500px;
     /*border: 1px solid;*/
     box-shadow: 0px 0px 30px 0px #C6BBB1;
-    height: 300px;
+  min-height: 300px;
+    height: auto;
     background: url(../img/baoshang500-300.jpg);
     background-size: 100%;
     position: fixed;

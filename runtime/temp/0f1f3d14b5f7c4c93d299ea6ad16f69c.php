@@ -1,3 +1,4 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:86:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\advertisement_2.html";i:1540524279;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
