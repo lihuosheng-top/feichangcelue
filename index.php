@@ -27,5 +27,7 @@ if(!is_file('./data/install.lock')){
     define('BIND_MODULE', 'install');
 }
 
+
+
 // 加载框架引导文件
 require './thinkphp/start.php';
