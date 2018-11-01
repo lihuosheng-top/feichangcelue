@@ -351,11 +351,13 @@ class Ucenter extends Home
     //保存银行卡信息
     public function saveBankCardsData()
     {
+
         $bankName = trim(input("bankName"));
         $province = trim(input("province"));
         $city = trim(input("city"));
         $branch_name = trim(input("branch_name"));
         $card_no = trim(input("card_no"));
+
         if ($bankName == '' || $province == '' || $city == '' || $branch_name == '' || $card_no == '') {
             error("信息填写不完整");
         }
@@ -363,7 +365,6 @@ class Ucenter extends Home
         if (!$member['realName'] || trim($member['realName']) == '') {
             error("请先实名认证");
         }
-
         $memberId = $member['id'];
 
         $data['memberId'] = $memberId;
