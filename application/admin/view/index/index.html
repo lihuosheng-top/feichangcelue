@@ -21,17 +21,14 @@
         }, 6000);
 
         function refreshCount() {
-            console.log('进入方法');
             $.ajax({
                     type: 'POST',
                     url: "{:url('admin/index/informationhint')}",
                     data: {},
                     dataType: 'json',
                     success: function (data) {
-                        console.log('成功返回');
                         if(data.data.czsq==6){
                             console.log(data);
-                            console.log('成功返回');
                             ring();
                             $.ajax({
                                 type: 'POST',
@@ -40,8 +37,9 @@
                                 dataType: 'json',
                                 async: true,
                                 success: function (data) {
+                                    location.reload();
                                 },
-                                fail: function (err, status) {
+                                error: function () {
                                     console.log('失败')
                                 }
                             });
@@ -49,7 +47,6 @@
 
                     },
                     error: function () {
-                        console.log('失败返回');
                             console.log('失败')
                     }
             })
