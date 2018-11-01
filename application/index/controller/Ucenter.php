@@ -139,7 +139,8 @@ class Ucenter extends Home
                 \phpmailer\Email::send($data['email'],$title,$content);
                $res_data = Db::name('member_card_pay')->insertGetId($data);
                if($res_data>0){
-                   session('czsq',$res_data); //TODO:充值提示音
+                    //TODO:充值提示音
+                   DB::name('music')->insert(['content'=>"银行卡充值申请"]);
                    $this->success('申请成功');
                }
 
@@ -287,11 +288,9 @@ class Ucenter extends Home
             }
             //记录新的数据提现申请（易于后台操作）//TODO:新添加（提现申请提示音）
             if($ret>0){
-                session( 'txsq',$ret);
+                Db::name('music')->insert(['content'=>'银行卡提现申请']);
             }
-
             //资金变动
-
             //余额减少
             $ret = Db::table("xh_member")->where("id = $memberId and usableSum >= $amount")->setInc('usableSum', -$amount);
             if ($ret <= 0) {
@@ -356,6 +355,7 @@ class Ucenter extends Home
         $city = trim(input("city"));
         $branch_name = trim(input("branch_name"));
         $card_no = trim(input("card_no"));
+
         if ($bankName == '' || $province == '' || $city == '' || $branch_name == '' || $card_no == '') {
             error("信息填写不完整");
         }
@@ -363,7 +363,6 @@ class Ucenter extends Home
         if (!$member['realName'] || trim($member['realName']) == '') {
             error("请先实名认证");
         }
-
         $memberId = $member['id'];
 
         $data['memberId'] = $memberId;
@@ -467,7 +466,7 @@ class Ucenter extends Home
         $data['IDNumber'] = $IDNumber;
         Db::table("xh_member")->where("id=$memberId")->update($data);
 
-        $this->success("ok", url("ucenter/mobile/home"));
+        $this->success("ok", "index/ucenter/home");
     }
 
     //手机-实名认证
@@ -1448,7 +1447,8 @@ class Ucenter extends Home
            if(!empty($data)){
                $res = Db::table('xh_alipay_examine')->insertGetId($data);
                if($res>0){
-                   session('zfbcz',$res); //TODO:充值提示音
+                    //TODO:充值提示音
+                       Db::name('music')->insert(['content'=>"支付宝充值申请"]);
                    return $this->ajax_success('提交成功,请等候审核',$data);
                }
            }
@@ -1473,7 +1473,8 @@ class Ucenter extends Home
             if(!empty($data)){
                 $res = Db::table('xh_wechat_examine')->insertGetId($data);
                 if($res){
-                    session('wxcz',$res); //TODO:充值提示音
+                    //TODO:充值提示音
+                    Db::name('music')->insert(['content'=>"微信充值申请"]);
                     return $this->ajax_success('提交成功,请等候审核',$data);
                 }
             }

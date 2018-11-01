@@ -27,59 +27,7 @@
                     data: {},
                     dataType: 'json',
                     success: function (data) {
-
-                        if(data.data.czsq==2){
-                            console.log(data);
-                                ring();
-                                $.ajax({
-                                    type: 'POST',
-                                    url: "{:url('admin/index/setInformationHint')}",
-                                    data: {"name":"czsq"},
-                                    dataType: 'json',
-                                    async: true,
-                                    success: function (data) {
-                                    },
-                                    fail: function (err, status) {
-                                            console.log('失败')
-                                    }
-                                });
-                        }
-                        if(data.data.czsq==3){
-                            console.log(data);
-                            ring();
-                            $.ajax({
-                                type: 'POST',
-                                url: "{:url('admin/index/setInformationHint')}",
-                                data: {"name":"txsq"},
-                                dataType: 'json',
-                                async: true,
-                                success: function (data) {
-                                },
-                                fail: function (err, status) {
-                                    console.log('失败')
-                                }
-                            });
-                        }
-
-
-
-                        if(data.data.czsq==4){
-                            console.log(data);
-                            ring();
-                            $.ajax({
-                                type: 'POST',
-                                url: "{:url('admin/index/setInformationHint')}",
-                                data: {"name":"zfbcz"},
-                                dataType: 'json',
-                                async: true,
-                                success: function (data) {
-                                },
-                                fail: function (err, status) {
-                                    console.log('失败')
-                                }
-                            });
-                        }
-                        if(data.data.czsq==5){
+                        if(data.data.czsq==6){
                             console.log(data);
                             ring();
                             $.ajax({
@@ -89,21 +37,21 @@
                                 dataType: 'json',
                                 async: true,
                                 success: function (data) {
+                                    location.reload();
                                 },
-                                fail: function (err, status) {
+                                error: function () {
                                     console.log('失败')
                                 }
                             });
                         }
 
                     },
-                    fail: function (err, status) {
+                    error: function () {
                             console.log('失败')
                     }
             })
         }
     });
-	
     function times(){
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');

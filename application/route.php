@@ -142,6 +142,7 @@ return [
     'ucenter/user_info'=> 'index/ucenter/user_info',   		//个人中心-实名认证
     'ucenter/real_name'=> 'index/ucenter/real_name',   		//个人中心-实名认证2
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
+    "ucenter/saveBankCardsData"=>"index/ucenter/saveBankCardsData", //添加银行卡操作
 
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页
