@@ -1,0 +1,311 @@
+---------------------------------------------------------------
+[ 2018-11-01T09:44:29+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.794444s][吞吐率：1.26req/s] [内存消耗：3,346.12kb] [文件加载：61]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.301625s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.192835s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028895s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.012441s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.011602s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.011811s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.009627s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.010665s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.011255s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.012448s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.010725s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.010052s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.009087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.011701s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:29' , 1541036669) [ RunTime:0.015757s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.011846s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036654  ) ORDER BY id desc LIMIT 1 [ RunTime:0.009783s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011889s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011087s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:31+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.439848s][吞吐率：2.27req/s] [内存消耗：3,083.73kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015401s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021997s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037063s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.017862s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:31' , 1541036671) [ RunTime:0.021753s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.018164s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036656  ) ORDER BY id desc LIMIT 1 [ RunTime:0.017246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017161s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.017420s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:33+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.382910s][吞吐率：2.61req/s] [内存消耗：3,083.73kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010765s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.017588s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036468s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.018213s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:32' , 1541036672) [ RunTime:0.023466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020475s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036658  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019470s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.021071s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.019941s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:35+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.397466s][吞吐率：2.52req/s] [内存消耗：3,083.73kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.009597s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.017051s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038329s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.019752s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:34' , 1541036674) [ RunTime:0.024645s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.020131s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036660  ) ORDER BY id desc LIMIT 1 [ RunTime:0.019453s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.019309s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018832s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:37+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.403512s][吞吐率：2.48req/s] [内存消耗：3,083.72kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012971s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022289s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029802s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.013982s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:36' , 1541036677) [ RunTime:0.017397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.013123s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036662  ) ORDER BY id desc LIMIT 1 [ RunTime:0.012807s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.013368s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.012811s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:39+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.323903s][吞吐率：3.09req/s] [内存消耗：3,083.72kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.008420s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.017288s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030433s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.012291s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:38' , 1541036678) [ RunTime:0.017043s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.012136s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036663  ) ORDER BY id desc LIMIT 1 [ RunTime:0.011973s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011917s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010877s ]
+---------------------------------------------------------------
+[ 2018-11-01T09:44:41+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.356492s][吞吐率：2.81req/s] [内存消耗：3,083.72kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'Alistock',
+    2 => 'getStockInfo',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=2jli5ovq6c0snr3pb20320t2k1; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1540981501,1541034529; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1541034719; pageReferrInSession=http%3A//localhost/',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010571s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.018352s ]
+[ info ] [ RUN ] app\index\controller\Alistock->getStockInfo[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Alistock.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035059s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_visit_record` [ RunTime:0.017212s ]
+[ sql ] [ SQL ] INSERT INTO `xh_stock_visit_record` (`code` , `createTime` , `createTimeStamp`) VALUES ('000001' , '2018-11-01 09:44:40' , 1541036680) [ RunTime:0.021073s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_online_stock_detail` [ RunTime:0.017374s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_online_stock_detail` WHERE  (  code='000001' and createTimeStamp >= 1541036666  ) ORDER BY id desc LIMIT 1 [ RunTime:0.015965s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.017068s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.016428s ]

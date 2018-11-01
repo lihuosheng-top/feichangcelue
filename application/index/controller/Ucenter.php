@@ -467,7 +467,7 @@ class Ucenter extends Home
         $data['IDNumber'] = $IDNumber;
         Db::table("xh_member")->where("id=$memberId")->update($data);
 
-        $this->success("ok", url("ucenter/mobile/home"));
+        $this->success("ok", "index/ucenter/home");
     }
 
     //手机-实名认证
