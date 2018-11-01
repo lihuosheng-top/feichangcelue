@@ -96,15 +96,6 @@
                             });
                         }
 
-
-
-
-
-
-
-
-
-
                     },
                     fail: function (err, status) {
                             console.log('失败')
@@ -112,13 +103,26 @@
             })
         }
     });
-    function ring(){
+	
+    function times(){
         var audioElement = document.createElement('audio');
         audioElement.setAttribute('src', '__STATIC__/admin/music/10727.mp3');
-				setTimeout(function(){ 
-									audioElement.pause();
-								},60000);
-				audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+		audioElement.setAttribute('autoplay', 'autoplay'); //打开自动播放
+			setTimeout(function(){ 
+								audioElement.pause();
+								
+							},5000);
+									
     }
+	function ring(){
+		times() ;
+		 var t2=setInterval(function(){
+		           times() 
+		        }, 10000);
+		  
+		setTimeout(function(){ 
+				clearInterval(t2);			
+						},60000);
+	}
 </script>
 {/block}
