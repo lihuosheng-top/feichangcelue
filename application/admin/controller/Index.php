@@ -215,81 +215,41 @@ class Index extends Admin
      */
     public function  informationHint(Request $request){
         if($request->isPost()){
-            /**
-             * 充值申请
-             */
-            $czsq = session::get('czsq');
-            if(!empty($czsq)){
-                $res =Db::table('xh_member_card_pay')->where('id',$czsq)->find();
-                if(!empty($res)){
-                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>2]);
-                }
-            }
-            /**
-             * 提现申请
-             */
-            $txsq =session::get('txsq');
-            if(!empty($txsq)){
-                $ret =Db::table('xh_member_withdraw')->where('id',$txsq)->find();
-                if(!empty($ret)){
-                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>3]);
-                }
-            }
+         $res =  DB::name('music')->select();
+         if(!empty($res)) {
+             return $this->ajax_success('充值申请提示音返回成功',['czsq'=>6]);
+         }
 
-            /**
-             * 支付宝充值申请
-             */
-            $zfbcz = session::get('zfbcz');
-            if(!empty($zfbcz)){
-                $res =Db::table('xh_alipay_examine')->where('id',$zfbcz)->find();
-                if(!empty($res)){
-                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>4]);
-                }
-            }
-
-
-            /**
-             * 微信充值申请
-             */
-            $wxcz = session::get('wxcz');
-            if(!empty($wxcz)){
-                $res =Db::table('xh_wechat_examine')->where('id',$wxcz)->find();
-                if(!empty($res)){
-                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>5]);
-                }
-            }
-
-
-             }
+        }
     }
 
     /**
      **************李火生*******************
      * @param Request $request
-     * 清空session
+     * 清空music数据
      **************************************
      */
     public function setInformationHint(Request $request){
         if($request->isPost()){
-            if($_POST['name'] =='txsq'){
-                session::delete('txsq');
-                return $this->ajax_success('成功',['status'=>1]);
-            }
-            if($_POST['name'] =='czsq'){
-                session::delete('czsq');
-                return $this->ajax_success('成功',['status'=>1]);
-            }
-            if($_POST['name'] =='zfbcz'){
-                session::delete('zfbcz');
-                return $this->ajax_success('成功',['status'=>1]);
-            }
-            if($_POST['name'] =='wxcz'){
-                session::delete('wxcz');
-                return $this->ajax_success('成功',['status'=>1]);
+            if($_POST['name']=="wxcz"){
+                $count =Db::name('music')->count();
+                if($count>0){
+                    $datas =Db::name('music')->select();
+                    foreach ($datas as $key=>$val){
+                        $ids[] =$val['id'];
+                    }
+                    $id = $ids[$count-1];
+                    $res =Db::name('music')->where('id',$id)->delete();
+                    if($res){
+                        return $this->ajax_success('成功',['status'=>1]);
+                    }
+                }
+
             }
 
         }
     }
+
 
 
 

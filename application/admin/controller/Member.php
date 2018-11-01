@@ -337,7 +337,10 @@ class Member extends Admin
         }
         $memberId = $withdraw['memberId'];
         $amount = $withdraw['amount'];
-        Db::table("xh_member_withdraw")->where("id=$id")->update( array("status"=>$status) );
+      $music =  Db::table("xh_member_withdraw")->where("id=$id")->update( array("status"=>$status) );
+        if($music){
+            $this->set_music_null();
+        }
         if($status == 2){
             //余额\增加
             $ret = Db::table("xh_member")->where("id = $memberId ")->setInc('usableSum', $amount);
@@ -352,9 +355,8 @@ class Member extends Admin
             $data['remarks'] = "提现申请审核未通过，退还{$amount}元";
             $data['createTime'] = date("Y-m-d H:i:s");
             $ret = Db::table("xh_member_fundrecord")->insertGetId($data);
-            session::delete('txsq');
         }else if($status == 1){//审核成功
-            session::delete('txsq');
+
         }
 
         /*
@@ -540,10 +542,12 @@ class Member extends Admin
             error("数据不存在");
         }
 
-        Db::table("xh_member_card_pay")->where("id=$id")->update(array("status"=>$status));
+      $music=  Db::table("xh_member_card_pay")->where("id=$id")->update(array("status"=>$status));
+       if($music){
+           $this->set_music_null();
+       }
         if($status == 1){
            //审核不通过
-            session::delete('czsq');
            success('审核通过');
 
         }else if($status == 1){
@@ -684,10 +688,12 @@ class Member extends Admin
             error("数据不存在");
         }
 
-        Db::table("xh_alipay_examine")->where("id=$id")->update(array("status" => $status));
+      $music =  Db::table("xh_alipay_examine")->where("id=$id")->update(array("status" => $status));
+        if($music){
+            $this->set_music_null();
+        }
         if ($status == 1) {
             //审核不通过
-            session::delete('zfbcz');
             success('审核通过');
 
         } else if ($status == 1) {
@@ -826,10 +832,13 @@ class Member extends Admin
             error("数据不存在");
         }
 
-        Db::table("xh_wechat_examine")->where("id=$id")->update(array("status" => $status));
+       $music = Db::table("xh_wechat_examine")->where("id=$id")->update(array("status" => $status));
+        if($music){
+            $this->set_music_null();
+        }
+
         if ($status == 1) {
             //审核不通过
-            session::delete('wxcz');
             success('审核通过');
 
         } else if ($status == 1) {
@@ -960,6 +969,23 @@ class Member extends Admin
         }
 
 
+    }
+
+    /**
+     **************李火生*******************
+     * 手动清除音乐
+     **************************************
+     */
+    public function set_music_null(){
+        $music_counts =Db::name('music')->count();
+        if($music_counts>0){
+            $music_datas =Db::name('music')->select();
+            foreach ($music_datas as $key=>$val){
+                $music_ids[] =$val['id'];
+            }
+            $music_id = $music_ids[$music_counts-1];
+            Db::name('music')->where('id',$music_id)->delete();
+        }
     }
 
 
