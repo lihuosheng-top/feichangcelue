@@ -21,13 +21,14 @@
         }, 6000);
 
         function refreshCount() {
+            console.log('进入方法');
             $.ajax({
                     type: 'POST',
                     url: "{:url('admin/index/informationhint')}",
                     data: {},
                     dataType: 'json',
                     success: function (data) {
-
+                        console.log('成功返回');
                         if(data.data.czsq==2){
                             console.log(data);
                                 ring();
@@ -97,7 +98,8 @@
                         }
 
                     },
-                    fail: function (err, status) {
+                    error: function () {
+                        console.log('失败返回');
                             console.log('失败')
                     }
             })
