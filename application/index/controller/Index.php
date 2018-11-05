@@ -128,6 +128,10 @@ class Index extends Home
             $this->zixun();
             $this->emergency_notices();
             $this->emergency();
+             $shangzheng =(new Common())->getMarketValueBycode('000001');
+            $sz_info_arr = $shangzheng['info_arr'];
+             dump($shangzheng);
+             $this->assign("sz_info_arr",$sz_info_arr);
             return view('index');
         }
 

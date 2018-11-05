@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541122378;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541414745;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -295,6 +295,7 @@
 			</div>
 		</div>
 		<div class="wrapper">
+			<?php if(!empty($sz_info_arr)): ?>
 			<!--行情中心-->
 			<div class="pb4">
 				<div class="index_mod4">
@@ -302,11 +303,11 @@
 						<h3 class="right-tit">行情中心</h3>
 						<div class="s_menu" id="menu_szzs">
 							<ul>
-								<li sv="0" class="current">
-									<a>上证指数</a>
+								<li sv="0" class="current" id="shanghai">
+									<a  >上证指数</a>
 								</li>
-								<li sv="1">
-									<a>深证指数</a>
+								<li sv="1" id="shengzhen">
+									<a >深证指数</a>
 								</li>
 							</ul>
 						</div>
@@ -337,33 +338,33 @@
 						<div class="hq_sv" style="width: 358px;">
 							<div class="hq_st">
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">2550.47</li>
+									<li class="sv" style="color: rgb(255, 0, 0);"><?php echo $sz_info_arr[3]; ?></li>
 									<li class="ico"></li>
-									<li class="icon-right">64.05</li>
-									<li class="icon-right">2.58%</li>
+									<li class="icon-right"><?php echo $sz_info_arr[31]; ?></li>
+									<li class="icon-right"><?php echo $sz_info_arr[32]; ?></li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
 										<span> <span class="xq-color">今开：</span>
-										<font color="#237c02">2460.08</font>
+										<font color="#237c02"><?php echo $sz_info_arr[5]; ?></font>
 										</span>
 										<span><span class="xq-color">成交量：</span>
-										<font color="#237c02">1.47亿手</font>
+										<font color="#237c02"><?php echo $sz_info_arr[6]; ?></font>
 										</span>
 										<span><span class="xq-color">振幅：</span>
-										<font color="#007cc8">2.58%</font>
+										<font color="#007cc8"><?php echo $sz_info_arr[43]; ?></font>
 										</span>
 										<span><span class="xq-color">最高：</span>
-										<font color="#237c02">2553.39</font>
+										<font color="#237c02"><?php echo $sz_info_arr[41]; ?></font>
 										</span>
 										<span><span class="xq-color">成交额：</span>
-										<font color="#007cc8">2449.20</font>
+										<font color="#007cc8"><?php echo $sz_info_arr[37]; ?></font>
 										</span>
 										<span><span class="xq-color">昨收：</span>
-										<font color="#007cc8">1300.96亿</font>
+										<font color="#007cc8"><?php echo $sz_info_arr[4]; ?></font>
 										</span>
 										<span><span class="xq-color">总市值：</span>
-										<font color="#007cc8">2486.42</font>
+										<font color="#007cc8"><?php echo $sz_info_arr[45]; ?></font>
 										</span>
 									</p>
 								</div>
@@ -449,6 +450,163 @@
 				</div>
 			</div>
 			<!--行情中心 end-->
+			<?php endif; if(empty($sz_info_arr)): ?>
+			<!--行情中心-->
+			<div class="pb4">
+				<div class="index_mod4">
+					<div class="mod_right" style="width: 300px;">
+						<h3 class="right-tit">行情中心</h3>
+						<div class="s_menu" id="menu_szzs">
+							<ul>
+								<li sv="0" class="current" id="shanghai">
+									<a  >上证指数</a>
+								</li>
+								<li sv="1" id="shengzhen">
+									<a >深证指数</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="mod_left">
+						<div class="hq_con">
+							<div class="hq_txt" id="a0001_bnt">
+								<a class="cur" sv="0" href="javascript:;">分时线</a>
+								<a sv="1" href="javascript:;">日K线</a>
+								<a sv="2" href="javascript:;">周K线</a>
+								<a sv="3" href="javascript:;">月K线</a>
+							</div>
+							<div class="hq_img">
+								<img src="http://image.sinajs.cn/newchart/min/n/sh000001.gif" width="500" height="300" id="a0001_img">
+							</div>
+						</div>
+						<div class="hq_con" style="display:none;">
+							<div class="hq_txt" id="s0001_bnt">
+								<a class="cur" sv="0" href="javascript:;">分时线</a>
+								<a sv="1" href="javascript:;">日K线</a>
+								<a sv="2" href="javascript:;">周K线</a>
+								<a sv="3" href="javascript:;">月K线</a>
+							</div>
+							<div class="hq_img">
+								<img src="http://image.sinajs.cn/newchart/min/n/sz399001.gif" width="450" height="320" id="s0001_img">
+							</div>
+						</div>
+						<div class="hq_sv" style="width: 358px;">
+							<div class="hq_st">
+								<div class="hq_a1" id="a0001_v1">
+									<li class="sv" style="color: rgb(255, 0, 0);">2550.47</li>
+									<li class="ico"></li>
+									<li class="icon-right">64.05</li>
+									<li class="icon-right">2.58%</li>
+								</div>
+								<div class="hq_aq1_xq" id="a0001_detail">
+									<p>
+										<span> <span class="xq-color">今开：</span>
+										<font color="#237c02">2460.08</font>
+										</span>
+										<span><span class="xq-color">成交量：</span>
+										<font color="#237c02">1.47亿手</font>
+										</span>
+										<span><span class="xq-color">振幅：</span>
+										<font color="#007cc8">2.58%</font>
+										</span>
+										<span><span class="xq-color">最高：</span>
+										<font color="#237c02">2553.39</font>
+										</span>
+										<span><span class="xq-color">成交额：</span>
+										<font color="#007cc8">2449.20</font>
+										</span>
+										<span><span class="xq-color">昨收：</span>
+										<font color="#007cc8">1300.96亿</font>
+										</span>
+										<span><span class="xq-color">总市值：</span>
+										<font color="#007cc8">2486.42</font>
+										</span>
+									</p>
+								</div>
+								<div class="gupiao">
+									<table id="gpInfo" width="100%">
+										<colgroup>
+											<col style="width:80px">
+											<col style="width:100px">
+											<col style="width:70px">
+											<col>
+										</colgroup>
+										<tbody>
+										<tr class="title">
+											<td style="color:#ff3646">领涨板块</td>
+											<td></td>
+											<td>
+												<a style="color:#237c02">领跌板块</a>
+											</td>
+											<td class="text-right"></td>
+										</tr>
+										<tr>
+											<td>
+												<a>券商</a>
+											</td>
+											<td style="color:#ff3646">
+												+1.32%
+											</td>
+											<td>
+												<a>券商</a>
+											</td>
+											<td class="text-right" style="color:#237c02">
+												-2.36%
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a>环保行业</a>
+											</td>
+											<td style="color:#ff3646">
+												+0.17%
+											</td>
+											<td>
+												<a>环保行业</a>
+											</td>
+											<td class="text-right" style="color:#237c02">
+												-2.28%
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a>次新股</a>
+											</td>
+											<td style="color:#ff3646">
+												+0.12%
+											</td>
+											<td>
+												<a>次新股</a>
+											</td>
+											<td class="text-right" style="color:#237c02">
+												-2.10%
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<a>酿酒行业</a>
+											</td>
+											<td style="color:#ff3646">
+												+0.12%
+											</td>
+											<td>
+												<a>酿酒行业</a>
+											</td>
+											<td class="text-right" style="color:#237c02">
+												-2.10%
+											</td>
+										</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--行情中心 end-->
+			<?php endif; ?>
+
 			<div class="pb6">
 		<!-- 		<div class="pb6-l">
 					<ul>
@@ -959,12 +1117,44 @@
 		<script src="__STATIC__/libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 		<script src="__STATIC__/home/js/index.js"></script>
 		<script>
+			
+			
     function t(){
+		
         $(".baoshang").hide(200);
     }
 
 </script>
 		<script>
+			$("#shanghai").click(function(){
+						$.ajax({
+									type: "post",
+									url: "<?php echo url('index/index/stock_exponential_sh'); ?>",
+									dataType: 'json',
+									data:{},
+									success: function(data) {
+										console.log(data);
+									},
+									error: function(data) {
+										console.log("错误");
+									}
+								});
+		
+			});
+			$("#shengzhen").click(function(){
+						$.ajax({
+									type: "post",
+									url: "<?php echo url('index/index/stock_exponential_sz'); ?>",
+									dataType: 'json',
+									data:{},
+									success: function(data) {
+                                        console.log(data);
+									},
+									error: function(data) {
+										console.log("错误");
+									}
+								});
+			});
 			(function() {
 				var  baoshang=$(".baoshang").data("id");
 				if(baoshang==0){
