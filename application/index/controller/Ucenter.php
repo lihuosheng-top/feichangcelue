@@ -516,9 +516,7 @@ class Ucenter extends Home
         $delayFeeSum = Db::table("xh_stock_order")
             ->where("memberId=$memberId and isFreetrial=$isFreetrial and status = 1 ")
             ->sum("$sys_delayFee * dealAmount");//18*成交金额
-
 //            $delayFeeSum = 0;
-
         $delayFeeSum = round($delayFeeSum,2);
 //        $delayFeeSum = number_format($price, 2, '.', '');
         $this->assign('delayFeeSum', $delayFeeSum);//18*成交金额
@@ -585,8 +583,6 @@ class Ucenter extends Home
         }
         $_SESSION['profitSum'] = $profitSu;
         $this->assign("profitSum", $profitSu);
-
-
         $profitSum = 0;
         $list2 = array();
         foreach ($list as $i => $v) {
@@ -599,7 +595,6 @@ class Ucenter extends Home
             $profitAmount = ($nowPrice - $dealPrice) * ((int)$v['dealQuantity']) * 100; //收益额（数量乘一百）//输出4346
             $profitAmount = round($profitAmount, 2);
             $delayDays = $this->getDaysCount($v['createTime']) - 2;//递延天数
-
             //入库
             if ($delayDays < 0) {
                 $delayDays = 0;
