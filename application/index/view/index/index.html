@@ -524,52 +524,117 @@
 
 
 		<script>
+
+
+            var isTradingTime =function (){
+                var date = new Date();
+                // alert(date);
+                //判断是不是周末
+                var dt=date.getDay();
+                // console.log(dt);
+                if(dt=='6'||dt=='7'){
+                    return false;
+                }
+                //判断当前时间是否在9:30-11:30, 13:00-15:00
+                var h = date.getHours();
+                var mi = date.getMinutes();
+                var s = date.getSeconds();
+                if(h < 10){
+                    h = "0" + h;
+                }
+                if(mi < 10){
+                    mi = "0"+ mi;
+                }
+                if(s < 10){
+                    s = "0" + s;
+                }
+                var curTime = h + ":" + mi + ":" + s;
+                if( (curTime >= "09:30:00" && curTime <= "11:30:00") || (curTime >= "13:00:00" && curTime <= "15:00:00" )){
+                    return true;
+                }
+                return false;
+            }
+
 			//上证指数
 			var time_one;
 			var time_two;
 			$("#shanghai").click(function(){
-			    $(this).addClass("current");
+                $(this).addClass("current");
                 $("#sh_con").show();
                 $("#sz_con").hide();
-			    $(this).siblings().removeClass("current");
-			    clearInterval(time_one);
-                clearInterval(time_two);
-                 time_one= setInterval(function() {
-                     						$.ajax({
-									type: "post",
-									url: "{:url('index/index/stock_information_index_sh')}",
-									dataType: 'json',
-									data:{'code':'000001'},
-									success: function(data) {
-                                        console.log(data);
-                                        $('.sznum').html(data.data.stock_num_info_arr[1]);
-                                        $('.szup').html(data.data.stock_num_info_arr[2]);
-                                        $('.szdown').html(data.data.stock_num_info_arr[3]);
-                                        $('.today_open').html(data.data.info_arr[5]); //今开
-                                        $('.volume').html(data.data.info_arr[6]); //成交量
-                                        $('.amplitude').html(data.data.info_arr[43]);//振幅
-                                        $('.highest').html(data.data.info_arr[41]);//最高
-                                        $('.turnover').html(data.data.info_arr[37]);//成交额
-                                        $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
-                                        $('.total_value').html(data.data.info_arr[45]);//总市值
-                                        //领涨板块
-                                        $('.brokers_up').html('+1.32%');//券商
-                                        $('.environmental_up').html('+0.17%');//环保行业
-                                        $('.second_up').html('+0.12%');//次新股
-                                        $('.wine_up').html('+0.12%');//酿酒行业
-                                        //领跌板块
-                                        $('.brokers_down').html('-2.36%');//券商
-                                        $('.environmental_down').html('-2.28%');//环保行业
-                                        $('.second_down').html('-2.10%');//次新股
-                                        $('.wine_down').html('-2.10%');//酿酒行业
-									},
-									error: function(data) {
-										console.log("错误");
-									}
-								});
+                $(this).siblings().removeClass("current");
+                if(!isTradingTime()||!stopShare){ // 如果不在交易时间就不必刷新数据
+                    $.ajax({
+                        type: "post",
+                        url: "{:url('index/index/stock_information_index_sh')}",
+                        dataType: 'json',
+                        data:{'code':'000001'},
+                        success: function(data) {
+                            console.log(data);
+                            $('.sznum').html(data.data.stock_num_info_arr[1]);
+                            $('.szup').html(data.data.stock_num_info_arr[2]);
+                            $('.szdown').html(data.data.stock_num_info_arr[3]);
+                            $('.today_open').html(data.data.info_arr[5]); //今开
+                            $('.volume').html(data.data.info_arr[6]); //成交量
+                            $('.amplitude').html(data.data.info_arr[43]);//振幅
+                            $('.highest').html(data.data.info_arr[41]);//最高
+                            $('.turnover').html(data.data.info_arr[37]);//成交额
+                            $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
+                            $('.total_value').html(data.data.info_arr[45]);//总市值
+                            //领涨板块
+                            $('.brokers_up').html('+1.32%');//券商
+                            $('.environmental_up').html('+0.17%');//环保行业
+                            $('.second_up').html('+0.12%');//次新股
+                            $('.wine_up').html('+0.12%');//酿酒行业
+                            //领跌板块
+                            $('.brokers_down').html('-2.36%');//券商
+                            $('.environmental_down').html('-2.28%');//环保行业
+                            $('.second_down').html('-2.10%');//次新股
+                            $('.wine_down').html('-2.10%');//酿酒行业
+                        },
+                        error: function(data) {
+                            console.log("错误");
+                        }
+                    });
+                    return ;
+                }
+                    clearInterval(time_one);
+                    clearInterval(time_two);
+                    time_one= setInterval(function() {
+                        $.ajax({
+                            type: "post",
+                            url: "{:url('index/index/stock_information_index_sh')}",
+                            dataType: 'json',
+                            data:{'code':'000001'},
+                            success: function(data) {
+                                console.log(data);
+                                $('.sznum').html(data.data.stock_num_info_arr[1]);
+                                $('.szup').html(data.data.stock_num_info_arr[2]);
+                                $('.szdown').html(data.data.stock_num_info_arr[3]);
+                                $('.today_open').html(data.data.info_arr[5]); //今开
+                                $('.volume').html(data.data.info_arr[6]); //成交量
+                                $('.amplitude').html(data.data.info_arr[43]);//振幅
+                                $('.highest').html(data.data.info_arr[41]);//最高
+                                $('.turnover').html(data.data.info_arr[37]);//成交额
+                                $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
+                                $('.total_value').html(data.data.info_arr[45]);//总市值
+                                //领涨板块
+                                $('.brokers_up').html('+1.32%');//券商
+                                $('.environmental_up').html('+0.17%');//环保行业
+                                $('.second_up').html('+0.12%');//次新股
+                                $('.wine_up').html('+0.12%');//酿酒行业
+                                //领跌板块
+                                $('.brokers_down').html('-2.36%');//券商
+                                $('.environmental_down').html('-2.28%');//环保行业
+                                $('.second_down').html('-2.10%');//次新股
+                                $('.wine_down').html('-2.10%');//酿酒行业
+                            },
+                            error: function(data) {
+                                console.log("错误");
+                            }
+                        });
 
-                }, 1000);
-
+                    }, 1000);
 			});
             $("#shanghai").click();
 			//深证指数
@@ -578,6 +643,45 @@
                 $(this).siblings().removeClass("current");
                 $("#sz_con").show()
                 $("#sh_con").hide();
+                if(!isTradingTime()||!stopShare){ // 如果不在交易时间就不必刷新数据
+                    $.ajax({
+                        type: "post",
+                        url: "{:url('index/index/stock_information_index_sz')}",
+                        dataType: 'json',
+                        data:{'code':'399001'},
+                        success: function(data) {
+                            console.log(data);
+                            $('.sznum').html(data.data.stock_num_info_arr[1]);
+                            $('.szup').html(data.data.stock_num_info_arr[2]);
+                            $('.szdown').html(data.data.stock_num_info_arr[3]);
+                            $('.today_open').html(data.data.info_arr[5]); //今开
+                            $('.volume').html(data.data.info_arr[6]); //成交量
+                            $('.amplitude').html(data.data.info_arr[43]);//振幅
+                            $('.highest').html(data.data.info_arr[41]);//最高
+                            $('.turnover').html(data.data.info_arr[37]);//成交额
+                            $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
+
+                            $('.total_value').html(data.data.info_arr[45]);//总市值
+
+                            //领涨板块
+                            $('.brokers_up').html('+1.32%');//券商
+                            $('.environmental_up').html('+0.17%');//环保行业
+                            $('.second_up').html('+0.12%');//次新股
+                            $('.wine_up').html('+0.12%');//酿酒行业
+
+                            //领跌板块
+                            $('.brokers_down').html('-2.36%');//券商
+                            $('.environmental_down').html('-2.28%');//环保行业
+                            $('.second_down').html('-2.10%');//次新股
+                            $('.wine_down').html('-2.10%');//酿酒行业
+
+                        },
+                        error: function(data) {
+                            console.log("错误");
+                        }
+                    });
+                    return ;
+                }
 
                 clearInterval(time_one);
                 clearInterval(time_two);
