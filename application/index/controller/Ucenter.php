@@ -620,7 +620,7 @@ class Ucenter extends Home
         return view('sell');
     }
 
-    //一元模拟点卖区
+    //模拟点卖区
     public function freetrialSell()
     {
         $this->getSellData(1);
@@ -1287,21 +1287,41 @@ class Ucenter extends Home
             $profit = round(($nowPrice - $order['dealPrice']) * $order['dealQuantity'] * 100, 2);
             //计算盈利分配
             $profitSelf = $profit;
-            $profitFee = (float)(getSysParamsByKey("profitFee"));
+//            $profitFee = (float)(getSysParamsByKey("profitFee"));
+            $profitFee = (float)(getSysParamsByKey("FreeSellRate"));
             if ($profit > 0) {
-                $profitSelf = $profit * (1 - $profitFee);
+//                $profitSelf = $profit * (1 - $profitFee);
+                $profitSelf =$profit*$profitFee;
             }
             //保证金
             $guaranteeFee = round($order['guaranteeFee'], 2);
             $amount = $guaranteeFee + $profit;
+//             $amount =$guaranteeFee;
             $sql = "update xh_stock_order set `status` = 2, sellPrice=$nowPrice, profit = $profit, profitSelf=$profitSelf, sellTime = now() where id = $orderId and `status` = 1";
             $ret = Db::execute($sql);
             if ($ret != 1) {
                 error("请勿重复交易");
             }
-            $sql = "update xh_member set freebleSum = freebleSum + $amount where id = $memberId;";
+            if( $profitSelf>=0){
+                $sql = "update xh_member set freebleSum = freebleSum + $amount ,usableSum = usableSum + $profitSelf where id = $memberId;";
+            }else{
+                $sql = "update xh_member set freebleSum = freebleSum + $amount  where id = $memberId;";
+            }
             $ret = Db::execute($sql);
-            if($ret){
+            //查询余额
+            $map = Db::table("xh_member")->field("usableSum,freebleSum")->where("id=$memberId")->find();
+            $usableSum = $map['usableSum'];
+            $freebleSum=$map['freebleSum'];
+        if( $profitSelf>=0) {
+            $sqls = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
+            values ($memberId, '1', $amount, $usableSum , '卖出股票,退还免息保证金{$guaranteeFee}元，盈利分配{$profitSelf}元，账户余额增加{$profitSelf}元 ，账户余额：{$usableSum}，免息体验金余额：{$freebleSum}', now() );";
+        }else{
+            $sqls = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
+            values ($memberId, '1', $amount, $usableSum , '卖出股票,退还免息保证金{$guaranteeFee}元，盈利分配{$profitSelf}元，账户余额增加0元，账户余额：{$usableSum}，免息体验金余额：{$freebleSum}', now() );";
+        }
+
+            $re = Db::execute($sqls);
+            if($ret&&$re){
                 $this->success('卖出成功',url('./freetrialHistory'));
                 return $ret;
             }

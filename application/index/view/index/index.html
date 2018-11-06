@@ -363,12 +363,12 @@
 							</div>
 						</div>
 						<div class="hq_sv" style="width: 358px;">
-							<div class="hq_st">
+							<div class="hq_st" >
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">2550.47</li>
+									<li class="sv sznum" style="color: rgb(255, 0, 0);" >2550.47</li>
 									<li class="ico"></li>
-									<li class="icon-right">64.05</li>
-									<li class="icon-right">2.58%</li>
+									<li class="icon-right sztop">64.05</li>
+									<li class="icon-right szdown">2.58%</li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
@@ -678,7 +678,14 @@
 									dataType: 'json',
 									data:{},
 									success: function(data) {
-										console.log(data);
+                                        var abc =data.data;
+                                        console.log(abc);
+                                        var obj2=eval("("+abc+")");
+                                        var leg =obj2.datas.length-1;
+                                        console.log(obj2.datas[leg][5]);
+                                        $('.sznum').text(obj2.datas[leg][1]);
+                                        $('.sztop').html(obj2.datas[leg][5]);
+                                        $('.szdown').html(obj2.datas[leg][4]);
 									},
 									error: function(data) {
 										console.log("错误");

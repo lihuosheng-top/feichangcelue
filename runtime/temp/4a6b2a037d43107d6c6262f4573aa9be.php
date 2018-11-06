@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541414745;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541477162;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -491,12 +491,12 @@
 							</div>
 						</div>
 						<div class="hq_sv" style="width: 358px;">
-							<div class="hq_st">
+							<div class="hq_st" id="111">
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">2550.47</li>
+									<li class="sv sznum" style="color: rgb(255, 0, 0);" >2550.47</li>
 									<li class="ico"></li>
-									<li class="icon-right">64.05</li>
-									<li class="icon-right">2.58%</li>
+									<li class="icon-right sztop">64.05</li>
+									<li class="icon-right szdown">2.58%</li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
@@ -1133,7 +1133,14 @@
 									dataType: 'json',
 									data:{},
 									success: function(data) {
-										console.log(data);
+                                        var abc =data.data;
+                                        console.log(abc);
+                                        var obj2=eval("("+abc+")");
+                                        var leg =obj2.datas.length-1;
+                                        console.log(obj2.datas[leg][5]);
+                                        $('.sznum').text(obj2.datas[leg][1]);
+                                        $('.sztop').html(obj2.datas[leg][5]);
+                                        $('.szdown').html(obj2.datas[leg][4]);
 									},
 									error: function(data) {
 										console.log("错误");
