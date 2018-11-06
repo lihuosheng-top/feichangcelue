@@ -209,33 +209,33 @@
 						<div class="hq_sv" style="width: 358px;">
 							<div class="hq_st">
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">{$sz_info_arr[3]}</li>
-									<li class="ico"></li>
-									<li class="icon-right">{$sz_info_arr[31]}</li>
-									<li class="icon-right">{$sz_info_arr[32]}</li>
+									<li class="sv sznum" style="color: rgb(255, 0, 0);" >{$sz_info_arr[3]}</li>
+									<li class="ico "></li>
+									<li class="icon-right szup">{$sz_info_arr[31]}</li>
+									<li class="icon-right szdown">{$sz_info_arr[32]}</li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
 										<span> <span class="xq-color">今开：</span>
-										<font color="#237c02">{$sz_info_arr[5]}</font>
+										<font color="#237c02" class="today_open">{$sz_info_arr[5]}</font>
 										</span>
 										<span><span class="xq-color">成交量：</span>
-										<font color="#237c02">{$sz_info_arr[6]}</font>
+										<font color="#237c02" class="volume">{$sz_info_arr[6]}</font>
 										</span>
 										<span><span class="xq-color">振幅：</span>
-										<font color="#007cc8">{$sz_info_arr[43]}</font>
+										<font color="#007cc8" class="amplitude">{$sz_info_arr[43]}</font>
 										</span>
 										<span><span class="xq-color">最高：</span>
-										<font color="#237c02">{$sz_info_arr[41]}</font>
+										<font color="#237c02" class="highest">{$sz_info_arr[41]}</font>
 										</span>
 										<span><span class="xq-color">成交额：</span>
-										<font color="#007cc8">{$sz_info_arr[37]}</font>
+										<font color="#007cc8" class="turnover">{$sz_info_arr[37]}</font>
 										</span>
 										<span><span class="xq-color">昨收：</span>
-										<font color="#007cc8">{$sz_info_arr[4]}</font>
+										<font color="#007cc8" class="yesterday_closed">{$sz_info_arr[4]}</font>
 										</span>
 										<span><span class="xq-color">总市值：</span>
-										<font color="#007cc8">{$sz_info_arr[45]}</font>
+										<font color="#007cc8" class="total_value">{$sz_info_arr[45]}</font>
 										</span>
 									</p>
 								</div>
@@ -260,13 +260,13 @@
 												<td>
 													<a>券商</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="brokers_up">
 													+1.32%
 												</td>
 												<td>
 													<a>券商</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right brokers_down" style="color:#237c02">
 													-2.36%
 												</td>
 											</tr>
@@ -274,13 +274,13 @@
 												<td>
 													<a>环保行业</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="environmental_up">
 													+0.17%
 												</td>
 												<td>
 													<a>环保行业</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right environmental_down" style="color:#237c02">
 													-2.28%
 												</td>
 											</tr>
@@ -288,13 +288,13 @@
 												<td>
 													<a>次新股</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="second_up">
 													+0.12%
 												</td>
 												<td>
 													<a>次新股</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right second_down" style="color:#237c02">
 													-2.10%
 												</td>
 											</tr>
@@ -302,13 +302,13 @@
 												<td>
 													<a>酿酒行业</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="wine_up">
 													+0.12%
 												</td>
 												<td>
 													<a>酿酒行业</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right wine_down" style="color:#237c02">
 													-2.10%
 												</td>
 											</tr>
@@ -333,7 +333,7 @@
 								<li sv="0" class="current" id="shanghai">
 									<a  >上证指数</a>
 								</li>
-								<li sv="1" id="shengzhen">
+								<li sv="1"  id="shengzhen">
 									<a >深证指数</a>
 								</li>
 							</ul>
@@ -365,33 +365,33 @@
 						<div class="hq_sv" style="width: 358px;">
 							<div class="hq_st">
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">2550.47</li>
-									<li class="ico"></li>
-									<li class="icon-right">64.05</li>
-									<li class="icon-right">2.58%</li>
+									<li class="sv sznum" style="color: rgb(255, 0, 0);" >0</li>
+									<li class="ico "></li>
+									<li class="icon-right szup">0</li>
+									<li class="icon-right szdown">0</li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
 										<span> <span class="xq-color">今开：</span>
-										<font color="#237c02">2460.08</font>
+										<font color="#237c02" class="today_open">0</font>
 										</span>
 										<span><span class="xq-color">成交量：</span>
-										<font color="#237c02">1.47亿手</font>
+										<font color="#237c02" class="volume">0</font>
 										</span>
 										<span><span class="xq-color">振幅：</span>
-										<font color="#007cc8">2.58%</font>
+										<font color="#007cc8" class="amplitude">0</font>
 										</span>
 										<span><span class="xq-color">最高：</span>
-										<font color="#237c02">2553.39</font>
+										<font color="#237c02" class="highest">0</font>
 										</span>
 										<span><span class="xq-color">成交额：</span>
-										<font color="#007cc8">2449.20</font>
+										<font color="#007cc8" class="turnover">0</font>
 										</span>
 										<span><span class="xq-color">昨收：</span>
-										<font color="#007cc8">1300.96亿</font>
+										<font color="#007cc8" class="yesterday_closed">0</font>
 										</span>
 										<span><span class="xq-color">总市值：</span>
-										<font color="#007cc8">2486.42</font>
+										<font color="#007cc8" class="total_value">0</font>
 										</span>
 									</p>
 								</div>
@@ -404,70 +404,70 @@
 											<col>
 										</colgroup>
 										<tbody>
-										<tr class="title">
-											<td style="color:#ff3646">领涨板块</td>
-											<td></td>
-											<td>
-												<a style="color:#237c02">领跌板块</a>
-											</td>
-											<td class="text-right"></td>
-										</tr>
-										<tr>
-											<td>
-												<a>券商</a>
-											</td>
-											<td style="color:#ff3646">
-												+1.32%
-											</td>
-											<td>
-												<a>券商</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.36%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>环保行业</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.17%
-											</td>
-											<td>
-												<a>环保行业</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.28%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>次新股</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.12%
-											</td>
-											<td>
-												<a>次新股</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.10%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>酿酒行业</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.12%
-											</td>
-											<td>
-												<a>酿酒行业</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.10%
-											</td>
-										</tr>
+											<tr class="title">
+												<td style="color:#ff3646">领涨板块</td>
+												<td></td>
+												<td>
+													<a style="color:#237c02">领跌板块</a>
+												</td>
+												<td class="text-right"></td>
+											</tr>
+											<tr>
+												<td>
+													<a>券商</a>
+												</td>
+												<td style="color:#ff3646" class="brokers_up">
+													+1.32%
+												</td>
+												<td>
+													<a>券商</a>
+												</td>
+												<td class="text-right brokers_down" style="color:#237c02">
+													-2.36%
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a>环保行业</a>
+												</td>
+												<td style="color:#ff3646" class="environmental_up">
+													+0.17%
+												</td>
+												<td>
+													<a>环保行业</a>
+												</td>
+												<td class="text-right environmental_down" style="color:#237c02">
+													-2.28%
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a>次新股</a>
+												</td>
+												<td style="color:#ff3646" class="second_up">
+													+0.12%
+												</td>
+												<td>
+													<a>次新股</a>
+												</td>
+												<td class="text-right second_down" style="color:#237c02">
+													-2.10%
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<a>酿酒行业</a>
+												</td>
+												<td style="color:#ff3646" class="wine_up">
+													+0.12%
+												</td>
+												<td>
+													<a>酿酒行业</a>
+												</td>
+												<td class="text-right wine_down" style="color:#237c02">
+													-2.10%
+												</td>
+											</tr>
 										</tbody>
 									</table>
 								</div>
@@ -476,6 +476,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<!--行情中心 end-->
 			{/if}
 
@@ -678,7 +679,14 @@
 									dataType: 'json',
 									data:{},
 									success: function(data) {
-										console.log(data);
+                                        var abc =data.data;
+                                        console.log(abc);
+                                        var obj2=eval("("+abc+")");
+                                        var leg =obj2.datas.length-1;
+                                        console.log(obj2.datas[leg][5]);
+                                        $('.sznum').text(obj2.datas[leg][1]);
+                                        $('.sztop').html(obj2.datas[leg][5]);
+                                        $('.szdown').html(obj2.datas[leg][4]);
 									},
 									error: function(data) {
 										console.log("错误");
@@ -795,15 +803,15 @@
 
 	
 
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?f571b55302a951627ab98145b99cdaab";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?f571b55302a951627ab98145b99cdaab";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	<!--资讯点击进去传ID给后台进入详情页面-->
 		<script >
             $(".bd_cid").click(function () {

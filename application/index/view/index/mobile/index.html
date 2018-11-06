@@ -326,7 +326,8 @@
                     dataType: 'json',
                     success: function(data) {
 						var abc =data.data;
-                        var obj2=eval("("+abc+")")
+						console.log(abc);
+                        var obj2=eval("("+abc+")");
                         var leg =obj2.datas.length-1;
                         $('.sznum').html(obj2.datas[leg][1]);
                         $('.szpercent_one').html(obj2.datas[leg][5]);
