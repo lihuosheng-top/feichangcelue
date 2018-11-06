@@ -166,7 +166,6 @@
 			</div>
 		</div>
 		<div class="wrapper">
-			{if !empty($sz_info_arr)}
 			<!--行情中心-->
 			<div class="pb4">
 				<div class="index_mod4">
@@ -177,14 +176,14 @@
 								<li sv="0" class="current" id="shanghai">
 									<a  >上证指数</a>
 								</li>
-								<li sv="1" id="shengzhen">
+								<li sv="1"  id="shengzhen">
 									<a >深证指数</a>
 								</li>
 							</ul>
 						</div>
 					</div>
 					<div class="mod_left">
-						<div class="hq_con">
+						<div class="hq_con" id="sh_con">
 							<div class="hq_txt" id="a0001_bnt">
 								<a class="cur" sv="0" href="javascript:;">分时线</a>
 								<a sv="1" href="javascript:;">日K线</a>
@@ -195,7 +194,7 @@
 								<img src="http://image.sinajs.cn/newchart/min/n/sh000001.gif" width="500" height="300" id="a0001_img">
 							</div>
 						</div>
-						<div class="hq_con" style="display:none;">
+						<div class="hq_con" id="sz_con" style="display:none;">
 							<div class="hq_txt" id="s0001_bnt">
 								<a class="cur" sv="0" href="javascript:;">分时线</a>
 								<a sv="1" href="javascript:;">日K线</a>
@@ -209,33 +208,33 @@
 						<div class="hq_sv" style="width: 358px;">
 							<div class="hq_st">
 								<div class="hq_a1" id="a0001_v1">
-									<li class="sv" style="color: rgb(255, 0, 0);">{$sz_info_arr[3]}</li>
-									<li class="ico"></li>
-									<li class="icon-right">{$sz_info_arr[31]}</li>
-									<li class="icon-right">{$sz_info_arr[32]}</li>
+									<li class="sv sznum" style="color: rgb(255, 0, 0);" >0</li>
+									<li class="ico "></li>
+									<li class="icon-right szup">0</li>
+									<li class="icon-right "><span class="szdown">0</span><span>%</span></li>
 								</div>
 								<div class="hq_aq1_xq" id="a0001_detail">
 									<p>
 										<span> <span class="xq-color">今开：</span>
-										<font color="#237c02">{$sz_info_arr[5]}</font>
+										<font color="#237c02" class="today_open">0</font>
 										</span>
 										<span><span class="xq-color">成交量：</span>
-										<font color="#237c02">{$sz_info_arr[6]}</font>
+										<font color="#237c02" class="volume">0</font>
 										</span>
 										<span><span class="xq-color">振幅：</span>
-										<font color="#007cc8">{$sz_info_arr[43]}</font>
+										<font color="#007cc8" class="amplitude">0</font>
 										</span>
 										<span><span class="xq-color">最高：</span>
-										<font color="#237c02">{$sz_info_arr[41]}</font>
+										<font color="#237c02" class="highest">0</font>
 										</span>
 										<span><span class="xq-color">成交额：</span>
-										<font color="#007cc8">{$sz_info_arr[37]}</font>
+										<font color="#007cc8" class="turnover">0</font>
 										</span>
 										<span><span class="xq-color">昨收：</span>
-										<font color="#007cc8">{$sz_info_arr[4]}</font>
+										<font color="#007cc8" class="yesterday_closed">0</font>
 										</span>
 										<span><span class="xq-color">总市值：</span>
-										<font color="#007cc8">{$sz_info_arr[45]}</font>
+										<font color="#007cc8" class="total_value">0</font>
 										</span>
 									</p>
 								</div>
@@ -260,13 +259,13 @@
 												<td>
 													<a>券商</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="brokers_up">
 													+1.32%
 												</td>
 												<td>
 													<a>券商</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right brokers_down" style="color:#237c02">
 													-2.36%
 												</td>
 											</tr>
@@ -274,13 +273,13 @@
 												<td>
 													<a>环保行业</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="environmental_up">
 													+0.17%
 												</td>
 												<td>
 													<a>环保行业</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right environmental_down" style="color:#237c02">
 													-2.28%
 												</td>
 											</tr>
@@ -288,13 +287,13 @@
 												<td>
 													<a>次新股</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="second_up">
 													+0.12%
 												</td>
 												<td>
 													<a>次新股</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right second_down" style="color:#237c02">
 													-2.10%
 												</td>
 											</tr>
@@ -302,13 +301,13 @@
 												<td>
 													<a>酿酒行业</a>
 												</td>
-												<td style="color:#ff3646">
+												<td style="color:#ff3646" class="wine_up">
 													+0.12%
 												</td>
 												<td>
 													<a>酿酒行业</a>
 												</td>
-												<td class="text-right" style="color:#237c02">
+												<td class="text-right wine_down" style="color:#237c02">
 													-2.10%
 												</td>
 											</tr>
@@ -320,164 +319,8 @@
 					</div>
 				</div>
 			</div>
+			
 			<!--行情中心 end-->
-			{/if}
-			{if empty($sz_info_arr)}
-			<!--行情中心-->
-			<div class="pb4">
-				<div class="index_mod4">
-					<div class="mod_right" style="width: 300px;">
-						<h3 class="right-tit">行情中心</h3>
-						<div class="s_menu" id="menu_szzs">
-							<ul>
-								<li sv="0" class="current" id="shanghai">
-									<a  >上证指数</a>
-								</li>
-								<li sv="1" id="shengzhen">
-									<a >深证指数</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="mod_left">
-						<div class="hq_con">
-							<div class="hq_txt" id="a0001_bnt">
-								<a class="cur" sv="0" href="javascript:;">分时线</a>
-								<a sv="1" href="javascript:;">日K线</a>
-								<a sv="2" href="javascript:;">周K线</a>
-								<a sv="3" href="javascript:;">月K线</a>
-							</div>
-							<div class="hq_img">
-								<img src="http://image.sinajs.cn/newchart/min/n/sh000001.gif" width="500" height="300" id="a0001_img">
-							</div>
-						</div>
-						<div class="hq_con" style="display:none;">
-							<div class="hq_txt" id="s0001_bnt">
-								<a class="cur" sv="0" href="javascript:;">分时线</a>
-								<a sv="1" href="javascript:;">日K线</a>
-								<a sv="2" href="javascript:;">周K线</a>
-								<a sv="3" href="javascript:;">月K线</a>
-							</div>
-							<div class="hq_img">
-								<img src="http://image.sinajs.cn/newchart/min/n/sz399001.gif" width="450" height="320" id="s0001_img">
-							</div>
-						</div>
-						<div class="hq_sv" style="width: 358px;">
-							<div class="hq_st" >
-								<div class="hq_a1" id="a0001_v1">
-									<li class="sv sznum" style="color: rgb(255, 0, 0);" >2550.47</li>
-									<li class="ico"></li>
-									<li class="icon-right sztop">64.05</li>
-									<li class="icon-right szdown">2.58%</li>
-								</div>
-								<div class="hq_aq1_xq" id="a0001_detail">
-									<p>
-										<span> <span class="xq-color">今开：</span>
-										<font color="#237c02">2460.08</font>
-										</span>
-										<span><span class="xq-color">成交量：</span>
-										<font color="#237c02">1.47亿手</font>
-										</span>
-										<span><span class="xq-color">振幅：</span>
-										<font color="#007cc8">2.58%</font>
-										</span>
-										<span><span class="xq-color">最高：</span>
-										<font color="#237c02">2553.39</font>
-										</span>
-										<span><span class="xq-color">成交额：</span>
-										<font color="#007cc8">2449.20</font>
-										</span>
-										<span><span class="xq-color">昨收：</span>
-										<font color="#007cc8">1300.96亿</font>
-										</span>
-										<span><span class="xq-color">总市值：</span>
-										<font color="#007cc8">2486.42</font>
-										</span>
-									</p>
-								</div>
-								<div class="gupiao">
-									<table id="gpInfo" width="100%">
-										<colgroup>
-											<col style="width:80px">
-											<col style="width:100px">
-											<col style="width:70px">
-											<col>
-										</colgroup>
-										<tbody>
-										<tr class="title">
-											<td style="color:#ff3646">领涨板块</td>
-											<td></td>
-											<td>
-												<a style="color:#237c02">领跌板块</a>
-											</td>
-											<td class="text-right"></td>
-										</tr>
-										<tr>
-											<td>
-												<a>券商</a>
-											</td>
-											<td style="color:#ff3646">
-												+1.32%
-											</td>
-											<td>
-												<a>券商</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.36%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>环保行业</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.17%
-											</td>
-											<td>
-												<a>环保行业</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.28%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>次新股</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.12%
-											</td>
-											<td>
-												<a>次新股</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.10%
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<a>酿酒行业</a>
-											</td>
-											<td style="color:#ff3646">
-												+0.12%
-											</td>
-											<td>
-												<a>酿酒行业</a>
-											</td>
-											<td class="text-right" style="color:#237c02">
-												-2.10%
-											</td>
-										</tr>
-										</tbody>
-									</table>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--行情中心 end-->
-			{/if}
 
 			<div class="pb6">
 		<!-- 		<div class="pb6-l">
@@ -670,42 +513,114 @@
     }
 
 </script>
+
+		//定时器异步获取信息
 		<script>
+
+
+
+
+		</script>
+
+
+		<script>
+			//上证指数
+			var time_one;
+			var time_two;
 			$("#shanghai").click(function(){
-						$.ajax({
+			    $(this).addClass("current");
+                $("#sh_con").show();
+                $("#sz_con").hide();
+			    $(this).siblings().removeClass("current");
+			    clearInterval(time_one);
+                clearInterval(time_two);
+                 time_one= setInterval(function() {
+                     						$.ajax({
 									type: "post",
-									url: "{:url('index/index/stock_exponential_sh')}",
+									url: "{:url('index/index/stock_information_index_sh')}",
 									dataType: 'json',
-									data:{},
-									success: function(data) {
-                                        var abc =data.data;
-                                        console.log(abc);
-                                        var obj2=eval("("+abc+")");
-                                        var leg =obj2.datas.length-1;
-                                        console.log(obj2.datas[leg][5]);
-                                        $('.sznum').text(obj2.datas[leg][1]);
-                                        $('.sztop').html(obj2.datas[leg][5]);
-                                        $('.szdown').html(obj2.datas[leg][4]);
-									},
-									error: function(data) {
-										console.log("错误");
-									}
-								});
-		
-			});
-			$("#shengzhen").click(function(){
-						$.ajax({
-									type: "post",
-									url: "{:url('index/index/stock_exponential_sz')}",
-									dataType: 'json',
-									data:{},
+									data:{'code':'000001'},
 									success: function(data) {
                                         console.log(data);
+                                        $('.sznum').html(data.data.stock_num_info_arr[1]);
+                                        $('.szup').html(data.data.stock_num_info_arr[2]);
+                                        $('.szdown').html(data.data.stock_num_info_arr[3]);
+                                        $('.today_open').html(data.data.info_arr[5]); //今开
+                                        $('.volume').html(data.data.info_arr[6]); //成交量
+                                        $('.amplitude').html(data.data.info_arr[43]);//振幅
+                                        $('.highest').html(data.data.info_arr[41]);//最高
+                                        $('.turnover').html(data.data.info_arr[37]);//成交额
+                                        $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
+                                        $('.total_value').html(data.data.info_arr[45]);//总市值
+                                        //领涨板块
+                                        $('.brokers_up').html('+1.32%');//券商
+                                        $('.environmental_up').html('+0.17%');//环保行业
+                                        $('.second_up').html('+0.12%');//次新股
+                                        $('.wine_up').html('+0.12%');//酿酒行业
+                                        //领跌板块
+                                        $('.brokers_down').html('-2.36%');//券商
+                                        $('.environmental_down').html('-2.28%');//环保行业
+                                        $('.second_down').html('-2.10%');//次新股
+                                        $('.wine_down').html('-2.10%');//酿酒行业
 									},
 									error: function(data) {
 										console.log("错误");
 									}
 								});
+
+                }, 1000);
+
+			});
+            $("#shanghai").click();
+			//深证指数
+			$("#shengzhen").click(function(){
+                $(this).addClass("current");
+                $(this).siblings().removeClass("current");
+                $("#sz_con").show()
+                $("#sh_con").hide();
+
+                clearInterval(time_one);
+                clearInterval(time_two);
+                 time_two= setInterval(function() {
+                     						$.ajax({
+									type: "post",
+									url: "{:url('index/index/stock_information_index_sz')}",
+									dataType: 'json',
+									data:{'code':'399001'},
+									success: function(data) {
+                                        console.log(data);
+                                        $('.sznum').html(data.data.stock_num_info_arr[1]);
+                                        $('.szup').html(data.data.stock_num_info_arr[2]);
+                                        $('.szdown').html(data.data.stock_num_info_arr[3]);
+                                        $('.today_open').html(data.data.info_arr[5]); //今开
+                                        $('.volume').html(data.data.info_arr[6]); //成交量
+                                        $('.amplitude').html(data.data.info_arr[43]);//振幅
+                                        $('.highest').html(data.data.info_arr[41]);//最高
+                                        $('.turnover').html(data.data.info_arr[37]);//成交额
+                                        $('.yesterday_closed').html(data.data.info_arr[4]);//昨收
+
+                                        $('.total_value').html(data.data.info_arr[45]);//总市值
+
+                                        //领涨板块
+                                        $('.brokers_up').html('+1.32%');//券商
+                                        $('.environmental_up').html('+0.17%');//环保行业
+                                        $('.second_up').html('+0.12%');//次新股
+                                        $('.wine_up').html('+0.12%');//酿酒行业
+
+                                        //领跌板块
+                                        $('.brokers_down').html('-2.36%');//券商
+                                        $('.environmental_down').html('-2.28%');//环保行业
+                                        $('.second_down').html('-2.10%');//次新股
+                                        $('.wine_down').html('-2.10%');//酿酒行业
+
+									},
+									error: function(data) {
+										console.log("错误");
+									}
+								});
+
+                }, 1000);
+
 			});
 			(function() {
 				var  baoshang=$(".baoshang").data("id");
@@ -802,15 +717,15 @@
 
 	
 
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?f571b55302a951627ab98145b99cdaab";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+		<script>
+			var _hmt = _hmt || [];
+			(function() {
+				var hm = document.createElement("script");
+				hm.src = "https://hm.baidu.com/hm.js?f571b55302a951627ab98145b99cdaab";
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(hm, s);
+			})();
+		</script>
 	<!--资讯点击进去传ID给后台进入详情页面-->
 		<script >
             $(".bd_cid").click(function () {

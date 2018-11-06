@@ -1196,7 +1196,7 @@ class Ucenter extends Home
      */
     private function stock_sell_do($orderId, $memberId = null)
     {
-
+        $this->isTradingTime();
         if (!$_SESSION['member'] && !session('user_auth')) {
             die("请先登录");
         }
@@ -1222,9 +1222,6 @@ class Ucenter extends Home
              error("当天点买的股票下个工作日才能卖出");
          }
         //判断是都在购买中遇到节假日或者周末进行跳过（只计算工作日）
-
-
-
 
 //        $arr = (new Alistock())->batch_real_stockinfo($stock['market'].$stock['code']);
 //        $nowPrice = $arr[$code];
