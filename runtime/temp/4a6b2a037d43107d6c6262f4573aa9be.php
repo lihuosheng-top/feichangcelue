@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541483097;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:60:"E:\WWW\feichangcelue/application/index\view\index\index.html";i:1541483121;s:59:"E:\WWW\feichangcelue/application/index\view\public\top.html";i:1539832463;s:68:"E:\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:62:"E:\WWW\feichangcelue/application/index\view\public\footer.html";i:1541036725;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -1141,8 +1141,6 @@
                                         $('.sznum').text(obj2.datas[leg][1]);
                                         $('.sztop').html(obj2.datas[leg][5]);
                                         $('.szdown').html(obj2.datas[leg][4]);
-                                        $('.hq_st .hq_sv .hq_st .hq_al #a0001_v1').find(li).eq(1).html();
-                                        console.log($('.hq_st .hq_sv .hq_st .hq_al #a0001_v1').find('li').eq(2).html());
 									},
 									error: function(data) {
 										console.log("错误");
