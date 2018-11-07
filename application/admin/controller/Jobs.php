@@ -61,15 +61,15 @@ class Jobs
         return $object;
     }
 
-    //获取股票实时价格，自动平仓 (每秒运行一次)
+    //获取股票实时价格，自动平仓 (每秒运行一次) 配资到期，自动平仓 （工作时间）
     public function pingCang()
     {
         $t1 = time();
         //触发止损所发出短信信息
-        $loss_information = "尊敬的用户，你在本平台已达强制平仓线本,平台已自动平仓《尚牛在线》";
+        $loss_information = "尊敬的客户，你在本平台已达强制苹苍线，平台已自动苹苍《尚牛在线》";
         //平仓警戒线发的短信信息
-        $surplus_information = "尊敬的用户，你在本平台所建仓已达警戒线，敬请注意或及时补仓以免造成损失《尚牛在线》";
-
+        $surplus_information = "尊敬的客户，你在本平台所建苍已达警戒线，敬请注意或及时苹苍以免造成损失《尚牛在线》";
+        $expire_information = "尊敬的客户，你在本平台所建苍已达最长时间，平台已帮您苹苍，敬请注意《尚牛在线》";
         $res = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->field("distinct(stockCode)")
@@ -84,14 +84,14 @@ class Jobs
         $orderList = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
             ->select();
-
         foreach ($orderList as $k => $v) {
-            ;
             global $orderId, $liquidation;
             $send_phone_num = Db::table('xh_member')->where('id', $v['memberId'])->find();
             $orderId = $v['id'];
             $surplus = $v['surplus']; //警戒线
             $loss = $v['loss'];//止损线
+            $buy_day_end_time =$v['buy_day_end_time']; //订单中的配资结束时间
+            $time_day =date("Y-m-d H:i:s"); //当前时间
 //            $stockDetail = $stockMap[$v['stockCode']];
             /*从实时数据过来*/
             $stockDetail = (new Common())->getMarketValueBycode_second($v['stockCode']);
@@ -107,7 +107,7 @@ class Jobs
             $profit = ((float)$nowPrice - (float)$v['dealPrice']) * $v['dealQuantity'] * 100; //交易盈亏
             $profit = round($profit, 2);
             //如果亏损小于止损线，则即时强制平仓
-            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过警戒线线自动平仓
+            $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过警戒线线自动平仓，4超过配资期限自动平仓
             if ($profit < $surplus) {
 
                 $liquidation = 3;
@@ -118,11 +118,16 @@ class Jobs
                 //这部分是超过止损线的值发送的一个信息给用户
                 (new  Common())->sendMobileToInformation($send_phone_num['mobile'], $loss_information);
             }
+
+            if(strtotime($time_day)-strtotime($buy_day_end_time)>0){
+                $liquidation = 5;
+                (new  Common())->sendMobileToInformation($send_phone_num['mobile'], $expire_information);
+            }
             echo "diff_rate=$diff_rate % , orderId = $orderId, profit = $profit, surplus = $surplus, loss=$loss <br/>";
             //访问后台函数的权限
 //            define('UID', 1);
             session('user_auth.uid', 1);
-            if ($liquidation == 2 || $liquidation == 3) {
+            if ($liquidation == 2 || $liquidation == 3||$liquidation==5) {
                 Db::transaction(function () {
                     global $orderId, $liquidation;
                     echo "orderId=$orderId, liquidation=$liquidation";
@@ -301,6 +306,7 @@ class Jobs
         return $days;
     }
     /*统计实际的配资天数即配资7天，则其中有三天是节假日，则实际就得添加10天的值才能计算到那一天（每天凌晨判断一次，如果是节假日自动加一）*/
+
 
 }
 
