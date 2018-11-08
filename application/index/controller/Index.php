@@ -128,10 +128,6 @@ class Index extends Home
             $this->zixun();
             $this->emergency_notices();
             $this->emergency();
-             $shangzheng =(new Common())->getMarketValueBycode('000001');
-            $sz_info_arr = $shangzheng['info_arr'];
-//             dump($shangzheng);
-             $this->assign("sz_info_arr",$sz_info_arr);
             return view('index');
         }
 
@@ -216,6 +212,55 @@ class Index extends Home
             return $this->ajax_success("返回数据",$information);
         }
     }
+
+    /**
+     * @param Request $request
+     * lihuosheng
+     * TODO:pC端上证指数接口
+     */
+    public function stock_information_index_sh(Request $request){
+        if($request->isPost()){
+            $code_info = input('code'); //由于是int类型，需要转化为string类型
+            $code_info = (string)$code_info;
+            $cod = strval($code_info);
+            $res = $this->getMarketValueBycode_stock($cod);
+            $info_arr = $res['info_arr']; //指数信息
+            $info_all=[
+                'info_arr'=>$info_arr,
+                'time_url_info'=>$res['time_url_info'],//时分线
+                'day_url_info'=>$res['day_url_info'],//日K
+                'week_url_info'=>$res['week_url_info'],//周k
+                'month_url_info'=>$res['month_url_info'],//月k
+                'stock_num_info_arr'=>$res['stock_num_info_arr'],//指数信息
+            ];
+            return ajax_success('上证指数返回成功',$info_all);
+        }
+    }
+
+    /**
+     * @param Request $request
+     * lihuosheng
+     * TODO:PC端深证指数接口
+     */
+    public function stock_information_index_sz(Request $request){
+        if($request->isPost()){
+            $code_info = input('code'); //由于是int类型，需要转化为string类型
+            $code_info = (string)$code_info;
+            $cod = strval($code_info);
+            $res = $this->getMarketValueBycode_stock($cod);
+            $info_arr = $res['info_arr']; //指数信息
+            $info_all=[
+                'info_arr'=>$info_arr,
+                'time_url_info'=>$res['time_url_info'],//时分线
+                'day_url_info'=>$res['day_url_info'],//日K
+                'week_url_info'=>$res['week_url_info'],//周k
+                'month_url_info'=>$res['month_url_info'],//月k
+                'stock_num_info_arr'=>$res['stock_num_info_arr'],//指数信息
+            ];
+            return ajax_success('深证指数返回成功',$info_all);
+        }
+    }
+
 
 
     /**
