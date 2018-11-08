@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\sell.html";i:1541691222;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1539064450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\sell.html";i:1541698721;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1539064450;}*/ ?>
 <!doctype html>
 <html>
 
@@ -109,8 +109,9 @@
 				        	</div>
 				        	<div class="num_info color_red mui-text-right mui-col-xs-3 mui-col-sm-3">
 				        		<!--<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
+								<!--<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell sell_btn font12"  onclick="MoneyCode()">补仓</button>-->
 				        		<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
-				        	</div>
+				        	<!--</div>-->
 				        </div>
 				        <div class="share_info mui-collapse-content">
 				            <ul>

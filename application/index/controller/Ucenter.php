@@ -1495,7 +1495,55 @@ class Ucenter extends Home
     }
 
 
+    /**
+     **************李火生*******************
+     * 补仓
+     **************************************
+     */
+    public function  money_add(Request $request)
+    {
+        if ($request->isPost()) {
+            $order_id = $_POST['order_id'];
+            $money_update = $_POST['money_update'];
+            if (empty($order_id)) {
+                return ajax_success('订单号不存在', ['status' => 0]);
+            }
+            if (empty($money_update)) {
+                return ajax_success('请输入补仓金额', ['status' => 0]);
+            }
+            $data = Db::name('stock_order')->where('id', $order_id)->find();
+            $order_new_money = $data['guaranteeFee'] + $money_update;//新保证金
+            $order_dealAmount = $data['dealAmount'];//成交金额
+            $stopLossRate = getSysParamsByKey("stopLossRate");//止损线
+            $lossLine = getSysParamsByKey("lossLine");//警戒线
 
+            $loss = $stopLossRate * $order_new_money + $order_dealAmount * 10000;
+            $surplus = $lossLine * $order_new_money + $order_dealAmount * 10000;
+            $data_update = [
+                'loss' => $loss,
+                'surplus' => $surplus,
+                'guaranteeFee'=>$order_new_money
+            ];
+            $res = Db::name('stock_order')->where('id',$order_id)->update($data_update);
+            if ($res) {
+                $usableSum = Db::name('member')->where('id', $data['memberId'])->find();
+                $usableSum_change = $usableSum['usableSum'] - $money_update;
+                if ($usableSum_change < 0) {
+                    $this->ajax_success('余额不足，请前往充值');
+                }
+                $del_money = Db::name('member')->where('id', $data['memberId'])->update(['usableSum' => $usableSum_change]);
+                if ($del_money) {
+                    return ajax_success('补仓成功', ['status' => 1]);
+                } else {
+                    return ajax_success('补仓失败', ['status' => 2]);
+                }
+
+            } else {
+                return ajax_success('补仓失败', ['status' => 2]);
+            }
+
+        }
+    }
 
 
 }

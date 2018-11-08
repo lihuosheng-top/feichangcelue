@@ -17,6 +17,7 @@ return [
     'freetrial'=> 'index/index/freetrial?code',	    //1元模拟
     'freetrial1'=> 'index/index/freetrial1',
     'sell'=> 'index/ucenter/sell',       			//点卖区
+    'ucenter/money_add'=>'index/ucenter/money_add',    //补仓
     'history'=> 'index/ucenter/history',       	//结算区
     "ajax_html"=>"index/index/ajax_html",
 

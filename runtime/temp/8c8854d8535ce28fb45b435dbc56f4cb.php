@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:86:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\freetrialSell.html";i:1541691222;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1539064450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:86:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\freetrialSell.html";i:1541702234;s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PublicNav.html";i:1539064450;}*/ ?>
 <!doctype html>
 <html>
 
@@ -108,6 +108,8 @@
 				        	<?php echo $list2[$i-1][profitAmount]; ?>
 				        	</div>
 				        	<div class="num_info color_red mui-text-right mui-col-xs-3 mui-col-sm-3">
+								<input type="text" value="" class="money_update">
+				        		<button data-id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="money_add  font12" >补仓</button>
 				        		<!--<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
 				        		<button id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
 				        	</div>
@@ -195,7 +197,7 @@
 
 		<!---js---->
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="./public/static/home/js/moblie/mui.min.js"></script>
+		<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 		<script type="text/javascript">
 
 			//改变颜色
@@ -299,6 +301,36 @@
 				})
              }
 		</script>
+		<!--补仓-->
+		<script>
+			$('.money_add').click(function () {
+                var money =$(".money_update").val();
+                var order_id = $(this).attr('data-id');
+                $.ajax({
+                    type:"POST",
+                    url:"./ucenter/money_add",
+                    data:{
+                        "money_update":money,
+                        "order_id":order_id
+                    },
+                    dataType:"json",
+                    success:function (data) {
+                        console.log(data);
+                        if(data.data.status=1){
+                            alert(data.info);
+						}
+                        if(data.data.status=2){
+                            alert(data.info);
+                        }
+
+                    },
+                    error:function () {
+                        console.log("错误");
+                    }
+                })
+            })
+		</script>
+
 	</body>
 
 </html>
