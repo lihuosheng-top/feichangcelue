@@ -233,6 +233,9 @@ class Order extends Admin
         //查询余额
         $map = Db::table("xh_member")->field("usableSum")->where("id=$memberId")->find();
         $usableSum = $map['usableSum'];
+        if(empty($usableSum)){
+            $usableSum =0;
+        }
         $remarks = "手动";
         if($liquidation == 2){
             $remarks = "亏损超过止损线自动";
@@ -240,11 +243,13 @@ class Order extends Admin
             $remarks = "亏损超过警戒线自动";
         }else if($liquidation == 4){
             $remarks = "收盘时亏损额超过递延线自动";
+        }else if($liquidation == 5){
+            $remarks = "配资时间到期自动";
         }
         $remarks .= "平仓,退还保证金{$guaranteeFee}元,盈利分配{$profitSelf}元。";
-
+        $creat_tiems =date("Y-m-d H:i:s");
         $sql = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
-            values ($memberId, '1', $amount, $usableSum , '{$remarks}', now() );";
+            values ($memberId, '1', $amount, $usableSum , '{$remarks}', '{$creat_tiems}' );";
         $ret = Db::execute($sql);
         return $ret;
     }

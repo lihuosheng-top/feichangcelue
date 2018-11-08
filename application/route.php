@@ -69,6 +69,8 @@ return [
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
     'PcSell'=>'index/index/PcSell',//pc端配资点卖
     'PcFreeSell'=>'index/index/PcFreeSell',//pc端配资点卖（免费体验）
+    'stock_information_index_sh'=>'index/index/stock_information_index_sh',//PC端首页上证指数接口
+    'stock_information_index_sz'=>'index/index/stock_information_index_sz',//PC端首页深证指数接口
     /**
      * pC端首页最底部连接开始
      */
