@@ -66,9 +66,9 @@ class Jobs
     {
         $t1 = time();
         //触发止损所发出短信信息
-        $loss_information = "尊敬的客户，你在本平台已达强制苹苍线，平台已自动苹苍《尚牛在线》";
+        $loss_information = "尊敬的客户，你在本平台已达强制抹舱线，平台已自动抹舱《尚牛在线》";
         //平仓警戒线发的短信信息
-        $surplus_information = "尊敬的客户，你在本平台所建苍已达警戒线，敬请注意或及时苹苍以免造成损失《尚牛在线》";
+        $surplus_information = "尊敬的客户，你在本平台所建舱位已达警戒线，敬请注意观看以免造成损失《尚牛在线》";
         $expire_information = "尊敬的客户，你在本平台所建苍已达最长时间，平台已帮您苹苍，敬请注意《尚牛在线》";
         $res = Db::table("xh_stock_order")
             ->where("status=1 and isFreetrial=0")
