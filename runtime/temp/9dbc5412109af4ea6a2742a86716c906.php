@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:80:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\payment.html";i:1539064450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:71:"E:\WWW\feichangcelue/application/index\view\ucenter\mobile\payment.html";i:1539064450;}*/ ?>
 <!doctype html>
 <html>
 	<head>

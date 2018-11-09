@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1541691222;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:67:"E:\WWW\feichangcelue/application/index\view\index\mobile\index.html";i:1541475787;}*/ ?>
 <!DOCTYPE html>
 <html>
 
