@@ -1508,10 +1508,17 @@ class Ucenter extends Home
             if (empty($order_id)) {
                 return ajax_success('订单号不存在', ['status' => 0]);
             }
+
             if (empty($money_update)) {
                 return ajax_success('请输入补仓金额', ['status' => 0]);
             }
-            
+            $memberId = $_SESSION['member']['id'];
+            $usableSum = Db::name('member')->where('id',$memberId)->find();
+            $usableSum_change = $usableSum['usableSum'] - $money_update;
+            if ($usableSum_change < 0) {
+                return ajax_success('余额不足，请前往充值');
+            }
+
             $data = Db::name('stock_order')->where('id', $order_id)->find();
             $order_new_money = $data['guaranteeFee'] + $money_update;//新保证金
             $order_dealAmount = $data['dealAmount'];//成交金额
