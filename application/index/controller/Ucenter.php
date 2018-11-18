@@ -989,6 +989,7 @@ class Ucenter extends Home
      */
     public function freetrialBuy()
     {
+        $this->isTradingTime();
         Db::transaction(function () {
             $member = $_SESSION['member'];
             $memberId = (int)$member['id'];
