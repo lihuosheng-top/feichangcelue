@@ -1511,6 +1511,7 @@ class Ucenter extends Home
             if (empty($money_update)) {
                 return ajax_success('请输入补仓金额', ['status' => 0]);
             }
+            
             $data = Db::name('stock_order')->where('id', $order_id)->find();
             $order_new_money = $data['guaranteeFee'] + $money_update;//新保证金
             $order_dealAmount = $data['dealAmount'];//成交金额
