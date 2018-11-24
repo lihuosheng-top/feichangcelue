@@ -72,7 +72,8 @@ class Jobs
         $surplus_information = "尊敬的客户，你在本平台所建舱位已达警戒线，敬请注意观看以免造成损失《尚牛在线》";
         $expire_information = "尊敬的客户，你在本平台所建苍已达最长时间，平台已帮您苹苍，敬请注意《尚牛在线》";
         $res = Db::table("xh_stock_order")
-            ->where("status=1 and isFreetrial=0")
+//            ->where("status=1 and isFreetrial=0")
+            ->where("status=1")
             ->field("distinct(stockCode)")
             ->select();
         $stocks = ""; //上证指数 深证成指 创业板指
@@ -83,7 +84,8 @@ class Jobs
             $stocks .= $v['stockCode'];
         }
         $orderList = Db::table("xh_stock_order")
-            ->where("status=1 and isFreetrial=0")
+//            ->where("status=1 and isFreetrial=0")
+            ->where("status=1")
             ->select();
         foreach ($orderList as $k => $v) {
             global $orderId, $liquidation;
@@ -110,7 +112,6 @@ class Jobs
             //如果亏损小于止损线，则即时强制平仓
             $liquidation = -1; //0用户自己卖出; 1后台手动平仓；2超过止损线自动平仓；3超过警戒线线自动平仓，4超过配资期限自动平仓
             if ($profit < $surplus) {
-
                 $liquidation = 3;
                 //这部分是超过警戒线的值发送一个短信给用户
                 (new  Common())->sendMobileToInformation($send_phone_num['mobile'], $surplus_information);
