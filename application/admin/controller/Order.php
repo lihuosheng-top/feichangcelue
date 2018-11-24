@@ -146,6 +146,7 @@ class Order extends Admin
                 ['profitSelf', '盈利分配(元)'],
                 ['guaranteeFee', '保证金(元)'],
                 ['delayDays', '递延天数（天）'],
+                ['buy_day_num','配资天数'],
                 ['buy_month_num','配资月数(月)'],
                 ['createTime', '买入时间' ],
                 ['buy_day_end_time','配资到期时间'],

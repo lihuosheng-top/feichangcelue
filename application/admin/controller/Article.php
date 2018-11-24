@@ -70,7 +70,6 @@ class Article extends Admin
                 $ret = Db::table("xh_images")->insertGetId($data);
             }
 
-
             if ($ret > 0) {
                 // 记录行为
                 action_log('images_edit', 'admin_role', $id, UID, $data['name']);
