@@ -86,7 +86,7 @@
 				        	{$list2[$i-1][profitAmount]}
 				        	</div>
 				        	<div class="num_info color_red mui-text-right mui-col-xs-3 mui-col-sm-3">
-								<input type="text" value="" class="money_update">
+								<input type="text" value="" index="{$i}" class="money_update">
 				        		<button data-id="{$vo.id}" index="{$i}" class="money_add  font12" >补仓</button>
 				        		<!--<button id="{$vo.id}" index="{$i}" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
 				        		<button id="{$vo.id}" index="{$i}" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
@@ -283,7 +283,8 @@
 		<!--补仓-->
 		<script>
 			$('.money_add').click(function () {
-                var money =$(".money_update").val();
+//                var money =$(".money_update").val();
+                var money=$(this).siblings(".money_update").val();
                 var order_id = $(this).attr('data-id');
                 $.ajax({
                     type:"POST",
@@ -294,11 +295,10 @@
                     },
                     dataType:"json",
                     success:function (data) {
-                        console.log(data);
+//                        console.log(data);
                         if(data.data.status=1){
                             alert(data.info);
-						}
-                        if(data.data.status=2){
+						}else if(data.data.status=2){
                             alert(data.info);
                         }
 

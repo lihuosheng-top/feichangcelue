@@ -1,0 +1,270 @@
+---------------------------------------------------------------
+[ 2018-11-27T09:59:50+08:00 ] ::1 ::1 POST /feichangcelue/ucenter/money_add
+[ info ] localhost/feichangcelue/ucenter/money_add [运行时间：0.355813s][吞吐率：2.81req/s] [内存消耗：3,563.02kb] [文件加载：61]
+[ info ] [ LANG ] E:\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'money_add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '31',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/sell',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4fm4n921hg99q325mt7qqhk6r6; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543282817; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543282817; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+  'money_update' => '100000',
+  'order_id' => '79',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ DB ] INIT mysql
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.131714s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.118741s ]
+[ info ] [ RUN ] app\index\controller\Ucenter->money_add[ E:\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027975s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_config` [ RunTime:0.018119s ]
+[ sql ] [ SQL ] SELECT `name`,`value`,`type` FROM `xh_admin_config` [ RunTime:0.018320s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_module` [ RunTime:0.017050s ]
+[ sql ] [ SQL ] SELECT `name`,`config` FROM `xh_admin_module` WHERE  `config` <> '' [ RunTime:0.016410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook` [ RunTime:0.018315s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_hook` WHERE  `status` = 1 [ RunTime:0.015236s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_plugin` [ RunTime:0.018092s ]
+[ sql ] [ SQL ] SELECT `name`,`status` FROM `xh_admin_plugin` WHERE  `status` = 1 [ RunTime:0.015576s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_admin_hook_plugin` [ RunTime:0.017532s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_admin_hook_plugin` WHERE  `status` = 1 ORDER BY hook,sort [ RunTime:0.016069s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016713s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016531s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016239s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.016434s ]
+---------------------------------------------------------------
+[ 2018-11-27T10:00:02+08:00 ] ::1 ::1 GET /feichangcelue/sell
+[ info ] localhost/feichangcelue/sell [运行时间：0.617854s][吞吐率：1.62req/s] [内存消耗：3,879.12kb] [文件加载：70]
+[ info ] [ LANG ] E:\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'sell',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4fm4n921hg99q325mt7qqhk6r6; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543282817; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543282817; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.003343s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.006691s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->sell[ E:\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ VIEW ] E:\WWW\feichangcelue/application/index\view\ucenter\mobile\sell.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'count',
+  5 => 'delayFeeSum',
+  6 => 'profitSum',
+  7 => 'list',
+  8 => 'listJson',
+  9 => 'list2',
+  10 => 'listJson2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030381s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.019609s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.018623s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.019644s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.019728s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.019527s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.018940s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.018703s ]
+[ sql ] [ SQL ] SELECT SUM(0 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and status = 1  ) LIMIT 1 [ RunTime:0.018356s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.019714s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.019939s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 LIMIT 1 [ RunTime:0.019386s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.018136s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.019725s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.019313s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018639s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.018409s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.019952s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.018699s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.019106s ]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]Use of undefined constant count - assumed 'count'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:79]
+[ error ] [8]Object of class think\paginator\driver\Bootstrap could not be converted to int[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:79]
+[ error ] [8]Use of undefined constant nowPrice - assumed 'nowPrice'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:105]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:108]
+[ error ] [8]Use of undefined constant rate - assumed 'rate'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:187]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:191]
+[ error ] [8]Use of undefined constant nowPrice - assumed 'nowPrice'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:105]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:108]
+[ error ] [8]未定义数组下标: 2[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:178]
+[ error ] [8]未定义数组下标: 2[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:183]
+[ error ] [8]Use of undefined constant rate - assumed 'rate'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:187]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:191]
+---------------------------------------------------------------
+[ 2018-11-27T10:00:15+08:00 ] ::1 ::1 POST /feichangcelue/ucenter/money_add
+[ info ] localhost/feichangcelue/ucenter/money_add [运行时间：0.249814s][吞吐率：4.00req/s] [内存消耗：3,329.59kb] [文件加载：57]
+[ info ] [ LANG ] E:\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'money_add',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '27',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/sell',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4fm4n921hg99q325mt7qqhk6r6; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543282817; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543282817; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+  'money_update' => '20',
+  'order_id' => '78',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002030s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004996s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->money_add[ E:\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022803s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012718s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011985s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012537s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.013950s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.013257s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_stock_order` WHERE  `id` = 78 LIMIT 1 [ RunTime:0.013942s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.012391s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.012719s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.012600s ]
+[ sql ] [ SQL ] UPDATE `xh_stock_order`  SET `loss`=10506.2,`surplus`=11265.5,`guaranteeFee`=2531  WHERE  `id` = 78 [ RunTime:0.017448s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.013487s ]
+[ sql ] [ SQL ] UPDATE `xh_member`  SET `usableSum`=22830.3  WHERE  `id` = 1348 [ RunTime:0.015460s ]
+---------------------------------------------------------------
+[ 2018-11-27T10:00:22+08:00 ] ::1 ::1 GET /feichangcelue/sell
+[ info ] localhost/feichangcelue/sell [运行时间：0.416064s][吞吐率：2.40req/s] [内存消耗：3,704.34kb] [文件加载：68]
+[ info ] [ LANG ] E:\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'sell',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_1 like Mac OS X) AppleWebKit/603.1.30 (KHTML, like Gecko) Version/10.0 Mobile/14E304 Safari/602.1',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.9',
+  'cookie' => 'PHPSESSID=4fm4n921hg99q325mt7qqhk6r6; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543282817; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543282817; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/doLogin.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.002496s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.004858s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->sell[ E:\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ VIEW ] E:\WWW\feichangcelue/application/index\view\ucenter\mobile\sell.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'count',
+  5 => 'delayFeeSum',
+  6 => 'profitSum',
+  7 => 'list',
+  8 => 'listJson',
+  9 => 'list2',
+  10 => 'listJson2',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.022222s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010902s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009958s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010755s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012253s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.010258s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010971s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.010974s ]
+[ sql ] [ SQL ] SELECT SUM(0 * dealAmount) AS tp_sum FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and status = 1  ) LIMIT 1 [ RunTime:0.011001s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) LIMIT 1 [ RunTime:0.011431s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.011675s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 LIMIT 1 [ RunTime:0.009877s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc LIMIT 0,5 [ RunTime:0.010979s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.009827s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.010786s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011107s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.009497s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.010879s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010495s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.010862s ]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[E:\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]Use of undefined constant count - assumed 'count'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:79]
+[ error ] [8]Object of class think\paginator\driver\Bootstrap could not be converted to int[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:79]
+[ error ] [8]Use of undefined constant nowPrice - assumed 'nowPrice'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:105]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:108]
+[ error ] [8]Use of undefined constant rate - assumed 'rate'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:187]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:191]
+[ error ] [8]Use of undefined constant nowPrice - assumed 'nowPrice'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:105]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:108]
+[ error ] [8]未定义数组下标: 2[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:178]
+[ error ] [8]未定义数组下标: 2[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:183]
+[ error ] [8]Use of undefined constant rate - assumed 'rate'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:187]
+[ error ] [8]Use of undefined constant profitAmount - assumed 'profitAmount'[E:\WWW\feichangcelue\runtime\temp\a5c26cf736ab2e194bce78f191c3b129.php:191]
