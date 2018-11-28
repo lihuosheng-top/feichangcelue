@@ -89,13 +89,13 @@
 				        		<!--<button id="{$vo.id}" index="{$i}" class="btnSell match_btn sell_btn font12" href="javascript:void(0);">匹配中</button>-->
 								<!--<button id="{$vo.id}" index="{$i}" class="btnSell sell_btn font12"  onclick="MoneyCode()">补仓</button>-->
 
-								<input type="text" index="{$i}" value="" class="money_update">
-								<button data-id="{$vo.id}" index="{$i}" class="money_add  font12" >补仓</button>
+								<input type="text"  value="" class="money_update">
+								<button data-id="{$vo.id}"  class="money_add  font12" >补仓</button>
 
 								<button id="{$vo.id}" index="{$i}" class="btnSell sell_btn font12"  onclick="MoneyCode()">卖出</button>
-				        	<!--</div>-->
+				        	</div>
 				        </div>
-				        <div class="share_info mui-collapse-content">
+						<div class="share_info mui-collapse-content">
 				            <ul>
 				            	<li class="mui-clearfix">
 				            		<span class="li_l mui-pull-left font12">买入时间</span>
@@ -171,8 +171,8 @@
 				            		</span>
 				            	</p>
 				            </ul>
-				        </div>
-				    </li>
+				       		 </div>
+					</li>
 					{/volist}
 				    <div class="pagination_box">
 				    	{$list->render()}
