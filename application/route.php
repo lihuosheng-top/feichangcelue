@@ -105,7 +105,7 @@ return [
     //手机
     'doLogin'=>'index/index/doLogin',           //登录
     'logout'=>'index/index/logout',             //退出
- //   "index"=>"index/index/index",               //首页
+    "index"=>"index/index/index",               //首页
     'doReg'=>'index/index/doReg',               //注册
     'reg_agreement'=>'index/index/reg_agreement', //注册协议
     'sendMobileCode'=>'index/index/sendMobileCode',         //（注册）短信验证

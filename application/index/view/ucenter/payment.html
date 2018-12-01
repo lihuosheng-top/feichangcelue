@@ -490,12 +490,12 @@ p {
 
 					success: function(data) {
 					    if(data.status ==1){
-                            mui.alert(data.info);
+                            alert(data.info);
                             setTimeout(function () {
-                                window.location.href= './home.html';
+                                window.location.href= './index.html';
                             },2000);
 						}else {
-                            mui.alert('提交失败');
+                            alert('提交失败');
 						}
 
 
@@ -506,7 +506,7 @@ p {
 			  });
 //			  微信
 			  
-					  $('#wxsubmit').click(function() {
+			$('#wxsubmit').click(function() {
                           var amount=$("#wxamount").val();
                           if(amount == '' || amount == 0 || amount == null){
                               alert("请输入充值金额");
@@ -520,7 +520,7 @@ p {
 
                           var alipay=$("#wxalipay").val();
                           if(alipay =='' ||alipay == 0 || alipay == null){
-                              mui.alert("请输入使用的微信账号");
+                              alert("请输入使用的微信账号");
                               return;
                           }
                           $.ajax({
@@ -533,7 +533,7 @@ p {
                                   if(data.status ==1){
                                       alert(data.info);
                                       setTimeout(function () {
-                                          window.location.href= './home.html';
+                                          window.location.href= './index.html';
                                       },2000);
                                   }else {
                                      alert('提交失败');
@@ -545,7 +545,8 @@ p {
                               }
                           });
 					  });
-					  	$("#on_buton").click(function () {
+
+			$("#on_buton").click(function () {
                 var pay_money = $("#paymoney").val();
                 if(pay_money == '' || pay_money == 0 || pay_money == null){
                     alert("请输入充值金额");
@@ -569,9 +570,9 @@ p {
 						},
                         dataType:'json',
                         success:function(data){
-                            mui.alert(data.msg+'<br/>请等待审核');
+                            alert(data.msg+'请等待审核');
                             setTimeout(function () {
-                                window.location.href= './home.html';
+                                window.location.href= './index.html';
                             },2000);
                             console.log('成功');
                         },

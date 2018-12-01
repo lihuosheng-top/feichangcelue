@@ -1,0 +1,3017 @@
+---------------------------------------------------------------
+[ 2018-12-01T15:24:34+08:00 ] ::1 ::1 POST /feichangcelue/stock_information_index_sh.html
+[ info ] localhost/feichangcelue/stock_information_index_sh.html [运行时间：0.500090s][吞吐率：2.00req/s] [内存消耗：3,323.17kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'stock_information_index_sh',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543648932; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.008269s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.034366s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->stock_information_index_sh[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.038611s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010515s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009082s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:35+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.640190s][吞吐率：1.56req/s] [内存消耗：3,324.13kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543648932; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016511s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.051394s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.028563s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010657s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009694s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.010000s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.009665s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:35+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：1.117263s][吞吐率：0.90req/s] [内存消耗：3,538.53kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543648932; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.035445s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.049480s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'res_bei',
+  4 => 'res_money',
+  5 => 'cordon_line',
+  6 => 'loss_line',
+  7 => 'levers_1',
+  8 => 'levers_2',
+  9 => 'levers_3',
+  10 => 'levers_4',
+  11 => 'levers_5',
+  12 => 'levers_6',
+  13 => 'levers_7',
+  14 => 'levers_8',
+  15 => 'levers_9',
+  16 => 'levers_10',
+  17 => 'lossLine',
+  18 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.047673s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012707s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012715s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011948s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010884s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.012238s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.011030s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.011453s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010766s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.011498s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009676s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009664s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010967s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.011353s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010139s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010898s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.011635s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010693s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.011171s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.011216s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:36+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/index.html
+[ info ] localhost/feichangcelue/ucenter/index.html [运行时间：0.376809s][吞吐率：2.65req/s] [内存消耗：3,665.42kb] [文件加载：68]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'member',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.008951s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.021298s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->member[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'fundrecord',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029674s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011477s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.023675s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011786s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_fundrecord` [ RunTime:0.011878s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_member_fundrecord` WHERE  (  memberId = 1348 and  1=1   ) LIMIT 1 [ RunTime:0.009969s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_fundrecord` WHERE  (  memberId = 1348 and  1=1   ) ORDER BY id desc LIMIT 0,10 [ RunTime:0.010908s ]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:254]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:254]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:255]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:255]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:256]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:256]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:869]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:874]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:36+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/public/static/home/img/bdxy.jpg
+[ info ] localhost/feichangcelue/ucenter/public/static/home/img/bdxy.jpg [运行时间：0.321330s][吞吐率：3.11req/s] [内存消耗：2,025.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ucenter',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'img',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016717s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.050618s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:24:36+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/public/static/home/img/ewm1.jpg
+[ info ] localhost/feichangcelue/ucenter/public/static/home/img/ewm1.jpg [运行时间：0.339781s][吞吐率：2.94req/s] [内存消耗：2,025.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ucenter',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'img',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016703s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.060981s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:24:40+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.924502s][吞吐率：1.08req/s] [内存消耗：3,674.05kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012650s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019392s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'lossLine',
+  12 => 'delayLineRate',
+  13 => 'stopLossRate',
+  14 => 'levers_1',
+  15 => 'levers_2',
+  16 => 'levers_3',
+  17 => 'levers_4',
+  18 => 'levers_5',
+  19 => 'levers_6',
+  20 => 'levers_7',
+  21 => 'levers_8',
+  22 => 'levers_9',
+  23 => 'levers_10',
+  24 => 'levers_month_1',
+  25 => 'levers_month_2',
+  26 => 'levers_month_3',
+  27 => 'levers_month_4',
+  28 => 'levers_month_5',
+  29 => 'levers_month_6',
+  30 => 'levers_month_7',
+  31 => 'levers_month_8',
+  32 => 'levers_month_9',
+  33 => 'levers_month_10',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035289s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016820s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016594s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016516s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and left(createTime,10)='2018-12-01' ) LIMIT 1 [ RunTime:0.015356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015035s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.015726s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015623s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.015534s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.014735s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.014788s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015100s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.014223s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.014704s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015445s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014680s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.013993s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.014895s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015069s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.014930s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.013924s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.013882s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014960s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014900s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014630s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.015467s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.013386s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.016699s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015254s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.014691s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015332s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015063s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014759s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014921s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014913s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015002s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014806s ]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:215]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:591]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:42+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getTimeLine
+[ info ] localhost/feichangcelue/index/Alistock/getTimeLine [运行时间：1.001965s][吞吐率：1.00req/s] [内存消耗：3,982.31kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getTimeLine',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.027494s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.032001s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.049605s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017111s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.017021s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.017375s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016704s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.016170s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.015978s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.015541s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016827s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015911s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015834s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.019173s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015493s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015860s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014965s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015924s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.015442s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.015621s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.015506s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.016249s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015356s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.016307s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.016090s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.014970s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.016168s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.015610s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.015318s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:43+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：1.710385s][吞吐率：0.58req/s] [内存消耗：3,982.29kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getStockInfo',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.029942s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.033539s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032621s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016653s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016815s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.015325s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016405s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015709s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.014330s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.015308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016375s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015582s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.014966s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.017450s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014525s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014368s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014499s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013838s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.014895s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.014261s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.015064s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.014811s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.014813s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015397s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.014690s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015825s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.014816s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.015468s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.014914s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.015769s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:46+08:00 ] ::1 ::1 GET /feichangcelue/guild.html
+[ info ] localhost/feichangcelue/guild.html [运行时间：0.303429s][吞吐率：3.30req/s] [内存消耗：3,663.85kb] [文件加载：64]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'guild',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.012157s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.019408s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->guild[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\guild.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.023462s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.009968s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009441s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:48+08:00 ] ::1 ::1 GET /feichangcelue/safeensure.html
+[ info ] localhost/feichangcelue/safeensure.html [运行时间：0.282281s][吞吐率：3.54req/s] [内存消耗：3,481.05kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'safeensure',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/guild.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011113s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022835s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->safeensure[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\safeensure.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025945s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010910s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010403s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:49+08:00 ] ::1 ::1 GET /feichangcelue/index.html
+[ info ] localhost/feichangcelue/index.html [运行时间：0.708308s][吞吐率：1.41req/s] [内存消耗：3,976.91kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/safeensure.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011394s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026739s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024032s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010261s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010542s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.010580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010864s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.009658s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.010148s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.009452s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010160s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.009426s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009592s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.010754s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009860s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009660s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009524s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010164s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009053s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.009908s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.009244s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009890s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.009452s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009714s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.010218s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009764s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.007994s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.009849s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009442s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.009773s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:50+08:00 ] ::1 ::1 GET /feichangcelue/public/static/home/img/index_tr_up.jpg
+[ info ] localhost/feichangcelue/public/static/home/img/index_tr_up.jpg [运行时间：0.293343s][吞吐率：3.41req/s] [内存消耗：2,024.95kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/public/static/home/css/index.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'img' => 'index_tr_up.jpg',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.022558s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.038698s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:24:51+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.616050s][吞吐率：1.62req/s] [内存消耗：3,324.14kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.018166s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.056148s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033929s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.012717s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013038s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.013686s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.014268s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:51+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：0.990374s][吞吐率：1.01req/s] [内存消耗：3,538.35kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.019149s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.072057s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'res_bei',
+  4 => 'res_money',
+  5 => 'cordon_line',
+  6 => 'loss_line',
+  7 => 'levers_1',
+  8 => 'levers_2',
+  9 => 'levers_3',
+  10 => 'levers_4',
+  11 => 'levers_5',
+  12 => 'levers_6',
+  13 => 'levers_7',
+  14 => 'levers_8',
+  15 => 'levers_9',
+  16 => 'levers_10',
+  17 => 'lossLine',
+  18 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030962s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011394s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009301s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.010659s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010006s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010043s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009091s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.009749s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009084s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.009944s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009658s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009353s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.007742s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.008838s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.009337s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.009173s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.008105s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.009828s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.008246s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.008786s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:52+08:00 ] ::1 ::1 POST /feichangcelue/stock_information_index_sh.html
+[ info ] localhost/feichangcelue/stock_information_index_sh.html [运行时间：1.294024s][吞吐率：0.77req/s] [内存消耗：3,323.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'stock_information_index_sh',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649075; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.064852s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.083816s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->stock_information_index_sh[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036270s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017802s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.017122s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:53+08:00 ] ::1 ::1 GET /feichangcelue/index.html
+[ info ] localhost/feichangcelue/index.html [运行时间：0.794641s][吞吐率：1.26req/s] [内存消耗：3,977.24kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/safeensure.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649091',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.009692s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020907s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033354s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014935s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014764s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.013489s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.014076s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.013159s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.013659s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.014207s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.014323s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014556s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.013565s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.015843s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013367s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014013s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013322s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013904s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.013560s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.013764s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.013601s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.013631s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.013176s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.013997s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.013908s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.014066s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.013596s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.014426s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.013549s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.013763s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:53+08:00 ] ::1 ::1 GET /feichangcelue/public/static/home/img/index_tr_up.jpg
+[ info ] localhost/feichangcelue/public/static/home/img/index_tr_up.jpg [运行时间：0.222596s][吞吐率：4.49req/s] [内存消耗：2,025.00kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/public/static/home/css/index.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649091',
+)
+[ info ] [ PARAM ] array (
+  'img' => 'index_tr_up.jpg',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011055s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.028252s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:24:54+08:00 ] ::1 ::1 POST /feichangcelue/stock_information_index_sh.html
+[ info ] localhost/feichangcelue/stock_information_index_sh.html [运行时间：0.488208s][吞吐率：2.05req/s] [内存消耗：3,323.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'stock_information_index_sh',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649091; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.030400s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.031565s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->stock_information_index_sh[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.034792s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016126s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015729s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:54+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.630148s][吞吐率：1.59req/s] [内存消耗：3,324.14kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649091; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014236s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.033834s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030382s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.013016s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012080s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.011956s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.011833s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:55+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：1.150696s][吞吐率：0.87req/s] [内存消耗：3,538.35kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649091; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016681s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.035588s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'res_bei',
+  4 => 'res_money',
+  5 => 'cordon_line',
+  6 => 'loss_line',
+  7 => 'levers_1',
+  8 => 'levers_2',
+  9 => 'levers_3',
+  10 => 'levers_4',
+  11 => 'levers_5',
+  12 => 'levers_6',
+  13 => 'levers_7',
+  14 => 'levers_8',
+  15 => 'levers_9',
+  16 => 'levers_10',
+  17 => 'lossLine',
+  18 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.039654s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.020599s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.019226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.019086s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.018618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.019440s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.018408s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.018822s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.018882s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.018723s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.018489s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.017554s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017694s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.017376s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.018232s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.017740s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.018629s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.018727s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.017746s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.017473s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:55+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：1.392766s][吞吐率：0.72req/s] [内存消耗：3,673.93kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013904s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026670s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'lossLine',
+  12 => 'delayLineRate',
+  13 => 'stopLossRate',
+  14 => 'levers_1',
+  15 => 'levers_2',
+  16 => 'levers_3',
+  17 => 'levers_4',
+  18 => 'levers_5',
+  19 => 'levers_6',
+  20 => 'levers_7',
+  21 => 'levers_8',
+  22 => 'levers_9',
+  23 => 'levers_10',
+  24 => 'levers_month_1',
+  25 => 'levers_month_2',
+  26 => 'levers_month_3',
+  27 => 'levers_month_4',
+  28 => 'levers_month_5',
+  29 => 'levers_month_6',
+  30 => 'levers_month_7',
+  31 => 'levers_month_8',
+  32 => 'levers_month_9',
+  33 => 'levers_month_10',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031598s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010985s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011087s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012239s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and left(createTime,10)='2018-12-01' ) LIMIT 1 [ RunTime:0.010226s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010603s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.009294s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.010990s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.009517s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.009812s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.009115s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009038s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.009338s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.009882s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.009659s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009663s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.009885s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009980s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009072s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.009394s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.009889s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.009944s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010074s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.009506s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.009206s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.010124s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009415s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.009221s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009812s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.008949s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.009907s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.009871s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.008998s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.008750s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.008780s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.009407s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.009663s ]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:215]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:591]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:58+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.844946s][吞吐率：1.18req/s] [内存消耗：3,982.29kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getStockInfo',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016047s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.040692s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033325s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014796s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012909s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.012332s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.013045s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.011262s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.012197s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.012246s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.012138s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.011135s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.011242s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.013845s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011122s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012030s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011273s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.012325s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.012035s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.011822s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.011264s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.011346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.011768s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.011471s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.012317s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.012390s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.011214s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.011829s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.011431s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.011471s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:58+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getTimeLine
+[ info ] localhost/feichangcelue/index/Alistock/getTimeLine [运行时间：1.354980s][吞吐率：0.74req/s] [内存消耗：3,982.31kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getTimeLine',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.013792s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.033621s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025074s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010605s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010079s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.009461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010342s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.009296s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.008997s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.009606s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010185s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.008928s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.008911s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.011499s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009328s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009011s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009336s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009045s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009171s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.008775s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.009232s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009188s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.009364s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009442s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.009190s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.010444s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.008660s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.009465s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009555s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.008878s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:24:59+08:00 ] ::1 ::1 GET /feichangcelue/company.html
+[ info ] localhost/feichangcelue/company.html [运行时间：0.271800s][吞吐率：3.68req/s] [内存消耗：3,480.99kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'company',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010026s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020021s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->company[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\company.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.031308s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016114s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015559s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:02+08:00 ] ::1 ::1 GET /feichangcelue/index.html
+[ info ] localhost/feichangcelue/index.html [运行时间：0.664167s][吞吐率：1.51req/s] [内存消耗：3,976.91kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/company.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010509s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.022301s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.024945s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011868s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011678s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011618s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.011979s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.010162s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.010862s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.011798s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010870s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010375s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.011292s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.012323s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010260s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010690s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009243s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011239s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.010386s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.010216s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.010697s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009357s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.010564s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009580s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.010613s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.011012s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.009974s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.010461s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009687s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.009596s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:02+08:00 ] ::1 ::1 GET /feichangcelue/public/static/home/img/index_tr_up.jpg
+[ info ] localhost/feichangcelue/public/static/home/img/index_tr_up.jpg [运行时间：0.302056s][吞吐率：3.31req/s] [内存消耗：2,024.95kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/public/static/home/css/index.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'img' => 'index_tr_up.jpg',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.038903s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.059274s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:25:03+08:00 ] ::1 ::1 POST /feichangcelue/stock_information_index_sh.html
+[ info ] localhost/feichangcelue/stock_information_index_sh.html [运行时间：0.599236s][吞吐率：1.67req/s] [内存消耗：3,323.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'stock_information_index_sh',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015817s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.068342s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->stock_information_index_sh[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.043400s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016204s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016474s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:03+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.738866s][吞吐率：1.35req/s] [内存消耗：3,324.14kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.019235s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.043080s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030335s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014872s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013556s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.015047s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.014769s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:04+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：1.074144s][吞吐率：0.93req/s] [内存消耗：3,538.35kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649094; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.017034s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.046538s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'res_bei',
+  4 => 'res_money',
+  5 => 'cordon_line',
+  6 => 'loss_line',
+  7 => 'levers_1',
+  8 => 'levers_2',
+  9 => 'levers_3',
+  10 => 'levers_4',
+  11 => 'levers_5',
+  12 => 'levers_6',
+  13 => 'levers_7',
+  14 => 'levers_8',
+  15 => 'levers_9',
+  16 => 'levers_10',
+  17 => 'lossLine',
+  18 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.025606s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011854s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010352s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.011707s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.009577s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.011291s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009764s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.011173s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010898s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.010892s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.010623s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.010502s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.010776s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.010899s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.010022s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.010663s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.009219s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.010617s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009778s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.010078s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:04+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/index.html
+[ info ] localhost/feichangcelue/ucenter/index.html [运行时间：0.433208s][吞吐率：2.31req/s] [内存消耗：3,665.40kb] [文件加载：68]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'ucenter',
+    2 => 'member',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011690s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.049463s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Ucenter->member[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Ucenter.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'fundrecord',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035942s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016625s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016117s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015243s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member_fundrecord` [ RunTime:0.016261s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_member_fundrecord` WHERE  (  memberId = 1348 and  1=1   ) LIMIT 1 [ RunTime:0.015281s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member_fundrecord` WHERE  (  memberId = 1348 and  1=1   ) ORDER BY id desc LIMIT 0,10 [ RunTime:0.016360s ]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:254]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:254]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:255]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:255]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:256]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:256]
+[ error ] [8]未定义数组索引: recent[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:869]
+[ error ] [8]未定义数组索引: flow[D:\phpStudy\WWW\feichangcelue\runtime\temp\a05daf9357e5fdf808795f47e9b4c280.php:874]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:04+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/public/static/home/img/bdxy.jpg
+[ info ] localhost/feichangcelue/ucenter/public/static/home/img/bdxy.jpg [运行时间：0.210540s][吞吐率：4.75req/s] [内存消耗：2,025.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ucenter',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'img',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016232s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.024466s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:25:04+08:00 ] ::1 ::1 GET /feichangcelue/ucenter/public/static/home/img/ewm1.jpg
+[ info ] localhost/feichangcelue/ucenter/public/static/home/img/ewm1.jpg [运行时间：0.242900s][吞吐率：4.12req/s] [内存消耗：2,025.02kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'ucenter',
+    1 => 'public',
+    2 => 'static',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104',
+)
+[ info ] [ PARAM ] array (
+  'home' => 'img',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015527s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.031837s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:25:08+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.703976s][吞吐率：1.42req/s] [内存消耗：3,674.05kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.009763s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020697s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'lossLine',
+  12 => 'delayLineRate',
+  13 => 'stopLossRate',
+  14 => 'levers_1',
+  15 => 'levers_2',
+  16 => 'levers_3',
+  17 => 'levers_4',
+  18 => 'levers_5',
+  19 => 'levers_6',
+  20 => 'levers_7',
+  21 => 'levers_8',
+  22 => 'levers_9',
+  23 => 'levers_10',
+  24 => 'levers_month_1',
+  25 => 'levers_month_2',
+  26 => 'levers_month_3',
+  27 => 'levers_month_4',
+  28 => 'levers_month_5',
+  29 => 'levers_month_6',
+  30 => 'levers_month_7',
+  31 => 'levers_month_8',
+  32 => 'levers_month_9',
+  33 => 'levers_month_10',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.026675s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011419s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011066s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010538s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and left(createTime,10)='2018-12-01' ) LIMIT 1 [ RunTime:0.010215s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.010284s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.009590s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.009916s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.009395s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.009996s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.010896s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.009749s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.009519s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.008883s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.009608s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.009699s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.009478s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009217s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009646s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.008992s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.009218s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.009105s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.009919s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.009731s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.009410s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.009344s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.010417s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.009081s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.009971s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.009947s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.009856s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.010072s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.009600s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.009037s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.009193s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.009257s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.009831s ]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:215]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:591]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:10+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getTimeLine
+[ info ] localhost/feichangcelue/index/Alistock/getTimeLine [运行时间：0.878484s][吞吐率：1.14req/s] [内存消耗：3,982.31kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getTimeLine',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011662s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.027401s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.032015s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.015059s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014825s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.014420s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.014131s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.013403s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.013539s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.013497s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015467s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014006s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.013220s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.016244s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014778s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013911s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013121s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013354s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.014046s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.013497s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.015406s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015035s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.013838s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.014847s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.015232s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015088s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.013123s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.014768s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.013965s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.014735s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:11+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：1.504485s][吞吐率：0.66req/s] [内存消耗：3,982.29kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getStockInfo',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016166s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.026319s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.030140s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014431s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014091s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.014067s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.014640s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.013309s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.013729s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.013514s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.013494s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.013046s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.012691s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.015280s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013216s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013385s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013011s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.013853s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.013685s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.013373s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.012892s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.013259s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.013659s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.013444s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.014034s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.013750s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.012787s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.013782s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.014090s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.012765s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:20+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.968966s][吞吐率：1.03req/s] [内存消耗：3,674.25kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.010818s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.027341s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'lossLine',
+  12 => 'delayLineRate',
+  13 => 'stopLossRate',
+  14 => 'levers_1',
+  15 => 'levers_2',
+  16 => 'levers_3',
+  17 => 'levers_4',
+  18 => 'levers_5',
+  19 => 'levers_6',
+  20 => 'levers_7',
+  21 => 'levers_8',
+  22 => 'levers_9',
+  23 => 'levers_10',
+  24 => 'levers_month_1',
+  25 => 'levers_month_2',
+  26 => 'levers_month_3',
+  27 => 'levers_month_4',
+  28 => 'levers_month_5',
+  29 => 'levers_month_6',
+  30 => 'levers_month_7',
+  31 => 'levers_month_8',
+  32 => 'levers_month_9',
+  33 => 'levers_month_10',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033578s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016004s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016127s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.015475s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and left(createTime,10)='2018-12-01' ) LIMIT 1 [ RunTime:0.015717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.015759s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.015408s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.017319s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.015402s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.015320s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.015419s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015118s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.014596s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.014778s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015543s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014594s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.014104s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015453s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.014832s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015625s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.014889s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014700s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015219s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.015547s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014880s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.015356s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.015195s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015425s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015924s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015107s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.015075s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.014703s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.015530s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014904s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014575s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015622s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015423s ]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:215]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:591]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:22+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.733587s][吞吐率：1.36req/s] [内存消耗：3,982.29kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getStockInfo',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.020998s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.039943s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.033304s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010697s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009966s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.009307s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.010044s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.009176s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009334s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.008927s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.009474s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.008626s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.010341s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.010332s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009174s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009040s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009116s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009096s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009597s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.008963s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.009289s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009499s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.009158s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009099s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.009776s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009598s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.009011s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.009427s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009500s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.008730s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:23+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getTimeLine
+[ info ] localhost/feichangcelue/index/Alistock/getTimeLine [运行时间：1.453317s][吞吐率：0.69req/s] [内存消耗：3,982.31kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getTimeLine',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.026796s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.025798s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.036879s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016905s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016015s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.016346s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.017119s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015255s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.016576s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.015622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016329s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.014851s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015527s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.017661s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015167s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.016022s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014944s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015146s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.015092s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.015710s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.016122s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015209s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.015524s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015782s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.015973s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.016602s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.015111s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.015218s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.015834s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.015450s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:33+08:00 ] ::1 ::1 GET /feichangcelue/buy.html
+[ info ] localhost/feichangcelue/buy.html [运行时间：0.941742s][吞吐率：1.06req/s] [内存消耗：3,674.25kb] [文件加载：65]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'buy',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/ucenter/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.017955s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.020715s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->buy[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\buy.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'left',
+  4 => 'code',
+  5 => 'info_arr',
+  6 => 'time_img',
+  7 => 'day_img',
+  8 => 'dealPoundage',
+  9 => 'delayFee',
+  10 => 'dealFee',
+  11 => 'lossLine',
+  12 => 'delayLineRate',
+  13 => 'stopLossRate',
+  14 => 'levers_1',
+  15 => 'levers_2',
+  16 => 'levers_3',
+  17 => 'levers_4',
+  18 => 'levers_5',
+  19 => 'levers_6',
+  20 => 'levers_7',
+  21 => 'levers_8',
+  22 => 'levers_9',
+  23 => 'levers_10',
+  24 => 'levers_month_1',
+  25 => 'levers_month_2',
+  26 => 'levers_month_3',
+  27 => 'levers_month_4',
+  28 => 'levers_month_5',
+  29 => 'levers_month_6',
+  30 => 'levers_month_7',
+  31 => 'levers_month_8',
+  32 => 'levers_month_9',
+  33 => 'levers_month_10',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035974s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016157s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015717s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016512s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  memberId=1348 and isFreetrial=0 and left(createTime,10)='2018-12-01' ) LIMIT 1 [ RunTime:0.015297s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016118s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '' LIMIT 1 [ RunTime:0.015308s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015377s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealPoundage' ) LIMIT 1 [ RunTime:0.015808s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayFee' ) LIMIT 1 [ RunTime:0.014441s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'dealFee' ) LIMIT 1 [ RunTime:0.014871s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.014893s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'delayLineRate' ) LIMIT 1 [ RunTime:0.014680s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.014762s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.015700s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014584s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015541s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.014709s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.014334s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.014809s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015434s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014150s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014840s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014583s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014817s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever_month` [ RunTime:0.015905s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.014951s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.014889s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.015078s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.015106s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.013696s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.015724s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.014500s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.014576s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.013606s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever_month` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.015502s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015605s ]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:215]
+[ error ] [8]未定义数组索引: beishu[D:\phpStudy\WWW\feichangcelue\runtime\temp\0d70cc529005b66a17d660cbe783748e.php:591]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:36+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getStockInfo
+[ info ] localhost/feichangcelue/index/Alistock/getStockInfo [运行时间：0.979043s][吞吐率：1.02req/s] [内存消耗：3,982.29kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getStockInfo',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.015920s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.032612s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.035348s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.017152s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.017481s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.016185s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.016518s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.015570s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.014929s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.015433s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.016231s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.015834s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.014882s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.016725s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015199s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015149s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.014983s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015505s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.015237s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.015180s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.015001s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.015349s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.015281s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.015466s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.015840s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.016277s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.015357s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.015869s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.015296s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.015620s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:37+08:00 ] ::1 ::1 POST /feichangcelue/index/Alistock/getTimeLine
+[ info ] localhost/feichangcelue/index/Alistock/getTimeLine [运行时间：1.526169s][吞吐率：0.66req/s] [内存消耗：3,982.31kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+  'Alistock' => 'getTimeLine',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.017684s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.039600s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.029805s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.010820s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010877s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011620s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.011115s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.009950s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009602s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.010622s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011595s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010466s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009968s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.011794s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009624s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010069s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009993s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.009405s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.009502s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.009303s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.010594s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009628s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.010741s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.009747s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.010328s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.010503s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.010062s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.009822s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009844s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.009462s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:43+08:00 ] ::1 ::1 GET /feichangcelue/index.html
+[ info ] localhost/feichangcelue/index.html [运行时间：0.672607s][吞吐率：1.49req/s] [内存消耗：3,976.92kb] [文件加载：66]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/buy.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.011675s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.017606s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'member',
+  4 => 'profitSum',
+  5 => 'peizi',
+  6 => 'res',
+  7 => 'news_informations',
+  8 => 'news_informations_tow',
+  9 => 'notice_content',
+  10 => 'btn_emergency',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.027010s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.011913s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.011537s ]
+[ sql ] [ SQL ] select a.stockCode, c.`name` as stockName,  a.createTime, b.username,b.mobile
+			from xh_stock_order as a, xh_member as b, xh_shares as c
+			 WHERE isFreetrial=0 and a.memberId = b.id and a.stockCode=c.`code`
+			order by a.id desc limit 7 [ RunTime:0.011982s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_order` [ RunTime:0.012464s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_stock_order` WHERE  (  isFreetrial=0 ) LIMIT 1 [ RunTime:0.011398s ]
+[ sql ] [ SQL ] SELECT sum(guaranteeFee) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.011495s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 ORDER BY createTime desc [ RunTime:0.011140s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_shares` [ RunTime:0.011264s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '000001' LIMIT 1 [ RunTime:0.010634s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.009945s ]
+[ sql ] [ SQL ] SELECT `xh_stock_order`.*,xh_shares.name as stockName,`xh_shares`.`market` FROM `xh_stock_order`,`xh_shares` WHERE  (   xh_stock_order.stockCode = xh_shares.`code` and xh_stock_order.memberId=1348 and isFreetrial=0 and status = 1 ) ORDER BY createTime desc [ RunTime:0.011879s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010519s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010685s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010417s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.010999s ]
+[ sql ] [ SQL ] SELECT sum(dealAmount) FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1  AND `isFreetrial` = 0 [ RunTime:0.010348s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  `id` = 1348 LIMIT 1 [ RunTime:0.010415s ]
+[ sql ] [ SQL ] SELECT `stockCode` FROM `xh_stock_order` WHERE  `memberId` = 1348  AND `status` = 1 [ RunTime:0.011355s ]
+[ sql ] [ SQL ] SELECT `market` FROM `xh_shares` WHERE  `code` = '603556' LIMIT 1 [ RunTime:0.010861s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_article` [ RunTime:0.011353s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_article` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.010865s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_notice` [ RunTime:0.011064s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 7 [ RunTime:0.012564s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `xh_notice` LIMIT 1 [ RunTime:0.011056s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_notice` ORDER BY `createTime`  desc LIMIT 1 [ RunTime:0.011292s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_emergency_notice` [ RunTime:0.009912s ]
+[ sql ] [ SQL ] SELECT * FROM `xh_emergency_notice` LIMIT 1 [ RunTime:0.011528s ]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组下标: 1[D:\phpStudy\WWW\feichangcelue\thinkphp\library\think\db\Query.php:1365]
+[ error ] [8]未定义数组索引: ajax_html[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:90]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:99]
+[ error ] [2]trim() expects parameter 1 to be string, array given[D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php:104]
+[ error ] [8]未定义变量: count[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:250]
+[ error ] [8]未定义变量: earnSum[D:\phpStudy\WWW\feichangcelue\runtime\temp\24d5ec5380bee8b19256d0f24a3c7af8.php:251]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:44+08:00 ] ::1 ::1 GET /feichangcelue/public/static/home/img/index_tr_up.jpg
+[ info ] localhost/feichangcelue/public/static/home/img/index_tr_up.jpg [运行时间：0.257097s][吞吐率：3.89req/s] [内存消耗：2,024.95kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'public',
+    1 => 'static',
+    2 => 'home',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'accept' => 'image/webp,image/apng,image/*,*/*;q=0.8',
+  'referer' => 'http://localhost/feichangcelue/public/static/home/css/index.css',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'img' => 'index_tr_up.jpg',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.014180s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.035881s ]
+[ info ] [ LOG ] INIT File
+---------------------------------------------------------------
+[ 2018-12-01T15:25:45+08:00 ] ::1 ::1 POST /feichangcelue/pc_broadcast.html
+[ info ] localhost/feichangcelue/pc_broadcast.html [运行时间：0.686356s][吞吐率：1.46req/s] [内存消耗：3,324.14kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'pc_broadcast',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.016376s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.055669s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->pc_broadcast[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.056098s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016725s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015883s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_images` [ RunTime:0.016554s ]
+[ sql ] [ SQL ] SELECT `src`,`href` FROM `xh_images` WHERE  `type` = 1 ORDER BY `id`  desc LIMIT 0,3 [ RunTime:0.016261s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:45+08:00 ] ::1 ::1 POST /feichangcelue/stock_information_index_sh.html
+[ info ] localhost/feichangcelue/stock_information_index_sh.html [运行时间：0.965276s][吞吐率：1.04req/s] [内存消耗：3,323.09kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'stock_information_index_sh',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'content-length' => '11',
+  'accept' => 'application/json, text/javascript, */*; q=0.01',
+  'origin' => 'http://localhost',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+  'code' => '000001',
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.068890s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.102066s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->stock_information_index_sh[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.037435s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.014835s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015110s ]
+---------------------------------------------------------------
+[ 2018-12-01T15:25:46+08:00 ] ::1 ::1 GET /feichangcelue/index_information.html
+[ info ] localhost/feichangcelue/index_information.html [运行时间：1.468615s][吞吐率：0.68req/s] [内存消耗：3,538.35kb] [文件加载：62]
+[ info ] [ LANG ] D:\phpStudy\WWW\feichangcelue\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'index',
+    1 => 'index',
+    2 => 'index_information',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'localhost',
+  'connection' => 'keep-alive',
+  'accept' => 'text/html, */*; q=0.01',
+  'x-requested-with' => 'XMLHttpRequest',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.86 Safari/537.36',
+  'referer' => 'http://localhost/feichangcelue/index.html',
+  'accept-encoding' => 'gzip, deflate, br',
+  'accept-language' => 'zh-CN,zh;q=0.8',
+  'cookie' => 'PHPSESSID=jvjdigqlo66t8vsefaeo85pt63; firstEnterUrlInSession=http%3A//localhost/feichangcelue/; VisitorCapacity=1; Hm_lvt_f571b55302a951627ab98145b99cdaab=1543648787; Hm_lpvt_f571b55302a951627ab98145b99cdaab=1543649104; pageReferrInSession=http%3A//localhost/feichangcelue/ucenter/security.html',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ CACHE ] INIT File
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Config @app_begin [ RunTime:0.034629s ]
+[ info ] [ BEHAVIOR ] Run app\common\behavior\Hook @app_begin [ RunTime:0.113803s ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ RUN ] app\index\controller\Index->index_information[ D:\phpStudy\WWW\feichangcelue\application\index\controller\Index.php ]
+[ info ] [ VIEW ] D:\phpStudy\WWW\feichangcelue/application/index\view\index\index_information.html [ array (
+  0 => 'phone',
+  1 => 'QQ',
+  2 => 'usableSum',
+  3 => 'res_bei',
+  4 => 'res_money',
+  5 => 'cordon_line',
+  6 => 'loss_line',
+  7 => 'levers_1',
+  8 => 'levers_2',
+  9 => 'levers_3',
+  10 => 'levers_4',
+  11 => 'levers_5',
+  12 => 'levers_6',
+  13 => 'levers_7',
+  14 => 'levers_8',
+  15 => 'levers_9',
+  16 => 'levers_10',
+  17 => 'lossLine',
+  18 => 'stopLossRate',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.040019s ] mysql:dbname=peizi;host=rm-wz9l3z92630ora5wjwo.mysql.rds.aliyuncs.com;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_member` [ RunTime:0.016442s ]
+[ sql ] [ SQL ] SELECT `usableSum` FROM `xh_member` WHERE  (  id=1348 ) LIMIT 1 [ RunTime:0.015557s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_stock_interest_lever` [ RunTime:0.016103s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.016110s ]
+[ sql ] [ SQL ] SHOW COLUMNS FROM `xh_sys_params` [ RunTime:0.015161s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015248s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.014687s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='1' ) LIMIT 1 [ RunTime:0.015237s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='2' ) LIMIT 1 [ RunTime:0.015542s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='3' ) LIMIT 1 [ RunTime:0.014969s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='4' ) LIMIT 1 [ RunTime:0.014824s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='5' ) LIMIT 1 [ RunTime:0.017038s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='6' ) LIMIT 1 [ RunTime:0.018642s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='7' ) LIMIT 1 [ RunTime:0.015007s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='8' ) LIMIT 1 [ RunTime:0.015880s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='9' ) LIMIT 1 [ RunTime:0.014282s ]
+[ sql ] [ SQL ] SELECT `interest` FROM `xh_stock_interest_lever` WHERE  (  `levers`='10' ) LIMIT 1 [ RunTime:0.014284s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'lossLine' ) LIMIT 1 [ RunTime:0.015124s ]
+[ sql ] [ SQL ] SELECT `value` FROM `xh_sys_params` WHERE  (  `key` = 'stopLossRate' ) LIMIT 1 [ RunTime:0.013631s ]
