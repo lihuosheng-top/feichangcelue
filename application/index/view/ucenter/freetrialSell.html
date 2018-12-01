@@ -7,6 +7,12 @@
 <body class="sell_body grey buy-body logged-in">
 {include file="public:top" /}
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<style type="text/css">
+		#sell-list li {
+    height: 148px !important;
+    line-height: 148px !important;
+}
+</style>
 <!--点卖区-->
 <div class="br-content">
 <div class="w1024">
@@ -55,9 +61,13 @@
                     <label class="w140"><em><strong></strong></em><em><b class="">{$vo.dealPrice|round=###,2}</b><i class="icon icon-arrow-right"></i>-><b class="">{$list2[$i-1][nowPrice]|round=###,2}</b></em><em>
                         <strong class="" {if condition="$list2[$i-1][profitAmount] lt 0"} style="color:green" {else if condition="$list2[$i-1][profitAmount] gt 0" } style="color:red" {/if} >
                         {$list2[$i-1][profitAmount]}({$list2[$i-1][rate] * 100}%)</strong></em></label>
-                    <input type="text"  value="" class="money_update">
-                    <button data-id="{$vo.id}"  class="money_add  font12" >补仓</button>
-                    <label class="w180"><button class="btnSell" id="{$vo.id}" index="{$i}" class="btn btn-pri sell-btn " >点卖（不可递延）</button></label>
+                    
+                    <label class="w180" style="line-height: 50px;">
+                    	<input type="text"  value="" class="money_update" style="width: 100px;">
+                    <button data-id="{$vo.id}"  class="money_add  font12" style="width: 40px;height: 25px; line-height: 25px;">补仓</button>
+                   	<button class="btnSell" id="{$vo.id}" index="{$i}" class="btn btn-pri sell-btn " class="btn btn-pri sell-btn " style="width: 160px;height: 25px; line-height: 25px;">点卖（不可递延）</button>
+                   		
+                   	</label>
                 </li>
                 {/volist}
             </ul>
