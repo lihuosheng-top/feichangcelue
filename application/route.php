@@ -149,6 +149,9 @@ return [
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
     'ucenter/deleteBankCard'=> 'index/ucenter/deleteBankCard',  //个人中心-删除银行卡
     "ucenter/saveBankCardsData"=>"index/ucenter/saveBankCardsData", //添加银行卡操作
+    "ucenter/stockBuy"=>"index/ucenter/stockBuy",//anri买入股票
+    "ucenter/stockBuyByMonth"=>"index/ucenter/stockBuyByMonth",//anyue买入股票
+    "/ucenter/freetrialBuy"=>"index/ucenter/freetrialBuy",//免息买入股票
 
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页

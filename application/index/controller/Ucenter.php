@@ -465,9 +465,10 @@ class Ucenter extends Home
         $data = array();
         $data['realName'] = $realName;
         $data['IDNumber'] = $IDNumber;
+        halt();
        $bool = Db::table("xh_member")->where("id=$memberId")->update($data);
         if($bool){
-            $this->success("保存成功", "index/ucenter/home");
+            $this->success("ok", "index/ucenter/home");
         }
 
     }

@@ -1002,7 +1002,7 @@ $("#btn_buy").click(function(e){
         // tool.popup_err_msg("请阅读并签署谋略协议");
         return;
     }
-    $.post("./index/index/isLogin", {}, function(data){
+    $.post("./isLogin", {}, function(data){
         if(data != 1){
             alert("请先登录");
             window.location.href ='./login';
@@ -1087,7 +1087,7 @@ $("#popup-confirm-btn").click(function(e){
     params['levers_multiples'] =levers_multiples;//买入时的倍数
     // params['delayLine'] = parseInt($("#delay_line").html());                    //
     // params['delayFee'] = parseInt($("#delay_fee").html());
-    $.post("./index/ucenter/freetrialBuy", params, function(data){
+    $.post("./ucenter/freetrialBuy", params, function(data){
         console.log(data);
         if(data.code =='-1'){
             alert(data.msg);

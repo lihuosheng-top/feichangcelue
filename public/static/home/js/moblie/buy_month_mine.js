@@ -285,7 +285,7 @@ var buy_moblie={
             //5秒后才可以点击
             $(this).attr('disabled',true);
             //判断有没有登录
-            $.post("/index/index/isLogin", {}, function(data){
+            $.post("./isLogin", {}, function(data){
                 $("#buy_step2").attr("disabled", false);
                 if(data != 1){
                     //alert("请先登录")
