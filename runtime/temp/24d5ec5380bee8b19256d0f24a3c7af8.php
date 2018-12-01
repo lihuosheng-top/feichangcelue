@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543649891;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -548,6 +548,15 @@
 				<div class="br-ml-line"></div>
 				<p class="br-ml-bt">合作伙伴</p>
 				<div class="companion_box br-clearfix">
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+					<div class="cp_item"></div>
+
 					<div class="cp_item"></div>
 					<div class="cp_item"></div>
 					<div class="cp_item"></div>

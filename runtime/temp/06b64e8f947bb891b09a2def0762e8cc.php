@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\security.html";i:1543645828;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543645380;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\history.html";i:1540464631;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>尚牛在线</title>
 </head>
-<body class="membercenter logged-in">
+<body class="history_body grey buy-body logged-in">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -137,157 +137,206 @@
 
 </script>
 <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/member.css"/>
 
-<!--个人中心-充值-->
+<!--结算区-->
 <div class="br-content">
-<div class="w1200">
-	<!--主体-->
-<section class="page-main page-personal">
-    <div class="container clearfix">
-    	<!--public左边-->
-    	
-        <aside class="col-left">
-            <div class="userinfo">
-            	<form name="user_head" id="user_head">
-					<input type="file" name="myfile222" id="img_upload" />
-					<div class="img_download">
-						<!--<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >-->
-						<img class="user-pic"  src="__STATIC__/home/img/user.png" >
-					</div>
-				</form>
-                <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
-                <p class="user-info">Hi，<strong id="shared_layout_mem_lnm"><?php echo $_SESSION['member']['username']; ?></strong></p>
-                <div class="iconrow">
-                   <a href="./security.html"><span class="user-2"></span></a>
-                    <a href="./security.html"><span class="user-3"></span></a>
-                    <a href="./security.html"><span class="user-4"></span></a>
+<div class="w1024">
+<div class="stock-sell stock-buy stock-settle">
+    <section class="play-area">
+        <nav>
+            <ul class="clearfix">
+                <li class=""><a href="./buy.html"><em> 01 </em>| 点买区</a></li>
+                <li class=""><a href="./month_buy.html"><em> 02 </em>| 点买区</a></li>
+                <li class=""><a href="./sell.html"><em>03 </em>| 点卖区</a></li>
+                <li class="active"><a href="./history"><em>04 </em> | 结算区</a></li>
+            </ul>
+        </nav>
+       <section>
+            <nav class="row" style="position: relative;">
+                <div class="select">
+                    <span>时间：</span>
+                    <a href="./history.html?recent=7" id="recent7" class="">最近7个交易日</a>
+                    <a href="./history.html?recent=30" id="recent30">最近30个交易日</a>
+                    <a id="selectByDate">按时间选择<span class="sanj"></span></a>
                 </div>
-            </div>
-            <h4 class="new-head-line"><span class="user-5"></span>会员中心</h4>
-            <nav id="personal-nav" class="left-nav">
-                <ul>
-
-                    <li class=""><a href="./index.html">我的首页&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    <li class=""><a href="./bankcards.html">银行卡管理&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    <li class=""><a href="./security.html">账户安全&nbsp;<span class="mem_gt">&gt;</span></a></li>
-					<li class=""><a href="./payment.html">充值&nbsp;<span class="mem_gt">&gt;</span></a></li>
-					<li class=""><a href="./withdraw.html">提现&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    <li class=""><a href="./agent.html" style="display: none;">推广赚钱&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                </ul>
+                <!--<div class="select split" style="display:none;">
+                    <span>状态：</span>
+                    <a id="status-0" class="active">全部</a>
+                    <a id="status-6">待结算</a>
+                    <a id="status-5">平仓中</a>
+                    <a id="status-4">待平仓</a>
+                    <a id="status-7">已结算</a>
+                    <a id="status-r">今日流单</a>
+                </div>-->
+                <div class="jiesuan-deal pa" style="top:200px;left:300px" id="JchooseDate" data-val="0">
+                    <h4 class=" pb5 f14 db lh18" style="height:30px;">
+                        <span class="left_gray fl">&lt;</span>
+                        <span class="cen fl"><span id="yearSpan">2017</span>年</span>
+                        <span class="right_gray fr ">&gt;</span>
+                    </h4>
+                    <div style=" width: 224px; height: 110px; overflow: hidden;margin: 0 auto;">
+                        <div style=" width: 224px; height: 110px;margin-left:0px" id="JyearContent">
+                            <ul class="jiesuan-dea2 tc">
+                            	
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
             </nav>
-        </aside>
+            <ul id="settle-list" class="history-list">
 
-
-<script src="__STATIC__/home/js/moblie/jquery.ajaxfileupload.js"></script>
-<!--<script type="text/javascript">-->
-	<!---->
-	<!--$(function() {-->
-		<!--/**-->
-		 <!--* active-->
-		 <!--*/-->
-			<!--//console.log(window.location.pathname)-->
-		<!--$('#personal-nav li').removeClass('active');-->
-
-		<!--//遍历-->
-		<!--$('#personal-nav li>a').each(function () {-->
-			<!--if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {-->
-				<!--$(this).parent().addClass('active');-->
-			<!--}-->
-		<!--});-->
-		<!---->
-		<!---->
-		<!--/**-->
-		 <!--* 上传头像-->
-		 <!--*/-->
-        <!--$('#img_upload').AjaxFileUpload({-->
-			<!--//处理文件上传操作的服务器端地址-->
-			<!--//上传图片，返回图片地址-->
-			<!--action: './index/index/doImgUpload',-->
-			<!--onComplete: function(filename, resp) { //服务器响应成功时的处理函数-->
-				<!--if(resp.code == '0') {-->
-					<!--$('#headImg').attr('src', resp.data);-->
-					<!--var params = {};-->
-					<!--params['headImg'] = resp.data;-->
-					<!--//保存图片到数据库，分两个地址是为了在很多地方公用-->
-					<!--$.post("./index/ucenter/savePeopleImg", params, function(data) {-->
-						<!--if(data.code == '0') {-->
-							<!--tool.popup_err_msg("修改成功");-->
-						<!--} else {-->
-							<!--tool.popup_err_msg(data.msg);-->
-						<!--}-->
-					<!--}, 'json');-->
-				<!--} else {-->
-					<!--tool.popup_err_msg(resp.msg );-->
-				<!--}-->
-			<!--}-->
-		<!--});-->
-		<!---->
-		<!---->
-		<!---->
-	<!--});-->
-
-<!--</script>-->
-        <!--右边-->
-<div id="page_member_security" class="col-main">
-    <div class="personal-main">
-        <h2>账户安全</h2>
-
-        <ul class="list-personal-security">
-            <li class="group">
-                <div class="security-level security-level-middle">
-                    <label>安全级别: </label>
-                    <?php if($realName == '' || $IDNumber == ''): ?>
-                    <div class="bar-wrapper">
-                        <div id="mem_security_lvl" class="bar"
-                             <?php if($realName == '' || $IDNumber == ''): ?> style="width: 65%;"<?php else: ?> style="width:100%;"<?php endif; ?> >
-                    </div>
-                    </div>
-                    <label class="safe-ranke" id="mem_security_lv">中</label>
-                    <span class="tip" id="safe_tip">建议您完善全部安全设置，以保障账户及资金安全</span>
-                    <?php else: ?> 
-                    <div class="bar-wrapper">
-                        <div id="mem_security_lvl" class="bar" style="width: 100%;"></div>
-                    </div>
-                    <label class="safe-ranke" id="mem_security_lv">高</label>
-                    <?php endif; ?>
-                    
-                </div>
-            </li>
-            <li class="group">
-                <div class="col-3 security-name"><i <?php if($realName == '' || $IDNumber == ''): ?>class='icon'<?php else: ?>class='icon icon-checkmark2'<?php endif; ?> id="id_card_icon"></i>实名认证</div>
-                <div class="col-5 security-desc" id="身份证"><?php if($realName == '' || $IDNumber == ''): ?>未认证<?php else: ?> <?php echo $IDNumber; endif; ?></div>
-                <div class="col-4 security-action"><a href="javascript:;" name="realnameAuth" id="btn_auth_name" onclick="form_validation = false;">
-                    <?php if($realName == '' || $IDNumber == ''): ?>认证<?php else: ?> 修改<?php endif; ?>
-                </a></div>
-            </li>
-            <li class="group">
-                <div class="col-3 security-name"><i class="icon icon-checkmark2" id="id_phone_icon"></i>绑定手机</div>
-                <div class="col-5 security-desc" id="手机号i"><?php echo $mobile; ?></div>
-                <!--<div class="col-4 security-action"><a id="umA" href="javascript:;" data-popup="popup-edit-phone" onclick="form_validation = false;">修改</a></div>-->
-            </li>
-            
-            <!--<li class="group">-->
-
-                <!--<div class="col-3 security-name"><i class="icon icon-checkmark2" id="id_pwd_icon"></i>登录密码</div>-->
-                <!--<div class="col-5 security-desc">登录网站时需要输入的密码</div>-->
-                <!--<div class="col-4 security-action"><a href="javascript:;" id="editPwd" class="js-show-popup" data-popup="popup-edit-login-pwd" onclick="form_validation = false;">修改</a></div>-->
-            <!--</li>-->
-            
-        </ul>
+                <?php if(count($list) == 0): ?>
+                <div class="data-empty"><p>暂时没有数据</p><a href="/buy.html">立即去点买</a></div>
+                <?php endif; if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?>
+            	<li>
+            		<label class="w175"><em><?php echo $vo['sellTime']; ?></em><em>单号：<?php echo $vo['id']; ?></em></label>
+            		<label class="w130"><em><strong><?php echo $vo['stockName']; ?>(<?php echo $vo['stockCode']; ?>)</strong></em><em><b><?php echo $vo['dealQuantity'] * 100; ?>股</b></em></label>
+            		<label class="w136"><em><strong
+                       <?php if($vo['profit'] < 0): ?> class="c-green" <?php else: ?> class="c-red" <?php endif; ?>
+                    ><?php echo round($vo['profit'],2); ?></strong></em><em>交易盈亏</em></label>
+            		<label class="w136"><em
+                            <?php if($vo['profit'] < 0): ?> class="ft16 c-green" <?php else: ?> class="ft16 c-red" <?php endif; ?>
+                    ><?php if($vo['profit'] > 0): ?> <?php echo round($vo['profit']*(1-$profitFee),2); else: ?> <?php echo round($vo['profit'],2); endif; ?></em><em>盈利分配</em></label>
+            		<label class="w120 "><a class="detail_a" href="./detail.html?id=<?php echo $vo['id']; ?>">查看详情</a></label>
+            		<label class="w120 hide-important"></label>
+                </li>
+                <?php endforeach; endif; else: echo "" ;endif; ?>
+            </ul>
+           
+           <?php echo $list->render(); ?>
+        </section>
+    </section>
+    <!--确认点卖？-->
+    <div class="confirm-sell" style="display: none;">
+        <p>确定点卖？</p>
+        <button class="wap-confirm">确定</button>
+        <button class="wap-deny">取消</button>
     </div>
 </div>
 
+</div>
+</div>
+<!------>
+<!--申请递延-->
+<div class="popup popup-middle" id="popup-delay">
+    <div class="popup-header group">
+        <h2>申请递延</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
     </div>
-</section>
-	
-	
-	
-	
-	
+    <div class="popup-body group">
+        <div class="delay-box">
+            <div class="delay-info">当前非递延申请时间,请稍后再来！</div>
+            <div class="delay-foot">
+                <button class="btn btn-pri">确定</button>
+                <a href="javascript:;" class="delay-btn f-right">递延规则<i class="icon icon-caret-up"></i></a>
+            </div>
+        </div>
+    </div>
+    <div class="delay-rule hide popup-footer">
+        <p>递延申请：点买人付费申请</p>
+        <p>申请时间：00:00:00-12:00:00</p>
+        <p>递延申请：点买人付费申请</p>
+        <p>递延申请：点买人付费申请</p>
+    </div>
 </div>
+<!--点卖确认-->
+<div class="popup popup-big" id="popup-sell">
+    <div class="popup-header group">
+        <h2>点卖确认</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb table-sell">
+            <tbody><tr>
+                <td width="15%">交易品种：</td>
+                <td width="35%">-</td>
+                <td width="15%">卖出数量：</td>
+                <td width="35%">-</td>
+            </tr>
+            <tr>
+                <td>买入时间：</td>
+                <td>-</td>
+                <td>递延天数：</td>
+                <td>-</td>
+            </tr>
+            <tr>
+                <td>浮动盈亏</td>
+                <td class="c-red" id="sell_profit">-</td>
+                <td>(仅供参考)</td>
+                <td></td>
+            </tr>
+        </tbody></table>
+        <div class="btn-div">
+            <button class="btn btn-pri" id="popup-confirm-btn">确定</button>
+            <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
+        </div>
+    </div>
+    
 </div>
-
+<!--即时卖出-->
+<div class="popup popup-middle" id="popup-buy-apply">
+    <div class="popup-header group">
+        <h2>即时卖出</h2>
+    </div>
+    <div class="popup-body group">
+    </div>
+</div>
+<!--限价卖出-->
+<div class="popup popup-middle" id="popup-sell-price-success">
+    <div class="popup-header group">
+        <h2>限价卖出</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <center><i class="icon icon-circle-check"></i>限价委托提交成功！</center>
+        <div class="f-right"><b class="red">5秒</b>后自动跳转至卖出区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
+    </div>
+</div>
+<!--卖出委托价格修改-->
+<div class="popup popup-big" id="popup-change-price">
+    <div class="popup-header group">
+        <h2>卖出委托价格修改</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <table border="0" cellspacing="0" cellpadding="0" class="popup-sell-tb table-change-price">
+            <tbody><tr>
+                <td width="15%">最&nbsp;&nbsp;新&nbsp;&nbsp;价：</td>
+                <td width="35%">-</td>
+                <td width="15%">委托价格：</td>
+                <td width="35%"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="change-price-1" class="active">
+                        <input type="radio" name="change-sell-price" id="change-price-1" class="radio" checked="">即时卖出
+                    </label>
+                </td>
+                <td colspan="2">
+                    <label for="change-price-2">
+                        <input type="radio" name="change-sell-price" id="change-price-2" class="radio">最新价触发<input type="text" id="change-sell-price" size="8" placeholder="输入价格" class="text" style="position:relative">时，即时卖出
+                    </label>
+                </td>
+            </tr>
+        </tbody></table>
+        <div class="btn-div">
+            <button class="btn btn-pri" id="popup-confirm-change-price-btn">确定</button>
+            <a href="javascript:;" class="js-close-popup btn btn-grey">取消</a>
+        </div>
+    </div>
+</div>
+<!--即时卖出-->
+<div class="popup popup-middle" id="popup-sell-success">
+    <div class="popup-header group">
+        <h2>即时卖出</h2>
+        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+    </div>
+    <div class="popup-body group">
+        <center><i class="icon icon-circle-check"></i>卖出成功！</center>
+        <div class="f-right"><b class="red">5秒</b>后自动跳转至结算区，<a href="/ucenter/history.html" class="js-close-popup">立即跳转</a></div>
+    </div>
+</div>
 <!--认证银行卡-->
 <div class="popup" id="popup-id-verify">
     <div class="popup-header group">
@@ -300,12 +349,12 @@
                 <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
                 <li style="text-align:left;">请务必认真填写真实资料</li>
                 <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile"><?php echo $phone; ?></label></li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
             </ol>
             <p>为了保障您的账户安全，请先绑定银行卡</p>
         </div>
         <div class="btn-row group">
-            <a class="btn btn-pri" href="./bankcards.html">去绑定</a>
+            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
             <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
         </div>
     </div>
@@ -321,20 +370,20 @@
             <ol class="popup-note">
                 <li style="text-align:left;">一个身份证对应一个账号</li>
                 
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile"></label></li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
             </ol>
             <p>为了保障您的账户安全，请先进行实名认证</p>
         </div>
         <div class="field-row group">
             <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" value=""></div>
+            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
         </div>
         <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
         <div class="field-row group">
             <label>身份证号：</label>
             <div class="field-val">
                 <div class="field-val">
-                    <input id="身份证i" type="text" class="text" value="">
+                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
                 </div>
             </div>
         </div>
@@ -346,120 +395,6 @@
     </div>
 </div>
 
-<!--更改手机号-->
-<div class="popup" id="popup-edit-phone" style="display: none;top: 0px;">
-        <div class="popup-header group">
-            <h2>更换手机</h2>
-            <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-        </div>
-        <div class="popup-body group">
-            <form action="#">
-                <div class="field-row group">
-                    <label>当前手机号：</label>
-                    <div class="field-val" id="手机号"><?php echo $mobile; ?></div>
-                </div>
-                <div class="field-row group">
-                    <label>验证码：</label>
-                    <div class="field-val capcha-wrapper capcha-count-down">
-                        <input type="text" id="绑定手机校验码i" placeholder="请输入校验码" class="text" onkeyup="    this.value = this.value.replace(/\D/g, '')" onafterpaste="    this.value = this.value.replace(/\D/g, '')">
-                        <a id="sms_SendAuthAA" class="btn-get-capcha active" href="javascript:void(0);">获取校验码</a>
-                        <div class="time-counter"><span>90</span></div>
-                    </div>
-                </div>
-                <div id="bdsjjym_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i><span>请填写准确的验证码</span></div></div>
-                <div class="btn-row group">
-                    <a class="btn btn-pri" href="javascript:;" id="edit-phone-submit-next">确定</a>
-                    <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-                </div>
-                <input id="hiddenText" type="text" style="display:none" />
-            </form>
-        </div>
-    </div>
-<!--绑定手机-->   
-<div class="popup" id="popup-edit-phone-2" style="display: none;top: 0px;">
-        <div class="popup-header group">
-            <h2>绑定手机</h2>
-            <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-        </div>
-        <div class="popup-body group">
-            <form action="#">
-                <div class="field-row group">
-                    <label>新手机号：</label>
-                    <div class="field-val"><input id="新手机号i" class="text" onkeyup="    this.value = this.value.substr(0, 11).replace(/\D/g, '')" onafterpaste="    this.value = this.value.substr(0, 11).replace(/\D/g, '')"></div>
-                </div>
-                <div id="bdsjjym_err2" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的手机号</div></div>
-                <div class="field-row group" id="newPhone">
-                    <label>验证码：</label>
-                    <div class="field-val capcha-wrapper capcha-count-down">
-                        <input id="新手机号校验码i" type="text" name="capcha" placeholder="请输入短信校验码" class="text" onkeyup="this.value = this.value.replace(/\D/g, '')" onafterpaste="    this.value = this.value.replace(/\D/g, '')">
-                        <a id="sms_SendAuthAA2" class="btn-get-capcha active" href="javascript:;">获取校验码</a>
-                        <div class="time-counter" id="newPhoneSpeed" style="display: none;"><i class="icon icon-caret-left"></i><span>90</span></div>
-                    </div>
-                </div>
-                <div id="bdsjjym_err3" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i><span>请填写准确的验证码</span></div></div>
-                <div class="btn-row group">
-                    <a id="update_mobileA" class="btn btn-pri" href="javascript:void(0)">确定</a>
-                    <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-                </div>
-            </form>
-        </div>
-    </div>
-<!--/#popup-edit-login-pwd-修改登录密码-->
-<div class="popup" id="popup-edit-login-pwd" style="display: none;top: 0px;">
-        <div class="popup-header group">
-            <h2>登录密码</h2>
-            <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-        </div>
-        <div class="popup-body group">
-            <form action="#" style="padding: 0 0 10px 0;">
-                <div class="field-row group">
-                    <label>当前登录密码：</label>
-                    <div class="field-val"><input id="当前登录密码i" type="password" class="text"></div>
-                </div>
-                <div id="bdsjjym_err4" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请正确填写当前密码</div></div>
-                <div class="field-row group">
-                    <label>新密码：</label>
-                    <div class="field-val"><input id="新密码i" type="password" class="text"></div>
-                </div>
-                <div id="bdsjjym_err5" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>密码长度不能少于6位</div></div>
-                <div class="field-row group">
-                    <label>确认密码：</label>
-                    <div class="field-val"><input id="确认密码i" type="password" class="text"></div>
-                </div>
-                <div id="bdsjjym_err6" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>两次密码不一致</div></div>
-                <div id="bdsjjym_err7" class="error-wrapper" style="margin:20px 0 0 140px; display:none; color:#e8331b;">000</div>
-                <div class="btn-row group">
-                    <a id="登录密码修改A" class="btn btn-pri" href="javascript:void(0)">确定</a>
-                    <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-                </div>
-            </form>
-        </div>
-    </div>
-    <!--valid-img-->
-<!--<div class="popup" id="popup-valid-img">-->
-    <!--<div class="popup-header group">-->
-        <!--<h2>请先输入验证码</h2>-->
-        <!--<a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>-->
-    <!--</div>-->
-    <!--<div class="popup-body group">-->
-        <!--<form action="#">-->
-            <!--<div class="field-row group">-->
-                <!--<label>验证码：</label>-->
-                <!--<div class="field-val" style="width:350px">-->
-                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
-                    <!--<img src="./captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">-->
-                   	<!--<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i><span>输入的验证码有误！</span></div></div>-->
-
-            <!--<div class="btn-row group">-->
-                <!--<a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>-->
-            <!--</div>-->
-            <!--<input id="hiddenText" type="text" style="display:none" />-->
-        <!--</form>-->
-    <!--</div>-->
-<!--</div>-->
 
 <!--底部-->
 <footer class="br-w100">
@@ -721,11 +656,7 @@
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 
-<script src="__STATIC__/home/js/general.js"></script>
-<script src="__STATIC__/home/js/security.js"></script>
-<script type="text/javascript">
-	$(function(){security.init()});
-	var mobileTrue='<?php echo $mobile1; ?>';
-</script>
+<script src="__STATIC__/home/js/history.js"></script>
+
 </body>
 </html>

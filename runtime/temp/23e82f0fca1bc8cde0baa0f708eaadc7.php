@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\withdraw.html";i:1543646952;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543645380;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\withdraw.html";i:1543646952;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543645380;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -76,20 +76,20 @@
             </div>
             <div class="h_botR br-fr">
                     <!--<li class="br-fl"><a href="<?php echo url('index'); ?>" class="active">首页</a></li>-->
-                    <li class="br-fl"><a href="./index.html" class="active">首页</a></li>
+                    <li class="br-fl"><a href="<?php echo url('index/index/index'); ?>" class="active">首页</a></li>
                     <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
                      <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
-                    <li class="br-fl"><a href="./safeensure.html">安全保障</a></li>
+                    <li class="br-fl"><a href="<?php echo url('index/index/safeensure'); ?>">安全保障</a></li>
                     <li class="br-fl help_box">
-                    	<a href="./guild.html">帮助中心</a>
+                    	<a href="<?php echo url('index/index/guild'); ?>">帮助中心</a>
                     	<ul class="new-sub-nav hide">
-                            <li class=""><a href="./guild.html">新手教学</a></li>
-                            <li class=""><a href="./help.html">常见问题</a></li>
+                            <li class=""><a href="<?php echo url('index/index/guild'); ?>">新手教学</a></li>
+                            <li class=""><a href="<?php echo url('index/index/help'); ?>">常见问题</a></li>
                         </ul>
                     </li>
-                    <li class="br-fl"><a href="./company.html">关于我们</a></li>
-                    <li class="br-fl"><a href="./buy.html">A股点买</a></li>
-                    <li class="br-fl"><a href="./ucenter/index.html">个人中心</a></li>
+                    <li class="br-fl"><a href="<?php echo url('index/index/company'); ?>">关于我们</a></li>
+                    <li class="br-fl"><a href="<?php echo url('index/index/buy?code'); ?>">A股点买</a></li>
+                    <li class="br-fl"><a href="<?php echo url('index/ucenter/member'); ?>">个人中心</a></li>
                 </ul>
             </div>
         </div>
