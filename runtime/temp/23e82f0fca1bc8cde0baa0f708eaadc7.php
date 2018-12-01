@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\withdraw.html";i:1543635372;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\withdraw.html";i:1543646952;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543645380;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,7 +152,8 @@
             	<form name="user_head" id="user_head">
 					<input type="file" name="myfile222" id="img_upload" />
 					<div class="img_download">
-						<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >
+						<!--<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >-->
+						<img class="user-pic"  src="__STATIC__/home/img/user.png" >
 					</div>
 				</form>
                 <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
@@ -176,55 +177,57 @@
                 </ul>
             </nav>
         </aside>
+
+
 <script src="__STATIC__/home/js/moblie/jquery.ajaxfileupload.js"></script>
-<script type="text/javascript">
-	
-	$(function() {
-		/**
-		 * active
-		 */
-			//console.log(window.location.pathname)
-		$('#personal-nav li').removeClass('active');
+<!--<script type="text/javascript">-->
+	<!---->
+	<!--$(function() {-->
+		<!--/**-->
+		 <!--* active-->
+		 <!--*/-->
+			<!--//console.log(window.location.pathname)-->
+		<!--$('#personal-nav li').removeClass('active');-->
 
-		//遍历
-		$('#personal-nav li>a').each(function () {
-			if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {
-				$(this).parent().addClass('active');
-			}
-		});
-		
-		
-		/**
-		 * 上传头像
-		 */
-        $('#img_upload').AjaxFileUpload({
-			//处理文件上传操作的服务器端地址
-			//上传图片，返回图片地址
-			action: './index/index/doImgUpload',
-			onComplete: function(filename, resp) { //服务器响应成功时的处理函数
-				if(resp.code == '0') {
-					$('#headImg').attr('src', resp.data);
-					var params = {};
-					params['headImg'] = resp.data;
-					//保存图片到数据库，分两个地址是为了在很多地方公用
-					$.post("./index/ucenter/savePeopleImg", params, function(data) {
-						if(data.code == '0') {
-							tool.popup_err_msg("修改成功");
-						} else {
-							tool.popup_err_msg(data.msg);
-						}
-					}, 'json');
-				} else {
-					tool.popup_err_msg(resp.msg );
-				}
-			}
-		});
-		
-		
-		
-	});
+		<!--//遍历-->
+		<!--$('#personal-nav li>a').each(function () {-->
+			<!--if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {-->
+				<!--$(this).parent().addClass('active');-->
+			<!--}-->
+		<!--});-->
+		<!---->
+		<!---->
+		<!--/**-->
+		 <!--* 上传头像-->
+		 <!--*/-->
+        <!--$('#img_upload').AjaxFileUpload({-->
+			<!--//处理文件上传操作的服务器端地址-->
+			<!--//上传图片，返回图片地址-->
+			<!--action: './index/index/doImgUpload',-->
+			<!--onComplete: function(filename, resp) { //服务器响应成功时的处理函数-->
+				<!--if(resp.code == '0') {-->
+					<!--$('#headImg').attr('src', resp.data);-->
+					<!--var params = {};-->
+					<!--params['headImg'] = resp.data;-->
+					<!--//保存图片到数据库，分两个地址是为了在很多地方公用-->
+					<!--$.post("./index/ucenter/savePeopleImg", params, function(data) {-->
+						<!--if(data.code == '0') {-->
+							<!--tool.popup_err_msg("修改成功");-->
+						<!--} else {-->
+							<!--tool.popup_err_msg(data.msg);-->
+						<!--}-->
+					<!--}, 'json');-->
+				<!--} else {-->
+					<!--tool.popup_err_msg(resp.msg );-->
+				<!--}-->
+			<!--}-->
+		<!--});-->
+		<!---->
+		<!---->
+		<!---->
+	<!--});-->
 
-</script>
+<!--</script>-->
         <!--右边-->
 <div id="page_member_withdraw" class="col-main">
     <div class="personal-main">
@@ -241,18 +244,19 @@
                 </div>
                 <div class="field-row group">
                     <label>提现金额</label>
-                    <div class="input-wrapper"><input id="提现金额i" type="text" class="text"></div><div class="f-left" style="line-height:30px; margin-left:20px;">余额小于<?php echo $minWithdraw; ?>元必须全部提取</div>
+                    <div class="input-wrapper"><input id="提现金额i" type="text" class="text"></div><div class="f-left" style="line-height:30px; margin-left:20px;">最少提现<?php echo $minWithdraw; ?>元</div>
                 </div>
                 <div id="txje_err1" class="error-wrapper" style="margin-left:120px; display:none"><div><i class="icon icon-x-altx-alt"></i>请输入正确提款额</div></div>
                 <div class="field-row group">
                     <label>提现银行卡</label>
                     <div class="input-wrapper bankcard"><span id="branch"><?php echo $bankcard['branch']; ?></span><span id="cardNumber"><?php echo $bankcard['cardNumber']; ?></span></div>
-                    <a href="/ucenter/bankcards.html" class="f-left">银行卡管理</a>
+                    <a href="./bankcards.html" class="f-left">银行卡管理</a>
                 </div>
                 <div id="yhk_err1" class="error-wrapper" style="margin-left:120px;  display:none"><div><i class="icon icon-x-altx-alt"></i>未选择银行卡</div></div>
                 
                 <div class="btn-row group">
-                    <button id="mem_wdA" href="javascript:;" class="btn btn-pri">提 交</button>
+                    <!--<button id="mem_wdA" href="javascript:;" class="btn btn-pri">提 交</button>-->
+                    <button id="withdraw_btn" href="javascript:;" class="btn btn-pri">提 交</button>
                 </div>
             </div>
         </div>
@@ -333,7 +337,7 @@
                 <label>验证码：</label>
                 <div class="field-val" style="width:350px">
                     <input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">
-                    <img src="/index.php/captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
+                    <img src="<?php echo url('index/Index/captchas'); ?>" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
                    	<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>
                 </div>
             </div>
@@ -607,10 +611,37 @@
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 
-<script src="/public/static/home/js/payment.js"></script>
+<script src="__STATIC__/home/js/payment.js"></script>
 <script>
     var bankId = "<?php echo $bankcard['id']; ?>";
     var mobileTrue='<?php echo $mobile; ?>';
+    $('#withdraw_btn').on('tap',function(){
+        if($('#提现金额i').val().length==0){
+            alert('请输入提现金额');
+            return;
+        }
+        if(bankId == ''){
+           alert("您还未绑定银行卡");
+            return;
+        }
+        $.ajax({
+            type:"post",
+            url:"<?php echo url('index/ucenter/doWithdraw'); ?>",
+            data:{
+                amount:$('#提现金额i').val(),//提现金额
+                bankId: bankId,
+            },
+            dataType:'json',
+            success:function(data){
+                if(data.code!='0'){
+                    alert(data.msg);
+                }else{
+                    alert("提现成功");
+                    window.location.href="./index.html";
+                }
+            }
+        });
+    })
 </script>
 </body>
 </html>

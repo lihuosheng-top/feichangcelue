@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543639161;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543644544;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543645380;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -152,7 +152,8 @@
             	<form name="user_head" id="user_head">
 					<input type="file" name="myfile222" id="img_upload" />
 					<div class="img_download">
-						<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >
+						<!--<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >-->
+						<img class="user-pic"  src="__STATIC__/home/img/user.png" >
 					</div>
 				</form>
                 <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
@@ -176,55 +177,57 @@
                 </ul>
             </nav>
         </aside>
+
+
 <script src="__STATIC__/home/js/moblie/jquery.ajaxfileupload.js"></script>
-<script type="text/javascript">
-	
-	$(function() {
-		/**
-		 * active
-		 */
-			//console.log(window.location.pathname)
-		$('#personal-nav li').removeClass('active');
+<!--<script type="text/javascript">-->
+	<!---->
+	<!--$(function() {-->
+		<!--/**-->
+		 <!--* active-->
+		 <!--*/-->
+			<!--//console.log(window.location.pathname)-->
+		<!--$('#personal-nav li').removeClass('active');-->
 
-		//遍历
-		$('#personal-nav li>a').each(function () {
-			if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {
-				$(this).parent().addClass('active');
-			}
-		});
-		
-		
-		/**
-		 * 上传头像
-		 */
-        $('#img_upload').AjaxFileUpload({
-			//处理文件上传操作的服务器端地址
-			//上传图片，返回图片地址
-			action: './index/index/doImgUpload',
-			onComplete: function(filename, resp) { //服务器响应成功时的处理函数
-				if(resp.code == '0') {
-					$('#headImg').attr('src', resp.data);
-					var params = {};
-					params['headImg'] = resp.data;
-					//保存图片到数据库，分两个地址是为了在很多地方公用
-					$.post("./index/ucenter/savePeopleImg", params, function(data) {
-						if(data.code == '0') {
-							tool.popup_err_msg("修改成功");
-						} else {
-							tool.popup_err_msg(data.msg);
-						}
-					}, 'json');
-				} else {
-					tool.popup_err_msg(resp.msg );
-				}
-			}
-		});
-		
-		
-		
-	});
+		<!--//遍历-->
+		<!--$('#personal-nav li>a').each(function () {-->
+			<!--if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {-->
+				<!--$(this).parent().addClass('active');-->
+			<!--}-->
+		<!--});-->
+		<!---->
+		<!---->
+		<!--/**-->
+		 <!--* 上传头像-->
+		 <!--*/-->
+        <!--$('#img_upload').AjaxFileUpload({-->
+			<!--//处理文件上传操作的服务器端地址-->
+			<!--//上传图片，返回图片地址-->
+			<!--action: './index/index/doImgUpload',-->
+			<!--onComplete: function(filename, resp) { //服务器响应成功时的处理函数-->
+				<!--if(resp.code == '0') {-->
+					<!--$('#headImg').attr('src', resp.data);-->
+					<!--var params = {};-->
+					<!--params['headImg'] = resp.data;-->
+					<!--//保存图片到数据库，分两个地址是为了在很多地方公用-->
+					<!--$.post("./index/ucenter/savePeopleImg", params, function(data) {-->
+						<!--if(data.code == '0') {-->
+							<!--tool.popup_err_msg("修改成功");-->
+						<!--} else {-->
+							<!--tool.popup_err_msg(data.msg);-->
+						<!--}-->
+					<!--}, 'json');-->
+				<!--} else {-->
+					<!--tool.popup_err_msg(resp.msg );-->
+				<!--}-->
+			<!--}-->
+		<!--});-->
+		<!---->
+		<!---->
+		<!---->
+	<!--});-->
 
-</script>
+<!--</script>-->
         <!--右边-->
 <div id="page_member_index" class="col-main">
     <section class="personal-section">
@@ -868,7 +871,7 @@
     });
     $("#search-times").change(function(e){
         var recent = $(this).val();
-        location.href = "/ucenter/index.html?recent=" + recent + "&flow=<?php echo $_GET['flow']; ?>";
+        location.href = "./index.html?recent=" + recent + "&flow=<?php echo $_GET['flow']; ?>";
     });
 	
 	

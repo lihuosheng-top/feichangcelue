@@ -33,18 +33,19 @@
                 </div>
                 <div class="field-row group">
                     <label>提现金额</label>
-                    <div class="input-wrapper"><input id="提现金额i" type="text" class="text"></div><div class="f-left" style="line-height:30px; margin-left:20px;">余额小于{$minWithdraw}元必须全部提取</div>
+                    <div class="input-wrapper"><input id="提现金额i" type="text" class="text"></div><div class="f-left" style="line-height:30px; margin-left:20px;">最少提现{$minWithdraw}元</div>
                 </div>
                 <div id="txje_err1" class="error-wrapper" style="margin-left:120px; display:none"><div><i class="icon icon-x-altx-alt"></i>请输入正确提款额</div></div>
                 <div class="field-row group">
                     <label>提现银行卡</label>
                     <div class="input-wrapper bankcard"><span id="branch">{$bankcard.branch}</span><span id="cardNumber">{$bankcard.cardNumber}</span></div>
-                    <a href="/ucenter/bankcards.html" class="f-left">银行卡管理</a>
+                    <a href="./bankcards.html" class="f-left">银行卡管理</a>
                 </div>
                 <div id="yhk_err1" class="error-wrapper" style="margin-left:120px;  display:none"><div><i class="icon icon-x-altx-alt"></i>未选择银行卡</div></div>
                 
                 <div class="btn-row group">
-                    <button id="mem_wdA" href="javascript:;" class="btn btn-pri">提 交</button>
+                    <!--<button id="mem_wdA" href="javascript:;" class="btn btn-pri">提 交</button>-->
+                    <button id="withdraw_btn" href="javascript:;" class="btn btn-pri">提 交</button>
                 </div>
             </div>
         </div>
@@ -125,7 +126,7 @@
                 <label>验证码：</label>
                 <div class="field-val" style="width:350px">
                     <input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">
-                    <img src="/index.php/captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
+                    <img src="{:url('index/Index/captchas')}" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
                    	<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>
                 </div>
             </div>
@@ -140,10 +141,37 @@
 </div>
 
 {include file="public:footer" /}
-<script src="/public/static/home/js/payment.js"></script>
+<script src="__STATIC__/home/js/payment.js"></script>
 <script>
     var bankId = "{$bankcard.id}";
     var mobileTrue='{$mobile}';
+    $('#withdraw_btn').on('tap',function(){
+        if($('#提现金额i').val().length==0){
+            alert('请输入提现金额');
+            return;
+        }
+        if(bankId == ''){
+           alert("您还未绑定银行卡");
+            return;
+        }
+        $.ajax({
+            type:"post",
+            url:"{:url('index/ucenter/doWithdraw')}",
+            data:{
+                amount:$('#提现金额i').val(),//提现金额
+                bankId: bankId,
+            },
+            dataType:'json',
+            success:function(data){
+                if(data.code!='0'){
+                    alert(data.msg);
+                }else{
+                    alert("提现成功");
+                    window.location.href="./index.html";
+                }
+            }
+        });
+    })
 </script>
 </body>
 </html>

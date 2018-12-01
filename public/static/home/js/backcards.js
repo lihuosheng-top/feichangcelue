@@ -180,11 +180,14 @@ var backcards = {
 			dataType: "json",
 			success: function(data) {
 				//如果不成功
-				if(data.code != '0') {
-					tool.popup_err_msg(data.msg);
+				if(data.code == '0') {
+					// tool.popup_err_msg(data.msg);
+					alert(data.msg);
+					location.reload();
 				}
-				else {//如果成功
-                    tool.popup_err_msg("保存成功");
+				else if(data.code == '1'){//如果成功
+                    // tool.popup_err_msg("保存成功");
+                    alert("保存成功");
                     location.reload();
 				}
 			}
