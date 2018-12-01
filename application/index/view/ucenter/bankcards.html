@@ -50,7 +50,7 @@
                 <div class="field-row group">
                     <label>开 户 人</label>
                     <div class="field-val openname"><label id="姓名" style="text-align:left;color: #000;font-size: 16px;">请先进行实名认证</label>
-                        <a id="a_realname" target="_blank" href="/ucenter/security.html" style="font-size:13px;line-height:40px;color: #dd0000;">(点击这里实名认证)</a>
+                        <a id="a_realname" target="_blank" href="./security.html" style="font-size:13px;line-height:40px;color: #dd0000;">(点击这里实名认证)</a>
                     </div>
                 </div>
                 <div id="realName_err1" class="error-wrapper" style="margin-left:120px; display:none"><div><i class="icon icon-x-altx-alt"></i>请先进行实名认证</div>
@@ -106,15 +106,14 @@
                             <option value= 32 >澳门</option>
                             <option value= 33 >台湾</option>
                         </select>
-                        <select id="市s" class="mid-select"  val = "{$bankcard.city}"><option value="">请选择</option></select>
+                        <select id="市s" class="mid-select"  val = "{$bankcard.city}"><option  value="">请选择</option></select>
                     </div>
                     <div class="field-txt" id="市c"></div>
                 </div>
                 <div id="khzh_err1" class="error-wrapper" style="margin-left:120px; display:none"><div><i class="icon icon-x-altx-alt"></i>未选择开户支行</div></div>
                 <div class="field-row group">
                     <label>支行名称</label>
-                    <div class="field-val"><input type="text" class="text" id="名称i"
-                                                  placeholder="如宁波北仑分行/上海浦东分行等" val = "{$bankcard.branch}"></div>
+                    <div class="field-val"><input type="text" class="text" id="名称i" placeholder="如宁波北仑分行/上海浦东分行等" val = "{$bankcard.branch}"></div>
                     <div class="field-txt" id="名称c"></div>
                 </div>
                 <div id="zh_err1" class="error-wrapper" style="margin-left:120px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写支行</div></div>
@@ -190,7 +189,7 @@
     }
 </script>
 
-<script src="/public/static/home/js/backcards.js"></script>
+<script src="__STATIC__/home/js/backcards.js"></script>
 </body>
 </html>
 

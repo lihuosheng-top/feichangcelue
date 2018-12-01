@@ -23,13 +23,13 @@ var security={
                     $('#sfzh_err1').show()
                     return;
                 }
-                $.post("/index/ucenter/doReanNameAuth", {realName:realName, IDNumber:IDnumber}, function(data){
+                $.post("./doReanNameAuth", {realName:realName, IDNumber:IDnumber}, function(data){
                         $("#姓名i").val('');
                         $("#身份证i").val('');
-                        if(data.code != '0'){
-                            tool.popup_err_msg(data.msg);
-                        }else{
-                            tool.popup_err_msg("保存成功");
+                        if(data.code == '0'){
+                            alert(data.msg);
+                        }else if(data.code=='1'){
+                            alert(data.msg);
                             location.reload();
                         }
                 }, 'json');    
@@ -49,24 +49,27 @@ var security={
 			        return false;
 			    }
 				//弹出img框
-                tool.popup.showPopup($("#popup-valid-img"));
+                // tool.popup.showPopup($("#popup-valid-img"));
                 //输入img验证码
                 $("#txt_valid_code").unbind("keyup").bind("keyup", function () {
                     var trigger = $(this);
                     var _val = $(this).val();
+                    alert(_val);
+
                     //如果长度=4
                     if (_val.length == 4) {
+                        alert(111);
 						$.ajax({
-							url:'/index/index/sendMobileCode',
+							url:'index/index/sendMobileCode',
 							data:{
-								mobile: mobileTrue, 
+								mobile: mobileTrue,
 								imgCode:_val,
 							},
                             dataType:'json',
 							type:'get',
 							success:function(data) {
                                 $("#txt_valid_code").val("");
-                                $('#forgot_passImg').attr('src', '/index.php/captcha.html');
+                                // $('#forgot_passImg').attr('src', '/index.php/captcha.html');
 								if(data.code == '0'){
 									$("#valid_code").hide();
 									//隐藏img弹窗
@@ -98,8 +101,9 @@ var security={
 							}
 						})
                     }
-                    
+
                 });
+
             });
 
 			 //修改手机号(提交数据)
