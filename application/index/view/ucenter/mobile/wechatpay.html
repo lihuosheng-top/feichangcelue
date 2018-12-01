@@ -143,6 +143,47 @@
                           });
 					  });
 				
+				
+					  $('#submit').click(function() {
+                          var amount=$("#amount").val();
+                          if(amount == '' || amount == 0 || amount == null){
+                              mui.alert("请输入充值金额");
+                              return;
+                          }
+                          var instructions=$("#instructions").val();
+                          if(instructions =='' ||instructions == 0 || instructions == null){
+                              mui.alert("请输入说明信息");
+                              return;
+                          }
+
+                          var alipay=$("#alipay").val();
+                          if(alipay =='' ||alipay == 0 || alipay == null){
+                              mui.alert("请输入使用的微信账号");
+                              return;
+                          }
+                          $.ajax({
+                              type: "post",
+                              url: "{:url('index/Ucenter/getInformationWeChat')}",
+                              dataType: 'JSON',
+                              data:{"amount":amount,"instructions":instructions,"alipay":alipay},
+
+                              success: function(data) {
+                                  if(data.status ==1){
+                                      mui.alert(data.info);
+                                      setTimeout(function () {
+                                          window.location.href= './home.html';
+                                      },2000);
+                                  }else {
+                                      mui.alert('提交失败');
+                                  }
+
+
+                              },
+                              error: function(data) {
+                              }
+                          });
+					  });
+				
 			</script>
 	</body>
 </html>
