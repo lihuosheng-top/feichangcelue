@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\sell.html";i:1540464599;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:70:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\sell.html";i:1543660627;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -164,11 +164,13 @@
                         <em>下单：<b><?php echo $vo['createTime']; ?></b></em>
                         <em>单号：<?php echo $vo['id']; ?></em>
                         <em>到期：<b><?php echo $vo['buy_day_end_time']; ?></b></em>
+                        <em>保证金：<b><?php echo $vo['guaranteeFee']; ?>元</b></em>
                     </label>
             		<label class="w125">
                         <em><?php echo round($vo['dealAmount'],2); ?>万元</em>
                         <em>止损：<b><?php echo $vo['loss']; ?>元</b></em>
                         <em>警戒线：<b><?php echo $vo['surplus']; ?>元</b></em>
+                        <em>已付综合费：<b><?php echo $vo['publicFee']; ?>元</b></em>
                     </label>
                     <label class="w115">
                         <em><strong><?php echo $vo['stockName']; ?>(<?php echo $vo['stockCode']; ?>)</strong></em>
@@ -187,7 +189,13 @@
                         <strong class="" <?php if($list2[$i-1][profitAmount] < 0): ?> style="color:green" <?php else: ?> style="color:red" <?php endif; ?> >
                         <?php echo $list2[$i-1][profitAmount]; ?>(<?php echo $list2[$i-1][rate] * 100; ?>%)</strong></em>
                     </label>
-                    <label class="w180"><button class="btnSell" id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btn btn-pri sell-btn " >点卖</button></label>
+
+
+                    <label class="w180">
+                        <input type="text"  value="" class="money_update">
+                        <button data-id="<?php echo $vo['id']; ?>"  class="money_add  font12" >补仓</button>
+                        <button class="btnSell" id="<?php echo $vo['id']; ?>" index="<?php echo $i; ?>" class="btn btn-pri sell-btn " >点卖</button>
+                    </label>
             	</li>
                 <?php endforeach; endif; else: echo "" ;endif; ?>
             </ul>
@@ -709,4 +717,37 @@ $("#popup-confirm-btn").click(function(e){
 
 
 
+</script>
+
+<!--补仓-->
+<script>
+    $('.money_add').click(function () {
+        var money=$(this).siblings(".money_update").val();
+//                var money =$(".money_update").val();
+
+        var order_id = $(this).attr('data-id');
+        $.ajax({
+            type:"POST",
+            url:"./ucenter/money_add",
+            data:{
+                "money_update":money,
+                "order_id":order_id
+            },
+            dataType:"json",
+            success:function (data) {
+//                        console.log(data);
+                if(data.data.status=1){
+                    alert(data.info);
+                    location.reload();
+                }
+                else if(data.data.status=2){
+                    alert(data.info);
+                }
+
+            },
+            error:function () {
+                console.log("错误");
+            }
+        })
+    })
 </script>

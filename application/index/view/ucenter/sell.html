@@ -34,11 +34,13 @@
                         <em>下单：<b>{$vo.createTime}</b></em>
                         <em>单号：{$vo.id}</em>
                         <em>到期：<b>{$vo.buy_day_end_time}</b></em>
+                        <em>保证金：<b>{$vo.guaranteeFee}元</b></em>
                     </label>
             		<label class="w125">
                         <em>{$vo.dealAmount|round=###,2}万元</em>
                         <em>止损：<b>{$vo.loss}元</b></em>
                         <em>警戒线：<b>{$vo.surplus}元</b></em>
+                        <em>已付综合费：<b>{$vo.publicFee}元</b></em>
                     </label>
                     <label class="w115">
                         <em><strong>{$vo.stockName}({$vo.stockCode})</strong></em>
@@ -58,7 +60,13 @@
                         <strong class="" {if condition="$list2[$i-1][profitAmount] lt 0"} style="color:green" {else if condition="$list2[$i-1][profitAmount] gt 0" } style="color:red" {/if} >
                         {$list2[$i-1][profitAmount]}({$list2[$i-1][rate] * 100}%)</strong></em>
                     </label>
-                    <label class="w180"><button class="btnSell" id="{$vo.id}" index="{$i}" class="btn btn-pri sell-btn " >点卖</button></label>
+
+
+                    <label class="w180">
+                        <input type="text"  value="" class="money_update">
+                        <button data-id="{$vo.id}"  class="money_add  font12" >补仓</button>
+                        <button class="btnSell" id="{$vo.id}" index="{$i}" class="btn btn-pri sell-btn " >点卖</button>
+                    </label>
             	</li>
                 {/volist}
             </ul>
@@ -322,4 +330,37 @@ $("#popup-confirm-btn").click(function(e){
 
 
 
+</script>
+
+<!--补仓-->
+<script>
+    $('.money_add').click(function () {
+        var money=$(this).siblings(".money_update").val();
+//                var money =$(".money_update").val();
+
+        var order_id = $(this).attr('data-id');
+        $.ajax({
+            type:"POST",
+            url:"./ucenter/money_add",
+            data:{
+                "money_update":money,
+                "order_id":order_id
+            },
+            dataType:"json",
+            success:function (data) {
+//                        console.log(data);
+                if(data.data.status=1){
+                    alert(data.info);
+                    location.reload();
+                }
+                else if(data.data.status=2){
+                    alert(data.info);
+                }
+
+            },
+            error:function () {
+                console.log("错误");
+            }
+        })
+    })
 </script>
