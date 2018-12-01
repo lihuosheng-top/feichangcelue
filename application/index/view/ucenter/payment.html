@@ -6,8 +6,8 @@
 </head>
 <body class="membercenter logged-in">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/member.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/member.css"/>
 
 <!--个人中心-充值-->
 <div class="br-content">
@@ -25,8 +25,6 @@
                 <li class="active"><a href="javascript:;" id="pm4">银行转账</a></li>
                 <li><a href="javascript:;" id="pm3">支付宝转账</a></li>
                 <li><a href="javascript:;" id="pm2">微信转账</a></li>
-                <li><a href="javascript:;" id="pm1">网银支付 </a></li>
-
             </ul>
         </nav>
         <div class="tabs">
@@ -74,7 +72,7 @@
                     <form action="#">
                         <input type="hidden" id="tab-pm1-bank" name="tab-pm1-bank" value="">
 
-                        <img src="/public/static/home/img/alipay.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
+                        <img src="__STATIC__/home/img/alipay.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
                         <p>
                             <span style="color: red">请扫码充值，并务必在转账备注中填写注册手机号，这样方便我们多重信息确认您的汇款。</span><br>
                             转账成功后，请拨打客服热线<label id="m_basic_mobile">{$phone}</label>以便我们及时帮您处理
@@ -94,7 +92,7 @@
                     <form action="#">
                         <input type="hidden" id="tab-pm1-bank" name="tab-pm1-bank" value="">
 
-                        <img src="/public/static/home/img/wxpay2.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
+                        <img src="__STATIC__/home/img/wxpay2.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
                         <p>请用微信扫描二维码</p>
                         <p>
                             <span style="color: red">请扫码充值，并务必在转账备注中填写注册手机号，这样方便我们多重信息确认您的汇款。</span><br>
@@ -125,7 +123,7 @@
                     </colgroup>
                     <tbody>
                     <tr>
-                        <td><span class="bank-logo bank-logo-cmb" style="background-image: url(/public/static/home/img/bbb.png);width:150px;background-size:contain;background-position:center"></span></td>
+                        <td><span class="bank-logo bank-logo-cmb" style="background-image: url(__STATIC__/home/img/bbb.png);width:150px;background-size:contain;background-position:center"></span></td>
                         <td>帐号：<label id="m_basic_bankNo">33050161668000000115</label><br>户名：<label id="m_basic_bankOn">杭州鼎蓝商贸有限公司</label><br>开户行：<label id="m_basic_bankNm">建设银行杭州城站支行</label></td>
                     </tr>
                     </tbody>
@@ -133,7 +131,7 @@
 
                 <div class="group upload-screenshot-wrapper">
                     <div class="col-12">
-                        <p>用户网银转账之后，请务必保留网银转账成功时的截图，并在资金或者转账用途中备注清自己要转入的<label id="m_basic_netName">非常谋略</label>用户名，将回单发到QQ客服，以便尽快到账！
+                        <p>用户网银转账之后，请务必保留网银转账成功时的截图，并在资金或者转账用途中备注清自己要转入的<label id="m_basic_netName">尚牛在线</label>用户名，将回单发到QQ客服，以便尽快到账！
                         </p>
 
                         <div class="btn-wrapper" style="text-align: center">
