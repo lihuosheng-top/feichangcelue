@@ -1,11 +1,14 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\login.html";i:1539680150;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543675546;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\company.html";i:1539830975;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543675546;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>尚牛在线</title>
 </head>
-<body class="user-reg login_body">
+
+<body class="logged-in company_body">
+	<!--头部-->
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -136,100 +139,70 @@
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="./public/static/home/css/company.css"/>
 
-<!--登录区-->
-<div class="br-content login_reg_cont">
-<section class="section section-form" id="page_auth_login">
-    <div class="container">
-        <div class="section-border group">
-            <h2 class="login_h2">账户登录</h2>
-            <div class="form">
-                <div class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入用户名" name="phone" id="用户名i" data-error-msg="请输入用户名">
-                    <label class="name-err1 hide">用户名不能为空</label>
-                </div>
-                <div class="field-wrapper">
-                    <input type="password" class="text" placeholder="请输入密码" name="pwd" id="登录密码i" onkeydown="if (event.keyCode == 13) { user_Login() }">
-                    <label class="psw-err1 hide">密码不能为空</label>
-                </div>
+	<!--关于我们-->
+<div class="br-content">
+    <div class="w1024 bg_f">
+        <div class="title_box">
+            <h1 class="title_cp_h">关于我们</h1>
 
-                <div class="link-wrapper group login_forgot">
-                    <a href="./forgot_pass.html" style="color: #fff; margin-left: 9px;">忘记密码</a>
-                </div>
+            <p class="title_cp_p">ABOUT US</p>
+        </div>
+        <section class="com-info">
+            <ul class="clearfix">
+                <li class="info-1">
+                    <p>稳健收入</p>
+                    <span>年化收益高有保障</span>
+                </li>
+                <li class="info-2">
+                    <p>安全投资</p>
+                    <span>具有安全的投资渠道</span>
+                </li>
+                <li class="info-3">
+                    <p>卓越保障</p>
+                    <span>多重筛选 铸就卓越风控</span>
+                </li>
+                <li class="info-4">
+                    <p>轻松投资</p>
+                    <span>财富增值从这里开始</span>
+                </li>
+            </ul>
+        </section>
+        <section class="page-company article-main br-clearfix">
+            <div class="text_p br-fl">
+                <p>
+                   尚牛在线是隶属于深圳尚美时尚产业投资管理有限公司的 。是国内领先的互联网股票配资平台，同时也是线下实力强劲的，拥有深厚的金融背景、行业经验，最安全的风控管理多年来在业界树立了良好的信誉口碑。未来我们将致力于打造成行业的大品牌和领航者。客户可以通过本平台获得最高10倍杠杆，最高500万操盘资金，全程网络操作，高效便捷。
+                </p>
 
-                <div class="btn-wrapper login_bw">
-                    <a class="btn btn-pri" id="login-btn">登录</a>
-                </div>
+                <p>
+                    <label>尚牛在线 </label>有着领先的技术风控管理。平台专注于国内证券交易市场，集成线下金融工具，研发出高效快速的创新金融产品，提供更适合中国股民的低风险、低成本、高效益的证券自动化投资理财服务。公司拥有一群来自于知名券商、私募机构、基金公司和互联网上市公司的资深专家，员工均拥有本科或以上学历，成功为多家券商提供了权威的软件服务及安全风控管理。
+                </p>
 
+                <p>
+                    <label>深圳市尚美时尚产业投资管理有限公司 </label>旗下平台尚牛在线，为广大配资客户提供服务的同时还持之以恒的进行产品创新和服务优化，创造性地满足投资者的股票配资需求，让客户自由加大杠杆资金，使资产财富实现真正的增值！
+                </p>
+
+                <p>
+                    <label>我们的优势 </label>按天配资：1-9倍杠杆，支持盘中提盈，按天计费，周未节假日免费，资深股民的选择。
+                    按月配资：1-10倍杠杆，支持盘中提盈，按月计息更划算，更无管理费及其他费用。
+                    超低费用：利息低至0.6分，卷商佣金万分之二，广大配资用户首选平台。
+                </p>
+
+                <p>
+                    <label>核心价值观 </label>诚信：坚守诚信原则, 重视职业操守, 加强互信关系, 树立优质品牌。
+                    专业：整合有效资源, 借鉴成功案例, 提高专业水平, 打造精英团队。
+                    成长：保持快速发展，努力实现共赢，让客户、员工与企业共同成长。
+                    热情：保持工作热情，积极面对挑战，敢于攀登高峰，追求卓越品质。
+                </p>
             </div>
-            <div class="login_reg quick-link-wrapper group">
-                <p><a href="./reg.html">马上注册</a></p>
-            </div>
-        </div>
-    </div>
-</section>
-</div>
-
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
+            <!--<img class="br-fr" src="./public/static/home/img/cp_img.png"/>-->
+        </section>
+      
     </div>
 </div>
-
+<!--footer-->
 <!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
@@ -491,6 +464,74 @@
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 
-<script src="__STATIC__/home/js/login.js"></script>
+<!--认证银行卡-->
+<div class="popup" id="popup-id-verify">
+            <div class="popup-header group">
+                <h2>认证银行卡</h2>
+                <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+            </div>
+            <div class="popup-body group">
+                <div class="field-row group" style="text-align:center">
+                    <ol class="popup-note">
+                        <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
+                        <li style="text-align:left;">请务必认真填写真实资料</li>
+                        <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
+                        <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">4001665652</label></li>
+                    </ol>
+                    <p>为了保障您的账户安全，请先绑定银行卡</p>
+                </div>
+                <div class="btn-row group">
+                    <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
+                    <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
+                </div>
+            </div>
+        </div>
+<!--实名认证-->
+<div class="popup" id="popup-realname-auth">
+            <div class="popup-header group">
+                <h2>实名认证</h2>
+                <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
+            </div>
+            <div class="popup-body group">
+                <div class="field-row group" style="text-align:center">
+                    <ol class="popup-note">
+                        <li style="text-align:left;">一个身份证对应一个账号</li>
+
+                        <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">4001665652</label></li>
+                    </ol>
+                    <p>为了保障您的账户安全，请先进行实名认证</p>
+                </div>
+                <div class="field-row group">
+                    <label>真实姓名：</label>
+
+                    <div class="field-val"><input id="姓名i" type="text" class="text"
+                                                  onchange="user_updateid_zsxm_valid()"></div>
+                </div>
+                <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none">
+                    <div><i class="icon icon-x-altx-alt"></i>未填写姓名</div>
+                </div>
+                <div class="field-row group">
+                    <label>身份证号：</label>
+
+                    <div class="field-val">
+                        <div class="field-val">
+                            <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
+                        </div>
+                    </div>
+                </div>
+                <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none">
+                    <div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div>
+                </div>
+                <div class="btn-row group">
+                    <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
+                    <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
+                </div>
+            </div>
+        </div>
+         
+        
+        
+<!--<script src="./public/static/home/js/reg.js"></script>-->
 </body>
+
 </html>

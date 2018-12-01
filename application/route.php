@@ -107,13 +107,13 @@ return [
     //手机
     'doLogin'=>'index/index/doLogin',           //登录
     'logout'=>'index/index/logout',             //退出
-    "index"=>"index/index/index",               //首页
+    "/"=>"index/index/index",               //首页
     'doReg'=>'index/index/doReg',               //注册
     'reg_agreement'=>'index/index/reg_agreement', //注册协议
     'sendMobileCode'=>'index/index/sendMobileCode',         //（注册）短信验证
     "stock"=>"index/index/stock",
     //"authllpay_wap"=>"index/lianlianauthpay/authllpay_wap",         //银行卡充值
-
+    "ajax_free"=>"index/index/ajax_free",
 
 
     "updateNewPwd"=>"index/index/updateNewPwd",                         //密码修改
@@ -151,7 +151,7 @@ return [
     "ucenter/saveBankCardsData"=>"index/ucenter/saveBankCardsData", //添加银行卡操作
     "ucenter/stockBuy"=>"index/ucenter/stockBuy",//anri买入股票
     "ucenter/stockBuyByMonth"=>"index/ucenter/stockBuyByMonth",//anyue买入股票
-    "/ucenter/freetrialBuy"=>"index/ucenter/freetrialBuy",//免息买入股票
+    "ucenter/freetrialBuy"=>"index/ucenter/freetrialBuy",//免息买入股票
 
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页

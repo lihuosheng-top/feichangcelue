@@ -1,12 +1,44 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\login.html";i:1539680150;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543675546;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\guild.html";i:1539832463;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543675546;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>尚牛在线</title>
+    <style>
+        .pic{
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .guide-section{
+            width: 1024px;
+            margin: 0 auto;
+            padding:50px;
+            box-sizing: border-box;
+        }
+        .content dt,.content dd{
+            margin-bottom: 15px;
+        }
+        .content dl{
+            margin-bottom: 50px;
+        }
+        .content dd{
+            padding-left: 50px;
+        }
+        .content dd table{
+            border-left: 1px solid #ccc;
+            border-top: 1px solid #ccc;
+        }
+        .content dd table td{
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/guide.css"/>
+    <link rel="stylesheet" type="text/css" href="__STATIC__/home/css/common.css"/>
 </head>
-<body class="user-reg login_body">
-<title>首页</title>
+<body class="guild_body helpcenter logged-in">
+<!--<title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
 <meta name="description" content="<?php echo config('web_site_description'); ?>">
@@ -135,101 +167,167 @@
 
 
 
-</script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
-
-<!--登录区-->
-<div class="br-content login_reg_cont">
-<section class="section section-form" id="page_auth_login">
-    <div class="container">
-        <div class="section-border group">
-            <h2 class="login_h2">账户登录</h2>
-            <div class="form">
-                <div class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入用户名" name="phone" id="用户名i" data-error-msg="请输入用户名">
-                    <label class="name-err1 hide">用户名不能为空</label>
-                </div>
-                <div class="field-wrapper">
-                    <input type="password" class="text" placeholder="请输入密码" name="pwd" id="登录密码i" onkeydown="if (event.keyCode == 13) { user_Login() }">
-                    <label class="psw-err1 hide">密码不能为空</label>
-                </div>
-
-                <div class="link-wrapper group login_forgot">
-                    <a href="./forgot_pass.html" style="color: #fff; margin-left: 9px;">忘记密码</a>
-                </div>
-
-                <div class="btn-wrapper login_bw">
-                    <a class="btn btn-pri" id="login-btn">登录</a>
-                </div>
-
+</script>-->
+<header class="ml_header br-w100">
+    <div class="h_top br-w100">
+        <div class="w1024 br-clearfix">
+            <div class="h_topL br-fl">
+                服务热线：<?php echo $phone; ?>
             </div>
-            <div class="login_reg quick-link-wrapper group">
-                <p><a href="./reg.html">马上注册</a></p>
+              <div class="h_topLL br-fl" style="padding-left: 10px;color: red;">
+                   深圳市尚美时尚产业投资管理有限公司
+            </div>
+            <?php if(!empty($_SESSION['member'])): ?>
+            <div   style="text-align: right;" >
+                <?php if(!empty($_SESSION['member']['username'])): ?>
+                用户：<?php echo $_SESSION['member']['username']; else: ?>
+                用户信息：<?php echo $_SESSION['member']['mobile']; endif; ?>
+                <span class="loginout"><a href="<?php echo url('index/index/logout'); ?>">退出登录</a></span>
+            </div>
+            <?php endif; ?>
+
+
+            <!-- <div id="page_shared_layout_login" class="h_topR br-fr" <?php if($_SESSION['member'] != ''): ?> style="display: none;" <?php endif; ?> >
+                 <a class="login" href="javascript:void(0);">登录</a>
+                 <a class="register" href="./reg.html">注册</a>
+             </div>
+
+             <ul id="page_shared_layout_unlogin" class="top-links f-right" <?php if($_SESSION['member'] == ''): ?> style="display: none;" <?php endif; ?>>
+             <li class="show-logout" style="display: list-item;"><a href="javascript:_hmt.push(['_trackEvent', 'login', 'click', 'head-login',1]);" name="popup-user-login-click">登录</a></li>
+             <li class="show-logout sep" style="display: list-item;">|</li>
+             <li class="show-logout" style="display: list-item;"><a href="/user/reg">注册</a></li>
+             <li class="show-login" style="display: block;">您好，&nbsp;</li>
+             <li class="show-login top-user-wrapper" style="display: block;">
+                     <span class="top-username">
+                         <a id="page_shared_layout_login_name" href="./ucenter/index"><?php echo $_SESSION['member']['username']; ?></a>
+                         <i class="icon icon-arrow-drop-down"></i>
+                     </span>
+                 <div class="overlay-account">
+                     <div class="group account-group">
+                         <span class="f-left">可用<b class="account-val" id="shared_header_mb"><?php echo $usableSum; ?></b></span>
+                         <a name="realnameAuth" class="f-right" href="./ucenter/payment.html">充值</a>
+                     </div>
+                     <div class="account-links group">
+                         <a class="f-left" href="./ucenter/index.html">个人中心</a>
+                         <span class="f-left sep">|</span>
+
+
+                         <a class="f-right js-logout" href="<?php echo url('index/index/logout'); ?>">安全退出</a>
+                     </div>
+                 </div>
+                 /.overlay-account
+             </li>
+             </ul>-->
+        </div>
+    </div>
+    <div class="h_bot br-w100">
+        <div class="w1024 br-clearfix">
+            <div class="h_botL br-fl">
+                 <a href="./">
+                	<img src="__STATIC__/home/img/moblie/fcml2.png" style="height:80px; " />
+                	<span style="color: #FF3439;">深圳市尚美时尚产业投资管理有限公司</span>
+                </a>            </div>
+            <div class="h_botR br-fr">
+                <ul class="br-clearfix" id="menu-ul">
+                    <!--<li class="br-fl"><a href="<?php echo url('index'); ?>" class="active">首页</a></li>-->
+                    <li class="br-fl"><a href="./index.html">首页</a></li>
+                    <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
+                     <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
+                    <li class="br-fl"><a href="./safeensure.html" >安全保障</a></li>
+                    <li class="br-fl help_box">
+                        <a href="./guild.html" class="active">帮助中心</a>
+                        <ul class="new-sub-nav hide">
+                            <li class=""><a href="./guild.html">新手教学</a></li>
+                            <li class=""><a href="./help.html">常见问题</a></li>
+                        </ul>
+                    </li>
+                    <li class="br-fl"><a href="./company.html">关于我们</a></li>
+                    <li class="br-fl"><a href="./buy.html">A股点买</a></li>
+                </ul>
             </div>
         </div>
     </div>
+</header>
+
+
+<!--帮助区-新手教学-->
+<div class="br-content">
+<section class="guide-section">
+<div class="content">
+    <div class="pic"><img src="public/static/home/img/one.jpg" ></div>
+    <dl>
+        <dt>什么是股票配资？</dt>
+        <dd>股票配资是一种创新的股票投资工具，通过股票配资，能有效的提高投资收益，堪称炒股利器。
+            在系统性或确定性机会出现时，投资者运用配资工具，可以在尚牛在线获得自有资金3-10倍的实盘资金，
+            能够将收益放大到10倍。投资者需要注意，配资工具在放大收益也会放大风险，
+            投资者应在投资机会比较确定并管理好风险的前提下使用，选择相对稳健的品种。
+        </dd>
+    </dl>
+    <dl>
+        <dt>如何配资与交易？</dt>
+        <dd>本平台与合作券商有签定合作协议，即您在本平台的账户成功注册后即为合作卷商的证券账户及证券密码，您可凭您的证券账户及证券密码在合作券商进行交易，请您
+            务必确保您的信息如实准确，以免产生不必要麻烦。
+        </dd>
+    </dl>
+    <dl>
+        <dt>尚牛在线如何进行股票配资的风险管理？</dt>
+        <dd>
+            为了保护配资资金安全，同时帮您养成良好的投资习惯，交易账户会设置警戒线和平仓线。
+            亏损警告线：当总操盘资金低于警戒线（亏损至本金*50%）以下时，系统会自动通知请及时进行补仓。
+            亏损平仓线：当总操盘资金低于平仓线（亏损至本金*80%）以下时，系统将把您的股票进行平仓。
+            为避免平仓发生，请时刻关注本金是否充足。由于客户持有当天新建仓股票，
+            达到强平线时导致强平不成功，超过强平线后系统会短信通知用户及时进行补亏，
+            倘若用户不补亏导致本金亏损至100%时，券商将有权强制收回交易账号进行结算（相当于券商回收），
+            穿仓部分客户无需赔偿。
+        </dd>
+    </dl>
+    <dl>
+        <dt>股票配资限制购买的股票有哪些？</dt>
+        <dd>1、不得购买权证类可以T+0交易的证券；</dd>
+        <dd>2、用户不得买入当天禁买股，禁买股包括但不仅限于：ST、*ST、SST、*SST、分级基金等被证券交易所特别处理的股票；</dd>
+        <dd>3、不得购买首日上市新股（或复牌首日股票）等当日不设涨跌停板限制的股票；</dd>
+        <dd>4、已发布停牌、退市公告或有潜在退市风险的股票； </dd>
+        <dd>5、有可能导致结算日无法正常卖出或亏损超过保证金的股票； </dd>
+        <dd>6、上市20日以内的新股； </dd>
+        <dd>7、不得进行坐庄、对敲、接盘、大宗交易、内幕信息等违反股票交易法律法规及证券公司规定的交易。</dd>
+    </dl>
+    <dl>
+        <dt>股票配资的注意事项有哪些？</dt>
+        <dd>操盘前必读</dd>
+        <dd>股票停牌处理 </dd>
+        <dd>如果您买的股票遇到停牌，可选择以下方法：</dd>
+        <dd>(1)按停牌股票市值追加20%作为停牌准备金，股票复牌后，如股票上涨，退还全部停牌保证金，下跌在停牌保证金里扣除下跌部分金额（剩余退还）</dd>
+        <dd>(2)选择以停牌前一交易日收盘价作为结算价格对停牌股票进行清算。</dd>
+        <dd>交易手续费</dd>
+        <dd>其他注意事项</dd>
+        <dd>1、交易盈利部分可在平仓结算后随时提现，申请结算（工作时间内）及时到达您账户，如您申请提款到银行卡，工作时间及时到账（节假日无休）；</dd>
+        <dd>2、按天配资支付管理费，如1月10日15:00前配资，系统当天扣除第1天管理费，1月11日自动（08:30分）扣除第二天管理费，以此类推；</dd>
+        <dd>3、按月配资支付利息，如1月10日配资，当天扣除第1个月利息，2月11日支付第2个月利息，以此类推；</dd>
+        <dd>4、配资到期前一个交易日，应将股票账号平仓，进行结算。如到期未结算，系统将自动延期收取对应费用。</dd>
+    </dl>
+    <dl>
+        <dt>配资与融资融券业务的区别是什么？</dt>
+        <dd>股票配资业务与融资融券业务从本质上讲都是增加投资者的操盘资金，但两者又有着很大的差别。
+             股票配资是股民在一定本金的情况下，提供放大资金比例操盘，然后支付一定的利息；
+            融资融券则是投资者向具有上海证券交易所或深圳证券交易所会员资格的证券公司提供担保物，
+            借入资金买入本所上市证券或借入本所上市证券并卖出的行为。但是在融资融券实际操作中存在着诸多的限制，
+            以下对两项业务做个对比：</dd>
+        <dd>
+            <table>
+                <tr><td>融资融券</td><td>股票配资</td></tr>
+                <tr><td>开户必须满6个月</td><td>无限制</td></tr>
+                <tr><td>资金要求最低10万</td><td>100元起</td></tr>
+                <tr><td>标地股少（可交易的股票少）</td><td>可交易的股票多</td></tr>
+                <tr><td>融资额度低（一般50%）</td><td>配资额度高（1-10倍杠杆）</td></tr>
+                <tr><td>交易佣金高（通常在千分之1以上）</td><td>交易佣金低（万分之2）</td></tr>
+                <tr><td>融资最长期限6个月</td><td>配资期限无限制</td></tr>
+                <tr><td>需要足额的担保物</td><td>不需要</td></tr>
+            </table>
+        </dd>
+    </dl>
+</div>
 </section>
 </div>
-
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
-    </div>
-</div>
-
 <!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
@@ -491,6 +589,6 @@
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 
-<script src="__STATIC__/home/js/login.js"></script>
+<script src="./public/static/home/js/help.js"></script>
 </body>
 </html>
