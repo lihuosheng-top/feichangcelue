@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\company.html";i:1539830975;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\company.html";i:1539830975;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543637710;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -459,8 +459,8 @@
 </script>
 
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/reg.js"></script>
+<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
+<script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 <!--认证银行卡-->
 <div class="popup" id="popup-id-verify">

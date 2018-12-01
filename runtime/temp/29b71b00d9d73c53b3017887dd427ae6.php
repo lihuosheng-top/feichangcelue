@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\security.html";i:1543632821;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\security.html";i:1543642680;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -261,7 +261,7 @@
             <li class="group">
                 <div class="col-3 security-name"><i class="icon icon-checkmark2" id="id_phone_icon"></i>绑定手机</div>
                 <div class="col-5 security-desc" id="手机号i"><?php echo $mobile; ?></div>
-                <div class="col-4 security-action"><a id="umA" href="javascript:;" data-popup="popup-edit-phone" onclick="form_validation = false;">修改</a></div>
+                <!--<div class="col-4 security-action"><a id="umA" href="javascript:;" data-popup="popup-edit-phone" onclick="form_validation = false;">修改</a></div>-->
 
             </li>
             
@@ -319,7 +319,7 @@
             <ol class="popup-note">
                 <li style="text-align:left;">一个身份证对应一个账号</li>
                 
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile"><?php echo $phone; ?></label></li>
+                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile"></label></li>
             </ol>
             <p>为了保障您的账户安全，请先进行实名认证</p>
         </div>
@@ -434,30 +434,30 @@
         </div>
     </div>
     <!--valid-img-->
-<div class="popup" id="popup-valid-img">
-    <div class="popup-header group">
-        <h2>请先输入验证码</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <form action="#">
-            <div class="field-row group">
-                <label>验证码：</label>
-                <div class="field-val" style="width:350px">
-                    <input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">
-                    <img src="/index.php/captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">
-                   	<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>
-                </div>
-            </div>
-            <div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i><span>输入的验证码有误！</span></div></div>
+<!--<div class="popup" id="popup-valid-img">-->
+    <!--<div class="popup-header group">-->
+        <!--<h2>请先输入验证码</h2>-->
+        <!--<a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>-->
+    <!--</div>-->
+    <!--<div class="popup-body group">-->
+        <!--<form action="#">-->
+            <!--<div class="field-row group">-->
+                <!--<label>验证码：</label>-->
+                <!--<div class="field-val" style="width:350px">-->
+                    <!--<input type="text" class="text" style="width: 80px; float: left; padding: 6px 10px;" placeholder="4位验证码" name="txt_valid_code" id="txt_valid_code">-->
+                    <!--<img src="./captcha.html" id="forgot_passImg" style="height:35px;float:left;margin-right:5px;">-->
+                   	<!--<a id="forgot_passImgA" href="javascript:void(0)" onclick="$('#forgot_passImg').attr('src', '/index.php/captcha.html');" style="color:#E01923">看不清楚？</a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div id="valid_code" class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt"></i><span>输入的验证码有误！</span></div></div>-->
 
-            <div class="btn-row group">
-                <a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>
-            </div>
-            <input id="hiddenText" type="text" style="display:none" />
-        </form>
-    </div>
-</div>
+            <!--<div class="btn-row group">-->
+                <!--<a class="btn btn-pri js-close-popup" style="display:none;" href="javascript:;">确定</a>-->
+            <!--</div>-->
+            <!--<input id="hiddenText" type="text" style="display:none" />-->
+        <!--</form>-->
+    <!--</div>-->
+<!--</div>-->
 
 <!--底部-->
 <footer class="br-w100">
@@ -715,9 +715,11 @@
 </script>
 
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/reg.js"></script>
+<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
+<script src="__STATIC__/home/js/moblie/reg.js"></script>
 
+
+<script src="__STATIC__/home/js/general.js"></script>
 <script src="__STATIC__/home/js/security.js"></script>
 <script type="text/javascript">
 	$(function(){security.init()});

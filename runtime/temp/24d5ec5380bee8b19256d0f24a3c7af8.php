@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634397;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543637710;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -633,7 +633,7 @@
 <footer class="br-w100">
     <div class="footer_top">
         <a href="<?php echo url('index/index/company'); ?>">关于我们</a>
-        <a href="./contact.html">联系我们</a>
+        <a href="<?php echo url('index/index/contact'); ?>">联系我们</a>
     </div>
     <div class="footer_bot">
         <div class="w1024 br-clearfix">
@@ -885,8 +885,8 @@
 </script>
 
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/reg.js"></script>
+<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
+<script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 
 		<!--认证银行卡-提示绑定-->

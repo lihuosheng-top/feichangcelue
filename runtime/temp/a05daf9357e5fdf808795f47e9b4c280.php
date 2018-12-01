@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543633706;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543639161;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543637710;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -425,7 +425,7 @@
             <p>为了保障您的账户安全，请先绑定银行卡</p>
         </div>
         <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
+            <a class="btn btn-pri" href="./BankCards.html">去绑定</a>
             <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
         </div>
     </div>
@@ -487,7 +487,7 @@
                 </div>
                 <div class="error-wrapper" style="display:none; margin-top:5px;"><div><i class="icon icon-x-altx-alt" style="font-size:13px;"></i>验证码错误！</div></div>
                 <div class="link-wrapper group">
-                    <a href="/forgot_pass.html">忘记密码</a>
+                    <a href="./forgot_pass.html">忘记密码</a>
                 </div>
                 <div class="error-wrapper" style="display:none;  margin-top:5px;"><div><i class="icon icon-x-altx-alt" style="font-size:13px;" id="popup_user_login_msg"></i></div></div>
                 <div class="btn-wrapper">
@@ -495,7 +495,7 @@
                 </div>
             </div>
             <div class="quick-link-wrapper group" style=" padding-bottom:0px;text-align: center;margin-top: 10px;">
-                <p>还没账号? <a href="/reg.html" style="color:#d42b2e;">马上注册</a></p>
+                <p>还没账号? <a href="./reg.html" style="color:#d42b2e;">马上注册</a></p>
             </div>
         </div>
     </div>
@@ -853,8 +853,8 @@
 </script>
 
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
-<script src="__STATIC__/static/home/js/moblie/reg.js"></script>
+<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
+<script src="__STATIC__/home/js/moblie/reg.js"></script>
 
 <script src="__STATIC__/home/js/index.js"></script>
 </body>

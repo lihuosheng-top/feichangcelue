@@ -168,7 +168,7 @@ var backcards = {
  */
 	user_bank_Insert:function () {
 		$.ajax({
-			url: "/index/ucenter/saveBankCardsData",
+			url: "./saveBankCardsData",
 			data: {
 				"bankName": $("#银行s > option:selected").html(), //银行名称
 				"province": $("#省s > option:selected").html(), //开户支行省
@@ -354,7 +354,7 @@ var backcards = {
              user_bank_Delete:function () {
                 if (!confirm("删除？")) return;
 
-                $.post("/index/ucenter/deleteBankCard", {}, function(data){
+                $.post("./deleteBankCard", {}, function(data){
                     if(data.code == '0'){
                         tool.popup_err_msg("删除成功");
                         location.reload();

@@ -455,6 +455,7 @@ class Ucenter extends Home
         $memberId = $_SESSION['member']['id'];
         $realName = trim(input("realName"));
         $IDNumber = trim(input("IDNumber"));
+
         if (strlen($realName) <= 1) {
             $this->error("姓名不正确");
         }
@@ -464,9 +465,11 @@ class Ucenter extends Home
         $data = array();
         $data['realName'] = $realName;
         $data['IDNumber'] = $IDNumber;
-        Db::table("xh_member")->where("id=$memberId")->update($data);
+       $bool = Db::table("xh_member")->where("id=$memberId")->update($data);
+        if($bool){
+            $this->success("保存成功", "index/ucenter/home");
+        }
 
-        $this->success("ok", "index/ucenter/home");
     }
 
     //手机-实名认证

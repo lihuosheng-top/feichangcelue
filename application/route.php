@@ -115,7 +115,7 @@ return [
 
 
     "updateNewPwd"=>"index/index/updateNewPwd",                         //密码修改
-    "doReanNameAuth"=>"index/ucenter/doReanNameAuth",                   //认证信息
+    "ucenter/doReanNameAuth"=>"index/ucenter/doReanNameAuth",                   //认证信息
     "home"=>"ucenter/mobile/home",
 
     'sendMobileCodeByPassWord'=> 'index/index/sendMobileCodeByPassWord',  //忘记密码-（短信验证）
@@ -145,6 +145,7 @@ return [
     'ucenter/user_info'=> 'index/ucenter/user_info',   		//个人中心-实名认证
     'ucenter/real_name'=> 'index/ucenter/real_name',   		//个人中心-实名认证2
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
+    'ucenter/deleteBankCard'=> 'index/ucenter/deleteBankCard',  //个人中心-删除银行卡
     "ucenter/saveBankCardsData"=>"index/ucenter/saveBankCardsData", //添加银行卡操作
 
     //后台路由设置
