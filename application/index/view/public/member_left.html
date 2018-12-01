@@ -10,22 +10,21 @@
                 <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
                 <p class="user-info">Hi，<strong id="shared_layout_mem_lnm">{$_SESSION['member']['username']}</strong></p>
                 <div class="iconrow">
-                   <a href="/ucenter/security.html"><span class="user-2"></span></a>
-                    <a href="/ucenter/security.html"><span class="user-3"></span></a>
-                    <a href="/ucenter/security.html"><span class="user-4"></span></a>
+                   <a href="./security.html"><span class="user-2"></span></a>
+                    <a href="./security.html"><span class="user-3"></span></a>
+                    <a href="./security.html"><span class="user-4"></span></a>
                 </div>
             </div>
             <h4 class="new-head-line"><span class="user-5"></span>会员中心</h4>
             <nav id="personal-nav" class="left-nav">
                 <ul>
 
-                    <li class=""><a href="/ucenter/index.html">我的首页&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    
-                    <li class=""><a href="/ucenter/bankcards.html">银行卡管理&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    <li class=""><a href="/ucenter/security.html">账户安全&nbsp;<span class="mem_gt">&gt;</span></a></li>
-					<li class=""><a href="/ucenter/payment.html">充值&nbsp;<span class="mem_gt">&gt;</span></a></li>
-					<li class=""><a href="/ucenter/withdraw.html">提现&nbsp;<span class="mem_gt">&gt;</span></a></li>
-                    <li class=""><a href="/ucenter/agent.html" style="display: none;">推广赚钱&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./index.html">我的首页&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./bankcards.html">银行卡管理&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./security.html">账户安全&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="./payment.html">充值&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="./withdraw.html">提现&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./agent.html" style="display: none;">推广赚钱&nbsp;<span class="mem_gt">&gt;</span></a></li>
                 </ul>
             </nav>
         </aside>
@@ -53,14 +52,14 @@
         $('#img_upload').AjaxFileUpload({
 			//处理文件上传操作的服务器端地址
 			//上传图片，返回图片地址
-			action: '/index/index/doImgUpload',
+			action: './index/index/doImgUpload',
 			onComplete: function(filename, resp) { //服务器响应成功时的处理函数
 				if(resp.code == '0') {
 					$('#headImg').attr('src', resp.data);
 					var params = {};
 					params['headImg'] = resp.data;
 					//保存图片到数据库，分两个地址是为了在很多地方公用
-					$.post("/index/ucenter/savePeopleImg", params, function(data) {
+					$.post("./index/ucenter/savePeopleImg", params, function(data) {
 						if(data.code == '0') {
 							tool.popup_err_msg("修改成功");
 						} else {

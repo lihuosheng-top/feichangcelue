@@ -6,8 +6,8 @@
 </head>
 <body class="membercenter logged-in">
 {include file="public:top" /}
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="/public/static/home/css/member.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/member.css"/>
 
 <!--个人中心-充值-->
 <div class="br-content">
@@ -25,12 +25,12 @@
             <p class="inner-sub-title"><span style="display: block;">账户余额</span><strong class="p-unit" id="账户余额">{$member.usableSum}</strong>元</p>
         </div>
         <div class="p-money clearfix">
-            <p class="diyongquan br-fl"><span class="ticket">我的抵用券</span><span id="diyongquan">0.00</span>元</p>
-            
+            <p class="diyongquan br-fl"><span class="ticket">免费体验金</span><span style="font-size: 37px" id="diyongquan">{$member.freebleSum}</span></p>
+
         </div>
         <div class="money_box p-money br-fr">
-            	<a id="recharge2" class="btn-1" href="/ucenter/payment.html">充值</a>
-            	<a id="withdraw2" class="btn-2" href="/ucenter/withdraw.html">提现</a>
+            	<a id="recharge2" class="btn-1" href="./payment.html">充值</a>
+            	<a id="withdraw2" class="btn-2" href="./withdraw.html">提现</a>
         </div>
     </section>
     <div class="mid-gap">
@@ -40,9 +40,9 @@
         <div class="table-control-bar clearfix">
             <label class="f-left">资金流向：</label>
             <ul class="f-left filter" id="money-flow">
-                <li><a href="/ucenter/index.html?recent={$_GET['recent']}" {if condition="$_GET['flow'] eq ''"} class="active" {/if} >全部</a></li>
-                <li><a href="/ucenter/index.html?flow=1&recent={$_GET['recent']}" {if condition="$_GET['flow'] eq '1'"} class="active" {/if}  >收入</a></li>
-                <li><a href="/ucenter/index.html?flow=2&recent={$_GET['recent']}" {if condition="$_GET['flow'] eq '2'"} class="active" {/if} >支出</a></li>
+                <li><a href="./index.html?recent={$_GET['recent']}" {if condition="$_GET['flow'] eq ''"} class="active" {/if} >全部</a></li>
+                <li><a href="./index.html?flow=1&recent={$_GET['recent']}" {if condition="$_GET['flow'] eq '1'"} class="active" {/if}  >收入</a></li>
+                <li><a href="./index.html?flow=2&recent={$_GET['recent']}" {if condition="$_GET['flow'] eq '2'"} class="active" {/if} >支出</a></li>
             </ul>
             <div class="f-right">
                 <select id="search-times">
@@ -95,14 +95,14 @@
 
    
     </section>
-    <section id="noPlanSection" class="group personal-section personal-empty hide">
-        <p><a href="javascript:void(0);" class="btn btn-pri">我要交易</a>
-        </p>
-        <p><a href="/freetrial.html">免费体验</a>
-        </p>
-        <p><a href="/help.html">了解交易</a>
-        </p>
-    </section>
+    <!--<section id="noPlanSection" class="group personal-section personal-empty hide">-->
+        <!--<p><a href="javascript:void(0);" class="btn btn-pri">我要交易</a>-->
+        <!--</p>-->
+        <!--<p><a href="./freetrial.html">免费体验</a>-->
+        <!--</p>-->
+        <!--<p><a href="./help.html">了解交易</a>-->
+        <!--</p>-->
+    <!--</section>-->
     <!--/ 交易列表start-->
     <div id="member_index_plan_list">
     </div>
@@ -390,7 +390,7 @@
 
 
 {include file="public:footer" /}
-<script src="/public/static/home/js/index.js"></script>
+<script src="__STATIC__/home/js/index.js"></script>
 </body>
 </html>
 
