@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634397;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html";i:1543629704;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1543635473;s:89:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540305965;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1543635473;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -633,7 +633,7 @@
 <footer class="br-w100">
     <div class="footer_top">
         <a href="<?php echo url('index/index/company'); ?>">关于我们</a>
-        <a href="./contact.html">联系我们</a>
+        <a href="<?php echo url('index/index/contact'); ?>">联系我们</a>
     </div>
     <div class="footer_bot">
         <div class="w1024 br-clearfix">

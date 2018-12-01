@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:72:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543633706;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:84:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\ucenter\member.html";i:1543635473;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1543635473;s:88:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543635473;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1543635473;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

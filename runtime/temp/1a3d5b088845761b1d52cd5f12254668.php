@@ -1,14 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\contact.html";i:1539064450;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543634460;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:85:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\ucenter\payment.html";i:1543641399;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1543635473;s:88:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543635473;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1543635473;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
-
-	<head>
-		<meta charset="UTF-8">
-		<title>尚牛在线</title>
-	</head>
-
-	<body class="grey logged-in contact_body">
-		<title>首页</title>
+<head>
+    <meta charset="UTF-8">
+    <title>尚牛在线</title>
+</head>
+<body class="membercenter logged-in">
+<title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
 <meta name="description" content="<?php echo config('web_site_description'); ?>">
@@ -138,109 +136,550 @@
 
 
 </script>
-		<link rel="stylesheet" type="text/css" href="./public/static/home/css/buy.css" />
-		<link rel="stylesheet" type="text/css" href="./public/static/home/css/contact.css" />
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/member.css"/>
+	<style type="text/css">/*offline-wrap*/
 
-		<!--联系我们-->
-		<div class="br-content">
-			<div class="w1024">
-				<div class="title_box">
-					<h1 class="title_cp_h">联系我们</h1>
-					<p class="title_cp_p">CONTACT US</p>
-				</div>
-				<section class="contact-info">
-					<ul class="br-clearfix">
-						<li class="contact_li br-fl">
-							<a href="tel:<?php echo $phone; ?>" target="_blank">
-								<h4>客服热线</h4>
-								<p><?php echo $phone; ?></p>
-							</a>
-						</li>
-						<li class="contact_li br-fl">
-							<h4>工作日</h4>
-							<p>09：00 - 18：00</p>
-						</li>
-						<li class="contact_li br-fl">
-							<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $QQ; ?>&site=qq&menu=yes">
-								<h4>QQ客服</h4>
-								<p><?php echo $QQ; ?></p>
-							</a>
-						</li>
-						<!--<li class="contact_li br-fl">
-								<h4>微信客服</h4>
-								<p>hexu19850516</p>
-						</li>-->
-						
-					</ul>
-					<p class="bot_p">公司地址：深圳市龙华新区大浪街道大浪时尚创意城浪静路11号南国俪人产业园<br>我们已开通了微博、QQ、400电话等多种服务窗口，随时随地能为您提供咨询</p>
+.offline-wrap {
+	margin-left: 15px;
+	font-size: 14px;
+	background-color: #fff
+}
+
+.offline-wrap input {
+	border: none
+}
+
+.offline-wrap .each-line {
+	color: #333;
+	padding: 15px;
+	padding-left: 0;
+	border-bottom: 1px solid #E5E5E5
+}
+
+.offline-wrap .each-line li {
+	float: left;
+	width: 50%
+}
+
+.offline-wrap .each-line li input {
+	text-align: right;
+	width: 100%
+}
+
+.offline-wrap .each-line span.tip {
+	font-size: 12px;
+	color: #E5E5E5
+}
+
+.offline-wrap .each-line .zz-tip {
+	padding-bottom: 7px
+}
+
+.offline-wrap .zzpz-tip {
+	padding: 30px;
+	text-align: center;
+	color: #3483E9
+}
+
+.offline-wrap .zzpz-tip .offline-form {
+	position: relative;
+	display: block;
+	width: 133px;
+	height: 40px;
+	top: -25px;
+	margin: auto auto;
+	background-color: transparent;
+	font-size: 0
+}
+
+.offline-wrap .zzpz-tip .offline-form input {
+	line-height: normal;
+	width: 133px;
+	height: 40px;
+	display: inline-block;
+	opacity: 0;
+	cursor: pointer
+}
+
+.select-options {
+	float: right
+}
+
+.select-options select {
+	-webkit-appearance: none;
+	border: none;
+	direction: rtl
+}
+
+.offline-pic {
+	margin-top: 15px
+}
+
+.offline-pic img.delete {
+	width: 20px;
+	top: -10px;
+	position: relative;
+	left: 114px;
+	float: left
+}
+
+.offline-pic #cId img {
+	width: 100px
+}
+
+.offline-tip {
+	margin: 15px 15px 55px 15px;
+	color: #999;
+	font-size: 12px
+}
+
+.offline-kf {
+	text-align: center;
+	margin-top: 20px;
+	color: #333;
+	font-size: 14px
+}
+
+.offline-kf a {
+	color: #3483E9
+}
+
+.tab-item {
+	width: 50%;
+	margin: 10px auto;
+	border: solid #EFEFF4 3px;
+}
+
+.btn-full {
+	height: 48px;
+	line-height: 48px;
+	width: 90%;
+	color: #FFF;
+	font-size: 18px;
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	border-radius: 7px;
+}
+
+.btn-orange {
+	background: #FF8C19;
+}
+
+.form-list li span {
+	display: inline-block;
+	color: #333;
+	font-size: 14px;
+}
+
+.form-list li input {
+	display: inline-block;
+	color: #333;
+	font-size: 14px;
+	height: 36px;
+}
+
+.form-list li .title {
+	width: 22%;
+	text-align: right;
+}
+
+.form-list li .content {
+	width: 60%;
+}
+
+#submit {
+	margin-top: 20px;
+	width: 100px;
+	height: 50px;
+	color: #fff;
+	border: 1px solid #007aff;
+	background-color: #007aff;
+}
+
+#submits {
+	margin-top: 20px;
+	width: 100px;
+	height: 50px;
+	color: #fff;
+	border: 1px solid #007aff;
+	background-color: #007aff;
+}
+
+.re_p {
+	margin-bottom: 20px;
+	margin-top: 5px;
+	color: #8f8f94;
+	text-align: center;
+}
+
+.font12 {
+	font-size: 12px;
+}
+
+.color_red {
+	color: #e60012;
+}
+
+.wx_p1 {
+	padding-top: 20px;
+	margin-bottom: 25px;
+}
+
+p {
+	font-size: 14px;
+	margin-top: 0;
+	margin-bottom: 10px;
+	color: #8f8f94;
+	text-align: center;
+}
+
+.wx_img {
+	width: 150px;
+	margin: 0 auto;
+	display: block;
+}</style>
+
+<!--个人中心-充值-->
+<div class="br-content">
+<div class="w1200">
+	<!--主体-->
+<section class="page-main page-personal">
+    <div class="container clearfix">
+    	<!--public左边-->
+    	
+        <aside class="col-left">
+            <div class="userinfo">
+            	<form name="user_head" id="user_head">
+					<input type="file" name="myfile222" id="img_upload" />
+					<div class="img_download">
+						<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >
+					</div>
+				</form>
+                <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
+                <p class="user-info">Hi，<strong id="shared_layout_mem_lnm"><?php echo $_SESSION['member']['username']; ?></strong></p>
+                <div class="iconrow">
+                   <a href="./security.html"><span class="user-2"></span></a>
+                    <a href="./security.html"><span class="user-3"></span></a>
+                    <a href="./security.html"><span class="user-4"></span></a>
+                </div>
+            </div>
+            <h4 class="new-head-line"><span class="user-5"></span>会员中心</h4>
+            <nav id="personal-nav" class="left-nav">
+                <ul>
+
+                    <li class=""><a href="./index.html">我的首页&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./bankcards.html">银行卡管理&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./security.html">账户安全&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="./payment.html">充值&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="./withdraw.html">提现&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="./agent.html" style="display: none;">推广赚钱&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+<script src="__STATIC__/home/js/moblie/jquery.ajaxfileupload.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		/**
+		 * active
+		 */
+			//console.log(window.location.pathname)
+		$('#personal-nav li').removeClass('active');
+
+		//遍历
+		$('#personal-nav li>a').each(function () {
+			if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {
+				$(this).parent().addClass('active');
+			}
+		});
+		
+		
+		/**
+		 * 上传头像
+		 */
+        $('#img_upload').AjaxFileUpload({
+			//处理文件上传操作的服务器端地址
+			//上传图片，返回图片地址
+			action: './index/index/doImgUpload',
+			onComplete: function(filename, resp) { //服务器响应成功时的处理函数
+				if(resp.code == '0') {
+					$('#headImg').attr('src', resp.data);
+					var params = {};
+					params['headImg'] = resp.data;
+					//保存图片到数据库，分两个地址是为了在很多地方公用
+					$.post("./index/ucenter/savePeopleImg", params, function(data) {
+						if(data.code == '0') {
+							tool.popup_err_msg("修改成功");
+						} else {
+							tool.popup_err_msg(data.msg);
+						}
+					}, 'json');
+				} else {
+					tool.popup_err_msg(resp.msg );
+				}
+			}
+		});
+		
+		
+		
+	});
+
+</script>
+        <!--右边-->
+<div id="page_member_payment" class="col-main page-member-payment">
+    <div class="tabs-wrapper" id="pay-method-tabs">
+        <nav>
+            <ul class="clearfix">
+                <li class="active"><a href="javascript:;" id="pm4">银行转账</a></li>
+                <li><a href="javascript:;" id="pm3">支付宝转账</a></li>
+                <li><a href="javascript:;" id="pm2">微信转账</a></li>
+            </ul>
+        </nav>
+        <div class="tabs">
+            
+            
+            <div class="tab-item hide" id="tab-pm3">
+              <div class="mui-content">
+		    <div class="pay_title">第一步：请复制或牢记我们的支付宝账号</div>
+		    <!--<section class="sec1 bg_fff mui-clearfix">-->
+		    	<!--<img class="mui-pull-left mui-col-xs-2" src="../public/static/home/img/moblie/Apay.png"/>-->
+		    	<!--<div class="text mui-pull-left mui-col-xs-9">-->
+		    		<!--<p>支付账号：<span class="copy" id="copyText">sm00009@163.com</span></p>-->
+		    		<!--<p> 深圳市尚美时尚产业投资管理有限公司</p>-->
+		    		<!--<p class="zhuyi">注：请务必在转账备注中填写注册手机号 这样方便我们多重信息确认你的汇款</p>-->
+		    	<!--</div>-->
+		    	<!--<a id="copy_btn" class="copy mui-pull-right mui-col-xs-1" href="javascript:;">复制</a>-->
+		    <!--</section>-->
+				<section>
+					<div style="width: 70%; margin: 0 auto;">
+					<img src="/feichangcelue/public/static/home/img/moblie/Apay1.jpg" alt="" width="100%">
+					</div>
+			
+						<p style="text-align: center; color: #333;">（或选择）
+							<br>
+							支付宝财务代收款账号：13013462819     罗蓉</p>
+					
 				</section>
-				
-			</div>
-		</div>
-				
-	<!--认证银行卡-->			
-	<div class="popup" id="popup-id-verify">
-					<div class="popup-header group">
-						<h2>认证银行卡</h2>
-						<a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-					</div>
-					<div class="popup-body group">
-						<div class="field-row group" style="text-align:center">
-							<ol class="popup-note">
-								<li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-								<li style="text-align:left;">请务必认真填写真实资料</li>
-								<li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-								<li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-							</ol>
-							<p>为了保障您的账户安全，请先绑定银行卡</p>
-						</div>
-						<div class="btn-row group">
-							<a class="btn btn-pri" href="/ucenter/bankCards.html">去绑定</a>
-							<a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-						</div>
-					</div>
-				</div>
-	<!--实名认证-->
-	<div class="popup" id="popup-realname-auth">
-					<div class="popup-header group">
-						<h2>实名认证</h2>
-						<a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-					</div>
-					<div class="popup-body group">
-						<div class="field-row group" style="text-align:center">
-							<ol class="popup-note">
-								<li style="text-align:left;">一个身份证对应一个账号</li>
 
-								<li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-							</ol>
-							<p>为了保障您的账户安全，请先进行实名认证</p>
-						</div>
-						<div class="field-row group">
-							<label>真实姓名：</label>
-							<div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-						</div>
-						<div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none">
-							<div><i class="icon icon-x-altx-alt"></i>未填写姓名</div>
-						</div>
-						<div class="field-row group">
-							<label>身份证号：</label>
-							<div class="field-val">
-								<div class="field-val">
-									<input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-								</div>
-							</div>
-						</div>
-						<div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none">
-							<div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div>
-						</div>
-						<div class="btn-row group">
-							<a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-							<a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-						</div>
-					</div>
+
+			<form action="ccc" method="post">
+				<ul class="form-list" style="margin-top: 20px;">
+					<li>
+						<span class="title">金额:</span>
+						<span class="content"><input type="text" name="amount" id="amount" value=""></span>
+					</li>
+					<li>
+						<span class="title" style="vertical-align: 40px;">说明:</span>
+						<span class="content"><textarea rows="2" cols="20" name="instructions" id="instructions" style="border: solid 1px #A9A9A9;"></textarea></span>
+					</li>
+					<li>
+						 <span class="title">支付宝账号:</span>
+						 <span class="content"><input type="text" name="alipay" id="alipay" value=""></span>
+					</li>
+				</ul>
+				<!-- <div class="upload_img">
+                    <p>截图凭证：</p>
+                    <ul>
+                        <li class="upload_input">
+                            <a href="javascript:;">
+                                <img src="/feichangcelue/public/static/index/image/icon-cam.png">
+                            </a>
+                            <input type="file" id="myfile" enctype="multipart/form-data"  multiple accept="image/jpeg, image/jpg, image/png" name="credentials">
+                        </li>
+                    </ul>
+                </div> -->
+				<div class="buts" style="text-align: center;">
+					<input type="submit" value="确认提交" id="submit">
 				</div>
-							
-		<!--底部-->
+				
+			</form>
+
+
+
+
+			 <!--<div class="pay_title">第二步：手机打开支付宝，快速转账</div>-->
+		    <!--<section class="sec2 bg_fff">-->
+		    	<!--<img src="../public/static/home/img/moblie/ali-pay.png"/>-->
+		    <!--</section>-->
+		    <!--<p class="over_p mui-text-center bg_fff">完成后，请到个人中心查看<a href="../ucenter/home.html">账户余额</a></p>-->
+			<!--<a type="button" class="ml_btn mui-btn mui-btn-block" href="https://ds.alipay.com/?from=mobilecodec&scheme=alipays%3A%2F%2Fplatformapi%2Fstartapp%3FsaId%3D10000007%26clientVersion%3D3.7.0.0718%26qrcode%3Dhttps%253A%252F%252Fqr.alipay.com%252Fa6x061714walnkq3lfptl18%253F_s%253Dweb-other">去转账</a>-->
+
+			<p class="mui-text-center font12 re_p">请在上方填写对应的凭证</p>
+			<p class="mui-text-center re_p">到账时间</p>
+			<p class="mui-text-center re_p ">08：45-17:00（30分钟内到账） 17:00以后（次日09:30到账）<br> 如急需到账，请电话 <a href="javascript:void(0);" target="_blank">联系客服</a></p>
+		
+		
+		
+		
+		</div>
+            </div>
+            <!--/.tab-item -->
+            <div class="tab-item hide" id="tab-pm2">
+            	<div class="mui-content">
+		  <div class="wx_top">
+		  	<p class="color_red wx_p">请扫码充值，并务必在转账备注中填写注册手机号 这样方便我们多重信息确认你的汇款</p>
+		  	<!--<img class="wx_img" src="/feichangcelue/public/static/home/img/wxpay.png"/>-->
+		  	<img class="wx_img" src="/feichangcelue/public/static/home/img/wxpay3.png">
+		  	<p class="wx_p">请用微信扫描二维码</p>
+		  	<!--<p class="wx_p3" style="color: #e60012">因对公帐户核对帐目，现由子公司代收，给您造成不便 我们深表谦意！如您需要其他支付方式请联系在线客服，谢谢！</p>-->
+		  	<p class="wx_p">转账成功后，请在下方填写对应的凭证，请拨打客服热线4001665652以便我们及时帮您处理</p>
+			<!--<p class="wx_p3">账户：赵金霞</p>-->
+			<div class="ball ball_l"></div>
+			<div class="ball ball_r"></div>
+			<form action="aaa" method="post">
+				<ul class="form-list">
+					<li>
+						<span class="title">金额:</span>
+						<span class="content"><input type="text" name="amount" id="amount" value=""></span>
+					</li>
+					<li>
+						<span class="title" style="vertical-align: 40px;">说明:</span>
+						<span class="content"><textarea rows="2" cols="20" name="instructions" id="instructions" style="border: solid 1px #a9a9a9;"></textarea></span>
+					</li>
+					<li>
+						<span class="title">微信号:</span>
+						<span class="content"><input type="text" name="alipay" id="alipay" value=""></span>
+					</li>
+				</ul>
+				<!-- <div class="upload_img">
+					<p>截图凭证：</p>
+					<ul>
+						<li class="upload_input">
+							<a href="javascript:;">
+								<img src="/feichangcelue/public/static/index/image/icon-cam.png">
+							</a>
+							<input type="file" id="myfile" enctype="multipart/form-data"  multiple accept="image/jpeg, image/jpg, image/png" name="credentials">
+						</li>
+					</ul>
+				</div> -->
+				<div class="buts" style="text-align: center;">
+					<input type="submit" value="确认提交" id="submits">
+				</div>
+				
+			</form>
+		  </div>
+			
+		</div>
+               </div>
+            <!--/.tab-item -->
+            <div class="tab-item " id="tab-pm4">
+             <form action="bbb" id="payForm" >
+                    
+					<input type="hidden" value="1" name="pay_type">
+				<div style="background-color:#fff">
+					<div class="offline-wrap">
+						<ul class="each-line clearfix">
+							<li style="    width: 100%;"> 你可以通过网上银行、银行柜台、ATM等方式向转账 <span style="color: #f70909;">(提示：必须先转账 后填写此凭证提交)</span></li>
+						</ul>
+					
+
+						<ul class="each-line clearfix">
+							<li style="width: 100%;">
+								<span style="color: red;">
+									<!--因对公帐户对帐，目前由财务代入款，给您造成不便抱歉！建设银行帐户：6236683200000984199姓名：梁欣茵，如您需要其他支付方式请联系在线客服，谢谢！-->
+									<!--因对公帐户核对帐目，现由子公司代收，给您造成不便 我们深表谦意!-->
+									<br>
+									入款帐户：755928537410701
+									<br>
+									单位名称：深圳市尚美时尚产业投资管理有限公司
+									<br>
+									开 户 行：招商银行股份有限公司深圳中心城支行
+
+
+								</span>
+							</li>
+						</ul>
+
+						<ul class="each-line clearfix">
+							<li>
+								<span>建设银行财务帐户帐号：</span>
+							</li>
+							<li>
+								<span style="color: red;float: right">6236 6832 0000 0984 199</span>
+							</li>
+						</ul>
+
+						<ul class="each-line clearfix">
+							<li>
+								<span>账户名称：</span>
+							</li>
+							<li>
+								<span style="color: red;float: right">梁欣茵</span>
+							</li>
+						</ul>
+
+
+
+
+
+	<ul class="each-line clearfix">
+							<li>
+								<span>充值金额</span>
+							</li>
+							<li>
+								<input type="number" placeholder="请输入充值金额" id="paymoney" name="pay_money">
+							</li>
+						</ul>
+						<ul class="each-line clearfix">
+							<li>
+								<span>我的充值银行卡号：</span>
+							</li>
+							<li>
+								<input type="text" value="" placeholder="请填写充值的银行卡号进行核对" id="bank_num" name="bank_num">
+							</li>
+						</ul>
+
+						<ul class="each-line clearfix">
+							<li>
+								<span>转账备注</span>
+							</li>
+							<li>
+								<input type="text" value="本人确认该笔款项用于股票配资之用" placeholder="本人确认该笔款项用于股票配资之用" id="remark" name="remark">
+							</li>
+						</ul>
+
+						<div class="zzpz-tip" id="upbutton">
+							<label>
+                     </label>
+
+						</div>
+
+					</div>
+</div>
+				<div class="recharge-tip">
+				<p>充值后，请在公众号留言或联系充值客服QQ：910605652，我们及时为您充值</p>
+				</div>
+					<div style="width: 100%">
+						<!--<div class="btn-full btn-orange" style="margin-left: 5%;" onclick="charge();" id="on_buton">确认提交</div>-->
+						<input type="submit" name="" id="" value="确认提交" class="btn-full btn-orange"  />
+					</div>
+
+                    	
+                    </form>
+
+            </div>
+            <!--/.tab-item -->
+            <!--/.tabs-->
+        </div>
+    </div>
+</div>
+
+    </div>
+</section>
+
+
+
+
+
+</div>
+</div>
+
+
+<!--底部-->
 <footer class="br-w100">
     <div class="footer_top">
         <a href="<?php echo url('index/index/company'); ?>">关于我们</a>
@@ -499,7 +938,6 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-		<!--<script src="./public/static/home/js/reg.js"></script>-->
-	</body>
 
+</body>
 </html>
