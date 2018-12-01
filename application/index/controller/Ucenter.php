@@ -1267,6 +1267,7 @@ class Ucenter extends Home
         if (!$_SESSION['member'] && !session('user_auth')) {
             die("请先登录");
         }
+        $this->isTradingTime();
             $member = $_SESSION['member'];
             $memberId = (int)$member['id'];
             $orderId = (int)trim($_POST['orderId']);
