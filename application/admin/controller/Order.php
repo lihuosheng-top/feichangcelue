@@ -74,8 +74,8 @@ class Order extends Admin
                 ['dealPrice', '买入价(元)'],
                 ['dealAmount', '买入金额(万)'],
                 ['dealQuantity', '数量(手)'],
-                ['surplus', '止盈线(元)'],
-                ['loss', '止损线(元)'],
+                ['surplus', '警戒线(元)'],
+                ['loss', '平仓线(元)'],
                 ['publicFee', '综合费(元)'],
                 ['guaranteeFee', '保证金(元)'],
                 ['delayLine', '递延线(元)'],
@@ -146,6 +146,7 @@ class Order extends Admin
                 ['profitSelf', '盈利分配(元)'],
                 ['guaranteeFee', '保证金(元)'],
                 ['delayDays', '递延天数（天）'],
+                ['buy_day_num','配资天数'],
                 ['buy_month_num','配资月数(月)'],
                 ['createTime', '买入时间' ],
                 ['buy_day_end_time','配资到期时间'],
@@ -233,6 +234,9 @@ class Order extends Admin
         //查询余额
         $map = Db::table("xh_member")->field("usableSum")->where("id=$memberId")->find();
         $usableSum = $map['usableSum'];
+        if(empty($usableSum)){
+            $usableSum =0;
+        }
         $remarks = "手动";
         if($liquidation == 2){
             $remarks = "亏损超过止损线自动";
@@ -240,11 +244,13 @@ class Order extends Admin
             $remarks = "亏损超过警戒线自动";
         }else if($liquidation == 4){
             $remarks = "收盘时亏损额超过递延线自动";
+        }else if($liquidation == 5){
+            $remarks = "配资时间到期自动";
         }
         $remarks .= "平仓,退还保证金{$guaranteeFee}元,盈利分配{$profitSelf}元。";
-
+        $creat_tiems =date("Y-m-d H:i:s");
         $sql = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
-            values ($memberId, '1', $amount, $usableSum , '{$remarks}', now() );";
+            values ($memberId, '1', $amount, $usableSum , '{$remarks}', '{$creat_tiems}' );";
         $ret = Db::execute($sql);
         return $ret;
     }

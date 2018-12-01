@@ -17,6 +17,7 @@ return [
     'freetrial'=> 'index/index/freetrial?code',	    //1元模拟
     'freetrial1'=> 'index/index/freetrial1',
     'sell'=> 'index/ucenter/sell',       			//点卖区
+    'ucenter/money_add'=>'index/ucenter/money_add',    //补仓
     'history'=> 'index/ucenter/history',       	//结算区
     "ajax_html"=>"index/index/ajax_html",
 
@@ -69,6 +70,8 @@ return [
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
     'PcSell'=>'index/index/PcSell',//pc端配资点卖
     'PcFreeSell'=>'index/index/PcFreeSell',//pc端配资点卖（免费体验）
+    'stock_information_index_sh'=>'index/index/stock_information_index_sh',//PC端首页上证指数接口
+    'stock_information_index_sz'=>'index/index/stock_information_index_sz',//PC端首页深证指数接口
     /**
      * pC端首页最底部连接开始
      */
@@ -142,6 +145,7 @@ return [
     'ucenter/user_info'=> 'index/ucenter/user_info',   		//个人中心-实名认证
     'ucenter/real_name'=> 'index/ucenter/real_name',   		//个人中心-实名认证2
     'ucenter/add_bankcard'=> 'index/ucenter/add_bankcard',  //个人中心-添加银行卡
+    "ucenter/saveBankCardsData"=>"index/ucenter/saveBankCardsData", //添加银行卡操作
 
     //后台路由设置
     'withdraw_finished'=> 'admin/member/withdraw_finished',  				//个人中心-首页

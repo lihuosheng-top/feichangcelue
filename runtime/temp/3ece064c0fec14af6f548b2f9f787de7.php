@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:99:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index_information_first.html";i:1541002992;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:99:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index_information_first.html";i:1543629704;}*/ ?>
 <!--按月-->
 <!DOCTYPE html>
 <html lang="en">
@@ -255,11 +255,12 @@
 				$("#borrow_money").text(preparation_money);
 //				获得资金
 				$("#gain_money").text(preparation_money);
-//				亏损警戒线：
-                var loss_warn=stopLossRate*bao+preparation_money;
+//			亏损警戒线：
+                var loss_warn=lossLine*bao+preparation_money;
 				$("#loss_warn").text(-loss_warn);
 				//               亏损平仓线
-				 var loss_close=lossLine*bao+preparation_money;
+				
+				 var loss_close=stopLossRate*bao+preparation_money;
 				$("#loss_close").text(-loss_close);
                 //天数改变
                 $('#monthUse').text(c);
@@ -330,11 +331,12 @@
 				$("#borrow_money").text(preparation_money);
 //				获得资金
 				$("#gain_money").text(preparation_money);
-//				亏损警戒线：
-                var loss_warn=stopLossRate*bao+preparation_money;
+//			亏损警戒线：
+                var loss_warn=lossLine*bao+preparation_money;
 				$("#loss_warn").text(-loss_warn);
 				//               亏损平仓线
-				 var loss_close=lossLine*bao+preparation_money;
+				
+				 var loss_close=stopLossRate*bao+preparation_money;
 				$("#loss_close").text(-loss_close);
                 //天数改变
                 $('#monthUse').text(c);
@@ -400,11 +402,12 @@
 				$("#borrow_money").text(preparation_money);
 //				获得资金
 				$("#gain_money").text(preparation_money);
-//				亏损警戒线：
-                var loss_warn=stopLossRate*bao+preparation_money;
+//		亏损警戒线：
+                var loss_warn=lossLine*bao+preparation_money;
 				$("#loss_warn").text(-loss_warn);
 				//               亏损平仓线
-				 var loss_close=lossLine*bao+preparation_money;
+				
+				 var loss_close=stopLossRate*bao+preparation_money;
 				$("#loss_close").text(-loss_close);
                 //天数改变
                 $('#monthUse').text(c);

@@ -139,7 +139,8 @@ class Ucenter extends Home
                 \phpmailer\Email::send($data['email'],$title,$content);
                $res_data = Db::name('member_card_pay')->insertGetId($data);
                if($res_data>0){
-                   session('czsq',$res_data); //TODO:充值提示音
+                    //TODO:充值提示音
+                   DB::name('music')->insert(['content'=>"银行卡充值申请"]);
                    $this->success('申请成功');
                }
 
@@ -287,11 +288,9 @@ class Ucenter extends Home
             }
             //记录新的数据提现申请（易于后台操作）//TODO:新添加（提现申请提示音）
             if($ret>0){
-                session( 'txsq',$ret);
+                Db::name('music')->insert(['content'=>'银行卡提现申请']);
             }
-
             //资金变动
-
             //余额减少
             $ret = Db::table("xh_member")->where("id = $memberId and usableSum >= $amount")->setInc('usableSum', -$amount);
             if ($ret <= 0) {
@@ -356,6 +355,7 @@ class Ucenter extends Home
         $city = trim(input("city"));
         $branch_name = trim(input("branch_name"));
         $card_no = trim(input("card_no"));
+
         if ($bankName == '' || $province == '' || $city == '' || $branch_name == '' || $card_no == '') {
             error("信息填写不完整");
         }
@@ -363,7 +363,6 @@ class Ucenter extends Home
         if (!$member['realName'] || trim($member['realName']) == '') {
             error("请先实名认证");
         }
-
         $memberId = $member['id'];
 
         $data['memberId'] = $memberId;
@@ -467,7 +466,7 @@ class Ucenter extends Home
         $data['IDNumber'] = $IDNumber;
         Db::table("xh_member")->where("id=$memberId")->update($data);
 
-        $this->success("ok", url("ucenter/mobile/home"));
+        $this->success("ok", "index/ucenter/home");
     }
 
     //手机-实名认证
@@ -517,9 +516,7 @@ class Ucenter extends Home
         $delayFeeSum = Db::table("xh_stock_order")
             ->where("memberId=$memberId and isFreetrial=$isFreetrial and status = 1 ")
             ->sum("$sys_delayFee * dealAmount");//18*成交金额
-
 //            $delayFeeSum = 0;
-
         $delayFeeSum = round($delayFeeSum,2);
 //        $delayFeeSum = number_format($price, 2, '.', '');
         $this->assign('delayFeeSum', $delayFeeSum);//18*成交金额
@@ -586,8 +583,6 @@ class Ucenter extends Home
         }
         $_SESSION['profitSum'] = $profitSu;
         $this->assign("profitSum", $profitSu);
-
-
         $profitSum = 0;
         $list2 = array();
         foreach ($list as $i => $v) {
@@ -600,7 +595,6 @@ class Ucenter extends Home
             $profitAmount = ($nowPrice - $dealPrice) * ((int)$v['dealQuantity']) * 100; //收益额（数量乘一百）//输出4346
             $profitAmount = round($profitAmount, 2);
             $delayDays = $this->getDaysCount($v['createTime']) - 2;//递延天数
-
             //入库
             if ($delayDays < 0) {
                 $delayDays = 0;
@@ -626,7 +620,7 @@ class Ucenter extends Home
         return view('sell');
     }
 
-    //一元模拟点卖区
+    //模拟点卖区
     public function freetrialSell()
     {
         $this->getSellData(1);
@@ -995,6 +989,7 @@ class Ucenter extends Home
      */
     public function freetrialBuy()
     {
+        $this->isTradingTime();
         Db::transaction(function () {
             $member = $_SESSION['member'];
             $memberId = (int)$member['id'];
@@ -1202,7 +1197,7 @@ class Ucenter extends Home
      */
     private function stock_sell_do($orderId, $memberId = null)
     {
-
+        $this->isTradingTime();
         if (!$_SESSION['member'] && !session('user_auth')) {
             die("请先登录");
         }
@@ -1228,9 +1223,6 @@ class Ucenter extends Home
              error("当天点买的股票下个工作日才能卖出");
          }
         //判断是都在购买中遇到节假日或者周末进行跳过（只计算工作日）
-
-
-
 
 //        $arr = (new Alistock())->batch_real_stockinfo($stock['market'].$stock['code']);
 //        $nowPrice = $arr[$code];
@@ -1293,21 +1285,41 @@ class Ucenter extends Home
             $profit = round(($nowPrice - $order['dealPrice']) * $order['dealQuantity'] * 100, 2);
             //计算盈利分配
             $profitSelf = $profit;
-            $profitFee = (float)(getSysParamsByKey("profitFee"));
+//            $profitFee = (float)(getSysParamsByKey("profitFee"));
+            $profitFee = (float)(getSysParamsByKey("FreeSellRate"));
             if ($profit > 0) {
-                $profitSelf = $profit * (1 - $profitFee);
+//                $profitSelf = $profit * (1 - $profitFee);
+                $profitSelf =$profit*$profitFee;
             }
             //保证金
             $guaranteeFee = round($order['guaranteeFee'], 2);
             $amount = $guaranteeFee + $profit;
+//             $amount =$guaranteeFee;
             $sql = "update xh_stock_order set `status` = 2, sellPrice=$nowPrice, profit = $profit, profitSelf=$profitSelf, sellTime = now() where id = $orderId and `status` = 1";
             $ret = Db::execute($sql);
             if ($ret != 1) {
                 error("请勿重复交易");
             }
-            $sql = "update xh_member set freebleSum = freebleSum + $amount where id = $memberId;";
+            if( $profitSelf>=0){
+                $sql = "update xh_member set freebleSum = freebleSum + $amount ,usableSum = usableSum + $profitSelf where id = $memberId;";
+            }else{
+                $sql = "update xh_member set freebleSum = freebleSum + $amount  where id = $memberId;";
+            }
             $ret = Db::execute($sql);
-            if($ret){
+            //查询余额
+            $map = Db::table("xh_member")->field("usableSum,freebleSum")->where("id=$memberId")->find();
+            $usableSum = $map['usableSum'];
+            $freebleSum=$map['freebleSum'];
+        if( $profitSelf>=0) {
+            $sqls = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
+            values ($memberId, '1', $amount, $usableSum , '卖出股票,退还免息保证金{$guaranteeFee}元，盈利分配{$profitSelf}元，账户余额增加{$profitSelf}元 ，账户余额：{$usableSum}，免息体验金余额：{$freebleSum}', now() );";
+        }else{
+            $sqls = "insert into xh_member_fundrecord (memberId, flow, amount, usableSum, remarks, createTime)
+            values ($memberId, '1', $amount, $usableSum , '卖出股票,退还免息保证金{$guaranteeFee}元，盈利分配{$profitSelf}元，账户余额增加0元，账户余额：{$usableSum}，免息体验金余额：{$freebleSum}', now() );";
+        }
+
+            $re = Db::execute($sqls);
+            if($ret&&$re){
                 $this->success('卖出成功',url('./freetrialHistory'));
                 return $ret;
             }
@@ -1448,7 +1460,8 @@ class Ucenter extends Home
            if(!empty($data)){
                $res = Db::table('xh_alipay_examine')->insertGetId($data);
                if($res>0){
-                   session('zfbcz',$res); //TODO:充值提示音
+                    //TODO:充值提示音
+                       Db::name('music')->insert(['content'=>"支付宝充值申请"]);
                    return $this->ajax_success('提交成功,请等候审核',$data);
                }
            }
@@ -1473,7 +1486,8 @@ class Ucenter extends Home
             if(!empty($data)){
                 $res = Db::table('xh_wechat_examine')->insertGetId($data);
                 if($res){
-                    session('wxcz',$res); //TODO:充值提示音
+                    //TODO:充值提示音
+                    Db::name('music')->insert(['content'=>"微信充值申请"]);
                     return $this->ajax_success('提交成功,请等候审核',$data);
                 }
             }
@@ -1482,7 +1496,63 @@ class Ucenter extends Home
     }
 
 
+    /**
+     **************李火生*******************
+     * 补仓
+     **************************************
+     */
+    public function  money_add(Request $request)
+    {
+        if ($request->isPost()) {
+            $order_id = $_POST['order_id'];
+            $money_update = $_POST['money_update'];
+            if (empty($order_id)) {
+                return ajax_success('订单号不存在', ['status' => 0]);
+            }
 
+            if (empty($money_update)) {
+                return ajax_success('请输入补仓金额', ['status' => 0]);
+            }
+            $memberId = $_SESSION['member']['id'];
+            $usableSum = Db::name('member')->where('id',$memberId)->find();
+            $usableSum_change = $usableSum['usableSum'] - $money_update;
+            if ($usableSum_change < 0) {
+                return ajax_success('余额不足，请前往充值');
+            }
+
+            $data = Db::name('stock_order')->where('id', $order_id)->find();
+            $order_new_money = $data['guaranteeFee'] + $money_update;//新保证金
+            $order_dealAmount = $data['dealAmount'];//成交金额
+            $stopLossRate = getSysParamsByKey("stopLossRate");//止损线
+            $lossLine = getSysParamsByKey("lossLine");//警戒线
+
+            $loss = $stopLossRate * $order_new_money + $order_dealAmount * 10000;
+            $surplus = $lossLine * $order_new_money + $order_dealAmount * 10000;
+            $data_update = [
+                'loss' => $loss,
+                'surplus' => $surplus,
+                'guaranteeFee'=>$order_new_money
+            ];
+            $res = Db::name('stock_order')->where('id',$order_id)->update($data_update);
+            if ($res) {
+                $usableSum = Db::name('member')->where('id', $data['memberId'])->find();
+                $usableSum_change = $usableSum['usableSum'] - $money_update;
+                if ($usableSum_change < 0) {
+                    $this->ajax_success('余额不足，请前往充值');
+                }
+                $del_money = Db::name('member')->where('id', $data['memberId'])->update(['usableSum' => $usableSum_change]);
+                if ($del_money) {
+                    return ajax_success('补仓成功', ['status' => 1]);
+                } else {
+                    return ajax_success('补仓失败', ['status' => 2]);
+                }
+
+            } else {
+                return ajax_success('补仓失败', ['status' => 2]);
+            }
+
+        }
+    }
 
 
 }

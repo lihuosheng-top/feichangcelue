@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\buy.html";i:1540039270;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:79:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\buy.html";i:1543629704;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1541002565;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -182,7 +182,7 @@
                     <!--<li class="br-fl"><a href="<?php echo url('index'); ?>" class="active">首页</a></li>-->
                     <li class="br-fl"><a href="./index.html" >首页</a></li>
                     <!-- <li class="br-fl"><a href="./buy2.html">A股点买</a></li>
-                     <li class="br-fl"><a href="./freetrial2.html">免费体验</a></li>-->
+                     <li class="br-fl"><a href="./freetrial2.html">免息体验</a></li>-->
                     <li class="br-fl"><a href="./safeensure.html">安全保障</a></li>
                     <li class="br-fl help_box">
                         <a href="./guild.html">帮助中心</a>
@@ -206,7 +206,7 @@
 <div class="stock-buy">
     <section class="play-area">
         <div class="nav-left">
-            <a href="./freetrial" style="height: initial;">免费体验</a>
+            <a href="./freetrial" style="height: initial;">免息体验</a>
             <a href="./buy" class="active">A股（T + 1）</a>
         </div>
         <nav>
@@ -475,16 +475,16 @@
 
 								</div>
 								<div class="open-time">
-									<span>盈&nbsp;利&nbsp;分&nbsp;配</span>
+									<span>综合费用</span>
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">当谋略盈利时，</br>谋略人将获得大部分盈利</div>
 									</div>
 									<ul class="work-interval">
-										<li class="active">90%</li>
+										<li class="active">0.1%</li>
 									</ul>
 								</div>
 								<div class="com_fee">
-									<span>交易综合费</span>
+									<span>利息费用</span>
 									<div class="delay_tip"><i class="icon icon-help"></i>
 										<div class="showtip">交易综合费包含第一天的交易费，第二天的递延费，每万元点买金的交易综合费为45元，每万元点买金的递延费<?php echo $delayFee; ?>元/天。</div>
 									</div>
@@ -605,8 +605,10 @@
                     <span><a target="_blank" href="https://qwrz.baidu.com/id/bcab3808e1be12501f0aa132a2b2b802"><img src="./public/static/home/img/bdxy.jpg"/></a></span>
                     <span id="kx_verify"></span><script type="text/javascript">(function (){var _kxs = document.createElement('script');_kxs.id = 'kx_script';_kxs.async = true;_kxs.setAttribute('cid', 'kx_verify');_kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn')+'/static/js/icon3.js?sn=e18053044030074109ys5u000000&tp=icon3';_kxs.setAttribute('size', 0);var _kx = document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs, _kx);})();</script>
                     <span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/hy_124x47.png?id=www.221.com.cn?t=52"/></a></span>
-                    <span><a target="_blank" href="https://credit.cecdc.com"><img src="./public/static/home/img/cxwz.jpg"/></a></span>
-                    <span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>
+                    <span><a id="jsl_speed_stat0" href="http://www.sm00009.com/" target="_blank">知道创宇云安全</a><script src="//static.yunaq.com/static/js/stat/picture_stat.js" charset="utf-8" type="text/javascript"></script></a></span>
+                    <!--<span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>-->
+                    <span class="br-fl"><a target="_blank" href="http://www.cn-ecusc.org.cn/cert/aqkx/site/?site=www.sm00009.com" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>
+
                 </div>
                 <p>版权所有 © 深圳尚美时尚产业投资管理有限公司  </p>
                 <p>粤ICP备18060985号  投资有风险 入市需谨慎</p>

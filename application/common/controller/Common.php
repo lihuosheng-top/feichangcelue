@@ -92,7 +92,6 @@ class Common extends Controller
      * 渲染插件模板
      * @param string $template 模板名称
      * @param string $suffix 模板后缀
-     * @author 蔡伟明 <314013107@qq.com>
      * @return mixed
      */
     final protected function pluginView($template = '', $suffix = '', $vars = [], $replace = [], $config = [])
@@ -131,16 +130,95 @@ class Common extends Controller
         $info_arr = explode("~", $infomation);//对字符串进行切割成数组
         $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
         $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+        $week_url = 'http://image.sinajs.cn/newchart/weekly/n/'.$sh;//查看周K线图
+        $month_url = 'http://image.sinajs.cn/newchart/monthly/n/'.$sh;//查看月K线图
         $time_img = '.gif';
         $all_url_info = $time_url . $code . $time_img;//时K
         $day_url_info = $day_url . $code . $time_img; //日k
+        $week_url_info = $week_url . $code . $time_img; //周k
+        $month_url_info = $month_url . $code . $time_img; //月k
         $res =array(
             'info_arr'=>$info_arr,
             'time_url_info'=>$all_url_info,
-            'day_url_info'=>$day_url_info
+            'day_url_info'=>$day_url_info,
+            'week_url_info'=>$week_url_info,
+            'month_url_info'=>$month_url_info,
         );
         return $res;
     }
+
+    /**
+     * @param $code
+     * @return array
+     * lihuosheng
+     * 上证指数和深证指数
+     * https://www.cnblogs.com/skating/p/6424342.html
+     */
+    final protected function  getMarketValueBycode_stock($code){
+        if($code==000001){
+            $url = 'http://qt.gtimg.cn/q=';
+            $sh = 'sh';
+            $code_url = $url . $sh . $code;
+            $apistr = file_get_contents($code_url);
+            $str = iconv("gb2312", "utf-8", $apistr);
+            $long_str = strlen($str);
+            $infomation = substr($str, 12, $long_str);//截取后的数据，字符串
+            $info_arr = explode("~", $infomation);//对字符串进行切割成数组
+            $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
+            $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+            $week_url = 'http://image.sinajs.cn/newchart/weekly/n/'.$sh;//查看周K线图
+            $month_url = 'http://image.sinajs.cn/newchart/monthly/n/'.$sh;//查看月K线图
+            $time_img = '.gif';
+            $all_url_info = $time_url . $code . $time_img;//时K
+            $day_url_info = $day_url . $code . $time_img; //日k
+            $week_url_info = $week_url . $code . $time_img; //周k
+            $month_url_info = $month_url . $code . $time_img; //月k
+
+            $stock_all_number_url ="http://hq.sinajs.cn/list=s_sh".$code;
+            $stock_num_api_str =file_get_contents($stock_all_number_url);
+            $stock_num_str =iconv('gb2312',"utf-8",$stock_num_api_str);
+            $stock_num_long_str = strlen($stock_num_str);
+            $stock_num_infomation = substr($stock_num_str, 23, $stock_num_long_str);//截取后的数据，字符串
+            $stock_num_info_arr = explode(",", $stock_num_infomation);//对字符串进行切割成数组
+        }else{
+            $url = 'http://qt.gtimg.cn/q=';
+            $sh = 'sz';
+            $code_url = $url . $sh . $code;
+            $apistr = file_get_contents($code_url);
+            $str = iconv("gb2312", "utf-8", $apistr);
+            $long_str = strlen($str);
+            $infomation = substr($str, 12, $long_str);//截取后的数据，字符串
+            $info_arr = explode("~", $infomation);//对字符串进行切割成数组
+            $time_url = 'http://image.sinajs.cn/newchart/min/n/'.$sh;//分时图片获取
+            $day_url = 'http://image.sinajs.cn/newchart/daily/n/'.$sh;//查看日K线图
+            $week_url = 'http://image.sinajs.cn/newchart/weekly/n/'.$sh;//查看周K线图
+            $month_url = 'http://image.sinajs.cn/newchart/monthly/n/'.$sh;//查看月K线图
+            $time_img = '.gif';
+            $all_url_info = $time_url . $code . $time_img;//时K
+            $day_url_info = $day_url . $code . $time_img; //日k
+            $week_url_info = $week_url . $code . $time_img; //周k
+            $month_url_info = $month_url . $code . $time_img; //月k
+
+            $stock_all_number_url ="http://hq.sinajs.cn/list=s_".$sh.$code;
+            $stock_num_api_str =file_get_contents($stock_all_number_url);
+            $stock_num_str =iconv('gb2312',"utf-8",$stock_num_api_str);
+            $stock_num_long_str = strlen($stock_num_str);
+            $stock_num_infomation = substr($stock_num_str, 23, $stock_num_long_str);//截取后的数据，字符串
+            $stock_num_info_arr = explode(",", $stock_num_infomation);//对字符串进行切割成数组
+        }
+        $res =array(
+            'info_arr'=>$info_arr,
+            'time_url_info'=>$all_url_info,
+            'day_url_info'=>$day_url_info,
+            'week_url_info'=>$week_url_info,
+            'month_url_info'=>$month_url_info,
+            'stock_num_info_arr'=>$stock_num_info_arr
+        );
+        return $res;
+    }
+
+
+
 
 
     /**

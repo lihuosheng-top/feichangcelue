@@ -567,10 +567,14 @@ img.ewm{
 	/*text-indent: 4em;*/
 }
 /*微信充值*/
+.buts{
+	margin-bottom: 20px;
+}
 .wx_top{
     background: #fff;
     border-radius: 10px;
-    height: 737px;
+		padding-bottom: 10rem;
+    min-height: 737px;
     background-size: 100% 100%;
     width: 90%;
     margin: 30px auto;

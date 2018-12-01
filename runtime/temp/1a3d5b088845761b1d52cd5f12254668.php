@@ -1,11 +1,11 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:81:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\login.html";i:1539677013;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1541002565;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:85:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\ucenter\payment.html";i:1539334158;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:88:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\member_left.html";i:1539655516;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1541002565;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>尚牛在线</title>
 </head>
-<body class="user-reg login_body">
+<body class="membercenter logged-in">
 <title>首页</title>
 
 <meta name="keywords" content="<?php echo config('web_site_keywords'); ?>">
@@ -135,99 +135,242 @@
 
 
 </script>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/buy.css"/>
-<link rel="stylesheet" type="text/css" href="__STATIC__/home/css/reg.css"/>
+<link rel="stylesheet" type="text/css" href="/public/static/home/css/buy.css"/>
+<link rel="stylesheet" type="text/css" href="/public/static/home/css/member.css"/>
 
-<!--登录区-->
-<div class="br-content login_reg_cont">
-<section class="section section-form" id="page_auth_login">
-    <div class="container">
-        <div class="section-border group">
-            <h2 class="login_h2">账户登录</h2>
-            <div class="form">
-                <div class="field-wrapper">
-                    <input type="text" class="text" placeholder="请输入用户名" name="phone" id="用户名i" data-error-msg="请输入用户名">
-                    <label class="name-err1 hide">用户名不能为空</label>
+<!--个人中心-充值-->
+<div class="br-content">
+<div class="w1200">
+	<!--主体-->
+<section class="page-main page-personal">
+    <div class="container clearfix">
+    	<!--public左边-->
+    	
+        <aside class="col-left">
+            <div class="userinfo">
+            	<form name="user_head" id="user_head">
+					<input type="file" name="myfile222" id="img_upload" />
+					<div class="img_download">
+						<img class="user-pic" id="headImg" src="<?php echo (isset($member['headImg']) && ($member['headImg'] !== '')?$member['headImg']:'/public/static/home/img/user.png'); ?>" >
+					</div>
+				</form>
+                <!--<img src="/public/static/home/img/user.png" alt="" class="user-pic">-->
+                <p class="user-info">Hi，<strong id="shared_layout_mem_lnm"><?php echo $_SESSION['member']['username']; ?></strong></p>
+                <div class="iconrow">
+                   <a href="/ucenter/security.html"><span class="user-2"></span></a>
+                    <a href="/ucenter/security.html"><span class="user-3"></span></a>
+                    <a href="/ucenter/security.html"><span class="user-4"></span></a>
                 </div>
-                <div class="field-wrapper">
-                    <input type="password" class="text" placeholder="请输入密码" name="pwd" id="登录密码i" onkeydown="if (event.keyCode == 13) { user_Login() }">
-                    <label class="psw-err1 hide">密码不能为空</label>
-                </div>
-
-                <div class="link-wrapper group login_forgot">
-                    <a href="./forgot_pass.html" style="color: #fff; margin-left: 9px;">忘记密码</a>
-                </div>
-
-                <div class="btn-wrapper login_bw">
-                    <a class="btn btn-pri" id="login-btn">登录</a>
-                </div>
-
             </div>
-            <div class="login_reg quick-link-wrapper group">
-                <p><a href="./reg.html">马上注册</a></p>
+            <h4 class="new-head-line"><span class="user-5"></span>会员中心</h4>
+            <nav id="personal-nav" class="left-nav">
+                <ul>
+
+                    <li class=""><a href="/ucenter/index.html">我的首页&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    
+                    <li class=""><a href="/ucenter/bankcards.html">银行卡管理&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="/ucenter/security.html">账户安全&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="/ucenter/payment.html">充值&nbsp;<span class="mem_gt">&gt;</span></a></li>
+					<li class=""><a href="/ucenter/withdraw.html">提现&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                    <li class=""><a href="/ucenter/agent.html" style="display: none;">推广赚钱&nbsp;<span class="mem_gt">&gt;</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+<script src="__STATIC__/home/js/moblie/jquery.ajaxfileupload.js"></script>
+<script type="text/javascript">
+	
+	$(function() {
+		/**
+		 * active
+		 */
+			//console.log(window.location.pathname)
+		$('#personal-nav li').removeClass('active');
+
+		//遍历
+		$('#personal-nav li>a').each(function () {
+			if ($($(this))[0].getAttribute('href') == String(window.location.pathname)) {
+				$(this).parent().addClass('active');
+			}
+		});
+		
+		
+		/**
+		 * 上传头像
+		 */
+        $('#img_upload').AjaxFileUpload({
+			//处理文件上传操作的服务器端地址
+			//上传图片，返回图片地址
+			action: '/index/index/doImgUpload',
+			onComplete: function(filename, resp) { //服务器响应成功时的处理函数
+				if(resp.code == '0') {
+					$('#headImg').attr('src', resp.data);
+					var params = {};
+					params['headImg'] = resp.data;
+					//保存图片到数据库，分两个地址是为了在很多地方公用
+					$.post("/index/ucenter/savePeopleImg", params, function(data) {
+						if(data.code == '0') {
+							tool.popup_err_msg("修改成功");
+						} else {
+							tool.popup_err_msg(data.msg);
+						}
+					}, 'json');
+				} else {
+					tool.popup_err_msg(resp.msg );
+				}
+			}
+		});
+		
+		
+		
+	});
+
+</script>
+        <!--右边-->
+<div id="page_member_payment" class="col-main page-member-payment">
+    <div class="tabs-wrapper" id="pay-method-tabs">
+        <nav>
+            <ul class="clearfix">
+                <li class="active"><a href="javascript:;" id="pm4">银行转账</a></li>
+                <li><a href="javascript:;" id="pm3">支付宝转账</a></li>
+                <li><a href="javascript:;" id="pm2">微信转账</a></li>
+                <li><a href="javascript:;" id="pm1">网银支付 </a></li>
+
+            </ul>
+        </nav>
+        <div class="tabs">
+                <div class="tab-item hide" id="tab-pm1">
+                    <form action="/index/lianlianpay/doPay" id="payForm" target="_blank">
+                        <div class="field-row group">
+                            <label>可用资金:</label>
+                            <div class="input-wrapper">
+                                <span class="acount-val"><strong id="账户余额">0</strong><span class="unit">元</span></span>
+                            </div>
+                        </div>
+                        <div class="field-row group">
+                            <label>充值金额:</label>
+                            <div class="input-wrapper">
+                                <input type="text" class="text  b-pay-amount" name="b-pay-amount"  onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                            </div>
+                        </div>
+                        <div class="btn-row group">
+                            <button id="bankRecharge" type="button" class="btn btn-pri">提 交</button>
+                        </div>
+                        <div id="bankRecharge_rmk" class="field-row group" style="display: none">
+                            <label>特别说明:</label>
+                            <div class="input-wrapper">
+                                <span class="acount-val"></span>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="bank-notes">
+                        <h3>温馨提示</h3>
+                        <ol>
+                            <li>为了您的资金安全，您的账户资金将由第三方银行托管；</li>
+                            <li>充值前请注意您的银行卡充值限制，以免造成不便；</li>
+                            <li>禁止洗钱、信用卡套现、虚假交易等行为，一经发现并确认，将终止该账户的使用；</li>
+                            <li>为了您的资金安全，建议充值前进行实名认证、手机绑定；</li>
+                            <li>如果充值遇到任何问题，请联系客服：<label id="m_basic_mobile"><?php echo $phone; ?></label>。</li>
+                        </ol>
+                    </div>
+                </div>
+
+            <!--/.tab-item -->
+
+            <div class="tab-item hide" id="tab-pm3">
+                <div class="alipay-trans-wrapper">
+                    <form action="#">
+                        <input type="hidden" id="tab-pm1-bank" name="tab-pm1-bank" value="">
+
+                        <img src="/public/static/home/img/alipay.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
+                        <p>
+                            <span style="color: red">请扫码充值，并务必在转账备注中填写注册手机号，这样方便我们多重信息确认您的汇款。</span><br>
+                            转账成功后，请拨打客服热线<label id="m_basic_mobile"><?php echo $phone; ?></label>以便我们及时帮您处理
+                            <br>账号：2509137766@qq.com
+                            <br>户名：杭州鼎蓝商贸有限公司‍
+                        </p>
+                    </form>
+                    <div class="bank-notes">
+                        <p>如需马上到帐或长时间未到帐，请拨打客服电话：<label id="m_basic_mobile"><?php echo $phone; ?></label><br>08：30- 17：00 （30分钟内到账）<br>17:00以后 （次日09：00前到账）
+                        </p>
+                    </div>
+                </div>
             </div>
+            <!--/.tab-item -->
+            <div class="tab-item hide" id="tab-pm2">
+                <div class="alipay-trans-wrapper">
+                    <form action="#">
+                        <input type="hidden" id="tab-pm1-bank" name="tab-pm1-bank" value="">
+
+                        <img src="/public/static/home/img/wxpay2.png" style="width:250px;margin-left:140px; display:block; margin-bottom:20px;">
+                        <p>请用微信扫描二维码</p>
+                        <p>
+                            <span style="color: red">请扫码充值，并务必在转账备注中填写注册手机号，这样方便我们多重信息确认您的汇款。</span><br>
+                            转账成功后，请拨打客服热线<label id="m_basic_mobile"><?php echo $phone; ?></label>以便我们及时帮您处理
+                            <br>账号：杭州鼎蓝商贸有限公司
+                            <!--<br>户名：杭州鼎蓝商贸有限公司‍-->
+                        </p>
+                    </form>
+                    <div class="bank-notes">
+                        <p>如需马上到帐或长时间未到帐，请拨打客服电话：<label id="m_basic_mobile"><?php echo $phone; ?></label><br>08：30- 17：00 （30分钟内到账）<br>17:00以后 （次日09：00前到账）
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--/.tab-item -->
+            <div class="tab-item " id="tab-pm4">
+
+                <h3><strong>您可以通过网上银行、银行柜台或ATM机向<label id="m_basic_netName">我们</label>转账（手续费单笔最高50元）</strong>
+                </h3>
+                <p>请务必在转账备注中填写注册手机号，这样方便我们多重信息确认您的汇款。<br>转账成功后，请拨打客服热线<label id="m_basic_mobile"><?php echo $phone; ?></label>以便我们及时帮您处理
+                </p>
+
+
+                <table class="simple-tbl">
+                    <colgroup>
+                        <col class="col1">
+                        <col class="col2">
+                    </colgroup>
+                    <tbody>
+                    <tr>
+                        <td><span class="bank-logo bank-logo-cmb" style="background-image: url(/public/static/home/img/bbb.png);width:150px;background-size:contain;background-position:center"></span></td>
+                        <td>帐号：<label id="m_basic_bankNo">33050161668000000115</label><br>户名：<label id="m_basic_bankOn">杭州鼎蓝商贸有限公司</label><br>开户行：<label id="m_basic_bankNm">建设银行杭州城站支行</label></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="group upload-screenshot-wrapper">
+                    <div class="col-12">
+                        <p>用户网银转账之后，请务必保留网银转账成功时的截图，并在资金或者转账用途中备注清自己要转入的<label id="m_basic_netName">非常谋略</label>用户名，将回单发到QQ客服，以便尽快到账！
+                        </p>
+
+                        <div class="btn-wrapper" style="text-align: center">
+                            <a id="m_basic_qq2" target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=<?php echo $QQ; ?>&amp;site=qq&amp;menu=yes" class="aside-support">
+                                <i class="icon trans-04 icon-float_02"></i>
+                                <span class="trans-04">在线咨询</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!--/.tab-item -->
+            <!--/.tabs-->
         </div>
+    </div>
+</div>
+
     </div>
 </section>
+
+
+
+
+
+</div>
 </div>
 
-<!--认证银行卡-->
-<div class="popup" id="popup-id-verify">
-    <div class="popup-header group">
-        <h2>认证银行卡</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">提现和免费体验前必须先绑定一张银行卡</li>
-                <li style="text-align:left;">请务必认真填写真实资料</li>
-                <li style="text-align:left;">银行卡采用实名认证，一个身份证只能绑定一个账号</li>
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先绑定银行卡</p>
-        </div>
-        <div class="btn-row group">
-            <a class="btn btn-pri" href="/ucenter/BankCards.html">去绑定</a>
-            <a class="btn btn-pri js-close-popup" href="javascript:;">暂不绑定</a>
-        </div>
-    </div>
-</div>
-<!--实名认证-->
-<div class="popup" id="popup-realname-auth">
-    <div class="popup-header group">
-        <h2>实名认证</h2>
-        <a href="javascript:;" class="js-close-popup"><i class="icon icon-close"></i></a>
-    </div>
-    <div class="popup-body group">
-        <div class="field-row group" style="text-align:center">
-            <ol class="popup-note">
-                <li style="text-align:left;">一个身份证对应一个账号</li>
-
-                <li style="text-align:left;">如遇到问题，请联系客服 <label id="m_basic_mobile">021-80321818</label></li>
-            </ol>
-            <p>为了保障您的账户安全，请先进行实名认证</p>
-        </div>
-        <div class="field-row group">
-            <label>真实姓名：</label>
-            <div class="field-val"><input id="姓名i" type="text" class="text" onchange="user_updateid_zsxm_valid()"></div>
-        </div>
-        <div id="zsxm_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>未填写姓名</div></div>
-        <div class="field-row group">
-            <label>身份证号：</label>
-            <div class="field-val">
-                <div class="field-val">
-                    <input id="身份证i" type="text" class="text" onchange="user_updateid_sfzh_valid()">
-                </div>
-            </div>
-        </div>
-        <div id="sfzh_err1" class="error-wrapper" style="margin-left:100px; display:none"><div><i class="icon icon-x-altx-alt"></i>请填写准确的身份证</div></div>
-        <div class="btn-row group">
-            <a id="user_UpdateSelfIdA" class="btn btn-pri" href="javascript:void(0)">确认</a>
-            <a class="btn btn-sec js-close-popup" href="javascript:;">取消</a>
-        </div>
-    </div>
-</div>
 
 <!--底部-->
 <footer class="br-w100">
@@ -488,6 +631,20 @@
 <script src="__STATIC__/static/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/static/home/js/moblie/reg.js"></script>
 
-<script src="__STATIC__/home/js/login.js"></script>
+<script type="text/javascript">
+	$('#bankRecharge').click(function(){
+		var _val=$('input[name="b-pay-amount"]').val();
+        if( _val == 0 ){
+            tool.popup_err_msg("请输入充值金额");
+            return false;
+        }
+        var a=/^[0-9]*(\.[0-9]{1,2})?$/;
+        if(!a.test(_val)) {
+            tool.popup_err_msg("充值金额格式不正确");
+            return false;
+        }
+		$("#payForm").submit();
+	});
+</script>
 </body>
 </html>

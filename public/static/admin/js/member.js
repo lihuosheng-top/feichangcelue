@@ -9,9 +9,10 @@ function doWithdraw(id, status){
         alert("id错误");
     }
     $.post("./do_withdraw", {id : id, status:status}, function(data){
+        console.log(data);
         if(data.code == '0'){
             alert("操作成功");
-            location.reload();
+            // location.reload();
         }else{
             alert("失败");
             alert(data.msg);
