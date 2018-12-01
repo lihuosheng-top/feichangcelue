@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\freetrial.html";i:1541036605;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:73:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\freetrial.html";i:1541036605;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543649029;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543664603;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -571,6 +571,8 @@
                 <p>全国统一服务热线 ：4001665652<br>客服服务时间工作日：9:00-18:00</p></div>
             <div class="bot_r br-fr br-text-center">
                 <div class="bot_r_img br-clearfix ">
+                	 <span><a target="_blank" href="https://qwrz.baidu.com/id/bcab3808e1be12501f0aa132a2b2b802"><img src="./public/static/home/img/bdxy.jpg"/></a></span>
+                   
                     <span><a target="_blank" href="https://qwrz.baidu.com/id/bcab3808e1be12501f0aa132a2b2b802"><img src="./public/static/home/img/bdxy.jpg"/></a></span>
                     <span id="kx_verify"></span><script type="text/javascript">(function (){var _kxs = document.createElement('script');_kxs.id = 'kx_script';_kxs.async = true;_kxs.setAttribute('cid', 'kx_verify');_kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn')+'/static/js/icon3.js?sn=e18053044030074109ys5u000000&tp=icon3';_kxs.setAttribute('size', 0);var _kx = document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs, _kx);})();</script>
                     <span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/hy_124x47.png?id=www.221.com.cn?t=52"/></a></span>

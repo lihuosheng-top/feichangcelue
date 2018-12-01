@@ -485,6 +485,30 @@
   background-image: url('../img/cp (1).png');
   margin-right: 0;
 }
+.companion .companion_box .cp_item:nth-of-type(9) {
+  background-image: url('../img/cp (9).png');
+}
+.companion .companion_box .cp_item:nth-of-type(10) {
+  background-image: url('../img/cp (10).png');
+}
+.companion .companion_box .cp_item:nth-of-type(11) {
+  background-image: url('../img/cp (11).jpg');
+}
+.companion .companion_box .cp_item:nth-of-type(12) {
+  background-image: url('../img/cp (12).png');
+}
+.companion .companion_box .cp_item:nth-of-type(13) {
+  background-image: url('../img/cp (13).png');
+}
+.companion .companion_box .cp_item:nth-of-type(14) {
+  background-image: url('../img/cp (14).png');
+}
+.companion .companion_box .cp_item:nth-of-type(15) {
+  background-image: url('../img/cp (15).png');
+}
+.companion .companion_box .cp_item:nth-of-type(16) {
+  background-image: url('../img/cp (16).jpg');
+}
 /*弹出层和bootstrap冲突*/
 .h1, .h2, .h3, h1, h2, h3 {
   margin-top: 0px;
