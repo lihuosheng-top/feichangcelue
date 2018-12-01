@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\bankcards.html";i:1543637282;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543637710;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:75:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\bankcards.html";i:1543637282;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -647,6 +647,7 @@
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
 <script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
+
 
 
 <script>

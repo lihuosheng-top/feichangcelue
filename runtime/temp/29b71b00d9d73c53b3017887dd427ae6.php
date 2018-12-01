@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\security.html";i:1543642680;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:74:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\security.html";i:1543642834;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:76:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\member_left.html";i:1543633981;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -262,7 +262,6 @@
                 <div class="col-3 security-name"><i class="icon icon-checkmark2" id="id_phone_icon"></i>绑定手机</div>
                 <div class="col-5 security-desc" id="手机号i"><?php echo $mobile; ?></div>
                 <!--<div class="col-4 security-action"><a id="umA" href="javascript:;" data-popup="popup-edit-phone" onclick="form_validation = false;">修改</a></div>-->
-
             </li>
             
             <li class="group">

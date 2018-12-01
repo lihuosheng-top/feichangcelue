@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543637710;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:69:"D:\phpStudy\WWW\feichangcelue/application/index\view\index\index.html";i:1543042108;s:68:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\top.html";i:1543634244;s:77:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540193277;s:71:"D:\phpStudy\WWW\feichangcelue/application/index\view\public\footer.html";i:1543641251;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -887,6 +887,7 @@
 <script src="__STATIC__/libs/jquery-2.2.0/jquery-2.2.0.min.js"></script>
 <script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 <script src="__STATIC__/home/js/moblie/reg.js"></script>
+
 
 
 		<!--认证银行卡-提示绑定-->

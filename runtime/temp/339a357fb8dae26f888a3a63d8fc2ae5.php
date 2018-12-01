@@ -1,12 +1,12 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\withdraw.html";i:1539064450;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:1:{s:81:"D:\phpStudy\WWW\feichangcelue/application/index\view\ucenter\mobile\withdraw.html";i:1543635434;}*/ ?>
 <!doctype html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>尚牛在线</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="../public/static/home/css/mui.min.css" rel="stylesheet" />
-		<link href="../public/static/home/css/moblie/mobliecom.css" rel="stylesheet" />
+		<link href="__STATIC__/home/css/mui.min.css" rel="stylesheet" />
+		<link href="__STATIC__/home/css/moblie/mobliecom.css" rel="stylesheet" />
 	</head>
 <!--个人中心-提现-->
 	<body class="withdraw_body">
@@ -43,7 +43,7 @@
 		</div>
 		<!---js---->
 		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-		<script src="../public/static/home/js/moblie/mui.min.js"></script>
+		<script src="__STATIC__/home/js/moblie/mui.min.js"></script>
 		<script type="text/javascript">
 			mui.init({
 				swipeBack: true //启用右滑关闭功能
