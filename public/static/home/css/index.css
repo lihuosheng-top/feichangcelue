@@ -432,7 +432,7 @@
 }
 /*关于我们*/
 .companion {
-  height: 530px;
+  height: 370px;
 }
 .companion .br-ml-title {
   margin-top: 50px;
@@ -456,10 +456,11 @@
 }
 .companion .companion_box .cp_item {
   float: left;
-  width: 226px;
+  width: 115px;
   height: 91px;
-  background: url('../img/cp (2).png');
-  margin: 0 40px 40px 0;
+  background: url('../img/cp (2).png') no-repeat;
+	background-size: 115px;
+  margin: 0 4px 4px 0;
 }
 .companion .companion_box .cp_item:nth-of-type(2) {
   background-image: url('../img/cp (3).png');
@@ -469,7 +470,7 @@
 }
 .companion .companion_box .cp_item:nth-of-type(4) {
   background-image: url('../img/cp (5).png');
-  margin-right: 0;
+  /* margin-right: 0; */
 }
 .companion .companion_box .cp_item:nth-of-type(5) {
   background-image: url('../img/cp (6).png');
@@ -967,7 +968,8 @@
     width: 500px;
     /*border: 1px solid;*/
     box-shadow: 0px 0px 30px 0px #C6BBB1;
-    height: 300px;
+    min-height: 300px;
+    height: auto;
     background: url(../img/baoshang500-300.jpg);
     background-size: 100%;
     position: fixed;

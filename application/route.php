@@ -41,6 +41,8 @@ return [
     'detail'=> 'index/ucenter/detail',       		//结算区-单号详情
     'safeensure'=> 'index/index/safeensure',       		//安全保障
     'gift'=> 'index/index/gift',       			//协议
+    'emergency_notices'=> 'index/index/emergency_notices',  //紧急通知
+    'emergency'=> 'index/index/emergency',  //紧急通知(关闭开启)
     'help'=> 'index/index/help',       			//帮助中心-常见问题
     'guild'=> 'index/index/guild',       		//帮助中心-新手教学
 
@@ -50,6 +52,7 @@ return [
 
     'news'=>'index/index/news',                     //财经资讯
     'news_t'=>'index/index/news_t',                     //新闻内容
+    'notice_t'=>'index/index/notice_t',                     //新闻内容
     'app_broadcast'=>'index/index/app_broadcast',   //手机端轮播图
     'stock_exponential_sh'=>'index/index/stock_exponential_sh', //手机端上证指数
     'stock_exponential_sz'=>'index/index/stock_exponential_sz', //手机端深证证指数
@@ -60,6 +63,7 @@ return [
     'index_information_second'=>'index/index/index_information_second', //pc端首页配资（按天配资）
     'EntrustmentAgreement'=>'index/index/EntrustmentAgreement',//pc端配资协议
     'Advertisement'=>'index/index/Advertisement',//pc端广告
+    'Advertisement_2'=>'index/index/Advertisement_2',//pc端广告2
     'PcBuy'=>'index/index/PcBuy',//pc端配资点买（按日点买）
     'PcMonthBuy'=>'index/index/PcMonthBuy',//pc端配资点买（按月点买）
     'PcFreeBuy'=>'index/index/PcFreeBuy',//pc端配资点买（免费体验）
@@ -130,6 +134,9 @@ return [
     'ucenter/dowithdraw'=>"index/ucenter/doWithdraw",       //银行卡体现
     'ucenter/alipay'=> 'index/ucenter/alipay',   			//个人中心-充值-支付宝
     'ucenter/re_tip'=> 'index/ucenter/re_tip',   			//个人中心-充值-支付宝-2
+    'ucenter/getInformaiotnAlipay'=> 'index/ucenter/getInformationAlipay',  //个人中心-充值-支付宝申请
+    'ucenter/getInformaiotnWeChat'=> 'index/ucenter/getInformationWeChat',  //个人中心-充值-微信申请
+
     'ucenter/wechatpay'=> 'index/ucenter/wechatpay',   		//个人中心-充值-微信
     'ucenter/quick_pay'=> 'index/ucenter/quick_pay',   		//个人中心-充值-银联支付
     'ucenter/user_info'=> 'index/ucenter/user_info',   		//个人中心-实名认证

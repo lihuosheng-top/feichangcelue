@@ -30,7 +30,7 @@ class  Params extends  Admin{
      */
     public function  index()
     {
-        $data_list = Db::table("xh_sys_params")->paginate();
+        $data_list = Db::table("xh_sys_params")->where('id','>','2')->limit(10)->paginate();
         // 分页数据
         $page = $data_list->render();
         // 使用ZBuilder快速创建数据表格

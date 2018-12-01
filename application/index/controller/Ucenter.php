@@ -8,6 +8,7 @@ use think\Model;
 
 use think\Db;
 use think\View;
+use think\Request;
 
 
 class Ucenter extends Home
@@ -247,9 +248,9 @@ class Ucenter extends Home
             $realName = $member['realName'];
             /*先判断是否在平台上面购买过股票，是则可以进行提现，不是则提示未在尚牛平台上面配资不能进行提现*/
             $is_buy_stock =Db::table('xh_stock_order')->where('memberId',$memberId)->where('isFreetrial',0)->select();
-//            if(empty($is_buy_stock)){
-//                error("提现最低要求进行在尚牛平台上面进行配资一次");
-//            }
+            if(empty($is_buy_stock)){
+                error("提现最低要求进行在尚牛平台上面进行配资一次");
+            }
 
             if ($usableSum >= $minWithdraw && $amount < $minWithdraw) {
                 error("最小提现金额为{$minWithdraw}元");
@@ -800,7 +801,8 @@ class Ucenter extends Home
                     error("获取价格数据异常");
                 }
 
-                $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+//                $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+                $dealQuantity = $dealAmount * 10000 / $nowPrice / 100; //买入多少手
                 if($dealQuantity <1){
                     error("买入数量必须大于1手");
                 }
@@ -935,7 +937,7 @@ class Ucenter extends Home
             } else {
                 error("获取价格数据异常");
             }
-            $dealQuantity = (int)($dealAmount * 10000 / $nowPrice / 100); //买入多少手
+            $dealQuantity = $dealAmount * 10000 / $nowPrice / 100; //买入多少手
             if($dealQuantity <1){
                 error("买入数量必须大于1手(100股)");
             }
@@ -1427,5 +1429,60 @@ class Ucenter extends Home
         success("修改成功");
 
     }
+
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 支付宝充值获取信息存库
+     **************************************
+     */
+    public function  getInformationAlipay(Request $request){
+        if($request->isPost()){
+            $data['pay_money']=trim($_POST['amount']);
+            $data['pay_explain']=trim($_POST['instructions']);
+            $data['pay_number']=trim($_POST['alipay']);
+            $data['user_id']=trim($_SESSION['member']['id']);
+            $data['createTime']=date("Y-m-d H:i:s");
+            $data['status']=0;
+           if(!empty($data)){
+               $res = Db::table('xh_alipay_examine')->insertGetId($data);
+               if($res>0){
+                   session('zfbcz',$res); //TODO:充值提示音
+                   return $this->ajax_success('提交成功,请等候审核',$data);
+               }
+           }
+
+        }
+    }
+
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 微信充值获取信息进行存库操作
+     **************************************
+     */
+    public function  getInformationWeChat(Request $request){
+        if($request->isPost()){
+            $data['pay_money']=trim($_POST['amount']);
+            $data['pay_explain']=trim($_POST['instructions']);
+            $data['pay_number']=trim($_POST['alipay']);
+            $data['user_id']=trim($_SESSION['member']['id']);
+            $data['createTime']=date("Y-m-d H:i:s");
+            $data['status']=0;
+            if(!empty($data)){
+                $res = Db::table('xh_wechat_examine')->insertGetId($data);
+                if($res){
+                    session('wxcz',$res); //TODO:充值提示音
+                    return $this->ajax_success('提交成功,请等候审核',$data);
+                }
+            }
+
+        }
+    }
+
+
+
+
 
 }

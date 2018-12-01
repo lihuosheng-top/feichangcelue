@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html";i:1540305965;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:89:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540305965;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1539655516;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:4:{s:81:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\index\index.html";i:1541002565;s:80:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\top.html";i:1539831897;s:89:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\PcPublicFoot.html";i:1540305965;s:83:"D:\phpstudy\PHPTutorial\WWW\feichangcelue/application/index\view\public\footer.html";i:1541002565;}*/ ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -157,6 +157,9 @@
 			/*.pz-type-swith{*/
 			/*display: none;*/
 			/*}*/
+			.baoshang p span{
+				line-height: 27px;
+			}
 		</style>
 		<style type="text/css">
 
@@ -236,8 +239,8 @@
 				</div>
 				<div class="three_item br-fl">
 					<a href="javascript:void(0);" style="display: block;"><img src="./public/static/home/img/p (1).png" /></a>
-					<p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 256; ?></span>条</p>
-					<p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 5758000, 2 ); ?></span>元</p>
+					<p class="P_block" style="float: left;">累计匹配策略 </br><span><?php echo $count + 502458; ?></span>条</p>
+					<p class="P_block" style="float: right;">累计盈利</br><span><?php echo round($earnSum + 2662534560, 2 ); ?></span>元</p>
 				</div>
 			</div>
 			<div class="w pz-type-swith" style="">
@@ -474,7 +477,7 @@
 							<span id="bd-two">
 								<?php if(is_array($news_informations_tow) || $news_informations_tow instanceof \think\Collection || $news_informations_tow instanceof \think\Paginator): $i = 0; $__LIST__ = $news_informations_tow;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$value): $mod = ($i % 2 );++$i;?>
                             <li><i class="dw_Cbg  "></i><span class="date"><?php echo $value['createTime']; ?></span>
-							<a id="bd_colors" href="#javascript:void(0)" class="bd_cid"  data-id="bd_colors_<?php echo $value['id']; ?>" >■ <?php echo $value['title']; ?></a>
+							<a id="bd_colors" class="bd_cid" href="#javascript:void(0)" class="bd_cids"  data-id="bd_colors_<?php echo $value['id']; ?>" >■ <?php echo $value['title']; ?></a>
 							</li>
 								<?php endforeach; endif; else: echo "" ;endif; ?>
 							</span>
@@ -631,8 +634,10 @@
                     <span><a target="_blank" href="https://qwrz.baidu.com/id/bcab3808e1be12501f0aa132a2b2b802"><img src="./public/static/home/img/bdxy.jpg"/></a></span>
                     <span id="kx_verify"></span><script type="text/javascript">(function (){var _kxs = document.createElement('script');_kxs.id = 'kx_script';_kxs.async = true;_kxs.setAttribute('cid', 'kx_verify');_kxs.src = ('https:' == document.location.protocol ? 'https://ss.knet.cn' : 'http://rr.knet.cn')+'/static/js/icon3.js?sn=e18053044030074109ys5u000000&tp=icon3';_kxs.setAttribute('size', 0);var _kx = document.getElementById('kx_verify');_kx.parentNode.insertBefore(_kxs, _kx);})();</script>
                     <span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/hy_124x47.png?id=www.221.com.cn?t=52"/></a></span>
-                    <span><a target="_blank" href="https://credit.cecdc.com"><img src="./public/static/home/img/cxwz.jpg"/></a></span>
-                    <span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>
+                    <span><a id="jsl_speed_stat0" href="http://www.sm00009.com/" target="_blank">知道创宇云安全</a><script src="//static.yunaq.com/static/js/stat/picture_stat.js" charset="utf-8" type="text/javascript"></script></a></span>
+                    <!--<span class="br-fl"><a target="_blank" href="https://v.pinpaibao.com.cn/cert/site/?site=www.sm00009.com&at=business" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>-->
+                    <span class="br-fl"><a target="_blank" href="http://www.cn-ecusc.org.cn/cert/aqkx/site/?site=www.sm00009.com" ><img src="https://static.anquan.org/static/outer/image/aqkx_124x47.png"/></a></span>
+
                 </div>
                 <p>版权所有 © 深圳尚美时尚产业投资管理有限公司  </p>
                 <p>粤ICP备18060985号  投资有风险 入市需谨慎</p>
@@ -934,13 +939,13 @@
 				</div>
 			</div>
 		</div>
-		<div class="baoshang" data-id ="1">
+		<div class="baoshang" data-id ="<?php echo $btn_emergency['status']; ?>">
 			<i class="bsc" onclick="t()"></i>
 			<div style="clear:both;"></div>
 			<div style="width: 90%; margin: 0 auto;">
-				<p style="text-align:center;"><strong style="color:rgb(255, 0, 0);font-family:Microsoft Yahei;font-size:20px;">紧急通知</strong></p>
+				<p style="text-align:center;"><strong style="color:rgb(255, 0, 0);font-family:Microsoft Yahei;font-size:20px;"><?php echo $notice_content['title']; ?></strong></p>
 				<p style="text-align:center;">&nbsp;</p>
-				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;尊敬的会员！</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;">尚牛在线 新会员 关注尚牛在线公众号截图找客服领18元，注册送58元，充100元免息配资固定是500元20天，赢利7:3分，你得7我得3，输的算我们的，详询客服</span></strong></p>
+				<p><strong style="font-size:18px;color:rgb(102, 102, 102);font-family:Microsoft Yahei;"><span style="font-size:16px;">&nbsp; &nbsp; &nbsp; &nbsp;</span></strong><strong style="color: rgb(102, 102, 102); font-family: &quot;Microsoft Yahei&quot;; font-size: 18px;"><span style="font-size:16px;"><?php echo $notice_content['contents']; ?></span></strong></p>
 				<p><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);">&nbsp; &nbsp; &nbsp; &nbsp; </span><br style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"><span style="color:rgb(0, 0, 0);font-family:Microsoft Yahei, Arial;font-size:14px;background-color:rgb(245, 246, 247);"></span></p>
 			</div>
 		</div>
@@ -955,10 +960,14 @@
 		<script>
 			(function() {
 				var  baoshang=$(".baoshang").data("id");
-				// console.log(baoshang);
 				if(baoshang==0){
 					$(".baoshang").hide();
 				}
+				if(baoshang==1){
+                    $(".baoshang").show();
+				}
+
+
 // 				else{
 // 					$(".baoshang").show();
 // 				}
@@ -1076,5 +1085,31 @@
 
             });
 		</script>
+		<!--网站公告进去传ID给后台进入详情页面-->
+		<script >
+            $(".bd_cids").click(function () {
+                var article_id = $(this).data("id");
+                var article_ids = article_id.split('_')[2];
+                $.ajax({
+                    type:'POST',
+                    url:'<?php echo url("index/index/notice_id"); ?>',
+                    dataType: 'json',
+                    data:{
+                        "article_id":article_ids
+                    },
+                    success: function(data){
+                        console.log(data);
+                        window.location.href="./notice_t";
+                    },
+                    error:function(data) {
+                        console.log("获取失败");
+                    },
+                });
+
+            });
+		</script>
+
+
+
 </body>
 </html>

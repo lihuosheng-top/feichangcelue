@@ -892,7 +892,8 @@ function updateMoneyRate(){
         $("#gu").html('-');
         $("#lyl").html('-');
     }else{
-        var gu=Math.floor((price*10000/nowPrice)/100)*100;
+        var gu=((price*10000/nowPrice)/100)*100;
+             gu=gu.toFixed(2);
         if(price !=0){
             var lyl=(nowPrice*gu/(price*10000)*100).toFixed(2) + "%";
             $("#lyl").html(lyl);

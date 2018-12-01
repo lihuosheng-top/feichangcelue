@@ -19,6 +19,7 @@ use think\Cache;
 use think\Db;
 use app\user\validate\User;
 use util\Tree;
+use think\session;
 
 
 class Member extends Admin
@@ -35,7 +36,7 @@ class Member extends Admin
 
         // 数据列表
         $data_list = Db::table("xh_member")->where($map)
-        ->where($condition)->order("id desc")->paginate();
+        ->where($condition)->where('statuss',1)->order("id desc")->paginate();
 
         // 分页数据
         $page = $data_list->render();
@@ -74,6 +75,7 @@ class Member extends Admin
             ->addRightButtons('edit') // 批量添加右侧按钮
             ->addRightButton('custom', $btn_recharge)
             ->addRightButton('custom', $btn_fundrecord)
+            ->addRightButton('delete'  ,['href' => url('delete', ['id' => '__id__'])])
             ->setRowList($data_list) // 设置表格数据
             ->setPages($page) // 设置分页数据
             ->fetch(); // 渲染页面
@@ -81,9 +83,11 @@ class Member extends Admin
 
 
     /**
-     * 编辑
+     **************李火生*******************
      * @param null $id
      * @return mixed|void
+     * 编辑
+     **************************************
      */
     public function edit($id = null)
     {
@@ -121,6 +125,30 @@ class Member extends Admin
             ])
             ->setFormData($info)
             ->fetch();
+    }
+
+
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 软删除
+     **************************************
+     */
+    public function delete($id=null)
+    {
+        if($id <= 0){
+            return $this->error("id不正确");
+        }
+            $data = ['statuss'=>0];
+            if (Db::table("xh_member")->where("id=$id")->update($data)) {
+                // 记录行为
+                action_log('member_delete', 'admin_role', $id, UID, $data['name']);
+                return $this->success('删除成功', url('index'));
+            } else {
+                return $this->error('删除失败');
+            }
+
+
     }
 
 
@@ -288,7 +316,11 @@ class Member extends Admin
             ->fetch(); // 渲染页面
     }
 
-
+    /**
+     **************李火生*******************
+     * 提现过程
+     **************************************
+     */
     public function do_withdraw(){
         $id = (int)trim(input("id"));
         if($id <= 0){
@@ -320,8 +352,9 @@ class Member extends Admin
             $data['remarks'] = "提现申请审核未通过，退还{$amount}元";
             $data['createTime'] = date("Y-m-d H:i:s");
             $ret = Db::table("xh_member_fundrecord")->insertGetId($data);
+            session::delete('txsq');
         }else if($status == 1){//审核成功
-
+            session::delete('txsq');
         }
 
         /*
@@ -431,6 +464,9 @@ class Member extends Admin
     }
 
 
+
+
+
     /**
      **************李火生*******************
      *审核信息显示
@@ -507,6 +543,7 @@ class Member extends Admin
         Db::table("xh_member_card_pay")->where("id=$id")->update(array("status"=>$status));
         if($status == 1){
            //审核不通过
+            session::delete('czsq');
            success('审核通过');
 
         }else if($status == 1){
@@ -515,30 +552,14 @@ class Member extends Admin
         }
         success("操作成功");
     }
-//    public function bank_app()
-//    {
-//        $id = (int)trim(input("id"));
-//        dump($id);
-//        // 保存数据
-//        if ($this->request->isPost()) {
-//            $data = [
-//                'status'=>1
-//            ];
-//            if (Db::table("xh_member_card_pay")->where("id=$id")->update($data)) {
-//                // 记录行为
-//                return $this->success('审核通过', url('index'));
-//            } else {
-//                return $this->error('审核失败');
-//            }
-//        }
-//    }
+
 
     /**
      **************李火生*******************
      * 用户银行卡充值操作（审核）
      **************************************
      */
-public function recharge_operation(){
+    public function recharge_operation(){
     // 获取查询条件
     $map = $this->getMap();
     // 数据列表
@@ -585,5 +606,365 @@ public function recharge_operation(){
         ->setPages($page) // 设置分页数据
         ->fetch(); // 渲染页面
 }
+
+
+
+
+
+
+    /**
+     **************李火生*******************
+     * 支付宝支付的信息
+     **************************************
+     */
+    public function  alipay_examine(){
+
+        $data_list = Db::table(["xh_alipay_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where("a.user_id = b.id")
+            ->order("id desc")
+            ->paginate();
+
+        // 分页数据
+        $page = $data_list->render();
+        $list = array();
+        foreach($data_list as $i=>$v){
+            if($v['status'] == 0){
+                $v['status'] = '待审核';
+            }
+            if($v['status'] == 1){
+                $v['status'] = '通过';
+            }
+            if($v['status'] == 2){
+                $v['status'] = '未通过';
+            }
+            $list[$i] = $v;
+        }
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('alipay_examine') // 设置数据表名
+            ->setSearch(['memberId' => '用户ID', 'username' => '用户名', 'mobile' => '手机号']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['status','状态'],
+            ])
+            ->setRowList($list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+    /**
+     **************李火生*******************
+     * 支付宝的审核操作（0未审核，1审核通过，2审核不通过）
+     **************************************
+     */
+    public function alipay_examine_action()
+    {
+        $id = (int)trim(input("id"));
+        if ($id <= 0) {
+            error("数据错误");
+        }
+        $status = (int)trim(input("status"));//1 审核通过；2审核失败，0待审核
+        if ($status != 1 && $status != 2 && $status != 0) {
+            error("状态值不对");
+        }
+
+        $withdraw = Db::table("xh_alipay_examine")->where("id=$id")->find();
+        if (!$withdraw) {
+            error("数据不存在");
+        }
+
+        Db::table("xh_alipay_examine")->where("id=$id")->update(array("status" => $status));
+        if ($status == 1) {
+            //审核不通过
+            session::delete('zfbcz');
+            success('审核通过');
+
+        } else if ($status == 1) {
+            //审核通过
+            error('失败');
+        }
+        success("操作成功");
+
+    }
+
+    /**
+     **************李火生*******************
+     * 支付宝的待审核
+     **************************************
+     */
+    public function  alipay_examine_unaudited(){
+        // 获取查询条件
+        $map = $this->getMap();
+        // 数据列表
+        $data_list = Db::table(["xh_alipay_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where($map)
+            ->where("a.user_id = b.id and a.status=0")
+            ->order("id desc")
+            ->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        $btn_yes = [
+            'title' => '审核通过',
+            'icon'  => 'fa fa-fw fa-check-square-o',
+            'href'  => "javascript:doAlipay(__id__,1)"
+        ];
+        $btn_no = [
+            'title' => '审核不通过',
+            'icon'  => 'fa fa-fw fa-power-off',
+            'href'  => "javascript:doAlipay(__id__,2)"
+        ];
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('alipay_examine') // 设置数据表名
+            ->setSearch(['username','mobile']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('custom', $btn_yes)
+            ->addRightButton('custom', $btn_no)
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+
+
+
+
+
+    /**
+     **************李火生*******************
+     * 微信支付的信息
+     **************************************
+     */
+    public function  weichat_examine(){
+        $data_list = Db::table(["xh_wechat_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where("a.user_id = b.id")
+            ->order("id desc")
+            ->paginate();
+
+        // 分页数据
+        $page = $data_list->render();
+        $list = array();
+        foreach($data_list as $i=>$v){
+            if($v['status'] == 0){
+                $v['status'] = '待审核';
+            }
+            if($v['status'] == 1){
+                $v['status'] = '通过';
+            }
+            if($v['status'] == 2){
+                $v['status'] = '未通过';
+            }
+            $list[$i] = $v;
+        }
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('wechat_examine') // 设置数据表名
+            ->setSearch(['memberId' => '用户ID', 'username' => '用户名', 'mobile' => '手机号']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['status','状态'],
+            ])
+            ->setRowList($list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+    /**
+     **************李火生*******************
+     * 微信支付的审核操作（0未审核，1审核通过，2审核不通过）
+     **************************************
+     */
+    public function weichat_examine_action(){
+        $id = (int)trim(input("id"));
+        if ($id <= 0) {
+            error("数据错误");
+        }
+        $status = (int)trim(input("status"));//1 审核通过；2审核失败，0待审核
+        if ($status != 1 && $status != 2 && $status != 0) {
+            error("状态值不对");
+        }
+
+        $withdraw = Db::table("xh_wechat_examine")->where("id=$id")->find();
+        if (!$withdraw) {
+            error("数据不存在");
+        }
+
+        Db::table("xh_wechat_examine")->where("id=$id")->update(array("status" => $status));
+        if ($status == 1) {
+            //审核不通过
+            session::delete('wxcz');
+            success('审核通过');
+
+        } else if ($status == 1) {
+            //审核通过
+            error('失败');
+        }
+        success("操作成功");
+    }
+
+    /**
+     **************李火生*******************
+     * 微信的未审核
+     **************************************
+     */
+    public function  weichat_examine_unaudited(){
+        // 获取查询条件
+        $map = $this->getMap();
+        // 数据列表
+        $data_list = Db::table(["xh_wechat_examine"=>'a', "xh_member"=>'b'])
+            ->field("a.*,  b.username, b.mobile")
+            ->where($map)
+            ->where("a.user_id = b.id and a.status=0")
+            ->order("id desc")
+            ->paginate();
+        // 分页数据
+        $page = $data_list->render();
+        $btn_yes = [
+            'title' => '审核通过',
+            'icon'  => 'fa fa-fw fa-check-square-o',
+            'href'  => "javascript:doWechat(__id__,1)"
+        ];
+        $btn_no = [
+            'title' => '审核不通过',
+            'icon'  => 'fa fa-fw fa-power-off',
+            'href'  => "javascript:doWechat(__id__,2)"
+        ];
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->hideCheckbox()
+            ->js('member')
+            ->setPageTitle('充值状态') // 设置页面标题
+            ->setTableName('wechat_examine') // 设置数据表名
+            ->setSearch(['username','mobile']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+
+                ['id', '订单号'],
+                ['username', '用户名'],
+                ['memberId', '用户Id'],
+                ['mobile', '用户手机号'],
+                ['pay_money', '操作金额'],
+                ['pay_number', '充值的支付宝账号' ],
+                ['createTime', '时间' ],
+                ['pay_explain', '备注' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('custom', $btn_yes)
+            ->addRightButton('custom', $btn_no)
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+
+    /**
+     **************李火生*******************
+     * @return mixed
+     * 删除列表的用户列表
+     **************************************
+     */
+    public function del_index(){
+        // 获取筛选
+        $map = $this->getMap();
+
+        $auth = session('user_auth');
+        if($auth['role'] == 2){
+            $uid = $auth['uid'];
+            $condition = "recommendCode='{$uid}'";
+        }
+
+        // 数据列表
+        $data_list = Db::table("xh_member")->where($map)
+            ->where($condition)->where('statuss',0)->order("id desc")->paginate();
+
+        // 分页数据
+        $page = $data_list->render();
+
+        // 使用ZBuilder快速创建数据表格
+        return ZBuilder::make('table')
+            ->setPageTitle('用户列表') // 设置页面标题
+            ->addTimeFilter('createTime')//时间
+            ->setTableName('admin_user') // 设置数据表名
+            ->setSearch([ 'username' => '用户名', 'mobile' => '手机','recommendCode'=>'机构推荐码']) // 设置搜索参数
+            ->addColumns([ // 批量添加列
+                ['username', '用户名'],
+                ['mobile', '手机号'],
+                ['usableSum', '可用余额(元)'],
+                ['recommendCode', '机构推荐码'],
+                ['createTime', '创建时间' ],
+                ['realName', '真实姓名' ],
+                ['IDNumber', '身份证号' ],
+                ['right_button', '操作', 'btn']
+            ])
+            ->addRightButton('edit'  ,['href' => url('edits', ['id' => '__id__'])])
+            ->setRowList($data_list) // 设置表格数据
+            ->setPages($page) // 设置分页数据
+            ->fetch(); // 渲染页面
+    }
+
+
+    /**
+     **************李火生*******************
+     * @param null $id
+     * 用户恢复软删除操作，回顾登录功能
+     **************************************
+     */
+    public function edits($id=null)
+    {
+        if($id <= 0){
+            return $this->error("id不正确");
+        }
+        $data = ['statuss'=>1];
+        if (Db::table("xh_member")->where("id=$id")->update($data)) {
+            // 记录行为
+            action_log('member_delete', 'admin_role', $id, UID, $data['name']);
+            return $this->success('恢复成功', url('index'));
+        } else {
+            return $this->error('恢复失败');
+        }
+
+
+    }
+
+
+
+
+
 
 }

@@ -220,10 +220,9 @@ class Index extends Admin
              */
             $czsq = session::get('czsq');
             if(!empty($czsq)){
-                $res =Db::table('xh_member_withdraw')->where('id',$czsq)->find();
+                $res =Db::table('xh_member_card_pay')->where('id',$czsq)->find();
                 if(!empty($res)){
-
-                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>1]);
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>2]);
                 }
             }
             /**
@@ -233,13 +232,43 @@ class Index extends Admin
             if(!empty($txsq)){
                 $ret =Db::table('xh_member_withdraw')->where('id',$txsq)->find();
                 if(!empty($ret)){
-                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>2]);
+                    return $this->ajax_success('提现申请提示音返回成功',['czsq'=>3]);
                 }
             }
+
+            /**
+             * 支付宝充值申请
+             */
+            $zfbcz = session::get('zfbcz');
+            if(!empty($zfbcz)){
+                $res =Db::table('xh_alipay_examine')->where('id',$zfbcz)->find();
+                if(!empty($res)){
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>4]);
+                }
+            }
+
+
+            /**
+             * 微信充值申请
+             */
+            $wxcz = session::get('wxcz');
+            if(!empty($wxcz)){
+                $res =Db::table('xh_wechat_examine')->where('id',$wxcz)->find();
+                if(!empty($res)){
+                    return $this->ajax_success('充值申请提示音返回成功',['czsq'=>5]);
+                }
+            }
+
 
              }
     }
 
+    /**
+     **************李火生*******************
+     * @param Request $request
+     * 清空session
+     **************************************
+     */
     public function setInformationHint(Request $request){
         if($request->isPost()){
             if($_POST['name'] =='txsq'){
@@ -248,6 +277,14 @@ class Index extends Admin
             }
             if($_POST['name'] =='czsq'){
                 session::delete('czsq');
+                return $this->ajax_success('成功',['status'=>1]);
+            }
+            if($_POST['name'] =='zfbcz'){
+                session::delete('zfbcz');
+                return $this->ajax_success('成功',['status'=>1]);
+            }
+            if($_POST['name'] =='wxcz'){
+                session::delete('wxcz');
                 return $this->ajax_success('成功',['status'=>1]);
             }
 
