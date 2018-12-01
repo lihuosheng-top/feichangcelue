@@ -1010,7 +1010,7 @@ $("#btn_buy").click(function(e){
 		 // tool.popup_err_msg("请阅读并签署谋略协议");
 		return;
 	}
-    $.post("./index/index/isLogin", {}, function(data){
+    $.post("./isLogin", {}, function(data){
         if(data != 1){
             alert("请先登录");
             window.location.href ='./login';

@@ -95,6 +95,8 @@ return [
 	'qq_add'=>'index/index/qq_add',                 //qq客服
     'invite'=> 'index/index/invite',       			//邀请码
     'login'=> 'index/index/login',       		    //登录
+    'isLogin'=> 'index/index/isLogin',       		    //登录
+
     'reg_agree'=> 'index/index/reg_agree',      //服务协议
     'company'=> 'index/index/company',       	//关于我们
     'contact'=> 'index/index/contact',       	//联系我们
