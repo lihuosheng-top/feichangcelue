@@ -394,11 +394,6 @@ var buy_moblie={
                     }
             });
 
-
-
-
-
-
             //渲染到页面标题上
             $('.title_l').find('#stockName').html(ashareName); //股票名称
             $('.title_l').find('#stockNum').html(ashareCode);  //股票代号
