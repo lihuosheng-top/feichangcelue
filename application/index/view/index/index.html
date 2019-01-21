@@ -626,7 +626,7 @@
                 $("#sh_con").show();
                 $("#sz_con").hide();
                 $(this).siblings().removeClass("current");
-                if(!isTradingTime()||!stopShare){ // 如果不在交易时间就不必刷新数据
+                if(!isTradingTime()){ // 如果不在交易时间就不必刷新数据
                     $.ajax({
                         type: "post",
                         url: "{:url('index/index/stock_information_index_sh')}",
